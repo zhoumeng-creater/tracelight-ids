@@ -326,3 +326,40 @@ def test_resume_never_loads_calibration_or_test(workspace, monkeypatch):
 
     monkeypatch.setattr(runner, "load_partition", development_load)
     runner.run_suite(workspace["data"], workspace["suite"], workspace["output_root"], resume=True)
+
+
+def test_resume_preserves_incomplete_attempt_and_retrains_same_configuration(workspace, monkeypatch):
+    run = workspace["run"]
+    prior_model_hash = sha256_file(run / "model.joblib")
+    prior_config = read_json(run / "config.json")
+    # Simulate interruption after model/metrics writes but before the completion manifest.
+    (run / "run.json").unlink()
+    real_run_development = runner.run_development
+    calls = []
+
+    def recorded_development(*args, **kwargs):
+        calls.append((args, kwargs))
+        return real_run_development(*args, **kwargs)
+
+    monkeypatch.setattr(runner, "run_development", recorded_development)
+    runs = runner.run_suite(workspace["data"], workspace["suite"], workspace["output_root"], resume=True)
+    assert runs == [run]
+    assert len(calls) == 1
+    archived = list((workspace["suite_dir"] / "failed_attempts").glob(f"{run.name}-*"))
+    assert len(archived) == 1
+    assert archived[0].is_dir()
+    assert not (archived[0] / "run.json").exists()
+    assert sha256_file(archived[0] / "model.joblib") == prior_model_hash
+    assert read_json(archived[0] / "config.json") == prior_config
+    current_config = read_json(run / "config.json")
+    assert current_config["seed"] == prior_config["seed"]
+    assert current_config["model_config"] == prior_config["model_config"]
+    assert runner.verify_run(run)["status"] == "complete"
+
+
+def test_resume_does_not_treat_a_corrupted_completed_run_as_an_interruption(workspace):
+    _append_bytes(workspace["run"] / "model.joblib")
+    with pytest.raises(ValueError, match="artifact changed"):
+        runner.run_suite(workspace["data"], workspace["suite"], workspace["output_root"], resume=True)
+    assert (workspace["run"] / "run.json").exists()
+    assert not (workspace["suite_dir"] / "failed_attempts").exists()

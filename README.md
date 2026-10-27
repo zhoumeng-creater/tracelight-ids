@@ -22,7 +22,7 @@ Python 3.11 / 3.12；建议 3.12。先在代码目录之外建立虚拟环境，
 ```powershell
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-deps
-python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install torch==2.6.0+cpu --index-url https://download.pytorch.org/whl/cpu
 python -m pytest -q
 python -m ids doctor --output local/doctor.json
 python -m ids synthetic --output local/raw
