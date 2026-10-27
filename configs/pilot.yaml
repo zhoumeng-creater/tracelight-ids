@@ -1,0 +1,18 @@
+suite_name: baseline-pilot-v1
+purpose: single_seed_development_pilot_not_final_test
+seeds: [17]
+max_fpr: 0.01
+threads: 4
+models:
+  - model: lr
+    features: {method: all}
+    hyperparameters: {C: 1.0, max_iter: 1000}
+  - model: rf
+    features: {method: all}
+    hyperparameters: {n_estimators: 200, max_depth: 16, min_samples_leaf: 2, n_jobs: 4}
+  - model: hgb
+    features: {method: all}
+    hyperparameters: {max_iter: 200, max_leaf_nodes: 31, learning_rate: 0.1}
+  - model: mlp
+    features: {method: all}
+    hyperparameters: {hidden_sizes: [64, 32], epochs: 60, batch_size: 1024, patience: 8, learning_rate: 0.001, weight_decay: 0.0001}
