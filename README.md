@@ -6,6 +6,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 **当前阶段：可运行的研究基线与验证工具。尚无经过最终封存测试的论文结论。** 合成数据只用于工程测试；公开镜像数据保留单独的来源标记。本工程不把历史 CSV 回放称为实时网络监测。
 
+已完成全规模数据的四模型单种子开发验证、CPU 基准链路及离线报告交互检查；具体数值、硬件与限制见 [首轮验证记录](docs/VALIDATION.md)。
+
 ## 已实现
 
 - UNSW-NB15 的 42 个原始输入字段校验、来源 SHA-256、标签与重复审计；相同输入记录整组划分，防止内部训练/验证/校准泄漏。
