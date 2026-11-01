@@ -70,9 +70,51 @@ def verify_run(run_dir: str | Path) -> dict:
     return meta
 
 
+def verify_development_inputs(data_dir: str | Path) -> dict:
+    """Verify only the development partitions and audit; never open reserved partitions."""
+    root = Path(data_dir)
+    manifest = read_json(root / "manifest.json")
+    if (root / "manifest.sha256").read_text().strip() != sha256_file(root / "manifest.json"):
+        raise ValueError("Manifest checksum mismatch")
+    for split in ("train", "validation"):
+        record = manifest["partitions"][split]
+        if record["file"] != f"{split}.parquet" or sha256_file(root / record["file"]) != record["sha256"]:
+            raise ValueError(f"Partition checksum mismatch: {split}")
+    if sha256_file(root / "audit.json") != manifest["audit"]["sha256"]:
+        raise ValueError("Audit checksum mismatch")
+    return manifest
+
+
+def verify_run_teacher(run_dir: str | Path, teacher_dir: str | Path, data_dir=None):
+    """A completed student remains bound to the original external OOF artifact."""
+    from .distillation import verify_oof_targets
+    root, teacher = Path(run_dir), Path(teacher_dir)
+    meta = verify_run(root)
+    config = read_json(root / "config.json")
+    setting = config["model_config"].get("distillation")
+    if not setting or float(setting.get("alpha", 0)) == 0:
+        return None
+    if "distillation.json" not in meta["files"] or not (teacher / "completion.json").is_file():
+        raise ValueError("Completed student requires its original complete OOF teacher artifact; do not regenerate it")
+    expected = {"teacher_config": setting["teacher"], "seed": config["seed"],
+                "folds": setting["folds"], "fold_seed": setting["fold_seed"], "threads": config["threads"],
+                "source_sha256": read_json(root / "code.json")["source_sha256"],
+                "dataset_manifest_sha256": meta["dataset_manifest_sha256"]}
+    manifest = verify_oof_targets(teacher, data_dir=data_dir, expected=expected)
+    binding = read_json(root / "distillation.json")
+    for key, name in (("targets_sha256", "targets.parquet"), ("teacher_manifest_sha256", "manifest.json"),
+                      ("teacher_completion_sha256", "completion.json")):
+        if binding.get(key) != sha256_file(teacher / name):
+            raise ValueError("Completed student OOF binding changed")
+    if binding.get("oof_manifest") != manifest:
+        raise ValueError("Completed student embedded OOF manifest differs from its teacher artifact")
+    return manifest
+
+
 def run_development(data_dir: str | Path, model_config: dict, output_dir: str | Path,
                     seed: int = 17, device: str = "cpu", max_fpr: float = .01,
-                    threads: int = 1, purpose: str = "development") -> Path:
+                    threads: int = 1, purpose: str = "development",
+                    teacher_targets_dir: str | Path | None = None) -> Path:
     data_dir, root = Path(data_dir), Path(output_dir)
     if threads < 1:
         raise ValueError("threads must be positive")
@@ -92,15 +134,44 @@ def run_development(data_dir: str | Path, model_config: dict, output_dir: str | 
               "max_fpr": max_fpr, "threads": threads, "purpose": purpose}
     write_json(root / "config.json", config)
     write_json(root / "environment.json", environment_snapshot())
-    write_json(root / "code.json", code_fingerprint())
+    source = code_fingerprint()
+    write_json(root / "code.json", source)
     write_json(root / "dataset.json", data_manifest)
     try:
+        soft_targets = None
+        distillation = model_config.get("distillation")
+        if distillation and float(distillation.get("alpha", 0)) > 0:
+            if teacher_targets_dir is None:
+                raise ValueError("Distillation requires verified group-OOF teacher targets")
+            from .distillation import load_oof_scores, verify_oof_targets
+            teacher_root = Path(teacher_targets_dir)
+            expected = {"teacher_config": distillation["teacher"], "seed": seed,
+                        "folds": distillation["folds"], "fold_seed": distillation["fold_seed"],
+                        "threads": threads, "source_sha256": source["source_sha256"],
+                        "dataset_manifest_sha256": sha256_file(data_dir / "manifest.json")}
+            teacher_manifest = verify_oof_targets(teacher_root, data_dir=data_dir, expected=expected)
+            soft_targets = load_oof_scores(teacher_root, train, data_dir=data_dir, expected=expected)
+            write_json(root / "distillation.json", {
+                "schema_version": 1, "method": "group_oof_hgb", "run_id": root.name,
+                "config_sha256": canonical_hash(config), "source_sha256": source["source_sha256"],
+                "dataset_manifest_sha256": expected["dataset_manifest_sha256"], "training_split": "train",
+                "alpha": distillation["alpha"], "temperature": distillation["temperature"],
+                "teacher_config": distillation["teacher"], "folds": distillation["folds"],
+                "fold_seed": distillation["fold_seed"],
+                "targets_sha256": sha256_file(teacher_root / "targets.parquet"),
+                "teacher_manifest_sha256": sha256_file(teacher_root / "manifest.json"),
+                "teacher_completion_sha256": sha256_file(teacher_root / "completion.json"),
+                "oof_manifest": teacher_manifest,
+            })
         with threadpool_limits(limits=threads):
             if model_config["model"] == "mlp":
                 import torch
                 torch.set_num_threads(threads)
             begin = time.perf_counter()
-            bundle = train_model(train, validation, model_config, seed=seed, device=device)
+            training_args = {"seed": seed, "device": device}
+            if soft_targets is not None:
+                training_args["soft_targets"] = soft_targets
+            bundle = train_model(train, validation, model_config, **training_args)
             training_seconds = time.perf_counter() - begin
             scores = bundle.predict_scores(validation)
         operating = calibrate_threshold(validation["label"], scores, max_fpr=max_fpr)
@@ -122,6 +193,14 @@ def run_development(data_dir: str | Path, model_config: dict, output_dir: str | 
         write_json(root / "validation_threshold.json", operating)
         write_json(root / "selected_features.json", list(bundle.selected_features))
         write_json(root / "training_history.json", bundle.history)
+        stats = getattr(bundle, "training_statistics", {})
+        if stats:
+            write_json(root / "training_statistics.json", {
+                **stats, "schema_version": 1, "run_id": root.name, "model_family": bundle.model_name,
+                "config_sha256": canonical_hash(config), "source_sha256": source["source_sha256"],
+                "dataset_manifest_sha256": sha256_file(data_dir / "manifest.json"),
+                "actual_epochs": stats.get("epochs_completed"),
+            })
         write_json(root / "examples.json", _examples(validation, pred))
         meta = {"schema_version": 1, "run_id": root.name, "status": "complete", "phase": "development",
                 "started_at": started, "finished_at": utc_now(), "config_sha256": canonical_hash(config),
@@ -154,6 +233,28 @@ def run_suite(data_dir, suite: dict, output_root, device="cpu", resume=False) ->
     for i, model in enumerate(suite["models"]):
         for seed in suite["seeds"]:
             run_dir = root / f"{i:02d}-{model['model']}-s{seed}"
+            distillation = model.get("distillation")
+            targets_dir = None
+            if distillation and float(distillation.get("alpha", 0)) > 0:
+                from .distillation import build_oof_targets
+                # Kept outside the deployable student run. No teacher is loaded at inference.
+                targets_dir = root / "teachers" / f"{i:02d}-oof-s{seed}"
+                if (run_dir / "run.json").exists():
+                    verify_run_teacher(run_dir, targets_dir, data_dir)
+                if targets_dir.exists() and not (targets_dir / "completion.json").exists():
+                    if not resume:
+                        raise FileExistsError("Incomplete teacher targets; use --resume to preserve and retry")
+                    code_path = targets_dir / "code.json"
+                    if code_path.exists() and read_json(code_path)["source_sha256"] != code_fingerprint()["source_sha256"]:
+                        raise ValueError("Cannot retry teacher generation after source changes")
+                    failed = root / "failed_attempts" / f"{targets_dir.name}-{time.time_ns()}"
+                    if targets_dir.is_symlink() or not targets_dir.resolve().is_relative_to(root.resolve()) or not failed.resolve().is_relative_to(root.resolve()):
+                        raise ValueError("Invalid teacher archive path")
+                    failed.parent.mkdir(parents=True, exist_ok=True)
+                    targets_dir.rename(failed)
+                build_oof_targets(data_dir, distillation["teacher"], targets_dir, seed=seed,
+                                  folds=distillation["folds"], fold_seed=distillation["fold_seed"],
+                                  threads=suite.get("threads", 1))
             if run_dir.exists() and resume and not (run_dir / "run.json").exists():
                 if (run_dir / "code.json").exists() and read_json(run_dir / "code.json")["source_sha256"] != code_fingerprint()["source_sha256"]:
                     raise ValueError("Cannot retry incomplete run after source changes; use a new suite name")
@@ -184,7 +285,8 @@ def run_suite(data_dir, suite: dict, output_root, device="cpu", resume=False) ->
             else:
                 print(f"Training {run_dir.name} ({device}); validation only", flush=True)
                 run_development(data_dir, model, run_dir, seed, device, suite.get("max_fpr", .01),
-                                suite.get("threads", 1), suite.get("purpose", "development"))
+                                suite.get("threads", 1), suite.get("purpose", "development"),
+                                teacher_targets_dir=targets_dir)
             runs.append(run_dir)
     write_json(root / "summary.json", [{"run_id": p.name,
                                         "metrics": read_json(p / "validation_metrics.json")} for p in runs])

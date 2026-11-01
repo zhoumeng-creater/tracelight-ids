@@ -226,6 +226,7 @@ class ModelBundle:
     num_threads: int = 1
     feature_scores: dict[str, float] = field(default_factory=dict)
     best_epoch: int | None = None
+    training_statistics: dict[str, Any] = field(default_factory=dict)
     seed: int = 0
     artifact_version: int = _ARTIFACT_VERSION
     _cached_network: Any = field(default=None, repr=False, compare=False)
@@ -291,12 +292,17 @@ def train_model(
     config: dict,
     seed: int,
     device: str = "cpu",
+    soft_targets: np.ndarray | None = None,
 ) -> ModelBundle:
     """Fit on train only; validation is used for reporting and MLP stopping.
 
     Configuration: ``model: lr|rf|hgb|mlp``, ``features: {method, k}``,
     and ``hyperparameters: {...}``. ``name`` is accepted as a model-name alias.
     Classical estimators execute on CPU regardless of the requested MLP device.
+    Distillation requires an explicit MLP ``distillation`` configuration and a
+    one-dimensional NumPy array aligned to train_df row order. Its values are
+    teacher attack scores, not calibrated probabilities. Only temperature 1 is
+    supported. The separate OOF loader verifies identity before positional use.
     """
     names = _feature_names()
     _check_frame(train_df, names, allow_empty=False)
@@ -306,6 +312,7 @@ def train_model(
     model_name = config.get("model", config.get("name"))
     if model_name not in _MODELS:
         raise ValueError(f"model must be one of {sorted(_MODELS)}")
+    distillation, soft_targets = _distillation_settings(config, model_name, soft_targets, len(train_df))
     selected, feature_scores = _select_features(train_df, labels, config.get("features") or {}, seed)
     preprocessor = FeaturePreprocessor.fit(train_df, selected)
     x_train = preprocessor.transform(train_df)
@@ -315,7 +322,8 @@ def train_model(
     bundle = ModelBundle(model_name, preprocessor, selected, x_train.shape[1], [], num_threads=num_threads,
                          feature_scores=feature_scores, seed=seed)
     if model_name == "mlp":
-        return _train_mlp(bundle, x_train, labels, x_val, val_labels, hyperparameters, seed, device)
+        return _train_mlp(bundle, x_train, labels, x_val, val_labels, hyperparameters, seed, device,
+                          distillation, soft_targets)
     if "random_state" in hyperparameters and hyperparameters["random_state"] != seed:
         raise ValueError("Set the experiment seed via seed, not a conflicting random_state")
     hyperparameters["random_state"] = seed
@@ -341,10 +349,68 @@ def train_model(
             estimator.fit(x_train, labels)
     bundle.estimator = estimator
     bundle.history = [{"epoch": 1, **_val_metrics(val_labels, bundle.predict_scores(val_df))}]
+    bundle.training_statistics = {"parameter_count": None, "trainable_parameter_count": None,
+                                  "best_epoch": None, "epochs_completed": 1,
+                                  "best_validation_loss": bundle.history[0]["val_loss"],
+                                  "training_objective": "class_balanced_classical_estimator",
+                                  "actual_device": "cpu", "distillation": {"enabled": False}}
     return bundle
 
 
-def _train_mlp(bundle, x_train, labels, x_val, val_labels, parameters, seed, device):
+def _distillation_settings(config, model_name, soft_targets, n_rows):
+    setting = config.get("distillation")
+    if setting is None:
+        if soft_targets is not None:
+            raise ValueError("soft_targets require an explicit distillation configuration")
+        return {"enabled": False, "alpha": 0.0, "temperature": 1.0}, None
+    if model_name != "mlp" or not isinstance(setting, dict):
+        raise ValueError("distillation is supported only for MLP configurations")
+    alpha = setting.get("alpha", .5)
+    temperature = setting.get("temperature", 1.0)
+    if isinstance(alpha, bool) or not isinstance(alpha, (int, float)) or not np.isfinite(alpha) or not 0 <= alpha <= 1:
+        raise ValueError("distillation.alpha must be finite and in [0, 1]")
+    if isinstance(temperature, bool) or temperature != 1.0:
+        raise ValueError("Only distillation temperature=1 is supported")
+    teacher = setting.get("teacher", {})
+    if not isinstance(teacher, dict):
+        raise ValueError("distillation.teacher must be a configuration dictionary")
+    if soft_targets is not None:
+        if not isinstance(soft_targets, np.ndarray) or soft_targets.ndim != 1 or len(soft_targets) != n_rows:
+            raise ValueError("soft_targets must be a one-dimensional NumPy array aligned to training rows")
+        if soft_targets.dtype.kind not in "fiu" or not np.isfinite(soft_targets).all() or np.any(
+                (soft_targets < 0) | (soft_targets > 1)):
+            raise ValueError("soft_targets must be finite teacher scores in [0, 1]")
+        soft_targets = np.asarray(soft_targets, dtype=np.float32)
+    if alpha > 0 and soft_targets is None:
+        raise ValueError("Active distillation requires verified OOF soft_targets")
+    metadata = {"enabled": alpha > 0, "alpha": float(alpha), "temperature": 1.0,
+                "teacher_model": teacher.get("model"),
+                "score_semantics": "class-balanced teacher attack scores; not calibrated probabilities",
+                "soft_loss": "unweighted binary cross entropy with logits",
+                "validation_objective": "original hard-label positive-weighted binary cross entropy"}
+    return metadata, soft_targets if alpha > 0 else None
+
+
+def _distillation_loss(logits, hard_targets, soft_targets, positive_weight, alpha):
+    """Weighted hard BCE + unweighted score imitation, at fixed temperature 1.
+
+    The teacher was already fitted with balanced class weights. Applying
+    positive_weight to its soft scores again would shift their optimum away
+    from q. At alpha=1, the optimum sigmoid(logit) is exactly q.
+    """
+    torch = _torch()
+    hard = torch.nn.functional.binary_cross_entropy_with_logits(
+        logits, hard_targets, pos_weight=positive_weight)
+    if alpha == 0:
+        return hard
+    soft = torch.nn.functional.binary_cross_entropy_with_logits(logits, soft_targets)
+    if alpha == 1:
+        return soft
+    return (1 - alpha) * hard + alpha * soft
+
+
+def _train_mlp(bundle, x_train, labels, x_val, val_labels, parameters, seed, device,
+               distillation, soft_targets):
     # Set before the first CUDA linear operation for deterministic cuBLAS.
     os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
     torch = _torch()
@@ -382,21 +448,29 @@ def _train_mlp(bundle, x_train, labels, x_val, val_labels, parameters, seed, dev
     try:
         network = _network(bundle.encoded_dim, hidden_dims).to(device)
         positive_weight = float((labels == 0).sum() / (labels == 1).sum())
-        criterion = torch.nn.BCEWithLogitsLoss(pos_weight=torch.tensor(positive_weight, device=device))
+        weight_tensor = torch.tensor(positive_weight, device=device)
+        criterion = torch.nn.BCEWithLogitsLoss(pos_weight=weight_tensor)
         optimizer = torch.optim.AdamW(network.parameters(), lr=learning_rate, weight_decay=weight_decay)
         generator = torch.Generator().manual_seed(seed)
+        tensors = [torch.from_numpy(x_train), torch.from_numpy(labels.astype(np.float32))]
+        if distillation["enabled"]:
+            tensors.append(torch.from_numpy(soft_targets))
         loader = torch.utils.data.DataLoader(
-            torch.utils.data.TensorDataset(torch.from_numpy(x_train), torch.from_numpy(labels.astype(np.float32))),
+            torch.utils.data.TensorDataset(*tensors),
             batch_size=batch_size, shuffle=True, num_workers=0, generator=generator,
         )
         best_loss, stale_epochs, best_state = float("inf"), 0, None
         for epoch in range(1, epochs + 1):
             network.train()
             running_loss = 0.0
-            for inputs, targets in loader:
+            for batch in loader:
+                inputs, targets = batch[:2]
                 inputs, targets = inputs.to(device), targets.to(device)
                 optimizer.zero_grad(set_to_none=True)
-                loss = criterion(network(inputs).squeeze(1), targets)
+                logits = network(inputs).squeeze(1)
+                loss = (_distillation_loss(logits, targets, batch[2].to(device), weight_tensor,
+                                           distillation["alpha"]) if distillation["enabled"]
+                        else criterion(logits, targets))
                 if not torch.isfinite(loss):
                     raise ValueError("MLP training loss became non-finite")
                 loss.backward()
@@ -428,6 +502,15 @@ def _train_mlp(bundle, x_train, labels, x_val, val_labels, parameters, seed, dev
                     break
         bundle.network_state = best_state
         bundle.hidden_dims, bundle.batch_size, bundle.device = hidden_dims, batch_size, device
+        bundle.training_statistics = {
+            "parameter_count": sum(p.numel() for p in network.parameters()),
+            "trainable_parameter_count": sum(p.numel() for p in network.parameters() if p.requires_grad),
+            "best_epoch": bundle.best_epoch, "epochs_completed": len(bundle.history),
+            "best_validation_loss": best_loss, "positive_weight": positive_weight,
+            "training_objective": ("weighted_hard_bce_plus_unweighted_soft_bce" if distillation["enabled"]
+                                   else "weighted_hard_bce"),
+            "actual_device": device, "distillation": distillation,
+        }
         return bundle
     finally:
         torch.use_deterministic_algorithms(previous_deterministic)
@@ -464,5 +547,7 @@ def load_bundle(path: str | Path, device: str = "cpu") -> ModelBundle:
     if not set(bundle.selected_features).issubset(_feature_names()):
         raise ValueError("Artifact features do not match the current data schema")
     bundle._cached_network = None
+    if not hasattr(bundle, "training_statistics"):
+        bundle.training_statistics = {}
     bundle.device = _resolve_device(device) if bundle.model_name == "mlp" else "cpu"
     return bundle

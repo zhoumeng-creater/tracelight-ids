@@ -48,6 +48,8 @@ def build_parser():
     p.add_argument("--output-dir", type=Path, required=True)
     p.add_argument("--threads", type=int, default=1)
     p.add_argument("--order-seed", type=int, default=20261101)
+    p.add_argument("--measurement-round", type=int, default=1)
+    p.add_argument("--planned-rounds", type=int, default=1)
     p.add_argument("--resume", action="store_true")
     p = sub.add_parser("study", help="Aggregate verified validation runs and build an offline research comparison")
     p.add_argument("--run-root", type=Path, required=True)
@@ -99,7 +101,8 @@ def main(argv=None):
         elif args.command == "benchmark-suite":
             from .benchmark_workflow import benchmark_suite
             benchmark_suite(args.run_root, args.data_dir, args.output_dir,
-                            args.threads, args.order_seed, args.resume)
+                            args.threads, args.order_seed, args.resume,
+                            args.measurement_round, args.planned_rounds)
         elif args.command == "study":
             from .study import build_study
             from .study_report import render_study_report

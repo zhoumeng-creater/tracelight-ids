@@ -111,3 +111,26 @@ def test_nonfinite_metric_is_rejected_before_overwriting(tmp_path):
     with pytest.raises(ValueError):
         render_study_report(study, output)
     assert output.read_text(encoding="utf-8") == "previous artifact"
+
+
+def test_distillation_and_repeated_timing_evidence_remain_explicit(tmp_path):
+    study = study_fixture()
+    for group, variant in zip(study["groups"], ["student_hard", "student_kd"]):
+        group["spec"].update(model="mlp", variant=variant, raw_feature_budget=42)
+    study["distillation_comparisons"] = [{
+        "kind": "distillation_effect", "status": "paired", "candidate_group_id": "rf-8",
+        "control_group_id": "lr-42", "common_seeds": [17], "n_pairs": 1,
+        "complete_expected_seeds": False, "missing_expected_seeds": [29, 43],
+        "per_seed": [], "per_attack": [], "cpu_comparisons": [], "metrics": {}}]
+    study["groups"][1]["repeated_benchmarks"] = [{
+        "spec": {"planned_rounds": 3, "threads": 1, "batch_size": 256}, "seeds": [],
+        "observed_seeds": [17], "missing_seeds": [17, 29, 43], "status": "incomplete_rounds",
+        "per_seed": [{"seed": 17, "rounds": [1], "missing_rounds": [2, 3]}], "metrics": {}}]
+    document = render_study_report(study, tmp_path / "distillation.html").read_text(encoding="utf-8")
+    payload = re.search(r'<script id="study-data" type="application/json">(.*?)</script>', document, re.S).group(1)
+    assert json.loads(payload) == study
+    assert 'id="distill-families"' in document and 'id="distill-seeds"' in document
+    assert "新增漏检" in document and "恢复检出" in document
+    assert "轮p95中位数再跨seed均值" in document
+    assert "教师额外成本" in document
+    assert "不可将本机结果写成实验室" not in document

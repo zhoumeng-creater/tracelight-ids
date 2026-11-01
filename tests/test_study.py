@@ -338,3 +338,186 @@ def test_benchmark_summary_is_recomputed_from_raw_observations(tmp_path):
     write_json(path, value)
     with pytest.raises(ValueError, match="raw timing"):
         study.build_study(tmp_path / "runs", tmp_path / "bench")
+
+
+def _variant_run(root, variant, seed=17, attacks=(0, 1, 2), normal=(6,), learning_rate=.001):
+    model = "hgb" if variant == "hgb_reference" else "mlp"
+    hidden = [64, 32] if variant == "mlp_reference" else [32, 16]
+    hyper = {"max_iter": 200} if model == "hgb" else {
+        "hidden_sizes": hidden, "epochs": 120, "patience": 12, "learning_rate": learning_rate,
+        "weight_decay": .0001, "batch_size": 1024}
+    run = _run(root, f"{variant}-{seed}", model=model, seed=seed, attacks=attacks,
+               normal=normal, hyperparameters=hyper)
+    config, dataset, code = (read_json(run / name) for name in ("config.json", "dataset.json", "code.json"))
+    config["model_config"]["variant"] = variant
+    dataset["partitions"]["train"] = {"file": "train.parquet", "sha256": "d" * 64, "n_rows": 12}
+    teacher = {"model": "hgb", "features": {"method": "all"}, "hyperparameters": {"max_iter": 200}}
+    if variant == "student_kd":
+        config["model_config"]["distillation"] = {"alpha": .5, "temperature": 1, "teacher": teacher,
+                                                    "folds": 3, "fold_seed": 20261101}
+    write_json(run / "config.json", config)
+    write_json(run / "dataset.json", dataset)
+    stats = {"schema_version": 1, "run_id": run.name, "model_family": model,
+             "config_sha256": canonical_hash(config), "source_sha256": code["source_sha256"],
+             "dataset_manifest_sha256": sha256_file(run / "dataset.json"),
+             "parameter_count": None, "trainable_parameter_count": None, "best_epoch": None,
+             "epochs_completed": None, "actual_epochs": None, "best_validation_loss": None}
+    if model == "mlp":
+        widths = [4, *hidden, 1]
+        count = sum((a + 1) * b for a, b in zip(widths, widths[1:]))
+        stats.update(parameter_count=count, trainable_parameter_count=count, best_epoch=1,
+                     epochs_completed=2, actual_epochs=2, best_validation_loss=.7, positive_weight=2.,
+                     training_objective="weighted_hard_bce", distillation={"enabled": False})
+        write_json(run / "training_history.json", [{"epoch": 1, "val_loss": .7}, {"epoch": 2, "val_loss": .8}])
+    if variant == "student_kd":
+        stats.update(training_objective="weighted_hard_bce_plus_unweighted_soft_bce",
+                     distillation={"enabled": True, "alpha": .5, "temperature": 1, "teacher_model": "hgb"})
+        effective = {**teacher, "hyperparameters": {**teacher["hyperparameters"], "early_stopping": False, "num_threads": 1}}
+        oof_config = {"teacher_config": teacher, "effective_teacher_config": effective,
+                      "seed": seed, "folds": 3, "fold_seed": 20261101, "threads": 1}
+        names = ["config.json", "dataset.json", "code.json", "environment.json", "targets.parquet", "folds.json",
+                 "fold-00.joblib", "fold-01.joblib", "fold-02.joblib"]
+        manifest = {"schema_version": 1, "kind": "group_oof_teacher_targets", "teacher_config": teacher,
+                    "seed": seed, "folds": 3, "fold_seed": 20261101, "threads": 1,
+                    "source_sha256": code["source_sha256"], "dataset_manifest_sha256": stats["dataset_manifest_sha256"],
+                    "train_partition_sha256": "d" * 64, "n_training_rows": 12,
+                    "train_identity_sha256": "e" * 64, "train_identity_order": "original prepared train order",
+                    "config_sha256": canonical_hash(oof_config), "score_semantics": "fixture uncalibrated teacher scores",
+                    "splitter": "StratifiedGroupKFold", "group_column": "feature_hash",
+                    "files": dict.fromkeys(names, "f" * 64)}
+        write_json(run / "distillation.json", {
+            "schema_version": 1, "method": "group_oof_hgb", "run_id": run.name,
+            "config_sha256": stats["config_sha256"], "source_sha256": stats["source_sha256"],
+            "dataset_manifest_sha256": stats["dataset_manifest_sha256"], "training_split": "train",
+            "alpha": .5, "temperature": 1, "teacher_config": teacher, "folds": 3, "fold_seed": 20261101,
+            "targets_sha256": "f" * 64, "teacher_manifest_sha256": "a" * 64,
+            "teacher_completion_sha256": "b" * 64, "oof_manifest": manifest})
+    write_json(run / "training_statistics.json", stats)
+    _seal(run)
+    return run
+
+
+def test_distillation_and_capacity_have_distinct_matched_controls_and_family_evidence(tmp_path):
+    for seed in [17, 29, 43]:
+        _variant_run(tmp_path, "hgb_reference", seed, attacks=(0, 1, 2, 3, 4, 5))
+        _variant_run(tmp_path, "mlp_reference", seed, attacks=(0, 1, 3, 4))
+        _variant_run(tmp_path, "student_hard", seed, attacks=(0, 3))
+        _variant_run(tmp_path, "student_kd", seed, attacks=(1, 3, 4), normal=(7,))
+    result = study.build_study(tmp_path)
+    assert result["n_runs"] == 12 and len(result["groups"]) == 4
+    assert len(result["comparisons"]["per_seed"][0]["pairwise"]) == 6
+    assert "or_alerts" in result["comparisons"]["per_seed"][0]
+    assert {g["label"].split(" / ")[0] for g in result["groups"]} == {
+        "全字段 HGB", "大 MLP", "小 MLP（硬标签）", "蒸馏小 MLP"}
+    comparisons = {x["kind"]: x for x in result["distillation_comparisons"]}
+    assert set(comparisons) == {"distillation_effect", "capacity_effect"}
+    kd = comparisons["distillation_effect"]
+    assert kd["common_seeds"] == [17, 29, 43] and kd["complete_expected_seeds"]
+    assert kd["control_variant"] == "student_hard"
+    assert kd["metrics"]["recovered_attacks"]["values"] == [2, 2, 2]
+    assert kd["metrics"]["newly_missed_attacks"]["values"] == [1, 1, 1]
+    assert kd["metrics"]["attack_recall_delta_pp"]["mean"] == pytest.approx(100 / 6)
+    assert kd["metrics"]["parameter_ratio"]["mean"] == 1
+    assert kd["metrics"]["normal_fpr_delta_pp"]["mean"] == 0
+    assert kd["metrics"]["new_false_positives"]["mean"] == 1
+    assert kd["metrics"]["resolved_false_positives"]["mean"] == 1
+    families = {x["category"]: x for x in kd["per_seed"][0]["per_attack"]}
+    assert families["Fuzzers"]["recovered_sample_ids"] == ["row-001"]
+    assert families["Fuzzers"]["newly_missed_sample_ids"] == ["row-000"]
+    assert families["Fuzzers"]["net_detected_gain"] == 0
+    assert families["Exploits"]["net_detected_gain"] == 1
+    assert comparisons["capacity_effect"]["metrics"]["parameter_ratio"]["mean"] < 1
+    assert not kd["cpu_comparisons"]
+    json.dumps(result, allow_nan=False)
+
+
+def test_distillation_incomplete_seed_and_mismatched_optimizer_are_not_completed_controls(tmp_path):
+    _variant_run(tmp_path, "student_hard", seed=17)
+    _variant_run(tmp_path, "student_kd", seed=17)
+    value = study.build_study(tmp_path)["distillation_comparisons"][0]
+    assert not value["complete_expected_seeds"] and value["missing_expected_seeds"] == [29, 43]
+    other = tmp_path / "mismatched-study"
+    _variant_run(other, "student_hard", seed=17)
+    _variant_run(other, "student_kd", seed=17, learning_rate=.002)
+    value = next(x for x in study.build_study(other)["distillation_comparisons"] if x["kind"] == "distillation_effect")
+    assert value["status"] == "no_matching_control"
+    assert value["metrics"]["attack_recall_delta_pp"]["n"] == 0
+
+
+@pytest.mark.parametrize("mutation", ["parameter_count", "actual_epochs", "best_validation_loss", "source_sha256"])
+def test_resealed_training_metadata_mismatch_is_rejected(tmp_path, mutation):
+    run = _variant_run(tmp_path, "student_hard")
+    value = read_json(run / "training_statistics.json")
+    value[mutation] = "wrong" if mutation == "source_sha256" else 999
+    write_json(run / "training_statistics.json", value)
+    _seal(run)
+    with pytest.raises(ValueError, match="statistics|parameter count|epoch|history"):
+        study.build_study(tmp_path)
+
+
+@pytest.mark.parametrize("mutation", ["training_split", "targets_sha256", "oof_seed", "train_sha", "source", "config", "group_column", "files"])
+def test_resealed_distillation_provenance_mismatch_is_rejected(tmp_path, mutation):
+    run = _variant_run(tmp_path, "student_kd")
+    value = read_json(run / "distillation.json")
+    if mutation in {"training_split", "targets_sha256"}:
+        value[mutation] = "test" if mutation == "training_split" else "0" * 64
+    elif mutation == "files":
+        value["oof_manifest"]["files"]["test.parquet"] = "0" * 64
+    else:
+        key = {"oof_seed": "seed", "train_sha": "train_partition_sha256", "source": "source_sha256",
+               "config": "config_sha256", "group_column": "group_column"}[mutation]
+        value["oof_manifest"][key] = 999 if mutation == "oof_seed" else "wrong"
+    write_json(run / "distillation.json", value)
+    _seal(run)
+    with pytest.raises(ValueError, match="Distillation|OOF"):
+        study.build_study(tmp_path)
+
+
+def _round_benchmark(root, run, round_number, planned=3):
+    path = _benchmark(root / f"round-{round_number}", run, filename=f"{run.name}.json")
+    value = read_json(path)
+    value.update(measurement_round=round_number, planned_rounds=planned)
+    # Scale actual raw observations as well as summaries, preserving validation.
+    for mode in ("single", "batch"):
+        value[mode]["latencies_ms"] = [x * round_number for x in value[mode]["latencies_ms"]]
+    value["single"]["p50_ms"] *= round_number
+    value["single"]["p95_ms"] *= round_number
+    value["batch"]["throughput_rows_per_second"] /= round_number
+    write_json(path, value)
+    return path
+
+
+def test_round_medians_are_within_seed_and_missing_rounds_remain_incomplete(tmp_path):
+    root, bench = tmp_path / "runs", tmp_path / "bench"
+    a = _variant_run(root, "student_hard", seed=17)
+    b = _variant_run(root, "student_hard", seed=29)
+    for round_number in [1, 2, 3]:
+        _round_benchmark(bench, a, round_number)
+    _round_benchmark(bench, b, 1)
+    result = study.build_study(root, bench)
+    group = result["groups"][0]
+    assert group["n_runs"] == 2 and len(group["cpu_benchmarks"]) == 3
+    repeated = group["repeated_benchmarks"][0]
+    assert repeated["status"] == "incomplete_rounds" and repeated["seeds"] == [17]
+    assert repeated["missing_seeds"] == [29]
+    assert repeated["metrics"]["p95_ms"]["mean"] == pytest.approx(7.7)
+    assert repeated["metrics"]["p95_ms"]["n"] == 1
+    assert repeated["per_seed"][1]["missing_rounds"] == [2, 3]
+    assert repeated["per_seed"][0]["metrics"]["throughput_rows_per_second"]["median"] == 500
+
+
+def test_cpu_ratios_pair_only_same_round_and_complete_round_medians(tmp_path):
+    root, bench = tmp_path / "runs", tmp_path / "bench"
+    a, b = _variant_run(root, "student_hard"), _variant_run(root, "student_kd")
+    for run in (a, b):
+        for round_number in [1, 2, 3]:
+            _round_benchmark(bench, run, round_number)
+    value = study.build_study(root, bench)["distillation_comparisons"][0]
+    assert len(value["cpu_comparisons"]) == 4
+    paired = next(x for x in value["cpu_comparisons"] if x["mode"] == "within_seed_round_median")
+    assert paired["metrics"]["p95_ratio"]["values"] == [1.]
+    assert paired["common_seeds"] == [17]
+    duplicate = _round_benchmark(bench, a, 1)
+    shutil.copyfile(duplicate, duplicate.parent / "duplicate.json")
+    with pytest.raises(ValueError, match="Duplicate CPU benchmark"):
+        study.build_study(root, bench)

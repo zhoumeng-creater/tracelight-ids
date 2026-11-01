@@ -42,7 +42,8 @@ def benchmark_run(run_dir: Path, data_dir: Path, output: Path, threads: int = 1,
     result.update(identity)
     result.update({"environment": environment_snapshot(),
                    "benchmark_code_sha256": code_fingerprint()["source_sha256"],
-                   "model_file_bytes": (run_dir / "model.joblib").stat().st_size})
+                   "model_file_bytes": (run_dir / "model.joblib").stat().st_size,
+                   "measurement_round": 1, "planned_rounds": 1})
     if measurement:
         result.update(measurement)
     write_json(output, result)
@@ -50,7 +51,8 @@ def benchmark_run(run_dir: Path, data_dir: Path, output: Path, threads: int = 1,
 
 
 def benchmark_suite(run_root: Path, data_dir: Path, output_dir: Path, threads: int = 1,
-                    order_seed: int = 20261101, resume: bool = False) -> list[Path]:
+                    order_seed: int = 20261101, resume: bool = False,
+                    measurement_round: int = 1, planned_rounds: int = 1) -> list[Path]:
     """Measure each expected run once in a saved shuffled order, after training.
 
     Resume checks the plan, artifacts and output checksums. A resume is a new
@@ -58,6 +60,9 @@ def benchmark_suite(run_root: Path, data_dir: Path, output_dir: Path, threads: i
     """
     if type(threads) is not int or threads < 1:
         raise ValueError("threads must be a positive integer")
+    if (type(measurement_round) is not int or type(planned_rounds) is not int
+            or not 1 <= measurement_round <= planned_rounds):
+        raise ValueError("measurement_round must be between 1 and planned_rounds")
     spec = read_json(run_root / "suite.json")["config"]
     runs = [run_root / f"{i:02d}-{model['model']}-s{seed}"
             for i, model in enumerate(spec["models"]) for seed in spec["seeds"]]
@@ -68,6 +73,7 @@ def benchmark_suite(run_root: Path, data_dir: Path, output_dir: Path, threads: i
     environment = environment_snapshot()
     environment.pop("recorded_at", None)
     plan = {"kind": "benchmark_suite_plan", "schema_version": 1, "order_seed": order_seed,
+            "measurement_round": measurement_round, "planned_rounds": planned_rounds,
             "threads": threads, "settings": {"warmup": 5, "repeats": 30, "single_rows": 100, "batch_size": 256},
             "benchmark_code_sha256": code_fingerprint()["source_sha256"],
             "environment_sha256": canonical_hash(environment), "runs": identities}
@@ -86,7 +92,8 @@ def benchmark_suite(run_root: Path, data_dir: Path, output_dir: Path, threads: i
     for index, (run, identity) in enumerate(zip(runs, identities)):
         output = output_dir / f"{run.name}.json"
         checksum = output.with_suffix(".sha256")
-        measurement = {"measurement_order_index": index, "plan_sha256": plan_hash}
+        measurement = {"measurement_order_index": index, "plan_sha256": plan_hash,
+                       "measurement_round": measurement_round, "planned_rounds": planned_rounds}
         if output.exists():
             if not resume or not checksum.exists() or checksum.read_text().strip() != sha256_file(output):
                 raise ValueError(f"Unverified existing benchmark: {output.name}")

@@ -1,0 +1,32 @@
+suite_name: distillation-dev-v1
+purpose: matched_42_field_small_mlp_and_group_oof_distillation_development
+seeds: [17, 29, 43]
+max_fpr: 0.01
+threads: 4
+benchmark_rounds: 3
+models:
+  - model: hgb
+    variant: hgb_reference
+    features: {method: all}
+    hyperparameters: &teacher_hp {max_iter: 200, max_leaf_nodes: 31, learning_rate: 0.1, early_stopping: false}
+  - model: mlp
+    variant: mlp_reference
+    features: {method: all}
+    hyperparameters: {hidden_sizes: [64, 32], epochs: 120, patience: 12, batch_size: 1024, learning_rate: 0.001, weight_decay: 0.0001, min_delta: 0.00001}
+  - model: mlp
+    variant: student_hard
+    features: {method: all}
+    hyperparameters: &student_hp {hidden_sizes: [32, 16], epochs: 120, patience: 12, batch_size: 1024, learning_rate: 0.001, weight_decay: 0.0001, min_delta: 0.00001}
+  - model: mlp
+    variant: student_kd
+    features: {method: all}
+    hyperparameters: *student_hp
+    distillation:
+      alpha: 0.5
+      temperature: 1.0
+      folds: 3
+      fold_seed: 20261101
+      teacher:
+        model: hgb
+        features: {method: all}
+        hyperparameters: *teacher_hp

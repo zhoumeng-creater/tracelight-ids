@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import itertools
 import math
+import re
 from pathlib import Path
 
 import numpy as np
@@ -22,11 +23,15 @@ _REQUIRED = {
     "selected_features.json", "validation_predictions.parquet",
     "validation_metrics.json", "validation_threshold.json",
 }
-_ALLOWED = _REQUIRED | {"training_history.json", "examples.json"}
+_ALLOWED = _REQUIRED | {"training_history.json", "examples.json", "distillation.json", "training_statistics.json"}
 _METRICS = (
     "attack_recall", "normal_fpr", "precision", "accuracy", "macro_f1",
     "average_precision", "roc_auc", "training_seconds", "model_file_bytes", "encoded_dim",
+    "parameter_count", "trainable_parameter_count", "actual_epochs", "best_epoch",
+    "teacher_generation_seconds", "teacher_fold_fit_seconds_total",
 )
+_VARIANT_LABELS = {"hgb_reference": "全字段 HGB", "mlp_reference": "大 MLP",
+                   "student_hard": "小 MLP（硬标签）", "student_kd": "蒸馏小 MLP"}
 _ENVIRONMENT_KEYS = (
     "python", "os", "os_release", "machine", "processor", "cpu_physical", "cpu_logical",
     "ram_total_bytes", "packages", "torch", "nvidia_smi",
@@ -60,6 +65,128 @@ def _same_number(actual, expected):
         return actual is expected
     return math.isfinite(float(actual)) and math.isclose(
         float(actual), float(expected), rel_tol=1e-10, abs_tol=1e-12)
+
+
+def _validate_training_statistics(run_path, meta, config, code, encoded):
+    """Check manifest-bound training metadata, without loading model weights."""
+    if "training_statistics.json" not in meta["files"]:
+        if config["model_config"].get("variant") in _VARIANT_LABELS:
+            raise ValueError("Named study variant requires training_statistics.json")
+        return None
+    value = read_json(run_path / "training_statistics.json")
+    expected = {"schema_version": 1, "run_id": meta["run_id"],
+                "model_family": config["model_config"]["model"],
+                "config_sha256": meta["config_sha256"], "source_sha256": code["source_sha256"],
+                "dataset_manifest_sha256": meta["dataset_manifest_sha256"]}
+    if any(value.get(k) != v for k, v in expected.items()):
+        raise ValueError("Training statistics identity mismatch")
+    if config["model_config"]["model"] != "mlp":
+        if any(value.get(k) is not None for k in ("parameter_count", "trainable_parameter_count")):
+            raise ValueError("Tree parameter counts must remain undefined")
+        return value
+    hyper = config["model_config"].get("hyperparameters", {})
+    hidden = hyper.get("hidden_sizes", hyper.get("hidden_dims", [64, 32]))
+    if not isinstance(hidden, (list, tuple)) or not hidden or any(type(x) is not int or x < 1 for x in hidden):
+        raise ValueError("Invalid MLP hidden dimensions")
+    widths = [encoded, *hidden, 1]
+    expected_count = sum((a + 1) * b for a, b in zip(widths, widths[1:]))
+    if any(type(value.get(k)) is not int or value[k] != expected_count
+           for k in ("parameter_count", "trainable_parameter_count")):
+        raise ValueError("MLP parameter count differs from configured architecture")
+    epochs, best = value.get("epochs_completed"), value.get("best_epoch")
+    if (type(epochs) is not int or type(best) is not int
+            or not 1 <= best <= epochs <= hyper.get("epochs", 60)
+            or value.get("actual_epochs") != epochs):
+        raise ValueError("MLP actual/best epoch metadata is inconsistent")
+    if "training_history.json" not in meta["files"]:
+        raise ValueError("MLP training statistics require a bound training history")
+    history = read_json(run_path / "training_history.json")
+    if (len(history) != epochs or [x.get("epoch") for x in history] != list(range(1, epochs + 1))
+            or not _same_number(value.get("best_validation_loss"), history[best - 1].get("val_loss"))):
+        raise ValueError("Training statistics disagree with saved history")
+    positive_weight = value.get("positive_weight")
+    if isinstance(positive_weight, bool) or not isinstance(positive_weight, (float, int)) or not math.isfinite(positive_weight) or positive_weight <= 0:
+        raise ValueError("Training positive weight must be positive and finite")
+    return value
+
+
+def _validate_distillation(run_path, meta, config, code, dataset, statistics):
+    """Validate embedded OOF provenance; never reopen teacher/cache/test files."""
+    model = config["model_config"]
+    setting = model.get("distillation")
+    variant = model.get("variant")
+    if variant in _VARIANT_LABELS:
+        expected_model = "hgb" if variant == "hgb_reference" else "mlp"
+        if model["model"] != expected_model or model.get("features", {}).get("method", "all") != "all":
+            raise ValueError("Named distillation-study variants require the correct model and all raw fields")
+        if (variant == "student_kd") != bool(setting):
+            raise ValueError("Distillation setting does not match named variant")
+    if not setting:
+        if "distillation.json" in meta["files"]:
+            raise ValueError("Non-distilled run must not carry a distillation artifact")
+        if statistics and model["model"] == "mlp" and statistics.get("training_objective") != "weighted_hard_bce":
+            raise ValueError("Hard-label run has an inconsistent training objective")
+        return None
+    if not isinstance(setting, dict) or model["model"] != "mlp" or "distillation.json" not in meta["files"]:
+        raise ValueError("Distilled MLP requires a bound distillation.json")
+    value = read_json(run_path / "distillation.json")
+    alpha, temperature = setting.get("alpha"), setting.get("temperature")
+    if (isinstance(alpha, bool) or not isinstance(alpha, (float, int)) or not 0 < alpha <= 1
+            or temperature != 1):
+        raise ValueError("Unsupported distillation alpha or temperature")
+    teacher = setting.get("teacher")
+    if not isinstance(teacher, dict) or teacher.get("model") != "hgb" or teacher.get("features", {}).get("method", "all") != "all":
+        raise ValueError("Distillation requires an all-field HGB teacher")
+    expected = {"schema_version": 1, "method": "group_oof_hgb", "run_id": meta["run_id"],
+                "config_sha256": meta["config_sha256"], "source_sha256": code["source_sha256"],
+                "dataset_manifest_sha256": meta["dataset_manifest_sha256"], "training_split": "train",
+                "alpha": alpha, "temperature": temperature, "teacher_config": teacher,
+                "folds": setting.get("folds"), "fold_seed": setting.get("fold_seed")}
+    if any(value.get(k) != v for k, v in expected.items()):
+        raise ValueError("Distillation artifact identity mismatch")
+    manifest = value.get("oof_manifest")
+    if not isinstance(manifest, dict):
+        raise ValueError("Distillation requires embedded OOF provenance")
+    train = dataset.get("partitions", {}).get("train", {})
+    expected_oof = {"schema_version": 1, "kind": "group_oof_teacher_targets", "teacher_config": teacher,
+                    "seed": config["seed"], "folds": value["folds"], "fold_seed": value["fold_seed"],
+                    "threads": config["threads"], "source_sha256": code["source_sha256"],
+                    "dataset_manifest_sha256": meta["dataset_manifest_sha256"],
+                    "train_partition_sha256": train.get("sha256"), "n_training_rows": train.get("n_rows"),
+                    "splitter": "StratifiedGroupKFold", "group_column": "feature_hash"}
+    if any(manifest.get(k) != v or v is None for k, v in expected_oof.items()):
+        raise ValueError("OOF provenance differs from training data, source, seed or fold settings")
+    folds = manifest["folds"]
+    if type(folds) is not int or folds < 2 or type(manifest["fold_seed"]) is not int:
+        raise ValueError("Invalid OOF fold metadata")
+    files = manifest.get("files", {})
+    allowed = {"config.json", "dataset.json", "code.json", "environment.json", "targets.parquet", "folds.json"}
+    allowed.update(f"fold-{i:02d}.joblib" for i in range(folds))
+    if not isinstance(files, dict) or set(files) != allowed:
+        raise ValueError("Invalid OOF artifact whitelist")
+    hashes = [*files.values(), manifest.get("train_identity_sha256"), manifest.get("train_partition_sha256"),
+              manifest.get("config_sha256"), value.get("targets_sha256"), value.get("teacher_manifest_sha256"),
+              value.get("teacher_completion_sha256")]
+    if any(not isinstance(x, str) or not re.fullmatch(r"[0-9a-f]{64}", x) for x in hashes):
+        raise ValueError("Invalid OOF provenance hash")
+    if value["targets_sha256"] != files["targets.parquet"]:
+        raise ValueError("OOF target hash differs from embedded manifest")
+    effective = {**teacher, "features": teacher.get("features", {"method": "all"}),
+                 "hyperparameters": {**teacher.get("hyperparameters", {}),
+                                      "early_stopping": False, "num_threads": config["threads"]}}
+    expected_config = {"teacher_config": teacher, "effective_teacher_config": effective,
+                       "seed": config["seed"], "folds": folds, "fold_seed": manifest["fold_seed"],
+                       "threads": config["threads"]}
+    if manifest["config_sha256"] != canonical_hash(expected_config):
+        raise ValueError("OOF teacher configuration hash mismatch")
+    if not manifest.get("train_identity_order") or not manifest.get("score_semantics"):
+        raise ValueError("OOF sample identity or score semantics are missing")
+    distill_stats = (statistics or {}).get("distillation", {})
+    if (not statistics or statistics.get("training_objective") != "weighted_hard_bce_plus_unweighted_soft_bce"
+            or distill_stats.get("enabled") is not True or distill_stats.get("alpha") != alpha
+            or distill_stats.get("temperature") != temperature or distill_stats.get("teacher_model") != "hgb"):
+        raise ValueError("Distillation objective metadata is inconsistent")
+    return {**value, "study_verification_scope": "embedded provenance and training bindings; external OOF rows and fold models are not reopened by study"}
 
 
 def _validate_predictions(path, meta, dataset, operating):
@@ -172,6 +299,18 @@ def _read_run(root, run_path):
         raise ValueError("Invalid encoded dimension or training duration")
     metrics.update(training_seconds=training_seconds, encoded_dim=encoded,
                    model_file_bytes=(run_path / "model.joblib").stat().st_size)
+    statistics = _validate_training_statistics(run_path, meta, config, code, encoded)
+    distillation = _validate_distillation(run_path, meta, config, code, dataset, statistics)
+    metrics.update({key: statistics.get(key) if statistics else None for key in
+                    ("parameter_count", "trainable_parameter_count", "actual_epochs", "best_epoch")})
+    oof = distillation["oof_manifest"] if distillation else {}
+    for metric, source_key in (("teacher_generation_seconds", "generation_seconds"),
+                               ("teacher_fold_fit_seconds_total", "fold_fit_seconds_total")):
+        value = oof.get(source_key)
+        if value is not None and (isinstance(value, bool) or not isinstance(value, (float, int))
+                                  or not math.isfinite(value) or value < 0):
+            raise ValueError("Invalid teacher generation timing")
+        metrics[metric] = value
     spec = {"model": model_config["model"], "feature_method": method,
             "raw_feature_budget": len(selected), "feature_config": feature_config,
             "hyperparameters": model_config.get("hyperparameters", {}),
@@ -179,12 +318,18 @@ def _read_run(root, run_path):
             "requested_device": config["requested_device"], "threads": config["threads"],
             "source_sha256": code["source_sha256"],
             "training_environment_sha256": canonical_hash(environment)}
+    if "variant" in model_config:
+        spec["variant"] = model_config["variant"]
     run = {"run_key": run_path.relative_to(root).as_posix() or ".", "run_id": meta["run_id"],
            "seed": config["seed"], "run_manifest_sha256": sha256_file(run_path / "run.json"),
            "model_sha256": meta["files"]["model.joblib"],
            "source_sha256": code["source_sha256"], "selected_features": selected,
            "metrics": metrics, "environment": environment,
            "threshold": operating["threshold"], "max_fpr": config["max_fpr"]}
+    if statistics is not None:
+        run["training_statistics"] = statistics
+    if distillation is not None:
+        run["distillation"] = distillation
     return spec, run, dataset, meta["dataset_manifest_sha256"], identity, predicted
 
 
@@ -287,6 +432,11 @@ def _attach_benchmarks(groups, benchmark_dir, dataset_hash):
             raise ValueError("CPU benchmark lacks environment or measurement source identity")
         if type(value["threads"]) is not int or value["threads"] < 1 or single["batch_size"] != 1:
             raise ValueError("Invalid CPU benchmark thread count or single-row batch size")
+        measurement_round = value.get("measurement_round", 1)
+        planned_rounds = value.get("planned_rounds", 1)
+        if (type(measurement_round) is not int or type(planned_rounds) is not int
+                or not 1 <= measurement_round <= planned_rounds):
+            raise ValueError("Invalid CPU measurement round or planned rounds")
         spec = {"scope": value["scope"], "threads": value["threads"],
                 "batch_size": batch["batch_size"], "environment_sha256": canonical_hash(environment),
                 "benchmark_code_sha256": value["benchmark_code_sha256"],
@@ -294,7 +444,8 @@ def _attach_benchmarks(groups, benchmark_dir, dataset_hash):
                 "single_rows": single["n_unique_rows"], "single_observations": single["n_observations"],
                 "single_row_indices": single["row_indices"],
                 "requested_batch_size": batch["requested_batch_size"],
-                "batch_rows": batch["n_rows"], "batch_observations": batch["n_observations"]}
+                "batch_rows": batch["n_rows"], "batch_observations": batch["n_observations"],
+                "measurement_round": measurement_round, "planned_rounds": planned_rounds}
         metrics = {"p50_ms": single["p50_ms"], "p95_ms": single["p95_ms"],
                    "throughput_rows_per_second": batch["throughput_rows_per_second"]}
         if any(not isinstance(x, (float, int)) or not math.isfinite(x) or x <= 0 for x in metrics.values()):
@@ -320,7 +471,7 @@ def _attach_benchmarks(groups, benchmark_dir, dataset_hash):
         bucket = collected.setdefault((group["id"], canonical_hash(spec)),
                                       {"spec": spec, "environment": environment, "runs": []})
         if run["seed"] in [x["seed"] for x in bucket["runs"]]:
-            raise ValueError("Duplicate CPU benchmark for the same run and measurement setting")
+            raise ValueError("Duplicate CPU benchmark for the same run, round and measurement setting")
         bucket["runs"].append({"seed": run["seed"], "run_key": run["run_key"],
                                "artifact": path.relative_to(root).as_posix(),
                                "artifact_sha256": sha256_file(path), "metrics": metrics})
@@ -331,6 +482,46 @@ def _attach_benchmarks(groups, benchmark_dir, dataset_hash):
                              for key in ("p50_ms", "p95_ms", "throughput_rows_per_second")}
         bucket["statistical_scope"] = "summary of per-run measured quantiles/throughputs; not a pooled latency quantile"
         next(g for g in groups if g["id"] == group_id)["cpu_benchmarks"].append(bucket)
+    for group in groups:
+        group["repeated_benchmarks"] = _repeat_benchmarks(group)
+
+
+def _repeat_benchmarks(group):
+    """Summarize rounds within each seed before aggregating across seeds."""
+    buckets = {}
+    for bucket in group["cpu_benchmarks"]:
+        if bucket["spec"]["planned_rounds"] == 1:
+            continue
+        spec = {k: v for k, v in bucket["spec"].items() if k != "measurement_round"}
+        item = buckets.setdefault(canonical_hash(spec), {"spec": spec, "environment": bucket["environment"],
+                                                        "records": {}})
+        for run in bucket["runs"]:
+            item["records"].setdefault(run["seed"], []).append({"round": bucket["spec"]["measurement_round"],
+                                                              "artifact": run["artifact"],
+                                                              "metrics": run["metrics"]})
+    result = []
+    keys = ("p50_ms", "p95_ms", "throughput_rows_per_second")
+    for item in buckets.values():
+        planned = item["spec"]["planned_rounds"]
+        per_seed = []
+        for seed, rows in sorted(item.pop("records").items()):
+            rows.sort(key=lambda r: r["round"])
+            rounds = [r["round"] for r in rows]
+            missing = sorted(set(range(1, planned + 1)) - set(rounds))
+            per_seed.append({"seed": seed, "rounds": rounds, "missing_rounds": missing,
+                             "status": "complete" if not missing else "incomplete_rounds",
+                             "metrics": {key: {"median": float(np.median([r["metrics"][key] for r in rows])),
+                                               **_aggregate([r["metrics"][key] for r in rows])} for key in keys},
+                             "measurements": rows})
+        complete = [r for r in per_seed if r["status"] == "complete"]
+        complete_seeds = [r["seed"] for r in complete]
+        item.update(per_seed=per_seed, seeds=complete_seeds, observed_seeds=[r["seed"] for r in per_seed],
+                    missing_seeds=sorted(set(group["seeds"]) - set(complete_seeds)),
+                    status="complete" if set(complete_seeds) == set(group["seeds"]) else "incomplete_rounds",
+                    metrics={key: _aggregate([r["metrics"][key]["median"] for r in complete]) for key in keys},
+                    statistical_scope="per-seed median across complete planned rounds, then mean/range across training seeds; not a pooled latency quantile or confidence interval")
+        result.append(item)
+    return result
 
 
 def _feature_budget_comparisons(groups):
@@ -386,6 +577,123 @@ def _feature_budget_comparisons(groups):
     return output
 
 
+def _distillation_match_key(group, kind):
+    spec = {k: v for k, v in group["spec"].items()
+            if k not in {"variant", "model_config", "hyperparameters"}}
+    model = {k: v for k, v in group["spec"]["model_config"].items() if k not in {"variant", "distillation"}}
+    hyper = dict(model.get("hyperparameters", {}))
+    if kind == "capacity_effect":
+        hyper.pop("hidden_sizes", None)
+        hyper.pop("hidden_dims", None)
+    model["hyperparameters"] = hyper
+    spec["model_config"] = model
+    return canonical_hash(spec)
+
+
+def _paired_cpu(candidate, control, common):
+    """Keep every measurement setting/round, then pair complete round medians."""
+    output = []
+    for mode, key in (("single_round", "cpu_benchmarks"), ("within_seed_round_median", "repeated_benchmarks")):
+        controls = {canonical_hash(b["spec"]): b for b in control.get(key, [])}
+        for bucket in candidate.get(key, []):
+            other = controls.get(canonical_hash(bucket["spec"]))
+            if not other:
+                continue
+            if mode == "single_round":
+                left = {r["seed"]: r["metrics"] for r in bucket["runs"]}
+                right = {r["seed"]: r["metrics"] for r in other["runs"]}
+            else:
+                left = {r["seed"]: {k: v["median"] for k, v in r["metrics"].items()}
+                        for r in bucket["per_seed"] if r["status"] == "complete"}
+                right = {r["seed"]: {k: v["median"] for k, v in r["metrics"].items()}
+                         for r in other["per_seed"] if r["status"] == "complete"}
+            seeds = sorted(set(left) & set(right) & set(common))
+            rows = [{"seed": seed, "p50_ratio": left[seed]["p50_ms"] / right[seed]["p50_ms"],
+                     "p95_ratio": left[seed]["p95_ms"] / right[seed]["p95_ms"],
+                     "throughput_ratio": left[seed]["throughput_rows_per_second"] / right[seed]["throughput_rows_per_second"]}
+                    for seed in seeds]
+            output.append({"mode": mode, "spec": bucket["spec"], "common_seeds": seeds,
+                           "missing_seeds": sorted(set(common) - set(seeds)), "n_pairs": len(seeds),
+                           "status": "paired" if seeds else "no_common_measured_seed", "per_seed": rows,
+                           "metrics": {k: _aggregate([r[k] for r in rows])
+                                       for k in ("p50_ratio", "p95_ratio", "throughput_ratio")},
+                           "scope": "candidate / control; latency below 1 and throughput above 1 are faster; identical measurement settings"})
+    return output
+
+
+def _distillation_comparisons(groups, decisions, identity):
+    """Separate KD-vs-hard treatment from hard-small-vs-large capacity changes."""
+    output = []
+    labels = identity["true_label"].to_numpy() == 1
+    categories = identity["attack_category"].to_numpy()
+    families = sorted(set(categories[labels]), key=lambda x: (x is None, x or ""))
+    definitions = (("distillation_effect", "student_kd", "student_hard"),
+                   ("capacity_effect", "student_hard", "mlp_reference"))
+    for kind, candidate_variant, control_variant in definitions:
+        candidates = [g for g in groups if g["spec"].get("variant") == candidate_variant]
+        controls = [g for g in groups if g["spec"].get("variant") == control_variant]
+        for candidate in candidates:
+            matched = [g for g in controls if _distillation_match_key(g, kind) ==
+                       _distillation_match_key(candidate, kind)]
+            if len(matched) > 1:
+                raise ValueError("Ambiguous matched distillation control")
+            control = matched[0] if matched else None
+            common = sorted(set(candidate["seeds"]) & set(control["seeds"])) if control else []
+            rows = []
+            for seed in common:
+                a = next(r for r in candidate["runs"] if r["seed"] == seed)
+                b = next(r for r in control["runs"] if r["seed"] == seed)
+                left, right = decisions[(candidate["id"], seed)], decisions[(control["id"], seed)]
+                recovered, lost = labels & left & ~right, labels & ~left & right
+                per_attack = []
+                for family in families:
+                    mask = labels & np.array([x == family for x in categories])
+                    gain, loss = int(np.count_nonzero(mask & recovered)), int(np.count_nonzero(mask & lost))
+                    support = int(mask.sum())
+                    per_attack.append({"category": family, "support": support,
+                                       "recovered": gain, "newly_missed": loss, "net_detected_gain": gain - loss,
+                                       "recall_delta_pp": 100 * (gain - loss) / support,
+                                       "recovered_sample_ids": identity.loc[mask & recovered, "sample_id"].head(10).tolist(),
+                                       "newly_missed_sample_ids": identity.loc[mask & lost, "sample_id"].head(10).tolist()})
+                def delta(key, scale=1):
+                    x, y = a["metrics"].get(key), b["metrics"].get(key)
+                    return (x - y) * scale if x is not None and y is not None else None
+
+                parameters = a["metrics"].get("parameter_count"), b["metrics"].get("parameter_count")
+                rows.append({"seed": seed,
+                             "attack_recall_delta_pp": delta("attack_recall", 100),
+                             "average_precision_delta": delta("average_precision"),
+                             "normal_fpr_delta_pp": delta("normal_fpr", 100),
+                             "recovered_attacks": int(recovered.sum()), "newly_missed_attacks": int(lost.sum()),
+                             "net_detected_gain": int(recovered.sum() - lost.sum()),
+                             "new_false_positives": int(np.count_nonzero(~labels & left & ~right)),
+                             "resolved_false_positives": int(np.count_nonzero(~labels & ~left & right)),
+                             "model_size_ratio": a["metrics"]["model_file_bytes"] / b["metrics"]["model_file_bytes"],
+                             "parameter_ratio": _ratio(*parameters) if None not in parameters else None,
+                             "per_attack": per_attack})
+            keys = ("attack_recall_delta_pp", "average_precision_delta", "normal_fpr_delta_pp",
+                    "recovered_attacks", "newly_missed_attacks", "net_detected_gain", "new_false_positives",
+                    "resolved_false_positives", "model_size_ratio", "parameter_ratio")
+            family_summary = []
+            for index, family in enumerate(families):
+                family_summary.append({"category": family, "support": int(np.count_nonzero(
+                    labels & np.array([x == family for x in categories]))),
+                    **{key: _aggregate([row["per_attack"][index][key] for row in rows]) for key in
+                       ("recovered", "newly_missed", "net_detected_gain", "recall_delta_pp")}})
+            output.append({"kind": kind, "candidate_variant": candidate_variant, "control_variant": control_variant,
+                           "candidate_group_id": candidate["id"], "control_group_id": control["id"] if control else None,
+                           "status": "paired" if common else "no_common_seed" if control else "no_matching_control",
+                           "common_seeds": common, "n_pairs": len(common), "expected_seeds": [17, 29, 43],
+                           "missing_expected_seeds": sorted({17, 29, 43} - set(common)),
+                           "complete_expected_seeds": set(common) == {17, 29, 43},
+                           "per_seed": rows, "metrics": {key: _aggregate([r[key] for r in rows]) for key in keys},
+                           "per_attack": family_summary,
+                           "cpu_comparisons": _paired_cpu(candidate, control, common) if control else [],
+                           "scope": "candidate minus matched control on the same validation identities and seed; KD-vs-hard isolates training objective, capacity comparison changes hidden widths; HGB is reference only",
+                           "example_scope": "first up to 10 stable sample IDs per family and outcome per seed; counts use every validation record"})
+    return output
+
+
 def build_study(run_root, benchmark_dir=None) -> dict:
     """Build a JSON-serializable study from verified development artifacts only.
 
@@ -430,9 +738,10 @@ def build_study(run_root, benchmark_dir=None) -> dict:
                     g["spec"]["raw_feature_budget"], g["id"]))
     for group in groups:
         runs = sorted(group["runs"], key=lambda r: r["seed"])
-        group.update(runs=runs, seeds=[r["seed"] for r in runs], n_runs=len(runs), cpu_benchmarks=[])
+        group.update(runs=runs, seeds=[r["seed"] for r in runs], n_runs=len(runs), cpu_benchmarks=[], repeated_benchmarks=[])
         spec = group["spec"]
-        group["label"] = f"{spec['model'].upper()} / {spec['feature_method']} {spec['raw_feature_budget']} / {group['id'][-6:]}"
+        group["label"] = (_VARIANT_LABELS.get(spec.get("variant")) or
+                          f"{spec['model'].upper()} / {spec['feature_method']} {spec['raw_feature_budget']}") + f" / {group['id'][-6:]}"
         group["metrics"] = {key: _aggregate([r["metrics"][key] for r in runs]) for key in _METRICS}
         group["features"] = _feature_stability(runs)
         group["per_attack"] = []
@@ -454,6 +763,10 @@ def build_study(run_root, benchmark_dir=None) -> dict:
     if dataset["data_kind"] != "official":
         warnings.append("Dataset is not declared official; retain its provenance limits in every research claim.")
     _attach_benchmarks(groups, benchmark_dir, dataset_hash)
+    distillation_comparisons = _distillation_comparisons(groups, decisions, identity)
+    for paired_comparison in distillation_comparisons:
+        if not paired_comparison["complete_expected_seeds"]:
+            warnings.append(f"Incomplete matched three-seed comparison: {paired_comparison['kind']} / {paired_comparison['candidate_group_id']}")
     if not any(g["cpu_benchmarks"] for g in groups):
         warnings.append("No identity-bound CPU benchmarks are included; no latency or throughput conclusion is available.")
     return {"schema_version": 1, "phase": "validation_development",
@@ -464,4 +777,5 @@ def build_study(run_root, benchmark_dir=None) -> dict:
             "validation_identity_sha256": canonical_hash(identity.to_dict(orient="records")),
             "identity_scope": "cross-run validation predictions and declared manifest row count; original dataset files are not opened",
             "groups": groups, "comparisons": comparison,
-            "feature_budget_comparisons": _feature_budget_comparisons(groups), "warnings": warnings}
+            "feature_budget_comparisons": _feature_budget_comparisons(groups),
+            "distillation_comparisons": distillation_comparisons, "warnings": warnings}

@@ -168,3 +168,141 @@ def test_mlp_rejects_unsupported_device(frames):
     train, val = frames
     with pytest.raises(ValueError, match="Supported MLP devices"):
         train_model(train, val, config("mlp", epochs=1), seed=1, device="meta")
+
+
+def test_distillation_loss_matches_weighted_hard_unweighted_soft_formula():
+    torch = pytest.importorskip("torch")
+    from ids.models import _distillation_loss
+    logits = torch.tensor([-1.3, .2, 1.7], dtype=torch.float64)
+    y = torch.tensor([1., 0., 1.], dtype=torch.float64)
+    q = torch.tensor([.15, .6, .8], dtype=torch.float64)
+    weight = torch.tensor(3.2, dtype=torch.float64)
+    p = torch.sigmoid(logits)
+    hard = -(weight * y * torch.log(p) + (1 - y) * torch.log1p(-p)).mean()
+    soft = -(q * torch.log(p) + (1 - q) * torch.log1p(-p)).mean()
+    assert _distillation_loss(logits, y, q, weight, .4).item() == pytest.approx((.6 * hard + .4 * soft).item())
+    assert _distillation_loss(logits, y, None, weight, 0).item() == pytest.approx(hard.item())
+    optimum = torch.logit(q).detach().requires_grad_()
+    _distillation_loss(optimum, y, q, weight, 1).backward()
+    torch.testing.assert_close(optimum.grad, torch.zeros_like(optimum), atol=1e-15, rtol=0)
+
+
+def test_distillation_alpha_zero_is_exactly_the_hard_training_path(frames):
+    torch = pytest.importorskip("torch")
+    import copy
+    train, val = frames
+    hard = config("mlp", epochs=3, patience=2, batch_size=17, hidden_sizes=[8, 4])
+    disabled = copy.deepcopy(hard)
+    disabled["distillation"] = {"alpha": 0, "temperature": 1, "teacher": {"model": "hgb"}}
+    first = train_model(train, val, hard, seed=19)
+    second = train_model(train, val, disabled, seed=19)
+    for key in first.network_state:
+        assert torch.equal(first.network_state[key], second.network_state[key])
+    assert first.history == second.history
+    assert first.best_epoch == second.best_epoch
+    assert second.training_statistics["training_objective"] == "weighted_hard_bce"
+    assert second.training_statistics["distillation"]["enabled"] is False
+
+
+def test_kd_tensor_dataset_keeps_soft_scores_aligned_and_initialization_paired(frames, monkeypatch):
+    torch = pytest.importorskip("torch")
+    from ids import models
+    train, val = frames
+    hard = config("mlp", epochs=2, patience=2, batch_size=17, hidden_sizes=[8, 4])
+    import copy
+    kd = copy.deepcopy(hard)
+    kd["distillation"] = {"alpha": .5, "temperature": 1, "teacher": {"model": "hgb"}}
+    preprocessor = models.FeaturePreprocessor.fit(train, list(FEATURES))
+    q = 1 / (1 + np.exp(-preprocessor.transform(train)[:, 0]))
+    initial_states, batches = [], []
+    original_network = models._network
+    original_loader = torch.utils.data.DataLoader
+
+    def network(*args):
+        result = original_network(*args)
+        initial_states.append({k: v.detach().clone() for k, v in result.state_dict().items()})
+        return result
+
+    def loader(*args, **kwargs):
+        underlying = original_loader(*args, **kwargs)
+        observation = []
+        batches.append(observation)
+
+        class Recorder:
+            def __iter__(self):
+                for batch in underlying:
+                    observation.append(batch[0].numpy().copy())
+                    if len(batch) == 3:
+                        torch.testing.assert_close(batch[2], torch.sigmoid(batch[0][:, 0]), atol=1e-7, rtol=1e-6)
+                    yield batch
+
+        return Recorder()
+
+    monkeypatch.setattr(models, "_network", network)
+    monkeypatch.setattr(torch.utils.data, "DataLoader", loader)
+    first = train_model(train, val, hard, seed=13)
+    second = train_model(train, val, kd, seed=13, soft_targets=q)
+    assert len(initial_states) == 2
+    for key in initial_states[0]:
+        assert torch.equal(initial_states[0][key], initial_states[1][key])
+    assert len(batches[0]) == len(batches[1])
+    for left, right in zip(*batches):
+        np.testing.assert_array_equal(left, right)
+    assert first.training_statistics["parameter_count"] == second.training_statistics["parameter_count"]
+
+
+def test_kd_early_stopping_uses_hard_validation_loss_and_bundle_stays_student_only(frames, tmp_path):
+    torch = pytest.importorskip("torch")
+    from ids import models
+    train, val = frames
+    settings = config("mlp", epochs=3, patience=1, min_delta=100., batch_size=32, hidden_sizes=[8])
+    settings["distillation"] = {"alpha": .5, "temperature": 1, "teacher": {"model": "hgb"}}
+    bundle = train_model(train, val, settings, seed=5, soft_targets=np.full(len(train), .95))
+    assert bundle.best_epoch == 1 and len(bundle.history) == 2
+    network = models._network(bundle.encoded_dim, bundle.hidden_dims)
+    network.load_state_dict(bundle.network_state)
+    logits = network(torch.from_numpy(bundle.preprocessor.transform(val))).squeeze(1)
+    truth = torch.from_numpy(val["label"].to_numpy(dtype=np.float32))
+    weight = torch.tensor((train["label"] == 0).sum() / (train["label"] == 1).sum(), dtype=torch.float32)
+    expected = torch.nn.functional.binary_cross_entropy_with_logits(logits, truth, pos_weight=weight).item()
+    assert bundle.training_statistics["best_validation_loss"] == pytest.approx(expected, abs=1e-7)
+    assert bundle.training_statistics["parameter_count"] == sum(x.numel() for x in network.parameters())
+    assert bundle.training_statistics["epochs_completed"] == 2
+    assert not {"teacher", "soft_targets", "oof_scores", "targets"}.intersection(vars(bundle))
+    target = tmp_path / "student.joblib"
+    save_bundle(bundle, target)
+    restored = load_bundle(target)
+    np.testing.assert_array_equal(bundle.predict_scores(val), restored.predict_scores(val))
+    assert restored.training_statistics == bundle.training_statistics
+
+
+@pytest.mark.parametrize("case", ["without_config", "classical", "missing", "temperature", "alpha", "shape", "length", "nan", "range", "list"])
+def test_invalid_distillation_inputs_are_rejected_before_fitting(frames, monkeypatch, case):
+    from ids import models
+    train, val = frames
+    settings = config("mlp", epochs=1)
+    settings["distillation"] = {"alpha": .5, "temperature": 1}
+    targets = np.full(len(train), .5)
+    if case == "without_config":
+        del settings["distillation"]
+    elif case == "classical":
+        settings["model"] = "hgb"
+    elif case == "missing":
+        targets = None
+    elif case == "temperature":
+        settings["distillation"]["temperature"] = 2
+    elif case == "alpha":
+        settings["distillation"]["alpha"] = float("nan")
+    elif case == "shape":
+        targets = targets[:, None]
+    elif case == "length":
+        targets = targets[:-1]
+    elif case == "nan":
+        targets[0] = float("nan")
+    elif case == "range":
+        targets[0] = 1.01
+    elif case == "list":
+        targets = targets.tolist()
+    monkeypatch.setattr(models.FeaturePreprocessor, "fit", lambda *_a, **_k: pytest.fail("invalid targets reached fit"))
+    with pytest.raises(ValueError, match="distillation|soft_targets"):
+        train_model(train, val, settings, seed=1, soft_targets=targets)
