@@ -1,0 +1,42 @@
+suite_name: controlled-features-v1
+purpose: matched_feature_budget_development_not_final_test
+seeds: [17, 29, 43]
+max_fpr: 0.01
+threads: 4
+models:
+  - model: rf
+    features: {method: all}
+    hyperparameters: &rf {n_estimators: 200, max_depth: 16, min_samples_leaf: 2, max_features: sqrt, n_jobs: 4}
+  - model: rf
+    features: {method: mutual_info, k: 8}
+    hyperparameters: *rf
+  - model: rf
+    features: {method: mutual_info, k: 16}
+    hyperparameters: *rf
+  - model: rf
+    features: {method: mutual_info, k: 24}
+    hyperparameters: *rf
+  - model: hgb
+    features: {method: all}
+    hyperparameters: &hgb {max_iter: 200, max_leaf_nodes: 31, learning_rate: 0.1, early_stopping: false}
+  - model: hgb
+    features: {method: mutual_info, k: 8}
+    hyperparameters: *hgb
+  - model: hgb
+    features: {method: mutual_info, k: 16}
+    hyperparameters: *hgb
+  - model: hgb
+    features: {method: mutual_info, k: 24}
+    hyperparameters: *hgb
+  - model: mlp
+    features: {method: all}
+    hyperparameters: &mlp {hidden_sizes: [64, 32], epochs: 60, batch_size: 1024, patience: 8, learning_rate: 0.001, weight_decay: 0.0001}
+  - model: mlp
+    features: {method: mutual_info, k: 8}
+    hyperparameters: *mlp
+  - model: mlp
+    features: {method: mutual_info, k: 16}
+    hyperparameters: *mlp
+  - model: mlp
+    features: {method: mutual_info, k: 24}
+    hyperparameters: *mlp

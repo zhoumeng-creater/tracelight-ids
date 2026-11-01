@@ -15,7 +15,7 @@ import pytest
 import yaml
 
 from ids import benchmark, cli, runner
-from ids.common import read_json, write_json
+from ids.common import read_json, sha256_file, write_json
 from ids.data import OFFICIAL_FILES, load_unsw_csv
 from ids.models import load_bundle
 
@@ -190,6 +190,11 @@ def test_benchmark_cli_overrides_persisted_training_threads(workspace, model, mo
     assert result["scope"] == "preprocessing_plus_predict_fn"
     assert result["single"]["n_observations"] == 6
     assert result["batch"]["throughput_rows_per_second"] > 0
+    assert result["run_manifest_sha256"] == sha256_file(run / "run.json")
+    assert result["model_sha256"] == sha256_file(run / "model.joblib")
+    assert result["dataset_manifest_sha256"] == sha256_file(workspace["data"] / "manifest.json")
+    assert result["source_sha256"] == _fingerprint()["source_sha256"]
+    assert result["split"] == "validation"
     # Benchmark overrides are in-memory only; training artifacts stay unchanged.
     assert load_bundle(run / "model.joblib").num_threads == 2
     runner.verify_run(run)
@@ -206,6 +211,55 @@ def test_benchmark_cli_rejects_dataset_identity_change(workspace):
     assert not output.exists()
 
 
+def test_benchmark_suite_resume_checks_saved_order_and_output_bytes(workspace, monkeypatch):
+    from ids import benchmark_workflow as workflow
+    monkeypatch.setattr(workflow, "code_fingerprint", _fingerprint)
+    monkeypatch.setattr(workflow, "environment_snapshot", lambda: {"purpose": "benchmark_test_only"})
+    calls = []
+
+    def fast_measure(run_dir, data_dir, output, threads, measurement):
+        calls.append(run_dir.name)
+        value = {**workflow.run_identity(run_dir, data_dir), **measurement,
+                 "threads": threads, "benchmark_code_sha256": _fingerprint()["source_sha256"]}
+        write_json(output, value)
+        return value
+
+    monkeypatch.setattr(workflow, "benchmark_run", fast_measure)
+    output = workspace["root"] / "benchmarks"
+    args = ["benchmark-suite", "--run-root", str(workspace["run"].parent),
+            "--data-dir", str(workspace["data"]), "--output-dir", str(output)]
+    cli.main(args)
+    plan = read_json(output / "plan.json")
+    assert calls == [run["run_id"] for run in plan["runs"]]
+    assert len(calls) == 2
+    cli.main([*args, "--resume"])
+    assert len(calls) == 2
+    target = output / f"{calls[0]}.json"
+    target.write_text(target.read_text(encoding="utf-8") + "\n", encoding="utf-8")
+    with pytest.raises(SystemExit):
+        cli.main([*args, "--resume"])
+    assert len(calls) == 2
+
+
+def test_benchmark_suite_rejects_partial_training_before_any_measurement(workspace):
+    from ids.benchmark_workflow import benchmark_suite
+    (workspace["rf_run"] / "run.json").unlink()
+    output = workspace["root"] / "must-not-start-benchmarks"
+    with pytest.raises(FileNotFoundError):
+        benchmark_suite(workspace["run"].parent, workspace["data"], output)
+    assert not output.exists()
+
+
+def test_controlled_feature_suite_preserves_within_model_training_settings():
+    config = yaml.safe_load((REPO / "configs" / "controlled-features.yaml").read_text(encoding="utf-8"))
+    assert config["seeds"] == [17, 29, 43]
+    assert len(config["models"]) * len(config["seeds"]) == 36
+    for model in ("rf", "hgb", "mlp"):
+        candidates = [c for c in config["models"] if c["model"] == model]
+        assert [c["features"].get("k", 42) for c in candidates] == [42, 8, 16, 24]
+        assert all(c["hyperparameters"] == candidates[0]["hyperparameters"] for c in candidates)
+
+
 def _lab_module():
     spec = importlib.util.spec_from_file_location("tracelight_test_run_lab", REPO / "scripts" / "run_lab.py")
     module = importlib.util.module_from_spec(spec)
@@ -213,7 +267,8 @@ def _lab_module():
     return module
 
 
-def test_lab_dry_run_never_executes_or_freezes_and_preserves_space_paths(workspace, monkeypatch, capsys):
+@pytest.mark.parametrize("with_study", [False, True])
+def test_lab_dry_run_never_executes_or_freezes_and_preserves_space_paths(workspace, monkeypatch, capsys, with_study):
     module = _lab_module()
 
     def forbidden(*_args, **_kwargs):
@@ -222,12 +277,15 @@ def test_lab_dry_run_never_executes_or_freezes_and_preserves_space_paths(workspa
     monkeypatch.setattr(module.subprocess, "run", forbidden)
     work = workspace["root"] / "lab work with spaces"
     result = module.main(["--data-dir", str(workspace["data"]), "--work-dir", str(work),
-                          "--config", str(workspace["config"]), "--resume", "--dry-run"])
+                          "--config", str(workspace["config"]), "--resume", "--dry-run",
+                          *(["--with-study"] if with_study else [])])
     assert result == 0
     assert not work.exists()
     commands = [ast.literal_eval(line.removeprefix("argv: "))
                 for line in capsys.readouterr().out.splitlines() if line.startswith("argv: ")]
-    assert [command[3] for command in commands] == ["doctor", "suite", "report"]
+    assert [command[3] for command in commands] == (
+        ["doctor", "suite", "report", "benchmark-suite", "study"] if with_study
+        else ["doctor", "suite", "report"])
     assert all("freeze" not in command and "evaluate" not in command for command in commands)
     assert "--require-cuda" in commands[0]
     suite = commands[1]

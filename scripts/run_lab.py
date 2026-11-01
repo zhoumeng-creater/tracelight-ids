@@ -25,7 +25,19 @@ def build_commands(args, repo: Path, suite: dict, stamp: str) -> list[list[str]]
         suite_command.append("--resume")
     report = prefix + ["report", "--run-root", str(args.work_dir / "runs" / suite["suite_name"]),
                        "--output", str(args.work_dir / "reports" / f"{suite['suite_name']}-{stamp}.html")]
-    return [doctor, suite_command, report]
+    commands = [doctor, suite_command, report]
+    if args.with_study:
+        benchmark = prefix + ["benchmark-suite", "--data-dir", str(args.data_dir),
+                              "--run-root", str(args.work_dir / "runs" / suite["suite_name"]),
+                              "--output-dir", str(args.work_dir / "benchmarks" / suite["suite_name"]),
+                              "--threads", "1"]
+        if args.resume:
+            benchmark.append("--resume")
+        study = prefix + ["study", "--run-root", str(args.work_dir / "runs" / suite["suite_name"]),
+                          "--benchmark-dir", str(args.work_dir / "benchmarks" / suite["suite_name"]),
+                          "--output", str(args.work_dir / "reports" / f"study-{suite['suite_name']}-{stamp}.html")]
+        commands.extend([benchmark, study])
+    return commands
 
 
 def main(argv=None) -> int:
@@ -35,6 +47,7 @@ def main(argv=None) -> int:
     parser.add_argument("--config", type=Path, required=True, help="Development suite YAML")
     parser.add_argument("--device", choices=["cpu", "cuda"], default="cuda")
     parser.add_argument("--resume", action="store_true", help="Verify and reuse completed runs with identical inputs/code")
+    parser.add_argument("--with-study", action="store_true", help="After all training, benchmark every model on CPU and build a study")
     parser.add_argument("--dry-run", action="store_true", help="Print exact argv lists without creating outputs or launching jobs")
     args = parser.parse_args(argv)
     repo = Path(__file__).resolve().parents[1]

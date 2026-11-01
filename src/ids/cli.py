@@ -42,6 +42,17 @@ def build_parser():
     p.add_argument("--data-dir", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--threads", type=int, default=1)
+    p = sub.add_parser("benchmark-suite", help="Measure all completed suite models sequentially on CPU")
+    p.add_argument("--run-root", type=Path, required=True)
+    p.add_argument("--data-dir", type=Path, required=True)
+    p.add_argument("--output-dir", type=Path, required=True)
+    p.add_argument("--threads", type=int, default=1)
+    p.add_argument("--order-seed", type=int, default=20261101)
+    p.add_argument("--resume", action="store_true")
+    p = sub.add_parser("study", help="Aggregate verified validation runs and build an offline research comparison")
+    p.add_argument("--run-root", type=Path, required=True)
+    p.add_argument("--benchmark-dir", type=Path)
+    p.add_argument("--output", type=Path, required=True, help="HTML output; sibling JSON is also written")
     p = sub.add_parser("report", help="Build offline inspection report from real validation run artifacts")
     p.add_argument("--run-root", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
@@ -83,28 +94,19 @@ def main(argv=None):
             from .runner import evaluate_frozen
             print(json.dumps(evaluate_frozen(args.run_dir, args.data_dir), indent=2))
         elif args.command == "benchmark":
-            from .benchmark import benchmark_predict
-            from .data import load_partition
-            from .models import load_bundle
-            from .runner import verify_run
-            from .common import sha256_file
-            meta = verify_run(args.run_dir)
-            if meta["dataset_manifest_sha256"] != sha256_file(args.data_dir / "manifest.json"):
-                raise ValueError("Dataset differs from training")
-            if args.output.exists():
-                raise FileExistsError("Benchmark output exists")
-            bundle = load_bundle(args.run_dir / "model.joblib", device="cpu")
-            bundle.num_threads = args.threads
-            if bundle.model_name == "rf":
-                bundle.estimator.n_jobs = args.threads
-            if bundle.model_name == "mlp":
-                import torch
-                torch.set_num_threads(args.threads)
-            result = benchmark_predict(bundle.predict_scores, load_partition(args.data_dir, "validation"),
-                                       threads=args.threads)
-            result.update({"run_id": args.run_dir.name, "environment": environment_snapshot(),
-                           "model_file_bytes": (args.run_dir / "model.joblib").stat().st_size})
-            write_json(args.output, result)
+            from .benchmark_workflow import benchmark_run
+            benchmark_run(args.run_dir, args.data_dir, args.output, args.threads)
+        elif args.command == "benchmark-suite":
+            from .benchmark_workflow import benchmark_suite
+            benchmark_suite(args.run_root, args.data_dir, args.output_dir,
+                            args.threads, args.order_seed, args.resume)
+        elif args.command == "study":
+            from .study import build_study
+            from .study_report import render_study_report
+            study = build_study(args.run_root, args.benchmark_dir)
+            write_json(args.output.with_suffix(".json"), study)
+            render_study_report(study, args.output)
+            print("Validation study:", args.output)
         elif args.command == "report":
             from .reporting import build_report
             build_report(args.run_root, args.output)
