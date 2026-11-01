@@ -42,14 +42,14 @@ def _predictions(frame, scores, threshold, split, run_id, data_kind):
     return out
 
 
-def _examples(frame, predictions, limit=200):
+def _examples(frame, predictions, limit=200, features=None):
     # First N records by stable ID; no truth-based cherry-picking.
     indexes = np.argsort(frame["sample_id"].astype(str).to_numpy())[:limit]
     rows = []
     for i in indexes:
         event = predictions.iloc[int(i)].to_dict()
         event["features"] = {
-            k: (None if pd.isna(frame.iloc[int(i)][k]) else frame.iloc[int(i)][k]) for k in FEATURES
+            k: (None if pd.isna(frame.iloc[int(i)][k]) else frame.iloc[int(i)][k]) for k in (features or FEATURES)
         }
         rows.append(event)
     return {"selection": "first_n_by_stable_sample_id", "limit": limit,
@@ -70,13 +70,15 @@ def verify_run(run_dir: str | Path) -> dict:
     return meta
 
 
-def verify_development_inputs(data_dir: str | Path) -> dict:
+def verify_development_inputs(data_dir: str | Path, *, splits=("train", "validation")) -> dict:
     """Verify only the development partitions and audit; never open reserved partitions."""
     root = Path(data_dir)
     manifest = read_json(root / "manifest.json")
     if (root / "manifest.sha256").read_text().strip() != sha256_file(root / "manifest.json"):
         raise ValueError("Manifest checksum mismatch")
-    for split in ("train", "validation"):
+    if not set(splits).issubset({"train", "validation"}):
+        raise ValueError("Development verification cannot read reserved partitions")
+    for split in splits:
         record = manifest["partitions"][split]
         if record["file"] != f"{split}.parquet" or sha256_file(root / record["file"]) != record["sha256"]:
             raise ValueError(f"Partition checksum mismatch: {split}")
@@ -114,7 +116,8 @@ def verify_run_teacher(run_dir: str | Path, teacher_dir: str | Path, data_dir=No
 def run_development(data_dir: str | Path, model_config: dict, output_dir: str | Path,
                     seed: int = 17, device: str = "cpu", max_fpr: float = .01,
                     threads: int = 1, purpose: str = "development",
-                    teacher_targets_dir: str | Path | None = None) -> Path:
+                    teacher_targets_dir: str | Path | None = None,
+                    selection_result: dict | None = None) -> Path:
     data_dir, root = Path(data_dir), Path(output_dir)
     if threads < 1:
         raise ValueError("threads must be positive")
@@ -169,6 +172,14 @@ def run_development(data_dir: str | Path, model_config: dict, output_dir: str | 
                 torch.set_num_threads(threads)
             begin = time.perf_counter()
             training_args = {"seed": seed, "device": device}
+            if selection_result is not None or data_manifest.get("schema_version", "").startswith("cicids2017-"):
+                training_args["feature_schema"] = {
+                    "name": data_manifest["schema_version"], "features": data_manifest["features"],
+                    "categorical": data_manifest["categorical_features"],
+                    "discrete": data_manifest.get("discrete_features", data_manifest["categorical_features"]),
+                }
+            if selection_result is not None:
+                training_args["selection_result"] = selection_result
             if soft_targets is not None:
                 training_args["soft_targets"] = soft_targets
             bundle = train_model(train, validation, model_config, **training_args)
@@ -192,6 +203,8 @@ def run_development(data_dir: str | Path, model_config: dict, output_dir: str | 
         write_json(root / "validation_metrics.json", metrics)
         write_json(root / "validation_threshold.json", operating)
         write_json(root / "selected_features.json", list(bundle.selected_features))
+        if getattr(bundle, "selection_metadata", None):
+            write_json(root / "selection.json", bundle.selection_metadata)
         write_json(root / "training_history.json", bundle.history)
         stats = getattr(bundle, "training_statistics", {})
         if stats:
@@ -201,7 +214,7 @@ def run_development(data_dir: str | Path, model_config: dict, output_dir: str | 
                 "dataset_manifest_sha256": sha256_file(data_dir / "manifest.json"),
                 "actual_epochs": stats.get("epochs_completed"),
             })
-        write_json(root / "examples.json", _examples(validation, pred))
+        write_json(root / "examples.json", _examples(validation, pred, features=data_manifest["features"]))
         meta = {"schema_version": 1, "run_id": root.name, "status": "complete", "phase": "development",
                 "started_at": started, "finished_at": utc_now(), "config_sha256": canonical_hash(config),
                 "dataset_manifest_sha256": sha256_file(data_dir / "manifest.json"),
@@ -215,7 +228,8 @@ def run_development(data_dir: str | Path, model_config: dict, output_dir: str | 
     return root
 
 
-def run_suite(data_dir, suite: dict, output_root, device="cpu", resume=False) -> list[Path]:
+def run_suite(data_dir, suite: dict, output_root, device="cpu", resume=False,
+              selection_results: dict | None = None) -> list[Path]:
     validate_suite(suite)
     root = Path(output_root) / suite["suite_name"]
     root.mkdir(parents=True, exist_ok=True)
@@ -267,6 +281,11 @@ def run_suite(data_dir, suite: dict, output_root, device="cpu", resume=False) ->
                 print(f"Preserved incomplete attempt: {archive.name}; restarting this model from its seed", flush=True)
             if run_dir.exists() and resume:
                 meta = verify_run(run_dir)
+                if selection_results is not None:
+                    selection = selection_results[canonical_hash(model.get("features", {}))]
+                    if ("selection.json" not in meta["files"]
+                            or read_json(run_dir / "selection.json").get("result_sha256") != selection["result_sha256"]):
+                        raise ValueError("Cannot resume: completed run selection binding differs from cached selection")
                 # Verify only development inputs; never open calibration/test on resume.
                 current = read_json(Path(data_dir) / "manifest.json")
                 if (Path(data_dir) / "manifest.sha256").read_text().strip() != sha256_file(Path(data_dir) / "manifest.json"):
@@ -286,7 +305,9 @@ def run_suite(data_dir, suite: dict, output_root, device="cpu", resume=False) ->
                 print(f"Training {run_dir.name} ({device}); validation only", flush=True)
                 run_development(data_dir, model, run_dir, seed, device, suite.get("max_fpr", .01),
                                 suite.get("threads", 1), suite.get("purpose", "development"),
-                                teacher_targets_dir=targets_dir)
+                                teacher_targets_dir=targets_dir,
+                                selection_result=(selection_results[canonical_hash(model.get("features", {}))]
+                                                  if selection_results is not None else None))
             runs.append(run_dir)
     write_json(root / "summary.json", [{"run_id": p.name,
                                         "metrics": read_json(p / "validation_metrics.json")} for p in runs])

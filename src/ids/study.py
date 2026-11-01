@@ -23,7 +23,7 @@ _REQUIRED = {
     "selected_features.json", "validation_predictions.parquet",
     "validation_metrics.json", "validation_threshold.json",
 }
-_ALLOWED = _REQUIRED | {"training_history.json", "examples.json", "distillation.json", "training_statistics.json"}
+_ALLOWED = _REQUIRED | {"training_history.json", "examples.json", "distillation.json", "training_statistics.json", "selection.json"}
 _METRICS = (
     "attack_recall", "normal_fpr", "precision", "accuracy", "macro_f1",
     "average_precision", "roc_auc", "training_seconds", "model_file_bytes", "encoded_dim",
@@ -760,8 +760,10 @@ def build_study(run_root, benchmark_dir=None) -> dict:
         warnings.append("Groups have different seed sets: group summaries use their own seeds; complementarity uses only the common intersection.")
     if len({g["spec"]["max_fpr"] for g in groups}) > 1:
         warnings.append("Candidates have different individual FPR budgets; comparisons are not a controlled fixed-budget experiment.")
-    if dataset["data_kind"] != "official":
+    if dataset["data_kind"] not in {"official", "official_repaired"}:
         warnings.append("Dataset is not declared official; retain its provenance limits in every research claim.")
+    if dataset["data_kind"] == "official_repaired":
+        warnings.append("Author-repaired dataset with a pinned observed archive hash; group-safe same-capture evaluation, not time/host transfer.")
     _attach_benchmarks(groups, benchmark_dir, dataset_hash)
     distillation_comparisons = _distillation_comparisons(groups, decisions, identity)
     for paired_comparison in distillation_comparisons:

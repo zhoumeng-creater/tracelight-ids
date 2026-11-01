@@ -18,15 +18,14 @@ import joblib
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
-from sklearn.feature_selection import mutual_info_classif
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import average_precision_score, log_loss
-from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.utils.class_weight import compute_sample_weight
 from threadpoolctl import threadpool_limits
 
-from .data import CATEGORICAL, FEATURES
+from .selection import EXCLUDED, normalize_feature_schema, select_features, verify_selection_result
 
 
 # The runner may collect CUDA metadata before calling train_model. Configure
@@ -34,16 +33,13 @@ from .data import CATEGORICAL, FEATURES
 os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
 
 
-_EXCLUDED = frozenset({"id", "sample_id", "feature_hash", "label", "attack_cat"})
+_EXCLUDED = EXCLUDED
 _MODELS = frozenset({"lr", "rf", "hgb", "mlp"})
 _ARTIFACT_VERSION = 1
 
 
-def _feature_names() -> list[str]:
-    names = list(FEATURES)
-    if not names or len(set(names)) != len(names) or _EXCLUDED.intersection(names):
-        raise ValueError("FEATURES must contain unique predictors and no identifiers or labels")
-    return names
+def _feature_names(feature_schema: dict | None = None) -> list[str]:
+    return normalize_feature_schema(feature_schema)["features"]
 
 
 def _check_frame(frame: pd.DataFrame, features: list[str], *, allow_empty: bool) -> None:
@@ -105,9 +101,14 @@ class FeaturePreprocessor:
     encoded_dim: int = 0
 
     @classmethod
-    def fit(cls, frame: pd.DataFrame, selected_features: list[str]) -> "FeaturePreprocessor":
-        numeric = [name for name in selected_features if name not in CATEGORICAL]
-        categorical = [name for name in selected_features if name in CATEGORICAL]
+    def fit(cls, frame: pd.DataFrame, selected_features: list[str],
+            feature_schema: dict | None = None) -> "FeaturePreprocessor":
+        schema = normalize_feature_schema(feature_schema)
+        if (not selected_features or len(set(selected_features)) != len(selected_features)
+                or not set(selected_features).issubset(schema["features"])):
+            raise ValueError("Selected features do not match the feature schema")
+        numeric = [name for name in selected_features if name not in schema["categorical"]]
+        categorical = [name for name in selected_features if name in schema["categorical"]]
         result = cls(list(selected_features), numeric, categorical)
         if numeric:
             result.imputer = SimpleImputer(strategy="median", keep_empty_features=True)
@@ -139,41 +140,11 @@ class FeaturePreprocessor:
 
 
 def _select_features(frame: pd.DataFrame, labels: np.ndarray, settings: dict, seed: int):
-    names = _feature_names()
-    method = settings.get("method", "all")
-    k = settings.get("k")
-    if method == "all":
-        if k is not None:
-            raise ValueError("features.k must be null when features.method is 'all'")
-        return names, {}
-    if method != "mutual_info":
-        raise ValueError("features.method must be 'all' or 'mutual_info'")
-    if isinstance(k, bool) or not isinstance(k, int) or not 1 <= k <= len(names):
-        raise ValueError(f"features.k must be an integer between 1 and {len(names)}")
-    categorical = [name for name in names if name in CATEGORICAL]
-    numeric = [name for name in names if name not in CATEGORICAL]
-    columns: dict[str, np.ndarray] = {}
-    if numeric:
-        numeric_values = SimpleImputer(strategy="median", keep_empty_features=True).fit_transform(
-            _numeric(frame, numeric)
-        )
-        columns.update({name: numeric_values[:, index] for index, name in enumerate(numeric)})
-    if categorical:
-        category_values = OrdinalEncoder().fit_transform(_categorical(frame, categorical))
-        columns.update({name: category_values[:, index] for index, name in enumerate(categorical)})
-    matrix = np.column_stack([columns[name] for name in names])
-    scores = mutual_info_classif(
-        matrix,
-        labels,
-        discrete_features=[name in CATEGORICAL for name in names],
-        random_state=seed,
-        n_neighbors=min(3, len(frame) - 1),
-    )
-    # Stable ties preserve the official field order. k counts original fields,
-    # never the one-hot columns produced later.
-    ranked = np.lexsort((np.arange(len(names)), -scores))[:k]
-    chosen = set(ranked.tolist())
-    return [name for index, name in enumerate(names) if index in chosen], dict(zip(names, scores.tolist()))
+    """Compatibility wrapper for the original private two-value interface."""
+    if not np.array_equal(labels, frame["label"].to_numpy()):
+        raise ValueError("Selection labels do not align with frame")
+    result = select_features(frame, settings, seed)
+    return result["selected_features"], result["feature_scores"]
 
 
 def _torch():
@@ -225,6 +196,8 @@ class ModelBundle:
     batch_size: int = 1024
     num_threads: int = 1
     feature_scores: dict[str, float] = field(default_factory=dict)
+    feature_schema: dict[str, Any] = field(default_factory=dict)
+    selection_metadata: dict[str, Any] = field(default_factory=dict)
     best_epoch: int | None = None
     training_statistics: dict[str, Any] = field(default_factory=dict)
     seed: int = 0
@@ -235,6 +208,11 @@ class ModelBundle:
         state = self.__dict__.copy()
         state["_cached_network"] = None
         state["device"] = "cpu"
+        # Per-resample evidence belongs in an external, hashed training artifact,
+        # not the deployed student/model package. Keep only a small binding.
+        metadata = getattr(self, "selection_metadata", {})
+        state["selection_metadata"] = {key: metadata[key] for key in
+            ("schema_version", "method", "settings", "actual_k", "result_sha256") if key in metadata}
         if self.network_state is not None:
             state["network_state"] = {key: value.detach().cpu().clone() for key, value in self.network_state.items()}
         return state
@@ -247,7 +225,7 @@ class ModelBundle:
         The caller controls inference thread pools outside repeated calls;
         threadpool discovery must not contaminate single-record latency.
         """
-        _check_frame(frame, _feature_names(), allow_empty=True)
+        _check_frame(frame, _feature_names(getattr(self, "feature_schema", None)), allow_empty=True)
         matrix = self.preprocessor.transform(frame)
         if not len(matrix):
             return np.empty(0, dtype=np.float32)
@@ -293,6 +271,9 @@ def train_model(
     seed: int,
     device: str = "cpu",
     soft_targets: np.ndarray | None = None,
+    *,
+    feature_schema: dict | None = None,
+    selection_result: dict | None = None,
 ) -> ModelBundle:
     """Fit on train only; validation is used for reporting and MLP stopping.
 
@@ -303,8 +284,13 @@ def train_model(
     one-dimensional NumPy array aligned to train_df row order. Its values are
     teacher attack scores, not calibrated probabilities. Only temperature 1 is
     supported. The separate OOF loader verifies identity before positional use.
+    A custom ``feature_schema`` specifies original names and MI field types.
+    ``selection_result`` may reuse a verified train-only selection-pool result;
+    fitted preprocessing and model training still use the complete train_df.
+    Full ``selection_metadata`` is training evidence and is compacted on save.
     """
-    names = _feature_names()
+    schema = normalize_feature_schema(feature_schema)
+    names = schema["features"]
     _check_frame(train_df, names, allow_empty=False)
     _check_frame(val_df, names, allow_empty=False)
     labels = _labels(train_df, require_both=True)
@@ -313,14 +299,19 @@ def train_model(
     if model_name not in _MODELS:
         raise ValueError(f"model must be one of {sorted(_MODELS)}")
     distillation, soft_targets = _distillation_settings(config, model_name, soft_targets, len(train_df))
-    selected, feature_scores = _select_features(train_df, labels, config.get("features") or {}, seed)
-    preprocessor = FeaturePreprocessor.fit(train_df, selected)
+    feature_settings = config.get("features") or {}
+    selection = (select_features(train_df, feature_settings, seed, feature_schema=schema)
+                 if selection_result is None else verify_selection_result(
+                     selection_result, train_df, feature_settings, seed, feature_schema=schema))
+    selected, feature_scores = selection["selected_features"], selection["feature_scores"]
+    preprocessor = FeaturePreprocessor.fit(train_df, selected, feature_schema=schema)
     x_train = preprocessor.transform(train_df)
     x_val = preprocessor.transform(val_df)
     hyperparameters = copy.deepcopy(config.get("hyperparameters") or {})
     num_threads = _positive_integer(hyperparameters.pop("num_threads", 1), "num_threads")
     bundle = ModelBundle(model_name, preprocessor, selected, x_train.shape[1], [], num_threads=num_threads,
-                         feature_scores=feature_scores, seed=seed)
+                         feature_scores=feature_scores, feature_schema=schema,
+                         selection_metadata={**selection["metadata"], "result_sha256": selection["result_sha256"]}, seed=seed)
     if model_name == "mlp":
         return _train_mlp(bundle, x_train, labels, x_val, val_labels, hyperparameters, seed, device,
                           distillation, soft_targets)
@@ -544,8 +535,15 @@ def load_bundle(path: str | Path, device: str = "cpu") -> ModelBundle:
         raise ValueError("Invalid model bundle metadata")
     if bundle.selected_features != bundle.preprocessor.selected_features or _EXCLUDED.intersection(bundle.selected_features):
         raise ValueError("Invalid model feature schema")
-    if not set(bundle.selected_features).issubset(_feature_names()):
+    schema = normalize_feature_schema(getattr(bundle, "feature_schema", None))
+    if not set(bundle.selected_features).issubset(schema["features"]):
         raise ValueError("Artifact features do not match the current data schema")
+    if (bundle.preprocessor.categorical_columns != [x for x in bundle.selected_features if x in schema["categorical"]]
+            or bundle.preprocessor.numeric_columns != [x for x in bundle.selected_features if x not in schema["categorical"]]):
+        raise ValueError("Artifact preprocessing does not match the field types")
+    bundle.feature_schema = schema
+    if not hasattr(bundle, "selection_metadata"):
+        bundle.selection_metadata = {}
     bundle._cached_network = None
     if not hasattr(bundle, "training_statistics"):
         bundle.training_statistics = {}

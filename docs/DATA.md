@@ -1,6 +1,12 @@
 # UNSW-NB15 data contract
 
-The supported input is the **official train/test CSV format**, not the four raw
+This section describes the original UNSW adapter. Stage 4 additionally supports
+the separately validated CNS2022 Improved CICIDS2017 schema through `ids.cicids`;
+it does not reinterpret CIC columns as UNSW features. The one-entry download,
+preparation and replication workflow is in [STAGE4_LAB.md](STAGE4_LAB.md), with
+the precise label and joint-group rules in [STAGE4_PROTOCOL.md](STAGE4_PROTOCOL.md).
+
+The input for this UNSW adapter is the **official train/test CSV format**, not the four raw
 UNSW-NB15 CSVs, PCAP traffic, or CICFlowMeter features. The
 [UNSW dataset page](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 states 175,341 training rows and 82,332 testing rows. Its public SharePoint link

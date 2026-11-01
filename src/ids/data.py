@@ -349,6 +349,9 @@ def load_partition(prepared_dir: str | Path, split: str) -> pd.DataFrame:
     if sha256_file(manifest_path) != expected_manifest:
         raise ValueError("Manifest checksum mismatch")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("schema_version", "").startswith("cicids2017-"):
+        from .cicids import load_cic_partition
+        return load_cic_partition(prepared, split)
     if manifest.get("schema_version") != SCHEMA_VERSION or manifest.get("features") != list(FEATURES):
         raise ValueError("Manifest schema does not match this UNSW feature contract")
     record = manifest["partitions"][split]

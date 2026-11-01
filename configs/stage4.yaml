@@ -1,0 +1,24 @@
+stage_name: stage4-stability-replication-v1
+profile: research
+seeds: [17, 29, 43]
+max_fpr: 0.01
+threads: 4
+benchmark_rounds: 3
+selection:
+  k: 24
+  selection_seed: 20261101
+  n_resamples: 50
+  redundancy_threshold: 0.95
+  pool_max_rows: 50000
+  pool_policy: stratified_rows
+  pool_seed: 20261102
+  outer_repeats: 5
+  outer_fraction: 0.8
+  outer_seed: 20261103
+dataset:
+  expected_unsw_manifest_sha256: 6348a936f68a67a11e241452eff9abdf334d4ea02f71472f805f38c532c002d4
+  split_seed: 20261102
+  session_gap_seconds: 120
+models:
+  rf: {n_estimators: 200, max_depth: 16, min_samples_leaf: 2, max_features: sqrt}
+  mlp: {hidden_sizes: [32, 16], epochs: 120, patience: 12, batch_size: 1024, learning_rate: 0.001, weight_decay: 0.0001, min_delta: 0.00001}

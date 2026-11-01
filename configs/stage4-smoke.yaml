@@ -1,0 +1,23 @@
+stage_name: stage4-smoke-v1
+profile: smoke
+seeds: [17]
+max_fpr: 0.01
+threads: 1
+benchmark_rounds: 1
+selection:
+  k: 4
+  selection_seed: 20261101
+  n_resamples: 3
+  redundancy_threshold: 0.95
+  pool_max_rows: 300
+  pool_policy: stratified_rows
+  pool_seed: 20261102
+  outer_repeats: 2
+  outer_fraction: 0.8
+  outer_seed: 20261103
+dataset:
+  split_seed: 20261102
+  session_gap_seconds: 120
+models:
+  rf: {n_estimators: 5, max_depth: 4, min_samples_leaf: 2, max_features: sqrt}
+  mlp: {hidden_sizes: [8, 4], epochs: 2, patience: 2, batch_size: 128, learning_rate: 0.001, weight_decay: 0.0001, min_delta: 0.00001}
