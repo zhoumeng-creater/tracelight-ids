@@ -115,7 +115,7 @@ RF 不在本轮矩阵；BLAS/OpenMP/PyTorch 线程仍须统一限制。每轮沿
 
 恢复不得仅检查文件存在：复用教师目标时核对源清单、train 分区、行身份、fold seed、teacher seed/参数、代码指纹与各文件哈希；完成主 run 绑定对应软目标身份；计时绑定 run、模型、数据、源码、环境、轮次和计划。改变任一研究设置应使用新的实验输出，不拼接成原方案。未完成尝试保留，不能让失败目录冒充完成记录。
 
-阶段完成要求是：12 个主 run、9 个辅助教师拟合的完整账目与 OOF 校验、36 份覆盖完整的三轮主模型 CPU 测量、配对效果及全部家族表、候选判定记录、HTML/JSON 报告、原始计时与可校验打包。完整完成可以得到“KD 未达到开发收益条件”的结论，不依赖结果是否好看。
+本阶段应保留：12 个主 run、9 个辅助教师拟合的完整账目与 OOF 校验、36 份覆盖完整的三轮主模型 CPU 测量、配对效果及全部家族表、HTML/JSON 报告、原始计时与可校验打包。自动生成的 `STAGE3_COMPLETE.json` 仅表示工件、报告与计时通过完整性和覆盖检查，不自动按第 5 节门槛判定候选。真实实验带回后，再由人工或分析流程逐条核对门槛并保存候选判定记录；KD 是否达到收益条件不是生成运行完成标记的条件。
 
 实验室入口为 `scripts/run_stage3.py`，默认配置 `configs/distillation.yaml`；合成验证配置为 `configs/distillation-smoke.yaml`。`scripts/package_run.py --work-dir ... --output ...zip` 先核对 `STAGE3_COMPLETE.json` 的文件哈希，再打包新输出、代码快照、协议与 `MANIFEST.sha256`，重新读取 ZIP 核验并生成 `.zip.sha256`；不自动携带原始 prepared 大文件。发布前仍需通过实际 `--help`、dry-run、smoke 和多轮报告覆盖验证，不能把入口存在当作真实实验已完成的证据。
 
