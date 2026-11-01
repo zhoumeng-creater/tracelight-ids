@@ -8,6 +8,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 已完成全规模数据的四模型单种子开发验证、CPU 基准链路及离线报告交互检查；具体数值、硬件与限制见 [首轮验证记录](docs/VALIDATION.md)。
 
+**第一次在实验室使用：先读 [从克隆到首轮实验](docs/START_HERE.md)。** 按顺序完成前置检查、安装、CPU/CUDA 冒烟测试、数据下载与处理、12 次开发基线、结果核验与备份；无需从聊天记录拼接命令。实验室使用 `main`，开发改动放 `dev`。
+
 ## 已实现
 
 - UNSW-NB15 的 42 个原始输入字段校验、来源 SHA-256、标签与重复审计；相同输入记录整组划分，防止内部训练/验证/校准泄漏。

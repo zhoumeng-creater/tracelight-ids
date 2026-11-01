@@ -1,5 +1,7 @@
 # 实验室单卡部署与运行
 
+第一次使用请按 [START_HERE.md](START_HERE.md) 的顺序执行；本文补充环境、恢复、来源和验收细节。
+
 这份配方面向计划使用的 RTX 4090D 24 GB 实验室机器。**实验室机器尚未执行本配方**；本机已识别为 NVIDIA GeForce RTX 4050 Laptop GPU，PyTorch 报告约 6 GiB 显存。GPU 型号识别、CPU 模型测试、CUDA 冒烟测试和真实数据正式结果是不同证据，只有实际运行产物才能证明对应阶段完成。不要把本机结果写成 4090D 结果。
 
 此项目的小型表格 MLP 不需要为了占满 24 GB 显存而扩大模型。GPU 主要用于 MLP 的重复训练；LR、RF、HGB 仍在 CPU 上训练。所有模型在相同 CPU/线程条件下另测部署延迟，GPU 训练时间不能替代 CPU 推理时间。
@@ -42,6 +44,10 @@ research/
 ```powershell
 & 'D:\Research Work\venv\Scripts\python.exe' -m ids doctor --require-cuda
 
+& 'D:\Research Work\venv\Scripts\python.exe' .\scripts\fetch_unsw.py `
+  --output 'D:\Research Work\data\raw' `
+  --source mirror --accept-unverified-mirror
+
 & 'D:\Research Work\venv\Scripts\python.exe' -m ids prepare `
   --train-csv 'D:\Research Work\data\raw\UNSW_NB15_training-set.csv' `
   --test-csv 'D:\Research Work\data\raw\UNSW_NB15_testing-set.csv' `
@@ -55,13 +61,7 @@ research/
   --device cuda
 ```
 
-这里明确使用 `mirror`：若文件来自镜像，就应如实记录为镜像；只有确实来自官方原始分发源并核查后，才使用 `official`。若采用本项目固定版本的第三方镜像，先执行下面的显式下载命令，再执行上面的 prepare：
-
-```powershell
-& 'D:\Research Work\venv\Scripts\python.exe' .\scripts\fetch_unsw.py `
-  --output 'D:\Research Work\data\raw' `
-  --source mirror --accept-unverified-mirror
-```
+这里明确使用 `mirror`：若文件来自镜像，就应如实记录为镜像；只有确实来自官方原始分发源并核查后，才使用 `official`。上述顺序先显式下载固定镜像，再 prepare，最后启动实验。已有完整原始数据及 `provenance.json` 时跳过下载，不覆盖它们。
 
 下载器验证训练/测试 CSV 分别为 175341/82332 行及原始 45 列结构，记录下载 URL、固定镜像 commit、字节哈希与类别计数。**这不等于已与官方文件做哈希比对**，`provenance.json` 会明确记录此限制。两个原始 CSV 包含 42 个特征及 `id/attack_cat/label` 三个其他字段。保留 provenance，不覆盖已有原始数据目录。`run_lab.py` 只接收已经 prepare 的目录，不会自行寻找或下载数据。
 
