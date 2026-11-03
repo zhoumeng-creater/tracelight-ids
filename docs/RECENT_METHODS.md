@@ -31,7 +31,7 @@ restored = load_tabm_bundle("new-development-run/tabm.joblib", device="cpu")
 - `feature_schema` 与本项目现有协议相同，包含 `name/features/categorical/discrete`，因此可显式使用 UNSW 或修正版 CIC 的字段定义。标识、标签和家族不进入预测特征。`selected_features` 可限制训练输入字段；选择方法及其合法拟合范围由调用方负责记录。推理仍要求完整原始 schema，按字段名读取，并忽略额外元数据。
 - 数值中位数填补、标准化、类别词表及 PLE 分箱均只拟合 `train_df`。类别缺失使用索引 0，未见类别使用 1，训练类别从 2 开始；官方 TabM 内部执行 one-hot。类别字段不被直接当作连续数值使用。
 - PLE 使用官方 `rtdl_num_embeddings.compute_bins` 的无监督训练分位数和 `PiecewiseLinearEmbeddings(version="B", activation=True)`。每列分箱数最多为 `min(n_bins, n_train-1)`；两行训练输入只使用训练最小/最大值。训练常量列在标准化后固定使用 `[-1, 1]`，单独写入 `constant_numeric_fields`。官方包会对单箱列提示其等价于线性缩放；这不是从 validation 借用分箱。
-- 官方输出为 `(batch, k, 1)`。训练先对每个成员分别计算二分类 BCE，再平均；正常/攻击权重只由训练计数确定。推理先逐成员 sigmoid，再平均概率。不能先平均 logits 再训练。验证早停使用相同的逐成员加权 BCE，保存最佳轮；验证集不用于拟合预处理、生成训练目标或校准最终阈值。[官方训练与推理定义](https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/README.md#training)
+- 官方输出为 `(batch, k, 1)`。训练先对每个成员分别计算二分类 BCE，再平均；正常/攻击权重只由训练计数确定。推理先逐成员 sigmoid，再平均概率。不能先平均 logits 再训练。按论文§3.3／§3.5和作者TL;DR，本次将早停改为集成概率上的weighted BCE，成员损失仅保留为诊断；验证集不用于拟合预处理、生成训练目标或校准最终阈值。[官方训练与推理定义](https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/README.md#training)
 - `network_state` 全部落 CPU。序列化清除缓存网络、设备改为 CPU，重新加载时重建官方结构；部署时仍需安装相同可选依赖。joblib 只用于可信的本项目工件。`encoded_dim` 表示嵌入前数值加 one-hot 的宽度；`training_statistics.backbone_input_dim` 才是采用数值嵌入后的输入宽度，两者不能混用。
 - 训练函数只接受 train/validation DataFrame，不读取文件路径，不执行 `freeze/evaluate`，不自动安装依赖。单条 CPU 计时应由调用方统一设置线程、预热和测量顺序；缓存初始化、模型加载和线程设置放在计时外。比较中仍须计入该方法的预处理及官方模型预测。
 
@@ -61,6 +61,8 @@ if ($LASTEXITCODE -ne 0) { throw '依赖一致性检查未通过' }
 版本打印只是检查证据，不能代替 Stage6 的版本及设备准入。上述命令不会自动修复 torch；缺失或版本、CUDA 构建不符时，先按项目锁文件及 [LAB.md](LAB.md) 显式重建并验证环境，随后重新固定 `$labPython`。正式实验保存这个解释器的完整环境清单。
 
 本机已完成的工程验证使用了一个 `--system-site-packages` 临时 venv，复用的是**基础 Python 中已经安装的 torch**，三个新增可选包写入临时 venv。这说明该本机配置可行。若从另一个已激活 venv 内运行 `python -m venv --system-site-packages`，新环境可见的系统包路径并不保证包含原 venv 的包，因此**不能假定会继承原 venv 中的 torch**。需要新隔离环境时，先检查新解释器的实际导入与版本；若缺 torch 或项目依赖，就按锁文件和明确的 CPU/CUDA wheel 安装步骤完整重建，不盲目依赖嵌套继承，也不让可选包安装自动升级 torch/CUDA。
+
+算法审查后的训练协议version2改为ensemble-aware stopping，保留`val_head_loss`诊断并以`val_ensemble_loss`选checkpoint；成员概率在dtype机器epsilon范围内截断以避免无穷验证损失，规则写入metadata。针对新协议20项合成测试通过，包含head相互补偿、饱和值、head／ensemble选择不同best epoch和CPU重载。原15项及旧真实pilot使用的是先前策略，原工件不改写；新协议尚未执行真实训练，不能借用旧分数宣称已经优化性能。详细依据见[算法审查](ALGORITHM_REVIEW_20261103.md)。
 
 本次对真实官方包运行 **15 项测试，15 通过、0 跳过**：包含 PLE/无嵌入两条实际拟合路径、CPU 保存重载数值一致、确定性、未知类别、常量列、标签不参与预测、训练内预处理/分箱和早停恢复。环境为 Python 3.12.4、torch 2.6.0+cu126、numpy 1.26.4、pandas 2.2.2、scikit-learn 1.5.1；这 15 项使用 CPU。另在本机 RTX 4050 Laptop GPU 上完成一轮合成数据 PLE 冒烟：48 行训练、16 行验证、1 epoch，训练使用 CUDA，保存权重全部位于 CPU，CPU 推理返回 16 个有限分数。此记录不代表实验室 4090D 运行。全局环境未装 tabm 时这些可选真实训练测试会明确跳过，不能把跳过记作已验证。上述验证没有运行真实数据模型，也没有重新打开真实 test；正式研究结果由对应运行记录证明。
 

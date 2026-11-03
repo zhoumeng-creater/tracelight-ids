@@ -29,6 +29,7 @@ from .selection import normalize_feature_schema
 TABM_VERSION = "0.0.3"
 NUM_EMBEDDINGS_VERSION = "0.0.12"
 _ARTIFACT_VERSION = 1
+_TRAINING_PROTOCOL_VERSION = 2
 
 
 def recent_dependency_versions() -> dict[str, str]:
@@ -218,6 +219,26 @@ def tabm_probabilities(logits):
     return torch.sigmoid(logits.squeeze(-1)).mean(dim=1)
 
 
+def tabm_ensemble_loss(logits, labels, positive_weight=None):
+    """Weighted BCE of the deployed mean probability, for validation only.
+
+    Training still optimizes ``tabm_head_loss``. The ensemble probability is
+    clamped to [eps, 1-eps], where eps is its floating dtype's machine epsilon,
+    before log/log1p. This keeps saturated probabilities finite and explicitly
+    bounds their validation penalty; it is not sigmoid(mean(logits)). Positive
+    weights come from train, without normalization by total sample weight.
+    """
+    import torch
+
+    probabilities = tabm_probabilities(logits)
+    if labels.ndim != 1 or len(labels) != len(probabilities):
+        raise ValueError("TabM ensemble loss expects labels (B,)")
+    epsilon = torch.finfo(probabilities.dtype).eps
+    safe = probabilities.clamp(min=epsilon, max=1 - epsilon)
+    weight = 1.0 if positive_weight is None else positive_weight
+    return -(weight * labels * safe.log() + (1 - labels) * torch.log1p(-safe)).mean()
+
+
 def _forward(network, numeric, categorical, device):
     import torch
 
@@ -351,20 +372,24 @@ def train_tabm(train_df, val_df, config, seed, *, device="cpu", num_threads=1,
                     optimizer.step()
                     running_loss += loss.item() * len(index)
                 network.eval()
-                validation_loss, chunks = 0.0, []
+                validation_loss, validation_head_loss, chunks = 0.0, 0.0, []
                 with torch.inference_mode():
                     for start in range(0, len(val_df), parameters["batch_size"]):
                         stop = start + parameters["batch_size"]
                         logits = _forward(network, x_val[start:stop], c_val[start:stop], resolved_device)
                         targets = torch.tensor(val_labels[start:stop], dtype=torch.float32, device=resolved_device)
-                        validation_loss += tabm_head_loss(logits, targets, weight).item() * len(targets)
+                        validation_head_loss += tabm_head_loss(logits, targets, weight).item() * len(targets)
+                        validation_loss += tabm_ensemble_loss(logits, targets, weight).item() * len(targets)
                         chunks.append(tabm_probabilities(logits).cpu().numpy())
                 validation_loss /= len(val_df)
-                if not np.isfinite(validation_loss):
+                validation_head_loss /= len(val_df)
+                if not np.isfinite([validation_loss, validation_head_loss]).all():
                     raise ValueError("TabM validation loss became non-finite")
                 scores = np.concatenate(chunks)
                 bundle.history.append({"epoch": epoch, "train_loss": running_loss / len(labels),
                                        "val_loss": validation_loss,
+                                       "val_ensemble_loss": validation_loss,
+                                       "val_head_loss": validation_head_loss,
                                        "val_ap": float(average_precision_score(val_labels, scores))
                                        if len(np.unique(val_labels)) == 2 else None})
                 if validation_loss < best_loss - parameters["min_delta"]:
@@ -381,6 +406,11 @@ def train_tabm(train_df, val_df, config, seed, *, device="cpu", num_threads=1,
                 "best_epoch": bundle.best_epoch, "epochs_completed": len(bundle.history),
                 "best_validation_loss": best_loss, "positive_weight": positive_weight,
                 "training_objective": "mean_independent_head_weighted_bce",
+                "training_protocol_version": _TRAINING_PROTOCOL_VERSION,
+                "validation_objective": "weighted_bce_of_mean_sigmoid_probability",
+                "early_stopping_metric": "val_ensemble_loss",
+                "validation_loss_clamp": {"policy": "floating_dtype_machine_epsilon",
+                    "epsilon": float(torch.finfo(weight.dtype).eps), "dtype": str(weight.dtype)},
                 "inference_aggregation": "mean_sigmoid_probability", "actual_device": resolved_device,
                 "dependencies": versions, "n_numeric_fields": len(preprocessor.numeric_columns),
                 "categorical_cardinalities": preprocessor.cat_cardinalities,

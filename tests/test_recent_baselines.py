@@ -88,6 +88,35 @@ def test_official_per_head_loss_and_probability_aggregation(tabm_dependencies):
     assert not torch.allclose(actual, logits.mean(dim=1).sigmoid().squeeze(1))
 
 
+@pytest.mark.parametrize("dtype_name", ["float32", "float64"])
+def test_ensemble_validation_loss_rewards_complementary_heads(dtype_name):
+    torch = pytest.importorskip("torch")
+    dtype = getattr(torch, dtype_name)
+    # Each class has one very confident correct head and one incorrect head.
+    # The deployed mean is more useful than each head's independent loss says.
+    probabilities = torch.tensor([[.999, .25], [.001, .75]], dtype=dtype)
+    logits = torch.logit(probabilities).unsqueeze(-1)
+    truth = torch.tensor([1., 0.], dtype=dtype)
+    weight = torch.tensor(2., dtype=dtype)
+    expected = -1.5 * torch.log(torch.tensor(.6245, dtype=dtype))
+    actual = recent.tabm_ensemble_loss(logits, truth, weight)
+    torch.testing.assert_close(actual, expected)
+    assert actual < recent.tabm_head_loss(logits, truth, weight)
+
+
+@pytest.mark.parametrize("dtype_name", ["float32", "float64"])
+def test_ensemble_validation_loss_saturation_uses_documented_dtype_epsilon(dtype_name):
+    torch = pytest.importorskip("torch")
+    dtype = getattr(torch, dtype_name)
+    logits = torch.tensor([[[-1000.], [-1000.]], [[1000.], [1000.]]], dtype=dtype)
+    truth = torch.tensor([1., 0.], dtype=dtype)
+    weight = torch.tensor(2., dtype=dtype)
+    epsilon = torch.tensor(torch.finfo(dtype).eps, dtype=dtype)
+    actual = recent.tabm_ensemble_loss(logits, truth, weight)
+    assert torch.isfinite(actual)
+    torch.testing.assert_close(actual, -1.5 * epsilon.log())
+
+
 @pytest.mark.parametrize("embedding", ["none", "piecewise_linear"])
 def test_real_official_fit_cpu_roundtrip_and_contract(tabm_dependencies, schema_frames, tmp_path, embedding):
     import torch
@@ -99,6 +128,13 @@ def test_real_official_fit_cpu_roundtrip_and_contract(tabm_dependencies, schema_
     assert np.all((scores >= 0) & (scores <= 1))
     assert bundle.training_statistics["dependencies"]["tabm"] == "0.0.3"
     assert bundle.training_statistics["training_objective"] == "mean_independent_head_weighted_bce"
+    assert bundle.training_statistics["training_protocol_version"] == 2
+    assert bundle.training_statistics["early_stopping_metric"] == "val_ensemble_loss"
+    assert bundle.training_statistics["validation_objective"] == "weighted_bce_of_mean_sigmoid_probability"
+    assert bundle.training_statistics["validation_loss_clamp"] == {
+        "policy": "floating_dtype_machine_epsilon", "epsilon": torch.finfo(torch.float32).eps,
+        "dtype": "torch.float32"}
+    assert all(row["val_loss"] == row["val_ensemble_loss"] for row in bundle.history)
     assert 1 <= bundle.best_epoch <= len(bundle.history) <= 3
     assert all(x.device.type == "cpu" for x in bundle.network_state.values())
     np.testing.assert_array_equal(scores, bundle.predict_scores(val.loc[:, val.columns[::-1]]))
@@ -112,6 +148,8 @@ def test_real_official_fit_cpu_roundtrip_and_contract(tabm_dependencies, schema_
     recent.save_tabm_bundle(bundle, path)
     restored = recent.load_tabm_bundle(path)
     assert restored.device == "cpu" and restored._cached_network is None
+    assert restored.training_statistics == bundle.training_statistics
+    assert restored.history == bundle.history
     np.testing.assert_array_equal(scores, restored.predict_scores(val))
     repeated = recent.train_tabm(train, val, settings(num_embeddings=embedding), 17, feature_schema=schema)
     for name, value in bundle.network_state.items():
@@ -141,6 +179,47 @@ def test_early_stopping_restores_best_epoch(tabm_dependencies, schema_frames):
     first = recent.train_tabm(train, val, settings(epochs=1), 5, feature_schema=schema)
     assert stopped.best_epoch == 1 and len(stopped.history) == 2
     np.testing.assert_array_equal(stopped.predict_scores(val), first.predict_scores(val))
+
+
+def test_best_epoch_follows_ensemble_loss_when_head_loss_disagrees(
+        tabm_dependencies, schema_frames, monkeypatch, tmp_path):
+    import torch
+
+    schema, train, val = schema_frames
+    original_forward = recent._forward
+    states = []
+    # Epoch 1 has lower mean-head loss; epoch 2 has lower deployed-ensemble
+    # loss because a confident head compensates for the other head's mistake.
+    correct_probabilities = ([.6, .6], [.999, .25], [.55, .55])
+
+    def controlled_validation(network, numeric, categorical, device):
+        if network.training:
+            return original_forward(network, numeric, categorical, device)
+        states.append({name: value.detach().cpu().clone() for name, value in network.state_dict().items()})
+        correct = torch.tensor(correct_probabilities[len(states) - 1], dtype=torch.float32,
+                               device=device).expand(len(val), -1)
+        labels = torch.tensor(val["label"].to_numpy(), device=device)
+        probabilities = torch.where(labels[:, None] == 1, correct, 1 - correct)
+        return torch.logit(probabilities).unsqueeze(-1)
+
+    with monkeypatch.context() as patch:
+        patch.setattr(recent, "_forward", controlled_validation)
+        bundle = recent.train_tabm(train, val, settings(epochs=3, patience=1, min_delta=0,
+            batch_size=64, k=2, num_embeddings="none"), 17, feature_schema=schema)
+    assert len(bundle.history) == 3 and bundle.best_epoch == 2
+    assert np.argmin([row["val_head_loss"] for row in bundle.history]) == 0
+    assert np.argmin([row["val_ensemble_loss"] for row in bundle.history]) == 1
+    for name, value in states[1].items():
+        torch.testing.assert_close(bundle.network_state[name], value, rtol=0, atol=0)
+    assert bundle.training_statistics["best_validation_loss"] == bundle.history[1]["val_ensemble_loss"]
+    assert bundle.training_statistics["positive_weight"] == len(train[train.label == 0]) / len(train[train.label == 1])
+    scores = bundle.predict_scores(val)
+    path = tmp_path / "ensemble-selected-tabm.joblib"
+    recent.save_tabm_bundle(bundle, path)
+    restored = recent.load_tabm_bundle(path, device="cpu")
+    np.testing.assert_array_equal(scores, restored.predict_scores(val))
+    assert restored.best_epoch == 2
+    assert restored.history == bundle.history
 
 
 @pytest.mark.parametrize("changes", [{"k": 0}, {"d_block": True}, {"num_embeddings": "invented"},

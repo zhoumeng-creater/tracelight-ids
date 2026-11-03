@@ -105,7 +105,7 @@ ranking 在当前合法 train batch 内，对 detach 的学生分数选最高分
 
 三个正式gate控制分别保持其余条件不变：correct_only在方向正确且|2q-1|过门槛时g=1；confidence_only对两种方向都按过门槛的|2q-1|赋权；gated_matched_hard保留默认同一g但q=y。D-I用于排除逐行hard权重解释，D-J与D-K辅助区分连续置信与正确性过滤。它们仍是本轮指定策略的机制证据，不代表穷尽所有门控设计。ranking 若有效，也需用同数目的随机 normal／attack 配对排除纯额外正则和计算量效应；此控制不应偷偷替换主矩阵。
 
-每 epoch 保存 hard、soft、各自加权贡献、ranking 原项／贡献、总损失、gate 激活率／均值、教师错误率、selected normals/attacks/pairs、有效组数和跳过 batch 数。所有MLP目标统一用validation的原hard weighted BCE早停；TabM遵循官方逐head的hard weighted BCE并独立记录，不能当作同结构损失消融。不能让新方法独享更有利的指标；额外报告低 FPR recall 随 epoch 的开发曲线，不能据曲线后验换 best_epoch。
+每 epoch 保存 hard、soft、各自加权贡献、ranking 原项／贡献、总损失、gate 激活率／均值、教师错误率、selected normals/attacks/pairs、有效组数和跳过 batch 数。所有MLP目标统一用validation的原hard weighted BCE早停；TabM训练使用逐head的hard weighted BCE，训练协议version2早停改为集成概率上的weighted BCE，head损失另存诊断，不能当作同结构损失消融。该修正依据作者ensemble-aware stopping规则，旧pilot及已运行工件不改写。不能让新方法独享更有利的指标；额外报告低 FPR recall 随 epoch 的开发曲线，不能据曲线后验换 best_epoch。
 
 ## 6. 指标、开发阈值与继续研究门槛
 
