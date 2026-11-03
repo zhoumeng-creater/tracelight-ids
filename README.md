@@ -4,7 +4,9 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 面向网络入侵检测的轻量化机器学习实验工程。目标是在明确的正常流量误报预算下，比较检测效果、原始字段数、模型体积与 CPU 推理开销。每条展示记录都能追溯到数据划分、配置、模型和决策阈值。
 
-**当前进度：第四轮双数据集开发验证已完成，第五轮进入独立校准与封存测试准备。** 下列研究结果来自 validation。合成样例用于测试程序。
+**当前进度：前五轮已完成，包括独立校准后的最终测试；现进入 research v2 的机制与近期方法研究。** 第五轮的完整测试结果保存在个人实验归档。下列第三、四轮数字来自 validation，不应当作第五轮测试成绩。
+
+**新增研究：** [第六轮协议](docs/STAGE6_PROTOCOL.md)与[研究设计](docs/STAGE6_RESEARCH_DESIGN.md)固定了权重匹配蒸馏、教师门控及其机制控制、低误报困难样本排序、大／小网络容量参照，以及官方 TabM 对照。[运行说明](docs/STAGE6_LAB.md)区分合成 smoke、真实 pilot 与五种子完整开发；实现和小试不表示方法已经有效。既有 test 已被使用，新增研究只读取 train/validation，新的独立确认必须另有未使用的数据来源。
 
 **已完成第四轮的实验室使用者请直接阅读 [第五轮操作指南](docs/STAGE5_LAB.md)。** 新入口复用第四轮的 12 个已训练模型与已有 CPU 计时。先锁定全部比较对象，再封存全部校准阈值，最后统一评估测试分区。详见[第五轮固定协议](docs/STAGE5_PROTOCOL.md)。
 

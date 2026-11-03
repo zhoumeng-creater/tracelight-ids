@@ -1,0 +1,80 @@
+schema_version: 1
+purpose: research_v2_development_only
+cohort_policy: complete_development
+seeds: [17, 29, 43, 71, 97]
+max_fpr: 0.01
+threads: 4
+folds: 3
+fold_seed: 20261103
+max_train_rows: null
+max_validation_rows: null
+sampling_seed: 20261103
+teacher:
+  model: hgb
+  features: {method: all}
+  hyperparameters: {max_iter: 200, max_leaf_nodes: 31, learning_rate: 0.1, early_stopping: false}
+models:
+  - variant: hard
+    model: mlp
+    features: &fields {method: all}
+    hyperparameters: &student {hidden_sizes: [32, 16], epochs: 120, patience: 12, batch_size: 1024, learning_rate: 0.001, weight_decay: 0.0001, min_delta: 0.00001}
+    loss: {mode: hard}
+  - variant: matched_hard
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {mode: matched_hard, alpha: 0.5, temperature: 1.0}
+  - variant: kd
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {mode: kd, alpha: 0.5, temperature: 1.0}
+  - variant: gated_kd
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {mode: gated_kd, alpha: 0.5, temperature: 1.0, gate_min_confidence: 0.5}
+  - variant: hard_rank
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: &hard_rank {mode: hard, pairwise_weight: 0.1, normal_fraction: 0.1, max_normals: 32, max_attacks: 64, max_pairs: 2048, pairwise_margin: 0.5, pairwise_temperature: 1.0}
+  - variant: matched_hard_rank
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {<<: *hard_rank, mode: matched_hard, alpha: 0.5, temperature: 1.0}
+  - variant: kd_rank
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {<<: *hard_rank, mode: kd, alpha: 0.5, temperature: 1.0}
+  - variant: gated_kd_rank
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {<<: *hard_rank, mode: gated_kd, alpha: 0.5, temperature: 1.0, gate_min_confidence: 0.5}
+  - variant: large_hard
+    model: mlp
+    features: *fields
+    hyperparameters: {<<: *student, hidden_sizes: [64, 32]}
+    loss: {mode: hard}
+  - variant: gated_matched_hard
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {mode: gated_matched_hard, alpha: 0.5, temperature: 1.0, gate_min_confidence: 0.5}
+  - variant: gated_correct_only
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {mode: gated_kd, gate_policy: correct_only, alpha: 0.5, temperature: 1.0, gate_min_confidence: 0.5}
+  - variant: gated_confidence_only
+    model: mlp
+    features: *fields
+    hyperparameters: *student
+    loss: {mode: gated_kd, gate_policy: confidence_only, alpha: 0.5, temperature: 1.0, gate_min_confidence: 0.5}
+  - variant: tabm_reference
+    model: tabm
+    features: *fields
+    hyperparameters: {epochs: 120, patience: 12, batch_size: 1024, learning_rate: 0.001, weight_decay: 0.0001, min_delta: 0.00001, k: 8, n_blocks: 2, d_block: 32, dropout: 0.1, num_embeddings: piecewise_linear, embedding_dim: 16, n_bins: 48}

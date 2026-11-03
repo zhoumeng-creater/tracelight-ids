@@ -1,0 +1,4 @@
+# Optional research-v2 additions. Install in a separate environment; reuse the locked base environment.
+tabm==0.0.3
+rtdl_num_embeddings==0.0.12
+typing_extensions==4.12.2
