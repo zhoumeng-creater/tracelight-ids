@@ -305,3 +305,40 @@ def test_chance_corrected_stability_is_not_raw_jaccard():
     all_fields = stage4.stability_summary([["a", "b"], ["a", "b"]], ["a", "b"])
     assert all_fields["mean_pairwise_jaccard"] == 1
     assert all_fields["chance_corrected_stability"] is None
+
+
+def test_stage5_reads_trained_stage4_artifacts_and_returns_reproducible_package(stage4_template, tmp_path):
+    # Reuse the small, actually fitted Stage 4 fixture in this module. No research data is needed for CI.
+    from ids.evaluation import calibrate_threshold, evaluate_binary
+    from workflows.stage5 import core, reporting
+
+    experiment, inputs = stage4_template["root"], stage4_template["data"]
+    identity = read_json(experiment / "STAGE4_PLAN.json")["identity"]
+    config = {"profile": "smoke", "stage4_plan_sha256": sha256_file(experiment / "STAGE4_PLAN.json"),
+              "stage4_complete_sha256": sha256_file(experiment / "STAGE4_COMPLETE.json"),
+              "training_source_sha256": identity["source_sha256"], "dataset_manifest_sha256": identity["datasets"],
+              "threads": 1, "candidates": {
+                  "unsw": [{"condition": "all", "run_id": "05-mlp-s17"}, {"condition": "all", "run_id": "00-rf-s17"}],
+                  "cicids": [{"condition": "mi", "run_id": "04-mlp-s17"}, {"condition": "all", "run_id": "03-mlp-s17"}],
+              }}
+    output = tmp_path / "stage5"
+    core.run_evaluation(experiment, inputs, output, config)
+    archive = reporting.finalize(output, config)
+    original = sha256_file(archive)
+    with zipfile.ZipFile(archive) as z:
+        summary = read_json(output / "reports" / "summary.json")
+        assert len(summary["runs"]) == 4 and summary["profile"] == "smoke"
+        assert len(summary["comparisons"]) == 3
+        assert "合成数据" in z.read("reports/index.html").decode("utf-8")
+        for run in summary["runs"]:
+            directory = f"tests/{run['dataset']}/{run['run_id']}"
+            with z.open(directory + "/predictions.parquet") as src:
+                predictions = pd.read_parquet(src)
+            with z.open(f"calibration/{run['dataset']}/{run['run_id']}.normal.parquet") as src:
+                normals = pd.read_parquet(src)
+            calibrated = calibrate_threshold(np.zeros(len(normals)), normals["score"], .01)
+            assert calibrated["threshold"] == run["threshold"]
+            assert evaluate_binary(predictions["true_label"], predictions["score"], run["threshold"],
+                                   predictions["attack_category"]) == run["full"]
+    core.run_evaluation(experiment, inputs, output, config, resume=True)
+    assert sha256_file(reporting.finalize(output, config)) == original

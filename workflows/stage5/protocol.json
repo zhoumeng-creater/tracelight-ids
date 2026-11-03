@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "profile": "research",
+  "stage": "stage5-frozen-evaluation-v1",
+  "seeds": [17, 29, 43],
+  "max_fpr": 0.01,
+  "inference_threads": 1,
+  "groups": [
+    {"id": "unsw_mlp_all42", "dataset": "unsw", "model": "mlp", "selection": "all", "n_features": 42, "run_prefix": "05-mlp"},
+    {"id": "unsw_rf_all42", "dataset": "unsw", "model": "rf", "selection": "all", "n_features": 42, "run_prefix": "00-rf"},
+    {"id": "cicids_mlp_mi24", "dataset": "cicids", "model": "mlp", "selection": "mi", "n_features": 24, "run_prefix": "04-mlp"},
+    {"id": "cicids_mlp_all82", "dataset": "cicids", "model": "mlp", "selection": "all", "n_features": 82, "run_prefix": "03-mlp"}
+  ],
+  "comparisons": [
+    {"dataset": "unsw", "candidate": "unsw_mlp_all42", "baseline": "unsw_rf_all42"},
+    {"dataset": "cicids", "candidate": "cicids_mlp_mi24", "baseline": "cicids_mlp_all82"}
+  ],
+  "pins": {
+    "stage4_complete_sha256": "59b3c7909f2a5242d947b852e32e292b93a23c58287548bf6ef878d8c8cba8fa",
+    "stage4_plan_sha256": "d2ea51df70d3c295384096dc196231c6baa78742ead1bd0b81130e23c4811dc4",
+    "stage4_source_sha256": "233644d9d52d2d785a4de3ebca007dc34ada11cbd6c323876af3848eb779aaa5",
+    "dataset_manifest_sha256": {
+      "unsw": "6348a936f68a67a11e241452eff9abdf334d4ea02f71472f805f38c532c002d4",
+      "cicids": "af4bb4e6724910ff0e70e7479c265addd73e4f4bbdb2ad8c140d92c18ea3db7d"
+    }
+  }
+}
