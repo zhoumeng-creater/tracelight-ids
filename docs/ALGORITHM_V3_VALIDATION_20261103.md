@@ -11,7 +11,7 @@
 
 ## 2. 单元与回归检查
 
-新增三组测试：风险 100 项、工作点／KD 40 项、角色验证 33 项，共 **173 项通过**。包含独立布尔事件计数、点态界、修复信用、攻击不抵扣、全条件分母、tie、缩放、弱边界 slack、fixed/adaptive 不支配、teacher／anchor／dual detach、reference 原位与 `.data` 变更、恢复原子拒绝、溢出及浮点并列回归。
+新增三组测试：风险 103 项、工作点／KD 40 项、角色验证 33 项，共 **176 项通过**。包含独立布尔事件计数、点态界、修复信用、攻击不抵扣、全条件分母、tie、缩放、弱边界 slack、fixed/adaptive 不支配、teacher／anchor／dual detach、reference 原位与 `.data` 变更、恢复原子拒绝、溢出及浮点并列回归。
 
 在含官方 TabM 可选依赖的现有环境执行全项目检查：
 
@@ -21,19 +21,19 @@ python -m ruff check src tests scripts
 git diff --check
 ```
 
-最终本地结果：**633 passed、1 skipped、15 warnings，81.65s；Ruff 与 diff 检查通过。** 一个 skip 及 warning 是具体环境／既有测试提示，不算通过项。没有用这些数字代替研究工作量或检测性能。
+最终本地结果：**636 passed、1 skipped、15 warnings，132.96s；Ruff 与 diff 检查通过。** 一个 skip 来自 Windows 无符号链接创建权限；warning 来自既有物理核探测和数值嵌入单分箱提示，均未计作通过项。没有用这些数字代替研究工作量或检测性能。
 
 ## 3. 合成训练链
 
 执行命令（已有目录将拒绝覆盖）：
 
 ```powershell
-python scripts/check_risk_design.py --output local/risk-v3-synthetic-20261103-v2
+python scripts/check_risk_design.py --output local/risk-v3-synthetic-20261103-final
 ```
 
 固定 seed=20261103、student steps=20，CPU 单线程。F／R／C／V 分别为 192／112／192／112 个完全人工样本；原 train 为前三者 496 个。标签／家族是 toy 定义，group_id 只是合成隔离单位，不是真实网络环境。
 
-13 项工程检查通过：身份未变、精确 warm-start、锚冻结、reference detach、对偶状态往返、更新数、签名绑定、有限值、经验上界、源码未变、CPU 权重往返、float64 决策及参考计数一致。四个工件 SHA 和三个源码 SHA 已独立复核。所有检查及各 step 原值都保存在实际 `report.json`／`history.json`，没有筛选 seed 或按 validation 挑 checkpoint。
+13 项工程检查通过：身份未变、精确 warm-start、锚冻结、reference detach、对偶状态往返、更新数、签名绑定、有限值、经验上界、源码未变、CPU 权重往返、float64 决策及参考计数一致。最终 `-final` 运行另绑定 Tensor 的 dtype／shape／bytes；四个工件 SHA 和三个源码 SHA 已独立复核。所有检查及各 step 原值都保存在实际 `report.json`／`history.json`，没有筛选 seed 或按 validation 挑 checkpoint。
 
 | 项目 | 实际观察 | 不能推出 |
 |---|---|---|
@@ -43,13 +43,13 @@ python scripts/check_risk_design.py --output local/risk-v3-synthetic-20261103-v2
 | 教师 | 固定人工函数，无训练／OOF／TFM 声明 | 不能据此声称前沿教师已经适配 |
 | 模型保存 | 锚／最后学生及对偶状态保存、CPU 权重与对偶往返一致 | 不支持完整中断续训；模型／optimizer／RNG 等尚未形成正式恢复协议 |
 
-初次合成目录 `local/risk-v3-synthetic-20261103` 保留原源码快照对应状态：它采用 higher quantile，在 R 产生 10/64=15.625%，没有保证参考预算。数值审查后新增保守次序统计及 float64 helper，以同 seed／同 steps 另跑 `-v2`，未改旧输出。这是工程修复，不能选择性将旧轨迹改称新协议结果。
+初次合成目录 `local/risk-v3-synthetic-20261103` 保留原源码快照对应状态：它采用 higher quantile，在 R 产生 10/64=15.625%，没有保证参考预算。数值审查后新增保守次序统计及 float64 helper，以同 seed／同 steps 另跑 `-v2`，未改旧输出；随后完善签名的 dtype／shape 绑定，以同设置运行 `-final`，前两份输出继续保留。这是工程修复，不能选择性将旧轨迹改称新协议结果。
 
-本地两个输出目录均属于 `.gitignore` 的私有工程工件；公共仓提供脚本与验收说明，重跑会生成自己的模型／JSON。正式实验归档与后续实验室包另行生成，不把合成输出混入前五轮。
+本地三个输出目录均属于 `.gitignore` 的私有工程工件；公共仓提供脚本与验收说明，重跑会生成自己的模型／JSON。正式实验归档与后续实验室包另行生成，不把合成输出混入前五轮。
 
 ## 4. 审查修正的实质问题
 
-1. frozen dataclass 不阻止 Tensor 内部变化：每个完整风险报告重算 reference 内容 SHA，`.data` 变更也拒绝；同步／哈希开销需要计时。
+1. frozen dataclass 不阻止 Tensor 内部变化：每个完整风险报告重算 reference 的 dtype／shape／bytes SHA，`.data` 变更及同 bytes 重解释也拒绝；同步／哈希开销需要计时。
 2. 恢复状态不能丢失绑定：已更新或非零权重不能以空 signature 恢复，错误预算／reference／设置均在修改状态前拒绝。
 3. 正常上界按逐行非负包络求平均，避免完全修复情形中跨均值相减欠界。
 4. Lagrangian 单独检查乘积／求和有限，训练脚本单独检查梯度有限。

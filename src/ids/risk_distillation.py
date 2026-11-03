@@ -139,10 +139,15 @@ class RiskReference:
 
 def _reference_digest(constraints, identities, anchor, labels, members, floor, majorizer, credit):
     digest = hashlib.sha256()
-    metadata = {"constraints": [asdict(x) for x in constraints], "sample_ids": identities,
+    metadata = {"signature_schema_version": 2,
+                "constraints": [asdict(x) for x in constraints], "sample_ids": identities,
                 "margin_floor": floor, "majorizer": majorizer, "normal_repair_credit": credit}
     digest.update(json.dumps(metadata, sort_keys=True, separators=(",", ":")).encode())
     for value in (anchor, labels, *members):
+        # The same bytes can mean different margins/masks after a dtype view or
+        # shape change. Bind interpretation as well as storage contents.
+        digest.update(json.dumps({"dtype": str(value.dtype), "shape": list(value.shape)},
+                                 sort_keys=True, separators=(",", ":")).encode())
         digest.update(value.detach().cpu().contiguous().numpy().tobytes())
     return digest.hexdigest()
 

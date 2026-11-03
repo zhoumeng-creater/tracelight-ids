@@ -325,6 +325,50 @@ def test_mutated_frozen_reference_rejected_including_data_bypass(field, mutation
                          reference, sample_ids=ids)
 
 
+def _byte_payload(tensor):
+    return tensor.detach().cpu().contiguous().view(torch.uint8).reshape(-1).tolist()
+
+
+def test_same_bytes_anchor_and_label_dtype_views_rejected_by_reference_signature():
+    for field, dtype in [("anchor_margins", torch.int64), ("labels", torch.float64)]:
+        reference, ids = _reference([-1., 1.], [0, 1])
+        tensor = getattr(reference, field)
+        original = _byte_payload(tensor)
+        tensor.data = tensor.data.view(dtype)
+        assert tensor.dtype == dtype
+        assert _byte_payload(tensor) == original
+        with pytest.raises(ValueError, match="frozen risk reference.*signature"):
+            constraint_risks(torch.tensor([-.5, .5], dtype=torch.float64),
+                             reference, sample_ids=ids)
+
+
+def test_same_bytes_boolean_members_reinterpreted_as_indices_rejected_by_signature():
+    reference, ids = _reference([-1., 1.], [0, 1])
+    mask = reference.members[0]
+    assert mask.dtype == torch.bool
+    original = _byte_payload(mask)
+    mask.data = mask.data.view(torch.uint8)
+    assert mask.dtype == torch.uint8
+    assert _byte_payload(mask) == original
+    # Integer indexing has different semantics despite identical bytes/shape.
+    with pytest.raises(ValueError, match="frozen risk reference.*signature"):
+        constraint_risks(torch.tensor([-.5, .5], dtype=torch.float64),
+                         reference, sample_ids=ids)
+
+
+def test_same_bytes_reshaped_anchor_rejected_by_signature_before_shape_use():
+    reference, ids = _reference([-1., 1.], [0, 1])
+    anchor = reference.anchor_margins
+    original = _byte_payload(anchor)
+    anchor.data = anchor.data.reshape(1, 2)
+    assert anchor.shape == (1, 2)
+    assert _byte_payload(anchor) == original
+    # Require the integrity gate's error, not a later broadcasting/masking error.
+    with pytest.raises(ValueError, match="frozen risk reference.*signature"):
+        constraint_risks(torch.tensor([-.5, .5], dtype=torch.float64),
+                         reference, sample_ids=ids)
+
+
 @pytest.mark.parametrize("signature", [True, 1, b"0" * 64, "", "a" * 63, "a" * 65,
                                         "z" * 64, " " * 64, ["a" * 64]])
 def test_dual_constructor_rejects_malformed_reference_signature(signature):
