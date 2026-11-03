@@ -8,6 +8,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 **算法重新设计：** [v3 设计稿](docs/ALGORITHM_V3_DESIGN_20261103.md)已给出冻结 hard 锚、正常误报修复信用、攻击检出保留和原始—对偶训练目标；[风险原型](src/ids/risk_distillation.py)、[数据角色验证](src/ids/risk_data.py)及[纯合成训练链](scripts/check_risk_design.py)已实现。设计／代码／合成通过不等于真实 IDS 效果或创新性成立；正式实验室 runner 与新来源确认仍待验收，旧 v2 入口不运行该算法。
 
+**持续研究要求：** 依[研究依据规范](docs/RESEARCH_GROUNDING.md)先核原文、作者实现与等价关系再改算法。[最新逐项对照与要求审计](docs/research_alignment_20261103/README.md)已将 credit 独立创新主张下调，并补 PCT／MPT／OPOD 等固定源码差异；当前仍无 v3 真实效果与近期方法实测结论。
+
 **最新研究定位：** [2026-11-03 成果全景与创新审查](docs/landscape_20261103/README.md)覆盖 IDS 论文、低误报／蒸馏近邻、近期表格模型、开源工程与商业 NDR。现有“门控＋排序＋小学生”组合的新颖性尚未成立；先补强近邻对照、教师资格和机制反证，再决定后续扩展。该审查未新增真实训练结果。
 
 **新增研究：** [第六轮协议](docs/STAGE6_PROTOCOL.md)与[研究设计](docs/STAGE6_RESEARCH_DESIGN.md)固定了权重匹配蒸馏、教师门控及其机制控制、低误报困难样本排序、大／小网络容量参照，以及官方 TabM 对照。[运行说明](docs/STAGE6_LAB.md)区分合成 smoke、真实 pilot 与五种子完整开发；实现和小试不表示方法已经有效。既有 test 已被使用，新增研究只读取 train/validation，新的独立确认必须另有未使用的数据来源。
