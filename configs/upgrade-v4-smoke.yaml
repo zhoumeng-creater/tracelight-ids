@@ -1,0 +1,29 @@
+schema_version: 1
+purpose: upgrade_v4_development_only
+seeds:
+- 17
+threads: 1
+max_fpr: 0.01
+primary_working_point: recalibrated_reference
+conditions:
+- hard
+- legacy_boundary_kd
+- legacy_ekd
+- raw_kd
+- balanced_raw_kd
+- guarded_hard
+- guarded_raw_kd
+- guarded_balanced_raw_kd
+optimization:
+  macro_steps: 2
+  phase1_steps: 10
+  chunk_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  temperature: 1.0
+  kd_weight: 0.3
+  gradient_clip: 10.0
+  max_backtracks: 2
+  shrink: 0.5
+  min_family_support: 5
+  attack_loss_limit: 0.01

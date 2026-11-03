@@ -10,3 +10,5 @@
 - 常规修错不强制额外堆文献；根据对应定义与实质风险做必要验证。文献或工件不可取得时标明缺口、收缩主张，继续可独立推进的工作，不另造用户确认流程。
 
 当前算法 v3 是候选原型。最新依据应同时阅读 [设计稿](docs/ALGORITHM_V3_DESIGN_20261103.md)和[逐项成果对照](docs/research_alignment_20261103/README.md)；修复信用的等价损失表达不作为独立创新。
+
+2026-11-04：v3完整回传以[实证复核](docs/RISK_V3_RESULTS_20261104.md)为准；v4以[新固定协议](docs/UPGRADE_V4_PROTOCOL.md)和[最近邻审查](docs/research_alignment_20261103/risk_v4_literature_audit.md)为准。标准raw KL、R重校准与有限C后置接受均不单独作为新颖性主张；v4实际事件主判据不能事后替换v3代理准入结论。

@@ -4,6 +4,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 面向网络入侵检测的轻量化机器学习实验工程。目标是在明确的正常流量误报预算下，比较检测效果、原始字段数、模型体积与 CPU 推理开销。每条展示记录都能追溯到数据划分、配置、模型和决策阈值。
 
+**2026-11-04：v3两环境84次拟合已回传并复核，未证明候选胜出。** [失败机制报告](docs/RISK_V3_RESULTS_20261104.md)确认CIC教师目标退化、工作点漂移和代理／实际预算差异。新的[v4固定协议](docs/UPGRADE_V4_PROTOCOL.md)与[实验室指南](docs/UPGRADE_V4_LAB.md)已准备：只读复用旧教师/锚点，比较raw KL、R重校准与AdamW后置C接受门禁；先运行双环境seed17机制pilot。v4真实效果待实验室验证。
+
 **最新实验室交接：** [v3 GitHub拉取与运行指南](docs/RISK_V3_LAB.md)和[可执行协议](docs/RISK_V3_PROTOCOL.md)。九条件覆盖共享监督hard/KD、约束消融、普通hinge机制控制，以及PCT/MPT式双源FD/EKD适配。开发机只做合成检查；你在实验室RTX4090D拉取运行并回传ZIP，当前尚无v3真实效果结论。请按v3专用发布标签建立独立checkout，保留旧实验。
 
 **当前进度：前五轮已完成，包括独立校准后的最终测试；现进入 research v2 的机制与近期方法研究。** 第五轮的完整测试结果保存在个人实验归档。下列第三、四轮数字来自 validation，不应当作第五轮测试成绩。

@@ -123,6 +123,10 @@ def _infer(network, x, device, chunk):
 
 def _fixed_metrics(frame, logits, threshold, anchor_logits=None):
     """Primary decisions use raw float64 logits, preserving nextafter boundaries."""
+    logits = np.asarray(logits, dtype=np.float64)
+    threshold = float(threshold)
+    if anchor_logits is not None:
+        anchor_logits = np.asarray(anchor_logits, dtype=np.float64)
     y = frame.label.to_numpy()
     predicted = logits >= threshold
     n0, n1 = int((y == 0).sum()), int((y == 1).sum())
