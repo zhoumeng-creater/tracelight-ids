@@ -75,7 +75,7 @@
 
 **TabICL: A Tabular Foundation Model for In-Context Learning on Large Data**。[正式出版页及全文](https://proceedings.mlr.press/v267/qu25d.html)。它可以作为有条件的离线教师候选，但优先级低于先调好TabM。模型使用带标签的训练上下文，生成OOF目标时必须排除heldout关联组，不能把包含同一记录的上下文预测当折外监督。显存足够也不代表主机RAM与长上下文成本可负担。
 
-若接入必须锁定作者版本和checkpoint；原论文v1、后续v1.1与当前v2不能混用。该项目前只作方法选择审查，未接入或复现，不因“基础模型”名称而自动纳入全部矩阵。
+若接入必须锁定作者版本和checkpoint；原论文v1、后续v1.1与当前v2不能混用。进一步核查确认v2已是[ICML2026正式论文](https://proceedings.mlr.press/v306/qu26a.html)，不是只停留在早期arXiv身份；其最新版本变化及选择优先级见第6节。该项目前只作方法选择审查，未接入或复现，不因“基础模型”名称而自动纳入全部矩阵。
 
 ## 3. 当前算法最需要优化的具体问题
 
@@ -149,3 +149,74 @@ flowchart LR
 第五轮test已经使用。上述新设计仍在已用来源上开发；若要支持新的独立确认结论，必须另有未使用、schema与标签可审计的数据并预先冻结。旧test上的新分数只能是已见数据的探索，不能重标最终成绩。旧运行包、模型和报告保持原样；新源码必须新目录、新版本，实验运行中不得更新。
 
 本次没有启动真实数据训练，也没有将文献结论宣称为本项目性能。算法是否变得更有效，交由实验室受控实验与后续确认决定。
+
+## 6. 广泛参考与快速更新模型：补充研究边界
+
+研究不能只围绕当前模块寻找支持。检索范围扩展为表格基础模型、网络流量预训练、教师质量与压缩、低误报／分布变化和部署策略；广泛比较后，仍应围绕一个可检验的问题选择主线。论文、当前代码和checkpoint需要分别核查，发布日期、软件版本与模型版本不能混为一项。
+
+### 6.1 当前可直接关联CSV任务的基础模型
+
+以下为截至2026-11-03检索到的官方版本信息，不是本项目已运行清单，也不将作者基准成绩直接移入IDS结果。
+
+| 模型 | 已核对的较新身份 | 可能角色 | 需要先解决的条件 |
+|---|---|---|---|
+| TabICLv2 | ICML2026正式论文；软件2.2.0；分类checkpoint为tabicl-classifier-v2-20260212.ckpt | 优先审查的预训练教师／独立强参照 | 训练上下文、标签感知embedding与缓存全部限制在OOF训练折；先测24GB机器的真实上下文成本 |
+| TabPFN3.5 | 2026-09-15发布，当前对应技术报告；checkpoint为tabpfn-v3.5-20260909.safetensors，另有Fast；软件9.2.0 | 独立性能参考；不默认加入蒸馏 | 非商业与输出用于竞争模型训练的限制需逐条核对；不因代码可获取就默认可发布KD路线 |
+| TabDPT | NeurIPS2025主会；官方后续模型1.3／软件1.3.2与原论文版本分开 | 真实数据预训练路线的教师／参照 | 锁定模型、代码、上下文和预训练数据来源，区分原论文复现与新版适配 |
+| TabM | ICLR2025；当前已有官方0.0.3 adapter | 强神经参照、可调优教师、子模型裁剪或小学生对照 | 修正早停后，单列合理调优预算；保留现tiny配置作为成本点，不拿它代表模型上限 |
+
+直接来源：[TabICLv2正式论文](https://proceedings.mlr.press/v306/qu26a.html)、[软件2.2.0](https://github.com/soda-inria/tabicl/releases/tag/v2.2.0)、[TabICL权重](https://huggingface.co/jingang/TabICL)、[TabPFN官方模型卡](https://huggingface.co/Prior-Labs/tabpfn_3_5)、[官方变更记录](https://github.com/PriorLabs/TabPFN/blob/main/CHANGELOG.md)、[TabPFN3.5报告](https://arxiv.org/abs/2609.17895)、[模型许可证](https://huggingface.co/Prior-Labs/tabpfn_3_5/blob/main/LICENSE)、[TabDPT正式论文](https://proceedings.neurips.cc/paper_files/paper/2025/hash/fc0e3f908a2116ba529ad0a1530a3675-Abstract-Conference.html)、[TabDPT软件1.3.2](https://github.com/layer6ai-labs/TabDPT-inference/releases/tag/v1.3.2)、[TabDPT权重](https://huggingface.co/Layer6/TabDPT)。
+
+TabDPT软件1.3.2在2026-11-02 23:04UTC上传，即北京时间11月3日07:04；它增加解释接口，不是另一个1.3.2模型。软件与模型分列可避免用新包名冒充更新的checkpoint。TabICLv2官方源码／权重标BSD-3-Clause，TabDPT模型标Apache-2.0；实际执行仍需锁住下载文件身份及相应条款。
+
+TabICLv2新增目标感知表示、可扩展attention和预训练改进，不能把它仅视为v1更换权重。OOF时连上下文生成的表示／缓存也不能使用heldout组标签。其论文中更大规模的显存结果不能直接变成4090D24GB可行性保证；CIC现有train约128万行，需有明确的上下文预算与训练家族支持审计。允许在合法训练折内部选择上下文行，与禁止把关联组拆到fit／heldout两边是不同要求。
+
+TabPFN3.5许可包含对用其输出训练竞争模型的限制。因此本项目不默认把它纳入可公开发布的蒸馏实现，优先研究授权边界更清楚的候选；性能参照、权重使用和下游训练分别记录。这里指出的是具体候选的实际适配条件，不据此停止其他可行研究路线。
+
+### 6.2 网络流量基础模型与通用大语言模型
+
+需要并行审查packet／burst预训练、自监督表示与时序模型，但输入契约决定能否实测。现有42／82字段CSV不包含恢复原始包字节序列所需的信息，不能把它转换成几段文本就称为同一任务复现。缺可靠时间元数据时，也不能按CSV行序伪造时序。
+
+| 工作 | 已核实身份／输入 | 对本项目的价值与限制 |
+|---|---|---|
+| TrafficFormer | 作者发表页标示IEEE S&P2025；PCAP→flow→burst字节→bigram／BPE，微调还用包长、方向、时间等 | 包级预训练参照，需新增可核对的原始包输入；不是当前统计CSV的直接替代 |
+| The Sweet Danger of Sugar／Pcap-Encoder | ACM SIGCOMM2025；原始包十六进制字段与T5表示 | 很重要的严格划分、捷径和简单强基线审查；预训练明确包含UNSW原始包，需核具体重叠 |
+| Lens最新v5 | TMLR2026，期刊；每流前34包、语义字段遮盖与知识模板，不沿用旧版3包设置 | 可借鉴有语义的预训练任务；现有CSV不能原样复现，字段组遮盖须与成熟表格自监督方法另作比较 |
+| netFound-640M-base | 2023预印本路线、2025公开checkpoint；包／burst／流token | 不是因2025发权重就变成2025顶会论文；输入、时序和数据来源均需另审计 |
+
+直接来源：[TrafficFormer作者发表页](https://liuzhuotao.github.io/publications/trafficformer/)、[官方输入流程](https://github.com/IDP-code/TrafficFormer)、[SIGCOMM正式DOI](https://doi.org/10.1145/3718958.3750498)、[Pcap-Encoder作者代码](https://github.com/SmartData-Polito/Debunk_Traffic_Representation)、[Lens v5全文](https://arxiv.org/html/2402.03646v5)、[Lens作者代码](https://github.com/V-Enzo/Lens-foundation-model-for-network-traffic)、[netFound作者代码](https://github.com/SNL-UCSB/netFound)、[netFound权重卡](https://huggingface.co/snlucsb/netFound-640M-base)。这些候选本轮均未复现或运行。
+
+预训练数据污染需要独立审计：某模型若已用UNSW原始包预训练，即便本项目没有对它微调，也不能直接称其在UNSW上独立泛化。包级模型可以成为背景、另一条有条件的数据路线或独立展示来源，不应在没有一致提取链时与当前CSV模型直接排性能表。
+
+通用LLM应按具体问题评估：它可用于有真值可核查的字段语义整理、规则候选或解释，但这些辅助功能不能自动计为检测算法收益。若用作检测教师，须验证结构化分数、输入字段、提示选择、成本与标签泄漏；不能仅凭通用能力或版本新就把它接入告警核心。
+
+有条件的扩展是“富包输入教师→CSV学生”：若公共PCAP与每条CSV有真实流对应，可研究额外信息能否转化成低成本学生收益。没有这种对应时不开展，不能凭样本位置配对。另一项候选是语义字段组遮盖／去噪，必须防止保留派生字段让模型只学算术重建，并比较同架构从头训练、随机字段遮盖和语义组遮盖；尚未排除成熟表格自监督近邻前，不主张它为新方法。这两项只作为条件研究空间，不同时铺开成默认训练矩阵。
+
+### 6.3 在参考基础上创新的检查顺序
+
+每个新算法候选须先写明：最近邻工作与实现身份、它没有解决的具体问题、本项目改变的数学目标或机制、能推翻该解释的对照，以及训练／部署成本。当前优先问题仍是低FPR正常尾部与困难攻击保护；“换成基础模型教师”“使用OOF”“门控加排序”本身都不足以主张首创。
+
+新模型持续更新时，保留两个口径：固定版本的可复现实验，以及注明日期的前沿候选表。不能在实验过程中自动升级依赖或默认checkpoint；新发布不自动使旧实验无效，但需要解释为什么选用或不选用。后续真实实验仍在实验室执行，本次扩展只做文献与代码核查。
+
+### 6.4 直接近邻与可检验的创新主线
+
+“基础模型教师→高效学生”已经有直接近邻：[Jeong等的Distillation of Tabular Foundation Models into Efficient Predictors](https://arxiv.org/html/2610.01435v1)，2026-10-01预印本，尚未核实主会身份或作者仓库可运行状态；[Tanna等的医疗表格蒸馏](https://arxiv.org/html/2605.18702v1)，2026-05-18，作者标为[ICML2026 SD4H workshop](https://pratinavseth.github.io/publications/distilling-tfms-structured-health-data/)，明确使用OOF。后者不是ICML主会。因此TFM、小学生、OOF及部署时移除教师都不能单独承担新贡献。
+
+推荐主线是**面向低FPR工作点的风险尾部迁移**：固定一个经验证的教师，研究教师在正常流量99%分位附近的判别关系如何被小学生保留。与普通KD相比，区别应落实到工作点相关的信息选择／目标，而非只换模型。它仍是待验证假设，需要继续核查工作点感知蒸馏近邻；本次不宣称首创。
+
+关键消融不能把低FPR损失在所有条件都固定后，又声称已经分解了它的贡献。建议分阶段固定以下比较：
+
+| 比较 | 回答的问题 |
+|---|---|
+| hard vs hard＋CVaR(beta=0.01) | 低FPR目标本身是否有效 |
+| HGB普通KD vs HGB普通KD＋CVaR | 同一教师下目标对齐是否有效 |
+| HGB普通KD＋CVaR vs HGB工作点感知KD＋CVaR | 迁移规则的独立作用 |
+| HGB普通KD＋CVaR vs TabICLv2普通KD＋CVaR | 教师变强是否真正带来收益 |
+| TabICLv2普通KD＋CVaR vs 同教师工作点感知KD＋CVaR | 新规则是否在近期强教师上仍有效 |
+| 相应matched-hard／同gate且q=y控制 | 排除类权重、逐行重加权解释 |
+
+每阶段先冻结预算及闸门；先检查教师自身的低FPR能力，再花费成本产生完整OOF。上下文、embedding和缓存均折内生成，必要的教师工作点估计也只来自合法训练范围。特征压缩与容量改变后置，避免同时改变所有因素。目标含低FPR区域时，单点Recall@1%仍需单独报告。
+
+备线是**整体FPR约束下的代价感知级联**，参考[ICML2025 A Unified Approach to Routing and Cascading for LLMs](https://proceedings.mlr.press/v267/dekoninck25a.html)。若现有小MLP与HGB确有互补错误，可先用缓存开发预测估计升级收益，再训练路由；主比较保留学生、全HGB、同覆盖率随机路由和简单置信路由。要统一校准整个级联，统计新增误报、挽救漏报、升级比例及端到端p95。LLM路由论文不给IDS误报保证；不建议把昂贵TFM放到最终CPU级联末端。
+
+特征可用性变化可参考[ICML2025 TabFSBench](https://proceedings.mlr.press/v267/cheng25e.html)作为压力测试轴；没有真实时间元数据时不把随机缺失／噪声叫真实漂移。主线无效且已有模型错误互补时才启动备线，不将广泛参考变为同时实现所有模型。
