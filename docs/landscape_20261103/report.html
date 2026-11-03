@@ -1,0 +1,1612 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>TraceLight IDS · 成果全景与创新审查</title><style>
+:root{color-scheme:light;--ink:#192b34;--muted:#52636a;--line:#d6dee1;--accent:#155969;--paper:#fff;--base:#f5f7f7}
+*{box-sizing:border-box}body{margin:0;background:var(--base);color:var(--ink);font:16px/1.85 system-ui,"Microsoft YaHei",sans-serif}
+header{max-width:1500px;margin:auto;padding:32px 30px 18px}header p{margin:4px 0;color:var(--muted)}header h1{font-size:30px;letter-spacing:.01em;margin:0}
+.meta{font-size:13px}.nav-wrap{background:var(--paper);border-block:1px solid var(--line);position:sticky;top:0;z-index:10}
+nav{max-width:1500px;margin:auto;padding:10px 30px;display:flex;gap:6px;flex-wrap:wrap}button,input,select{font:inherit}
+button{cursor:pointer;border:1px solid var(--line);background:white;color:var(--ink);border-radius:4px;padding:6px 14px}button[aria-current=page]{background:var(--accent);color:white;border-color:var(--accent)}
+button:hover{border-color:var(--accent)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #efb34a;outline-offset:2px}
+main{max-width:1500px;margin:0 auto;background:var(--paper);padding:28px 40px 64px;min-height:70vh}.document[hidden],section[hidden]{display:none}
+article{max-width:1380px}article h1{font-size:27px;line-height:1.5}h2{font-size:23px;margin-top:2.2em;padding-top:.5em;border-top:1px solid var(--line)}h3{font-size:19px;margin-top:1.8em}h4{font-size:17px}
+p,li{max-width:1080px}a{color:var(--accent);text-underline-offset:3px}strong{font-weight:650}code{background:#edf2f3;padding:2px 5px;border-radius:3px;font-size:.9em;overflow-wrap:anywhere}pre{overflow:auto;padding:16px;background:#edf2f3}
+.table-wrap{overflow:auto;margin:20px 0;border:1px solid var(--line);border-radius:3px}table{border-collapse:collapse;min-width:820px;width:100%;font-size:14px;line-height:1.75}th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line);min-width:120px}th{background:#eef3f3;font-weight:650}td:first-child{min-width:155px}tr:last-child td{border-bottom:0}
+math[display=block]{display:block;overflow-x:auto;max-width:100%;padding:20px 0;font-size:1.1em}math{font-family:"Cambria Math",math}
+.toc{background:#f3f6f6;border-left:3px solid var(--accent);padding:10px 16px;margin-bottom:26px}.toc summary{cursor:pointer;font-weight:600}.toc a{display:block;font-size:14px;line-height:1.7;margin:5px 0}.toc .h3{padding-left:16px}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0}.tools input{width:min(500px,100%);padding:8px 12px;border:1px solid var(--line);border-radius:3px}.tools select{padding:8px 12px;border:1px solid var(--line);background:white}#record-list{list-style:none;padding:0}#record-list li{max-width:none;border-top:1px solid var(--line);padding:18px 0;display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:16px}#record-list h3{margin:0;font-size:16px}#record-list p{font-size:14px;margin:5px 0;color:var(--muted)}.record-links{font-size:13px}.record-links a{margin-right:14px}footer{color:var(--muted);font-size:13px;max-width:1500px;margin:auto;padding:20px 30px}[id]{scroll-margin-top:105px}#count{font-size:14px;color:var(--muted)}
+@media(max-width:760px){header{padding:24px 18px 16px}header h1{font-size:24px}nav{padding:8px 12px;gap:5px}nav button{font-size:13px;padding:5px 8px}main{padding:18px 18px 40px}article h1{font-size:23px}h2{font-size:20px}#record-list li{grid-template-columns:1fr;gap:6px}body{font-size:15px}}
+@media print{.nav-wrap,.tools,.toc,footer,#evidence{display:none!important}main{padding:0;max-width:none}.document[hidden]{display:block}.document{break-before:page}header{padding:0}table{min-width:0;font-size:10px}td,th{min-width:0!important;padding:5px}.table-wrap{overflow:visible}a{color:inherit}h2,h3{break-after:avoid}p,li{max-width:none}}
+</style></head><body>
+<header><p class="meta">TraceLight IDS / 研究定位审查 / 2026-11-03</p><h1>成果全景与创新审查</h1><p>现有组合的原创性尚未成立。先回应最近邻、解释真实失败，再验证新的机制。</p><p class="meta">四份专题 · 72 条对照记录（含跨专题重叠） · 194 个不同来源链接 · 本轮未新增真实训练</p></header>
+<div class="nav-wrap"><nav aria-label="报告章节"><button data-doc="overview" aria-current=page>综合判断与路线</button><button data-doc="ids" >IDS 与流量模型</button><button data-doc="nearest" >最近邻与数学审查</button><button data-doc="tabular" >表格模型与基准</button><button data-doc="products" >产品与开源项目</button><button data-doc="evidence">检索对照记录</button></nav></div><main>
+<section id="doc-overview" class="document" ><details class="toc"><summary>本篇目录</summary><a href="#overview-heading-2" class="h2">1. 直接判断</a><a href="#overview-heading-3" class="h2">2. 本轮研究的范围与证据口径</a><a href="#overview-heading-4" class="h2">3. 最需要正面回应的已有成果</a><a href="#overview-heading-5" class="h3">3.1 工作点感知蒸馏不是新的大概念</a><a href="#overview-heading-6" class="h3">3.2 选择性轻量 IDS 与校准置信指导已有直接先例</a><a href="#overview-heading-7" class="h3">3.3 基础模型蒸馏、OOF 与合成查询也已有近邻</a><a href="#overview-heading-8" class="h3">3.4 低误报迁移与安全级联也已有较近工作</a><a href="#overview-heading-9" class="h2">4. 当前创新主张逐项处理</a><a href="#overview-heading-10" class="h2">5. 本项目现有结果给出的真正问题</a><a href="#overview-heading-11" class="h2">6. 优先研究方向：把假设写到可被推翻的程度</a><a href="#overview-heading-12" class="h3">A. 优先验证：压缩中的一侧错误迁移与正常组集中风险</a><a href="#overview-heading-13" class="h3">B. 备选：语义字段族与派生捷径下的低误报压缩</a><a href="#overview-heading-14" class="h3">C. 有数据条件的扩展：富输入教师到轻量流特征学生</a><a href="#overview-heading-15" class="h2">7. 先做哪组实验，什么时候停止</a><a href="#overview-heading-16" class="h3">7.1 不可混用的五个对象</a><a href="#overview-heading-17" class="h3">7.2 新确认来源的准入</a><a href="#overview-heading-18" class="h2">8. 市面系统对最终成果的要求</a><a href="#overview-heading-19" class="h2">9. 当前计划修订与交付状态</a></details><article><h1 id="overview-heading-1">TraceLight IDS：成果全景、创新审查与研究路线重构</h1>
+<p>核查日期：2026-11-03。对象：轻量化机器学习入侵检测毕业设计。依据：正式论文、作者全文与代码、模型卡、官方产品文档，以及本项目已归档的实验结果。本轮是研究审查；未新增真实数据训练或部署成绩。后续真实实验在实验室 RTX 4090D 执行。</p>
+<p><a href="report.html">离线阅读与检索版</a> · <a href="source_index.json">结构化对照记录</a>。四专题共 72 条对照记录（含跨专题重叠，含型号、基准和产品，不等于 72 种不同算法）；194 个不同外部来源链接。数量说明覆盖范围，不代表全部全文精读或已复现数量。</p>
+<h2 id="overview-heading-2">1. 直接判断</h2>
+<p><strong>目前“特征筛选＋树教师／小 MLP 蒸馏＋置信门控＋困难样本排序＋检测界面”的创新主张偏弱。现有证据不足以把它写成一套有显著优势的新算法。</strong> 本轮找到的直接近邻，比此前列出的通用 KD 与表格基础模型更接近当前设计，应据此调整论文定位和下一轮比较。</p>
+<p>前五轮实验的价值是建立了可信基线、量化压缩代价，并暴露了可研究的失败现象。新的研究应解释并改善这些现象，同时回应最接近的已有方法。实验次数、最新模型名称、漂亮界面和多模块组合，都不能替代这个要求。</p>
+<p>判断需要分开：</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>评价维度</th>
+<th>当前有的证据</th>
+<th>当前缺的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完成度／工作量</td>
+<td>五轮既有实验、双数据环境、字段／容量／KD 消融、独立校准与最终测试、CPU 成本和工件复核</td>
+<td>新路线的正式实验室结果与新的确认来源</td>
+</tr>
+<tr>
+<td>算法设计</td>
+<td>已实现损失、门控、匹配权重控制、分组训练与部署适配</td>
+<td>相对最强近邻的明确差异、独立作用和稳定收益</td>
+</tr>
+<tr>
+<td>创新性</td>
+<td>已有具体失败线索，研究问题可以收窄</td>
+<td>现有组合被大量先例覆盖，尚无充分证据支持原创方法成功</td>
+</tr>
+<tr>
+<td>前沿性</td>
+<td>已核查 2025／2026 正式论文及近期技术报告、基础模型与流量预训练</td>
+<td>近期强方法的同协议实测；仅在综述中出现不等于实验跟上前沿</td>
+</tr>
+<tr>
+<td>实际效果</td>
+<td>CIC 字段压缩有成本收益；UNSW 换小模型的代价也已量化</td>
+<td>可靠的跨分区低误报保持、困难家族保护、应用全链路成本</td>
+</tr>
+</tbody>
+</table></div>
+<p>本科论文是否达到学校要求，还取决于任务书、导师评价和论文论证；不能仅凭当前分数作保证。按用户提出的“有分量、有算法设计、有效果、有辨识度”目标，研究尚未完成。</p>
+<h2 id="overview-heading-3">2. 本轮研究的范围与证据口径</h2>
+<p>阅读入口分为四份，主报告负责取舍与后续设计：</p>
+<ol>
+<li><a data-doc-link="ids" href="#ids">IDS 学术成果与流量预训练</a>：18 项代表性工作，包括轻量 IDS、字段选择、选择性 KD、在线学习、PCAP 基础模型及评估审计。</li>
+<li><a data-doc-link="nearest" href="#nearest">蒸馏、低误报与分布变化的最近邻审查</a>：优先找能够否定当前创新主张的方法，检查公式、假设与实现差异。</li>
+<li><a data-doc-link="tabular" href="#tabular">表格模型、基础模型与强基线</a>：15 个模型／型号条目与 3 个基准，包含 2026-09／10 的更新和可获取状态。</li>
+<li><a data-doc-link="products" href="#products">开源项目与商业系统</a>：输入、部署、调查闭环、解释界面、版本与许可；产品能力和可复现算法证据分别判断。</li>
+</ol>
+<p>这是一项围绕项目问题的广泛代表性审查，不声称穷尽市场与全部文献，也不把检索不到完全同名算法当作创新证明。没有按论文 accuracy／F1 制作跨任务排行榜。PCAP 应用分类、flow／host 异常检测、CSV 监督二分类、图检测和告警调查系统各有不同输入与目标。</p>
+<p>本轮检索覆盖以下问题族：</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>问题族</th>
+<th>主要检索对象</th>
+<th>审查问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轻量 IDS</td>
+<td>特征选择、选择性／联邦 KD、低资源在线检测</td>
+<td>大框架是否已经存在？原始输入和部署成本是什么？</td>
+</tr>
+<tr>
+<td>蒸馏机制</td>
+<td>evaluation-oriented／confidence／conformal／capacity mismatch／TFM distillation</td>
+<td>“新损失”究竟迁移了什么？是否只是重加权？</td>
+</tr>
+<tr>
+<td>低误报</td>
+<td>pAUC／CVaR／Neyman–Pearson／distribution shift</td>
+<td>区间排序、单点召回与风险保证是否被混用？</td>
+</tr>
+<tr>
+<td>前沿表格模型</td>
+<td>TabM、TabICLv2、TabPFN 3.5、TabDPT、Mitra-v2 等</td>
+<td>实际版本、上下文、成本、许可与工件是否可核实？</td>
+</tr>
+<tr>
+<td>流量预训练</td>
+<td>TrafficFormer、Lens、netFound、Pcap-Encoder、tFusion</td>
+<td>当前 CSV 能否复现输入？预训练是否见过评价来源？</td>
+</tr>
+<tr>
+<td>产品与项目</td>
+<td>NDR／IDS／NSM、流提取、在线 ML、异常检测、实验追踪</td>
+<td>哪些需求早已成熟？本项目应补哪条真实能力链？</td>
+</tr>
+</tbody>
+</table></div>
+<p>每项证据尽量追到会议／期刊、作者 PDF、官方代码／模型卡。主会、workshop、期刊、预印本、模型发布分别标注。论文存在、代码可见、权重可取得、程序跑通、结果复现是不同状态。本轮不新增任何“已复现”声明。</p>
+<h2 id="overview-heading-4">3. 最需要正面回应的已有成果</h2>
+<h3 id="overview-heading-5">3.1 工作点感知蒸馏不是新的大概念</h3>
+<p><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Huang_Evaluation-Oriented_Knowledge_Distillation_for_Deep_Face_Recognition_CVPR_2022_paper.pdf" rel="noopener noreferrer" target="_blank">Evaluation-Oriented Knowledge Distillation for Deep Face Recognition，CVPR 2022</a> 已经按 TPR／FPR 工作点识别关键关系，用排序迁移减小师生评价差距，并考虑小学生的表达能力。这直接削弱“围绕低 FPR 传递关键边界关系”的泛化新颖性。</p>
+<p>人脸验证和二元 IDS 的样本单位、关系定义不同；可以研究任务适配与未解决机制，但更换应用不能自动构成新的学习方法。需要将其关键机制作为近邻对照，说明二分类适配究竟改变了什么，不能只比较普通 KD。</p>
+<h3 id="overview-heading-6">3.2 选择性轻量 IDS 与校准置信指导已有直接先例</h3>
+<p><a href="https://doi.org/10.1016/j.cose.2025.104417" rel="noopener noreferrer" target="_blank">DistillGuard，Computers &amp; Security 2025</a> 已有 Transformer 教师、轻学生、选择性知识传递与解释。其选择隐藏表示的机制与当前输出 gate 有差异，但“选择性 KD＋轻量 IDS”的大框架不能作为首创。</p>
+<p><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/0b08d733a5d45a547344c4e9d88bb8bc-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">Adaptive Conformal Guidance for Learning under Uncertainty，ICLR 2026</a> 利用校准预测集合表达不确定性、加权指导，并研究教师受噪声／变化影响的情况。因此“加一个校准不确定度门控”同样不足以获得新颖性。该方法的覆盖目标与本项目正常类误报率仍需区分。</p>
+<h3 id="overview-heading-7">3.3 基础模型蒸馏、OOF 与合成查询也已有近邻</h3>
+<p><a href="https://arxiv.org/html/2610.01435v1" rel="noopener noreferrer" target="_blank">Distillation of Tabular Foundation Models into Efficient Predictors，2026-10 预印本</a>、<a href="https://arxiv.org/html/2605.18702v1" rel="noopener noreferrer" target="_blank">结构化医疗表格蒸馏，ICML 2026 SD4H workshop</a> 已直接研究 TFM 到高效模型的迁移。后者含 OOF、适应性温度与置信权重；前者在自己的设计中比较 full-context 和 OOF，不能只摘取支持某一协议的结果。</p>
+<p><a href="https://arxiv.org/abs/2608.18849" rel="noopener noreferrer" target="_blank">GEAR，2026-08 预印本</a> 进一步使用合成协变量查询、真实数据与 OOF 锚定。换成 TFM 教师、增加合成数据、保留 OOF、部署时删除教师，都需要更具体的新问题和增量证据。</p>
+<p>合法使用 train 标签的 full-context 软目标，不自动构成测试泄漏。当前研究坚持 OOF 的主要理由是要评估教师对未见训练行的错误、置信和门控选择；它是本研究问题对应的控制条件，不是所有蒸馏的唯一合法方案。</p>
+<h3 id="overview-heading-8">3.4 低误报迁移与安全级联也已有较近工作</h3>
+<p><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/33870b3e099880cd8e705cd07173ac27-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">Neyman-Pearson Classification under Both Null and Alternative Distributions Shift，ICLR 2026</a> 同时处理正常与攻击两类条件分布的变化及负迁移。不能把“在漂移中保持误报预算”称为无人解决的问题。</p>
+<p>近期 <a href="https://www.mdpi.com/1999-5903/18/8/431" rel="noopener noreferrer" target="_blank">C-GUARD，Future Internet 2026</a> 已涉及 OOF 救援模型、只翻转基线阴性、conformal gate 和显式新增 FP 预算，详见<a data-doc-link="nearest" href="#nearest">近邻报告</a>。所以“按需升级到大模型并控制误报”的备线也需重新查明差异。对 SAFE-KD 等预印本，本轮还发现作者校准实现不足以直接推出所宣传的早退条件错误保证；有先例和保证成立同样需要分别审查。</p>
+<h2 id="overview-heading-9">4. 当前创新主张逐项处理</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>原有或容易提出的主张</th>
+<th>本轮近邻／问题</th>
+<th>当前可用表述与处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>稳定 MI＋去冗余是新特征选择</td>
+<td>FSNID 等已研究信息贡献与字段压缩；现有稳定性未带来普遍收益</td>
+<td>作为受控选择策略／消融保留；不宣称新选择理论</td>
+</tr>
+<tr>
+<td>树教师蒸馏小 MLP 是核心创新</td>
+<td>轻量 IDS KD、TFM distillation 已有</td>
+<td>作为研究载体；收益必须超过同学生 hard 与权重匹配控制</td>
+</tr>
+<tr>
+<td>正确性＋置信 gate 是原创</td>
+<td>质量指导、自蒸馏、conformal guidance 等近邻</td>
+<td>写清公式及适用问题；不以模块命名称新方法</td>
+</tr>
+<tr>
+<td>工作点关键关系＋排序迁移</td>
+<td>CVPR 2022 EKD 直接近邻</td>
+<td>增加关键机制对照；必须有超出任务替换的贡献</td>
+</tr>
+<tr>
+<td>top-normal pair loss 直接优化 1% FPR</td>
+<td>当前实现约 10% batch hard mining、有 pair cap／组权重，非精确 pAUC</td>
+<td>称启发式排序代理；补 CVaR／NP 训练对照和尾部支持检查</td>
+</tr>
+<tr>
+<td>基础模型＋OOF＋合成查询</td>
+<td>2026 TFM 蒸馏／GEAR 已覆盖</td>
+<td>优先筛合格教师；不能靠换教师制造算法新颖性</td>
+</tr>
+<tr>
+<td>校准 1% 即保证测试／部署 1%</td>
+<td>第五轮 UNSW 已有反例；统计假设也不成立</td>
+<td>报告冻结阈值的实际 FPR；明确经验预算与概率保证的区别</td>
+</tr>
+<tr>
+<td>语义字段遮盖／CSV→图像预训练</td>
+<td>SAFE、ConTextTab、Lens 等已有</td>
+<td>只在能证明派生字段捷径等具体问题时进入候选</td>
+</tr>
+<tr>
+<td>低成本级联＋FP 预算</td>
+<td>级联／选择性分类、C-GUARD 等已有</td>
+<td>先核错误互补，再与简单路由及近邻机制比较</td>
+</tr>
+<tr>
+<td>实时检测＋解释面板是算法创新</td>
+<td>NFStream、Zeek、Security Onion 等已有成熟链路</td>
+<td>算作实现与研究展示；以真实输入和证据闭环提高成果质量</td>
+</tr>
+</tbody>
+</table></div>
+<p>这不意味着现有实验应丢弃。恰恰需要它们支撑：为什么增加这些控制、为什么舍弃无效机制、为什么选择某条改进路线。论文可以有明确的方法设计与有价值的实证贡献，但必须按证据表述其创新程度。</p>
+<h2 id="overview-heading-10">5. 本项目现有结果给出的真正问题</h2>
+<p>以下数字取自第五轮实验室归档与既有独立复核，不是文献成绩。三个训练 seed 的变化不等于三个独立网络环境。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>已确认现象</th>
+<th>研究含义</th>
+<th>不能直接推出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNSW：RF 召回 88.9004%、FPR 2.5694%；小 MLP 召回 86.1959%、FPR 3.2063%</td>
+<td>小模型的存储与吞吐优势伴随实质检测代价；两者校准 1% 的阈值都未保持</td>
+<td>不能宣称“小 MLP 基本无损、低误报已解决”</td>
+</tr>
+<tr>
+<td>UNSW：约 29 MB→40 kB；单条 CPU p95 4.653→2.414ms</td>
+<td>压缩收益真实且可量化，值得研究更好的检测—成本取舍</td>
+<td>不能以参数／文件缩小代替检测提升</td>
+</tr>
+<tr>
+<td>CIC：82→MI24，召回 99.2155→99.1539%；p95 7.011→2.276ms，批吞吐 3.19×</td>
+<td>字段压缩在该设置有用，需解释为何一些家族／seed 仍退化</td>
+<td>均值接近不是统计等效；不是原始包全链路 3.19×</td>
+</tr>
+<tr>
+<td>CIC：大量误报差异集中于一个重复正常特征模式，Botnet 有 seed 敏感性</td>
+<td>总体 FPR／召回不足以说明所有群体稳定</td>
+<td>不能只挑总体平均支持改进</td>
+</tr>
+<tr>
+<td>第三轮普通 KD 增益约 0.2551pp，未达原 0.5pp 闸门，Fuzzers 退化</td>
+<td>需要区分教师信息、有效类权重、容量与工作点失配</td>
+<td>不能继续把 KD 已成功写进贡献</td>
+</tr>
+</tbody>
+</table></div>
+<p>第五轮报告位于实验归档 <code>20261103_第五轮实验室4090D/复核分析/第五轮最终测试复核.md</code>。当前正式任务是分别训练／评价两套数据，并非源域训练后直接迁移到另一套数据。旧 test 已揭晓，新路线在这些旧结果上的改进只能称开发／再分析。</p>
+<h2 id="overview-heading-11">6. 优先研究方向：把假设写到可被推翻的程度</h2>
+<h3 id="overview-heading-12">A. 优先验证：压缩中的一侧错误迁移与正常组集中风险</h3>
+<p><strong>具体问题：</strong>在同一预设校准 FPR 目标、相同小学生与推理成本下，普通 KD 的损失是否主要来自新增正常误报与丢失教师已检出的困难攻击？把这两类分歧分开建模，并限制少数关联组对训练尾部的支配，能否超过 EKD 适配、普通 KD＋pAUC 和无 KD 的同组权重训练？实际评价 FPR 分别报告，不假定相同校准目标产生相同测试风险。</p>
+<p>它仍是待检验候选，不是本轮已经证明的新算法；EKD、AdaConG、pAUC／NP、group DRO 与类条件迁移理论都是必须回应的近邻。若具体机制与这些方法等价，应撤销相应原创主张。</p>
+<p>将师生在各自冻结工作点的二元决策记为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>T</mi><mo>,</mo><mi>S</mi></mrow></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>,</mo><msub><mi>P</mi><mn>1</mn></msub></mrow></math> 分别表示同一评价总体的正常与攻击条件分布，在同一批样本上有直接计数恒等式：</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>S</mi></msub><mo>=</mo><msub><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>T</mi></msub><mo>+</mo><msub><mi>P</mi><mn>0</mn></msub><mo stretchy="false">(</mo><mi>S</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>T</mi><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo><mo>−</mo><msub><mi>P</mi><mn>0</mn></msub><mo stretchy="false">(</mo><mi>S</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>T</mi><mo>=</mo><mn>1</mn><mo stretchy="false">)</mo><mo>,</mo></mrow></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>S</mi></msub><mo>=</mo><msub><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>T</mi></msub><mo>−</mo><msub><mi>P</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>S</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>T</mi><mo>=</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><msub><mi>P</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>S</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>T</mi><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo><mo>.</mo></mrow></math>
+<p>这只是分析工具，不称原创定理。它要求同时观察新增 FP、修复 FP、丢失 TP、挽救 TP，而不是仅看总体 KD loss 或置信均值。教师到学生的四格差异首先描述压缩，不自动说明 KD 的因果作用；须对 hard、matched-hard 和 KD 同时计算，并比较同初始化的配对差异。诊断必须使用实际 KD 教师；既有 RF→MLP 的差距不能代替 HGB 蒸馏的归因证据。若教师自身超预算，单纯压低学生新增 FP 也不能自动保证总 FPR。</p>
+<p>待研究的改动应落实到以下三点，而不是先给算法起名：</p>
+<ol>
+<li><strong>信号对齐。</strong> 用合法训练范围内的教师工作点／边界余量定义迁移信息，比较概率软目标与关系／分歧信号；明确加权教师分数不等于部署后验。</li>
+<li><strong>集中度控制。</strong> 检查正常尾部由哪些重复／关联组主导，在相同更新与 pair 预算下比较逐行、组均衡、随机 pair 与标准 pAUC 训练。组均衡改变估计目标，须同时报告真实逐行 FPR，不能将两者混称。</li>
+<li><strong>困难攻击保护。</strong> 在 train 内定义有支持的攻击子集，检查教师正确检出的样本是否被压缩丢失；推理不能读取真实家族标签。与简单类／族重加权和同结构更好训练作对照。</li>
+</ol>
+<p>特征重复组用于检查模式集中，会话关联组用于防泄漏与依赖分析，环境组用于迁移评价，三者不能互相替代。只有重复 hash 时，不主张会话独立或 mixture 稳健。组均衡也不同于最坏组约束或 group DRO。</p>
+<p>建议的最小步骤：先筛教师→折内产生训练信号→固定学生与初始化／batch 顺序→比较已有方法和候选→独立正常校准→冻结阈值→新来源确认。需要教师工作点时，所用正常样本不得来自旧 test；训练内再划校准／交叉拟合的成本计入账本。分组 OOF 只能隔离已知关联；训练折彼此重叠，也不会使组内 flow 独立。独立统计单位及跨分区关联未经核验时，仅作经验结论。</p>
+<p><strong>最强击穿实验：</strong>候选与“hard＋pAUC＋同组权重”、EKD 关键机制适配采用相同学生与计算预算。如果优势消失，说明收益由已有目标或重加权解释，不能主张新的知识迁移机制。替换为同 gate 的真实标签目标仍同样有效时，也不能将收益归因于教师软信息。</p>
+<h3 id="overview-heading-13">B. 备选：语义字段族与派生捷径下的低误报压缩</h3>
+<p><strong>具体问题：</strong>字段缩减造成的检测退化，是否与确定性派生字段、环境代理和罕见攻击所需信息有关？同字段数的简单 MI 为什么失败，条件信息选择或有约束的表示学习是否真正改善低 FPR 取舍？</p>
+<p>最近邻为 FSNID、SAFE、表格遮盖预训练和 TabFSBench。先建立字段语义／派生关系字典，用固定其余字段的移除／恢复验证具体失效机制；再决定是否值得设计条件信息选择或语义整组遮盖。没有实际提取器时只测 CSV 编码／推理成本，不能用主观“昂贵字段”权重声称降低网络采集成本。</p>
+<p><strong>最强击穿实验：</strong>同字段数 MI、冗余控制、经审计可行的 FSNID、同架构随机遮盖、从头训练，使用相同数据与总预算。如果语义方案只改善重建 loss、不能保护低 FPR／困难家族，停止该路线。它在数据和工程上较可行，但目前的新颖性也需要进一步收窄。</p>
+<h3 id="overview-heading-14">C. 有数据条件的扩展：富输入教师到轻量流特征学生</h3>
+<p>TrafficFormer、Lens、netFound-v2 和 tFusion 展示了包级／多模态信息的价值。但现有聚合 CSV 不能恢复包序列，也没有自动保证 PCAP 与每行特征的对应。只有获得可核查对齐和预训练来源后，才值得研究额外信息能否帮助小学生；需比较同输入教师、富输入教师和无蒸馏，排除额外数据／标签解释。privileged information／跨模态蒸馏已有基础，不因使用流量模型就称首创。</p>
+<p>该路线数据与验证负担明显更大，作为条件扩展保留。当前优先 A；B 在明确失效证据需要它时推进。</p>
+<h2 id="overview-heading-15">7. 先做哪组实验，什么时候停止</h2>
+<p>这是一份研究取舍建议，尚未运行，也不更改前五轮冻结结果。已有 research v2 的 13×5 实现矩阵可用于机制诊断；它的存在不意味着当前组合已经值得作为创新方法全面扩跑。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>闸门</th>
+<th>必须回答的问题</th>
+<th>建议工作／关键对照</th>
+<th>继续条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G0 强参照与教师资格</td>
+<td>问题是否只是弱基线／弱教师？</td>
+<td>CatBoost、LightGBM、合理调优 TabM；现有 RF／HGB／小 MLP；再对 TabICLv2 作折内上下文与显存检查</td>
+<td>教师在开发低 FPR 指标和家族支持上合格，资源可接受；否则先解决教师问题</td>
+</tr>
+<tr>
+<td>G1 机制淘汰</td>
+<td>软信息是否超过既有目标与重加权？</td>
+<td>hard、matched-hard、普通 KD、hard＋pAUC、KD＋pAUC、EKD 关键机制适配、质量门控、组权重无 KD、候选及去关键机制控制</td>
+<td>增益不能被权重／低 FPR 目标／学生训练差异充分解释</td>
+</tr>
+<tr>
+<td>G2 稳定性与压缩</td>
+<td>效果能否跨 seed、输入预算和教师保留？</td>
+<td>通过 G1 的少量候选增加训练 seeds；再改变教师／容量／字段，分别受控</td>
+<td>同一 CPU 成本或明确 Pareto 收益，困难家族退化透明，集中组之外仍有支持</td>
+</tr>
+<tr>
+<td>G3 新来源确认</td>
+<td>新假设能否离开已经看过的 test？</td>
+<td>审核未使用来源，冻结处理、主比较、误报目标、非劣界、区间和停止规则后再开 test</td>
+<td>真正新来源的独立确认；失败也完整报告</td>
+</tr>
+</tbody>
+</table></div>
+<p>G1 分两步：G1a 从候选条件池冻结约 5 项，一环境×三种子，约 15 个学生 fit；G1b 只为尚未区分的解释定向追加。约 8–10 项是候选条件池，不是首批全部运行；教师与 OOF 成本另计。每次追加必须明确它可能推翻哪项解释，不以模型数／拟合数代替研究内容。</p>
+<p>另在一个固定教师／学生组合上定向比较 FC 普通 KD 与 OOF 普通 KD，保持学生更新与查询预算一致，报告上下文体量、抽样和类别覆盖；无需将整个矩阵翻倍。该比较识别监督构造的作用，不能用 FC 教师在已见行的正确率证明门控可靠。</p>
+<p>预算记录：教师 full fit、OOF 辅助 fit、调参、上下文选择、预训练或微调、选择器内部训练、失败和重试分别计时。相同 trial 数不是相同算力，默认配置和预算内调优成绩分列。各模型的早停依据应与推理聚合语义一致。</p>
+<p>主效应可沿用既有 0.5pp 开发增益作为事先考虑的闸门，但确认阈值、非劣界与区间方法必须在新数据开封前论证。小家族需要显示分子／分母；独立组少、区间宽时不能宣称“所有家族均保持”。总体 AUC 提高、某个 seed 更好或 p 值显著，都不能代替低误报与部署效果。</p>
+<h3 id="overview-heading-16">7.1 不可混用的五个对象</h3>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>对象</th>
+<th>它回答什么</th>
+<th>主要限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pAUC</td>
+<td>一段 FPR 区间内的平均排序质量</td>
+<td>不等于恰好 1% 工作点的 TPR</td>
+</tr>
+<tr>
+<td>冻结阈值实际 TPR／FPR</td>
+<td>该模型在该来源上的检出和误报</td>
+<td>超预算时必须照实报告，不能在 test 调回 1%</td>
+</tr>
+<tr>
+<td>NP 高概率控制</td>
+<td>在指定抽样／分布假设下的错误约束</td>
+<td>正常流相关、分布变化、模型选择会影响条件</td>
+</tr>
+<tr>
+<td>CP 集合覆盖／不确定度</td>
+<td>标签是否被预测集合覆盖等</td>
+<td>不自动约束正常类 FPR 或早退后的条件错误</td>
+</tr>
+<tr>
+<td>级联总体风险／成本</td>
+<td>完整决策链产生多少错报、漏报和开销</td>
+<td>不能只看救援子模型分数或忽略路由成本</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="overview-heading-17">7.2 新确认来源的准入</h3>
+<p>两套不同 CSV 分别重训后复验，是跨数据环境复验；只有输入语义对齐、源域训练策略冻结、目标 test 不参与选择时，才能评价源到目标迁移。新来源先核：许可与来源、完整哈希、字段定义、采集／会话／时间元数据、重复与跨分区重叠、正常独立单元及稀有家族支持。不能用 CSV 行号造时间，不能将 feature hash 自动当真实独立网络会话。</p>
+<p>旧 test 的后续分析限于 v1 已保存预测／模型工件的解释与明确标注的探索，不用于 v2 新模型选择、排名或反调阈值，也不承担新方法的独立确认。新方案的压力测试使用开发分区或另行冻结的新来源。随机缺失、重采样正常组比例、去重复和受控噪声应以准确名称报告，不称真实网络漂移。</p>
+<h2 id="overview-heading-18">8. 市面系统对最终成果的要求</h2>
+<p>成熟系统已覆盖采集、规则／协议分析、流索引、告警调查、PCAP 证据和案例协作。商业 NDR 的公开能力可用于需求比较；厂商宣传数字不作为本项目算法有效性的证据。详见<a data-doc-link="products" href="#products">项目与产品报告</a>。</p>
+<p>本项目最有价值的产品定位是：<strong>可实际检测 CSV、能审查低误报压缩取舍、能追到每个结论工件的研究系统。</strong> 当前已有真实 CPU 推理与双模型离线展示，现有 demo 使用第四轮 seed17／validation 阈值，不自动代表第五轮最终测试或 v2；下一步界面应把研究中新发现的真实问题展示出来。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>视图／能力</th>
+<th>必须显示的真实证据</th>
+<th>验收方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>检测与输入契约</td>
+<td>字段／单位／缺失检查，实际模型、阈值、预测；有可信真值时才展示错误样本</td>
+<td>导入合法 CSV 并完成真实推理；错误 schema 给可操作反馈</td>
+</tr>
+<tr>
+<td>压缩对照</td>
+<td>同一输入的师生预测分歧；有可信真值时再显示四类错误迁移、攻击支持数与误报集中组</td>
+<td>页面计数与保存的逐样本预测逐项一致；无标签输入不显示 FP／FN</td>
+</tr>
+<tr>
+<td>阈值与成本</td>
+<td>校准来源、冻结阈值、包大小／内存／CPU p95 和测量范围；实际 FPR 只在真值可审计时计算</td>
+<td>不用目标 test 反调；图形数字可回溯原报告；无标签流不显示经验 FPR</td>
+</tr>
+<tr>
+<td>证据追溯</td>
+<td>数据 manifest、代码／配置／权重哈希、运行设备、实验状态</td>
+<td>从图表定位到实际工件，不显示硬编码“成功”状态</td>
+</tr>
+<tr>
+<td>可选 PCAP／实时入口</td>
+<td>真实流提取器、字段映射、流结束等待和全链路延迟</td>
+<td>只有语义对齐及实际采集验证通过后才展示为支持能力</td>
+</tr>
+</tbody>
+</table></div>
+<p>Zeek 与 UNSW／CIC 的同名字段可能有不同统计定义；NFStream 已有模型插件和实时部署示例。直接接提取器并不能证明原 CSV 模型有真实网络效果。是否增加 PCAP 取决于输入对齐和时间预算，不用一个按钮制造能力假象。</p>
+<h2 id="overview-heading-19">9. 当前计划修订与交付状态</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>状态</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>已完成并保留</td>
+<td>前五轮实验、最终测试和复核；正负结果、成本及局限不重写</td>
+</tr>
+<tr>
+<td>本轮完成</td>
+<td>四类成果审查、近邻反证、版本／工件状态更新、创新逐项审查与分层研究路线</td>
+</tr>
+<tr>
+<td>已有工程、尚无新正式结果</td>
+<td>research v2 损失／控制、官方 TabM adapter、实验室入口及运行包；完整新方案未被实验室结果支持</td>
+</tr>
+<tr>
+<td>下一优先级</td>
+<td>最强近邻适配审查＋强基线／教师资格＋可区分机制的最小实验</td>
+</tr>
+<tr>
+<td>后续确认</td>
+<td>通过机制闸门后扩大，审核新来源并冻结确认协议，再开展正式实验与论文主张</td>
+</tr>
+</tbody>
+</table></div>
+<p>需要立即更新的表述：此前优先提出的“风险尾部／工作点迁移”和“低成本级联”，现在已有更直接近邻。它们降级为待查差异、待验证的候选路线；不能沿用旧提案语气写成已成立创新。netFound 旧 640M 卡也已被新版家族替代，最新状态见 IDS 报告；旧快照不得代表目前前沿。</p>
+<p>论文贡献最终只写被证据支持的部分。若新机制未超过 EKD／pAUC／权重控制，保留为负结果与失效分析，撤销相应算法成功主张；若在新来源保持低误报与轻量收益，再形成精确的方法贡献。下一轮的目标是获得这样的辨识证据。</p></article></section><section id="doc-ids" class="document" hidden><details class="toc"><summary>本篇目录</summary><a href="#ids-heading-2" class="h2">1. 定位判断</a><a href="#ids-heading-3" class="h2">2. 证据口径与输入契约</a><a href="#ids-heading-4" class="h2">3. 18 项代表性成果</a><a href="#ids-heading-5" class="h3">3.1 轻量检测、特征选择、蒸馏与在线学习</a><a href="#ids-heading-6" class="h3">3.2 包级预训练、基础模型与评估审计</a><a href="#ids-heading-7" class="h2">4. 全文精读得到的关键区别</a><a href="#ids-heading-8" class="h3">4.1 FSNID：不是另一种单变量 MI 排名，成本也不只是最终字段数</a><a href="#ids-heading-9" class="h3">4.2 Kitsune：低误报和廉价硬件本身早已是研究问题</a><a href="#ids-heading-10" class="h3">4.3 CARAVAN：LLM 离线辅助有强先例，但不是无条件可信教师</a><a href="#ids-heading-11" class="h3">4.4 Pcap-Encoder：最该借鉴的是比较设计和预训练来源审计</a><a href="#ids-heading-12" class="h3">4.5 SAFE、Lens 与 netFound-v2：语义表示值得借鉴，不能先占新颖性</a><a href="#ids-heading-13" class="h3">4.6 tFusion 与 NetVigil：真正问题来自缺失信息和环境变化</a><a href="#ids-heading-14" class="h2">5. 当前方案已经被覆盖的部分与仍需证明的部分</a><a href="#ids-heading-15" class="h2">6. 真正值得推进的研究问题与可执行边界</a><a href="#ids-heading-16" class="h3">P1：二元蒸馏的低误报目标失配与可控纠正</a><a href="#ids-heading-17" class="h3">P2：按实际成本压缩字段，同时保护尾部和独立组</a><a href="#ids-heading-18" class="h3">P3：语义组自监督与蒸馏，先排除重建捷径</a><a href="#ids-heading-19" class="h3">P4：包级富信息教师→仅 CSV 学生，条件具备后再做</a><a href="#ids-heading-20" class="h2">7. 同协议比较应如何建立</a><a href="#ids-heading-21" class="h2">8. 优先对照与暂缓项</a><a href="#ids-heading-22" class="h2">9. 核查限制及后续补证</a></details><article><h1 id="ids-heading-1">IDS、轻量化、蒸馏与流量预训练：研究定位审查</h1>
+<p>核查截止：2026-11-03。范围：学术网络入侵检测、特征压缩、知识蒸馏、包级流量表示与严格评估；通用表格基础模型和商业产品由同目录其他报告覆盖。本文是有边界的代表性审查，不声称穷尽所有论文或获得统一排行榜。</p>
+<p><strong>执行状态：本次仅阅读论文、官方会议/期刊资料、作者代码与模型卡；下面 18 项均未由本次审查训练、微调、跑分或部署。代码/权重/数据页面可访问不等于已下载、跑通或复现。</strong> 本文只新增此 Markdown，不改模型或实验协议。</p>
+<h2 id="ids-heading-2">1. 定位判断</h2>
+<p>当前“特征筛选＋树教师/小 MLP 蒸馏＋低成本部署”的大框架，已经被特征选择、选择性蒸馏和轻量 IDS 文献广泛覆盖。加上一个置信 gate、hard-negative 项或前端界面，尚不足以证明新的算法贡献。值得继续研究的是：<strong>在明确的低误报预算下，压缩为何伤害某些攻击/正常组，教师信号和有效类权重各解释多少；针对这些原因的设计，能否在相同学生和总预算下带来可确认的检测—成本收益。</strong> 这是一项待证明的具体问题，不是已确认的文献空白。</p>
+<p>不要将“模型更大、更近”自动等同于更适合当前任务。以下工作至少涉及三种不同问题：包级应用/加密流量分类、流/主机级异常检测、已抽取 CSV 的监督二分类。输入信息、样本单位和目标不同，不能互相借用 accuracy/F1 排名。</p>
+<p>本项目开发边界以 <a href="../STAGE6_RESEARCH_DESIGN.md">STAGE6_RESEARCH_DESIGN.md</a> 为准：旧 final test 已被研究者看到，v2 仍处于开发研究；新的确认结论需要真正未用来源。后续真实训练在实验室 RTX 4090D 执行，本机只做工程/合成检查及工件分析。</p>
+<h2 id="ids-heading-3">2. 证据口径与输入契约</h2>
+<ul>
+<li><strong>A：全文重点核对。</strong> 已读原论文的方法、相关评估/成本段落，并给出节/图/表定位；不代表复现。</li>
+<li><strong>B：身份和指定事实已核。</strong> 本次主要依据作者 README、模型卡、原论文摘要/出版页或指定公式；未完整审计 split/实现时明确留空。</li>
+<li>“未核到固定 1% 协议”指本次证据不足以支持同协议比较，不能写成作者一定没有测过。</li>
+<li>表中 code/model/data 分别写清；没有核到公开入口时写“未核到”，不推断不存在。</li>
+</ul>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>输入</th>
+<th>需要保留的信息</th>
+<th>当前 42/82 字段 CSV 的边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Packet/PCAP</td>
+<td>原始 header/bytes、包长、方向、包时间、流内顺序</td>
+<td>聚合统计不能反推出包序列；把一行转文本/图片不等于恢复这些信息</td>
+</tr>
+<tr>
+<td>Flow/host log 或图</td>
+<td>流统计加真实端点、时间窗、通信关系</td>
+<td>当前 UNSW 子集缺可重建真实会话/时间图的时间与 IP；不能把行号当时间</td>
+</tr>
+<tr>
+<td>Tabular CSV</td>
+<td>每行固定语义的数值/类别字段</td>
+<td>适合当前监督学习、字段选择、表格自监督和蒸馏；跨 UNSW/CIC 同名列不自动同义</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ids-heading-4">3. 18 项代表性成果</h2>
+<h3 id="ids-heading-5">3.1 轻量检测、特征选择、蒸馏与在线学习</h3>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID／工作与正式身份</th>
+<th>输入／任务／方法区别</th>
+<th>split 与指标证据；1% FPR 可比性</th>
+<th>作者工件及本项目适配状态</th>
+<th>阅读定位</th>
+</tr>
+</thead>
+<tbody>
+<tr id="ids-record-1">
+<td><strong>R01 Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection，NDSS 2018 主会</strong></td>
+<td>原始包经 AfterImage 提取带时间衰减的上下文统计，再以多个小 AE 的重建误差检测异常；不是 hard-label MLP</td>
+<td>正常学习期→执行期；Fig.9 报 TPR/FNR@FPR=0.001、AUC/EER。低 FPR 与轻量部署早已有先例；不是当前独立 calibration→锁阈值 test 协议</td>
+<td><a href="https://arxiv.org/pdf/1802.09089" rel="noopener noreferrer" target="_blank">原论文</a>、<a href="https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf" rel="noopener noreferrer" target="_blank">NDSS 官方版本</a>、<a href="https://github.com/ymirsky/Kitsune-py" rel="noopener noreferrer" target="_blank">作者完整流水线</a>、<a href="https://github.com/ymirsky/KitNET-py" rel="noopener noreferrer" target="_blank">KitNET 核心</a>。代码与样例可见；原生提取器不能接现有 CSV。可另做“KitNET 在相同 CSV 的适配对照”，须改名说明</td>
+<td><strong>A</strong>：§IV、§V；Fig.9–11、Table V</td>
+</tr>
+<tr id="ids-record-2">
+<td><strong>R02 Whisper / Realtime Robust Malicious Traffic Detection via Frequency Domain Analysis，CCS 2021 主会</strong></td>
+<td>把包级特征序列编码并分帧做 DFT，保留顺序模式，以低冗余频域特征检测；强调吞吐、规避鲁棒性</td>
+<td>42 类攻击；报告 ROC/AUC 与系统吞吐。不是当前逐行 CSV 的同输入任务；本次未核到锁定 1% 的独立校准协议</td>
+<td><a href="https://arxiv.org/pdf/2106.14707" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/fuchuanpu/Whisper" rel="noopener noreferrer" target="_blank">作者代码</a>。DPDK/10Gb NIC 原型，仓库已归档；原生需要包序列，不能用 CSV 行顺序替代</td>
+<td><strong>B</strong>：全文 §3 系统、§5 评估；README Hardware/Usage</td>
+</tr>
+<tr id="ids-record-3">
+<td><strong>R03 FSNID / Feature Selection for Network Intrusion Detection，KDD 2025 主会</strong></td>
+<td>CSV/特征向量；用神经信息估计衡量去掉某字段后的条件信息损失，顺序剔除非信息字段，另有 LSTM/TCN/GRU 版本</td>
+<td>§5.3：有官方 train/test 则沿用，否则 80:20；多类分类，5 runs、95% 区间；报保留字段、accuracy、FPR、F1。<strong>报告 FPR 不等于统一固定 1% 召回</strong></td>
+<td><a href="https://www.machineintelligencelab.ai/papers/kdd25.pdf" rel="noopener noreferrer" target="_blank">作者全文</a>、<a href="https://doi.org/10.1145/3690624.3709339" rel="noopener noreferrer" target="_blank">DOI</a>、<a href="https://github.com/c-s-westphal/FSNID" rel="noopener noreferrer" target="_blank">作者代码</a>。有数据/选择器/评估入口；现有项目仅审查，未复现；需 train-only 重构与预算核查，不能 MI 冒名</td>
+<td><strong>A</strong>：§4、§5.3–5.5；Fig.2–5；Appendix C–E、Table 1</td>
+</tr>
+<tr id="ids-record-4">
+<td><strong>R04 DistillGuard / Transformer-based knowledge distillation for explainable intrusion detection system，Computers &amp; Security 154 (2025), 104417</strong></td>
+<td>网络特征、Transformer 教师→轻学生；Selective Gradient-Based KD 选择教师隐藏表示，辅以梯度解释。该选择不是本项目 OOF 输出置信 gate</td>
+<td>出版页和方法公式已核；原始时间窗构造、split、低 FPR 阈值和 CPU 全管线证据本次未完整审计，因此不直接引用其成绩作比较</td>
+<td><a href="https://www.sciencedirect.com/science/article/pii/S0167404825001063" rel="noopener noreferrer" target="_blank">出版页/原文入口</a>、<a href="https://doi.org/10.1016/j.cose.2025.104417" rel="noopener noreferrer" target="_blank">DOI</a>。Data availability 为 on request；本次未核到作者 code/model 入口。已覆盖“选择性 KD＋轻量 IDS＋解释”的大概念</td>
+<td><strong>B</strong>：§1.1、§3.6.2–3.6.3，Eq.33–34；结论/数据声明</td>
+</tr>
+<tr id="ids-record-5">
+<td><strong>R05 Lightweight Intrusion Detection in IoT via SHAP-Guided Feature Pruning and Knowledge-Distilled Kronecker Networks，CommNet 2025，普通专业会议</strong></td>
+<td>TON-IoT CSV；SHAP 筛字段、大教师、小型 Kronecker 学生、KD，可选量化。直接覆盖“筛特征＋蒸馏＋压缩”组合</td>
+<td>本次核作者实现说明与正式引用，未精核分组隔离/阈值/量化是否真正执行；不能将 README optional quantization 当实测</td>
+<td><a href="https://github.com/mohammed-jouhari/iot-ids-lightweight" rel="noopener noreferrer" target="_blank">作者代码</a>、<a href="https://doi.org/10.1109/CommNet68224.2025.11288887" rel="noopener noreferrer" target="_blank">DOI</a>。有 notebook 和 MIT 文件；TON-IoT 指向官方来源；本次未运行。不是顶会，仍属于必须回应的直接先例</td>
+<td><strong>B</strong>：README Key Features/Dataset/Citation</td>
+</tr>
+<tr id="ids-record-6">
+<td><strong>R06 FedKD-IDS: A robust intrusion detection system using knowledge distillation-based semi-supervised federated learning and anti-poisoning attack mechanism，Information Fusion 117 (2025), 102807</strong></td>
+<td>N-BaIoT 统计特征；半监督联邦蒸馏、共享无标签 proxy、logits 投票及恶意协作者筛查，核心问题是 non-IID/投毒</td>
+<td>出版摘要核到 non-IID 和 label-flipping 情景；未精核全文 split/1% FPR/CPU。不是普通集中式小学生 KD 的直接效率基线</td>
+<td><a href="https://www.sciencedirect.com/science/article/pii/S1566253524005852" rel="noopener noreferrer" target="_blank">原出版页</a>、<a href="https://doi.org/10.1016/j.inffus.2024.102807" rel="noopener noreferrer" target="_blank">DOI</a>。正式卷期 2025，DOI 带 2024 不矛盾；本次未核到作者 code/model。没有联邦威胁模型时不为显新而迁移</td>
+<td><strong>B</strong>：Abstract/Highlights/卷期元数据</td>
+</tr>
+<tr id="ids-record-7">
+<td><strong>R07 SAFE: Self-Supervised Anomaly Detection Framework for Intrusion Detection，AAAI 2025 AICS workshop，非 AAAI 主会</strong></td>
+<td>CSV 经 PCA loading 选字段→DeepInsight/t-SNE 映射成 8×8 图→MAE→LOF；正常数据学习，异常检测</td>
+<td>全文 60/20/20；train-only 选 31 字段；主要 precision/recall/F1。未给当前会话分组与固定 1% 同协议证据</td>
+<td><a href="https://arxiv.org/html/2502.07119v1" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/ElvinLit/SAFE" rel="noopener noreferrer" target="_blank">作者代码</a>、<a href="https://aics.site/AICS2025/AICSProgram2025.pdf" rel="noopener noreferrer" target="_blank">官方 workshop 议程</a>。README “AAAI-25”应按议程纠正。可适配 CSV，但 AE/LOF 及输入转换成本要全计，尚未执行</td>
+<td><strong>A</strong>：Proposed Framework；Experimental Setup；Overhead Analysis/Table 6</td>
+</tr>
+<tr id="ids-record-8">
+<td><strong>R08 CARAVAN: Practical Online Learning of In-Network ML Models with Labeling Agents，OSDI 2024 主会</strong></td>
+<td>流特征；DNN/规则/LLM 作慢速标签源，规则缓存与 accuracy proxy 触发小模型在线更新；不是把 LLM 放实时转发路径</td>
+<td>CIC-IDS2017/UNSW-NB15 等窗口回放；主指标 F1、重训 CPU/GPU 成本；数据流/漂移构造应与真实时间分开。没有本项目固定 1% 证据</td>
+<td><a href="https://www.usenix.org/conference/osdi24/presentation/zhang-qizheng" rel="noopener noreferrer" target="_blank">官方会议页</a>、<a href="https://www.usenix.org/system/files/osdi24-zhang-qizheng.pdf" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/Per-Packet-AI/Caravan-Artifact-OSDI24" rel="noopener noreferrer" target="_blank">作者 artifact</a>。代码入口可见；GPT-4 历史 API 结果不可假定今日逐值复现；硬件端用 Taurus FPGA</td>
+<td><strong>A</strong>：§3–5，特别 §4.1、§5.1；Appendix A</td>
+</tr>
+<tr id="ids-record-9">
+<td><strong>R09 NetVigil: Robust and Low-Cost Anomaly Detection for East-West Data Center Security，NSDI 2024 主会</strong></td>
+<td>真实端点/时间 flow logs→安全图特征、GNN 对比学习和时间平滑；检测数据中心横向异常</td>
+<td>Yatesbury＋长期生产流；AUC/TPR/FPR；§6.1 阈值最大化 TPR−FPR，<strong>不是固定 1%</strong>；有同机 latency 和运维成本</td>
+<td><a href="https://www.usenix.org/system/files/nsdi24-hsieh.pdf" rel="noopener noreferrer" target="_blank">官方全文</a>、<a href="https://github.com/microsoft/Yatesbury" rel="noopener noreferrer" target="_blank">作者基准 Yatesbury</a>。本文可核公开基准入口，不推断私有生产流可下载。当前 UNSW CSV 缺建图元数据；不能合成假端点补齐</td>
+<td><strong>A</strong>：§3–4、§6.1/6.5；Table 4、Fig.5</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="ids-heading-6">3.2 包级预训练、基础模型与评估审计</h3>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID／工作与正式身份</th>
+<th>输入／任务／方法区别</th>
+<th>split 与指标证据；1% FPR 可比性</th>
+<th>作者工件及本项目适配状态</th>
+<th>阅读定位</th>
+</tr>
+</thead>
+<tbody>
+<tr id="ids-record-10">
+<td><strong>R10 nPrint / New Directions in Automated Traffic Analysis，CCS 2021 主会</strong></td>
+<td>原始包统一位表示，配 AutoML 的 nPrintML；任务包括流量识别，不仅恶意二分类</td>
+<td>多任务基准，不能跨任务 F1 与本项目排名；本次未精核每个任务的 split/1% 工作点</td>
+<td><a href="https://pschmitt.net/docs/nprint.pdf" rel="noopener noreferrer" target="_blank">作者全文</a>、<a href="https://nprint.github.io/" rel="noopener noreferrer" target="_blank">官方项目/代码与基准入口</a>。表示、AutoML、metadata-PCAP 工具均有作者入口；需要 PCAP，不是现有聚合 CSV 的 drop-in</td>
+<td><strong>B</strong>：论文摘要/方法定位；官方 nPrint/nPrintML/pcapML 说明</td>
+</tr>
+<tr id="ids-record-11">
+<td><strong>R11 ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification，WWW 2022 主会</strong></td>
+<td>PCAP datagram/burst 字节 token，BERT 上下文预训练后按任务微调；应用/VPN/Tor/TLS 等识别</td>
+<td>多个加密分类任务，主要 F1；需结合 R15 的同流泄漏审计，不能直接沿用所有原划分或把 F1 当 IDS 低误报成绩</td>
+<td><a href="https://arxiv.org/abs/2202.06335" rel="noopener noreferrer" target="_blank">原论文</a>、<a href="https://github.com/linwhitehat/ET-BERT" rel="noopener noreferrer" target="_blank">作者代码</a>。有 preprocessing/pretraining/fine-tuning/data/model 入口；本次没核全部下载链接。CSV 文本化不构成原生 ET-BERT 输入</td>
+<td><strong>B</strong>：摘要；README Method/Data/Pretraining/Fine-tuning</td>
+</tr>
+<tr id="ids-record-12">
+<td><strong>R12 YaTC / Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation，AAAI 2023 主会</strong></td>
+<td>PCAP flow→Multi-Level Flow Representation 矩阵→MAE 预训练→分类；矩阵仍源于包信息</td>
+<td>多个真实流量分类集；本次未完整核原划分/固定 1%/CPU；须回应 R15 对流隔离的实证审计</td>
+<td><a href="https://ojs.aaai.org/index.php/AAAI/article/download/25674/25446" rel="noopener noreferrer" target="_blank">AAAI 正文</a>、<a href="https://github.com/NSSL-SJTU/YaTC" rel="noopener noreferrer" target="_blank">作者代码</a>。README 有 checkpoint/data 链接及 PCAP→MFR 脚本；没下载验证。不能把普通 CSV reshape 称 YaTC</td>
+<td><strong>B</strong>：论文摘要；README data_process/pretraining/model</td>
+</tr>
+<tr id="ids-record-13">
+<td><strong>R13 TrafficFormer: An Efficient Pre-trained Model for Traffic Data，IEEE S&amp;P 2025 主会</strong></td>
+<td>PCAP→flow→burst→hex bigram/BPE；细粒度预训练与流量增强；微调涉及 datagram/length/time/direction/message_type</td>
+<td>作者发表页核到六分类集＋协议理解；本次未完整核全文 split/1%/CPU，不能以“efficient”标题推断 CPU 优势</td>
+<td><a href="https://liuzhuotao.github.io/publications/trafficformer/" rel="noopener noreferrer" target="_blank">作者发表页</a>、<a href="https://doi.org/10.1109/SP61157.2025.00102" rel="noopener noreferrer" target="_blank">正式 DOI</a>、<a href="https://github.com/IDP-code/TrafficFormer" rel="noopener noreferrer" target="_blank">作者代码</a>。有预处理/预训练/微调与模型外链；原始包输入已由 README 核实，未跑通</td>
+<td><strong>B</strong>：作者发表页；README Pretrain Corpus/Finetuning Data Generation</td>
+</tr>
+<tr id="ids-record-14">
+<td><strong>R14 tFusion / Training with Only 1.0 ‰ Samples: Malicious Traffic Detection via Cross-Modality Feature Fusion，CCS 2025 主会</strong></td>
+<td>包长/时间序列＋flow/host 统计；跨模态 attention，拓扑对比预训练，再少样本训练轻量下游</td>
+<td>11 既有数据集回放＋5 天机构部署；§5/Appendix 用 accuracy/AUC/F1 等，不等于统一 1% 预算；attention <strong>训练和执行均在 V100</strong>，不能只数下游轻模型</td>
+<td><a href="https://github.com/fuchuanpu/TFusion/blob/main/tFusion_LongVersion.pdf" rel="noopener noreferrer" target="_blank">作者全文</a>、<a href="https://doi.org/10.1145/3719027.3765143" rel="noopener noreferrer" target="_blank">正式 DOI</a>、<a href="https://github.com/fuchuanpu/TFusion" rel="noopener noreferrer" target="_blank">作者代码</a>。README 仍有匿名/HotCRP 数据指引；代码有公开入口，完整数据可达性未确认。UNSW CSV 缺所需 packet/time/host 信息</td>
+<td><strong>A</strong>：§3–4、§5.1/5.5、Fig.2/14/15；原文 pp.4–8/11</td>
+</tr>
+<tr id="ids-record-15">
+<td><strong>R15 Pcap-Encoder / The Sweet Danger of Sugar: Debunking Representation Learning for Encrypted Traffic Classification，SIGCOMM 2025 主会</strong></td>
+<td>T5 原始包 header/hex 编码，先自编码再协议字段问答；同时审计多个 NFM 和浅层基线</td>
+<td>原 per-packet vs 正确 per-flow 划分、冻结/解冻 encoder、字段移除；应用/网站识别，非同协议 IDS。论文显示某些高分来自捷径，不证明所有预训练模型普遍无用</td>
+<td><a href="https://iris.polito.it/retrieve/handle/11583/3003539/21f8a7c5-c796-4cc1-ab4d-3c6cea41412e/3718958.3750498.pdf" rel="noopener noreferrer" target="_blank">作者机构全文</a>、<a href="https://doi.org/10.1145/3718958.3750498" rel="noopener noreferrer" target="_blank">DOI</a>、<a href="https://github.com/SmartData-Polito/Debunk_Traffic_Representation" rel="noopener noreferrer" target="_blank">作者代码</a>。预训练含 <strong>UNSW-NB15 原始包</strong>，现成权重在 UNSW 上不能未经重叠审计称独立教师</td>
+<td><strong>A</strong>：§3.4、评估设计/结果与字段消融；Fig.1、Table 9</td>
+</tr>
+<tr id="ids-record-16">
+<td><strong>R16 Demystifying Network Foundation Models，NeurIPS 2025 主会</strong></td>
+<td>对冻结 packet/flow encoder 做 embedding geometry、领域特征 alignment、受控协议/环境 perturbation；不是另一个 detector</td>
+<td>4 NFM、5 数据环境；重点在表示诊断，不能把改善的下游 F1 直接换算为本项目 1% 召回。受控扰动不等于任意 CSV 加噪就有网络因果解释</td>
+<td><a href="https://openreview.net/pdf/45fe7201d088e047e18f6fe698679d2f2fece0ad.pdf" rel="noopener noreferrer" target="_blank">官方论文</a>、<a href="https://github.com/maybe-hello-world/demystifying-networks" rel="noopener noreferrer" target="_blank">作者代码</a>。有评估实现/数据管线入口；本次未下载/执行，不是当前模型已完成机制解释</td>
+<td><strong>A</strong>：§3.1–3.3、§4、Appendix A；Fig.1</td>
+</tr>
+<tr id="ids-record-17">
+<td><strong>R17 Lens: A Knowledge-Guided Foundation Model for Network Traffic，TMLR 2026 期刊，非 ICLR 主会</strong></td>
+<td>最新 v5：Tshark 包 metadata/header/payload 文本＋网络 BBPE；整语义单位遮盖及知识模板；约 0.25B T5，分类变约束生成；每流前 <strong>34 包</strong></td>
+<td>6 来源、12 分类与 5 生成任务；全文/附录规定预训练和下游划分。没有当前 1%/CPU 同协议证据；“新类”仍有适配训练，不是零样本攻击检测保证</td>
+<td><a href="https://arxiv.org/html/2402.03646v5" rel="noopener noreferrer" target="_blank">最新全文 v5</a>、<a href="https://openreview.net/forum?id=cGDwTgnJIR" rel="noopener noreferrer" target="_blank">TMLR 入口</a>、<a href="https://github.com/V-Enzo/Lens-foundation-model-for-network-traffic" rel="noopener noreferrer" target="_blank">作者代码</a>、<a href="https://huggingface.co/Charles59/lens-pretrained" rel="noopener noreferrer" target="_blank">模型卡</a>。code、weights、processed downstream data 有入口；模型卡说<strong>预训练 corpus 本身未发布</strong>；code Apache2/model-data CC-BY-NC4</td>
+<td><strong>A</strong>：§3–4，Appendix A/B/D/E；不是旧 v4 的 3 包版本</td>
+</tr>
+<tr id="ids-record-18">
+<td><strong>R18 netFound: Principled Design for Network Foundation Models，2026-05-12 arXiv v5／netFound-v2 项目；正式会议身份未核到</strong></td>
+<td>这是 2023 起源工作的实质更新：协议字段 token、操作 metadata、burst-flow 层级注意力，去 payload/IP；从原始 PCAP 或同 tokenizer Arrow 输入。53M–663M 家族</td>
+<td>§5 表示诊断＋5 下游任务；未核到本项目固定 1% 协议。Appendix A 主要 GPU latency/throughput，不能称已证 CPU 优势</td>
+<td><a href="https://arxiv.org/html/2310.17025v5" rel="noopener noreferrer" target="_blank">最新全文</a>、<a href="https://github.com/SNL-UCSB/netFound" rel="noopener noreferrer" target="_blank">当前作者代码</a>、<a href="https://huggingface.co/snlucsb/netFound-small" rel="noopener noreferrer" target="_blank">small 模型卡</a>、<a href="https://zenodo.org/records/19863446" rel="noopener noreferrer" target="_blank">作者数据 sampler</a>。实际核到 2026-04-28、15.8GB、60,199,405 flows 的公开索引；全量 4.2B/约1.2TB 是作者发布声明，未下载验证。旧 <a href="https://huggingface.co/snlucsb/netFound-640M-base" rel="noopener noreferrer" target="_blank">640M v1 卡</a>明确 legacy，不能混用旧 private-450M 与新数据状态</td>
+<td><strong>A</strong>：v5 §3–6、Appendix A；当前 README、small model card、Zenodo record</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ids-heading-7">4. 全文精读得到的关键区别</h2>
+<p>以下分析优先解释与项目的关系；不以论文内部的某个高分构造跨论文排名。</p>
+<h3 id="ids-heading-8">4.1 FSNID：不是另一种单变量 MI 排名，成本也不只是最终字段数</h3>
+<p>其核心比较去掉 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>X</mi><mi>i</mi></msub></mrow></math> 前后的标签条件熵差，能够考虑其他字段已提供的信息，动机是冗余与协同；不能把普通 MI 或“多 seeds 取交集”称为等价方法。§5.3 的既有 split/80:20 和多类目标，与当前组隔离二分类的固定误报评价不同。Appendix C–E 给选择耗时及硬件：Table 1 的 UNSW vanilla/LSTM 为 748/71,501 秒，CIC-IDS17 为 13,565/508,093 秒；这是<strong>选择器开销</strong>，不是学生 CPU 延迟。近期对照准入时应先做 train-only 适配和选择预算核算，再保存选集及下游同协议分数。<a href="https://www.machineintelligencelab.ai/papers/kdd25.pdf" rel="noopener noreferrer" target="_blank">全文 §4/§5 与附录</a></p>
+<h3 id="ids-heading-9">4.2 Kitsune：低误报和廉价硬件本身早已是研究问题</h3>
+<p>Fig.9 已报告 TPR@FPR=0.001。§V/Table V/Fig.10 研究 Pi3B 与 i7-4790 单逻辑核的处理率；但该图用的是 KitNET 的基准输入，不可直接当原始抓包到告警的全链路性能。作者 Python README 也明确：要达到论文速度需 Cython/C++，普通 Python 版并非速度等价实现。对本项目的启示是，既要测小 MLP，也要测编码/转换/模型调用；仅参数减少、CSV 预测加速，不能宣称在线网络全链路加速。<a href="https://arxiv.org/pdf/1802.09089" rel="noopener noreferrer" target="_blank">全文 §V</a>、<a href="https://github.com/ymirsky/Kitsune-py" rel="noopener noreferrer" target="_blank">作者 Implementation Notes</a></p>
+<h3 id="ids-heading-10">4.3 CARAVAN：LLM 离线辅助有强先例，但不是无条件可信教师</h3>
+<p>§4.1 和 Appendix A 真正使用 GPT-4 对 UNSW 特征行标注，并生成可缓存规则；采用 few-shot 示例及字段解释。因此“LLM 不能读任何 CSV”不成立，“LLM 标注小模型”也非新概念。其作者同时承认公开数据可能进入 LLM 预训练；示例教师质量是先决条件。实验含人为窗口/新攻击到达的漂移设定、Taurus 硬件与 GPU 重训；不能转写为当前 UNSW 有真实时间流或冻结 1% 召回结论。本项目若用 LLM，应冻结版本、提示、示例来源、成本和标签错误审计，先比较规则/普通教师的增量价值。<a href="https://www.usenix.org/system/files/osdi24-zhang-qizheng.pdf" rel="noopener noreferrer" target="_blank">全文 §4.1/§5/Appendix A</a></p>
+<h3 id="ids-heading-11">4.4 Pcap-Encoder：最该借鉴的是比较设计和预训练来源审计</h3>
+<p>§3.4 的协议问答和原始 header 输入，与当前统计字段差异根本；预训练含 UNSW 也是本项目不能忽略的重叠来源。论文通过按流划分及移除 IP/TCP 等字段揭示捷径，提示我们将同组重复、端点/时间代理、家族缺席作为检测对象，而不只换分类器。它的应用/网站识别、冻结/解冻 encoder 实验和浅层基线结果，不支持“某预训练模型在本项目不如 RF”的现成结论。<a href="https://iris.polito.it/retrieve/handle/11583/3003539/21f8a7c5-c796-4cc1-ab4d-3c6cea41412e/3718958.3750498.pdf" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/SmartData-Polito/Debunk_Traffic_Representation" rel="noopener noreferrer" target="_blank">作者实现</a></p>
+<h3 id="ids-heading-12">4.5 SAFE、Lens 与 netFound-v2：语义表示值得借鉴，不能先占新颖性</h3>
+<p>SAFE 已经在 CSV 上做特征选择、遮盖预训练及紧凑表示；Lens 最新版专门避免切碎端口等语义单位；netFound-v2 更进一步强调 protocol-field token 与去身份输入。因此“CSV 自监督”“整字段遮盖”“融合领域知识”均不是足够具体的新贡献。可以研究<strong>冗余派生字段导致的重建捷径、低 FPR 尾部损失、可测采集成本与可靠蒸馏的结合</strong>，但须补针对这些精确机制的查重和控制。SAFE Table6 的平均 per-sample time 没有建立本项目同 CPU/p95 协议；Lens 的 4×A6000、netFound 的 GPU 成本也不能替代 CPU 测量。<a href="https://arxiv.org/html/2502.07119v1" rel="noopener noreferrer" target="_blank">SAFE</a>、<a href="https://arxiv.org/html/2402.03646v5" rel="noopener noreferrer" target="_blank">Lens v5</a>、<a href="https://arxiv.org/html/2310.17025v5" rel="noopener noreferrer" target="_blank">netFound v5</a></p>
+<h3 id="ids-heading-13">4.6 tFusion 与 NetVigil：真正问题来自缺失信息和环境变化</h3>
+<p>tFusion §4.1 明确需要每个包的到达时间/长度和五元组聚流，其跨模态优势不能由现有 CSV 反向获得；§5.1/5.5 的 V100 特征模型也说明“轻量下游”不等于轻量全系统。NetVigil 通过 flow-log 图与时间平滑应对正常流量变化，但 §6.1 的阈值目标是最大化 TPR−FPR。可参考其问题意识及成本边界；不能把两者当现有 CSV 同输入、1% FPR、CPU-only 的直接成绩基线。<a href="https://github.com/fuchuanpu/TFusion/blob/main/tFusion_LongVersion.pdf" rel="noopener noreferrer" target="_blank">tFusion 原文 pp.4/7/11</a>、<a href="https://www.usenix.org/system/files/nsdi24-hsieh.pdf" rel="noopener noreferrer" target="_blank">NetVigil §6</a></p>
+<h2 id="ids-heading-14">5. 当前方案已经被覆盖的部分与仍需证明的部分</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目表述</th>
+<th>已有覆盖</th>
+<th>可以继续研究的准确问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“特征选择让 IDS 更轻”</td>
+<td>FSNID、SHAP-Kronecker 等直接先例</td>
+<td>字段成本/冗余机制如何影响低 FPR 与家族；字段数减少是否真的减少采集、编码、CPU 成本</td>
+</tr>
+<tr>
+<td>“大教师蒸馏小模型”</td>
+<td>DistillGuard、SHAP-Kronecker、联邦 KD 文献</td>
+<td>树教师受类平衡权重影响的 soft score，与部署误报预算是否失配；同学生下 soft 信息是否超过权重匹配 hard 控制</td>
+</tr>
+<tr>
+<td>“只向可靠教师学习”</td>
+<td>选择性 KD 大概念已有，输出/隐藏表示选择各有不同机制</td>
+<td>本项目 gate 在 binary/OOF/类重加权条件下究竟选择了什么，低分正常组是否受保护；需直接机制对照及更细近期 KD 查重</td>
+</tr>
+<tr>
+<td>“加入低 FPR 与难样本损失”</td>
+<td>Kitsune 的低 FPR 报告、已有 ranking/pAUC 研究；不由本表宣称首创</td>
+<td>可微训练代理与最终离散 1% 阈值的关系；困难正常样本是否由少数大组支配；相同 pair/更新预算下是否有增益</td>
+</tr>
+<tr>
+<td>“用自监督/基础模型提高泛化”</td>
+<td>SAFE、ET-BERT、YaTC、TrafficFormer、Lens、netFound 等</td>
+<td>数据输入允许什么预训练；收益来自额外未标注数据、架构还是计算；去捷径与新环境检验之后还能保留多少</td>
+</tr>
+<tr>
+<td>“用 LLM 辅助 IDS”</td>
+<td>CARAVAN 明确先例</td>
+<td>LLM 字段知识是否超过简单规则/词典；标签误差、成本与复现；不能把自然语言解释直接当攻击因果</td>
+</tr>
+<tr>
+<td>“加入图/时序信息”</td>
+<td>NetVigil、tFusion 等</td>
+<td>先有真实端点/时间/包序列；缺元数据时不能编造图或从 CSV 行序获得时序创新</td>
+</tr>
+<tr>
+<td>“完整可复现与交互系统”</td>
+<td>多个作者 artifact 已有成熟工程</td>
+<td>工件审计/部署是贡献支撑，不能单独充当新学习算法；界面应显示真实分歧、误报组与成本</td>
+</tr>
+</tbody>
+</table></div>
+<p>“本表未发现完全相同公式”不等于新颖性成立。当前 gate、batch ranking 和组合仍是候选设计，需将数学差异、最近相关方法及反例查全；若收益消失，也可将可靠的失效条件作为研究结论，而不是给组合重新命名。</p>
+<h2 id="ids-heading-15">6. 真正值得推进的研究问题与可执行边界</h2>
+<h3 id="ids-heading-16">P1：二元蒸馏的低误报目标失配与可控纠正</h3>
+<p><strong>问题：</strong>普通 KD 变化来自教师软信息，还是来自有效类别/样本权重变化？类平衡树教师的分数置信是否代表部署尾部的可靠性？哪些正常关联组贡献了误报？</p>
+<p><strong>可执行：</strong>保留现有同初始化/同 batch/同学生控制；普通 hard、精确 matched-hard、KD、gated-matched-hard、不同 gate 机制，逐损失记录。再按训练组检查 gate 错误 mass、teacher score 分布和 top-normal 集中度；已有 validation 只用于开发。若要改教师校准，应在训练组内部留出/交叉拟合，不能利用旧 test 反调。研究不要求新采集；确认性结论仍需未使用来源。不要把“score 离 0.5 很远”未经核验叫高置信概率。</p>
+<p><strong>贡献门槛：</strong>明确预测并检验一个失败机制；改善超过相同逐行权重控制，且低 FPR/家族/CPU 取舍有实际意义。若只有一组均值更高，没有机制和新确认，仍属于开发结果。</p>
+<h3 id="ids-heading-17">P2：按实际成本压缩字段，同时保护尾部和独立组</h3>
+<p><strong>问题：</strong>最少字段与最少成本并不相同；某些便宜代理可能只记住采集环境，某些昂贵字段才保护稀有攻击。普通 MI/稳定性不能保证实用工作点。</p>
+<p><strong>可执行：</strong>先以字段字典区分直接字段、比率、时间/会话统计与派生字段族，明确当前只能测 CSV 预处理/推理成本，不能声称测到真实网络采集成本。在相同可见训练/选择分区，比较 MI、冗余控制和经审计可行的 FSNID；报告检测—编码维度—CPU p95—包大小的 Pareto。只有保留真实提取器并测量后，才能将目标升级为采集预算。若时序元数据不存在，先只评估 FSNID 非时序版本。</p>
+<p><strong>贡献门槛：</strong>证明哪种冗余/代理失效使简单策略不足，以固定其余因素的移除/恢复对照验证；不以“选到更稳定字段”单独作为检测收益。</p>
+<h3 id="ids-heading-18">P3：语义组自监督与蒸馏，先排除重建捷径</h3>
+<p><strong>问题：</strong>字段间确定性派生关系可能使 MAE 只完成算术重建；随机遮盖学到的表示是否保护低 FPR 边界，而不只是重建误差更低？</p>
+<p><strong>可执行：</strong>现有 CSV 上 train-only 正常数据或明确定义的无标签 train；从头训练、相同预算随机遮盖、语义整组遮盖、去掉可直接回算的派生量，比较表示/下游/少标签效率。SAFE 是必须回应的直接先例，Lens/netFound 只提供语义设计动机，不能声称其复现。输入图化、预训练 epochs、额外数据、学生训练总成本均纳入控制。</p>
+<p><strong>贡献门槛：</strong>某个领域约束解决具体可复现问题，并在比简单 MLP/原始特征 novelty detector 更强的控制后仍有用；“把 CSV 变图片”本身不成立。</p>
+<h3 id="ids-heading-19">P4：包级富信息教师→仅 CSV 学生，条件具备后再做</h3>
+<p><strong>问题：</strong>学生压缩能否利用额外包语义，而不把大模型带到部署？</p>
+<p><strong>可执行条件：</strong>有公共原始 PCAP、可靠标签及 packet/flow→CSV 一一映射；固定统一提取器和真实分组；只在 train 生成 OOF 富输入教师，比较相同学生下“CSV 教师 KD”与“包级教师 KD”。可以使用公开 PCAP，<strong>无需自行新抓包</strong>；但需要新数据处理、来源/预训练重叠审计，且当前 42/82 CSV 单独不能完成。netFound-small/v2 相比旧640M更值得先审小规模适配，但预训练 Arrow sampler 本身不提供本项目攻击 ground truth。</p>
+<p><strong>贡献门槛：</strong>增益来自额外信息而非更大的搜索/教师开销；部署学生 CPU 成本确实低；旧 final test 不再包装为未见确认集。这是投入较高、目前条件性路线，不应因为近期模型大而直接替换主线。</p>
+<h2 id="ids-heading-20">7. 同协议比较应如何建立</h2>
+<ol>
+<li><strong>不汇总跨数据集 accuracy 排名。</strong> 每个候选在同一版本/组分区、输入字段、标签定义、训练/选择预算下比较；原论文成绩只用于说明其研究任务。</li>
+<li><strong>统一工作点而非仅列 FPR。</strong> 保存连续分数；开发阶段统一 validation 经验规则；确认阶段用独立 calibration 锁阈值再测未开封 test。报告正常数量、有效独立组、TP/FP、召回、每家族支持和区间。1% 是经验预算，不是分布漂移下保证。</li>
+<li><strong>同输入基线和富输入方法分表。</strong> 只看 CSV 的学生不能与看 PCAP/真实 host 图的模型直接解释为架构优劣；可另做信息增量研究。</li>
+<li><strong>成本至少分四项。</strong> 数据采集/流完结等待、提取/编码、模型 CPU 推理、训练/调参/教师辅助成本。GPU 特征提取＋小 RF 不能叫 CPU 全链路轻量；选择器 runtime 不能冒充推理 runtime。</li>
+<li><strong>复现身份逐级升级。</strong> 官方入口已核→锁 commit/checkpoint/许可证→schema 工程试验→不泄漏的训练适配→同协议原始分数/成本→独立复算→新来源确认。任一步没做就保留“未执行/未验证”。</li>
+</ol>
+<h2 id="ids-heading-21">8. 优先对照与暂缓项</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>选择</th>
+<th>理由与下一闸门</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>必须</td>
+<td>简单 hard MLP、树强基线、原始 CSV novelty baseline、数学精确匹配控制</td>
+<td>先确定复杂目标是否提供独立信息；不应只与弱学生比较</td>
+</tr>
+<tr>
+<td>近期直接对照</td>
+<td>FSNID 非时序版本、SAFE 适配；DistillGuard 先补作者工件/完整实现审计</td>
+<td>与现有输入最接近；前两者也需 split/预算适配；DistillGuard 尚不足以承诺复现</td>
+</tr>
+<tr>
+<td>机制参考</td>
+<td>Kitsune、CARAVAN、Pcap-Encoder/NeurIPS 表示审计</td>
+<td>低 FPR、慢教师、数据捷径和全链路成本；有助于把问题定义准确</td>
+</tr>
+<tr>
+<td>条件性额外研究</td>
+<td>netFound-v2 small、Lens、tFusion、TrafficFormer</td>
+<td>需要 PCAP/真实元数据、不同输入管线；先做来源与映射可行性，不进入当前 CSV 统一主表</td>
+</tr>
+<tr>
+<td>暂缓</td>
+<td>为“前沿”而加联邦、伪时间序列、泛 LLM/VLM 数值行分类</td>
+<td>无对应威胁模型/真实时间/新增信息时不能解决当前问题；CARAVAN 是先例而非自动成功证据</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ids-heading-22">9. 核查限制及后续补证</h2>
+<ul>
+<li>正式身份分别核到主会、期刊、普通会议、workshop/预印本，未将作者仓库标题视为充分 venue 证明。SAFE 特别按官方 AICS workshop 议程处理；netFound-v5 仍按预印本处理。</li>
+<li><strong>版本会改变结论。</strong> Lens v5 使用 34 packets；netFound v5 已转 v2 家族并公开 sampler，不能沿用旧稿的模型名、3 packets 或 private-only 概述。反过来，2025 审计的结论也不能不加版本地套到 2026 更新模型。netFound-v5 对其他模型的对比表不代替逐篇最新模型卡。</li>
+<li>TrafficFormer、DistillGuard、SHAP-Kronecker、FedKD-IDS 等 B 项的完整 split/阈值/成本仍需精核，未用搜索片段补写缺失事实。某些原文/下载地址访问不稳定；源链接保留给后续核验，不声称已保存全部论文或工件。</li>
+<li>当前代码/论文入口不是锁版本清单。真正选入实验时须单独记录 commit、checkpoint revision、数据 SHA、依赖版本和具体修改；本文没有自动安装、批量下载、训练或消费保留分区。</li>
+<li>本文没有证明任何新方法优于现有系统，也没有完成对所有 gate、pAUC、代价敏感选择方法的查重。它给出已被覆盖的概念、能落地的问题和准入边界，供统一研究设计取舍。</li>
+</ul></article></section><section id="doc-nearest" class="document" hidden><details class="toc"><summary>本篇目录</summary><a href="#nearest-heading-2" class="h2">1. 16 项代表工作及其覆盖范围</a><a href="#nearest-record-1" class="h3">R01. When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee</a><a href="#nearest-record-2" class="h3">R02. Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm</a><a href="#nearest-record-3" class="h3">R03. Closing the Approximation Gap of Partial AUC Optimization: A Tale of Two Formulations</a><a href="#nearest-record-4" class="h3">R04. Neyman-Pearson classification: parametrics and sample size requirement</a><a href="#nearest-record-5" class="h3">R05. Evaluation-Oriented Knowledge Distillation for Deep Face Recognition（EKD）</a><a href="#nearest-record-6" class="h3">R06. Trust the Right Teacher: Quality-Aware Self-Distillation for GUI Grounding</a><a href="#nearest-record-7" class="h3">R07. Adaptive Conformal Guidance for Learning under Uncertainty（AdaConG）</a><a href="#nearest-record-8" class="h3">R08. Distillation of Tabular Foundation Models into Efficient Predictors</a><a href="#nearest-record-9" class="h3">R09. Distilling Tabular Foundation Models for Structured Health Data</a><a href="#nearest-record-10" class="h3">R10. GEAR: Generative Expansion and Real Anchoring for Two-Stage Distillation of Tabular Foundation Models</a><a href="#nearest-record-11" class="h3">R11. Neyman-Pearson Classification under Both Null and Alternative Distributions Shift</a><a href="#nearest-record-12" class="h3">R12. A Unified Approach to Routing and Cascading for LLMs</a><a href="#nearest-record-13" class="h3">R13. Active feature acquisition via explainability-driven ranking</a><a href="#nearest-record-14" class="h3">R14. Wasserstein-Regularized Conformal Prediction under General Distribution Shift（WR-CP）</a><a href="#nearest-record-15" class="h3">R15. SAFE-KD: Risk-Controlled Early-Exit Distillation for Vision Backbones</a><a href="#nearest-record-16" class="h3">R16. C-GUARD: Context-Adaptive Conformal Gating for Improving Robustness Against Evasive Windows PE Malware</a><a href="#nearest-heading-19" class="h2">2. 哪些候选主张已被覆盖</a><a href="#nearest-heading-20" class="h2">3. 关键全文与代码精读</a><a href="#nearest-heading-21" class="h3">3.1 EKD 已有“工作点感知迁移”的核心结构</a><a href="#nearest-heading-22" class="h3">3.2 CVaR／PAUCI 的“精确”究竟指什么</a><a href="#nearest-heading-23" class="h3">3.3 NP 迁移不等于“阈值迁移＋蒸馏”</a><a href="#nearest-heading-24" class="h3">3.4 AdaConG 的不确定度与我们所需风险不是一个量</a><a href="#nearest-heading-25" class="h3">3.5 SAFE-KD 是需要红队检查的近邻，不能当保证背书</a><a href="#nearest-heading-26" class="h3">3.6 TFM 蒸馏文献存在实际协议分歧</a><a href="#nearest-heading-27" class="h2">4. 对当前实现的数学定位</a><a href="#nearest-heading-28" class="h3">4.1 风险迁移缺少的连接</a><a href="#nearest-heading-29" class="h3">4.2 correlated flow、group 和 mixture shift</a><a href="#nearest-heading-30" class="h3">4.3 cascade／feature acquisition 还缺什么</a><a href="#nearest-heading-31" class="h2">5. 最少关键对照与资源边界</a><a href="#nearest-heading-32" class="h3">5.1 先做诊断，不立即扩展真实训练矩阵</a><a href="#nearest-heading-33" class="h3">5.2 数据要求</a><a href="#nearest-heading-34" class="h3">5.3 运算和复现要求</a><a href="#nearest-heading-35" class="h2">6. 仍值得验证的三个窄问题</a><a href="#nearest-heading-36" class="h3">Q1（优先主线）：小容量学生在正常 mixture 改变时，能否保留教师可量化的一侧风险预算？</a><a href="#nearest-heading-37" class="h3">Q2（资源受限时的窄备选问题）：固定教师查询额度下，尾部目标能否指导“问哪些样本”？</a><a href="#nearest-heading-38" class="h3">Q3（部署备线）：只用便宜信息作升级决策，能否在整体正常风险约束下获得真实成本收益？</a></details><article><h1 id="nearest-heading-1">近邻工作与创新性红队审查</h1>
+<p>核查日期：2026-11-03。范围：低 FPR、Neyman-Pearson（NP）、pAUC、工作点与置信蒸馏、表格基础模型蒸馏、预算路由与特征获取、分布迁移及校准。仅使用论文原文、正式会议／期刊页面、作者页面与作者代码。本文件不记录新实验结果；未训练模型、未运行真实数据、未修改源代码或配置。</p>
+<p><strong>审查结论：目前不能把“风险尾部迁移／工作点感知 KD”作为已成立的新方法贡献。</strong> CVPR 2022 EKD 已将目标 FPR、负类分位数、关键关系选择与容量友好的排序蒸馏结合；ICLR 2026 AdaConG 已用校准不确定度加权 KD；2026 年 TFM 蒸馏工作已覆盖 OOF、置信权重、合成查询及二阶段锚定。低 FPR 迁移、预算级联也分别存在直接理论和安全应用近邻。仅更换教师、叠加损失、加上 group 权重或新缩写，都不足以解决创新性问题。</p>
+<p>本文标签含义：</p>
+<ul>
+<li><strong>事实</strong>：能定位到一手原文或代码；论文报告的结果仍属于作者报告，不等于本项目已复现。</li>
+<li><strong>推断</strong>：本次审查对这些事实及当前实现的数学分析。</li>
+<li><strong>待验证</strong>：建议后续明确证伪的研究假设，不能写进摘要作为已完成贡献。</li>
+<li><strong>精读</strong>：已读问题定义、方法公式、算法／假设、主要实验与局限；不表示逐行复核了全部附录证明。</li>
+</ul>
+<h2 id="nearest-heading-2">1. 16 项代表工作及其覆盖范围</h2>
+<h3 id="nearest-record-1">R01. When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee</h3>
+<p>Dixian Zhu、Gang Li、Bokun Wang、Xiaodong Wu、Tianbao Yang；<strong>ICML 2022 主会，旧基础工作，精读</strong>。<a href="https://proceedings.mlr.press/v162/zhu22g.html" rel="noopener noreferrer" target="_blank">正式页面</a>，<a href="https://proceedings.mlr.press/v162/zhu22g/zhu22g.pdf" rel="noopener noreferrer" target="_blank">全文</a>，<a href="https://github.com/Optimization-AI/LibAUC/blob/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/losses/auc.py" rel="noopener noreferrer" target="_blank">作者团队 LibAUC 实现</a>。</p>
+<p>事实：通过 CVaR-DRO 或 KL-DRO 构造 OPAUC／TPAUC 目标及随机优化算法。前者对应文中 pAUC surrogate 的精确选择结构，后者平滑但有近似。推断：本项目若只是把普通 pairwise loss 改成 CVaR-pAUC，应表述为采用成熟目标；它是必要强对照，不是新增算法。代码入口已核到 <code>pAUC_CVaR_Loss</code>，本轮未运行。</p>
+<h3 id="nearest-record-2">R02. Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm</h3>
+<p>HuiYang Shao、Qianqian Xu、Zhiyong Yang、Shilong Bao、Qingming Huang；<strong>NeurIPS 2022 主会，旧基础工作，精读</strong>。<a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/fc9f83d9925e6885e8f1ae1e17b3c44b-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式页面及全文入口</a>，<a href="https://github.com/Shaocr/PAUCI/tree/c08d633d195a9ab1799b283696b02d215b7d29b9" rel="noopener noreferrer" target="_blank">作者 PAUCI 代码</a>。</p>
+<p>事实：将 pAUC 转为 instance-wise 正则化 min-max 优化，使用可控渐近近似。推断：其价值是避免显式全配对及分析近似误差；不能把一个 minibatch hard-pair loss 改名为 PAUCI。官方代码存在，未复现。</p>
+<h3 id="nearest-record-3">R03. Closing the Approximation Gap of Partial AUC Optimization: A Tale of Two Formulations</h3>
+<p>Yangbangyan Jiang、Qianqian Xu、Huiyang Shao、Zhiyong Yang、Shilong Bao、Xiaochun Cao、Qingming Huang；<strong>TPAMI 48(3):3482–3498，2026，期刊，精读</strong>；DOI <code>10.1109/TPAMI.2025.3637063</code>。<a href="https://arxiv.org/html/2512.01213v1" rel="noopener noreferrer" target="_blank">作者全文</a>，<a href="https://doi.org/10.1109/TPAMI.2025.3637063" rel="noopener noreferrer" target="_blank">DOI</a>。</p>
+<p>事实：§I 与参考文献 [22] 明确前身为 R02；§VII-C 将 PAUCI 标为 NeurIPS 版本、UPAUCI 标为期刊版本。新形式以更多优化变量处理非光滑选择，区分选择近似与正则化。推断：不能把 2022 PAUCI 仓库当作 2026 UPAUCI 已复现代码；本轮未核得独立新版实现。</p>
+<p>这里不能混入另一篇 <strong>Large-scale Optimization of Partial AUC in a Range of False Positive Rates</strong>（Yao Yao、Qihang Lin、Tianbao Yang，NeurIPS 2022，DC／Moreau 路线）；它不是 R03 的前身。<a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/ca7998666c2e53cc1e882b7268414d8a-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">另一篇的正式页面</a></p>
+<h3 id="nearest-record-4">R04. Neyman-Pearson classification: parametrics and sample size requirement</h3>
+<p>Xin Tong、Lucy Xia、Jiacheng Wang、Yang Feng；<strong>JMLR 21(12):1–48，2020，旧统计基础，精读阈值与样本量部分</strong>。<a href="https://jmlr.org/papers/v21/18-577.html" rel="noopener noreferrer" target="_blank">正式论文及 R 包入口</a>，<a href="https://jmlr.org/papers/volume21/18-577/18-577.pdf" rel="noopener noreferrer" target="_blank">全文</a>。</p>
+<p>事实：区分 NP 高概率 Type-I 控制、非参数 umbrella 阈值和带模型假设的参数方法。推断：校准集上恰好 1% 误报不等于总体 FPR≤1% 的高概率保证；更不能把相关 flow 数直接当成独立校准样本数。</p>
+<h3 id="nearest-record-5">R05. Evaluation-Oriented Knowledge Distillation for Deep Face Recognition（EKD）</h3>
+<p>Yuge Huang、Jiaxiang Wu、Xingkun Xu、Shouhong Ding；<strong>CVPR 2022 主会，旧但最直接的创新性近邻，精读＋代码核查</strong>。<a href="https://openaccess.thecvf.com/content/CVPR2022/html/Huang_Evaluation-Oriented_Knowledge_Distillation_for_Deep_Face_Recognition_CVPR_2022_paper.html" rel="noopener noreferrer" target="_blank">正式身份</a>，<a href="https://arxiv.org/html/2206.02325" rel="noopener noreferrer" target="_blank">作者全文</a>，<a href="https://github.com/Tencent/TFace/tree/master/recognition/tasks/ekd" rel="noopener noreferrer" target="_blank">作者代码</a>。</p>
+<p>事实：§3 在指定 FPR 下分别估计师生负关系分位数阈值，选择造成 TPR／FPR 分歧的关系；用相对阈值的平滑排序约束替代绝对特征／相似度匹配，以适应容量较小的学生。已有 hard-negative 与 random-negative 对照。推断：本项目“工作点＋关键尾部样本＋容量友好 KD”概念已被覆盖，必须加入适配版 EKD 对照。人脸关系与 IDS 单行分数不同，是适配工作，不自动构成算法创新。</p>
+<h3 id="nearest-record-6">R06. Trust the Right Teacher: Quality-Aware Self-Distillation for GUI Grounding</h3>
+<p>Jingyuan Huang、Zuming Huang、Yucheng Shi、Tianze Yang、Xiaoming Zhai、Wei Chu、Ninghao Liu；<strong>2026-06-16，arXiv:2606.18101v1，预印本，精读方法与消融</strong>。<a href="https://arxiv.org/html/2606.18101v1" rel="noopener noreferrer" target="_blank">作者全文</a>。</p>
+<p>事实：将 soft correctness-aware gate 与 teacher-probability scaling 结合，分别抑制错误监督、调节剩余监督强度，并比较单项与组合。推断：correctness×confidence 的一般组合不能声称首创。其 GUI 坐标 token、privileged context 和 reverse-KL 与本项目不同，不能冒称同一实现或已复现。未核得可运行作者代码。</p>
+<h3 id="nearest-record-7">R07. Adaptive Conformal Guidance for Learning under Uncertainty（AdaConG）</h3>
+<p>Rui Liu、Peng Gao、Yu Shen、Ming Lin、Pratap Tokekar；<strong>ICLR 2026 主会，精读</strong>。<a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/0b08d733a5d45a547344c4e9d88bb8bc-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式身份</a>，<a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/0b08d733a5d45a547344c4e9d88bb8bc-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">正式全文</a>。</p>
+<p>事实：§3 使用 split CP 预测集合大小构造不确定度，再加权 guidance loss；§4 含噪声／迁移下的 KD 实验。推断：“用校准不确定度决定是否相信教师”已有近期主会近邻。CP 标签覆盖并不等于加权 KD 无负迁移，更不等于学生 class-conditional FPR 控制。本次未核得作者实现入口，不能称已复现。</p>
+<h3 id="nearest-record-8">R08. Distillation of Tabular Foundation Models into Efficient Predictors</h3>
+<p>Minho Jeong、Dooho Lee、Jinmo Lee、Jaemin Yoo；<strong>2026-10-01，arXiv:2610.01435v1，预印本，精读监督构造与实验协议</strong>。<a href="https://arxiv.org/html/2610.01435v1" rel="noopener noreferrer" target="_blank">作者全文</a>。</p>
+<p>事实：直接研究 TFM→TabM／XGBoost，比较 full-context（FC）、OOF、硬软监督混合及额外合成查询；其设计集最优配置是 FC＋teacher-only。推断：基础模型教师、轻学生、合成查询、移除部署教师不是空白。其<a href="https://github.com/nums-ai/TFM_Distillation" rel="noopener noreferrer" target="_blank">作者公布代码</a>本次读取返回 404；没有可运行证据，也未核到主会录用身份。</p>
+<h3 id="nearest-record-9">R09. Distilling Tabular Foundation Models for Structured Health Data</h3>
+<p>Aditya Tanna、Nassim Bouarour、Mohamed Bouadi、Vinay Kumar Sankarapu、Pratinav Seth；<strong>2026-05-18，arXiv:2605.18702v1；作者页面标为 ICML 2026 SD4H workshop，非主会，精读</strong>。<a href="https://arxiv.org/html/2605.18702v1" rel="noopener noreferrer" target="_blank">全文</a>，<a href="https://pratinavseth.github.io/publications/distilling-tfms-structured-health-data/" rel="noopener noreferrer" target="_blank">作者发表页面</a>。</p>
+<p>事实：§3 已有 5 折 OOF 教师标签、hard＋soft loss、逐样本 adaptive temperature 与中等熵处较高的 confidence weight；涵盖 MLP 和树学生。推断：OOF＋TFM＋置信加权同样非新 pipeline。正文实验是小表健康任务，不能直接推出百万行 IDS 或 1% FPR 时有效。作者称依托 TabTune，但本轮未确认对应版本能完整复现。</p>
+<h3 id="nearest-record-10">R10. GEAR: Generative Expansion and Real Anchoring for Two-Stage Distillation of Tabular Foundation Models</h3>
+<p>Qi Qin、Jiajie Zhu、Dali Chen、Yuzhao Zhang、Jia-Xing Han、Yu Su、Peng Zhang、Ying Yan、Yifan Sun；<strong>2026-08-19，arXiv:2608.18849v1，预印本，精读</strong>。<a href="https://arxiv.org/html/2608.18849v1" rel="noopener noreferrer" target="_blank">作者全文</a>。</p>
+<p>事实：§2 用合成协变量查询冻结 TFM，再以真实标签＋OOF 教师预测锚定；§3 给生成量与保真度的风险证书。推断：“合成扩充＋OOF＋两阶段＋风险界”已有直接近邻。证书依赖 surrogate-to-target 偏差及分布差异等条件，不等于真实总体风险一定降低，更不是低 FPR 或小学生优势证明。本轮未核得作者代码入口。</p>
+<h3 id="nearest-record-11">R11. Neyman-Pearson Classification under Both Null and Alternative Distributions Shift</h3>
+<p>Mohammadreza M. Kalan、Yuyang Deng、Eitan J. Neugut、Samory Kpotufe；<strong>ICLR 2026 主会</strong>；预印本首发 2025-11-10，arXiv:2511.06641；<strong>精读目标、迁移程序和主要保证</strong>。<a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/33870b3e099880cd8e705cd07173ac27-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式身份</a>，<a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">正式全文</a>，<a href="https://arxiv.org/html/2511.06641" rel="noopener noreferrer" target="_blank">作者 HTML</a>。</p>
+<p>事实：同时允许正常与攻击类条件分布迁移，利用有标签 source／target 数据自适应迁移，分析 source 无用时避免负迁移的条件。推断：“首次在正常分布漂移时迁移低 FPR 能力”不能成立。本文不是 TFM→固定小 MLP 的 KD，亦不覆盖任意相关 flow 的无条件保证。本次未核得作者代码入口。</p>
+<h3 id="nearest-record-12">R12. A Unified Approach to Routing and Cascading for LLMs</h3>
+<p>Jasper Dekoninck、Maximilian Baader、Martin Vechev；<strong>ICML 2025 主会</strong>。<a href="https://proceedings.mlr.press/v267/dekoninck25a.html" rel="noopener noreferrer" target="_blank">正式身份</a>，<a href="https://github.com/eth-sri/cascade-routing" rel="noopener noreferrer" target="_blank">作者代码</a>，<a href="https://arxiv.org/html/2410.10347" rel="noopener noreferrer" target="_blank">作者 HTML</a>。</p>
+<p>事实：统一预算内质量最大化的 routing／cascading，识别质量估计的重要性。推断：按升级收益／成本路由属于已有决策框架；不能仅换成 IDS 就称新算法。本次公式阅读使用作者公开 <strong>v5（2026-10-26）</strong>；不推断该版本所有新增表述均与 2025 会议版相同。源码入口已核，未运行。</p>
+<h3 id="nearest-record-13">R13. Active feature acquisition via explainability-driven ranking</h3>
+<p>Osman Berke Guney、Ketan Suhaas Saichandran、Karim Elzokm、Ziming Zhang、Vijaya B Kolachalama；<strong>ICML 2025 主会；已核摘要、正式身份与作者 README，未完成全文逐公式核查</strong>。<a href="https://proceedings.mlr.press/v267/guney25a.html" rel="noopener noreferrer" target="_blank">正式论文</a>，<a href="https://github.com/vkola-lab/icml2025" rel="noopener noreferrer" target="_blank">作者代码</a>。</p>
+<p>事实：局部解释产生逐样本特征重要性顺序，decision-transformer policy 顺序获取特征。推断：动态字段预算、逐样本选择特征、用强模型解释指导小策略均非空白；是否能同时满足 IDS 正常类风险与真实采集成本，仍需另行建模。代码可见，未跑通。</p>
+<h3 id="nearest-record-14">R14. Wasserstein-Regularized Conformal Prediction under General Distribution Shift（WR-CP）</h3>
+<p>Rui Xu、Chao Chen、Yue Sun、Parvathinathan Venkitasubramaniam、Sihong Xie；<strong>ICLR 2025 主会，精读界、假设与迁移设定</strong>。<a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/283066055b0256ca8e3e0c8c96019357-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式身份</a>，<a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/283066055b0256ca8e3e0c8c96019357-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">正式全文</a>，<a href="https://github.com/rxu0112/WR-CP" rel="noopener noreferrer" target="_blank">作者代码</a>。</p>
+<p>事实：分析联合分布变化下的 conformal score 覆盖差距，区分 covariate／concept shift；应用包括多个 source 的未知混合。推断：分布漂移后校准仍可靠不能直接继承 IID CP；该文也不是任意未知新攻击／相关 flow 的免费保证。代码 README 已核，未复现。</p>
+<h3 id="nearest-record-15">R15. SAFE-KD: Risk-Controlled Early-Exit Distillation for Vision Backbones</h3>
+<p>Salim Khazem；<strong>2026-02-03，arXiv:2602.03043v1，预印本，精读风险定义并核作者代码</strong>。<a href="https://arxiv.org/html/2602.03043v1" rel="noopener noreferrer" target="_blank">全文</a>，<a href="https://github.com/salimkhazem/safe-kd" rel="noopener noreferrer" target="_blank">作者仓库</a>，<a href="https://github.com/salimkhazem/safe-kd/blob/main/src/methods/safe_exit.py" rel="noopener noreferrer" target="_blank">关键代码</a>。</p>
+<p>事实：提出多出口 KD＋conformal early exit，声称控制早退样本的 selective error。推断：组合想法已存在；但所读实现的 CP 分位数与单标签早退规则<strong>不足以实现论文声称的 selective risk 合约</strong>，见 §3.5。不能据此背书有限样本保证。代码可见不等于正确或跑通；本轮未执行。</p>
+<h3 id="nearest-record-16">R16. C-GUARD: Context-Adaptive Conformal Gating for Improving Robustness Against Evasive Windows PE Malware</h3>
+<p>Muhammad Imran、Malik Al-Essa、Felice Franchini、Giuseppe Pirlo；<strong>Future Internet 18(8):431，2026-08-13，期刊，非顶会；精读公开方法与低 FPR 评估部分</strong>。<a href="https://www.mdpi.com/1999-5903/18/8/431" rel="noopener noreferrer" target="_blank">期刊原文</a>，<a href="https://www.mdpi.com/1999-5903/18/8/431/notes" rel="noopener noreferrer" target="_blank">版本记录</a>。</p>
+<p>事实：OOF 构造 FN-vs-TN rescue，conformal gate 配合新增 FP 预算，只翻转 baseline-negative；另有 validation FP-matched 的单阈值放宽对照。推断：安全任务中的“困难漏报保护＋条件辅助模型＋误报预算”已有直接应用近邻。它报告的是冻结阈值的实际表现，不是总体 FPR≤1% 证明；实验工件需向作者申请，本轮未核得公开实现。</p>
+<h2 id="nearest-heading-19">2. 哪些候选主张已被覆盖</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>候选说法</th>
+<th>最强近邻</th>
+<th>本次判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标 FPR 下选择关键样本、相对阈值做排序蒸馏</td>
+<td>R05 EKD</td>
+<td>概念与主要机制已覆盖；固定 0.01、用于 IDS 不足以宣称首创</td>
+</tr>
+<tr>
+<td>正确性与置信度共同门控 KD</td>
+<td>R06；R07；R09</td>
+<td>已有一般机制与近期实例；本项目可以报告有控制实验的适配收益</td>
+</tr>
+<tr>
+<td>TFM 教师、OOF、CPU 小学生</td>
+<td>R08–R10</td>
+<td>pipeline 已覆盖；“使用最新模型”是对照质量，不是算法创新</td>
+</tr>
+<tr>
+<td>合成查询、真实锚定、二阶段及风险界</td>
+<td>R10；R08</td>
+<td>已有直接近邻；不能再以堆生成器作为主要差异</td>
+</tr>
+<tr>
+<td>正常／攻击分布都变化时保持低 Type-I 风险</td>
+<td>R11；R14；R04</td>
+<td>已有理论主干；本项目尚缺与具体样本依赖、容量约束的可验证连接</td>
+</tr>
+<tr>
+<td>预算约束路由、按困难样本调用强模型</td>
+<td>R12；R15；R16</td>
+<td>已覆盖一般框架与安全应用；需要真实成本、整体风险、强策略对照</td>
+</tr>
+<tr>
+<td>每个样本动态获取字段</td>
+<td>R13</td>
+<td>属成熟 AFA 问题；字段数量不能替代采集成本</td>
+</tr>
+<tr>
+<td>selected-group 等权就是公平、相关性处理或漂移稳健</td>
+<td>当前实现的推断，见 §4</td>
+<td>不成立；这些是不同 estimand、统计假设和约束</td>
+</tr>
+</tbody>
+</table></div>
+<p>“未发现一篇同时写完本项目全部组件”的事实不能证明创新。应先排除：成熟方法适配是否已解释全部效果，以及所谓组合收益是否仅来自目标修正、权重变化、额外计算或选择偏差。</p>
+<h2 id="nearest-heading-20">3. 关键全文与代码精读</h2>
+<h3 id="nearest-heading-21">3.1 EKD 已有“工作点感知迁移”的核心结构</h3>
+<p>R05 §3.1 的阈值由负关系分位数获得，分别记为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mi>t</mi><mi>k</mi><mi>T</mi></msubsup><mo>,</mo><msubsup><mi>t</mi><mi>k</mi><mi>S</mi></msubsup></mrow></math>；关键关系满足</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mn mathvariant="double-struck">1</mn></mrow><mo stretchy="false">{</mo><msub><mi>s</mi><mi>T</mi></msub><mo>&gt;</mo><msubsup><mi>t</mi><mi>k</mi><mi>T</mi></msubsup><mo stretchy="false">}</mo><mo>≠</mo><mrow><mn mathvariant="double-struck">1</mn></mrow><mo stretchy="false">{</mo><msub><mi>s</mi><mi>S</mi></msub><mo>&gt;</mo><msubsup><mi>t</mi><mi>k</mi><mi>S</mi></msubsup><mo stretchy="false">}</mo><mo>.</mo></mrow></math>
+<p>§3.2 不要求师生相似度完全相同，而比较相对阈值的平滑排序计数：</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi mathvariant="script">L</mi><mrow><mrow><mi mathvariant="normal">E</mi><mi mathvariant="normal">K</mi><mi mathvariant="normal">D</mi></mrow></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mi>n</mi></munder><mrow><mo fence="true" form="prefix" stretchy="true">‖</mo><msub><mo>∑</mo><mi>k</mi></msub><mi>σ</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>T</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>−</mo><msubsup><mi>t</mi><mi>k</mi><mi>T</mi></msubsup><mo stretchy="false">)</mo><mo>/</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>−</mo><msub><mo>∑</mo><mi>k</mi></msub><mi>σ</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>S</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>−</mo><msubsup><mi>t</mi><mi>k</mi><mi>S</mi></msubsup><mo stretchy="false">)</mo><mo>/</mo><mi>τ</mi><mo stretchy="false">)</mo><mo fence="true" form="postfix" stretchy="true">‖</mo></mrow><mo>.</mo></mrow></math>
+<p>事实：作者代码 <code>ekd.py</code>（blob <code>b5ac88c252801a9f708c63ecca965cb31cc57d19</code>）使用师生各自 EMA anchors、温度 0.01、学生最难负关系 top-2000，最终是排序计数的 MSE。推断：论文的概念选择说明与实际“全部正关系＋hard negatives 上平滑计算”应分开；不能只照摘要写成显式只更新离散分歧集。适配单行 IDS 分数时，应公开关系→行分数的变换、阈值估计和梯度处理，称为 adapted EKD，不能声称原任务复现。<a href="https://arxiv.org/html/2206.02325" rel="noopener noreferrer" target="_blank">论文 §3</a>，<a href="https://github.com/Tencent/TFace/blob/master/recognition/tasks/ekd/distillation/ekd.py" rel="noopener noreferrer" target="_blank">关键代码</a></p>
+<h3 id="nearest-heading-22">3.2 CVaR／PAUCI 的“精确”究竟指什么</h3>
+<p>R01 定理 1 的 OPAUC surrogate 可写为</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mo>min</mo><mrow><mi>θ</mi><mo>,</mo><mi>u</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><msub><mi>n</mi><mo>+</mo></msub></mrow></msup></mrow></msub><mfrac><mn>1</mn><mrow><msub><mi>n</mi><mo>+</mo></msub></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>n</mi><mo>+</mo></msub></mrow></munderover><mrow><mo fence="true" form="prefix" stretchy="true">[</mo><msub><mi>u</mi><mi>i</mi></msub><mo>+</mo><mfrac><mn>1</mn><mrow><mi>β</mi><msub><mi>n</mi><mo>−</mo></msub></mrow></mfrac><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>n</mi><mo>−</mo></msub></mrow></msubsup><mo maxsize="1.2em" minsize="1.2em">(</mo><mi>ℓ</mi><mo stretchy="false">(</mo><msub><mi>f</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msubsup><mi>x</mi><mi>i</mi><mo>+</mo></msubsup><mo stretchy="false">)</mo><mo>−</mo><msub><mi>f</mi><mi>θ</mi></msub><mo stretchy="false">(</mo><msubsup><mi>x</mi><mi>j</mi><mo>−</mo></msubsup><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>−</mo><msub><mi>u</mi><mi>i</mi></msub><msub><mo maxsize="1.2em" minsize="1.2em">)</mo><mo>+</mo></msub><mo fence="true" form="postfix" stretchy="true">]</mo></mrow><mo>.</mo></mrow></math>
+<p>事实：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>u</mi><mi>i</mi></msub></mrow></math> 是每个正样本的持续状态；SOPA 不是每个 batch 临时挑一批 hardest pairs。推断：应核对样本索引、采样、状态恢复、类条件归一化与 beta；正确实现才对应该目标。“精确”不表示替代损失等于 0-1 pAUC、非凸全局最优，或测试 FPR 自动受控。<a href="https://proceedings.mlr.press/v162/zhu22g/zhu22g.pdf" rel="noopener noreferrer" target="_blank">R01 定理 1、算法 1</a></p>
+<p>R02／R03 还需要 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>γ</mi><mo>,</mo><mi>s</mi><mo>,</mo><msup><mi>s</mi><mi>′</mi></msup></mrow></math> 等辅助变量；R03 无选择近似的形式增加逐样本选择变量。推断：不能省略它们后沿用其无偏性或收敛结论。R03 主要实验的 FPR 区间较宽，不能由论文表格直接推出 beta=0.01 的数值稳定性。<a href="https://arxiv.org/html/2512.01213v1" rel="noopener noreferrer" target="_blank">R03 §IV–V、VII</a></p>
+<p>单点召回与区间面积也不同：优化 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mn>0.01</mn></mrow></msubsup><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>v</mi></mrow></math> 不能单独证明 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo stretchy="false">(</mo><mn>0.01</mn><mo stretchy="false">)</mo></mrow></math> 提升；应共同报告区间指标及冻结阈值的单点表现。</p>
+<h3 id="nearest-heading-23">3.3 NP 迁移不等于“阈值迁移＋蒸馏”</h3>
+<p>R11 的基本问题是</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mo>min</mo><mrow><mi>h</mi><mo>∈</mo><mi mathvariant="script">H</mi></mrow></msub><msub><mi>R</mi><mrow><mi>φ</mi><mo>,</mo><msub><mi>μ</mi><mrow><mn>1</mn><mo>,</mo><mi>T</mi></mrow></msub></mrow></msub><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo><mspace width="1em"></mspace><mtext>s.t.</mtext><mspace width="1em"></mspace><msub><mi>R</mi><mrow><mi>φ</mi><mo>,</mo><msub><mi>μ</mi><mrow><mn>0</mn><mo>,</mo><mi>T</mi></mrow></msub></mrow></msub><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>α</mi><mo>.</mo></mrow></math>
+<p>事实：程序利用四类有标签样本 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo><mo>,</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mi>S</mi><mo stretchy="false">)</mo><mo>,</mo><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo><mo>,</mo><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></math>，先对齐 source 的可行约束集，再利用 source 攻击数据减少 Type-II 风险；主要界含样本误差项。计算保证还要求凸性、梯度和有界性等条件。推断：不能宣称无 target 标签、任意非凸小 MLP、相关 flow、固定 beta=0.01 下都继承这些保证。其 transfer modulus 也不是可以直接拿 teacher confidence 代替的量。<a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">R11 §3–5</a></p>
+<p>R04 的非参数阈值规则基于独立正常校准分数的次序统计量；在相应假设下，给定目标 beta 和违反概率 delta，最小可行正常样本量为</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>n</mi><mn>0</mn></msub><mo>≥</mo><mrow><mo fence="true" form="prefix" stretchy="true">⌈</mo><mfrac><mrow><mi>log</mi><mi>δ</mi></mrow><mrow><mi>log</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mfrac><mo fence="true" form="postfix" stretchy="true">⌉</mo></mrow><mo>.</mo></mrow></math>
+<p>beta=0.01、delta=0.05 时为 299；这是最低可行性，远非良好功效或精确估计所需样本量。多组同时保证需分配 delta；把同一会话的上千条 flow 当成上千个独立样本不满足这个推导。<a href="https://jmlr.org/papers/volume21/18-577/18-577.pdf" rel="noopener noreferrer" target="_blank">R04 §2、Proposition 1</a></p>
+<h3 id="nearest-heading-24">3.4 AdaConG 的不确定度与我们所需风险不是一个量</h3>
+<p>R07 §3 使用代表 target 的独立校准集构造 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math>，再令</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>u</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>g</mi><mo stretchy="false">(</mo><mo stretchy="false">|</mo><mi>C</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mo stretchy="false">)</mo><mo>,</mo><mspace width="2em"></mspace><mi>w</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>exp</mi><mo stretchy="false">(</mo><mo>−</mo><mi>κ</mi><mi>u</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>,</mo><mspace width="2em"></mspace><mi mathvariant="script">L</mi><mo>=</mo><msub><mi>λ</mi><mi>t</mi></msub><msub><mi mathvariant="script">L</mi><mi>t</mi></msub><mo>+</mo><mi>w</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><msub><mi>λ</mi><mi>g</mi></msub><msub><mi mathvariant="script">L</mi><mi>g</mi></msub><mo>.</mo></mrow></math>
+<p>事实：分类实例可用集合大小映射；KD 实验以受噪声影响的 CIFAR-100 教师评价。推断：二分类集合大小的分辨率很低；空集合处理也需明确。集合覆盖是边际事件，不是“教师在正常 1% 尾部正确”，更不是“此样本 KD 梯度必然有益”。因此 CP gate 必须与简单 entropy／confidence、correctness、同平均权重对照，而不能将“有校准”当作算法收益的解释。<a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/0b08d733a5d45a547344c4e9d88bb8bc-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">R07 §3–4</a></p>
+<p>R14 进一步说明分布变化可破坏覆盖；其界需 score 分布条件，应用亦有 source-mixture 假设。推断：引入 conformal 一词不会消除依赖、未知 concept shift 或校准集不具代表性的问题。<a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/283066055b0256ca8e3e0c8c96019357-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">R14 §3–5</a></p>
+<h3 id="nearest-heading-25">3.5 SAFE-KD 是需要红队检查的近邻，不能当保证背书</h3>
+<p>事实：作者 <code>safe_exit.py</code> 的校准函数对 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mo>−</mo><msub><mi>p</mi><mi>y</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> 取 split-CP 分位数 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>q</mi></mrow></math>；推断时以 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mo>max</mo><mi>c</mi></msub><msub><mi>p</mi><mi>c</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>≥</mo><mn>1</mn><mo>−</mo><mi>q</mi></mrow></math> 直接输出 argmax。代码 blob 为 <code>02048f261d8d6ddbd8746929c6de2c004a606800</code>。<a href="https://github.com/salimkhazem/safe-kd/blob/main/src/methods/safe_exit.py" rel="noopener noreferrer" target="_blank">作者实现</a></p>
+<p><strong>审查反例，不是新实验</strong>：设所有样本 max probability 都是 0.6，其中 90% 预测正确、10% 预测错误，则 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>p</mi><mi>y</mi></msub></mrow></math> 分别为 0.6、0.4。delta=0.05、大校准样本下，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>q</mi></mrow></math> 接近 0.6，所有样本满足早退条件，selective error 约 0.10。CP 的集合覆盖仍可能成立，但单标签早退风险不满足 0.05。</p>
+<p>因此，所见代码不能推出文中 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo movablelimits="true">Pr</mo><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi></mrow><mo>∣</mo><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">y</mi><mtext> </mtext><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi></mrow><mo stretchy="false">)</mo><mo>≤</mo><mi>δ</mi></mrow></math>，更不能推出 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo movablelimits="true">Pr</mo><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">m</mi></mrow><mo>∣</mo><mi>Y</mi><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo><mo>≤</mo><mn>0.01</mn></mrow></math>。此外每个出口的原始接受集与“前面均未接受后”的条件样本集不同。此文可以反证“KD＋风险早退从无人提出”，但其理论与代码需另行修正，不应直接移植或计作可靠风险基线。</p>
+<h3 id="nearest-heading-26">3.6 TFM 蒸馏文献存在实际协议分歧</h3>
+<p>事实：R08 §3.1 实际比较 FC 与 OOF，报告其设计集上 FC＋teacher-only 更好；R09 主张 OOF 避免 self-labeling，并有 adaptive temperature／confidence weight。推断：<strong>FC 使用 train 标签不自动构成 test 泄漏</strong>；它可能是一种有效的训练监督。但如果要根据教师“是否正确／有多可信”决定门控，就不能把教师已在上下文见过该行标签的预测当成样本外可靠性证据。我们的 group-OOF 要求应说明针对后一个识别目标，而非宣称所有 FC 方法无效。<a href="https://arxiv.org/html/2610.01435v1" rel="noopener noreferrer" target="_blank">R08 §3.1</a>，<a href="https://arxiv.org/html/2605.18702v1" rel="noopener noreferrer" target="_blank">R09 §3</a></p>
+<p>公平的协议对照应至少在一个固定教师／学生组合上比较 <strong>FC 普通 KD 与 OOF 普通 KD</strong>，保持学生训练预算和 query 数量一致，报告 context 体量与类别覆盖（OOF 可用上下文通常更少）。若另控制相同 context 预算，应说明抽样方式。用独立开发分区判断学生泛化，而不是以 FC 教师在已见行上的正确率证明其门控可靠。该对照只用于识别协议效应，不扩成所有教师／损失的全组合。</p>
+<p>R10 的生成保真度项提示更多查询不保证更多真实信息。推断：不能把不可能的网络字段组合当作有效困难攻击；生成查询量和上下文成本必须计入资源预算。<a href="https://arxiv.org/html/2608.18849v1" rel="noopener noreferrer" target="_blank">R10 §2–3</a></p>
+<h2 id="nearest-heading-27">4. 对当前实现的数学定位</h2>
+<p>本节是当前代码的只读事实与审查推断，不更改现有 pilot。</p>
+<ul>
+<li><code>src/ids/research_kd.py:229</code> 的 correctness 用 0.5 分界，confidence 为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">|</mo><mn>2</mn><mi>q</mi><mo>−</mo><mn>1</mn><mo stretchy="false">|</mo></mrow></math>；这与正常 99% 分位点没有直接关系。</li>
+<li><code>src/ids/research_kd.py:145</code> 选择 batch 内最高分 normal 的 10%，再受 32 个 normal、64 个 attack、2048 对上限影响；attack 又按最低分选取。实际尾部比例随 batch 组成及上限变化。</li>
+<li><code>src/ids/research_kd.py:124</code> 对<strong>已选样本内</strong> group 赋 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mo>/</mo><mo stretchy="false">(</mo><mi>G</mi><msub><mi>n</mi><mi>g</mi></msub><mo stretchy="false">)</mo></mrow></math> 权重；两类权重乘积用于 pair loss。它表示选中组等权，不能代替 population per-flow 风险、完整 group-DRO 或相关样本统计处理。</li>
+<li><code>configs/research-v2.yaml:5</code> 的评价目标是 0.01；与训练 10% capped mining 的错配真实存在。把 normal_fraction 改成 0.01 也不足以自动获得全分布分位数或 R01 的目标。</li>
+<li><code>gated_matched_hard</code> 已控制 gate 选择和有效权重，<code>correct_only</code>／<code>confidence_only</code> 已拆分机制。这些是有价值的识别控制，应保留，不应因为文献推翻首创性而抹去。</li>
+</ul>
+<p>因此当前准确名称是：<strong>基于教师正确性与置信度门控的 KD，加有上限的 batch hard-pair 平滑排序正则</strong>。不应叫精确 pAUC、NP 学习、可证明低 FPR 迁移、分布漂移稳健算法。</p>
+<h3 id="nearest-heading-28">4.1 风险迁移缺少的连接</h3>
+<p>令冻结决策 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>h</mi><mi>T</mi></msub><mo>,</mo><msub><mi>h</mi><mi>S</mi></msub><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>,</mo><msub><mi>P</mi><mn>1</mn></msub></mrow></math> 为相同评价总体的正常／攻击条件分布。直接集合包含给出</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>S</mi></msub><mo>≤</mo><msub><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>T</mi></msub><mo>+</mo><munder><munder><mrow><msub><mi>P</mi><mn>0</mn></msub><mo stretchy="false">(</mo><msub><mi>h</mi><mi>S</mi></msub><mo>=</mo><mn>1</mn><mo>,</mo><msub><mi>h</mi><mi>T</mi></msub><mo>=</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⏟</mo></munder><mrow><msub><mi>d</mi><mn>0</mn></msub></mrow></munder><mo>,</mo><mspace width="2em"></mspace><msub><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>S</mi></msub><mo>≥</mo><msub><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>T</mi></msub><mo>−</mo><munder><munder><mrow><msub><mi>P</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>h</mi><mi>S</mi></msub><mo>=</mo><mn>0</mn><mo>,</mo><msub><mi>h</mi><mi>T</mi></msub><mo>=</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⏟</mo></munder><mrow><msub><mi>d</mi><mn>1</mn></msub></mrow></munder><mo>.</mo></mrow></math>
+<p>这是<strong>简单分解，不是新定理，也不是创新证明</strong>。若想把它变成有用合约，至少还缺：</p>
+<ol>
+<li>教师在目标总体的可靠 FPR 上界；总体 AUC 更强不够。</li>
+<li>学生新增正常报警概率 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>d</mi><mn>0</mn></msub></mrow></math> 的可控预算；若教师已耗尽 1%，不能再无预算地允许新增 FP。</li>
+<li>从训练 surrogate 到一侧离散分歧的连接，以及有限样本估计误差。</li>
+<li>模型、阈值、路由选择之后的独立校准；反复使用同一校准集挑最佳方案会引入选择偏差。</li>
+<li>明确的独立统计单位、目标 mixture、未知攻击范围；当前 group loss 不提供这些条件。</li>
+</ol>
+<p>R05 已学习相对阈值分歧；R11 已研究 NP 迁移。因此即使补出上述链条，也必须检查它相对成熟受约束学习到底新增了什么，而非把简单上界命名成新框架。</p>
+<h3 id="nearest-heading-29">4.2 correlated flow、group 和 mixture shift</h3>
+<p>设正常总体由环境 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi></mrow></math> 混合：</p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mrow><mi>Q</mi></mrow></msub><mo>=</mo><munder><mo>∑</mo><mi>g</mi></munder><msubsup><mi>π</mi><mrow><mi>Q</mi><mo>,</mo><mi>g</mi></mrow><mn>0</mn></msubsup><mspace width="0.167em"></mspace><msub><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mi>g</mi></msub><mo>.</mo></mrow></math>
+<p>推断：训练混合的平均 FPR≤beta 不保证正常环境比例变化后仍≤beta；所有组都≤beta 则对这些组的任意混合成立，但这只是凸组合性质。等权平均各组损失并不约束最差组。纯攻击先验变化、正常条件分布不变时，FPR 本身不变；不能与正常子群混合变化混为一谈。</p>
+<p>会话／近重复组、攻击家族、部署环境是三种不同分组：前者用于防泄漏／描述依赖，家族用于覆盖与召回，环境用于迁移风险。三者不能用同一个 group ID 直接替代。分组切分是必要设计步骤，但并不让组内 flow 突然 IID。可以报告 cluster bootstrap 的经验不确定度，不能因此声称分布无关 NP 保证。若改以会话最大分数控制“一个会话是否报警”，控制的已是另一单位的风险。</p>
+<p>在正常／攻击条件分布都可任意变化、又没有目标标签或结构假设时，不应承诺固定 FPR 与高召回同时保持；R11 的有标签 target、R14 的 mixture／score 条件必须显式列出。</p>
+<h3 id="nearest-heading-30">4.3 cascade／feature acquisition 还缺什么</h3>
+<p>R16 的正常预算是<strong>新增</strong> FP 预算，且 CP compatibility 在 malware 类上构造；这不是对正常总体 FPR 的 NP 保证。作者表 A6 的 nominal 1% 方案，冻结 baseline 测试 FPR 为 1.1807%，C-GUARD 为 1.2111%，说明 nominal／validation 与实际 test 要分开。<a href="https://www.mdpi.com/1999-5903/18/8/431" rel="noopener noreferrer" target="_blank">R16 表 A6</a></p>
+<p>R16 还先计算 rescue score 再决定其 context gate；若本项目要节省辅助模型成本，不能只在同样结构上把“少翻转样本”当成“少运行强模型”。路由必须在调用强模型前用已可用信息完成。整体级联风险应直接计算，不能因为两个模型各自校准在 1%，就宣称按输入选择后的组合也≤1%。</p>
+<p>AFA 的成本还包括共享特征计算依赖、等待完整 flow 的时间和分支管理。CSV 中少几个字段不代表真的少采集／少计算；没有原始流量或可测的提取器时，只能称模拟特征预算。</p>
+<h2 id="nearest-heading-31">5. 最少关键对照与资源边界</h2>
+<h3 id="nearest-heading-32">5.1 先做诊断，不立即扩展真实训练矩阵</h3>
+<p>对已有缓存预测可先检查：教师 TPR@低 FPR、师生一侧分歧、各正常环境 FPR、困难攻击家族召回、低尾部教师错误；若教师在目标工作点没有优势，停止把 TFM 强教师当作前提。严格保留最终 test，诊断只使用授权开发分区。</p>
+<p>若进入新 pilot，低 FPR 蒸馏最少应有：同容量 hard＋成熟低 FPR 目标、普通 KD、adapted EKD、所提规则。四项共用教师、训练步数、正类权重、数据与相同阈值协议；另加一个与所提规则同样本量／总权重的随机选择控制，排除仅靠 hard mining 或重加权获益。现有 matched-hard 控制可复用其识别思想，不能以换名字省略。</p>
+<p>只选一个教师、一个学生、一个环境、三个种子作证伪 pilot；最多约 15 个学生 fit，而不是把教师×损失×字段×门控×seed 变成全组合。只有关键假设成立后才冻结、扩展双环境五种子。这里是预算建议，<strong>本轮未启动这些训练</strong>。</p>
+<h3 id="nearest-heading-33">5.2 数据要求</h3>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要回答的问题</th>
+<th>最少需要的数据／信息</th>
+<th>当前不能替代它的材料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常 1% 风险可靠性</td>
+<td>与评价正常总体对应的独立校准单位、冻结 score／threshold、足够尾部样本</td>
+<td>训练正确率、全 AUC、相关 flow 行数</td>
+</tr>
+<tr>
+<td>正常 mixture 变化</td>
+<td>可解释环境标签和各环境正常样本，预先固定 mixture 情景</td>
+<td>任意 hash group、随机种子划分</td>
+</tr>
+<tr>
+<td>困难攻击保护</td>
+<td>家族标签及独立开发／评价样本，预设最差家族指标</td>
+<td>只筛选现有模型漏掉的 test 再报告</td>
+</tr>
+<tr>
+<td>TFM 教师有效</td>
+<td>可追溯 checkpoint／预训练来源、折内 context／预处理／cache、查询成本日志</td>
+<td>模型最新、官方通用基准更好</td>
+</tr>
+<tr>
+<td>动态字段成本</td>
+<td>可延迟的真实提取过程、字段依赖和时间／内存测量</td>
+<td>字段个数或离线文件列数</td>
+</tr>
+<tr>
+<td>concept shift 下保证</td>
+<td>相应 target 标签或明确结构／支持集假设</td>
+<td>仅无标签漂移检测器或 CP 名称</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="nearest-heading-34">5.3 运算和复现要求</h3>
+<ul>
+<li>TFM 应离线冻结；固定上下文预算、query batch、集成数和 checkpoint。OOF 每折预处理、标签依赖表示及 KV cache 均需隔离；不能全量标签预计算表示后再分折。</li>
+<li>小表论文的可运行成本不能外推到百万行 IDS／24GB 显存；先预算完整 OOF 查询时间、峰值 RAM／显存，再决定数据范围。学生仍使用预设训练总体，不能为教师省钱而悄悄删掉困难家族。</li>
+<li>pAUC 求解器的样本级状态和优化器状态必须保存；只存神经网络权重可能无法正确续跑。</li>
+<li>级联报告端到端 CPU batch=1、吞吐、平均与 p95 延迟、调用比例、预处理与路由成本。训练时间、教师生成时间、学生部署成本分别记录。</li>
+<li>R05、R01 作者代码入口已核；R08 代码链接 404；R07／R10／R11 未核得实现；R16 工件需申请。<strong>这些事实不能合并成“近期方法均已跑通”。</strong> 本轮不自动安装或升级任何依赖。</li>
+</ul>
+<h2 id="nearest-heading-35">6. 仍值得验证的三个窄问题</h2>
+<h3 id="nearest-heading-36">Q1（优先主线）：小容量学生在正常 mixture 改变时，能否保留教师可量化的一侧风险预算？</h3>
+<p><strong>待验证假设</strong>：在固定教师查询预算与小学生容量下，显式区分“继承教师漏报”与“新增正常报警”，再针对预设正常环境约束一侧分歧，是否比 EKD 的阈值关系匹配、普通 CVaR-KD 更稳定？</p>
+<p>最强近邻：R05 的工作点排序、R11 的双类条件 NP 迁移、R04 的阈值合约；不能称首次风险迁移。可形成差异的部分只能是<strong>固定部署容量、可核依赖结构与具体风险预算如何联合处理</strong>。若只把各组 loss 等权，问题没有被解决。</p>
+<p>最小击穿实验：先用同一批开发预测固定若干正常环境的比例变化，仅改变 mixture、不重训，检查 pooled 校准是否失效；再比较 hard-CVaR、普通 KD、adapted EKD、候选方法。在同风险上界／同校准预算下比较召回，而非允许候选多花 FP。若普通 groupwise 校准已经解释全部收益，或候选在 IID 条件下都不胜 EKD，就下调为协议／适配贡献。</p>
+<p>数据与失败条件：需要真实环境／会话信息、独立正常单位及足够各组样本；缺少这些时不能承诺保证。若保证仅对已见组成立，应明确对新环境无保证。固定 MLP 并不满足 R11 的全部凸性计算假设，不能直接沿用其定理。</p>
+<h3 id="nearest-heading-37">Q2（资源受限时的窄备选问题）：固定教师查询额度下，尾部目标能否指导“问哪些样本”？</h3>
+<p>最强近邻：R08 的查询覆盖、R10 的生成量／保真度、R05 的 critical relations；另外仍需继续排除 active distillation 的直接近邻，<strong>本次搜索没有证明此处空白</strong>。</p>
+<p>最小击穿实验：同一教师、context、查询额度、训练更新数，比较 uniform random、普通 uncertainty、EKD critical-region 和目标风险导向选择。用完整开发总体评价，禁止只在被选样本上计算优势。先使用真实 train 行，避免同时引入生成器；若只比“问全量教师”省成本，却不胜等预算随机查询，就不保留算法主张。</p>
+<p>这是教师成本过高时才启动的资源问题；不与 Q1 同时扩展成第二套大矩阵。即使有效，贡献也应限定为特定预算下的选择规则及证据。</p>
+<h3 id="nearest-heading-38">Q3（部署备线）：只用便宜信息作升级决策，能否在整体正常风险约束下获得真实成本收益？</h3>
+<p>最强近邻：R12 的质量—成本最优路由、R13 的动态获取、R16 的安全任务 rescue；R15 说明“KD＋风险早退”概念也已有。不能以级联、困难样本、conformal 命名宣称创新。</p>
+<p>可能的差异：在调用辅助模型／昂贵字段之前，用当前可得字段预测一侧纠错收益，联合约束<strong>整体</strong>正常 FPR 与实际成本；对正常 mixture 变化明确失效／回退条件。它仍可能只是成熟约束决策的 IDS 适配，需由实验而非措辞决定贡献级别。</p>
+<p>最小击穿实验：先在已有模型预测上计算互补性与 oracle 上界，无需新训练；然后比较全量小模型、全量 HGB、同覆盖率随机升级、简单 confidence 升级、收益升级。若存在 rescue，还必须加入 validation FP-matched 的单阈值放宽对照，防止把增加 FP 的收益误认为算法收益。各策略使用统一整体校准、相同信息可用性和实测成本。若扣除 router／字段成本后不胜简单策略，停止。</p>
+<p>当前建议：<strong>先用 Q1 的最小反证步骤决定是否存在值得迁移的低 FPR 信息；Q3 只在模型错误互补且可测真实成本时作部署备线。Q2 仅作为教师查询昂贵时的收缩方案。</strong> 这三项都是待验证问题，不是三项已经成立的创新点；新实验证据出现前，应主动下调原有“correctness-confidence＋ranking”首创主张。</p></article></section><section id="doc-tabular" class="document" hidden><details class="toc"><summary>本篇目录</summary><a href="#tabular-heading-2" class="h2">1. 当前比较缺什么</a><a href="#tabular-heading-3" class="h2">2. 模型与基准地图</a><a href="#tabular-heading-4" class="h2">3. 六个需要落实到实验的阅读结论</a><a href="#tabular-heading-5" class="h3">3.1 TabM：不能用一个 tiny 配置代表前沿对照</a><a href="#tabular-heading-6" class="h3">3.2 ModernNCA：模型文件之外还有参考样本</a><a href="#tabular-heading-7" class="h3">3.3 TabICLv2：基础模型上下文也是训练资料</a><a href="#tabular-heading-8" class="h3">3.4 Mitra-v2：较新成绩的成本口径必须拆开</a><a href="#tabular-heading-9" class="h3">3.5 ConTextTab／LimiX-2：语义编码与遮盖不是空白</a><a href="#tabular-heading-10" class="h3">3.6 BeyondArena：迁移检验比换一个榜首更关键</a><a href="#tabular-heading-11" class="h2">4. 2026-11-03 实查的模型身份</a><a href="#tabular-heading-12" class="h2">5. 最小而有说服力的比较顺序</a></details><article><h1 id="tabular-heading-1">表格模型、基础模型与强基线审查</h1>
+<p>核查日：2026-11-03。服务于 TraceLight 的统计流特征 CSV 二分类、低误报评价与 CPU 部署。这里的“可适配”只指输入和方法有合理对应，不表示已经安装、训练、复现或获得本项目收益。本轮未运行真实数据训练。</p>
+<h2 id="tabular-heading-2">1. 当前比较缺什么</h2>
+<p>现有 LR、RF、sklearn HistGradientBoosting、小 MLP 是必要起点，但不足以代表当前表格学习的强参照。HistGradientBoosting 不能替代经过合理调优的 CatBoost／LightGBM；一个固定 tiny TabM 也不能代表 TabM 的方法上限。应先补强这些对照，再检验蒸馏是否有独立收益。</p>
+<p>基础模型有两个角色：离线产生训练信号的教师，或者独立的质量参照。大教师可以使用实验室 GPU，但部署学生必须单独测 CPU；教师权重小、预测无梯度、学生参数少，都不自动等于最终管线低延迟。</p>
+<h2 id="tabular-heading-3">2. 模型与基准地图</h2>
+<p>“全文”表示读过方法／协议／局限的相应章节；“代码”表示查看官方入口或文档，并非执行。老方法只保留不可替代的强基线，新增前沿候选优先选 2025／2026 年可核实工作。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>工作及身份</th>
+<th>已有核心机制／实际输入</th>
+<th>与本项目的关系及取舍</th>
+<th>本轮证据</th>
+</tr>
+</thead>
+<tbody>
+<tr id="tabular-record-1">
+<td>T01</td>
+<td>CatBoost，成熟强基线</td>
+<td>有序提升、类别统计；混合类型表格</td>
+<td>优先补齐。使用原始类别列的规范适配，独立校准；不能只与未调优 RF 比</td>
+<td><a href="https://catboost.ai/docs/en/concepts/algorithm-main-stages_choose-tree-structure" rel="noopener noreferrer" target="_blank">官方算法与参数</a>、<a href="https://catboost.ai/docs/en/references/training-parameters/common" rel="noopener noreferrer" target="_blank">参数</a>；文档</td>
+</tr>
+<tr id="tabular-record-2">
+<td>T02</td>
+<td>LightGBM，成熟强基线</td>
+<td>直方图、逐叶生长、类别分裂</td>
+<td>优先补齐。限制叶数／深度并记录 CPU 线程；与 sklearn HGB 分列</td>
+<td><a href="https://github.com/lightgbm-org/LightGBM/blob/main/docs/Features.rst" rel="noopener noreferrer" target="_blank">官方机制</a>；文档</td>
+</tr>
+<tr id="tabular-record-3">
+<td>T03</td>
+<td>RealMLP，NeurIPS 2024；保留为必要旧基线</td>
+<td>针对表格的 MLP 训练与预调默认值</td>
+<td>判断小 MLP 的差距来自训练配方还是容量。代码默认、调参和集成三种口径分列</td>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/2ee1c87245956e3eaa71aaba5f5753eb-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/dholzmueller/pytabkit" rel="noopener noreferrer" target="_blank">作者 PyTabKit</a>；全文／代码</td>
+</tr>
+<tr id="tabular-record-4">
+<td>T04</td>
+<td>TabM，ICLR 2025</td>
+<td>参数共享的 MLP 集成、可选数值嵌入</td>
+<td>优先神经参照／教师。当前已有官方包、tiny 结构和工程 pilot；正式 CPU 三轮部署测量与充分调优成绩尚无，新协议早停已修正</td>
+<td><a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/c1ba41c694834aeef91ae161711d4939-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/yandex-research/tabm" rel="noopener noreferrer" target="_blank">作者实现</a>；全文／代码</td>
+</tr>
+<tr id="tabular-record-5">
+<td>T05</td>
+<td>ModernNCA，ICLR 2025</td>
+<td>深度表示与随机化邻域成分学习，预测依赖参考样本</td>
+<td>用于检验局部近邻结构；不列第一批必跑。完整成本包含参考表示和检索，不能只数神经网络参数</td>
+<td><a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/ecd294194d5155432aab533f7ce0f6fe-Paper-Conference.pdf" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/LAMDA-Tabular/TALENT" rel="noopener noreferrer" target="_blank">作者 TALENT</a>；全文</td>
+</tr>
+<tr id="tabular-record-6">
+<td>T06</td>
+<td>TabICLv2，ICML 2026 主会</td>
+<td>表格上下文学习；目标感知表示、可扩展注意力、合成先验与预训练更新</td>
+<td>优先基础模型候选，先做教师资格和显存检查。上下文、表示与缓存必须折内生成</td>
+<td><a href="https://proceedings.mlr.press/v306/qu26a.html" rel="noopener noreferrer" target="_blank">正式记录</a>、<a href="https://github.com/soda-inria/tabicl" rel="noopener noreferrer" target="_blank">作者代码</a>、<a href="https://huggingface.co/jingang/TabICL" rel="noopener noreferrer" target="_blank">权重</a>；全文／代码／模型卡</td>
+</tr>
+<tr id="tabular-record-7">
+<td>T07</td>
+<td>TabPFN 3.5／Fast，2026-09 技术报告与发布</td>
+<td>表格 ICL，新 checkpoint 同时支持分类／回归</td>
+<td>可作当前前沿性能参照；不默认用于可公开 KD。模型许可与输出使用限制需按具体用途处理</td>
+<td><a href="https://arxiv.org/abs/2609.17895" rel="noopener noreferrer" target="_blank">报告</a>、<a href="https://huggingface.co/Prior-Labs/tabpfn_3_5" rel="noopener noreferrer" target="_blank">模型卡</a>、<a href="https://huggingface.co/Prior-Labs/tabpfn_3_5/blob/main/LICENSE" rel="noopener noreferrer" target="_blank">许可</a>；报告／卡／许可</td>
+</tr>
+<tr id="tabular-record-8">
+<td>T08</td>
+<td>TabDPT，NeurIPS 2025；后续模型 1.3</td>
+<td>真实表格预训练；当前推理版本与原论文分开锁定</td>
+<td>与合成先验 TFM 对照。核对预训练数据重叠；先限合法训练上下文，不默认全量 CIC 可放入 24GB</td>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/fc0e3f908a2116ba529ad0a1530a3675-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式记录</a>、<a href="https://github.com/layer6ai-labs/TabDPT-inference/releases/tag/v1.3.2" rel="noopener noreferrer" target="_blank">软件 1.3.2</a>、<a href="https://huggingface.co/Layer6/TabDPT" rel="noopener noreferrer" target="_blank">权重</a>；论文／代码／卡</td>
+</tr>
+<tr id="tabular-record-9">
+<td>T09</td>
+<td>Mitra，NeurIPS 2025 主会</td>
+<td>多种合成任务先验的混合，表格 ICL</td>
+<td>说明教师质量还取决于先验设计；实际候选应进一步核 v2，不能沿用 v1 为“最新”</td>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/177d68f4adef163b7b123b5c5adb3c60-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式论文</a>；全文</td>
+</tr>
+<tr id="tabular-record-10">
+<td>T10</td>
+<td>Mitra-v2，2026-09-03 技术报告</td>
+<td>扩展上下文与先验、优化更新；分类 backbone 约 75.7M；默认结果含微调与 8 折 bagging</td>
+<td>第二位可研究教师，先核单模型／集成成本。不能把默认排行榜成绩说成单次零样本前向的收益</td>
+<td><a href="https://arxiv.org/html/2609.04540v1" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://huggingface.co/autogluon/mitra-classifier-2" rel="noopener noreferrer" target="_blank">分类卡</a>、<a href="https://huggingface.co/autogluon/mitra-finetune" rel="noopener noreferrer" target="_blank">作者代码与结果</a>；全文／卡／入口</td>
+</tr>
+<tr id="tabular-record-11">
+<td>T11</td>
+<td>ConTextTab，NeurIPS 2025 主会；当前代码重定向 SAP-RPT-1-OSS</td>
+<td>文本、日期、数值和列名语义编码，真实数据预训练，行列注意力</td>
+<td>用于检验语义信息是否值得成本；UNSW 类别词与计数列不等于自然语义丰富业务表。先核真实数据来源及许可</td>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/d807e7678ba3afd3a904f4af52819e77-Abstract-Conference.html" rel="noopener noreferrer" target="_blank">正式记录</a>、<a href="https://arxiv.org/html/2506.10707v3" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/SAP-samples/sap-rpt-1-oss" rel="noopener noreferrer" target="_blank">当前作者入口</a>；全文／代码</td>
+</tr>
+<tr id="tabular-record-12">
+<td>T12</td>
+<td>LimiX-2M，2026-06 预印本</td>
+<td>数值局部 RBF 表征、调整样本／特征交互顺序，约 2M 模型</td>
+<td>是“基础模型也可较小”的参照。与 2026-09 的 LimiX-2 是不同型号，不能混用参数与分数</td>
+<td><a href="https://arxiv.org/abs/2606.04485" rel="noopener noreferrer" target="_blank">论文</a>、<a href="https://github.com/limix-ldm-ai/LimiX" rel="noopener noreferrer" target="_blank">作者家族仓库</a>；论文记录／仓库</td>
+</tr>
+<tr id="tabular-record-13">
+<td>T13</td>
+<td>LimiX-2，2026-09-15 预印本</td>
+<td>联合分布与上下文条件遮盖、细胞级行列表示，支持预测／插补等</td>
+<td>有意义的前沿备查，暂不作为首选教师。自定义代码和非商业权重许可分别核对，联合建模不等于已有本项目鲁棒性</td>
+<td><a href="https://arxiv.org/html/2609.17488v1" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://github.com/limix-ldm-ai/LimiX" rel="noopener noreferrer" target="_blank">官方代码</a>、<a href="https://huggingface.co/stable-ai/LimiX-2" rel="noopener noreferrer" target="_blank">权重与许可</a>；全文／代码／卡</td>
+</tr>
+<tr id="tabular-record-14">
+<td>T14</td>
+<td>OrionMoE-Small v1.0，2026-10-14 预印本</td>
+<td>按数据集上下文和单元表示选择稀疏专家，纯合成预训练</td>
+<td>新但不宜立即纳入复现。论文列出的 GitHub 本轮 404，HF API 401，官网是申请制 early access；不是已取得可运行公开模型</td>
+<td><a href="https://arxiv.org/html/2610.20418v1" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://orionmoe.lexsi.ai/" rel="noopener noreferrer" target="_blank">官方状态</a>；全文／入口状态</td>
+</tr>
+<tr id="tabular-record-15">
+<td>T15</td>
+<td>Google TabFM v1.0.0，2026 官方模型／项目</td>
+<td>表格 ICL，JAX／PyTorch 接口，混合类型输入</td>
+<td>备查参照。代码 Apache-2.0 与非商业预训练权重分开；官方 README 暂无完整技术论文链接，不填顶会身份</td>
+<td><a href="https://github.com/google-research/tabfm" rel="noopener noreferrer" target="_blank">作者项目</a>；README／代码入口</td>
+</tr>
+<tr id="tabular-record-16">
+<td>B01</td>
+<td>TabArena，NeurIPS 2025 Datasets &amp; Benchmarks</td>
+<td>持续维护的表格模型、调参、集成比较</td>
+<td>借鉴公平预算和版本锁定，不把 Elo 当本项目低 FPR 证据</td>
+<td><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/1697e3fb412da11dc9488249f9e7bbc9-Abstract-Datasets_and_Benchmarks_Track.html" rel="noopener noreferrer" target="_blank">正式记录</a>、<a href="https://github.com/autogluon/tabarena" rel="noopener noreferrer" target="_blank">代码</a>；全文／代码</td>
+</tr>
+<tr id="tabular-record-17">
+<td>B02</td>
+<td>TALENT，JMLR 2025 26(226)</td>
+<td>统一工具箱与大量表格学习方法</td>
+<td>获取可靠适配入口与比较协议；表格行随机划分不能直接移入关联网络流</td>
+<td><a href="https://www.jmlr.org/beta/papers/v26/25-0512.html" rel="noopener noreferrer" target="_blank">期刊记录</a>、<a href="https://github.com/LAMDA-Tabular/TALENT" rel="noopener noreferrer" target="_blank">代码</a>；记录／代码</td>
+</tr>
+<tr id="tabular-record-18">
+<td>B03</td>
+<td>BeyondArena，2026-06 预印本</td>
+<td>同时关注 IID、分组和时间划分的表格基准</td>
+<td>直接支持“榜单强不等于组／时间迁移强”的研究设计；正式会议身份本轮未核实</td>
+<td><a href="https://arxiv.org/html/2606.30410v1" rel="noopener noreferrer" target="_blank">全文</a>、<a href="https://huggingface.co/spaces/TabArena/leaderboard/blob/main/website_texts.py" rel="noopener noreferrer" target="_blank">官方基准说明</a>；全文相关协议／结果</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tabular-heading-4">3. 六个需要落实到实验的阅读结论</h2>
+<h3 id="tabular-heading-5">3.1 TabM：不能用一个 tiny 配置代表前沿对照</h3>
+<p>原文 §3.3／§3.5：训练分别计算成员损失，推理平均概率，早停应依据集成表现。当前适配器已改用集成概率的 weighted BCE 选轮；这属于修复复现偏差。论文附录搜索含 k=32 和更宽网络，现有 k=8、width=32 是低成本配置。需要另列合理调优的质量点，并比较训练较大集成后裁剪成员，成本与结果均实测。当前没有新协议真实训练结果。</p>
+<h3 id="tabular-heading-6">3.2 ModernNCA：模型文件之外还有参考样本</h3>
+<p>原文 §3 的预测通过学习后的邻域关系聚合标签，训练可对参考样本随机抽取。它提示：UNSW／CIC 的重复模式、局部密度与异常组值得检查。但检索方法需要保存或产生参考表示，CPU 吞吐、启动内存和支持集规模都必须计入。若仅比较网络参数，容易把存储转移到支持集后误称压缩。此方法先作机制参照，避免第一批增加昂贵全量邻域计算。</p>
+<h3 id="tabular-heading-7">3.3 TabICLv2：基础模型上下文也是训练资料</h3>
+<p>目标感知表示使某些预计算结果依赖上下文标签。OOF 不仅要把预测对象移出 fit，还须保证编码、上下文、缓存都来自该折训练侧。百万行、50GB 级论文能力不等于本项目 24GB 显存可用；CIC 约 128 万训练行，需要先做折内上下文规模与攻击支持检查。它是首选候选之一，理由是机制、输入和公开工件有较清楚对应，不是已证实比 HGB 强。</p>
+<h3 id="tabular-heading-8">3.4 Mitra-v2：较新成绩的成本口径必须拆开</h3>
+<p>原文 §3.1、§3.6、§5 明确，headline 系统使用短微调及 8 折 bagging；不是零样本、单模型或已证明 Pareto 支配。作者也披露领先组区间重叠、预测时间未单独仪表化，以及多项预训练变化未完全分解。若选为教师，应先比较冻结前向与受限微调，记录所有 bag 子模型、上下文、显存与 OOF 成本；不能直接将其榜单名次作为选教师依据。</p>
+<h3 id="tabular-heading-9">3.5 ConTextTab／LimiX-2：语义编码与遮盖不是空白</h3>
+<p>ConTextTab 已利用列名和文本语义；LimiX-2 研究上下文条件遮盖及联合表格建模。因此“给字段加语义”“遮住字段自监督”“加行列注意力”都需要更具体的差异。对网络统计量，应先证明语义分组比随机分组和派生字段泄漏控制更有效。没有这一步，换一个有语义名称的模块仍不足以构成创新。</p>
+<h3 id="tabular-heading-10">3.6 BeyondArena：迁移检验比换一个榜首更关键</h3>
+<p>该工作把分组和时间划分纳入基准，强调不能把 IID 表格的结论直接推广到非 IID 任务。适配到本项目，应保留网络会话／采集单元的隔离、重复模式敏感性以及可靠时间元数据。按 CSV 行序构造“未来”不成立；合成组比例变化只能称受控压力测试。基础模型同样需要接受这些检查。</p>
+<h2 id="tabular-heading-11">4. 2026-11-03 实查的模型身份</h2>
+<p>以下通过 Hugging Face 官方 API 查询仓库元数据和文件列表；只读元数据，没有下载权重或执行模型。仓库 revision 不等于 checkpoint 文件 SHA-256；运行前仍须下载校验。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>模型仓库</th>
+<th>本轮 revision</th>
+<th>对应文件／状态</th>
+<th>模型许可标记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autogluon/mitra-classifier-2</td>
+<td>edada0d20759c58ada8c8605c25f22f6e98ea5f0</td>
+<td>model.safetensors</td>
+<td>Apache-2.0</td>
+</tr>
+<tr>
+<td>jingang/TabICL</td>
+<td>4dcd344ece2c00be9e831fdd35bed57b5ad83e19</td>
+<td>tabicl-classifier-v2-20260212.ckpt</td>
+<td>BSD-3-Clause</td>
+</tr>
+<tr>
+<td>Prior-Labs/tabpfn_3_5</td>
+<td>06bf2ba35c80a92a3b9abb436b99cf49e7a0365e</td>
+<td>主模型、multiclass、fast 三个 safetensors；本项目尚未选用</td>
+<td>自定义，见全文</td>
+</tr>
+<tr>
+<td>Layer6/TabDPT</td>
+<td>a5ca6e01c0fa09ec68c73e958e5199d1932abb3a</td>
+<td>tabdpt1_3.safetensors；不是软件 1.3.2</td>
+<td>Apache-2.0</td>
+</tr>
+<tr>
+<td>stableai-org/LimiX-2</td>
+<td>de07b679e74a41b50b9de18251a8fa245e537440</td>
+<td>LimiX-2.ckpt；当前文档还使用 stable-ai 别名</td>
+<td>自定义非商业权重许可</td>
+</tr>
+<tr>
+<td>Lexsi/OrionMoE</td>
+<td>未取得</td>
+<td>公开 API 返回 401；论文链接与官网状态不一致</td>
+<td>论文／官网为 LSAL，自定义 source-available</td>
+</tr>
+</tbody>
+</table></div>
+<p>软件、模型发布日期和论文年份不能互相代替。TabDPT 1.3.2 更新解释接口，不代表另发了一个同名模型；ConTextTab 旧仓重定向后，运行接口和论文原版也需分开记录。对 OrionMoE 的访问失败只证明本轮公开入口未取得，不推出模型不存在。</p>
+<h2 id="tabular-heading-12">5. 最小而有说服力的比较顺序</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>模型／工作</th>
+<th>入场条件与输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先补强</td>
+<td>CatBoost、LightGBM、充分调优 TabM，加现有 RF／HGB／小 MLP</td>
+<td>在同一开发分区、同一低 FPR 目标与公开预算下选型；保留类别处理差异与成本</td>
+</tr>
+<tr>
+<td>选一个 TFM</td>
+<td>TabICLv2 优先；若质量／资源不合格，再查 Mitra-v2 或 TabDPT 1.3</td>
+<td>在实验室先做 2–3 个折内上下文规模检查；未胜出不生成全矩阵 OOF</td>
+</tr>
+<tr>
+<td>再研究迁移</td>
+<td>最强合格教师与固定小学生</td>
+<td>比普通 KD、严格 matched-hard、已发表工作点方法及独立低 FPR 训练基线；教师和机制不能一起替换</td>
+</tr>
+<tr>
+<td>有依据才扩展</td>
+<td>ModernNCA、RealMLP、ConTextTab、LimiX 家族等</td>
+<td>具体失败诊断需要它时增加；不将模型数量当论文创新</td>
+</tr>
+</tbody>
+</table></div>
+<p>调参优先使用可记录的墙钟／算力上限、统一开发划分和停止规则。不同方法每次 trial 成本不同，不能声称相同次数就完全公平。报告默认值质量和预算内调优质量两个口径；不为新方法挑最优 seed，也不以旧 tiny pilot 否定方法。</p>
+<p>所有真实训练与正式资源测量均在实验室 RTX4090D；本轮的文献核查不属于新实验结果。下一步的优先级是先回答“强教师是否合格”和“最近邻是否已经解决问题”，再决定是否值得扩展蒸馏矩阵。</p></article></section><section id="doc-products" class="document" hidden><details class="toc"><summary>本篇目录</summary><a href="#products-heading-2" class="h2">结论与比较边界</a><a href="#products-heading-3" class="h2">1. 网络与主机安全工程：已经成熟的能力</a><a href="#products-heading-4" class="h2">2. 流特征、在线学习与研究评测：可复用的基础设施</a><a href="#products-heading-5" class="h2">3. 商业 NDR：公开输入和调查流程已相当完整</a><a href="#products-heading-6" class="h2">4. 版本、来源与许可核对</a><a href="#products-heading-7" class="h2">5. 超出首页宣传的具体核验</a><a href="#products-heading-8" class="h2">6. 与当前 TraceLight 的真实差距</a><a href="#products-heading-9" class="h2">7. 应借鉴的顺序与不应扩大的范围</a><a href="#products-heading-10" class="h2">核查记录</a></details><article><h1 id="products-heading-1">成熟产品、开源工程与评测生态审查（2026-11-03）</h1>
+<h2 id="products-heading-2">结论与比较边界</h2>
+<p>本轮覆盖 20 项：6 个网络/主机安全工程、2 个流特征工具、1 个在线异常检测原型、7 个机器学习与评测基础设施、4 个商业 NDR 产品。这里只核官方公开文档和可读源码，没有安装、登录客户环境、运行样本或复现其性能。产品组合、输入层次、检测目标和资源口径不同，不能把厂商检测率、论文分数、链路吞吐量与 TraceLight 的离线二分类或 CPU 模型推理数字放在同一榜单。</p>
+<p>成熟成果已经解决了大量需求：采集和协议解析、会话日志、规则告警、历史检索、告警到原始证据的跳转、在线学习评测、自动调参、实验追踪。把这些功能接到一个网页，不构成新的检测算法。TraceLight 可争取的研究贡献应聚焦于：<strong>在压缩与可部署成本约束下，低误报工作点和困难攻击族的识别能否得到可重复保护，改善来自什么机制，失败边界在哪里。</strong> 当前证据尚不足以声称该问题已经解决。</p>
+<p>下文中“CPU 可运行”仅说明该组件的执行路径或部署形态，不表示已在本机测得吞吐、低内存或端到端实时能力；“可读源码”也不表示已复现。</p>
+<h2 id="products-heading-3">1. 网络与主机安全工程：已经成熟的能力</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>实际输入、检测类型</th>
+<th>在线/文件、CPU 与证据界面</th>
+<th>对 TraceLight 的借鉴及不可比之处</th>
+</tr>
+</thead>
+<tbody>
+<tr id="products-record-1">
+<td><strong>Suricata</strong></td>
+<td>包、流及应用层协议；签名规则、协议/解码异常、可配置 IDS/IPS。这里的 anomaly 不能直接译成学习式异常模型。</td>
+<td>网卡流量和 PCAP；CPU 多线程引擎；EVE JSON 包含告警、流、协议、文件等事件，通常外接检索界面。<a href="https://github.com/OISF/suricata/blob/suricata-8.0.8/suricata.yaml.in" rel="noopener noreferrer" target="_blank">稳定版配置</a></td>
+<td>借鉴事件结构、flow_id、规则/模型来源、丢包与引擎状态。规则命中、阻断 verdict 与监督分类真阳性并非同一概念。<a href="https://docs.suricata.io/en/latest/output/eve/eve-json-output.html" rel="noopener noreferrer" target="_blank">EVE 文档</a></td>
+</tr>
+<tr id="products-record-2">
+<td><strong>Zeek</strong></td>
+<td>被动包与协议分析，脚本产生连接、DNS、HTTP 等日志及 Notice；基础组件不是一个通用监督分类器。</td>
+<td>实时接口与离线 PCAP；CPU；结构化日志和脚本生态，核心自身不是完整 SOC 看板。</td>
+<td>借鉴稳定会话 UID、方向与状态语义。<code>duration</code>、字节统计不保证等于 CIC/UNSW 同名字段；不能只重命名列后直接喂模型。<a href="https://github.com/zeek/zeek/blob/v9.0.1/scripts/base/protocols/conn/main.zeek" rel="noopener noreferrer" target="_blank">固定版 conn 源码</a></td>
+</tr>
+<tr id="products-record-3">
+<td><strong>Security Onion</strong></td>
+<td>组合网络、终端、日志数据和多个检测/检索组件；是 SOC 平台而非单一算法。</td>
+<td>分布式采集、搜索和存储；服务器 CPU/RAM/磁盘成本；Alerts、Hunt、PCAP、Cases 构成调查流程。</td>
+<td>借鉴告警筛选、详情、确认/升级、证据跳转；不需照搬整套平台。已读 2.4 Alerts 文档，不能据此保证新 3.x 的接口兼容；部分 AI/Guided Analysis 能力有版本/Pro 条件。<a href="https://docs.securityonion.net/en/2.4/alerts.html" rel="noopener noreferrer" target="_blank">功能文档</a></td>
+</tr>
+<tr id="products-record-4">
+<td><strong>Wazuh</strong></td>
+<td>代理/日志、解码器与规则关联；还覆盖主机文件完整性等终端需求，不是直接消费任意流 CSV 的同任务分类器。</td>
+<td>持续代理/日志输入，manager、indexer、dashboard；规则与事件可追溯。</td>
+<td>借鉴规则 ID、来源、窗口和关联作用域。流表没有终端证据时不能编造主机入侵链；规则频次统计与模型 FPR 不能混写。<a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html" rel="noopener noreferrer" target="_blank">规则语法</a></td>
+</tr>
+<tr id="products-record-5">
+<td><strong>Arkime</strong></td>
+<td>包捕获、会话元数据索引及检索；核心价值是取证，不是统一的学习式攻击识别。</td>
+<td>接口/PCAP；捕获、索引和存储使用服务器资源；Viewer/API 可从会话取回 PCAP、重组协议内容。</td>
+<td>借鉴会话到原始证据的联系、保留期和“已过期/不可用”状态。只有 CSV 行号与字段时，不能称为包级溯源。<a href="https://arkime.com/architecture" rel="noopener noreferrer" target="_blank">架构</a>、<a href="https://arkime.com/apiv3" rel="noopener noreferrer" target="_blank">会话 PCAP API</a></td>
+</tr>
+<tr id="products-record-6">
+<td><strong>ntopng</strong></td>
+<td>镜像包或收集器提供的流、主机与应用遥测；流量分析、行为检查、告警及 IDS 集成，不等于固定标签监督模型。</td>
+<td>CPU 网络探针；实时和历史 Web UI、REST；包接口与 ZMQ 接口能力不同，部分采集依赖 nProbe 等组件。</td>
+<td>借鉴实时/历史区分、主机/应用筛选、数据源类型。Community 与 Pro/Enterprise 功能不能混用，更不能套用其链路吞吐量。<a href="https://www.ntop.org/guides/ntopng/advanced_features/interfaces/index.html" rel="noopener noreferrer" target="_blank">接口文档</a>、<a href="https://www.ntop.org/guides/ntopng/versions_and_licensing.html" rel="noopener noreferrer" target="_blank">版本许可</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="products-heading-4">2. 流特征、在线学习与研究评测：可复用的基础设施</h2>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>实际输入、算法角色</th>
+<th>在线/文件、CPU 与证据界面</th>
+<th>对 TraceLight 的借鉴及不可比之处</th>
+</tr>
+</thead>
+<tbody>
+<tr id="products-record-7">
+<td><strong>NFStream</strong></td>
+<td>PCAP、PCAP 列表、接口 → 双向流；DPI、统计和插件框架。插件可以挂 ML，但提取器本身不是已训练的万能 IDS。</td>
+<td>在线/离线 CPU meter，插件生命周期、DataFrame/CSV 导出、轮转/匿名化；无完整 SOC UI。</td>
+<td>最适合考察的采集适配候选，但要核字段层次、超时、单位和何时可用。官方已有 ML train/deploy 示例，所以“流上接模型”不是创新。<a href="https://www.nfstream.org/docs/api" rel="noopener noreferrer" target="_blank">API/插件文档</a></td>
+</tr>
+<tr id="products-record-8">
+<td><strong>CICFlowMeter（原作者仓）</strong></td>
+<td>PCAP → 双向流统计表；首包定义方向，TCP/UDP 流终止规则和超时参与定义。不是检测模型。</td>
+<td>文件提取/Java 工具链、CPU；输出特征，未提供可与本项目直接互换的分类器。</td>
+<td>固定源码、配置、方向、单位和修复版本再谈新流量兼容；不要把 Python fork、作者旧仓、修正 CIC 数据的生成器视作同一版本。<a href="https://github.com/ahlashkari/CICFlowMeter/blob/98a5ebad0df579cc8b43eedd3421b3ae87699901/ReadMe.txt" rel="noopener noreferrer" target="_blank">作者说明</a></td>
+</tr>
+<tr id="products-record-9">
+<td><strong>Kitsune / KitNET</strong></td>
+<td>包经 AfterImage 统计后进入在线自编码器集合，输出重构异常分数；无监督，存在特征映射/训练宽限阶段。</td>
+<td>原型支持包序列处理、CPU 路径；输出分数及示例图，不是成熟多用户取证平台。</td>
+<td>借鉴预热/训练/执行状态和有界集合；不得把无监督分数称为校准攻击概率，也不能由原论文推断当前数据上的低 FPR。<a href="https://github.com/ymirsky/Kitsune-py" rel="noopener noreferrer" target="_blank">README</a>、<a href="https://github.com/ymirsky/Kitsune-py/blob/7c8ea51e89268d9a20399dca4bf32d663e638eb4/KitNET/KitNET.py" rel="noopener noreferrer" target="_blank">KitNET 实现</a></td>
+</tr>
+<tr id="products-record-10">
+<td><strong>River</strong></td>
+<td>逐条字典/特征和可延迟标签；增量监督、异常与漂移等算法/评测库，不解析网络包。</td>
+<td>CPU 增量模型；progressive validation、逐步指标与资源测量，无现成 SOC UI。</td>
+<td>借鉴先预测后学习、标签延迟、时间与内存记账。随机打乱离线行的实验不能命名为概念漂移验证。<a href="https://riverml.xyz/latest/api/evaluate/progressive-val-score/" rel="noopener noreferrer" target="_blank">评测 API</a>、<a href="https://github.com/online-ml/river/blob/0.26.1/river/evaluate/progressive_validation.py" rel="noopener noreferrer" target="_blank">固定版实现</a></td>
+</tr>
+<tr id="products-record-11">
+<td><strong>CapyMOA</strong></td>
+<td>Python 数据流接口与 MOA 后端；分类、回归、异常、漂移评测及相关学习器，不是网络流采集器。</td>
+<td>prequential 等流式评测，CPU/MOA 为重要路径，也有需另核依赖的深度模型；指标/绘图接口。</td>
+<td>适合作为后续真实时间流研究的评测基础，当前不能只调用库便声称新漂移算法；0.x API 与 Java/MOA 依赖需固定。<a href="https://capymoa.org/api/modules/capymoa.evaluation.html" rel="noopener noreferrer" target="_blank">评测模块</a>、<a href="https://github.com/adaptive-machine-learning/CapyMOA/blob/v0.15.1/README.md" rel="noopener noreferrer" target="_blank">固定版 README</a></td>
+</tr>
+<tr id="products-record-12">
+<td><strong>PyOD</strong></td>
+<td>数值特征矩阵上的异常模型与统一 score/predict API；当前还提供生命周期/agent 等接口，不能只描述成早期模型列表。</td>
+<td>传统算法多有 CPU 路径，深度模型依赖另核；统一分数、预测、置信/拒识等接口不等于包级证据。</td>
+<td>可选少数异常基线，但训练污染率阈值不等于独立正常集 FPR 校准。统一输入/标签可用性和调参预算后才可比较。<a href="https://pyod.readthedocs.io/en/latest/" rel="noopener noreferrer" target="_blank">当前文档</a>、<a href="https://github.com/yzhao062/pyod/blob/v3.6.7/pyod/models/base.py" rel="noopener noreferrer" target="_blank">固定版 BaseDetector</a></td>
+</tr>
+<tr id="products-record-13">
+<td><strong>ADBench</strong></td>
+<td>异常检测 benchmark，区分无监督/半监督/监督、标签可用量和若干鲁棒性情景；不是一个网络安全产品。</td>
+<td>离线矩阵、CPU/GPU 取决于模型；固定 seed、运行结果表和脚本。</td>
+<td>借鉴负对照、污染与标签预算；默认数据生成可能改变采样/复制样本，不能直接套到本项目冻结分区。<a href="https://github.com/Minqi824/ADBench/blob/3dac8221081e190f157d78e93bfa8867f90d0965/README.md" rel="noopener noreferrer" target="_blank">README</a>、<a href="https://github.com/Minqi824/ADBench/blob/3dac8221081e190f157d78e93bfa8867f90d0965/adbench/run.py" rel="noopener noreferrer" target="_blank">run.py</a></td>
+</tr>
+<tr id="products-record-14">
+<td><strong>AutoGluon Tabular</strong></td>
+<td>带标签表格，监督模型选择、调参、bagging/stacking、可选蒸馏/部署处理；不负责包采集与协议语义。</td>
+<td>离线训练、CPU/GPU 视模型，<code>predict_proba</code>/leaderboard；不是 SOC 界面。</td>
+<td>借鉴合理强基线、时间限制、推理预算。自动集成/重训可能显著增大成本或合并分区，不能无记录地与小 MLP 比较。<a href="https://auto.gluon.ai/stable/api/autogluon.tabular.TabularPredictor.fit.html" rel="noopener noreferrer" target="_blank">fit API</a>、<a href="https://auto.gluon.ai/stable/tutorials/tabular/advanced/tabular-deployment.html" rel="noopener noreferrer" target="_blank">部署文档</a></td>
+</tr>
+<tr id="products-record-15">
+<td><strong>TabArena</strong></td>
+<td>NeurIPS 2025 Datasets and Benchmarks Track 的表格评测生态：固定任务、实现、配置与调参/集成结果；不是单个检测模型。</td>
+<td>离线任务/缓存预测、评测结果；资源随模型与搜索预算变化，无网络流量分析 UI。</td>
+<td>借鉴版本化协议与共同预算。其 IID 表格排名不能代替 UNSW/CIC 的原始字段约束、困难族、低 FPR 与部署测量。<a href="https://github.com/autogluon/tabarena/tree/v0.1.0" rel="noopener noreferrer" target="_blank">官方仓</a>、<a href="https://papers.neurips.cc/paper_files/paper/2025/file/1697e3fb412da11dc9488249f9e7bbc9-Paper-Datasets_and_Benchmarks_Track.pdf" rel="noopener noreferrer" target="_blank">正式论文</a></td>
+</tr>
+<tr id="products-record-16">
+<td><strong>MLflow</strong></td>
+<td>代码版本、参数、指标、数据/模型和任意实验产物的跟踪、注册与比较；不改进分类决策本身。</td>
+<td>CPU/服务端追踪，UI/API、runs/artifacts/registry；可与本地训练分离。</td>
+<td>实验追踪、模型来源展示已有成熟工具。哈希/registry 不能自动证明无泄漏或 test 未被调参；本项目仍需显式 split、阈值来源和确认状态。<a href="https://mlflow.org/docs/latest/ml/tracking/" rel="noopener noreferrer" target="_blank">Tracking 文档</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="products-heading-5">3. 商业 NDR：公开输入和调查流程已相当完整</h2>
+<p>以下只核厂商公开技术能力，不采信营销数字作为可复现结果；没有采购/登录/验证模型、告警质量或 CPU 性能。商业产品没有在本轮核到可固定复现的完整内部版本、训练数据、权重和阈值协议，因此不标“已复现”“低误报已证实”或“全面胜过/不如本项目”。公开部署模块的源代码许可，也不代表产品本身免费或开放。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>产品</th>
+<th>官方可核的输入/检测与部署</th>
+<th>可追溯证据/界面及明确限制</th>
+<th>对本项目的启示</th>
+</tr>
+</thead>
+<tbody>
+<tr id="products-record-17">
+<td><strong>Darktrace / HYBRID NETWORK</strong>（原 <code>/NETWORK</code> 路径重定向）</td>
+<td>官网描述从本环境学习行为画像。作者 GCP vSensor 部署仓具体说明 VPC 镜像/osSensor 输入、DPI 提元数据、TLS 上送已有 master、可选 GCS PCAP；需要 Update Key/Push Token。是商业环境学习/响应体系，不是本项目那种公开监督 MLP。<a href="https://www.darktrace.com/products/hybrid-network" rel="noopener noreferrer" target="_blank">官方产品页</a>、<a href="https://github.com/darktrace/terraform-gcp-vsensor/blob/main/README.md" rel="noopener noreferrer" target="_blank">部署源码说明</a></td>
+<td>可核 master 控制台、传感器与 PCAP 管线；公开材料不足以重建其算法/内部校准。虚机 CPU/RAM 和采集带宽有成本，不可称任意笔记本实时能力。</td>
+<td>借鉴“采集覆盖/传感器健康/证据存储”分离；“自学习、检测未知攻击、AI 调查”不能作为我们的新颖性口号。部署脚本公开不等于取得产品许可。</td>
+</tr>
+<tr id="products-record-18">
+<td><strong>Vectra AI Detect for NDR</strong></td>
+<td>Sensor 接收 SPAN/TAP/镜像，提元数据；Brain 分析与关联，物理/虚拟/云部署。<a href="https://content.vectra.ai/hubfs/downloadable-assets/Datasheet_Appliance-SensorSpecs.pdf" rel="noopener noreferrer" target="_blank">官方技术规格</a>、<a href="https://docs.vectra.ai/deployment/traffic-engineering-and-validation/network-traffic-recommendations" rel="noopener noreferrer" target="_blank">网络流量建议</a></td>
+<td>技术文档明确 detection PCAP 来自滚动缓冲且可能不完整/缺失；日志类账户/云检测不必有包。控制台不能把缺证据伪装成完整流量回放。<a href="https://docs.vectra.ai/reference/how-detection-pcaps-are-generated" rel="noopener noreferrer" target="_blank">Detection PCAP 文档</a></td>
+<td>借鉴证据不可用状态、数据源类型和检测延迟的影响；机器学习/关联为厂商公开描述，内部模型和实际 FPR 未核。商业订阅形态，合同许可未审查。</td>
+</tr>
+<tr id="products-record-19">
+<td><strong>ExtraHop RevealX</strong></td>
+<td>原始包 → 协议/事务/指标；NDR 行为检测，并可配 IDS 签名和 Packet Forensics。公开 FAQ 区分 sensor、packetstore、recordstore、console 及 SaaS/本地部署。<a href="https://www.extrahop.com/products/faq" rel="noopener noreferrer" target="_blank">官方 FAQ</a>、<a href="https://docs.extrahop.com/9.4/intro-to-eh-system/intro-to-eh-system.pdf" rel="noopener noreferrer" target="_blank">架构指南</a></td>
+<td>具备检测调查、包查询、包存储/取回；模块和访问权限有边界。已读 9.4 架构文档，不把它写成截至本日最新软件版本或现租户兼容保证。</td>
+<td>借鉴原始包、事务记录、告警三层证据。NDR/IDS/取证的组合不是单一 ML 评分，也不能拿厂商专用设备吞吐对比 CSV 推理。商业交付，合同许可未审查。</td>
+</tr>
+<tr id="products-record-20">
+<td><strong>Corelight Open NDR</strong></td>
+<td>Sensors 将 Zeek、Suricata、威胁情报及厂商本地 ML/异常能力组合；硬件、软件、虚拟、云与 flow-log sensor 各有适用输入。<a href="https://corelight.com/platform/sensors" rel="noopener noreferrer" target="_blank">传感器说明</a></td>
+<td>Smart PCAP 可按流量/事件选择捕获，并在 Zeek 日志用 <code>spcap.url</code> 链到相关包；为订阅模块。<a href="https://corelight.com/platform/smart-pcap" rel="noopener noreferrer" target="_blank">Smart PCAP</a></td>
+<td>借鉴日志到包的稳定联系和选择性保留。Open NDR 名称不代表整个产品 OSI 开源；上游开源组件与厂商产品许可分开。<a href="https://corelight.com/hubfs/legal/eula.pdf" rel="noopener noreferrer" target="_blank">厂商 EULA</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>这四家已覆盖“环境行为模型/混合检测 → 排序告警 → 调查证据 → 平台集成”的产品需求。本项目不宜以“首次把 AI 用于 NDR”“自动生成攻击链”“替代企业 SOC”定位。有限资源下，更有价值的是对一个受控问题给出厂商材料无法替代的透明实验、可否定结论和部署成本证据。</p>
+<h2 id="products-heading-6">4. 版本、来源与许可核对</h2>
+<p>日期为公开 release 的发布日期，统一按截至 <strong>2026-11-03</strong> 可见且已发布的记录；没有正式 release 的项目固定 commit。许可只描述所列主仓，依赖、打包组件、数据、规则/模型资产可能另有条款。GitHub API 的 <code>NOASSERTION</code> 不当作“无许可”；已对相应原文另核。此表是工程来源核验，不是法律意见或许可兼容审计。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>本轮固定的公开版本 / 日期</th>
+<th>主仓许可与直接依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suricata</td>
+<td><a href="https://github.com/OISF/suricata/releases/tag/suricata-8.0.8" rel="noopener noreferrer" target="_blank">suricata-8.0.8</a>，2026-10-29</td>
+<td><a href="https://github.com/OISF/suricata/blob/suricata-8.0.8/LICENSE" rel="noopener noreferrer" target="_blank">GPL-2.0</a>；规则集另核。</td>
+</tr>
+<tr>
+<td>Zeek</td>
+<td><a href="https://github.com/zeek/zeek/releases/tag/v9.0.1" rel="noopener noreferrer" target="_blank">v9.0.1</a>，2026-10-26</td>
+<td><a href="https://github.com/zeek/zeek/blob/v9.0.1/COPYING" rel="noopener noreferrer" target="_blank">BSD 三条款式 COPYING</a>，文件自有版权/依赖另核。</td>
+</tr>
+<tr>
+<td>Security Onion</td>
+<td><a href="https://github.com/Security-Onion-Solutions/securityonion/releases/tag/3.4.0-20261102" rel="noopener noreferrer" target="_blank">3.4.0-20261102</a>，2026-11-02</td>
+<td>主仓 <a href="https://github.com/Security-Onion-Solutions/securityonion/blob/3.4.0-20261102/LICENSE" rel="noopener noreferrer" target="_blank">Elastic License 2.0</a>，不能笼统称全栈 GPL/OSI 开源。</td>
+</tr>
+<tr>
+<td>Wazuh</td>
+<td><a href="https://github.com/wazuh/wazuh/releases/tag/v4.14.9" rel="noopener noreferrer" target="_blank">v4.14.9</a>，2026-10-15</td>
+<td><a href="https://github.com/wazuh/wazuh/blob/v4.14.9/LICENSE" rel="noopener noreferrer" target="_blank">GPLv2 主许可及所列例外</a>，组件另核。</td>
+</tr>
+<tr>
+<td>Arkime</td>
+<td><a href="https://github.com/arkime/arkime/releases/tag/v6.9.1" rel="noopener noreferrer" target="_blank">v6.9.1</a>，2026-10-22</td>
+<td><a href="https://github.com/arkime/arkime/blob/v6.9.1/LICENSE" rel="noopener noreferrer" target="_blank">Apache-2.0</a>。</td>
+</tr>
+<tr>
+<td>ntopng</td>
+<td><a href="https://github.com/ntop/ntopng/releases/tag/7.0" rel="noopener noreferrer" target="_blank">7.0</a>，2026-09-22</td>
+<td>Community <a href="https://github.com/ntop/ntopng/blob/7.0/README.md" rel="noopener noreferrer" target="_blank">GPLv3</a>；Pro/Enterprise <a href="https://www.ntop.org/guides/ntopng/versions_and_licensing.html" rel="noopener noreferrer" target="_blank">额外商业许可</a>。</td>
+</tr>
+<tr>
+<td>NFStream</td>
+<td><a href="https://github.com/nfstream/nfstream/releases/tag/v6.6.0" rel="noopener noreferrer" target="_blank">v6.6.0</a>，2026-02-15</td>
+<td><a href="https://github.com/nfstream/nfstream/blob/v6.6.0/LICENSE" rel="noopener noreferrer" target="_blank">LGPL-3.0</a>。</td>
+</tr>
+<tr>
+<td>CICFlowMeter</td>
+<td>无正式 release；<a href="https://github.com/ahlashkari/CICFlowMeter/commit/98a5ebad0df579cc8b43eedd3421b3ae87699901" rel="noopener noreferrer" target="_blank">98a5ebad0df5</a>，2022-01-05</td>
+<td>此作者仓的 <a href="https://github.com/ahlashkari/CICFlowMeter/blob/98a5ebad0df579cc8b43eedd3421b3ae87699901/LICENSE.txt" rel="noopener noreferrer" target="_blank">LICENSE.txt</a> 是 MIT 式授权文本；不能从其他 fork 推断 GPL。</td>
+</tr>
+<tr>
+<td>Kitsune-py</td>
+<td>无正式 release；<a href="https://github.com/ymirsky/Kitsune-py/commit/7c8ea51e89268d9a20399dca4bf32d663e638eb4" rel="noopener noreferrer" target="_blank">7c8ea51e8926</a>，2026-03-24</td>
+<td><a href="https://github.com/ymirsky/Kitsune-py/blob/7c8ea51e89268d9a20399dca4bf32d663e638eb4/LICENSE" rel="noopener noreferrer" target="_blank">MIT</a>。</td>
+</tr>
+<tr>
+<td>River</td>
+<td><a href="https://github.com/online-ml/river/releases/tag/0.26.1" rel="noopener noreferrer" target="_blank">0.26.1</a>，2026-08-21</td>
+<td><a href="https://github.com/online-ml/river/blob/0.26.1/LICENSE" rel="noopener noreferrer" target="_blank">BSD-3-Clause</a>。</td>
+</tr>
+<tr>
+<td>CapyMOA</td>
+<td><a href="https://github.com/adaptive-machine-learning/CapyMOA/releases/tag/v0.15.1" rel="noopener noreferrer" target="_blank">v0.15.1</a>，2026-09-25</td>
+<td>Python 主仓 <a href="https://github.com/adaptive-machine-learning/CapyMOA/blob/v0.15.1/LICENSE" rel="noopener noreferrer" target="_blank">BSD-3-Clause</a>；MOA/Java 及其他依赖另核。</td>
+</tr>
+<tr>
+<td>PyOD</td>
+<td><a href="https://github.com/yzhao062/pyod/releases/tag/v3.6.7" rel="noopener noreferrer" target="_blank">v3.6.7</a>，2026-10-12</td>
+<td><a href="https://github.com/yzhao062/pyod/blob/v3.6.7/LICENSE" rel="noopener noreferrer" target="_blank">BSD-2-Clause</a>。</td>
+</tr>
+<tr>
+<td>ADBench</td>
+<td>无正式 release；<a href="https://github.com/Minqi824/ADBench/commit/3dac8221081e190f157d78e93bfa8867f90d0965" rel="noopener noreferrer" target="_blank">3dac8221081e</a>，2026-01-08</td>
+<td><a href="https://github.com/Minqi824/ADBench/blob/3dac8221081e190f157d78e93bfa8867f90d0965/LICENSE" rel="noopener noreferrer" target="_blank">BSD-2-Clause</a>；数据与调用模型另核。</td>
+</tr>
+<tr>
+<td>AutoGluon</td>
+<td><a href="https://github.com/autogluon/autogluon/releases/tag/v1.6.3" rel="noopener noreferrer" target="_blank">v1.6.3</a>，2026-09-18</td>
+<td><a href="https://github.com/autogluon/autogluon/blob/v1.6.3/LICENSE" rel="noopener noreferrer" target="_blank">Apache-2.0</a>。</td>
+</tr>
+<tr>
+<td>TabArena</td>
+<td><a href="https://github.com/autogluon/tabarena/releases/tag/v0.1.0" rel="noopener noreferrer" target="_blank">v0.1.0</a>，2026-09-03</td>
+<td><a href="https://github.com/autogluon/tabarena/blob/v0.1.0/LICENSE" rel="noopener noreferrer" target="_blank">Apache-2.0</a>；底层任务数据许可分开。</td>
+</tr>
+<tr>
+<td>MLflow</td>
+<td><a href="https://pypi.org/project/mlflow/3.17.2/" rel="noopener noreferrer" target="_blank">PyPI 3.17.2</a>，2026-10-21</td>
+<td><a href="https://github.com/mlflow/mlflow/blob/v3.17.2/LICENSE.txt" rel="noopener noreferrer" target="_blank">Apache-2.0</a>。仓库 <code>model-catalog/latest</code> 等 tag 不等于 Python 包版本。</td>
+</tr>
+<tr>
+<td>Darktrace / HYBRID NETWORK</td>
+<td>2026-11-03 官方产品页和 GCP 部署仓快照；未核完整产品 build</td>
+<td>商业产品；<a href="https://github.com/darktrace/terraform-gcp-vsensor/blob/main/README.md" rel="noopener noreferrer" target="_blank">公开脚本要求已有产品 Update Key/Push Token</a>，脚本许可不覆盖产品，合同未审查。</td>
+</tr>
+<tr>
+<td>Vectra Detect for NDR</td>
+<td>2026-11-03 官方技术规格和文档快照；未核完整产品 build</td>
+<td><a href="https://content.vectra.ai/hubfs/downloadable-assets/Datasheet_Appliance-SensorSpecs.pdf" rel="noopener noreferrer" target="_blank">规格说明商业订阅的软件更新</a>；合同未审查。</td>
+</tr>
+<tr>
+<td>ExtraHop RevealX</td>
+<td>2026-11-03 官方 FAQ/产品页；架构细节参考 9.4 文档</td>
+<td>商业模块交付；<a href="https://www.extrahop.com/products/faq" rel="noopener noreferrer" target="_blank">官方 FAQ</a> 明确基础模块/附加模块，合同未审查。</td>
+</tr>
+<tr>
+<td>Corelight</td>
+<td>2026-11-03 Sensors/Smart PCAP 页面快照；未核完整产品 build</td>
+<td><a href="https://corelight.com/hubfs/legal/eula.pdf" rel="noopener noreferrer" target="_blank">商业 EULA</a>；上游 Zeek/Suricata 等保持各自许可。</td>
+</tr>
+</tbody>
+</table></div>
+<p>滚动文档与固定 release 必须分开：Suricata <code>latest</code> 文档在本轮为 9.0.0-dev，ntopng 文档头为 7.1.261018，AutoGluon stable 文档头为 1.6.1；本表分别固定 8.0.8、7.0、1.6.3 的发布记录。Security Onion 新发布身份已核，但交互流程来自明确标注的 2.4 文档。若实施集成，须再按目标版本验证接口，不能凭这份阅读报告跳过测试。</p>
+<h2 id="products-heading-7">5. 超出首页宣传的具体核验</h2>
+<p>以下核验直接影响设计选择，均为文档/源码阅读证据，未执行相应项目。</p>
+<ol>
+<li><strong>Suricata：关联键与判定层分开。</strong> EVE 支持 <code>flow_id</code>、可选 Community ID 与抓包文件信息，alert action 与引擎最终 verdict 有不同语义。可借鉴为“记录、规则命中、模型分数、阈值、处置”分别存字段；不能只用红色状态块替代证据。<a href="https://docs.suricata.io/en/latest/output/eve/eve-json-output.html" rel="noopener noreferrer" target="_blank">EVE 定义</a>、<a href="https://github.com/OISF/suricata/blob/suricata-8.0.8/suricata.yaml.in" rel="noopener noreferrer" target="_blank">8.0.8 配置</a>。</li>
+<li><strong>Zeek：字段相同不等于定义相同。</strong> <code>Conn::Info</code> 注释指出 duration 不计部分结束处无有效负载的 TCP 包，例如最终 ACK；字节还受序列号等语义影响。把此 duration 或 bytes 直接改名为 CIC 列存在训练/部署不一致风险。<a href="https://github.com/zeek/zeek/blob/v9.0.1/scripts/base/protocols/conn/main.zeek" rel="noopener noreferrer" target="_blank">9.0.1 源码 <code>Info</code></a>。</li>
+<li><strong>Wazuh：关联窗口有范围。</strong> <code>frequency</code>、<code>timeframe</code>、<code>same_srcip</code>、<code>same_field</code> 定义具体计数规则；<code>global_frequency</code> 文档明确是 manager 范围，不是整个 cluster。若做流告警聚合，也应记录窗口、实体键和作用域，不能把聚合数当独立检测数。<a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html" rel="noopener noreferrer" target="_blank">规则语法</a>。</li>
+<li><strong>Arkime：元数据存在不保证包仍在。</strong> API 可按会话 ID/查询导出 PCAP，源码在 SPI 仍存在但 PCAP 文件不可用时返回相应错误，并按原始 packet position 读取/重组。界面必须表现保留期和缺证据状态。<a href="https://arkime.com/apiv3" rel="noopener noreferrer" target="_blank">API</a>、<a href="https://github.com/arkime/arkime/blob/v6.9.1/viewer/apiSessions.js" rel="noopener noreferrer" target="_blank">6.9.1 <code>apiSessions.js</code></a>。</li>
+<li><strong>NFStream 与 CICFlowMeter：采集契约必须审计。</strong> NFStream 明列 active/idle timeout、记账层次、毫秒时间字段、插件 <code>on_init/on_update/on_expire</code> 和早期/流结束统计；CICFlowMeter 说明 duration 为微秒、首包定方向。流结束才能得到的字段不能宣传首包检测；NFStream <code>application_confidence</code> 是 DPI 判别语义，不是攻击置信度。<a href="https://www.nfstream.org/docs/api" rel="noopener noreferrer" target="_blank">NFStream API</a>、<a href="https://github.com/ahlashkari/CICFlowMeter/blob/98a5ebad0df579cc8b43eedd3421b3ae87699901/ReadMe.txt" rel="noopener noreferrer" target="_blank">CIC 作者说明</a>。</li>
+<li><strong>River：在线验证必须约束时序。</strong> <code>progressive_val_score</code> 实现先预测，再在相应标签可用时学习；支持 <code>moment/delay</code> 和时间/内存测量。没有时间、标签延迟和更新策略的独立定义，仅增加一个流式循环不会形成可信在线学习研究。<a href="https://github.com/online-ml/river/blob/0.26.1/river/evaluate/progressive_validation.py" rel="noopener noreferrer" target="_blank">固定版实现</a>。</li>
+<li><strong>PyOD：异常分数与 FPR 校准是两层。</strong> <code>BaseDetector</code> 约定较大 score 更异常，<code>contamination</code> 用训练分数的分位数产生阈值；它表达训练异常比例假设，不能替代本项目在独立正常校准样本上的误报预算。当前文档还已有更多生命周期/置信与组合接口，不能把这些普通接口包装为首创。<a href="https://github.com/yzhao062/pyod/blob/v3.6.7/pyod/models/base.py" rel="noopener noreferrer" target="_blank">固定版 BaseDetector</a>。</li>
+<li><strong>ADBench：跑通脚本可能改变任务。</strong> <code>RunPipeline</code> 区分异常标签的比例/数量，默认含 <code>generate_duplicates=True</code>、小样本阈值 1000 等数据生成选项。本项目不应原样调用其默认数据生成后，把复制样本当新独立样本或与既有完整族支持结果比较。<a href="https://github.com/Minqi824/ADBench/blob/3dac8221081e190f157d78e93bfa8867f90d0965/adbench/run.py" rel="noopener noreferrer" target="_blank">固定版 <code>run.py</code></a>。</li>
+<li><strong>Vectra：商业界面也明确承认证据不完整。</strong> Detection PCAP 由滚动缓冲关联，不保证完整流；检测迟、负载高或数据源为日志时可缺失。我们应同样把“不可用/未采集/已过期/不适用”作为明确状态。<a href="https://docs.vectra.ai/reference/how-detection-pcaps-are-generated" rel="noopener noreferrer" target="_blank">官方 PCAP 文档</a>。</li>
+<li><strong>Corelight：可借鉴的是联系，不是营销吞吐。</strong> Smart PCAP 文档具体给出日志里的 <code>spcap.url</code>、按 Zeek/Suricata 事件选择包和订阅模块边界；这说明“告警可追溯到包”已有成熟工程实现，CSV 字段展示不能等价替代。<a href="https://corelight.com/platform/smart-pcap" rel="noopener noreferrer" target="_blank">Smart PCAP</a>。</li>
+</ol>
+<h2 id="products-heading-8">6. 与当前 TraceLight 的真实差距</h2>
+<p>这里区分已有代码与应做规划，避免把现有成果抹掉，也避免把源码存在写成已完成产品验收。</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>当前代码可核状态</th>
+<th>成熟生态已解决什么 / 我们的边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>新输入推理</td>
+<td><a href="../../src/ids/cli.py"><code>cli.py</code> 117–147</a> 有 CPU <code>predict</code>，输出 score/阈值/来源/run_id；<a href="../../workflows/stage5/demo.py"><code>demo.py</code> 145–191</a> 可对严格 schema 的新 CSV 跑两个模型。</td>
+<td>已有真实推理，不能说只有静态图。CSV 必须是已提取且语义兼容的特征表；这不证明从任意 PCAP/网卡采集到检测已打通。</td>
+</tr>
+<tr>
+<td>界面与结果证据</td>
+<td><a href="../../workflows/stage5/demo.html"><code>demo.html</code></a> 有联合判定四象限、样本/家族筛选、双分数/阈值、输入字段和来源 SHA；通过 CLI 生成独立 HTML，并非网页上传/后台任务服务。</td>
+<td>作为离线模型比较界面已有用处；成熟平台还有会话搜索、时间线、证据跳转和案件状态。不能为表格中没有的时间/IP/包内容制造“真实网络现场”。</td>
+</tr>
+<tr>
+<td>模型与数据来源</td>
+<td>demo 固定第四轮封存模型、seed 17 和 validation 阈值；新 CSV 记录 input SHA。</td>
+<td>需要清楚显示版本与开发/最终确认状态；旧 demo 不自动等于研究 v2 或独立新 test 的结果。哈希证明字节身份，不能单独证明标签正确和无泄漏。</td>
+</tr>
+<tr>
+<td>实时性与成本</td>
+<td>有模型 CPU benchmark 和离线 CPU 推理路径。</td>
+<td>采集、解析、流等待、排队、模型、导出/界面是不同耗时；现有模型延迟不能换算为可承载多少 Gbps。完整流特征还可能存在等待流结束的时延。</td>
+</tr>
+<tr>
+<td>检测有效性</td>
+<td>已有封存实验与机制研究代码，不在本报告重报任何结果。</td>
+<td>研究贡献取决于独立校准/确认、困难族支持、低 FPR 下可重复收益和资源代价；Suricata 规则、商业 NDR、IID 表格榜单均不能代替同协议实验。</td>
+</tr>
+<tr>
+<td>在线更新与漂移</td>
+<td>本轮未核到已验收的真实时间流标签反馈、在线更新/回退流程。</td>
+<td>River/CapyMOA 提供基础工具；若没有新时序问题和可审计数据，暂不扩大为“持续学习 NDR”。</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="products-heading-9">7. 应借鉴的顺序与不应扩大的范围</h2>
+<p><strong>P0：先补研究成立所需的契约与比较。</strong> 明确模型输入的原始字段定义、单位、方向、流终止/超时、缺失语义和特征可用时刻；用现有代码与数据证据逐项核，而不是先挑一个提取器接上。参考 TabArena/ADBench 的预算与标签条件管理，把研究 v2 的机制对照、共同训练/选择预算、失败结果和成本完整呈现。真实 v2 训练按实验室 4090D 路线进行；本机继续代码、单测和 synthetic 验证。旧 test 已开，不能把据此优化的新模型再报为独立确认，见 <a href="../STAGE6_PROTOCOL.md">STAGE6_PROTOCOL</a>。</p>
+<p><strong>P1：完善已有离线系统的可信使用闭环。</strong> 优先补输入不兼容提示、数据/模型/阈值版本、开发/确认状态、完整总量与抽样展示的区别、运行失败与证据缺失状态；用真实模型输出支持比较。此类交付属于可复现性和工程贡献，不能写成新的分类算法。若要宣称端到端可部署，再定义并测量包含读取/解析/预处理/推理的独立成本口径。</p>
+<p><strong>P2：有需求与数据后，只验证一条采集路线。</strong> NFStream 的生命周期契约较清晰，可先做字段可生成性审查；若现有 CIC/UNSW 特征无法忠实生成，就缩小支持范围或重新定义并独立验证任务，不能填零/重命名强行兼容。随后才考虑一条 PCAP → 特征 → 固定模型 → 事件 → 可检查证据的最小闭环。这里的价值是部署验证，不应冒充特征提取或 NDR 产品层面的发明。</p>
+<p><strong>暂不做：</strong> 不安装全部工具、不重建 Security Onion/商业 NDR、不增加没有数据支持的攻击链/拓扑、不自动阻断真实网络、不为“前沿”堆叠在线学习或 agent、不用更多 run 数掩盖研究假设不清。MLflow/完整 SOC 集成应由实际协作需求触发，当前 manifest/哈希/结果表能满足的要求不必立刻增加服务负担。</p>
+<p>可提交的贡献边界：新的可检验损失/选择机制及其归因属于<strong>候选方法贡献</strong>；严格低 FPR 与困难族实验、负结果、资源权衡属于<strong>实证贡献</strong>；schema 审计、来源封存、CPU 推理与可信界面属于<strong>工程贡献</strong>。它们都可能有价值，但标题、摘要和答辩应分别说明，不能互相充当证据。</p>
+<h2 id="products-heading-10">核查记录</h2>
+<ul>
+<li>核查日期：<strong>2026-11-03（Asia/Shanghai）</strong>；只使用项目官方文档、作者/维护方仓库、公开发布页/PyPI 和官方论文入口。</li>
+<li>权限状态：未登录任何商业客户控制台、未申请或使用产品试用权限、未接触客户数据；公开文档不可访问的页面没有当作已验证内容。</li>
+<li>执行状态：没有安装上述项目、没有抓包/发包、没有训练或基准实测，没有复现论文或商业效果；代码阅读与发布身份核对均不等于运行复现。</li>
+<li>商业产品：只确认公开能力与部署输入，内部版本、数据、模型、校准和性能不可独立验证；没有比较价格，也没有采纳“零误报/零日领先/专用设备速率”等营销数字。</li>
+<li>本文仅新增本文件，不更改实验配置、源码、历史结果或封存包。</li>
+</ul></article></section>
+<section id="evidence" hidden><h1>检索对照记录</h1><p>按关键词或专题查阅。记录包含模型型号、基准、论文与产品，存在跨专题重叠；数量不代表不同算法数或复现数。</p><div class="tools"><label for="query">关键词</label><input id="query" type="search" placeholder="例如：蒸馏、1% FPR、TabM、PCAP"><label for="category">专题</label><select id="category"><option value="">全部专题</option><option value="ids">IDS 与流量模型</option><option value="nearest">最近邻与数学审查</option><option value="tabular">表格模型与基准</option><option value="products">产品与开源项目</option></select><span id="count" aria-live="polite"></span></div><ul id="record-list"></ul></section>
+</main><footer>来源为同目录 Markdown 与 source_index.json。页面和 MathML 公式可离线阅读；打开外部来源需联网。代码可见、可运行、结果已复现分别判断。</footer><script>
+const records = [{"id": "ids-01", "category": "ids", "title": "R01 Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection，NDSS 2018 主会", "identity": "R01 Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection，NDSS 2018 主会", "details": "原始包经 AfterImage 提取带时间衰减的上下文统计，再以多个小 AE 的重建误差检测异常；不是 hard-label MLP；正常学习期→执行期；Fig.9 报 TPR/FNR@FPR=0.001、AUC/EER。低 FPR 与轻量部署早已有先例；不是当前独立 calibration→锁阈值 test 协议； 原论文 、 NDSS 官方版本 、 作者完整流水线 、 KitNET 核心 。代码与样例可见；原生提取器不能接现有 CSV。可另做“KitNET 在相同 CSV 的适配对照”，须改名说明； A ：§IV、§V；Fig.9–11、Table V", "source_document": "ids_research.md", "anchor": "ids-record-1", "urls": ["https://arxiv.org/pdf/1802.09089", "https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf", "https://github.com/ymirsky/Kitsune-py", "https://github.com/ymirsky/KitNET-py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-02", "category": "ids", "title": "R02 Whisper / Realtime Robust Malicious Traffic Detection via Frequency Domain Analysis，CCS 2021 主会", "identity": "R02 Whisper / Realtime Robust Malicious Traffic Detection via Frequency Domain Analysis，CCS 2021 主会", "details": "把包级特征序列编码并分帧做 DFT，保留顺序模式，以低冗余频域特征检测；强调吞吐、规避鲁棒性；42 类攻击；报告 ROC/AUC 与系统吞吐。不是当前逐行 CSV 的同输入任务；本次未核到锁定 1% 的独立校准协议； 全文 、 作者代码 。DPDK/10Gb NIC 原型，仓库已归档；原生需要包序列，不能用 CSV 行顺序替代； B ：全文 §3 系统、§5 评估；README Hardware/Usage", "source_document": "ids_research.md", "anchor": "ids-record-2", "urls": ["https://arxiv.org/pdf/2106.14707", "https://github.com/fuchuanpu/Whisper"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-03", "category": "ids", "title": "R03 FSNID / Feature Selection for Network Intrusion Detection，KDD 2025 主会", "identity": "R03 FSNID / Feature Selection for Network Intrusion Detection，KDD 2025 主会", "details": "CSV/特征向量；用神经信息估计衡量去掉某字段后的条件信息损失，顺序剔除非信息字段，另有 LSTM/TCN/GRU 版本；§5.3：有官方 train/test 则沿用，否则 80:20；多类分类，5 runs、95% 区间；报保留字段、accuracy、FPR、F1。 报告 FPR 不等于统一固定 1% 召回 ； 作者全文 、 DOI 、 作者代码 。有数据/选择器/评估入口；现有项目仅审查，未复现；需 train-only 重构与预算核查，不能 MI 冒名； A ：§4、§5.3–5.5；Fig.2–5；Appendix C–E、Table 1", "source_document": "ids_research.md", "anchor": "ids-record-3", "urls": ["https://www.machineintelligencelab.ai/papers/kdd25.pdf", "https://doi.org/10.1145/3690624.3709339", "https://github.com/c-s-westphal/FSNID"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-04", "category": "ids", "title": "R04 DistillGuard / Transformer-based knowledge distillation for explainable intrusion detection system，Computers & Security 154 (2025), 104417", "identity": "R04 DistillGuard / Transformer-based knowledge distillation for explainable intrusion detection system，Computers & Security 154 (2025), 104417", "details": "网络特征、Transformer 教师→轻学生；Selective Gradient-Based KD 选择教师隐藏表示，辅以梯度解释。该选择不是本项目 OOF 输出置信 gate；出版页和方法公式已核；原始时间窗构造、split、低 FPR 阈值和 CPU 全管线证据本次未完整审计，因此不直接引用其成绩作比较； 出版页/原文入口 、 DOI 。Data availability 为 on request；本次未核到作者 code/model 入口。已覆盖“选择性 KD＋轻量 IDS＋解释”的大概念； B ：§1.1、§3.6.2–3.6.3，Eq.33–34；结论/数据声明", "source_document": "ids_research.md", "anchor": "ids-record-4", "urls": ["https://www.sciencedirect.com/science/article/pii/S0167404825001063", "https://doi.org/10.1016/j.cose.2025.104417"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-05", "category": "ids", "title": "R05 Lightweight Intrusion Detection in IoT via SHAP-Guided Feature Pruning and Knowledge-Distilled Kronecker Networks，CommNet 2025，普通专业会议", "identity": "R05 Lightweight Intrusion Detection in IoT via SHAP-Guided Feature Pruning and Knowledge-Distilled Kronecker Networks，CommNet 2025，普通专业会议", "details": "TON-IoT CSV；SHAP 筛字段、大教师、小型 Kronecker 学生、KD，可选量化。直接覆盖“筛特征＋蒸馏＋压缩”组合；本次核作者实现说明与正式引用，未精核分组隔离/阈值/量化是否真正执行；不能将 README optional quantization 当实测； 作者代码 、 DOI 。有 notebook 和 MIT 文件；TON-IoT 指向官方来源；本次未运行。不是顶会，仍属于必须回应的直接先例； B ：README Key Features/Dataset/Citation", "source_document": "ids_research.md", "anchor": "ids-record-5", "urls": ["https://github.com/mohammed-jouhari/iot-ids-lightweight", "https://doi.org/10.1109/CommNet68224.2025.11288887"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-06", "category": "ids", "title": "R06 FedKD-IDS: A robust intrusion detection system using knowledge distillation-based semi-supervised federated learning and anti-poisoning attack mechanism，Information Fusion 117 (2025), 102807", "identity": "R06 FedKD-IDS: A robust intrusion detection system using knowledge distillation-based semi-supervised federated learning and anti-poisoning attack mechanism，Information Fusion 117 (2025), 102807", "details": "N-BaIoT 统计特征；半监督联邦蒸馏、共享无标签 proxy、logits 投票及恶意协作者筛查，核心问题是 non-IID/投毒；出版摘要核到 non-IID 和 label-flipping 情景；未精核全文 split/1% FPR/CPU。不是普通集中式小学生 KD 的直接效率基线； 原出版页 、 DOI 。正式卷期 2025，DOI 带 2024 不矛盾；本次未核到作者 code/model。没有联邦威胁模型时不为显新而迁移； B ：Abstract/Highlights/卷期元数据", "source_document": "ids_research.md", "anchor": "ids-record-6", "urls": ["https://www.sciencedirect.com/science/article/pii/S1566253524005852", "https://doi.org/10.1016/j.inffus.2024.102807"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-07", "category": "ids", "title": "R07 SAFE: Self-Supervised Anomaly Detection Framework for Intrusion Detection，AAAI 2025 AICS workshop，非 AAAI 主会", "identity": "R07 SAFE: Self-Supervised Anomaly Detection Framework for Intrusion Detection，AAAI 2025 AICS workshop，非 AAAI 主会", "details": "CSV 经 PCA loading 选字段→DeepInsight/t-SNE 映射成 8×8 图→MAE→LOF；正常数据学习，异常检测；全文 60/20/20；train-only 选 31 字段；主要 precision/recall/F1。未给当前会话分组与固定 1% 同协议证据； 全文 、 作者代码 、 官方 workshop 议程 。README “AAAI-25”应按议程纠正。可适配 CSV，但 AE/LOF 及输入转换成本要全计，尚未执行； A ：Proposed Framework；Experimental Setup；Overhead Analysis/Table 6", "source_document": "ids_research.md", "anchor": "ids-record-7", "urls": ["https://arxiv.org/html/2502.07119v1", "https://github.com/ElvinLit/SAFE", "https://aics.site/AICS2025/AICSProgram2025.pdf"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-08", "category": "ids", "title": "R08 CARAVAN: Practical Online Learning of In-Network ML Models with Labeling Agents，OSDI 2024 主会", "identity": "R08 CARAVAN: Practical Online Learning of In-Network ML Models with Labeling Agents，OSDI 2024 主会", "details": "流特征；DNN/规则/LLM 作慢速标签源，规则缓存与 accuracy proxy 触发小模型在线更新；不是把 LLM 放实时转发路径；CIC-IDS2017/UNSW-NB15 等窗口回放；主指标 F1、重训 CPU/GPU 成本；数据流/漂移构造应与真实时间分开。没有本项目固定 1% 证据； 官方会议页 、 全文 、 作者 artifact 。代码入口可见；GPT-4 历史 API 结果不可假定今日逐值复现；硬件端用 Taurus FPGA； A ：§3–5，特别 §4.1、§5.1；Appendix A", "source_document": "ids_research.md", "anchor": "ids-record-8", "urls": ["https://www.usenix.org/conference/osdi24/presentation/zhang-qizheng", "https://www.usenix.org/system/files/osdi24-zhang-qizheng.pdf", "https://github.com/Per-Packet-AI/Caravan-Artifact-OSDI24"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-09", "category": "ids", "title": "R09 NetVigil: Robust and Low-Cost Anomaly Detection for East-West Data Center Security，NSDI 2024 主会", "identity": "R09 NetVigil: Robust and Low-Cost Anomaly Detection for East-West Data Center Security，NSDI 2024 主会", "details": "真实端点/时间 flow logs→安全图特征、GNN 对比学习和时间平滑；检测数据中心横向异常；Yatesbury＋长期生产流；AUC/TPR/FPR；§6.1 阈值最大化 TPR−FPR， 不是固定 1% ；有同机 latency 和运维成本； 官方全文 、 作者基准 Yatesbury 。本文可核公开基准入口，不推断私有生产流可下载。当前 UNSW CSV 缺建图元数据；不能合成假端点补齐； A ：§3–4、§6.1/6.5；Table 4、Fig.5", "source_document": "ids_research.md", "anchor": "ids-record-9", "urls": ["https://www.usenix.org/system/files/nsdi24-hsieh.pdf", "https://github.com/microsoft/Yatesbury"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-10", "category": "ids", "title": "R10 nPrint / New Directions in Automated Traffic Analysis，CCS 2021 主会", "identity": "R10 nPrint / New Directions in Automated Traffic Analysis，CCS 2021 主会", "details": "原始包统一位表示，配 AutoML 的 nPrintML；任务包括流量识别，不仅恶意二分类；多任务基准，不能跨任务 F1 与本项目排名；本次未精核每个任务的 split/1% 工作点； 作者全文 、 官方项目/代码与基准入口 。表示、AutoML、metadata-PCAP 工具均有作者入口；需要 PCAP，不是现有聚合 CSV 的 drop-in； B ：论文摘要/方法定位；官方 nPrint/nPrintML/pcapML 说明", "source_document": "ids_research.md", "anchor": "ids-record-10", "urls": ["https://pschmitt.net/docs/nprint.pdf", "https://nprint.github.io/"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-11", "category": "ids", "title": "R11 ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification，WWW 2022 主会", "identity": "R11 ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification，WWW 2022 主会", "details": "PCAP datagram/burst 字节 token，BERT 上下文预训练后按任务微调；应用/VPN/Tor/TLS 等识别；多个加密分类任务，主要 F1；需结合 R15 的同流泄漏审计，不能直接沿用所有原划分或把 F1 当 IDS 低误报成绩； 原论文 、 作者代码 。有 preprocessing/pretraining/fine-tuning/data/model 入口；本次没核全部下载链接。CSV 文本化不构成原生 ET-BERT 输入； B ：摘要；README Method/Data/Pretraining/Fine-tuning", "source_document": "ids_research.md", "anchor": "ids-record-11", "urls": ["https://arxiv.org/abs/2202.06335", "https://github.com/linwhitehat/ET-BERT"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-12", "category": "ids", "title": "R12 YaTC / Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation，AAAI 2023 主会", "identity": "R12 YaTC / Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation，AAAI 2023 主会", "details": "PCAP flow→Multi-Level Flow Representation 矩阵→MAE 预训练→分类；矩阵仍源于包信息；多个真实流量分类集；本次未完整核原划分/固定 1%/CPU；须回应 R15 对流隔离的实证审计； AAAI 正文 、 作者代码 。README 有 checkpoint/data 链接及 PCAP→MFR 脚本；没下载验证。不能把普通 CSV reshape 称 YaTC； B ：论文摘要；README data_process/pretraining/model", "source_document": "ids_research.md", "anchor": "ids-record-12", "urls": ["https://ojs.aaai.org/index.php/AAAI/article/download/25674/25446", "https://github.com/NSSL-SJTU/YaTC"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-13", "category": "ids", "title": "R13 TrafficFormer: An Efficient Pre-trained Model for Traffic Data，IEEE S&P 2025 主会", "identity": "R13 TrafficFormer: An Efficient Pre-trained Model for Traffic Data，IEEE S&P 2025 主会", "details": "PCAP→flow→burst→hex bigram/BPE；细粒度预训练与流量增强；微调涉及 datagram/length/time/direction/message_type；作者发表页核到六分类集＋协议理解；本次未完整核全文 split/1%/CPU，不能以“efficient”标题推断 CPU 优势； 作者发表页 、 正式 DOI 、 作者代码 。有预处理/预训练/微调与模型外链；原始包输入已由 README 核实，未跑通； B ：作者发表页；README Pretrain Corpus/Finetuning Data Generation", "source_document": "ids_research.md", "anchor": "ids-record-13", "urls": ["https://liuzhuotao.github.io/publications/trafficformer/", "https://doi.org/10.1109/SP61157.2025.00102", "https://github.com/IDP-code/TrafficFormer"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-14", "category": "ids", "title": "R14 tFusion / Training with Only 1.0 ‰ Samples: Malicious Traffic Detection via Cross-Modality Feature Fusion，CCS 2025 主会", "identity": "R14 tFusion / Training with Only 1.0 ‰ Samples: Malicious Traffic Detection via Cross-Modality Feature Fusion，CCS 2025 主会", "details": "包长/时间序列＋flow/host 统计；跨模态 attention，拓扑对比预训练，再少样本训练轻量下游；11 既有数据集回放＋5 天机构部署；§5/Appendix 用 accuracy/AUC/F1 等，不等于统一 1% 预算；attention 训练和执行均在 V100 ，不能只数下游轻模型； 作者全文 、 正式 DOI 、 作者代码 。README 仍有匿名/HotCRP 数据指引；代码有公开入口，完整数据可达性未确认。UNSW CSV 缺所需 packet/time/host 信息； A ：§3–4、§5.1/5.5、Fig.2/14/15；原文 pp.4–8/11", "source_document": "ids_research.md", "anchor": "ids-record-14", "urls": ["https://github.com/fuchuanpu/TFusion/blob/main/tFusion_LongVersion.pdf", "https://doi.org/10.1145/3719027.3765143", "https://github.com/fuchuanpu/TFusion"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-15", "category": "ids", "title": "R15 Pcap-Encoder / The Sweet Danger of Sugar: Debunking Representation Learning for Encrypted Traffic Classification，SIGCOMM 2025 主会", "identity": "R15 Pcap-Encoder / The Sweet Danger of Sugar: Debunking Representation Learning for Encrypted Traffic Classification，SIGCOMM 2025 主会", "details": "T5 原始包 header/hex 编码，先自编码再协议字段问答；同时审计多个 NFM 和浅层基线；原 per-packet vs 正确 per-flow 划分、冻结/解冻 encoder、字段移除；应用/网站识别，非同协议 IDS。论文显示某些高分来自捷径，不证明所有预训练模型普遍无用； 作者机构全文 、 DOI 、 作者代码 。预训练含 UNSW-NB15 原始包 ，现成权重在 UNSW 上不能未经重叠审计称独立教师； A ：§3.4、评估设计/结果与字段消融；Fig.1、Table 9", "source_document": "ids_research.md", "anchor": "ids-record-15", "urls": ["https://iris.polito.it/retrieve/handle/11583/3003539/21f8a7c5-c796-4cc1-ab4d-3c6cea41412e/3718958.3750498.pdf", "https://doi.org/10.1145/3718958.3750498", "https://github.com/SmartData-Polito/Debunk_Traffic_Representation"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-16", "category": "ids", "title": "R16 Demystifying Network Foundation Models，NeurIPS 2025 主会", "identity": "R16 Demystifying Network Foundation Models，NeurIPS 2025 主会", "details": "对冻结 packet/flow encoder 做 embedding geometry、领域特征 alignment、受控协议/环境 perturbation；不是另一个 detector；4 NFM、5 数据环境；重点在表示诊断，不能把改善的下游 F1 直接换算为本项目 1% 召回。受控扰动不等于任意 CSV 加噪就有网络因果解释； 官方论文 、 作者代码 。有评估实现/数据管线入口；本次未下载/执行，不是当前模型已完成机制解释； A ：§3.1–3.3、§4、Appendix A；Fig.1", "source_document": "ids_research.md", "anchor": "ids-record-16", "urls": ["https://openreview.net/pdf/45fe7201d088e047e18f6fe698679d2f2fece0ad.pdf", "https://github.com/maybe-hello-world/demystifying-networks"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-17", "category": "ids", "title": "R17 Lens: A Knowledge-Guided Foundation Model for Network Traffic，TMLR 2026 期刊，非 ICLR 主会", "identity": "R17 Lens: A Knowledge-Guided Foundation Model for Network Traffic，TMLR 2026 期刊，非 ICLR 主会", "details": "最新 v5：Tshark 包 metadata/header/payload 文本＋网络 BBPE；整语义单位遮盖及知识模板；约 0.25B T5，分类变约束生成；每流前 34 包 ；6 来源、12 分类与 5 生成任务；全文/附录规定预训练和下游划分。没有当前 1%/CPU 同协议证据；“新类”仍有适配训练，不是零样本攻击检测保证； 最新全文 v5 、 TMLR 入口 、 作者代码 、 模型卡 。code、weights、processed downstream data 有入口；模型卡说 预训练 corpus 本身未发布 ；code Apache2/model-data CC-BY-NC4； A ：§3–4，Appendix A/B/D/E；不是旧 v4 的 3 包版本", "source_document": "ids_research.md", "anchor": "ids-record-17", "urls": ["https://arxiv.org/html/2402.03646v5", "https://openreview.net/forum?id=cGDwTgnJIR", "https://github.com/V-Enzo/Lens-foundation-model-for-network-traffic", "https://huggingface.co/Charles59/lens-pretrained"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "ids-18", "category": "ids", "title": "R18 netFound: Principled Design for Network Foundation Models，2026-05-12 arXiv v5／netFound-v2 项目；正式会议身份未核到", "identity": "R18 netFound: Principled Design for Network Foundation Models，2026-05-12 arXiv v5／netFound-v2 项目；正式会议身份未核到", "details": "这是 2023 起源工作的实质更新：协议字段 token、操作 metadata、burst-flow 层级注意力，去 payload/IP；从原始 PCAP 或同 tokenizer Arrow 输入。53M–663M 家族；§5 表示诊断＋5 下游任务；未核到本项目固定 1% 协议。Appendix A 主要 GPU latency/throughput，不能称已证 CPU 优势； 最新全文 、 当前作者代码 、 small 模型卡 、 作者数据 sampler 。实际核到 2026-04-28、15.8GB、60,199,405 flows 的公开索引；全量 4.2B/约1.2TB 是作者发布声明，未下载验证。旧 640M v1 卡 明确 legacy，不能混用旧 private-450M 与新数据状态； A ：v5 §3–6、Appendix A；当前 README、small model card、Zenodo record", "source_document": "ids_research.md", "anchor": "ids-record-18", "urls": ["https://arxiv.org/html/2310.17025v5", "https://github.com/SNL-UCSB/netFound", "https://huggingface.co/snlucsb/netFound-small", "https://zenodo.org/records/19863446", "https://huggingface.co/snlucsb/netFound-640M-base"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-19", "category": "nearest", "title": "R01. When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee", "identity": "Dixian Zhu、Gang Li、Bokun Wang、Xiaodong Wu、Tianbao Yang； ICML 2022 主会，旧基础工作，精读 。 正式页面 ， 全文 ， 作者团队 LibAUC 实现 。", "details": "事实：通过 CVaR-DRO 或 KL-DRO 构造 OPAUC／TPAUC 目标及随机优化算法。前者对应文中 pAUC surrogate 的精确选择结构，后者平滑但有近似。推断：本项目若只是把普通 pairwise loss 改成 CVaR-pAUC，应表述为采用成熟目标；它是必要强对照，不是新增算法。代码入口已核到 pAUC_CVaR_Loss ，本轮未运行。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-1", "urls": ["https://proceedings.mlr.press/v162/zhu22g.html", "https://proceedings.mlr.press/v162/zhu22g/zhu22g.pdf", "https://github.com/Optimization-AI/LibAUC/blob/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/losses/auc.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-20", "category": "nearest", "title": "R02. Asymptotically Unbiased Instance-wise Regularized Partial AUC Optimization: Theory and Algorithm", "identity": "HuiYang Shao、Qianqian Xu、Zhiyong Yang、Shilong Bao、Qingming Huang； NeurIPS 2022 主会，旧基础工作，精读 。 正式页面及全文入口 ， 作者 PAUCI 代码 。", "details": "事实：将 pAUC 转为 instance-wise 正则化 min-max 优化，使用可控渐近近似。推断：其价值是避免显式全配对及分析近似误差；不能把一个 minibatch hard-pair loss 改名为 PAUCI。官方代码存在，未复现。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-2", "urls": ["https://proceedings.neurips.cc/paper_files/paper/2022/hash/fc9f83d9925e6885e8f1ae1e17b3c44b-Abstract-Conference.html", "https://github.com/Shaocr/PAUCI/tree/c08d633d195a9ab1799b283696b02d215b7d29b9"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-21", "category": "nearest", "title": "R03. Closing the Approximation Gap of Partial AUC Optimization: A Tale of Two Formulations", "identity": "Yangbangyan Jiang、Qianqian Xu、Huiyang Shao、Zhiyong Yang、Shilong Bao、Xiaochun Cao、Qingming Huang； TPAMI 48(3):3482–3498，2026，期刊，精读 ；DOI 10.1109/TPAMI.2025.3637063 。 作者全文 ， DOI 。", "details": "事实：§I 与参考文献 [22] 明确前身为 R02；§VII-C 将 PAUCI 标为 NeurIPS 版本、UPAUCI 标为期刊版本。新形式以更多优化变量处理非光滑选择，区分选择近似与正则化。推断：不能把 2022 PAUCI 仓库当作 2026 UPAUCI 已复现代码；本轮未核得独立新版实现。 这里不能混入另一篇 Large-scale Optimization of Partial AUC in a Range of False Positive Rates （Yao Yao、Qihang Lin、Tianbao Yang，NeurIPS 2022，DC／Moreau 路线）；它不是 R03 的前身。 另一篇的正式页面", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-3", "urls": ["https://arxiv.org/html/2512.01213v1", "https://doi.org/10.1109/TPAMI.2025.3637063", "https://proceedings.neurips.cc/paper_files/paper/2022/hash/ca7998666c2e53cc1e882b7268414d8a-Abstract-Conference.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-22", "category": "nearest", "title": "R04. Neyman-Pearson classification: parametrics and sample size requirement", "identity": "Xin Tong、Lucy Xia、Jiacheng Wang、Yang Feng； JMLR 21(12):1–48，2020，旧统计基础，精读阈值与样本量部分 。 正式论文及 R 包入口 ， 全文 。", "details": "事实：区分 NP 高概率 Type-I 控制、非参数 umbrella 阈值和带模型假设的参数方法。推断：校准集上恰好 1% 误报不等于总体 FPR≤1% 的高概率保证；更不能把相关 flow 数直接当成独立校准样本数。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-4", "urls": ["https://jmlr.org/papers/v21/18-577.html", "https://jmlr.org/papers/volume21/18-577/18-577.pdf"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-23", "category": "nearest", "title": "R05. Evaluation-Oriented Knowledge Distillation for Deep Face Recognition（EKD）", "identity": "Yuge Huang、Jiaxiang Wu、Xingkun Xu、Shouhong Ding； CVPR 2022 主会，旧但最直接的创新性近邻，精读＋代码核查 。 正式身份 ， 作者全文 ， 作者代码 。", "details": "事实：§3 在指定 FPR 下分别估计师生负关系分位数阈值，选择造成 TPR／FPR 分歧的关系；用相对阈值的平滑排序约束替代绝对特征／相似度匹配，以适应容量较小的学生。已有 hard-negative 与 random-negative 对照。推断：本项目“工作点＋关键尾部样本＋容量友好 KD”概念已被覆盖，必须加入适配版 EKD 对照。人脸关系与 IDS 单行分数不同，是适配工作，不自动构成算法创新。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-5", "urls": ["https://openaccess.thecvf.com/content/CVPR2022/html/Huang_Evaluation-Oriented_Knowledge_Distillation_for_Deep_Face_Recognition_CVPR_2022_paper.html", "https://arxiv.org/html/2206.02325", "https://github.com/Tencent/TFace/tree/master/recognition/tasks/ekd"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-24", "category": "nearest", "title": "R06. Trust the Right Teacher: Quality-Aware Self-Distillation for GUI Grounding", "identity": "Jingyuan Huang、Zuming Huang、Yucheng Shi、Tianze Yang、Xiaoming Zhai、Wei Chu、Ninghao Liu； 2026-06-16，arXiv:2606.18101v1，预印本，精读方法与消融 。 作者全文 。", "details": "事实：将 soft correctness-aware gate 与 teacher-probability scaling 结合，分别抑制错误监督、调节剩余监督强度，并比较单项与组合。推断：correctness×confidence 的一般组合不能声称首创。其 GUI 坐标 token、privileged context 和 reverse-KL 与本项目不同，不能冒称同一实现或已复现。未核得可运行作者代码。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-6", "urls": ["https://arxiv.org/html/2606.18101v1"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-25", "category": "nearest", "title": "R07. Adaptive Conformal Guidance for Learning under Uncertainty（AdaConG）", "identity": "Rui Liu、Peng Gao、Yu Shen、Ming Lin、Pratap Tokekar； ICLR 2026 主会，精读 。 正式身份 ， 正式全文 。", "details": "事实：§3 使用 split CP 预测集合大小构造不确定度，再加权 guidance loss；§4 含噪声／迁移下的 KD 实验。推断：“用校准不确定度决定是否相信教师”已有近期主会近邻。CP 标签覆盖并不等于加权 KD 无负迁移，更不等于学生 class-conditional FPR 控制。本次未核得作者实现入口，不能称已复现。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-7", "urls": ["https://proceedings.iclr.cc/paper_files/paper/2026/hash/0b08d733a5d45a547344c4e9d88bb8bc-Abstract-Conference.html", "https://proceedings.iclr.cc/paper_files/paper/2026/file/0b08d733a5d45a547344c4e9d88bb8bc-Paper-Conference.pdf"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-26", "category": "nearest", "title": "R08. Distillation of Tabular Foundation Models into Efficient Predictors", "identity": "Minho Jeong、Dooho Lee、Jinmo Lee、Jaemin Yoo； 2026-10-01，arXiv:2610.01435v1，预印本，精读监督构造与实验协议 。 作者全文 。", "details": "事实：直接研究 TFM→TabM／XGBoost，比较 full-context（FC）、OOF、硬软监督混合及额外合成查询；其设计集最优配置是 FC＋teacher-only。推断：基础模型教师、轻学生、合成查询、移除部署教师不是空白。其 作者公布代码 本次读取返回 404；没有可运行证据，也未核到主会录用身份。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-8", "urls": ["https://arxiv.org/html/2610.01435v1", "https://github.com/nums-ai/TFM_Distillation"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-27", "category": "nearest", "title": "R09. Distilling Tabular Foundation Models for Structured Health Data", "identity": "Aditya Tanna、Nassim Bouarour、Mohamed Bouadi、Vinay Kumar Sankarapu、Pratinav Seth； 2026-05-18，arXiv:2605.18702v1；作者页面标为 ICML 2026 SD4H workshop，非主会，精读 。 全文 ， 作者发表页面 。", "details": "事实：§3 已有 5 折 OOF 教师标签、hard＋soft loss、逐样本 adaptive temperature 与中等熵处较高的 confidence weight；涵盖 MLP 和树学生。推断：OOF＋TFM＋置信加权同样非新 pipeline。正文实验是小表健康任务，不能直接推出百万行 IDS 或 1% FPR 时有效。作者称依托 TabTune，但本轮未确认对应版本能完整复现。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-9", "urls": ["https://arxiv.org/html/2605.18702v1", "https://pratinavseth.github.io/publications/distilling-tfms-structured-health-data/"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-28", "category": "nearest", "title": "R10. GEAR: Generative Expansion and Real Anchoring for Two-Stage Distillation of Tabular Foundation Models", "identity": "Qi Qin、Jiajie Zhu、Dali Chen、Yuzhao Zhang、Jia-Xing Han、Yu Su、Peng Zhang、Ying Yan、Yifan Sun； 2026-08-19，arXiv:2608.18849v1，预印本，精读 。 作者全文 。", "details": "事实：§2 用合成协变量查询冻结 TFM，再以真实标签＋OOF 教师预测锚定；§3 给生成量与保真度的风险证书。推断：“合成扩充＋OOF＋两阶段＋风险界”已有直接近邻。证书依赖 surrogate-to-target 偏差及分布差异等条件，不等于真实总体风险一定降低，更不是低 FPR 或小学生优势证明。本轮未核得作者代码入口。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-10", "urls": ["https://arxiv.org/html/2608.18849v1"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-29", "category": "nearest", "title": "R11. Neyman-Pearson Classification under Both Null and Alternative Distributions Shift", "identity": "Mohammadreza M. Kalan、Yuyang Deng、Eitan J. Neugut、Samory Kpotufe； ICLR 2026 主会 ；预印本首发 2025-11-10，arXiv:2511.06641； 精读目标、迁移程序和主要保证 。 正式身份 ， 正式全文 ， 作者 HTML 。", "details": "事实：同时允许正常与攻击类条件分布迁移，利用有标签 source／target 数据自适应迁移，分析 source 无用时避免负迁移的条件。推断：“首次在正常分布漂移时迁移低 FPR 能力”不能成立。本文不是 TFM→固定小 MLP 的 KD，亦不覆盖任意相关 flow 的无条件保证。本次未核得作者代码入口。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-11", "urls": ["https://proceedings.iclr.cc/paper_files/paper/2026/hash/33870b3e099880cd8e705cd07173ac27-Abstract-Conference.html", "https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Paper-Conference.pdf", "https://arxiv.org/html/2511.06641"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-30", "category": "nearest", "title": "R12. A Unified Approach to Routing and Cascading for LLMs", "identity": "Jasper Dekoninck、Maximilian Baader、Martin Vechev； ICML 2025 主会 。 正式身份 ， 作者代码 ， 作者 HTML 。", "details": "事实：统一预算内质量最大化的 routing／cascading，识别质量估计的重要性。推断：按升级收益／成本路由属于已有决策框架；不能仅换成 IDS 就称新算法。本次公式阅读使用作者公开 v5（2026-10-26） ；不推断该版本所有新增表述均与 2025 会议版相同。源码入口已核，未运行。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-12", "urls": ["https://proceedings.mlr.press/v267/dekoninck25a.html", "https://github.com/eth-sri/cascade-routing", "https://arxiv.org/html/2410.10347"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-31", "category": "nearest", "title": "R13. Active feature acquisition via explainability-driven ranking", "identity": "Osman Berke Guney、Ketan Suhaas Saichandran、Karim Elzokm、Ziming Zhang、Vijaya B Kolachalama； ICML 2025 主会；已核摘要、正式身份与作者 README，未完成全文逐公式核查 。 正式论文 ， 作者代码 。", "details": "事实：局部解释产生逐样本特征重要性顺序，decision-transformer policy 顺序获取特征。推断：动态字段预算、逐样本选择特征、用强模型解释指导小策略均非空白；是否能同时满足 IDS 正常类风险与真实采集成本，仍需另行建模。代码可见，未跑通。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-13", "urls": ["https://proceedings.mlr.press/v267/guney25a.html", "https://github.com/vkola-lab/icml2025"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-32", "category": "nearest", "title": "R14. Wasserstein-Regularized Conformal Prediction under General Distribution Shift（WR-CP）", "identity": "Rui Xu、Chao Chen、Yue Sun、Parvathinathan Venkitasubramaniam、Sihong Xie； ICLR 2025 主会，精读界、假设与迁移设定 。 正式身份 ， 正式全文 ， 作者代码 。", "details": "事实：分析联合分布变化下的 conformal score 覆盖差距，区分 covariate／concept shift；应用包括多个 source 的未知混合。推断：分布漂移后校准仍可靠不能直接继承 IID CP；该文也不是任意未知新攻击／相关 flow 的免费保证。代码 README 已核，未复现。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-14", "urls": ["https://proceedings.iclr.cc/paper_files/paper/2025/hash/283066055b0256ca8e3e0c8c96019357-Abstract-Conference.html", "https://proceedings.iclr.cc/paper_files/paper/2025/file/283066055b0256ca8e3e0c8c96019357-Paper-Conference.pdf", "https://github.com/rxu0112/WR-CP"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-33", "category": "nearest", "title": "R15. SAFE-KD: Risk-Controlled Early-Exit Distillation for Vision Backbones", "identity": "Salim Khazem； 2026-02-03，arXiv:2602.03043v1，预印本，精读风险定义并核作者代码 。 全文 ， 作者仓库 ， 关键代码 。", "details": "事实：提出多出口 KD＋conformal early exit，声称控制早退样本的 selective error。推断：组合想法已存在；但所读实现的 CP 分位数与单标签早退规则 不足以实现论文声称的 selective risk 合约 ，见 §3.5。不能据此背书有限样本保证。代码可见不等于正确或跑通；本轮未执行。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-15", "urls": ["https://arxiv.org/html/2602.03043v1", "https://github.com/salimkhazem/safe-kd", "https://github.com/salimkhazem/safe-kd/blob/main/src/methods/safe_exit.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "nearest-34", "category": "nearest", "title": "R16. C-GUARD: Context-Adaptive Conformal Gating for Improving Robustness Against Evasive Windows PE Malware", "identity": "Muhammad Imran、Malik Al-Essa、Felice Franchini、Giuseppe Pirlo； Future Internet 18(8):431，2026-08-13，期刊，非顶会；精读公开方法与低 FPR 评估部分 。 期刊原文 ， 版本记录 。", "details": "事实：OOF 构造 FN-vs-TN rescue，conformal gate 配合新增 FP 预算，只翻转 baseline-negative；另有 validation FP-matched 的单阈值放宽对照。推断：安全任务中的“困难漏报保护＋条件辅助模型＋误报预算”已有直接应用近邻。它报告的是冻结阈值的实际表现，不是总体 FPR≤1% 证明；实验工件需向作者申请，本轮未核得公开实现。", "source_document": "nearest_work_and_novelty.md", "anchor": "nearest-record-16", "urls": ["https://www.mdpi.com/1999-5903/18/8/431", "https://www.mdpi.com/1999-5903/18/8/431/notes"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-35", "category": "tabular", "title": "CatBoost，成熟强基线", "identity": "CatBoost，成熟强基线", "details": "有序提升、类别统计；混合类型表格；优先补齐。使用原始类别列的规范适配，独立校准；不能只与未调优 RF 比", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-1", "urls": ["https://catboost.ai/docs/en/concepts/algorithm-main-stages_choose-tree-structure", "https://catboost.ai/docs/en/references/training-parameters/common"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-36", "category": "tabular", "title": "LightGBM，成熟强基线", "identity": "LightGBM，成熟强基线", "details": "直方图、逐叶生长、类别分裂；优先补齐。限制叶数／深度并记录 CPU 线程；与 sklearn HGB 分列", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-2", "urls": ["https://github.com/lightgbm-org/LightGBM/blob/main/docs/Features.rst"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-37", "category": "tabular", "title": "RealMLP，NeurIPS 2024；保留为必要旧基线", "identity": "RealMLP，NeurIPS 2024；保留为必要旧基线", "details": "针对表格的 MLP 训练与预调默认值；判断小 MLP 的差距来自训练配方还是容量。代码默认、调参和集成三种口径分列", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-3", "urls": ["https://proceedings.neurips.cc/paper_files/paper/2024/file/2ee1c87245956e3eaa71aaba5f5753eb-Paper-Conference.pdf", "https://github.com/dholzmueller/pytabkit"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-38", "category": "tabular", "title": "TabM，ICLR 2025", "identity": "TabM，ICLR 2025", "details": "参数共享的 MLP 集成、可选数值嵌入；优先神经参照／教师。当前已有官方包、tiny 结构和工程 pilot；正式 CPU 三轮部署测量与充分调优成绩尚无，新协议早停已修正", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-4", "urls": ["https://proceedings.iclr.cc/paper_files/paper/2025/file/c1ba41c694834aeef91ae161711d4939-Paper-Conference.pdf", "https://github.com/yandex-research/tabm"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-39", "category": "tabular", "title": "ModernNCA，ICLR 2025", "identity": "ModernNCA，ICLR 2025", "details": "深度表示与随机化邻域成分学习，预测依赖参考样本；用于检验局部近邻结构；不列第一批必跑。完整成本包含参考表示和检索，不能只数神经网络参数", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-5", "urls": ["https://proceedings.iclr.cc/paper_files/paper/2025/file/ecd294194d5155432aab533f7ce0f6fe-Paper-Conference.pdf", "https://github.com/LAMDA-Tabular/TALENT"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-40", "category": "tabular", "title": "TabICLv2，ICML 2026 主会", "identity": "TabICLv2，ICML 2026 主会", "details": "表格上下文学习；目标感知表示、可扩展注意力、合成先验与预训练更新；优先基础模型候选，先做教师资格和显存检查。上下文、表示与缓存必须折内生成", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-6", "urls": ["https://proceedings.mlr.press/v306/qu26a.html", "https://github.com/soda-inria/tabicl", "https://huggingface.co/jingang/TabICL"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-41", "category": "tabular", "title": "TabPFN 3.5／Fast，2026-09 技术报告与发布", "identity": "TabPFN 3.5／Fast，2026-09 技术报告与发布", "details": "表格 ICL，新 checkpoint 同时支持分类／回归；可作当前前沿性能参照；不默认用于可公开 KD。模型许可与输出使用限制需按具体用途处理", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-7", "urls": ["https://arxiv.org/abs/2609.17895", "https://huggingface.co/Prior-Labs/tabpfn_3_5", "https://huggingface.co/Prior-Labs/tabpfn_3_5/blob/main/LICENSE"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-42", "category": "tabular", "title": "TabDPT，NeurIPS 2025；后续模型 1.3", "identity": "TabDPT，NeurIPS 2025；后续模型 1.3", "details": "真实表格预训练；当前推理版本与原论文分开锁定；与合成先验 TFM 对照。核对预训练数据重叠；先限合法训练上下文，不默认全量 CIC 可放入 24GB", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-8", "urls": ["https://proceedings.neurips.cc/paper_files/paper/2025/hash/fc0e3f908a2116ba529ad0a1530a3675-Abstract-Conference.html", "https://github.com/layer6ai-labs/TabDPT-inference/releases/tag/v1.3.2", "https://huggingface.co/Layer6/TabDPT"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-43", "category": "tabular", "title": "Mitra，NeurIPS 2025 主会", "identity": "Mitra，NeurIPS 2025 主会", "details": "多种合成任务先验的混合，表格 ICL；说明教师质量还取决于先验设计；实际候选应进一步核 v2，不能沿用 v1 为“最新”", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-9", "urls": ["https://proceedings.neurips.cc/paper_files/paper/2025/hash/177d68f4adef163b7b123b5c5adb3c60-Abstract-Conference.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-44", "category": "tabular", "title": "Mitra-v2，2026-09-03 技术报告", "identity": "Mitra-v2，2026-09-03 技术报告", "details": "扩展上下文与先验、优化更新；分类 backbone 约 75.7M；默认结果含微调与 8 折 bagging；第二位可研究教师，先核单模型／集成成本。不能把默认排行榜成绩说成单次零样本前向的收益", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-10", "urls": ["https://arxiv.org/html/2609.04540v1", "https://huggingface.co/autogluon/mitra-classifier-2", "https://huggingface.co/autogluon/mitra-finetune"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-45", "category": "tabular", "title": "ConTextTab，NeurIPS 2025 主会；当前代码重定向 SAP-RPT-1-OSS", "identity": "ConTextTab，NeurIPS 2025 主会；当前代码重定向 SAP-RPT-1-OSS", "details": "文本、日期、数值和列名语义编码，真实数据预训练，行列注意力；用于检验语义信息是否值得成本；UNSW 类别词与计数列不等于自然语义丰富业务表。先核真实数据来源及许可", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-11", "urls": ["https://proceedings.neurips.cc/paper_files/paper/2025/hash/d807e7678ba3afd3a904f4af52819e77-Abstract-Conference.html", "https://arxiv.org/html/2506.10707v3", "https://github.com/SAP-samples/sap-rpt-1-oss"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-46", "category": "tabular", "title": "LimiX-2M，2026-06 预印本", "identity": "LimiX-2M，2026-06 预印本", "details": "数值局部 RBF 表征、调整样本／特征交互顺序，约 2M 模型；是“基础模型也可较小”的参照。与 2026-09 的 LimiX-2 是不同型号，不能混用参数与分数", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-12", "urls": ["https://arxiv.org/abs/2606.04485", "https://github.com/limix-ldm-ai/LimiX"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-47", "category": "tabular", "title": "LimiX-2，2026-09-15 预印本", "identity": "LimiX-2，2026-09-15 预印本", "details": "联合分布与上下文条件遮盖、细胞级行列表示，支持预测／插补等；有意义的前沿备查，暂不作为首选教师。自定义代码和非商业权重许可分别核对，联合建模不等于已有本项目鲁棒性", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-13", "urls": ["https://arxiv.org/html/2609.17488v1", "https://github.com/limix-ldm-ai/LimiX", "https://huggingface.co/stable-ai/LimiX-2"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-48", "category": "tabular", "title": "OrionMoE-Small v1.0，2026-10-14 预印本", "identity": "OrionMoE-Small v1.0，2026-10-14 预印本", "details": "按数据集上下文和单元表示选择稀疏专家，纯合成预训练；新但不宜立即纳入复现。论文列出的 GitHub 本轮 404，HF API 401，官网是申请制 early access；不是已取得可运行公开模型", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-14", "urls": ["https://arxiv.org/html/2610.20418v1", "https://orionmoe.lexsi.ai/"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-49", "category": "tabular", "title": "Google TabFM v1.0.0，2026 官方模型／项目", "identity": "Google TabFM v1.0.0，2026 官方模型／项目", "details": "表格 ICL，JAX／PyTorch 接口，混合类型输入；备查参照。代码 Apache-2.0 与非商业预训练权重分开；官方 README 暂无完整技术论文链接，不填顶会身份", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-15", "urls": ["https://github.com/google-research/tabfm"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-50", "category": "tabular", "title": "TabArena，NeurIPS 2025 Datasets & Benchmarks", "identity": "TabArena，NeurIPS 2025 Datasets & Benchmarks", "details": "持续维护的表格模型、调参、集成比较；借鉴公平预算和版本锁定，不把 Elo 当本项目低 FPR 证据", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-16", "urls": ["https://proceedings.neurips.cc/paper_files/paper/2025/hash/1697e3fb412da11dc9488249f9e7bbc9-Abstract-Datasets_and_Benchmarks_Track.html", "https://github.com/autogluon/tabarena"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-51", "category": "tabular", "title": "TALENT，JMLR 2025 26(226)", "identity": "TALENT，JMLR 2025 26(226)", "details": "统一工具箱与大量表格学习方法；获取可靠适配入口与比较协议；表格行随机划分不能直接移入关联网络流", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-17", "urls": ["https://www.jmlr.org/beta/papers/v26/25-0512.html", "https://github.com/LAMDA-Tabular/TALENT"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "tabular-52", "category": "tabular", "title": "BeyondArena，2026-06 预印本", "identity": "BeyondArena，2026-06 预印本", "details": "同时关注 IID、分组和时间划分的表格基准；直接支持“榜单强不等于组／时间迁移强”的研究设计；正式会议身份本轮未核实", "source_document": "tabular_models_and_baselines.md", "anchor": "tabular-record-18", "urls": ["https://arxiv.org/html/2606.30410v1", "https://huggingface.co/spaces/TabArena/leaderboard/blob/main/website_texts.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-53", "category": "products", "title": "Suricata", "identity": "Suricata", "details": "包、流及应用层协议；签名规则、协议/解码异常、可配置 IDS/IPS。这里的 anomaly 不能直接译成学习式异常模型。；网卡流量和 PCAP；CPU 多线程引擎；EVE JSON 包含告警、流、协议、文件等事件，通常外接检索界面。 稳定版配置 ；借鉴事件结构、flow_id、规则/模型来源、丢包与引擎状态。规则命中、阻断 verdict 与监督分类真阳性并非同一概念。 EVE 文档", "source_document": "products_and_projects.md", "anchor": "products-record-1", "urls": ["https://github.com/OISF/suricata/blob/suricata-8.0.8/suricata.yaml.in", "https://docs.suricata.io/en/latest/output/eve/eve-json-output.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-54", "category": "products", "title": "Zeek", "identity": "Zeek", "details": "被动包与协议分析，脚本产生连接、DNS、HTTP 等日志及 Notice；基础组件不是一个通用监督分类器。；实时接口与离线 PCAP；CPU；结构化日志和脚本生态，核心自身不是完整 SOC 看板。；借鉴稳定会话 UID、方向与状态语义。 duration 、字节统计不保证等于 CIC/UNSW 同名字段；不能只重命名列后直接喂模型。 固定版 conn 源码", "source_document": "products_and_projects.md", "anchor": "products-record-2", "urls": ["https://github.com/zeek/zeek/blob/v9.0.1/scripts/base/protocols/conn/main.zeek"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-55", "category": "products", "title": "Security Onion", "identity": "Security Onion", "details": "组合网络、终端、日志数据和多个检测/检索组件；是 SOC 平台而非单一算法。；分布式采集、搜索和存储；服务器 CPU/RAM/磁盘成本；Alerts、Hunt、PCAP、Cases 构成调查流程。；借鉴告警筛选、详情、确认/升级、证据跳转；不需照搬整套平台。已读 2.4 Alerts 文档，不能据此保证新 3.x 的接口兼容；部分 AI/Guided Analysis 能力有版本/Pro 条件。 功能文档", "source_document": "products_and_projects.md", "anchor": "products-record-3", "urls": ["https://docs.securityonion.net/en/2.4/alerts.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-56", "category": "products", "title": "Wazuh", "identity": "Wazuh", "details": "代理/日志、解码器与规则关联；还覆盖主机文件完整性等终端需求，不是直接消费任意流 CSV 的同任务分类器。；持续代理/日志输入，manager、indexer、dashboard；规则与事件可追溯。；借鉴规则 ID、来源、窗口和关联作用域。流表没有终端证据时不能编造主机入侵链；规则频次统计与模型 FPR 不能混写。 规则语法", "source_document": "products_and_projects.md", "anchor": "products-record-4", "urls": ["https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-57", "category": "products", "title": "Arkime", "identity": "Arkime", "details": "包捕获、会话元数据索引及检索；核心价值是取证，不是统一的学习式攻击识别。；接口/PCAP；捕获、索引和存储使用服务器资源；Viewer/API 可从会话取回 PCAP、重组协议内容。；借鉴会话到原始证据的联系、保留期和“已过期/不可用”状态。只有 CSV 行号与字段时，不能称为包级溯源。 架构 、 会话 PCAP API", "source_document": "products_and_projects.md", "anchor": "products-record-5", "urls": ["https://arkime.com/architecture", "https://arkime.com/apiv3"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-58", "category": "products", "title": "ntopng", "identity": "ntopng", "details": "镜像包或收集器提供的流、主机与应用遥测；流量分析、行为检查、告警及 IDS 集成，不等于固定标签监督模型。；CPU 网络探针；实时和历史 Web UI、REST；包接口与 ZMQ 接口能力不同，部分采集依赖 nProbe 等组件。；借鉴实时/历史区分、主机/应用筛选、数据源类型。Community 与 Pro/Enterprise 功能不能混用，更不能套用其链路吞吐量。 接口文档 、 版本许可", "source_document": "products_and_projects.md", "anchor": "products-record-6", "urls": ["https://www.ntop.org/guides/ntopng/advanced_features/interfaces/index.html", "https://www.ntop.org/guides/ntopng/versions_and_licensing.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-59", "category": "products", "title": "NFStream", "identity": "NFStream", "details": "PCAP、PCAP 列表、接口 → 双向流；DPI、统计和插件框架。插件可以挂 ML，但提取器本身不是已训练的万能 IDS。；在线/离线 CPU meter，插件生命周期、DataFrame/CSV 导出、轮转/匿名化；无完整 SOC UI。；最适合考察的采集适配候选，但要核字段层次、超时、单位和何时可用。官方已有 ML train/deploy 示例，所以“流上接模型”不是创新。 API/插件文档", "source_document": "products_and_projects.md", "anchor": "products-record-7", "urls": ["https://www.nfstream.org/docs/api"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-60", "category": "products", "title": "CICFlowMeter（原作者仓）", "identity": "CICFlowMeter（原作者仓）", "details": "PCAP → 双向流统计表；首包定义方向，TCP/UDP 流终止规则和超时参与定义。不是检测模型。；文件提取/Java 工具链、CPU；输出特征，未提供可与本项目直接互换的分类器。；固定源码、配置、方向、单位和修复版本再谈新流量兼容；不要把 Python fork、作者旧仓、修正 CIC 数据的生成器视作同一版本。 作者说明", "source_document": "products_and_projects.md", "anchor": "products-record-8", "urls": ["https://github.com/ahlashkari/CICFlowMeter/blob/98a5ebad0df579cc8b43eedd3421b3ae87699901/ReadMe.txt"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-61", "category": "products", "title": "Kitsune / KitNET", "identity": "Kitsune / KitNET", "details": "包经 AfterImage 统计后进入在线自编码器集合，输出重构异常分数；无监督，存在特征映射/训练宽限阶段。；原型支持包序列处理、CPU 路径；输出分数及示例图，不是成熟多用户取证平台。；借鉴预热/训练/执行状态和有界集合；不得把无监督分数称为校准攻击概率，也不能由原论文推断当前数据上的低 FPR。 README 、 KitNET 实现", "source_document": "products_and_projects.md", "anchor": "products-record-9", "urls": ["https://github.com/ymirsky/Kitsune-py", "https://github.com/ymirsky/Kitsune-py/blob/7c8ea51e89268d9a20399dca4bf32d663e638eb4/KitNET/KitNET.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-62", "category": "products", "title": "River", "identity": "River", "details": "逐条字典/特征和可延迟标签；增量监督、异常与漂移等算法/评测库，不解析网络包。；CPU 增量模型；progressive validation、逐步指标与资源测量，无现成 SOC UI。；借鉴先预测后学习、标签延迟、时间与内存记账。随机打乱离线行的实验不能命名为概念漂移验证。 评测 API 、 固定版实现", "source_document": "products_and_projects.md", "anchor": "products-record-10", "urls": ["https://riverml.xyz/latest/api/evaluate/progressive-val-score/", "https://github.com/online-ml/river/blob/0.26.1/river/evaluate/progressive_validation.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-63", "category": "products", "title": "CapyMOA", "identity": "CapyMOA", "details": "Python 数据流接口与 MOA 后端；分类、回归、异常、漂移评测及相关学习器，不是网络流采集器。；prequential 等流式评测，CPU/MOA 为重要路径，也有需另核依赖的深度模型；指标/绘图接口。；适合作为后续真实时间流研究的评测基础，当前不能只调用库便声称新漂移算法；0.x API 与 Java/MOA 依赖需固定。 评测模块 、 固定版 README", "source_document": "products_and_projects.md", "anchor": "products-record-11", "urls": ["https://capymoa.org/api/modules/capymoa.evaluation.html", "https://github.com/adaptive-machine-learning/CapyMOA/blob/v0.15.1/README.md"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-64", "category": "products", "title": "PyOD", "identity": "PyOD", "details": "数值特征矩阵上的异常模型与统一 score/predict API；当前还提供生命周期/agent 等接口，不能只描述成早期模型列表。；传统算法多有 CPU 路径，深度模型依赖另核；统一分数、预测、置信/拒识等接口不等于包级证据。；可选少数异常基线，但训练污染率阈值不等于独立正常集 FPR 校准。统一输入/标签可用性和调参预算后才可比较。 当前文档 、 固定版 BaseDetector", "source_document": "products_and_projects.md", "anchor": "products-record-12", "urls": ["https://pyod.readthedocs.io/en/latest/", "https://github.com/yzhao062/pyod/blob/v3.6.7/pyod/models/base.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-65", "category": "products", "title": "ADBench", "identity": "ADBench", "details": "异常检测 benchmark，区分无监督/半监督/监督、标签可用量和若干鲁棒性情景；不是一个网络安全产品。；离线矩阵、CPU/GPU 取决于模型；固定 seed、运行结果表和脚本。；借鉴负对照、污染与标签预算；默认数据生成可能改变采样/复制样本，不能直接套到本项目冻结分区。 README 、 run.py", "source_document": "products_and_projects.md", "anchor": "products-record-13", "urls": ["https://github.com/Minqi824/ADBench/blob/3dac8221081e190f157d78e93bfa8867f90d0965/README.md", "https://github.com/Minqi824/ADBench/blob/3dac8221081e190f157d78e93bfa8867f90d0965/adbench/run.py"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-66", "category": "products", "title": "AutoGluon Tabular", "identity": "AutoGluon Tabular", "details": "带标签表格，监督模型选择、调参、bagging/stacking、可选蒸馏/部署处理；不负责包采集与协议语义。；离线训练、CPU/GPU 视模型， predict_proba /leaderboard；不是 SOC 界面。；借鉴合理强基线、时间限制、推理预算。自动集成/重训可能显著增大成本或合并分区，不能无记录地与小 MLP 比较。 fit API 、 部署文档", "source_document": "products_and_projects.md", "anchor": "products-record-14", "urls": ["https://auto.gluon.ai/stable/api/autogluon.tabular.TabularPredictor.fit.html", "https://auto.gluon.ai/stable/tutorials/tabular/advanced/tabular-deployment.html"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-67", "category": "products", "title": "TabArena", "identity": "TabArena", "details": "NeurIPS 2025 Datasets and Benchmarks Track 的表格评测生态：固定任务、实现、配置与调参/集成结果；不是单个检测模型。；离线任务/缓存预测、评测结果；资源随模型与搜索预算变化，无网络流量分析 UI。；借鉴版本化协议与共同预算。其 IID 表格排名不能代替 UNSW/CIC 的原始字段约束、困难族、低 FPR 与部署测量。 官方仓 、 正式论文", "source_document": "products_and_projects.md", "anchor": "products-record-15", "urls": ["https://github.com/autogluon/tabarena/tree/v0.1.0", "https://papers.neurips.cc/paper_files/paper/2025/file/1697e3fb412da11dc9488249f9e7bbc9-Paper-Datasets_and_Benchmarks_Track.pdf"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-68", "category": "products", "title": "MLflow", "identity": "MLflow", "details": "代码版本、参数、指标、数据/模型和任意实验产物的跟踪、注册与比较；不改进分类决策本身。；CPU/服务端追踪，UI/API、runs/artifacts/registry；可与本地训练分离。；实验追踪、模型来源展示已有成熟工具。哈希/registry 不能自动证明无泄漏或 test 未被调参；本项目仍需显式 split、阈值来源和确认状态。 Tracking 文档", "source_document": "products_and_projects.md", "anchor": "products-record-16", "urls": ["https://mlflow.org/docs/latest/ml/tracking/"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-69", "category": "products", "title": "Darktrace / HYBRID NETWORK （原 /NETWORK 路径重定向）", "identity": "Darktrace / HYBRID NETWORK （原 /NETWORK 路径重定向）", "details": "官网描述从本环境学习行为画像。作者 GCP vSensor 部署仓具体说明 VPC 镜像/osSensor 输入、DPI 提元数据、TLS 上送已有 master、可选 GCS PCAP；需要 Update Key/Push Token。是商业环境学习/响应体系，不是本项目那种公开监督 MLP。 官方产品页 、 部署源码说明 ；可核 master 控制台、传感器与 PCAP 管线；公开材料不足以重建其算法/内部校准。虚机 CPU/RAM 和采集带宽有成本，不可称任意笔记本实时能力。；借鉴“采集覆盖/传感器健康/证据存储”分离；“自学习、检测未知攻击、AI 调查”不能作为我们的新颖性口号。部署脚本公开不等于取得产品许可。", "source_document": "products_and_projects.md", "anchor": "products-record-17", "urls": ["https://www.darktrace.com/products/hybrid-network", "https://github.com/darktrace/terraform-gcp-vsensor/blob/main/README.md"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-70", "category": "products", "title": "Vectra AI Detect for NDR", "identity": "Vectra AI Detect for NDR", "details": "Sensor 接收 SPAN/TAP/镜像，提元数据；Brain 分析与关联，物理/虚拟/云部署。 官方技术规格 、 网络流量建议 ；技术文档明确 detection PCAP 来自滚动缓冲且可能不完整/缺失；日志类账户/云检测不必有包。控制台不能把缺证据伪装成完整流量回放。 Detection PCAP 文档 ；借鉴证据不可用状态、数据源类型和检测延迟的影响；机器学习/关联为厂商公开描述，内部模型和实际 FPR 未核。商业订阅形态，合同许可未审查。", "source_document": "products_and_projects.md", "anchor": "products-record-18", "urls": ["https://content.vectra.ai/hubfs/downloadable-assets/Datasheet_Appliance-SensorSpecs.pdf", "https://docs.vectra.ai/deployment/traffic-engineering-and-validation/network-traffic-recommendations", "https://docs.vectra.ai/reference/how-detection-pcaps-are-generated"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-71", "category": "products", "title": "ExtraHop RevealX", "identity": "ExtraHop RevealX", "details": "原始包 → 协议/事务/指标；NDR 行为检测，并可配 IDS 签名和 Packet Forensics。公开 FAQ 区分 sensor、packetstore、recordstore、console 及 SaaS/本地部署。 官方 FAQ 、 架构指南 ；具备检测调查、包查询、包存储/取回；模块和访问权限有边界。已读 9.4 架构文档，不把它写成截至本日最新软件版本或现租户兼容保证。；借鉴原始包、事务记录、告警三层证据。NDR/IDS/取证的组合不是单一 ML 评分，也不能拿厂商专用设备吞吐对比 CSV 推理。商业交付，合同许可未审查。", "source_document": "products_and_projects.md", "anchor": "products-record-19", "urls": ["https://www.extrahop.com/products/faq", "https://docs.extrahop.com/9.4/intro-to-eh-system/intro-to-eh-system.pdf"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}, {"id": "products-72", "category": "products", "title": "Corelight Open NDR", "identity": "Corelight Open NDR", "details": "Sensors 将 Zeek、Suricata、威胁情报及厂商本地 ML/异常能力组合；硬件、软件、虚拟、云与 flow-log sensor 各有适用输入。 传感器说明 ；Smart PCAP 可按流量/事件选择捕获，并在 Zeek 日志用 spcap.url 链到相关包；为订阅模块。 Smart PCAP ；借鉴日志到包的稳定联系和选择性保留。Open NDR 名称不代表整个产品 OSI 开源；上游开源组件与厂商产品许可分开。 厂商 EULA", "source_document": "products_and_projects.md", "anchor": "products-record-20", "urls": ["https://corelight.com/platform/sensors", "https://corelight.com/platform/smart-pcap", "https://corelight.com/hubfs/legal/eula.pdf"], "reproduction_status": "本轮仅审查，未复现／未安装运行"}];
+const categoryNames={ids:'IDS 与流量模型',nearest:'最近邻与数学审查',tabular:'表格模型与基准',products:'产品与开源项目'};
+function showDoc(id,anchor){
+  const evidence=id==='evidence';
+  document.querySelectorAll('.document').forEach(x=>x.hidden=x.id!=='doc-'+id);
+  document.getElementById('evidence').hidden=!evidence;
+  document.querySelectorAll('nav button').forEach(b=>b.toggleAttribute('aria-current',b.dataset.doc===id));
+  document.querySelectorAll('nav button[aria-current]').forEach(b=>b.setAttribute('aria-current','page'));
+  if(anchor){requestAnimationFrame(()=>document.getElementById(anchor)?.scrollIntoView())}else window.scrollTo({top:0});
+  location.hash=id;
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showDoc(b.dataset.doc)));
+document.querySelectorAll('[data-doc-link]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showDoc(a.dataset.docLink)}));
+function renderRecords(){
+  const q=document.getElementById('query').value.trim().toLocaleLowerCase();
+  const category=document.getElementById('category').value;
+  const filtered=records.filter(r=>(!category||r.category===category)&&(!q||JSON.stringify(r).toLocaleLowerCase().includes(q)));
+  const list=document.getElementById('record-list');list.replaceChildren();
+  filtered.forEach(r=>{const li=document.createElement('li');const left=document.createElement('div');const title=document.createElement('h3');title.textContent=r.title;left.append(title);
+    const cat=document.createElement('p');cat.textContent=categoryNames[r.category];left.append(cat);
+    const open=document.createElement('button');open.textContent='阅读完整审查';open.addEventListener('click',()=>showDoc(r.category,r.anchor));left.append(open);li.append(left);
+    const right=document.createElement('div');const detail=document.createElement('p');detail.textContent=r.details.slice(0,420)+(r.details.length>420?'…':'');right.append(detail);
+    const links=document.createElement('div');links.className='record-links';r.urls.slice(0,4).forEach((url,i)=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='一手来源 '+(i+1);links.append(a)});right.append(links);li.append(right);list.append(li)});
+  document.getElementById('count').textContent=`显示 ${filtered.length} / ${records.length} 条对照记录`;
+}
+document.getElementById('query').addEventListener('input',renderRecords);document.getElementById('category').addEventListener('change',renderRecords);renderRecords();
+const initial=location.hash.slice(1);if(['overview','ids','nearest','tabular','products','evidence'].includes(initial))showDoc(initial);
+</script></body></html>

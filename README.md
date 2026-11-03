@@ -6,6 +6,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 **当前进度：前五轮已完成，包括独立校准后的最终测试；现进入 research v2 的机制与近期方法研究。** 第五轮的完整测试结果保存在个人实验归档。下列第三、四轮数字来自 validation，不应当作第五轮测试成绩。
 
+**最新研究定位：** [2026-11-03 成果全景与创新审查](docs/landscape_20261103/README.md)覆盖 IDS 论文、低误报／蒸馏近邻、近期表格模型、开源工程与商业 NDR。现有“门控＋排序＋小学生”组合的新颖性尚未成立；先补强近邻对照、教师资格和机制反证，再决定后续扩展。该审查未新增真实训练结果。
+
 **新增研究：** [第六轮协议](docs/STAGE6_PROTOCOL.md)与[研究设计](docs/STAGE6_RESEARCH_DESIGN.md)固定了权重匹配蒸馏、教师门控及其机制控制、低误报困难样本排序、大／小网络容量参照，以及官方 TabM 对照。[运行说明](docs/STAGE6_LAB.md)区分合成 smoke、真实 pilot 与五种子完整开发；实现和小试不表示方法已经有效。既有 test 已被使用，新增研究只读取 train/validation，新的独立确认必须另有未使用的数据来源。
 
 第六轮已完成434项本地测试、13条件合成链和UNSW真实限量pilot，两份release工件分别经687／1610项独立检查通过。范围、正负信号与未完成事项见[第六轮验收记录](docs/STAGE6_VALIDATION.md)。

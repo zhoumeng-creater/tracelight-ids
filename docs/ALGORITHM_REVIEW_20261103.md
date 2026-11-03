@@ -1,5 +1,7 @@
 # 算法设计审查：低误报检测、蒸馏与近期方法对照
 
+**后续全景审查更新：** 请优先阅读[成果全景与创新审查](landscape_20261103/README.md)及其四份专题。新核到的 CVPR2022 EKD、ICLR2026 AdaConG／双类条件 NP 迁移和安全级联近邻，进一步削弱了本文 §6.4 的泛化新颖性；其中路线均仍是待验证候选。netFound 也已更新到 2026 v5／v2 家族，旧 640M 卡为 legacy，不能代表当前发布状态。
+
 审查日期：2026-11-03。依据：当前实现、前五轮核验结果、research v2预验证及下列原论文／官方实现。本文区分已实现、已验证和拟优化，不将论文中的成绩或理论保证移作本项目结论。后续真实训练、方法比较和正式资源测量在实验室RTX4090D执行，本机仅文献、代码、单元及合成检查。
 
 ## 1. 是否涉及算法设计
@@ -182,7 +184,7 @@ TabPFN3.5许可包含对用其输出训练竞争模型的限制。因此本项�
 | TrafficFormer | 作者发表页标示IEEE S&P2025；PCAP→flow→burst字节→bigram／BPE，微调还用包长、方向、时间等 | 包级预训练参照，需新增可核对的原始包输入；不是当前统计CSV的直接替代 |
 | The Sweet Danger of Sugar／Pcap-Encoder | ACM SIGCOMM2025；原始包十六进制字段与T5表示 | 很重要的严格划分、捷径和简单强基线审查；预训练明确包含UNSW原始包，需核具体重叠 |
 | Lens最新v5 | TMLR2026，期刊；每流前34包、语义字段遮盖与知识模板，不沿用旧版3包设置 | 可借鉴有语义的预训练任务；现有CSV不能原样复现，字段组遮盖须与成熟表格自监督方法另作比较 |
-| netFound-640M-base | 2023预印本路线、2025公开checkpoint；包／burst／流token | 不是因2025发权重就变成2025顶会论文；输入、时序和数据来源均需另审计 |
+| netFound 当前v5／v2家族 | 2026-05-12更新；字段token、metadata及burst／flow层级，旧640M卡标legacy | 正式会议身份未核到；新版模型／公开sampler与旧版私有数据状态须分开，见[最新审查R18](landscape_20261103/ids_research.md) |
 
 直接来源：[TrafficFormer作者发表页](https://liuzhuotao.github.io/publications/trafficformer/)、[官方输入流程](https://github.com/IDP-code/TrafficFormer)、[SIGCOMM正式DOI](https://doi.org/10.1145/3718958.3750498)、[Pcap-Encoder作者代码](https://github.com/SmartData-Polito/Debunk_Traffic_Representation)、[Lens v5全文](https://arxiv.org/html/2402.03646v5)、[Lens作者代码](https://github.com/V-Enzo/Lens-foundation-model-for-network-traffic)、[netFound作者代码](https://github.com/SNL-UCSB/netFound)、[netFound权重卡](https://huggingface.co/snlucsb/netFound-640M-base)。这些候选本轮均未复现或运行。
 
