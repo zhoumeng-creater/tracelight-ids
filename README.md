@@ -10,6 +10,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 第六轮已完成434项本地测试、13条件合成链和UNSW真实限量pilot，两份release工件分别经687／1610项独立检查通过。范围、正负信号与未完成事项见[第六轮验收记录](docs/STAGE6_VALIDATION.md)。
 
+**实验地点：后续真实训练、方法对照与正式资源测量在实验室 RTX 4090D 上执行。** 本机用于代码、单元测试和合成数据检查；已有本机pilot仅作工程预验证及探索。使用[实验室操作指南](docs/STAGE6_LAB.md)中的`scripts/run_research_lab.py`，默认核对CUDA GPU0为RTX4090D，完成后自动生成可回传的结果ZIP、SHA-256及硬件预检记录。
+
 **已完成第四轮的实验室使用者请直接阅读 [第五轮操作指南](docs/STAGE5_LAB.md)。** 新入口复用第四轮的 12 个已训练模型与已有 CPU 计时。先锁定全部比较对象，再封存全部校准阈值，最后统一评估测试分区。详见[第五轮固定协议](docs/STAGE5_PROTOCOL.md)。
 
 已完成 RTX 4090D 多种子基线、第二轮 **36 次字段预算实验**和第三轮全字段小型 MLP / KD 对照，工件与主要指标经核验。普通 MI 裁剪和固定 KD 未达到各自保留门槛；小型 hard MLP 相对本轮大型 hard MLP 平均召回仅低约 0.032 个百分点、部署包减少约 42.85%，端到端单条延迟基本不变。所有结果仍属于验证集开发证据。

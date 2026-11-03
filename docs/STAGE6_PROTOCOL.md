@@ -2,6 +2,8 @@
 
 日期：2026-11-03。研究版本：**TraceLight research v2**。状态：下一轮开发协议；文中目标均可失败，完成实现、通过 smoke 或写出协议均不表示方法有效。完整研究动机、文献边界和确认数据路线见 [STAGE6_RESEARCH_DESIGN.md](STAGE6_RESEARCH_DESIGN.md)。
 
+**实验地点约定：后续真实v2训练统一在实验室RTX 4090D台式机执行。本机后续只做代码、unit、synthetic与回传工件复核，不再训练真实数据。已有本机真实pilot仅作工程预验证／探索，保留原始标记；正式真实研究须另有实验室GPU、环境、代码、数据和工件证据。** 操作入口见[STAGE6_LAB.md](STAGE6_LAB.md)，先实验室dry-run，再UNSW pilot，通过后再完整两环境研究。
+
 第五轮已经打开 UNSW 和修正版 CIC 的 test。本轮设计受既有结果启发，**现有 train/validation 只能产生 v2 开发证据**；旧 calibration/test 不用于新增模型选择、损失参数选择、阈值选择、早停或新模型排名。旧 test 结果保留为 research v1 的已完成结论。把旧数据重新随机划分、换 seed、改文件名或删掉不利样本，都不能重新获得独立确认集。
 
 ## 1. 问题、比较单位与可否定假设
@@ -26,18 +28,20 @@ H1—H3 先以八条件核心矩阵及三个gate机制控制检验；H4由本轮
 | 层级 | 数据与预算 | 可以据此判断什么 |
 |---|---|---|
 | synthetic smoke | train 上限 400、validation 上限 150；seed 17；最多 2 epochs | 接口、损失、工件和隔离检查；不评价研究效果 |
-| 真实 pilot | 现有合法 train 上限 12,000、validation 上限 6,000；seed 17；最多 20 epochs | 可运行性、成本量级、错误与数值异常；n=1 不判定有效 |
-| 五种子机制开发 | 完整现有train/validation，不设行数cap；五个固定seeds；最多120epochs | 完整既有开发任务中的方向与训练随机性，不是最终泛化确认 |
+| 实验室4090D真实pilot | 现有合法 train 上限 12,000、validation 上限 6,000；seed 17；最多 20 epochs | 可运行性、成本量级、错误与数值异常；n=1 不判定有效 |
+| 实验室4090D五种子机制开发 | 完整现有train/validation，不设行数cap；五个固定seeds；最多120epochs | 完整既有开发任务中的方向与训练随机性，不是最终泛化确认 |
 | 压缩与机制扩展 | 仅对过闸门的 base 目标增加容量／字段和特定机制对照 | 回答 H4 和进一步归因，单列新增预算 |
 | 新来源确认 | 通过准入审计的新数据；确认协议另冻结 | 提供真正新的确认；现阶段尚无此结果 |
 
 cohort_policy明确区分complete_development与bounded_pilot：前者必须max_train_rows=null、max_validation_rows=null，使用完整现有开发分区；后者才允许固定、可恢复的预算子样本。所有配对条件使用相同行和分组，采样不读取旧test，也不因seed结果改样本。pilot保存完整分区与子样本的家族支持、缺失家族、大组排除和身份清单；组不能为凑到精确行数而拆开。
 
+实验室包装入口为scripts/run_research_lab.py，参数为--unsw-data-dir、--cicids-data-dir、--work-dir、--profile pilot|full、--dry-run、--resume；默认要求CUDA和RTX4090D。pilot只运行UNSW并拒绝CIC参数，full串行两环境，自动生成回传ZIP和SHA-256；dry-run只预检不训练。参数与恢复行为以本次发布的--help和工件记录为准。
+
 实际配置入口为[research-v2-smoke.yaml](../configs/research-v2-smoke.yaml)、[research-v2-pilot.yaml](../configs/research-v2-pilot.yaml)、[research-v2.yaml](../configs/research-v2.yaml)，训练模块为src/ids/research.py，损失为src/ids/research_kd.py。此入口负责开发训练、逐项损失、OOF与预测归档；本协议另列的CPU三轮、完整机制分析、新来源确认和最终应用验收需各自工件，不能由RESEARCH_COMPLETE.json替代。
 
-本机先用可核验的 UNSW 跑 pilot。第二数据环境只有在本机 prepared 身份与 schema 完整后，才按原准备流程复用；不能临时拿相近 CSV 替代。CIC 与 UNSW 分别拟合，比较的是机制是否可重复，不声称 A 训练后可直接检测 B。
+实验室先用可核验的UNSW既有prepared跑pilot；已有本机pilot不重跑、不并入正式结果，也不代替实验室pilot。第二数据环境仅复用实验室第四轮留下的完整prepared，并在dry-run核对身份与schema；本轮入口不下载、不prepare，不能临时拿相近CSV或回传ZIP内的小清单代替真实开发数据。CIC 与 UNSW 分别拟合，比较的是机制是否可重复，不声称 A 训练后可直接检测 B。
 
-真实pilot先验收，再决定执行完整开发分区的五种子矩阵；不因配置文件存在自动开始全量长任务。CIC训练Portscan有139,618条属于同一关联组，用50,000行whole-group上限会整组排除并隐性改变任务，因此不得直接把UNSW的bounded_pilot套到CIC后声称复验同一任务。正式研究用epochs、batch、选择池和排队约束算力，不能靠悄悄删除整族控预算。若完整开发分区不能负担，先公开修订任务与支持边界，而非静默退化为pilot。
+实验室真实pilot先验收，再决定在同一RTX4090D环境执行完整开发分区的五种子矩阵；不因配置文件存在自动开始全量长任务。CIC训练Portscan有139,618条属于同一关联组，用50,000行whole-group上限会整组排除并隐性改变任务，因此不得直接把UNSW的bounded_pilot套到CIC后声称复验同一任务。正式研究用epochs、batch、选择池和排队约束算力，不能靠悄悄删除整族控预算。若完整开发分区不能负担，先公开修订任务与支持边界，而非静默退化为pilot。
 
 ## 3. 八条件核心、机制控制与预算配平
 
@@ -152,4 +156,4 @@ ranking 在当前合法 train batch 内，对 detach 的学生分数选最高分
 
 阶段完成分别表示：工程链通过；五种子开发覆盖；机制证据支持／否定；压缩和部署证据；新来源确认。完成标记不自动代表方法有效。测试隔离失败、关键元数据不可信、训练异常未解释、困难家族系统性退化、连续固定预算无稳定收益时暂停扩展并修正论证，而不是继续增加run数。
 
-发布前须由实际 runner 的 help/dry-run、合成 smoke、真实小样本 pilot 及返回工件复核证明支持范围。本文中的后续机制控制、新来源确认和最终应用验收，只有对应实现与工件完成后才可标记完成。
+发布前由实际runner的help/dry-run与合成smoke证明工程支持范围；真实小样本pilot及五种子研究均须在实验室RTX4090D执行并经回传工件复核。旧本机探索不能填补实验室运行证据。本文中的后续机制控制、新来源确认和最终应用验收，只有对应实现与工件完成后才可标记完成。

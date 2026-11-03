@@ -89,13 +89,17 @@ def validate_config(config):
 
 
 def _group_column(frame):
-    return "group_hash" if "group_hash" in frame else "feature_hash"
+    # Repaired CIC uses group_id for the union of feature/session relations.
+    # Falling back directly to feature_hash would discard session isolation.
+    for name in ("group_id", "group_hash", "feature_hash"):
+        if name in frame:
+            return name
+    raise ValueError("A verified feature/session group identity is required")
 
 
 def _identity(frame):
     columns = ["sample_id", "feature_hash", "label"]
-    if "group_hash" in frame:
-        columns.append("group_hash")
+    columns.extend(name for name in ("group_id", "group_hash") if name in frame)
     if not set(columns).issubset(frame) or frame["sample_id"].duplicated().any():
         raise ValueError("Development data needs unique stable IDs and group/label identity")
     if not frame["label"].isin([0, 1]).all():

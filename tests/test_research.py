@@ -9,7 +9,7 @@ import yaml
 
 from ids.common import read_json
 from ids.data import make_synthetic_dataset, prepare_dataset
-from ids.research import group_budget, run_research, train_research_mlp, validate_config, verify_research
+from ids.research import _group_column, _identity, group_budget, run_research, train_research_mlp, validate_config, verify_research
 
 
 def configuration():
@@ -40,6 +40,18 @@ def test_whole_group_budget_keeps_groups_and_does_not_overflow():
     assert set(result["feature_hash"]).issubset(set(frame["feature_hash"]))
     assert (result.groupby("feature_hash").size() == 2).all()
     pd.testing.assert_frame_equal(result, group_budget(frame, 8, 19))
+
+
+def test_cic_union_group_id_takes_precedence_over_exact_feature_hash():
+    frame = pd.DataFrame({"sample_id": [str(i) for i in range(12)],
+                          "feature_hash": [f"unique-{i}" for i in range(12)],
+                          "group_id": [f"session-union-{i // 4}" for i in range(12)],
+                          "label": [0, 1] * 6})
+    assert _group_column(frame) == "group_id"
+    assert "group_id" in _identity(frame)
+    subset = group_budget(frame, 4, 19)
+    assert len(subset) == 4
+    assert subset.group_id.nunique() == 1
 
 
 def test_run_never_loads_or_hashes_reserved_partitions(prepared, tmp_path, monkeypatch):

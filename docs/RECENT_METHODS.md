@@ -39,18 +39,28 @@ restored = load_tabm_bundle("new-development-run/tabm.joblib", device="cpu")
 
 最小新增依赖固定为 `tabm==0.0.3`、`rtdl_num_embeddings==0.0.12`、`typing_extensions==4.12.2`，复用项目已安装的 PyTorch 2.6.0 CPU/CUDA 构建。适配器强制核对前两个版本，并记录 torch、numpy、pandas、scikit-learn 实际版本。没有安装时明确报错，基础 CLI 和既有模型不因此新增必选依赖。主环境及主锁文件不被自动升级。
 
-在已安装项目锁定依赖和 PyTorch 的 Windows 环境中，可显式执行：
+实验室操作沿用 [Stage6 操作指南](STAGE6_LAB.md)中已核验的**绝对解释器路径 `$labPython`**。先用这个解释器确认锁定依赖、torch 版本和 CUDA，再向同一个环境显式安装可选包；不要依据终端是否显示激活标记或 PATH 中的 `python` 推断实际环境。在仓库根目录执行：
 
 ```powershell
-$recent = Join-Path $env:TEMP 'tracelight-tabm-environment'
-python -m venv --system-site-packages $recent
-$recentPython = Join-Path $recent 'Scripts\python.exe'
-uv pip install --python $recentPython --no-deps tabm==0.0.3 rtdl_num_embeddings==0.0.12 typing_extensions==4.12.2
-& $recentPython -c "from ids.recent_baselines import recent_dependency_versions; print(recent_dependency_versions())"
-& $recentPython -m pytest tests/test_recent_baselines.py -q
+# $labPython 已按 Stage6 指南指向并核验实验室 python.exe 的绝对路径。
+if (-not (Test-Path -LiteralPath $labPython -PathType Leaf)) { throw '请先核验 labPython' }
+& $labPython -c "import sys, torch, numpy, pandas, sklearn; print(sys.executable); print(torch.__version__, torch.version.cuda, torch.cuda.is_available()); print(numpy.__version__, pandas.__version__, sklearn.__version__)"
+if ($LASTEXITCODE -ne 0) { throw '既有实验室依赖尚未就绪，先按锁文件和 LAB.md 重建' }
+
+# --no-deps 阻止本次可选包安装自动解析、升级或替换 torch/CUDA 依赖。
+& $labPython -m pip install --no-deps tabm==0.0.3 rtdl_num_embeddings==0.0.12 typing_extensions==4.12.2
+if ($LASTEXITCODE -ne 0) { throw '可选包安装失败' }
+$env:PYTHONPATH = Join-Path (Get-Location) 'src'
+& $labPython -c "from ids.recent_baselines import recent_dependency_versions; print(recent_dependency_versions())"
+if ($LASTEXITCODE -ne 0) { throw '可选包版本核验失败' }
+& $labPython -m pip check
+if ($LASTEXITCODE -ne 0) { throw '依赖一致性检查未通过' }
+& $labPython -m pytest tests/test_recent_baselines.py -q
 ```
 
-命令应在已可导入 `ids` 的仓库环境中运行；若未以 editable 方式安装项目，先显式设置 `$env:PYTHONPATH = (Join-Path (Get-Location) 'src')`。`--system-site-packages` 用于复用大体积 torch，新增包写入独立 venv；这是隔离新增依赖，不是完全独立重建全部依赖。正式实验仍须保存完整环境清单。
+版本打印只是检查证据，不能代替 Stage6 的版本及设备准入。上述命令不会自动修复 torch；缺失或版本、CUDA 构建不符时，先按项目锁文件及 [LAB.md](LAB.md) 显式重建并验证环境，随后重新固定 `$labPython`。正式实验保存这个解释器的完整环境清单。
+
+本机已完成的工程验证使用了一个 `--system-site-packages` 临时 venv，复用的是**基础 Python 中已经安装的 torch**，三个新增可选包写入临时 venv。这说明该本机配置可行。若从另一个已激活 venv 内运行 `python -m venv --system-site-packages`，新环境可见的系统包路径并不保证包含原 venv 的包，因此**不能假定会继承原 venv 中的 torch**。需要新隔离环境时，先检查新解释器的实际导入与版本；若缺 torch 或项目依赖，就按锁文件和明确的 CPU/CUDA wheel 安装步骤完整重建，不盲目依赖嵌套继承，也不让可选包安装自动升级 torch/CUDA。
 
 本次对真实官方包运行 **15 项测试，15 通过、0 跳过**：包含 PLE/无嵌入两条实际拟合路径、CPU 保存重载数值一致、确定性、未知类别、常量列、标签不参与预测、训练内预处理/分箱和早停恢复。环境为 Python 3.12.4、torch 2.6.0+cu126、numpy 1.26.4、pandas 2.2.2、scikit-learn 1.5.1；这 15 项使用 CPU。另在本机 RTX 4050 Laptop GPU 上完成一轮合成数据 PLE 冒烟：48 行训练、16 行验证、1 epoch，训练使用 CUDA，保存权重全部位于 CPU，CPU 推理返回 16 个有限分数。此记录不代表实验室 4090D 运行。全局环境未装 tabm 时这些可选真实训练测试会明确跳过，不能把跳过记作已验证。上述验证没有运行真实数据模型，也没有重新打开真实 test；正式研究结果由对应运行记录证明。
 
