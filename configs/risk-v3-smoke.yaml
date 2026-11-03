@@ -1,0 +1,62 @@
+schema_version: 1
+purpose: risk_v3_development_only
+cohort_policy: complete_development
+seeds:
+- 17
+max_fpr: 0.01
+threads: 1
+folds: 3
+fold_seed: 20261103
+role_seed: 20261103
+reference_fraction: 0.1
+constraint_fraction: 0.2
+max_train_rows: null
+max_validation_rows: null
+sampling_seed: 20261103
+anchor:
+  hyperparameters:
+    hidden_sizes:
+    - 32
+    - 16
+    epochs: 2
+    patience: 2
+    batch_size: 64
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    min_delta: 1.0e-05
+teacher:
+  model: hgb
+  features:
+    method: all
+  hyperparameters:
+    max_iter: 3
+    max_leaf_nodes: 7
+    learning_rate: 0.1
+    early_stopping: false
+optimization:
+  macro_steps: 2
+  chunk_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  temperature: 1.0
+  kd_weight: 0.3
+  fd_alpha: 1.0
+  fd_beta: 5.0
+  fd_temperature: 1.0
+  ekd_temperature: 0.1
+  margin_floor: 0.05
+  dual_step_size: 1.0
+  dual_maximum: 100.0
+  attack_loss_limit: 0.01
+  gradient_clip: 10.0
+  min_family_support: 5
+conditions:
+- hard
+- boundary_kd
+- risk_hard
+- risk_matched
+- risk_kd
+- normal_hinge_kd
+- pct
+- dual_source_fd
+- ekd

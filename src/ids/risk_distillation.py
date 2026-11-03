@@ -135,13 +135,16 @@ class RiskReference:
     majorizer: str
     normal_repair_credit: bool
     signature: str
+    normal_loss_form: str = "capped"
 
 
-def _reference_digest(constraints, identities, anchor, labels, members, floor, majorizer, credit):
+def _reference_digest(constraints, identities, anchor, labels, members, floor, majorizer, credit,
+                      normal_loss_form="capped"):
     digest = hashlib.sha256()
-    metadata = {"signature_schema_version": 2,
+    metadata = {"signature_schema_version": 3,
                 "constraints": [asdict(x) for x in constraints], "sample_ids": identities,
-                "margin_floor": floor, "majorizer": majorizer, "normal_repair_credit": credit}
+                "margin_floor": floor, "majorizer": majorizer, "normal_repair_credit": credit,
+                "normal_loss_form": normal_loss_form}
     digest.update(json.dumps(metadata, sort_keys=True, separators=(",", ":")).encode())
     for value in (anchor, labels, *members):
         # The same bytes can mean different margins/masks after a dtype view or
@@ -161,13 +164,17 @@ def _signature(value):
 
 def build_risk_reference(anchor_margins, labels, constraints, *, sample_ids,
                          normal_strata=None, attack_families=None, margin_floor=.05,
-                         majorizer="adaptive", normal_repair_credit=True,
+                         majorizer="adaptive", normal_repair_credit=True, normal_loss_form="capped",
                          partition="constraint_train", min_support=1):
     """Freeze a complete constraint-training population and its row identity.
 
     No random split, per-batch quantile or silent rare-group omission occurs.
     The caller must verify actual source/role isolation; names alone do not
     establish provenance. Near-boundary anchor slack is retained, never subtracted.
+    normal_loss_form='hinge' is the uncapped normal control: ALL normal rows
+    use relu(1+m/max(abs(anchor),floor)), including old false positives. This
+    normal branch always uses adaptive scales; majorizer still controls attacks.
+    The capped default retains the existing credit/majorizer behavior.
     """
     if partition != "constraint_train":
         raise ValueError("risk reference requires constraint_train, not a reserved or certificate pool")
@@ -181,6 +188,8 @@ def build_risk_reference(anchor_margins, labels, constraints, *, sample_ids,
         raise ValueError("majorizer must be adaptive or fixed")
     if type(normal_repair_credit) is not bool:
         raise ValueError("normal_repair_credit must be boolean")
+    if not isinstance(normal_loss_form, str) or normal_loss_form not in {"capped", "hinge"}:
+        raise ValueError("normal_loss_form must be capped or hinge")
     if type(min_support) is not int or min_support < 1:
         raise ValueError("min_support must be a positive integer")
     constraints = tuple(constraints)
@@ -210,9 +219,9 @@ def build_risk_reference(anchor_margins, labels, constraints, *, sample_ids,
     if not math.isfinite(1 / floor):
         raise ValueError("margin_floor inverse is not finite")
     signature = _reference_digest(constraints, identities, anchor, labels, members,
-                                  floor, majorizer, normal_repair_credit)
+                                  floor, majorizer, normal_repair_credit, normal_loss_form)
     return RiskReference(constraints, identities, anchor, labels, tuple(members), floor,
-                         majorizer, normal_repair_credit, signature)
+                         majorizer, normal_repair_credit, signature, normal_loss_form)
 
 
 @dataclass
@@ -237,7 +246,8 @@ class ConstraintReport:
 def constraint_risks(student_margins, reference, *, sample_ids, partition="constraint_train"):
     """Compute full-population empirical bounds; no minibatch denominators.
 
-    normal: FPR_B + mean((1-B) relu(1+m/d) - B clip(-m/k,0,1)).
+    normal capped default: FPR_B + mean((1-B) relu(1+m/d) - B clip(-m/k,0,1)).
+    normal hinge control: mean(relu(1+m/max(abs(anchor),k))) on ALL normals.
     attack: mean(B relu(1-m/d)), with NO credit for newly rescued attacks.
     Thus actual FPR <= normal value and lost baseline-TP mass <= attack value.
     These remain valid for supplied margins regardless of training adaptation.
@@ -253,7 +263,7 @@ def constraint_risks(student_margins, reference, *, sample_ids, partition="const
     if reference.signature != _reference_digest(
             reference.constraints, reference.sample_ids, reference.anchor_margins,
             reference.labels, reference.members, reference.margin_floor,
-            reference.majorizer, reference.normal_repair_credit):
+            reference.majorizer, reference.normal_repair_credit, reference.normal_loss_form):
         raise ValueError("frozen risk reference was modified after its signature was recorded")
     margins = _vector(student_margins, "student_margins", length=len(reference.sample_ids), floating=True)
     if _ids(sample_ids, len(margins)) != reference.sample_ids:
@@ -272,6 +282,10 @@ def constraint_risks(student_margins, reference, *, sample_ids, partition="const
     loss_upper = baseline * F.relu(1 - m / d)
     anchor_new = (~baseline) * F.relu(1 + a / d)
     anchor_lost = baseline * F.relu(1 - a / d)
+    if reference.normal_loss_form == "hinge":
+        normal_d = a.abs().clamp_min(reference.margin_floor)
+        normal_upper = F.relu(1 + m / normal_d)
+        normal_at_anchor = F.relu(1 + a / normal_d)
     values, actuals, slacks, diagnostics = [], [], [], {}
     for spec, mask in zip(reference.constraints, reference.members):
         mask = mask.to(m.device)
@@ -282,17 +296,31 @@ def constraint_risks(student_margins, reference, *, sample_ids, partition="const
         repaired = float((b & (~s)).to(torch.float64).mean())
         base_rate = float(b.to(torch.float64).mean())
         if spec.kind == "normal_fpr":
-            # Reduce the pointwise NONNEGATIVE envelope, avoiding cancellation
-            # between two global means at a strict small-rate boundary.
-            value = (b.to(torch.float64) - repair_lower[mask] + new_upper[mask]).mean()
+            if reference.normal_loss_form == "hinge":
+                value = normal_upper[mask].mean()
+                # Old FPs can exceed one at the anchor; preserve this true
+                # surrogate excess over its hard FPR, not just old-TN slack.
+                slack = (normal_at_anchor[mask] - b.to(torch.float64)).mean()
+                diagnostic_new_upper = float(((~b) * normal_upper[mask]).detach().mean())
+                diagnostic_credit = 0.
+            else:
+                # Reduce the pointwise NONNEGATIVE envelope, avoiding cancellation
+                # between two global means at a strict small-rate boundary.
+                value = (b.to(torch.float64) - repair_lower[mask] + new_upper[mask]).mean()
+                slack = anchor_new[mask].mean()
+                diagnostic_new_upper = float(new_upper[mask].detach().mean())
+                diagnostic_credit = float(repair_lower[mask].detach().mean())
             actual = s.to(torch.float64).mean()
-            slack = anchor_new[mask].mean()
             diagnostics[spec.name] = {"support": count, "baseline_fpr": base_rate,
                 "new_fp_mass": new, "repaired_fp_mass": repaired,
-                "new_fp_upper": float(new_upper[mask].detach().mean()),
-                "repair_credit_lower": float(repair_lower[mask].detach().mean()),
+                "new_fp_upper": diagnostic_new_upper,
+                "repair_credit_lower": diagnostic_credit,
                 "weak_anchor_mass": float(((a[mask].abs() < reference.margin_floor) & (~b))
                                           .to(torch.float64).mean())}
+            if reference.normal_loss_form == "hinge":
+                diagnostics[spec.name].update(normal_hinge_upper=float(value.detach()),
+                                              anchor_hinge_upper=float(normal_at_anchor[mask].mean()),
+                                              normal_repair_credit_applied=0)
         else:
             value = loss_upper[mask].mean()
             actual = (b & (~s)).to(torch.float64).mean()

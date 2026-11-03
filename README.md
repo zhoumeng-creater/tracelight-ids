@@ -4,6 +4,8 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 面向网络入侵检测的轻量化机器学习实验工程。目标是在明确的正常流量误报预算下，比较检测效果、原始字段数、模型体积与 CPU 推理开销。每条展示记录都能追溯到数据划分、配置、模型和决策阈值。
 
+**最新实验室交接：** [v3 GitHub拉取与运行指南](docs/RISK_V3_LAB.md)和[可执行协议](docs/RISK_V3_PROTOCOL.md)。九条件覆盖共享监督hard/KD、约束消融、普通hinge机制控制，以及PCT/MPT式双源FD/EKD适配。开发机只做合成检查；你在实验室RTX4090D拉取运行并回传ZIP，当前尚无v3真实效果结论。请按v3专用发布标签建立独立checkout，保留旧实验。
+
 **当前进度：前五轮已完成，包括独立校准后的最终测试；现进入 research v2 的机制与近期方法研究。** 第五轮的完整测试结果保存在个人实验归档。下列第三、四轮数字来自 validation，不应当作第五轮测试成绩。
 
 **算法重新设计：** [v3 设计稿](docs/ALGORITHM_V3_DESIGN_20261103.md)已给出冻结 hard 锚、正常误报修复信用、攻击检出保留和原始—对偶训练目标；[风险原型](src/ids/risk_distillation.py)、[数据角色验证](src/ids/risk_data.py)及[纯合成训练链](scripts/check_risk_design.py)已实现。设计／代码／合成通过不等于真实 IDS 效果或创新性成立；正式实验室 runner 与新来源确认仍待验收，旧 v2 入口不运行该算法。
