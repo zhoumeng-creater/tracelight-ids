@@ -298,6 +298,7 @@ def _fit_condition(anchor, warm_state, frames, xs, teacher, risk_reference, anch
     started = time.perf_counter()
     accepted, accepted_moving = 0, 0
     warm_validation = None
+    termination_reason = "budget_exhausted"
     for step in range(op["macro_steps"] + 1):
         update, losses = None, None
         if step:
@@ -326,11 +327,21 @@ def _fit_condition(anchor, warm_state, frames, xs, teacher, risk_reference, anch
         rank = (v["primary"]["tpr"], -v["primary"]["fpr"], -step)
         if eligible and (best_rank is None or rank > best_rank):
             best_state, selected, best_rank, best_oracle = _state(network), step, rank, copy.deepcopy(current)
+        stalled = update is not None and not update["accepted"]
+        if stalled:
+            # The complete deterministic F+C objective, parameters, AdamW
+            # state and RNG are identical after a fully rejected transaction.
+            # Repeating it cannot produce another candidate under this policy.
+            termination_reason = "deterministic_guard_rejection"
         history.append({"step": step, "losses": losses, "constraints": current, "validation": v,
-                        "eligible": eligible, "update": update})
+                        "eligible": eligible, "update": update,
+                        "termination_reason": termination_reason if stalled or step == op["macro_steps"] else None})
         write_json(output / "history.json", history)
         if step == 0 or step % 10 == 0 or step == op["macro_steps"]:
             print(f"[v4] {condition} seed={seed} step={step} C={current['feasible']} V_fpr={v['primary']['fpr']:.5f} frozenV_fpr={v['frozen_anchor']['fpr']:.5f}", flush=True)
+        if stalled:
+            print(f"[v4] {condition} seed={seed} stopped at step={step}: {termination_reason}", flush=True)
+            break
     if best_state is None:
         best_state = _state(network)
         best_oracle = current
@@ -349,7 +360,8 @@ def _fit_condition(anchor, warm_state, frames, xs, teacher, risk_reference, anch
     prediction["predicted_label"] = (raw >= prediction.raw_logit_threshold.to_numpy()).astype(int)
     prediction.to_parquet(output / "validation-predictions.parquet", index=False)
     record = {"condition": condition, "seed": seed, "status": "eligible_development_candidate" if selected is not None else "diagnostic_no_eligible_checkpoint",
-        "selected_step": selected, "accepted_updates": accepted, "attempted_updates": op["macro_steps"], "selected_is_step0": selected == 0,
+        "selected_step": selected, "accepted_updates": accepted, "attempted_updates": len(history) - 1,
+        "planned_updates": op["macro_steps"], "termination_reason": termination_reason, "selected_is_step0": selected == 0,
         "accepted_updates_with_parameter_movement": accepted_moving,
         "common_initial_state_sha256": _state_hash(warm_state), "selected_state_sha256": _state_hash(best_state),
         "working_point": final["metrics"]["working_point"], "working_point_regime": config["primary_working_point"],
@@ -438,6 +450,17 @@ def run_upgrade_research(v3_dir, data_dir, config, output, *, device="cuda", thr
                     "phase1_and_reused_artifact_setup_seconds": time.perf_counter() - phase_started,
                     "baseline_event_source": "original v3 anchor/threshold on original training device; not the warm-start predictions",
                     "warm_state_sha256": _state_hash(_state(network)), "no_validation_used": True}
+                # Retain the actual common Phase-I state even on failure.
+                # This is an audit checkpoint of reused student training,
+                # not a newly fitted teacher or a new source anchor.
+                phase_bundle = ModelBundle("mlp", anchor.preprocessor, anchor.selected_features, anchor.encoded_dim, [],
+                    network_state=_state(network), hidden_dims=anchor.hidden_dims, device="cpu", batch_size=op["chunk_size"],
+                    num_threads=config["threads"], feature_schema=anchor.feature_schema, best_epoch=None, seed=seed)
+                phase_bundle.training_statistics = {"scope": "common_phase1_final_state", "status": phase_record["status"],
+                    "phase1_updates": phase_record["updates"], "new_teacher_fit": False, "new_source_anchor_fit": False}
+                checkpoint = root / f"phase1-s{seed}.joblib"
+                save_bundle(phase_bundle, checkpoint)
+                phase_record.update(checkpoint_file=checkpoint.name, checkpoint_sha256=sha256_file(checkpoint))
                 phase_records.append(phase_record)
                 write_json(root / f"phase1-s{seed}.json", phase_record)
                 for condition in config["conditions"]:
@@ -464,7 +487,7 @@ def run_upgrade_research(v3_dir, data_dir, config, output, *, device="cuda", thr
         "limitations": ["working point regime changed explicitly; v3 conclusions unchanged", "only finite adaptive training C is protected",
                         "guard may retain step0 without improvement", "pAUC/stronger tuned baselines and new-source confirmation remain unfinished"]})
     skipped = sum(r["status"] == "no_feasible_start" for r in records)
-    complete = {"status": "development_complete", "created_at": utc_now(), "reserved_partitions_read": [], "n_students_planned": len(records),
+    complete = {"status": "development_complete", "artifact_schema_version": 2, "created_at": utc_now(), "reserved_partitions_read": [], "n_students_planned": len(records),
         "n_students": len(records) - skipped, "n_skipped_no_feasible_start": skipped, "n_teacher_fits": 0, "n_anchor_fits": 0,
         "binding_sha256": canonical_hash(binding), "files": {p.relative_to(root).as_posix(): sha256_file(p) for p in sorted(root.rglob("*")) if p.is_file()}}
     write_json(root / COMPLETE, complete)
@@ -474,6 +497,9 @@ def run_upgrade_research(v3_dir, data_dir, config, output, *, device="cuda", thr
 def verify_upgrade_research(output):
     root = _no_links(output)
     complete = read_json(root / COMPLETE)
+    artifact_schema = complete.get("artifact_schema_version", 1)
+    if type(artifact_schema) is not int or artifact_schema not in {1, 2}:
+        raise ValueError("unsupported upgrade artifact schema")
     if complete.get("status") != "development_complete" or complete.get("reserved_partitions_read") != []:
         raise ValueError("not a completed development upgrade artifact")
     files = complete.get("files", {})
@@ -502,6 +528,14 @@ def verify_upgrade_research(output):
     required.update(f"{role}-identity.parquet" for role in ("fit", "reference", "constraint", "validation"))
     for seed in config["seeds"]:
         required.update((f"teacher-diagnostics-s{seed}.json", f"phase1-s{seed}.json"))
+        if artifact_schema == 2:
+            name = f"phase1-s{seed}.joblib"
+            phase = read_json(root / f"phase1-s{seed}.json")
+            required.add(name)
+            if (phase.get("status") not in {"feasible_start", "no_feasible_start"}
+                    or phase.get("checkpoint_file") != name or not isinstance(phase.get("checkpoint_sha256"), str)
+                    or phase["checkpoint_sha256"] != files.get(name)):
+                raise ValueError("Phase-I checkpoint identity mismatch")
     for run in runs:
         prefix = f"students/{run['condition']}-s{run['seed']}/"
         required.add(prefix + "run.json")

@@ -4,7 +4,11 @@ Reproducible lightweight machine learning for network intrusion detection, with 
 
 面向网络入侵检测的轻量化机器学习实验工程。目标是在明确的正常流量误报预算下，比较检测效果、原始字段数、模型体积与 CPU 推理开销。每条展示记录都能追溯到数据划分、配置、模型和决策阈值。
 
-**2026-11-04：v3两环境84次拟合已回传并复核，未证明候选胜出。** [失败机制报告](docs/RISK_V3_RESULTS_20261104.md)确认CIC教师目标退化、工作点漂移和代理／实际预算差异。新的[v4固定协议](docs/UPGRADE_V4_PROTOCOL.md)与[实验室指南](docs/UPGRADE_V4_LAB.md)已准备：只读复用旧教师/锚点，比较raw KL、R重校准与AdamW后置C接受门禁；先运行双环境seed17机制pilot。v4真实效果待实验室验证。
+**根本设计复盘：** [主问题、教师价值与创新证据链](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)将v3/v4从既定核心新算法降回待证机制分支。下一步的[零拟合主线价值审计](docs/THRESHOLD_AUDIT_LAB.md)同时检查native教师、错误互补、OOF支持与工作点，不以修复工程问题替代方法创新。正式题目和KD研究要求保留，新的核心构造需由资源预算、可迁移信息与强简单控制支撑。
+
+**v4最新回传：** [两环境结果复核](docs/UPGRADE_V4_RESULTS_20261104.md)显示计划48学生、实际16、跳过32；CIC全部卡在共同起点，UNSW KD仅有微小增益。已修复确定性拒绝后的重复空转，并保留失败Phase-I模型。下一步按[零拟合评分指南](docs/THRESHOLD_AUDIT_LAB.md)查询已有模型的精确阈值区间，分清阈值注册失败与分数模型不可行，原v4结果不追认。
+
+**2026-11-04：v3两环境84次拟合已回传并复核，未证明候选胜出。** [失败机制报告](docs/RISK_V3_RESULTS_20261104.md)确认CIC教师目标退化、工作点漂移和代理／实际预算差异。[v4固定协议](docs/UPGRADE_V4_PROTOCOL.md)与[历史实验室指南](docs/UPGRADE_V4_LAB.md)保留；v4已回传，实际覆盖和失败边界以最新复核为准。
 
 **最新实验室交接：** [v3 GitHub拉取与运行指南](docs/RISK_V3_LAB.md)和[可执行协议](docs/RISK_V3_PROTOCOL.md)。九条件覆盖共享监督hard/KD、约束消融、普通hinge机制控制，以及PCT/MPT式双源FD/EKD适配。开发机只做合成检查；你在实验室RTX4090D拉取运行并回传ZIP，当前尚无v3真实效果结论。请按v3专用发布标签建立独立checkout，保留旧实验。
 

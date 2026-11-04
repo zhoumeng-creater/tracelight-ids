@@ -12,3 +12,7 @@
 当前算法 v3 是候选原型。最新依据应同时阅读 [设计稿](docs/ALGORITHM_V3_DESIGN_20261103.md)和[逐项成果对照](docs/research_alignment_20261103/README.md)；修复信用的等价损失表达不作为独立创新。
 
 2026-11-04：v3完整回传以[实证复核](docs/RISK_V3_RESULTS_20261104.md)为准；v4以[新固定协议](docs/UPGRADE_V4_PROTOCOL.md)和[最近邻审查](docs/research_alignment_20261103/risk_v4_literature_audit.md)为准。标准raw KL、R重校准与有限C后置接受均不单独作为新颖性主张；v4实际事件主判据不能事后替换v3代理准入结论。
+
+v4回传以[最新复核](docs/UPGRADE_V4_RESULTS_20261104.md)为准：两环境计划48、实际16、跳过32，CIC没有新学生效果证据。确定性guard全拒后应停止重复；失败Phase-I模型也须封存。R+C阈值区间是有限训练池诊断，C参与选择后不能再称R-only校准或总体证书，不将其作为原创算法主张。
+
+根本设计以[主线复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)为准：当前v3/v4不是已成立的核心创新。新构造前先明确资源预算、低FPR知识缺口、teacher资格／学生可表示性、与同预算hard/直接目标的差别。相同学生是合法控制；full-F参考教师不等于实际OOF教师。用户后续加强KD的要求持续有效，研究负结果与强行宣称KD增益分开。
