@@ -2,9 +2,9 @@
 
 面向网络入侵检测的轻量化机器学习研究工程：在明确的正常流量误报预算下，比较检测效果、可用字段、模型包和CPU流程成本，并保存逐行可复核工件。
 
-**当前研究主线（2026-11-04）：** [预算受限的低误报知识迁移设计](docs/BUDGET_TRANSFER_DESIGN_20261104.md)重新区分教师价值、学生字段损失、容量限制和传递失败。算法实现见 [budget_transfer.py](src/ids/budget_transfer.py)，候选是在共同hard＋直接pAUC目标上加入同类跨样本教师次序迁移；必要控制包括native raw KL、近期ICML2025类别RankLoss的二分类语义适配、uniform、固定类内置乱和同信息教师。实现不代表创新或效果已成立。
+**当前研究决定（2026-11-04）：** [核心机制重设计](docs/ALGORITHM_REDESIGN_DECISION_20261104.md)撤回将同类尾部排序作为论文核心和优先训练任务的推荐。已用实际损失核算检测等价／容量冲突反例，并补查RID、AID和2026 TabDistill直接近邻。研究继续围绕预算受限的低误报知识迁移；新的知识对象与学生函数类尚未确定。
 
-**现在的实验室入口：** [GitHub拉取与运行指南](docs/BUDGET_TRANSFER_LAB.md)，固定标签 `budget-transfer-20261104`，使用新checkout。默认两环境、完整样本、单seed pilot（46次拟合），不自动扩大full。所有选择冻结后再统一评V；旧calibration/test不读。研究协议和撤回标准见[科学协议](docs/RESEARCH_RECONSTRUCTION_PROTOCOL_20261104.md)。真实训练与CPU测量在实验室RTX4090D，本机仅做合成检查。
+**现在的实验室优先项：** [零拟合教师价值审计](docs/THRESHOLD_AUDIT_LAB.md)，固定标签 `research-foundation-audit-20261104`，先查询已保存模型的教师余量／错误互补。尚未启动的46次BudgetTransfer矩阵暂缓；旧[设计](docs/BUDGET_TRANSFER_DESIGN_20261104.md)、[实现](src/ids/budget_transfer.py)、[训练指南](docs/BUDGET_TRANSFER_LAB.md)和固定标签 `budget-transfer-20261104`保留作机制对照，已开始的运行不改源码。真实训练与CPU测量仍在实验室RTX4090D。
 
 工程验收见[1149项回归与合成范围](docs/BUDGET_TRANSFER_VERIFICATION_20261104.md)；当前没有本轮实验室效果结论。
 

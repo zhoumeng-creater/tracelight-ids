@@ -1,5 +1,7 @@
 # 重构研究：GitHub 拉取、实验室运行与回传
 
+2026-11-04后续决定：[同类排序核心机制重设计](ALGORITHM_REDESIGN_DECISION_20261104.md)。尚未启动的本页46次矩阵暂缓，当前优先[零拟合价值审计](THRESHOLD_AUDIT_LAB.md)。本页及原固定标签保留作对照复现；已开始的运行保留原代码／协议／结果。
+
 2026-11-04。固定发布标签 `budget-transfer-20261104`，在新的 checkout 运行。真实训练和正式 CPU 测量均在实验室 RTX4090D；本机只做代码、单元和合成检查。
 
 本次重建[研究主线与算法](BUDGET_TRANSFER_DESIGN_20261104.md)，[科学协议](RESEARCH_RECONSTRUCTION_PROTOCOL_20261104.md)固定教师价值、字段／容量瓶颈和反证对照。没有 phase-I、旧 TP 保留契约或后置 guard。

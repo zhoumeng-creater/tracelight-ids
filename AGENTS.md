@@ -18,3 +18,5 @@ v4回传以[最新复核](docs/UPGRADE_V4_RESULTS_20261104.md)为准：两环境
 根本设计以[主线复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)为准：当前v3/v4不是已成立的核心创新。新构造前先明确资源预算、低FPR知识缺口、teacher资格／学生可表示性、与同预算hard/直接目标的差别。相同学生是合法控制；full-F参考教师不等于实际OOF教师。用户后续加强KD的要求持续有效，研究负结果与强行宣称KD增益分开。
 
 2026-11-04新主线见[预算迁移设计](docs/BUDGET_TRANSFER_DESIGN_20261104.md)与[冻结科学协议](docs/RESEARCH_RECONSTRUCTION_PROTOCOL_20261104.md)：F-only统一监督预算，R/C共享训练阈值和选择，所有选择冻结后V晚读；完整／受限教师、四warmup字段容量探针、direct pAUC/raw KL/uniform/固定置乱/同信息教师对照必须保留。teacher headroom只是诊断，不按seed删除负结果；同类偏好候选当前是任务适配，不能以二分类近期近邻退化或代码完成证明创新。容量比较仅在相同训练阶段内进行；三seed仍共享固定数据拆分。
+
+随后机制复审以[重设计决定](docs/ALGORITHM_REDESIGN_DECISION_20261104.md)为当前优先级：撤回同类尾部排序的核心机制／默认46次矩阵推荐，保留原tag和代码作对照；实验室先做现成零拟合教师价值审计。新知识对象／学生函数类需要进一步原文和源码论证。2026 TabDistill已直接覆盖TFM交互发现→GAM/EBM，不将换IDS、尾部mask或成本权重直接称原创。
