@@ -1,40 +1,16 @@
 # TraceLight IDS
 
-Reproducible lightweight machine learning for network intrusion detection, with an offline evidence viewer.
+面向网络入侵检测的轻量化机器学习研究工程：在明确的正常流量误报预算下，比较检测效果、可用字段、模型包和CPU流程成本，并保存逐行可复核工件。
 
-面向网络入侵检测的轻量化机器学习实验工程。目标是在明确的正常流量误报预算下，比较检测效果、原始字段数、模型体积与 CPU 推理开销。每条展示记录都能追溯到数据划分、配置、模型和决策阈值。
+**当前研究主线（2026-11-04）：** [预算受限的低误报知识迁移设计](docs/BUDGET_TRANSFER_DESIGN_20261104.md)重新区分教师价值、学生字段损失、容量限制和传递失败。算法实现见 [budget_transfer.py](src/ids/budget_transfer.py)，候选是在共同hard＋直接pAUC目标上加入同类跨样本教师次序迁移；必要控制包括native raw KL、近期ICML2025类别RankLoss的二分类语义适配、uniform、固定类内置乱和同信息教师。实现不代表创新或效果已成立。
 
-**根本设计复盘：** [主问题、教师价值与创新证据链](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)将v3/v4从既定核心新算法降回待证机制分支。下一步的[零拟合主线价值审计](docs/THRESHOLD_AUDIT_LAB.md)同时检查native教师、错误互补、OOF支持与工作点，不以修复工程问题替代方法创新。正式题目和KD研究要求保留，新的核心构造需由资源预算、可迁移信息与强简单控制支撑。
+**现在的实验室入口：** [GitHub拉取与运行指南](docs/BUDGET_TRANSFER_LAB.md)，固定标签 `budget-transfer-20261104`，使用新checkout。默认两环境、完整样本、单seed pilot（46次拟合），不自动扩大full。所有选择冻结后再统一评V；旧calibration/test不读。研究协议和撤回标准见[科学协议](docs/RESEARCH_RECONSTRUCTION_PROTOCOL_20261104.md)。真实训练与CPU测量在实验室RTX4090D，本机仅做合成检查。
 
-**v4最新回传：** [两环境结果复核](docs/UPGRADE_V4_RESULTS_20261104.md)显示计划48学生、实际16、跳过32；CIC全部卡在共同起点，UNSW KD仅有微小增益。已修复确定性拒绝后的重复空转，并保留失败Phase-I模型。下一步按[零拟合评分指南](docs/THRESHOLD_AUDIT_LAB.md)查询已有模型的精确阈值区间，分清阈值注册失败与分数模型不可行，原v4结果不追认。
+工程验收见[1149项回归与合成范围](docs/BUDGET_TRANSFER_VERIFICATION_20261104.md)；当前没有本轮实验室效果结论。
 
-**2026-11-04：v3两环境84次拟合已回传并复核，未证明候选胜出。** [失败机制报告](docs/RISK_V3_RESULTS_20261104.md)确认CIC教师目标退化、工作点漂移和代理／实际预算差异。[v4固定协议](docs/UPGRADE_V4_PROTOCOL.md)与[历史实验室指南](docs/UPGRADE_V4_LAB.md)保留；v4已回传，实际覆盖和失败边界以最新复核为准。
+**已有证据与保留结果：** [v3复核](docs/RISK_V3_RESULTS_20261104.md)未支持候选胜出；[v4复核](docs/UPGRADE_V4_RESULTS_20261104.md)覆盖16个学生、32个未启动条件，不能给CIC新KD效果结论。[根本设计复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)说明重构原因；旧源码、配置、失败和[零拟合审计](docs/THRESHOLD_AUDIT_LAB.md)均保留。新实验尚未在实验室运行，历史V已被开发使用，不能作为新的独立确认。
 
-**最新实验室交接：** [v3 GitHub拉取与运行指南](docs/RISK_V3_LAB.md)和[可执行协议](docs/RISK_V3_PROTOCOL.md)。九条件覆盖共享监督hard/KD、约束消融、普通hinge机制控制，以及PCT/MPT式双源FD/EKD适配。开发机只做合成检查；你在实验室RTX4090D拉取运行并回传ZIP，当前尚无v3真实效果结论。请按v3专用发布标签建立独立checkout，保留旧实验。
-
-**当前进度：前五轮已完成，包括独立校准后的最终测试；现进入 research v2 的机制与近期方法研究。** 第五轮的完整测试结果保存在个人实验归档。下列第三、四轮数字来自 validation，不应当作第五轮测试成绩。
-
-**算法重新设计：** [v3 设计稿](docs/ALGORITHM_V3_DESIGN_20261103.md)已给出冻结 hard 锚、正常误报修复信用、攻击检出保留和原始—对偶训练目标；[风险原型](src/ids/risk_distillation.py)、[数据角色验证](src/ids/risk_data.py)及[纯合成训练链](scripts/check_risk_design.py)已实现。设计／代码／合成通过不等于真实 IDS 效果或创新性成立；正式实验室 runner 与新来源确认仍待验收，旧 v2 入口不运行该算法。
-
-**持续研究要求：** 依[研究依据规范](docs/RESEARCH_GROUNDING.md)先核原文、作者实现与等价关系再改算法。[最新逐项对照与要求审计](docs/research_alignment_20261103/README.md)已将 credit 独立创新主张下调，并补 PCT／MPT／OPOD 等固定源码差异；当前仍无 v3 真实效果与近期方法实测结论。
-
-**最新研究定位：** [2026-11-03 成果全景与创新审查](docs/landscape_20261103/README.md)覆盖 IDS 论文、低误报／蒸馏近邻、近期表格模型、开源工程与商业 NDR。现有“门控＋排序＋小学生”组合的新颖性尚未成立；先补强近邻对照、教师资格和机制反证，再决定后续扩展。该审查未新增真实训练结果。
-
-**新增研究：** [第六轮协议](docs/STAGE6_PROTOCOL.md)与[研究设计](docs/STAGE6_RESEARCH_DESIGN.md)固定了权重匹配蒸馏、教师门控及其机制控制、低误报困难样本排序、大／小网络容量参照，以及官方 TabM 对照。[运行说明](docs/STAGE6_LAB.md)区分合成 smoke、真实 pilot 与五种子完整开发；实现和小试不表示方法已经有效。既有 test 已被使用，新增研究只读取 train/validation，新的独立确认必须另有未使用的数据来源。
-
-第六轮已完成434项本地测试、13条件合成链和UNSW真实限量pilot，两份release工件分别经687／1610项独立检查通过。范围、正负信号与未完成事项见[第六轮验收记录](docs/STAGE6_VALIDATION.md)。
-
-**实验地点：后续真实训练、方法对照与正式资源测量在实验室 RTX 4090D 上执行。** 本机用于代码、单元测试和合成数据检查；已有本机pilot仅作工程预验证及探索。使用[实验室操作指南](docs/STAGE6_LAB.md)中的`scripts/run_research_lab.py`，默认核对CUDA GPU0为RTX4090D，完成后自动生成可回传的结果ZIP、SHA-256及硬件预检记录。
-
-[算法设计审查](docs/ALGORITHM_REVIEW_20261103.md)对照ICLR／ICML／NeurIPS／KDD／AAAI原论文，明确低FPR目标、教师质量和近期模型比较的优化顺序。已据TabM论文修正集成早停，未在本机启动真实重训。新源码须新输出目录；不要更新正在运行的实验或改写旧pilot成绩。
-
-**已完成第四轮的实验室使用者请直接阅读 [第五轮操作指南](docs/STAGE5_LAB.md)。** 新入口复用第四轮的 12 个已训练模型与已有 CPU 计时。先锁定全部比较对象，再封存全部校准阈值，最后统一评估测试分区。详见[第五轮固定协议](docs/STAGE5_PROTOCOL.md)。
-
-已完成 RTX 4090D 多种子基线、第二轮 **36 次字段预算实验**和第三轮全字段小型 MLP / KD 对照，工件与主要指标经核验。普通 MI 裁剪和固定 KD 未达到各自保留门槛；小型 hard MLP 相对本轮大型 hard MLP 平均召回仅低约 0.032 个百分点、部署包减少约 42.85%，端到端单条延迟基本不变。所有结果仍属于验证集开发证据。
-
-第四轮已核验 48 个真实开发运行与 144 份 CPU 测量。UNSW 的相关性去冗余提高了 24 字段条件的总体召回，同时降低了 Fuzzers 召回；CIC 的稳定聚合提高了选集一致性，但召回低于普通 MI。CIC 普通 MI24 小 MLP 相对 82 字段同款模型的验证召回提高约 0.277 个百分点，部署包缩小约 43.73%，单条 CPU p95 从约 7.01 ms 降至 2.28 ms。见[第四轮协议](docs/STAGE4_PROTOCOL.md)和[历史复现步骤](docs/STAGE4_LAB.md)。
-
-**第一次在实验室使用：先读 [从克隆到首轮实验](docs/START_HERE.md)。** 按顺序完成前置检查、安装、CPU/CUDA 冒烟测试、数据下载与处理、12 次开发基线、结果核验与备份；无需从聊天记录拼接命令。实验室使用 `main`，开发改动放 `dev`。
+**历史基线：** 前五轮及正式题目保留。第四轮CIC普通MI24小MLP曾相对全字段同款模型减少43.73%部署包、CPU单条p95约7.01→2.28ms；这些是旧验证协议结果，不能当成本轮KD效果。[第五轮协议](docs/STAGE5_PROTOCOL.md)的最终test已经打开，不再用于新模型选择。近期原文和固定作者源码分别见[关系KD审查](docs/research_alignment_20261104/new_design_review.md)、[pAUC审查](docs/research_alignment_20261104/direct_pauc_source.md)及[成果全景](docs/landscape_20261103/README.md)。
 
 ## 已实现
 
