@@ -20,3 +20,5 @@ v4回传以[最新复核](docs/UPGRADE_V4_RESULTS_20261104.md)为准：两环境
 2026-11-04新主线见[预算迁移设计](docs/BUDGET_TRANSFER_DESIGN_20261104.md)与[冻结科学协议](docs/RESEARCH_RECONSTRUCTION_PROTOCOL_20261104.md)：F-only统一监督预算，R/C共享训练阈值和选择，所有选择冻结后V晚读；完整／受限教师、四warmup字段容量探针、direct pAUC/raw KL/uniform/固定置乱/同信息教师对照必须保留。teacher headroom只是诊断，不按seed删除负结果；同类偏好候选当前是任务适配，不能以二分类近期近邻退化或代码完成证明创新。容量比较仅在相同训练阶段内进行；三seed仍共享固定数据拆分。
 
 随后机制复审以[重设计决定](docs/ALGORITHM_REDESIGN_DECISION_20261104.md)为当前优先级：撤回同类尾部排序的核心机制／默认46次矩阵推荐，保留原tag和代码作对照；实验室先做现成零拟合教师价值审计。新知识对象／学生函数类需要进一步原文和源码论证。2026 TabDistill已直接覆盖TFM交互发现→GAM/EBM，不将换IDS、尾部mask或成本权重直接称原创。
+
+本次整体重审以[项目重构](docs/PROJECT_RECONSTRUCTION_20261104.md)为执行依据：先零拟合查询实际OOF折教师；默认screen只用F/R/C，两环境24次基础拟合，加入官方CatBoost两档hard树检查学生函数类，不自动扩展KD/V。CatBoost软标签接口是普通CrossEntropy适配，不作为新损失。各家族C选择次数不同，screen不充当充分调优排行；C误报由训练阈值构造。新代码用当前checkout，旧固定标签及封存结果不改。

@@ -1,7 +1,7 @@
-"""Run the frozen budget/teacher/low-FPR development study on lab RTX4090D.
+"""Run the staged budget/teacher/low-FPR development study on lab RTX4090D.
 
-Default pilot is one complete-cohort seed with the SAME training budget as full.
-It never expands automatically. Dry-run reads JSON/source metadata only; fits
+Default screen stops on F/R/C before KD or V. Legacy pilot/full are explicit
+historical comparisons, not the default recommendation. Dry-run reads JSON/source metadata only; fits
 and complete-only resume require an unchanged clean checkout and bound inputs.
 No prepared-data rebuild, download, historical calibration or test lookup.
 """
@@ -31,6 +31,7 @@ from run_upgrade_lab import _v3_record  # noqa: E402
 
 PREFLIGHT = "BUDGET_TRANSFER_LAB_PREFLIGHT.json"
 COMPLETE = "BUDGET_TRANSFER_COMPLETE.json"
+SCREEN_COMPLETE = "TRANSFER_SCREEN_COMPLETE.json"
 V3_COMPLETE = "RISK_RESEARCH_COMPLETE.json"
 PACKAGE_MANIFEST = "BUDGET_TRANSFER_PACKAGE_MANIFEST.sha256"
 
@@ -50,20 +51,35 @@ def verify_transfer(output):
     return verify(output)
 
 
+def run_transfer_screen(v3_dir, data_dir, config, output, **kwargs):
+    from ids.transfer_screen import run_transfer_screen as run
+    return run(v3_dir, data_dir, config, output, **kwargs)
+
+
+def verify_transfer_screen(output):
+    from ids.transfer_screen import verify_transfer_screen as verify
+    return verify(output)
+
+
+def require_screen_dependencies():
+    from ids.native_trees import _catboost
+    _catboost()
+
+
 def _profile_path(profile):
-    if profile not in {"pilot", "full"}:
-        raise ValueError("profile must be pilot or full")
+    if profile not in {"screen", "pilot", "full"}:
+        raise ValueError("profile must be screen, pilot or full")
     return _assert_no_links(REPO / "configs" / f"budget-transfer-{profile}.yaml")
 
 
 def load_profile(profile):
     configs = {}
-    for name in ("pilot", "full"):
+    for name in ("screen", "pilot", "full"):
         cfg = yaml.safe_load(_profile_path(name).read_text(encoding="utf-8"))
         validate_config(cfg)
-        if (cfg["seeds"] != ([17] if name == "pilot" else [17, 29, 43])
+        if (cfg["seeds"] != ([17, 29, 43] if name == "full" else [17])
                 or cfg["warmup_epochs"] != 40 or cfg["macro_steps"] != 40):
-            raise ValueError("Laboratory pilot/full require pinned seeds and the same 40-epoch/40-step budgets")
+            raise ValueError("Laboratory profiles require pinned seeds and the same 40-epoch/40-step budgets")
         configs[name] = cfg
     if ({k: v for k, v in configs["pilot"].items() if k != "seeds"}
             != {k: v for k, v in configs["full"].items() if k != "seeds"}):
@@ -80,26 +96,28 @@ def _source_identity(source):
     return {"commit": source["commit"], "source_sha256": source["source_sha256"]}
 
 
-def _verify_complete(output):
+def _verify_complete(output, *, profile="pilot"):
     root = _assert_no_links(output)
-    if not _assert_no_links(root / COMPLETE).is_file():
+    marker = SCREEN_COMPLETE if profile == "screen" else COMPLETE
+    if not _assert_no_links(root / marker).is_file():
         raise FileExistsError("Incomplete budget-transfer output is preserved; interrupted-fit resume is unsupported")
-    done = verify_transfer(root)
-    if (done.get("schema_version") != 1 or done.get("status") != "development_complete"
+    done = verify_transfer_screen(root) if profile == "screen" else verify_transfer(root)
+    expected_status = "screen_complete" if profile == "screen" else "development_complete"
+    if (done.get("schema_version") != 1 or done.get("status") != expected_status
             or done.get("reserved_partitions_read") != []
             or not isinstance(done.get("files"), dict) or not done["files"]):
         raise ValueError("Budget-transfer completion/schema/reserved-partition scope is invalid")
     return done
 
 
-def _verify_counts(output, done, config):
+def _verify_counts(output, done, config, *, profile="pilot"):
     """Every registered student runs; only the exact full-input alias is skipped."""
     from ids.budget_transfer import METHODS
     seeds = config["seeds"]
     n = len(seeds)
     teacher, warmup, students = (done.get(k) for k in ("n_teacher_fits", "n_warmup_fits", "n_student_fits"))
     if (any(type(x) is not int or x < 0 for x in (teacher, warmup, students))
-            or teacher != 2*n or warmup != 4*n or students != 17*n):
+            or teacher != 2*n or warmup != 4*n or students != (4 if profile == "screen" else 17)*n):
         raise ValueError("Budget-transfer completion contradicts the planned fit counts")
     summary = read_json(Path(output) / "summary.json")
     if (summary.get("teacher_fits") != teacher or summary.get("warmup_fits") != warmup
@@ -108,6 +126,16 @@ def _verify_counts(output, done, config):
         raise ValueError("Budget-transfer summary/counts or development scope mismatch")
     observed = [(r.get("seed"), r.get("budget"), r.get("method")) for r in summary["runs"]]
     skipped = [(r.get("seed"), r.get("budget"), r.get("method")) for r in summary.get("skipped", [])]
+    if profile == "screen":
+        if done.get("n_native_tree_fits") != 2*n or summary.get("native_tree_fits") != 2*n:
+            raise ValueError("Screen native-tree fit count changed")
+        expected = {(seed, budget, method) for seed in seeds for budget in ("all", "reduced")
+                    for method in ("hard", "direct_pauc")}
+        if (len(set(observed)) != len(observed) or set(observed) != expected or skipped
+                or done.get("validation_loaded") is not False or summary.get("validation_loaded") is not False
+                or summary.get("automatic_expansion") is not False):
+            raise ValueError("Screen condition inventory or F/R/C-only scope changed")
+        return
     expected = {(seed, budget, method) for seed in seeds for budget in ("all", "reduced") for method in METHODS}
     if len(set(observed + skipped)) != len(observed + skipped) or set(observed + skipped) != expected:
         raise ValueError("Budget-transfer condition inventory is missing, duplicated or unexpected")
@@ -116,11 +144,11 @@ def _verify_counts(output, done, config):
         raise ValueError("Budget-transfer full condition matrix or exact-alias-only policy changed")
 
 
-def package_completed_environment(output, zip_path, *, resume=False):
+def package_completed_environment(output, zip_path, *, resume=False, profile="pilot"):
     root, target = _assert_no_links(output), _assert_no_links(zip_path)
     if target.is_relative_to(root):
         raise ValueError("Budget-transfer ZIP must be outside the sealed environment")
-    _verify_complete(root)
+    _verify_complete(root, profile=profile)
     inventory = _inventory(root)
     if not re.fullmatch(r"[A-Za-z0-9_.-]+", root.name) or root.name in {".", ".."}:
         raise ValueError("Archive root must be a safe component")
@@ -141,7 +169,7 @@ def package_completed_environment(output, zip_path, *, resume=False):
             archive.write(root / name, root.name + "/" + name)
         archive.writestr(PACKAGE_MANIFEST, content)
     _verify_zip(target, expected)
-    _verify_complete(root)
+    _verify_complete(root, profile=profile)
     if _inventory(root) != inventory:
         raise ValueError("Budget-transfer environment changed during packaging")
     digest = sha256_file(target)
@@ -171,7 +199,7 @@ def _copy_saved_preflight(source, packages, *, resume):
 
 
 def run_lab(*, work_dir, unsw_v3_dir=None, cicids_v3_dir=None, unsw_data_dir=None,
-            cicids_data_dir=None, profile="pilot", dry_run=False, resume=False, threads=None):
+            cicids_data_dir=None, profile="screen", dry_run=False, resume=False, threads=None):
     pairs = {name: (v3, data) for name, v3, data in
              (("unsw", unsw_v3_dir, unsw_data_dir), ("cicids", cicids_v3_dir, cicids_data_dir))}
     if not any(v3 is not None or data is not None for v3, data in pairs.values()):
@@ -187,6 +215,8 @@ def run_lab(*, work_dir, unsw_v3_dir=None, cicids_v3_dir=None, unsw_data_dir=Non
     source = code_fingerprint()
     source_id = _source_identity(source)
     environment = check_environment()
+    if profile == "screen":
+        require_screen_dependencies()
     gpu = require_lab_gpu(environment)
     _activate_cuda_zero()
     inputs = {}
@@ -205,7 +235,11 @@ def run_lab(*, work_dir, unsw_v3_dir=None, cicids_v3_dir=None, unsw_data_dir=Non
     interpreter = {"executable": str(Path(sys.executable).absolute()), "real_executable": str(Path(sys.executable).resolve()),
                    "prefix": sys.prefix, "base_prefix": sys.base_prefix}
     n = len(config["seeds"])
-    expected = {"teacher_fits": 2*n, "warmup_fits": 4*n, "student_fits": 17*n, "total_fits": 23*n}
+    expected = {"teacher_fits": 2*n, "warmup_fits": 4*n,
+                "student_fits": (4 if profile == "screen" else 17)*n,
+                "total_fits": (12 if profile == "screen" else 23)*n}
+    if profile == "screen":
+        expected["native_tree_fits"] = 2*n
     binding = {"profile": profile, "config": config, "config_path": str(_profile_path(profile)),
                "config_file_sha256": sha256_file(_profile_path(profile)), "inputs": inputs,
                "source": source_id, "environment": stable_environment, "interpreter": interpreter,
@@ -215,10 +249,12 @@ def run_lab(*, work_dir, unsw_v3_dir=None, cicids_v3_dir=None, unsw_data_dir=Non
                  "binding": binding, "environment": environment, "selected_gpu": gpu, "source": source,
                  "expected_per_environment": expected,
                  "expected_all_environments": {key: value * len(inputs) for key, value in expected.items()},
-                 "scope": "development only; complete V3 F/R/C cohorts; V only after frozen selection; serial environments",
+                 "scope": ("F/R/C screen only; no V loading, KD or automatic expansion" if profile == "screen"
+                           else "historical comparison; complete V3 cohorts; V after frozen selection; serial environments"),
                  "dry_run_scope": "source/config/environment, prepared manifest and V3 completion/plan JSON metadata only",
                  "resume_scope": "verified complete outputs only; no interrupted-fit resume",
-                 "pilot_scope": "one seed, full cohort and full 40/40 budget; no automatic full expansion",
+                 "pilot_scope": "legacy matrix, explicit opt-in; one seed with full 40/40 budget",
+                 "screen_scope": "one seed; two HGB teachers, four warmups, four hard/direct continuations, two native CatBoost trees; F/R/C only",
                  "reserved_partitions_read": []}
     plan_path = _assert_no_links(work / PREFLIGHT)
     if plan_path.exists():
@@ -242,21 +278,24 @@ def run_lab(*, work_dir, unsw_v3_dir=None, cicids_v3_dir=None, unsw_data_dir=Non
         if output.exists():
             if not resume:
                 raise FileExistsError("Existing budget-transfer output is preserved; refusing overwrite")
-            _verify_complete(output)
-        run_transfer_research(record["v3"]["v3_dir"], record["data"]["data_dir"], copy.deepcopy(config), output,
-                              device="cuda", resume=output.exists())
-        done = _verify_complete(output)
-        _verify_counts(output, done, config)
+            _verify_complete(output, profile=profile)
+        run = run_transfer_screen if profile == "screen" else run_transfer_research
+        run(record["v3"]["v3_dir"], record["data"]["data_dir"], copy.deepcopy(config), output,
+            device="cuda", resume=output.exists())
+        done = _verify_complete(output, profile=profile)
+        _verify_counts(output, done, config, profile=profile)
         if _source_identity(code_fingerprint()) != source_id:
             raise ValueError("Budget-transfer source changed during execution; preserve outputs without accepting package")
         if sha256_file(Path(record["v3"]["v3_dir"]) / V3_COMPLETE) != record["v3"]["completion_sha256"]:
             raise ValueError("Original V3 completion changed during the budget-transfer run")
         if _dataset_record(name, record["data"]["data_dir"]) != record["data"]:
             raise ValueError("Prepared manifest changed during the budget-transfer run")
-        results[name] = {"status": "verified_development_complete", "package": package_completed_environment(
-            output, work / "packages" / ("BUDGET_TRANSFER_" + name.upper() + ".zip"), resume=resume)}
+        results[name] = {"status": "verified_screen_complete" if profile == "screen" else "verified_development_complete",
+            "package": package_completed_environment(output, work / "packages" / ("BUDGET_TRANSFER_" + name.upper() + ".zip"),
+                resume=resume, profile=profile)}
     receipt = None if dry_run else _copy_saved_preflight(plan_path, work / "packages", resume=resume)
-    return {"status": "budget_transfer_lab_plan_only" if dry_run else "budget_transfer_lab_development_complete",
+    return {"status": "budget_transfer_lab_plan_only" if dry_run else
+            ("budget_transfer_lab_screen_complete" if profile == "screen" else "budget_transfer_lab_development_complete"),
             "profile": profile, "work_dir": str(work), "expected_per_environment": expected,
             "expected_all_environments": {key: value * len(inputs) for key, value in expected.items()},
             "environments": results, "preflight_receipt": receipt, "reserved_partitions_read": []}
@@ -264,7 +303,7 @@ def run_lab(*, work_dir, unsw_v3_dir=None, cicids_v3_dir=None, unsw_data_dir=Non
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--profile", choices=("pilot", "full"), default="pilot")
+    parser.add_argument("--profile", choices=("screen", "pilot", "full"), default="screen")
     for name in ("unsw", "cicids"):
         parser.add_argument(f"--{name}-v3-dir", type=Path)
         parser.add_argument(f"--{name}-data-dir", type=Path)
@@ -275,7 +314,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         result = run_lab(**vars(args))
-    except (ValueError, FileExistsError, FileNotFoundError) as error:
+    except (ValueError, FileExistsError, FileNotFoundError, ImportError) as error:
         parser.exit(2, f"Budget-transfer laboratory preflight/run rejected: {error}\n")
     print(json.dumps(result, ensure_ascii=False, indent=2))
 

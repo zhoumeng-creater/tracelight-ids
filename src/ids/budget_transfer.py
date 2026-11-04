@@ -180,6 +180,13 @@ def _warmup(preprocessor, schema, hidden, seed, frames, config, device, output):
     write_json(output / "history.json", history)
     write_json(output / "run.json", {"seed": seed, "kind": "hard_warmup", "selection": best_record,
         "selected_epoch": best_epoch, "training_seconds": time.perf_counter() - started,
+        "selection_evaluations": config["warmup_epochs"] + 1,
+        "selection_stage": "C selection over initialization and every warmup epoch",
+        "compute": {"optimizer_updates": config["warmup_epochs"] * ((len(y) + config["warmup_batch_size"] - 1) // config["warmup_batch_size"]),
+            "selected_checkpoint_optimizer_updates": best_epoch * ((len(y) + config["warmup_batch_size"] - 1) // config["warmup_batch_size"]),
+            "gradient_forward_rows": config["warmup_epochs"] * len(y),
+            "CPU_R_C_selection_forward_rows": (config["warmup_epochs"] + 1) * (len(frames["reference"]) + len(frames["constraint"])),
+            "training_unit": "minibatch epochs; continuation uses full-F macrosteps"},
         "deployment": {"raw_fields": len(best.selected_features), "encoded_dim": best.encoded_dim,
             "hidden_sizes": list(best.hidden_dims), "parameters": sum(p.numel() for p in net.parameters()),
             "model_package_bytes": (output / "model.joblib").stat().st_size},

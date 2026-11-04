@@ -20,7 +20,7 @@ SPEC = importlib.util.spec_from_file_location("budget_lab_script", REPO / "scrip
 lab = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(lab)
 PROFILES = {profile: yaml.safe_load((REPO / "configs" / f"budget-transfer-{profile}.yaml").read_text(encoding="utf-8"))
-            for profile in ("pilot", "full")}
+            for profile in ("screen", "pilot", "full")}
 
 
 def put_json(path, value):
@@ -145,7 +145,7 @@ def arguments(inputs, *names):
 def test_environment_pairs_required_before_any_probe(tmp_path, monkeypatch, kwargs):
     monkeypatch.setattr(lab, "check_environment", lambda: pytest.fail("probe after invalid pairs"))
     with pytest.raises(ValueError, match="environment|Each"):
-        lab.run_lab(work_dir=tmp_path / "work", **kwargs)
+        lab.run_lab(profile="pilot", work_dir=tmp_path / "work", **kwargs)
 
 
 def test_dry_run_metadata_only_has_no_fit_or_full_artifact_verifier(ready, tmp_path, monkeypatch):
@@ -153,7 +153,7 @@ def test_dry_run_metadata_only_has_no_fit_or_full_artifact_verifier(ready, tmp_p
     monkeypatch.setattr(lab, "run_transfer_research", lambda *a, **kw: pytest.fail("dry-run fitted"))
     monkeypatch.setattr(lab, "verify_transfer", lambda *a: pytest.fail("dry-run loaded artifacts"))
     work = tmp_path / "check"
-    result = lab.run_lab(work_dir=work, dry_run=True, **arguments(inputs, "unsw", "cicids"))
+    result = lab.run_lab(profile="pilot", work_dir=work, dry_run=True, **arguments(inputs, "unsw", "cicids"))
     assert result["status"] == "budget_transfer_lab_plan_only" and calls == []
     assert result["expected_all_environments"]["total_fits"] == 46
     saved = lab.read_json(work / lab.PREFLIGHT)
@@ -171,7 +171,7 @@ def test_wrong_gpu_rejected_before_source_input_metadata(ready, tmp_path, monkey
     monkeypatch.setattr(lab, "_activate_cuda_zero", lambda: pytest.fail("bad GPU activated"))
     work = tmp_path / "work"
     with pytest.raises(ValueError, match="CUDA0"):
-        lab.run_lab(work_dir=work, dry_run=True, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=work, dry_run=True, **arguments(inputs, "unsw"))
     assert not work.exists() and not calls
 
 
@@ -182,7 +182,7 @@ def test_locked_environment_rejection_precedes_inputs_and_outputs(ready, tmp_pat
     monkeypatch.setattr(lab, "check_environment", fail)
     monkeypatch.setattr(lab, "_dataset_record", lambda *a: pytest.fail("read after dependency rejection"))
     with pytest.raises(ValueError, match="dependency mismatch"):
-        lab.run_lab(work_dir=tmp_path / "work", **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=tmp_path / "work", **arguments(inputs, "unsw"))
     assert not (tmp_path / "work").exists() and not calls
 
 
@@ -192,7 +192,7 @@ def test_clean_committed_source_required_before_probe(ready, tmp_path, monkeypat
     monkeypatch.setattr(lab, "code_fingerprint", lambda: {**source(), **mutation})
     monkeypatch.setattr(lab, "check_environment", lambda: pytest.fail("probe for uncommitted source"))
     with pytest.raises(ValueError, match="clean committed"):
-        lab.run_lab(work_dir=tmp_path / "work", dry_run=True, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=tmp_path / "work", dry_run=True, **arguments(inputs, "unsw"))
     assert not calls
 
 
@@ -231,7 +231,7 @@ def test_qualification_cannot_skip_any_registered_kd_condition(ready, tmp_path, 
     monkeypatch.setattr(lab, "run_transfer_research", declined)
     work = tmp_path / "work"
     with pytest.raises(ValueError, match="planned fit counts"):
-        lab.run_lab(work_dir=work, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=work, **arguments(inputs, "unsw"))
     done = lab.read_json(work / "budget-transfer-unsw" / lab.COMPLETE)
     assert done["n_student_fits"] == 4 and len(calls) == 1
     assert not (work / "packages").exists()
@@ -241,9 +241,9 @@ def test_complete_only_resume_preserves_packages_and_original_receipt(ready, tmp
     inputs, calls = ready
     work = tmp_path / "work"
     args = arguments(inputs, "unsw", "cicids")
-    lab.run_lab(work_dir=work, **args)
+    lab.run_lab(profile="pilot", work_dir=work, **args)
     before = {p.name: p.read_bytes() for p in (work / "packages").iterdir()}
-    result = lab.run_lab(work_dir=work, resume=True, **args)
+    result = lab.run_lab(profile="pilot", work_dir=work, resume=True, **args)
     assert result["environments"]["unsw"]["package"]["status"] == "verified_existing"
     assert {p.name: p.read_bytes() for p in (work / "packages").iterdir()} == before
     assert len(calls) == 4 and all(c[-1]["resume"] for c in calls[2:])
@@ -252,9 +252,9 @@ def test_complete_only_resume_preserves_packages_and_original_receipt(ready, tmp
 def test_dry_run_work_cannot_be_reused_as_formal_run(ready, tmp_path):
     inputs, calls = ready
     work, args = tmp_path / "check", arguments(inputs, "unsw")
-    lab.run_lab(work_dir=work, dry_run=True, **args)
+    lab.run_lab(profile="pilot", work_dir=work, dry_run=True, **args)
     with pytest.raises(ValueError, match="binding changed"):
-        lab.run_lab(work_dir=work, resume=True, **args)
+        lab.run_lab(profile="pilot", work_dir=work, resume=True, **args)
     assert not calls
 
 
@@ -268,7 +268,7 @@ def test_partial_environment_is_preserved_and_never_dispatched(ready, tmp_path):
     lab.run_transfer_research = stop
     try:
         with pytest.raises(RuntimeError, match="interruption"):
-            lab.run_lab(work_dir=work, **args)
+            lab.run_lab(profile="pilot", work_dir=work, **args)
     finally:
         lab.run_transfer_research = original
     partial = work / "budget-transfer-unsw"
@@ -276,7 +276,7 @@ def test_partial_environment_is_preserved_and_never_dispatched(ready, tmp_path):
     sentinel = partial / "keep.txt"
     sentinel.write_text("keep partial", encoding="utf-8")
     with pytest.raises(FileExistsError, match="Incomplete"):
-        lab.run_lab(work_dir=work, resume=True, **args)
+        lab.run_lab(profile="pilot", work_dir=work, resume=True, **args)
     assert sentinel.read_text() == "keep partial" and not calls
 
 
@@ -284,7 +284,7 @@ def test_partial_environment_is_preserved_and_never_dispatched(ready, tmp_path):
 def test_resume_binds_configuration_source_interpreter_hardware(ready, tmp_path, monkeypatch, changed):
     inputs, calls = ready
     work, args = tmp_path / "work", arguments(inputs, "unsw")
-    lab.run_lab(work_dir=work, **args)
+    lab.run_lab(profile="pilot", work_dir=work, **args)
     calls.clear()
     if changed == "threads":
         args["threads"] = 7
@@ -296,7 +296,7 @@ def test_resume_binds_configuration_source_interpreter_hardware(ready, tmp_path,
     else:
         monkeypatch.setattr(lab, "check_environment", lambda: {**hardware(), "cpu_logical": 8})
     with pytest.raises(ValueError, match="binding changed"):
-        lab.run_lab(work_dir=work, resume=True, **args)
+        lab.run_lab(profile="pilot", work_dir=work, resume=True, **args)
     assert not calls
 
 
@@ -322,7 +322,7 @@ def test_source_v3_metadata_binding_defects_rejected(ready, tmp_path, mutation):
             done["files"]["plan.json"] = lab.sha256_file(root / "plan.json")
     put_json(root / lab.V3_COMPLETE, done)
     with pytest.raises(ValueError):
-        lab.run_lab(work_dir=tmp_path / "work", **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=tmp_path / "work", **arguments(inputs, "unsw"))
     assert not calls
 
 
@@ -332,7 +332,7 @@ def test_prepared_identity_must_match_old_v3(ready, tmp_path):
     value["partitions"]["train"]["n_rows"] += 1
     save_manifest(inputs["unsw"]["data_dir"], value)
     with pytest.raises(ValueError, match="original V3 data identity"):
-        lab.run_lab(work_dir=tmp_path / "work", dry_run=True, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=tmp_path / "work", dry_run=True, **arguments(inputs, "unsw"))
     assert not calls
 
 
@@ -343,7 +343,7 @@ def test_only_real_canonical_prepared_schema_is_accepted(ready, tmp_path, mutati
     value["data_kind" if mutation == "synthetic" else "schema_version"] = "synthetic" if mutation == "synthetic" else "unknown"
     save_manifest(inputs["unsw"]["data_dir"], value)
     with pytest.raises(ValueError, match="exact schema"):
-        lab.run_lab(work_dir=tmp_path / "work", dry_run=True, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=tmp_path / "work", dry_run=True, **arguments(inputs, "unsw"))
     assert not calls
 
 
@@ -354,7 +354,7 @@ def test_work_and_immutable_inputs_cannot_nest(ready, input_key, relation):
     old = inputs["unsw"][input_key]
     work = old / "new-work" if relation == "work_below" else old.parent
     with pytest.raises(ValueError, match="non-nested"):
-        lab.run_lab(work_dir=work, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=work, **arguments(inputs, "unsw"))
     assert not calls
 
 
@@ -379,7 +379,7 @@ def test_invalid_completion_is_not_packaged(ready, tmp_path, monkeypatch, change
     monkeypatch.setattr(lab, "run_transfer_research", changed)
     work = tmp_path / "work"
     with pytest.raises(ValueError):
-        lab.run_lab(work_dir=work, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=work, **arguments(inputs, "unsw"))
     assert len(calls) == 1 and not (work / "packages").exists()
 
 
@@ -401,19 +401,19 @@ def test_inputs_changing_during_run_block_package(ready, tmp_path, monkeypatch, 
     monkeypatch.setattr(lab, "run_transfer_research", changed)
     work = tmp_path / "work"
     with pytest.raises(ValueError, match="changed during"):
-        lab.run_lab(work_dir=work, **arguments(inputs, "unsw"))
+        lab.run_lab(profile="pilot", work_dir=work, **arguments(inputs, "unsw"))
     assert len(calls) == 1 and not (work / "packages").exists()
 
 
 def test_corrupt_existing_zip_or_partial_sidecar_is_preserved(ready, tmp_path):
     inputs, _ = ready
     work, args = tmp_path / "work", arguments(inputs, "unsw")
-    lab.run_lab(work_dir=work, **args)
+    lab.run_lab(profile="pilot", work_dir=work, **args)
     package = work / "packages" / "BUDGET_TRANSFER_UNSW.zip"
     package.write_bytes(package.read_bytes() + b"tampered")
     before = package.read_bytes()
     with pytest.raises(ValueError, match="sidecar mismatch"):
-        lab.run_lab(work_dir=work, resume=True, **args)
+        lab.run_lab(profile="pilot", work_dir=work, resume=True, **args)
     assert package.read_bytes() == before
 
 
@@ -431,3 +431,66 @@ def test_help_available_outside_repo_without_loading_a_trainer(tmp_path):
     result = subprocess.run([sys.executable, str(REPO / "scripts/run_budget_transfer_lab.py"), "--help"],
                             cwd=tmp_path, text=True, capture_output=True, timeout=30)
     assert result.returncode == 0 and "--unsw-v3-dir" in result.stdout and "--cicids-data-dir" in result.stdout
+
+
+def test_default_screen_preflight_stops_at_twenty_four_fits_without_loading_rows(ready, tmp_path, monkeypatch):
+    inputs, calls = ready
+    monkeypatch.setattr(lab, "require_screen_dependencies", lambda: None)
+    monkeypatch.setattr(lab, "run_transfer_screen", lambda *a, **kw: pytest.fail("dry-run fitted"))
+    result = lab.run_lab(work_dir=tmp_path / "screen-plan", dry_run=True, **arguments(inputs, "unsw", "cicids"))
+    assert result["profile"] == "screen" and not calls
+    assert result["expected_all_environments"] == {
+        "teacher_fits": 4, "warmup_fits": 8, "student_fits": 8, "native_tree_fits": 4, "total_fits": 24}
+    plan = lab.read_json(tmp_path / "screen-plan" / lab.PREFLIGHT)
+    assert "no V loading" in plan["scope"]
+
+
+def test_default_screen_dispatch_packages_and_resumes_only_its_stage(ready, tmp_path, monkeypatch):
+    inputs, calls = ready
+    monkeypatch.setattr(lab, "require_screen_dependencies", lambda: None)
+    monkeypatch.setattr(lab, "run_transfer_research", lambda *a, **kw: pytest.fail("screen launched legacy matrix"))
+    def verify_screen(folder):
+        folder = Path(folder)
+        done = lab.read_json(folder / lab.SCREEN_COMPLETE)
+        files = {p.relative_to(folder).as_posix(): lab.sha256_file(p) for p in folder.rglob("*")
+                 if p.is_file() and p.name != lab.SCREEN_COMPLETE}
+        if files != done["files"]:
+            raise ValueError("screen inventory changed")
+        return done
+    def runner(v3, data, cfg, output, **kwargs):
+        calls.append(kwargs)
+        folder = Path(output)
+        if kwargs["resume"]:
+            return verify_screen(folder)
+        folder.mkdir(parents=True)
+        rows = [{"seed": 17, "budget": b, "method": m} for b in ("all", "reduced") for m in ("hard", "direct_pauc")]
+        put_json(folder / "summary.json", {"teacher_fits": 2, "warmup_fits": 4, "student_fits": 4,
+            "native_tree_fits": 2, "runs": rows, "independent_confirmation": False, "validation_loaded": False,
+            "automatic_expansion": False})
+        put_json(folder / lab.SCREEN_COMPLETE, {"schema_version": 1, "status": "screen_complete",
+            "reserved_partitions_read": [], "validation_loaded": False,
+            "n_teacher_fits": 2, "n_warmup_fits": 4, "n_student_fits": 4, "n_native_tree_fits": 2,
+            "files": {"summary.json": lab.sha256_file(folder / "summary.json")}})
+        return verify_screen(folder)
+    monkeypatch.setattr(lab, "run_transfer_screen", runner)
+    monkeypatch.setattr(lab, "verify_transfer_screen", verify_screen)
+    work = tmp_path / "screen-work"
+    result = lab.run_lab(work_dir=work, **arguments(inputs, "unsw", "cicids"))
+    assert result["status"] == "budget_transfer_lab_screen_complete"
+    assert len(calls) == 2 and len(list((work / "packages").iterdir())) == 6
+    result = lab.run_lab(work_dir=work, resume=True, **arguments(inputs, "unsw", "cicids"))
+    assert len(calls) == 4 and all(c["resume"] for c in calls[2:])
+    assert result["environments"]["unsw"]["package"]["status"] == "verified_existing"
+    with pytest.raises(ValueError, match="binding changed"):
+        lab.run_lab(work_dir=work, profile="pilot", resume=True, **arguments(inputs, "unsw", "cicids"))
+
+
+def test_screen_requires_pinned_catboost_before_reading_data(ready, tmp_path, monkeypatch):
+    inputs, _ = ready
+    def missing():
+        raise ImportError("catboost==1.2.10 required")
+    monkeypatch.setattr(lab, "require_screen_dependencies", missing)
+    monkeypatch.setattr(lab, "_dataset_record", lambda *a: pytest.fail("read data after missing dependency"))
+    with pytest.raises(ImportError, match="catboost"):
+        lab.run_lab(work_dir=tmp_path / "missing", **arguments(inputs, "unsw"))
+    assert not (tmp_path / "missing").exists()

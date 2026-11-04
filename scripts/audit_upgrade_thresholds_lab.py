@@ -287,6 +287,78 @@ def _oof_family_support(targets, fit_frame, metadata):
     return result
 
 
+def audit_oof_teacher_value(v3, seed, frames, targets, metadata, inventory, alpha, threads):
+    """Query the actual archived fold teachers, never fit or pool raw margins.
+
+    Each teacher scores only its original F holdout and common R/C. Its R
+    normals register its own two score representations. Pooled OOF reporting
+    combines fixed decisions, not incomparable scores from different models.
+    """
+    fit = frames["fit"]
+    if (targets.sample_id.tolist() != fit.sample_id.tolist()
+            or not np.array_equal(targets.label.to_numpy(), fit.label.to_numpy())):
+        raise ValueError("OOF query requires the original aligned F membership")
+    fold_ids = targets.fold.to_numpy()
+    fold_metadata = {int(row.get("fold", i)): row for i, row in enumerate(metadata["folds"])}
+    if (not np.issubdtype(fold_ids.dtype, np.integer) or len(fold_metadata) != len(metadata["folds"])
+            or set(fold_ids) != set(fold_metadata)):
+        raise ValueError("OOF query requires every unique archived fold")
+    arrays = {"fold": fold_ids.astype(np.int64)}
+    for variant in ("native", "legacy_clipped"):
+        arrays[f"{variant}_fit_oof"] = np.full(len(fit), np.nan, dtype=np.float64)
+        arrays[f"{variant}_fit_oof_decision"] = np.zeros(len(fit), dtype=np.uint8)
+    reports = []
+    for fold in sorted(fold_metadata):
+        relative = f"teachers/s{seed}/fold-{fold}.joblib"
+        path, expected = v3 / relative, inventory.get(relative)
+        if not expected or sha256_file(path) != expected:
+            raise ValueError("actual OOF teacher is not bound to the source completion")
+        heldout = np.flatnonzero(fold_ids == fold)
+        model = load_bundle(path, device="cpu")
+        model.num_threads = threads
+        r_scores, r_checks = teacher_score_variants(model, frames["reference"])
+        working = {variant: freeze_margin_threshold(torch.tensor(values),
+            torch.tensor(frames["reference"].label.to_numpy()), alpha)
+            for variant, values in r_scores.items()}
+        subsets = {"heldout": fit.iloc[heldout], "constraint": frames["constraint"]}
+        scores, checks = {"reference": r_scores}, {"reference": r_checks}
+        for role, frame in subsets.items():
+            scores[role], checks[role] = teacher_score_variants(model, frame)
+        legacy = scores["heldout"]["legacy_clipped"]
+        cached = targets.teacher_logit.to_numpy(dtype=np.float64)[heldout]
+        if not np.array_equal(legacy, cached):
+            raise ValueError("archived OOF model no longer reproduces its exact legacy targets")
+        evaluations = {}
+        for variant in ("native", "legacy_clipped"):
+            threshold = working[variant]["threshold"]
+            arrays[f"{variant}_fit_oof"][heldout] = scores["heldout"][variant]
+            arrays[f"{variant}_fit_oof_decision"][heldout] = scores["heldout"][variant] >= threshold
+            evaluations[variant] = {"working_point": working[variant], "profiles": {}, "roles": {}}
+            for role, frame in {"reference": frames["reference"], **subsets}.items():
+                z, labels = scores[role][variant], frame.label.to_numpy()
+                evaluations[variant]["profiles"][role] = _score_profile(z, labels)
+                evaluations[variant]["roles"][role] = {
+                    "metrics": _fixed_metrics(frame, z, threshold),
+                    "partial_auc_standardized_mcclish": float(roc_auc_score(labels, z, max_fpr=alpha))
+                    if len(np.unique(labels)) == 2 else None}
+                if role != "heldout":
+                    arrays[f"fold_{fold}_{variant}_{role}"] = z
+        reports.append({"fold": fold, "source_model_relative_path": relative, "source_model_sha256": expected,
+            "fit_support": fold_metadata[fold]["fit"], "heldout_rows": len(heldout),
+            "legacy_targets_exactly_reproduced": True, "link_checks": checks, "evaluations": evaluations})
+    aggregate = {}
+    labels = fit.label.to_numpy()
+    for variant in ("native", "legacy_clipped"):
+        decisions = arrays[f"{variant}_fit_oof_decision"]
+        aggregate[variant] = _fixed_metrics(fit, decisions.astype(np.float64), .5)
+        aggregate[variant]["threshold"] = None
+        aggregate[variant]["decision_rule"] = "each row uses its archived fold teacher and that fold's R threshold"
+    return {"native_fold_predictions_queried": True, "query_roles": ["F_original_fold_holdout", "R", "C"],
+        "fits": 0, "folds": reports, "pooled_oof_fixed_decisions": aggregate,
+        "pooled_score_auc": None, "pooled_score_auc_reason": "raw coordinates from distinct fold models are not pooled",
+        "scope": "actual OOF target diagnostics; F is a student fitting pool, not a fair student comparison or transfer proof"}, arrays
+
+
 def audit_teacher_value(v3, seed, frames, model_results, output, alpha, threads):
     """Audit full-F teacher capability; actual OOF targets remain separate."""
     relative = f"teachers/s{seed}/reference.joblib"
@@ -352,8 +424,9 @@ def audit_teacher_value(v3, seed, frames, model_results, output, alpha, threads)
         "row_count": len(targets), "fold_fit_rows": [row["fit"]["n_rows"] for row in oof["folds"]],
         "legacy_logit_profile": _score_profile(targets.teacher_logit.to_numpy(), targets.label.to_numpy()),
         "boundary_target_profile": _score_profile(expit(targets.teacher_margin.to_numpy()), targets.label.to_numpy()),
-        "per_attack_family": _oof_family_support(targets, frames["fit"], oof),
-        "native_fold_predictions_queried": False}
+        "per_attack_family": _oof_family_support(targets, frames["fit"], oof)}
+    native_oof, oof_scores = audit_oof_teacher_value(v3, seed, frames, targets, oof, complete["files"], alpha, threads)
+    oof_profile.update(native_oof)
     count0, count1 = int((frames["fit"].label == 0).sum()), int((frames["fit"].label == 1).sum())
     result = {"seed": seed, "source_model_relative_path": relative, "source_model_sha256": expected,
         "source_model_bytes": source.stat().st_size, "fits": 0, "score_representations": list(evaluations),
@@ -372,6 +445,7 @@ def audit_teacher_value(v3, seed, frames, model_results, output, alpha, threads)
     teacher_dir = output / f"teacher-value-s{seed}"
     teacher_dir.mkdir(parents=True, exist_ok=False)
     np.savez_compressed(teacher_dir / "scores.npz", **scores)
+    np.savez_compressed(teacher_dir / "oof-scores.npz", **oof_scores)
     write_json(teacher_dir / "audit.json", result)
     return result
 
@@ -403,7 +477,7 @@ def _audit_environment(name, record, output, binding, threads):
     evidence = output / "source-evidence"
     evidence.mkdir(exist_ok=False)
     shutil.copyfile(v3 / "RISK_RESEARCH_COMPLETE.json", evidence / "v3-complete.json")
-    for role in ("reference", "constraint", "validation"):
+    for role in ("fit", "reference", "constraint", "validation"):
         shutil.copyfile(v3 / f"{role}-identity.parquet", output / f"{role}-identity.parquet")
     for relative in binding["source"]["files"]:
         target = output / "source" / relative
@@ -453,7 +527,7 @@ def _audit_environment(name, record, output, binding, threads):
     write_json(output / "summary.json", {"environment": name, "results": results, "missing_phase1_snapshots": missing,
         "teacher_value_audits": teacher_audits,
         "scope": "no-fit diagnostic; R+C thresholds are training-pool choices, not independent certificates", "fits": 0})
-    write_json(output / COMPLETE, {"status": "threshold_audit_complete", "artifact_schema_version": 2, "created_at": utc_now(), "fits": 0,
+    write_json(output / COMPLETE, {"status": "threshold_audit_complete", "artifact_schema_version": 3, "created_at": utc_now(), "fits": 0,
         "n_models": len(results), "n_teacher_value_audits": len(teacher_audits), "reserved_partitions_read": [], "binding_sha256": canonical_hash(binding),
         "files": {p.relative_to(output).as_posix(): sha256_file(p) for p in sorted(output.rglob("*")) if p.is_file()}})
     return verify_audit(output)
@@ -463,7 +537,7 @@ def verify_audit(output):
     root = _assert_no_links(output)
     complete = read_json(root / COMPLETE)
     artifact_schema = complete.get("artifact_schema_version", 1)
-    if type(artifact_schema) is not int or artifact_schema not in {1, 2}:
+    if type(artifact_schema) is not int or artifact_schema not in {1, 2, 3}:
         raise ValueError("unsupported threshold-audit artifact schema")
     files = complete.get("files", {})
     if (complete.get("status") != "threshold_audit_complete" or complete.get("fits") != 0
@@ -489,7 +563,7 @@ def verify_audit(output):
     required = {"plan.json", "summary.json", "reference-identity.parquet", "constraint-identity.parquet", "validation-identity.parquet"}
     for seed in plan["input"]["seeds"]:
         required.update((f"frozen-reference-s{seed}.npz", f"frozen-reference-s{seed}.json", f"family-support-s{seed}.json"))
-    if artifact_schema == 2:
+    if artifact_schema >= 2:
         required.add("source-evidence/v3-complete.json")
         if files.get("source-evidence/v3-complete.json") != plan["input"]["v3_complete_sha256"]:
             raise ValueError("teacher source completion evidence differs")
@@ -508,6 +582,17 @@ def verify_audit(output):
                     or row.get("actual_oof_targets", {}).get("targets_sha256") != original_inventory.get(f"teachers/s{row['seed']}/targets.parquet")
                     or row.get("actual_oof_targets", {}).get("metadata_sha256") != original_inventory.get(f"teachers/s{row['seed']}/oof.json")):
                 raise ValueError("teacher-value per-seed summary differs")
+            if artifact_schema >= 3:
+                required.update(("fit-identity.parquet", prefix + "oof-scores.npz"))
+                oof = row.get("actual_oof_targets", {})
+                if oof.get("native_fold_predictions_queried") is not True or oof.get("fits") != 0 or not oof.get("folds"):
+                    raise ValueError("actual OOF teacher audit is incomplete")
+                for fold in oof["folds"]:
+                    relative = f"teachers/s{row['seed']}/fold-{fold['fold']}.joblib"
+                    if (fold.get("source_model_relative_path") != relative
+                            or fold.get("source_model_sha256") != original_inventory.get(relative)
+                            or fold.get("legacy_targets_exactly_reproduced") is not True):
+                        raise ValueError("actual OOF teacher source binding differs")
     for row in summary["results"]:
         prefix = "models/" + row["model"]["name"] + "/"
         required.update((prefix + "audit.json", prefix + "scores.npz"))

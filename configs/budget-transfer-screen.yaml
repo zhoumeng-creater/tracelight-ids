@@ -1,0 +1,28 @@
+schema_version: 1
+purpose: budget_transfer_development_only
+seeds: [17]
+threads: 4
+max_fpr: 0.01
+reduced_k: 24
+small_hidden: [32, 16]
+wide_hidden: [128, 64]
+warmup_epochs: 40
+warmup_batch_size: 1024
+macro_steps: 40
+chunk_size: 2048
+learning_rate: 0.001
+weight_decay: 0.0001
+gradient_clip: 10.0
+pauc_pairs: 65536
+rank_pairs_per_class: 4096
+pauc_weight: 1.0
+kd_weight: 0.3
+tail_multiplier: 5.0
+teacher_hyperparameters:
+  max_iter: 200
+  max_leaf_nodes: 63
+  learning_rate: 0.1
+  early_stopping: false
+qualification_min_pauc_gain: 0.002
+qualification_min_tpr_gain: 0.002
+measure_cpu: true

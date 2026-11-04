@@ -2,11 +2,11 @@
 
 面向网络入侵检测的轻量化机器学习研究工程：在明确的正常流量误报预算下，比较检测效果、可用字段、模型包和CPU流程成本，并保存逐行可复核工件。
 
-**当前研究决定（2026-11-04）：** [核心机制重设计](docs/ALGORITHM_REDESIGN_DECISION_20261104.md)撤回将同类尾部排序作为论文核心和优先训练任务的推荐。已用实际损失核算检测等价／容量冲突反例，并补查RID、AID和2026 TabDistill直接近邻。研究继续围绕预算受限的低误报知识迁移；新的知识对象与学生函数类尚未确定。
+**当前研究决定（2026-11-04）：** 按[项目重审与分阶段重构](docs/PROJECT_RECONSTRUCTION_20261104.md)，先审计实际分折教师，再比较预算内学生函数类，最后检验普通KD增量。新增官方CatBoost硬/软标签接口，默认入口改为只使用F/R/C的基础筛查；原同类排序候选保留作对照。
 
-**现在的实验室优先项：** [零拟合教师价值审计](docs/THRESHOLD_AUDIT_LAB.md)，固定标签 `research-foundation-audit-20261104`，先查询已保存模型的教师余量／错误互补。尚未启动的46次BudgetTransfer矩阵暂缓；旧[设计](docs/BUDGET_TRANSFER_DESIGN_20261104.md)、[实现](src/ids/budget_transfer.py)、[训练指南](docs/BUDGET_TRANSFER_LAB.md)和固定标签 `budget-transfer-20261104`保留作机制对照，已开始的运行不改源码。真实训练与CPU测量仍在实验室RTX4090D。
+**现在的实验室优先项：** 使用[新运行指南](docs/RESEARCH_SCREEN_LAB.md)查询封存模型，新增实际OOF教师native诊断，拟合数为0。审计支持继续时才执行两环境共24次基础screen，不自动运行KD或读取V。旧46次矩阵及固定标签保留；本轮新功能须用当前checkout，旧标签不含这些修改。真实训练与CPU测量仍在实验室RTX4090D。
 
-工程验收见[1149项回归与合成范围](docs/BUDGET_TRANSFER_VERIFICATION_20261104.md)；当前没有本轮实验室效果结论。
+本轮工程验证见[重构验证记录](docs/PROJECT_RECONSTRUCTION_VERIFICATION_20261104.md)，新增实证判断见[原工件独立复核](docs/PROJECT_EVIDENCE_REVIEW_20261104.md)。本轮代码尚无实验室效果结论。
 
 **已有证据与保留结果：** [v3复核](docs/RISK_V3_RESULTS_20261104.md)未支持候选胜出；[v4复核](docs/UPGRADE_V4_RESULTS_20261104.md)覆盖16个学生、32个未启动条件，不能给CIC新KD效果结论。[根本设计复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)说明重构原因；旧源码、配置、失败和[零拟合审计](docs/THRESHOLD_AUDIT_LAB.md)均保留。新实验尚未在实验室运行，历史V已被开发使用，不能作为新的独立确认。
 

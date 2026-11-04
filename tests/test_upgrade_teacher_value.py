@@ -102,15 +102,20 @@ def test_teacher_R_thresholds_fixed_before_V_and_existing_student_scores_reused(
             "attack_cat": ["Normal", "Normal", "Attack"] if role != "fit" else ["Normal", "Attack", "Attack"],
             "sample_id": [f"{role}-{i}" for i in range(3)]})
         frames[role].attrs["role"] = role
-    targets = frames["fit"][["sample_id", "label"]].assign(teacher_logit=[-20., 4., 5.], teacher_margin=[-10., 2., 3.], fold=[0, 1, 0])
+    legacy, _ = lab.teacher_score_variants(_teacher(), frames["fit"])
+    targets = frames["fit"][["sample_id", "label"]].assign(teacher_logit=legacy["legacy_clipped"],
+        teacher_margin=[-10., 2., 3.], fold=[0, 1, 0])
     target_path = teacher_path.parent / "targets.parquet"
     targets.to_parquet(target_path, index=False)
     oof_path = teacher_path.parent / "oof.json"
     write_json(oof_path, {"folds": [
         {"fit": {"n_rows": 2, "families": {"Normal": 1, "Attack": 1}, "labels": {"0": 1, "1": 1}}},
         {"fit": {"n_rows": 1, "families": {"Attack": 1}, "labels": {"0": 0, "1": 1}}}]})
+    folds = [teacher_path.parent / f"fold-{i}.joblib" for i in (0, 1)]
+    for path in folds:
+        path.write_bytes(b"synthetic-archived-fold")
     write_json(v3 / "RISK_RESEARCH_COMPLETE.json", {"files": {
-        p.relative_to(v3).as_posix(): sha256_file(p) for p in (teacher_path, target_path, oof_path)}})
+        p.relative_to(v3).as_posix(): sha256_file(p) for p in (teacher_path, target_path, oof_path, *folds)}})
     student_dir = output / "models/student-s17"
     student_dir.mkdir(parents=True)
     np.savez_compressed(student_dir / "scores.npz", validation=[-2., -1., 2.])
@@ -132,10 +137,11 @@ def test_teacher_R_thresholds_fixed_before_V_and_existing_student_scores_reused(
     monkeypatch.setattr(lab, "freeze_margin_threshold", freeze)
     monkeypatch.setattr(lab, "raw_cpu_logits", lambda *a: pytest.fail("MLP scores were forwarded again"))
     row = lab.audit_teacher_value(v3, 17, frames, model_results, output, .01, 1)
-    assert events == ["reference", "constraint", "threshold", "threshold", "validation"]
+    assert events == ["reference", "constraint", "threshold", "threshold", "validation"] + [
+        "reference", "threshold", "threshold", "fit", "constraint"] * 2
     assert row["fits"] == 0 and row["teacher_training_roles"] == ["fit"]
     assert row["student_hard_training_roles"] == ["fit", "constraint"]
-    assert row["actual_oof_targets"]["native_fold_predictions_queried"] is False
+    assert row["actual_oof_targets"]["native_fold_predictions_queried"] is True
     assert row["actual_oof_targets"]["fold_fit_rows"] == [2, 1]
     assert set(row["paired_with_mlp_R_only"]) == {"native", "legacy_clipped"}
     assert row["evaluations"]["legacy_clipped"]["validation"]["false_positives"] == 0
@@ -154,6 +160,41 @@ def test_invalid_teacher_scoring_contract_rejected(kind):
         frame.loc[0, "z"] = np.inf
     with pytest.raises(ValueError):
         lab.teacher_score_variants(bundle, frame)
+
+
+def test_oof_queries_only_original_holdouts_and_rejects_changed_cached_scores(tmp_path, monkeypatch):
+    frames = {}
+    for role, z in (("fit", [-20., 1., -15., 2.]), ("reference", [-25., -24., 3., 4.]),
+                    ("constraint", [-23., -22., 5., 6.])):
+        frames[role] = pd.DataFrame({"sample_id": [f"{role}-{i}" for i in range(4)], "z": z,
+            "label": [0, 1, 0, 1], "attack_cat": ["Normal", "Attack", "Normal", "Attack"]})
+    scores, _ = lab.teacher_score_variants(_teacher(), frames["fit"])
+    targets = frames["fit"][["sample_id", "label"]].assign(fold=[0, 0, 1, 1],
+        teacher_logit=scores["legacy_clipped"], teacher_margin=[-1., 1., -1., 1.])
+    metadata, inventory = {"folds": []}, {}
+    for fold in (0, 1):
+        relative = f"teachers/s17/fold-{fold}.joblib"
+        path = tmp_path / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"synthetic-sealed-fold")
+        inventory[relative] = sha256_file(path)
+        metadata["folds"].append({"fold": fold, "fit": {"n_rows": 2, "families": {"Normal": 1, "Attack": 1}}})
+    queried, original = [], lab.teacher_score_variants
+
+    def score(bundle, frame):
+        queried.append(frame.sample_id.tolist())
+        return original(bundle, frame)
+
+    monkeypatch.setattr(lab, "load_bundle", lambda *a, **k: _teacher())
+    monkeypatch.setattr(lab, "teacher_score_variants", score)
+    report, arrays = lab.audit_oof_teacher_value(tmp_path, 17, frames, targets, metadata, inventory, .01, 1)
+    heldout_queries = [ids for ids in queried if ids[0].startswith("fit-")]
+    assert heldout_queries == [["fit-0", "fit-1"], ["fit-2", "fit-3"]]
+    np.testing.assert_array_equal(arrays["native_fit_oof"], frames["fit"].z)
+    assert report["pooled_score_auc"] is None and report["fits"] == 0
+    targets.loc[0, "teacher_logit"] += 1.
+    with pytest.raises(ValueError, match="exact legacy targets"):
+        lab.audit_oof_teacher_value(tmp_path, 17, frames, targets, metadata, inventory, .01, 1)
 
 
 def test_real_synthetic_teacher_value_scores_and_source_binding(tmp_path, monkeypatch):
@@ -186,7 +227,7 @@ def test_real_synthetic_teacher_value_scores_and_source_binding(tmp_path, monkey
         complete = lab._audit_environment("synthetic", record, output, binding, 1)
     finally:
         torch.set_num_threads(previous)
-    assert complete["artifact_schema_version"] == 2
+    assert complete["artifact_schema_version"] == 3
     assert complete["n_models"] == 4 and complete["n_teacher_value_audits"] == 1
     summary = read_json(output / "summary.json")
     teacher = summary["teacher_value_audits"][0]
@@ -200,6 +241,28 @@ def test_real_synthetic_teacher_value_scores_and_source_binding(tmp_path, monkey
             assert expected == teacher["evaluations"][variant]["validation"]
             assert len(scores[variant + "_validation"]) == len(labels)
     assert lab.verify_audit(output) == complete
+    oof = teacher["actual_oof_targets"]
+    assert oof["query_roles"] == ["F_original_fold_holdout", "R", "C"]
+    assert oof["pooled_score_auc"] is None
+    with np.load(output / "teacher-value-s17/oof-scores.npz", allow_pickle=False) as scores:
+        identities = pd.read_parquet(output / "fit-identity.parquet")
+        cached = pd.read_parquet(v3 / "teachers/s17/targets.parquet")
+        np.testing.assert_array_equal(scores["legacy_clipped_fit_oof"], cached.teacher_logit)
+        np.testing.assert_array_equal(scores["fold"], cached.fold)
+        for variant in ("native", "legacy_clipped"):
+            decision = scores[f"{variant}_fit_oof_decision"]
+            expected = lab._fixed_metrics(identities, decision, .5)
+            report = oof["pooled_oof_fixed_decisions"][variant]
+            assert report["true_positives"] == expected["true_positives"]
+            assert report["false_positives"] == expected["false_positives"]
+        for fold in oof["folds"]:
+            assert fold["legacy_targets_exactly_reproduced"] is True
+            assert fold["source_model_sha256"] == sha256_file(v3 / fold["source_model_relative_path"])
+            ix = cached.fold.to_numpy() == fold["fold"]
+            for variant in ("native", "legacy_clipped"):
+                threshold = fold["evaluations"][variant]["working_point"]["threshold"]
+                np.testing.assert_array_equal(scores[f"{variant}_fit_oof_decision"][ix],
+                    scores[f"{variant}_fit_oof"][ix] >= threshold)
 
     # Resealing changed JSON bytes cannot detach the teacher from the archived
     # v3 inventory. This checks the semantic source binding beyond payload hashes.

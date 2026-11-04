@@ -1,0 +1,2 @@
+# Optional research environment; preserve the project's existing torch stack.
+catboost==1.2.10
