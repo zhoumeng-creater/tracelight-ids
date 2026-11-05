@@ -1,0 +1,33 @@
+{
+  "protocol_id": "unsw-kd-failure-diagnosis-20261105",
+  "binding": "docs/research_alignment_20261105/kd_failure_research/mechanism-audit-binding.json",
+  "models_F": ["anchor", "H40", "K40"],
+  "models_CPU": ["H40", "HGB", "CatBoost_reference"],
+  "batch_size_F": 1024,
+  "threads": 4,
+  "cost_order_seed": 20261105,
+  "budget": {
+    "student_fits": 0,
+    "teacher_fits": 0,
+    "optimizer_updates": 0,
+    "teacher_F_queries": 0,
+    "F_forward_rows": 257748,
+    "anchor_backward_calls": 336,
+    "CPU_timed_calls": 450,
+    "CPU_timed_rows": 57825,
+    "CPU_warmup_calls": 30,
+    "CPU_warmup_rows": 3855,
+    "CPU_RSS_calls": 3,
+    "CPU_RSS_rows": 768,
+    "reserved_partition_score_rows": 0
+  },
+  "acceptance": {
+    "anchor_loss_atol": 1e-7,
+    "gradient_identity_atol": 1e-7,
+    "gradient_identity_rtol": 1e-5,
+    "pattern_bound_atol": 1e-12
+  },
+  "training_branch_enabled": false,
+  "automatic_retry": false,
+  "independent_confirmation": false
+}

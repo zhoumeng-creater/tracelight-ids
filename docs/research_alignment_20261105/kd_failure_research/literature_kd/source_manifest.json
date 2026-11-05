@@ -1,0 +1,46 @@
+{
+  "checked_on": "2026-11-05",
+  "status": "static_read_only_not_executed",
+  "files": [
+    {
+      "repo": "abhishekpanigrahi1996/GRACE",
+      "commit": "64fc99a10049f79abe05e2be638a178b448985d0",
+      "path": "GRACE/GRACE_computation.py",
+      "blob": "ca9aa175260ee1b5a244222e5fad03095bab0b12",
+      "local": "GRACE_computation.py",
+      "url": "https://github.com/abhishekpanigrahi1996/GRACE/blob/64fc99a10049f79abe05e2be638a178b448985d0/GRACE/GRACE_computation.py",
+      "local_sha256": "0dcba838d038aa9cb922a7b8a6fbece920b243a59a90f0272d0cf74391a17c38",
+      "local_bytes": 5581
+    },
+    {
+      "repo": "abhishekpanigrahi1996/ProgressiveDistillation",
+      "commit": "8eb10d1459f6f675dc43122ab8e76cd9c2636a13",
+      "path": "parity/boolean_distill_expts.py",
+      "blob": "d15bda557746590f08f33fcb53ab314e14a391cb",
+      "local": "Progressive_boolean_distill_expts.py",
+      "url": "https://github.com/abhishekpanigrahi1996/ProgressiveDistillation/blob/8eb10d1459f6f675dc43122ab8e76cd9c2636a13/parity/boolean_distill_expts.py",
+      "local_sha256": "9319e99e9e1689f750d69584778019360d030749e173504f0613242c957c989e",
+      "local_bytes": 16922
+    },
+    {
+      "repo": "abhishekpanigrahi1996/ProgressiveDistillation",
+      "commit": "8eb10d1459f6f675dc43122ab8e76cd9c2636a13",
+      "path": "parity/conf/distill_boolean_data.yml",
+      "blob": "7b6db33eefe0744ea840c372f2144e33f75f6ba6",
+      "local": "Progressive_distill_boolean_data.yml",
+      "url": "https://github.com/abhishekpanigrahi1996/ProgressiveDistillation/blob/8eb10d1459f6f675dc43122ab8e76cd9c2636a13/parity/conf/distill_boolean_data.yml",
+      "local_sha256": "de2fa6b66e4d2820d8bf6ff19bc898c2a810639ad813dee5d988693eee12debb",
+      "local_bytes": 1574
+    },
+    {
+      "repo": "pasandissanayake/kd-rid",
+      "commit": "25c263c65297f494bb1e3d632077c39c88669f62",
+      "path": "systems/wrncifar100.py",
+      "blob": "ed63f925e366552a592da938d815fcd3d18c38e8",
+      "local": "RID_wrncifar100.py",
+      "url": "https://github.com/pasandissanayake/kd-rid/blob/25c263c65297f494bb1e3d632077c39c88669f62/systems/wrncifar100.py",
+      "local_sha256": "97209c3204c7f08607059949ed12be1e937918d48bb2b6191acb530475b456a2",
+      "local_bytes": 46892
+    }
+  ]
+}

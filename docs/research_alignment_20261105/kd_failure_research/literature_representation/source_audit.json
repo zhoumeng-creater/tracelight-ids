@@ -1,0 +1,124 @@
+[
+  {
+    "repo": "yandex-research/tabm",
+    "branch": "main",
+    "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4",
+    "date": "2025-11-10T07:17:57Z",
+    "files": [
+      {
+        "path": "paper/bin/model.py",
+        "blob": "eb092d90736a4fd7ce54ac8e68d68a18b9a3c9cb",
+        "sha256": "81144b9f520d3e57d9c5b3a8b0dfb1f800191d57dee229148fe88211df15dd19",
+        "bytes": 29596,
+        "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/paper/bin/model.py"
+      },
+      {
+        "path": "paper/README.md",
+        "blob": "2c4dd154bd2274c10591f97c943c097425fd2490",
+        "sha256": "43428b8d71b2558c75ce4e8bcda10a04284a631158fa30ef735d7db9b67c8703",
+        "bytes": 19120,
+        "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/paper/README.md"
+      }
+    ]
+  },
+  {
+    "repo": "Clouddelta/tab-distill",
+    "branch": "main",
+    "commit": "64214da0edf7eef6e8bf645332471d78b30345e8",
+    "date": "2026-09-25T09:11:13Z",
+    "files": [
+      {
+        "path": "experiments/TabDistill_downstream_comparison/compare_index_performance.py",
+        "blob": "38f646bf78da78fe7d14f2f7ada89470b01c2361",
+        "sha256": "5346bdf19f10021d847a7401d0d76b07c6eb7f72cda8afe79db1ce4e44da4a89",
+        "bytes": 22169,
+        "url": "https://github.com/Clouddelta/tab-distill/blob/64214da0edf7eef6e8bf645332471d78b30345e8/experiments/TabDistill_downstream_comparison/compare_index_performance.py"
+      },
+      {
+        "path": "experiments/interaction_search/tabarena_single_mulindex.py",
+        "blob": "260e374bf14a6f71c7124ea4b46283ea9a0aee66",
+        "sha256": "a158d8e8c83f143b96ab825c4cdaa2a49ac733280902034fb347f891729583b4",
+        "bytes": 41785,
+        "url": "https://github.com/Clouddelta/tab-distill/blob/64214da0edf7eef6e8bf645332471d78b30345e8/experiments/interaction_search/tabarena_single_mulindex.py"
+      }
+    ]
+  },
+  {
+    "repo": "CPS-research-group/dtsemnet",
+    "branch": "topk",
+    "commit": "90cc4602ef94c8aa88d731c5b1f804e26d3ee49f",
+    "date": "2025-08-29T04:57:51Z",
+    "files": [
+      {
+        "path": "README.md",
+        "blob": "aa787c50d1066708be580b0033c55e7b26e4f51c",
+        "sha256": "4b545d5035b762a62ed7d6224ecaea6b7a2f0c620de6a05fadd31878e067d610",
+        "bytes": 1867,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/README.md"
+      },
+      {
+        "path": "configs/classification/config_dtsemnet.py",
+        "blob": "b573f09e989521975ee1711f97fb032e60186427",
+        "sha256": "dcb833980c95c5955e7062150732752cb0c0b7d34934d22c7ab576d0082756d7",
+        "bytes": 34602,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/configs/classification/config_dtsemnet.py"
+      },
+      {
+        "path": "configs/regression/dtregnet_bistage.py",
+        "blob": "109a890c15657372dd59d0eb02e7ceb500b2fcdd",
+        "sha256": "6a5f5bd3ed95df16517eb4e354a01e7a735c6c2d583fde39a7a60a9ec287c4e7",
+        "bytes": 6084,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/configs/regression/dtregnet_bistage.py"
+      },
+      {
+        "path": "configs/regression/dtregnet_ste.py",
+        "blob": "bbd76f5f7fc1ca570b1e05cbaa1f80e076446daf",
+        "sha256": "a14b37e0ba7a0212f276deb5be76ca010cd3d18d4a72ee7aff6c5ef7fbe54260",
+        "bytes": 13568,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/configs/regression/dtregnet_ste.py"
+      },
+      {
+        "path": "configs/regression/dtregnet_topk.py",
+        "blob": "e04142ccb427b62f0b6b2d31e60f0d963318a0cb",
+        "sha256": "082f09d6e34037886dca04768d0386f001fc9b010e047ba215dd8b95ce7bed2a",
+        "bytes": 18909,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/configs/regression/dtregnet_topk.py"
+      },
+      {
+        "path": "configs/regression/dtregnet_topk_ste.py",
+        "blob": "f915f405a5efdb14e850489f362b038403d433e0",
+        "sha256": "d7d04be7e56ed45aa71b18612a53486df056a6d4acbdb1b1526977a00fba57e8",
+        "bytes": 16083,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/configs/regression/dtregnet_topk_ste.py"
+      },
+      {
+        "path": "dprl/agents/dtsemnet_ste.py",
+        "blob": "e32c676ddfb4f103714492474be73758d4d5cce1",
+        "sha256": "005c759f55cdb0f1d4ec823d3e208d79d995778b3999d36161e1ac4ef3e42102",
+        "bytes": 18962,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/dprl/agents/dtsemnet_ste.py"
+      },
+      {
+        "path": "dprl/agents/dtsemnet_topk.py",
+        "blob": "ae6dcba0d0facbf9110a0fca9d33ee02c3a2caf4",
+        "sha256": "2dcae6044ba1ae317341a9f1828ccbf04ad75be7524df2e07f7217b9d83bd73e",
+        "bytes": 27087,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/dprl/agents/dtsemnet_topk.py"
+      },
+      {
+        "path": "dprl/agents/dtsemnet_topk_ablation.py",
+        "blob": "4f1d0d1e04ea0adadb32fcc84a673b773f256c23",
+        "sha256": "99b58de54f9a9760d987ce7dd72ebaf8c80b63d33d3db50230833b511094515e",
+        "bytes": 28152,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/dprl/agents/dtsemnet_topk_ablation.py"
+      },
+      {
+        "path": "dprl/utils/view_dt.py",
+        "blob": "ab59c12af2dd0b5ef9675f2f1ad7bca6ac112d4c",
+        "sha256": "4576fd9d6ab3ad7d54c14e6d1bde9da41df2c155785ca1c2e12efdbff546f087",
+        "bytes": 13266,
+        "url": "https://github.com/CPS-research-group/dtsemnet/blob/90cc4602ef94c8aa88d731c5b1f804e26d3ee49f/dprl/utils/view_dt.py"
+      }
+    ]
+  }
+]

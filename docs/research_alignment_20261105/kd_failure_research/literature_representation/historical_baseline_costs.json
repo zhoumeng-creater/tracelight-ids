@@ -1,0 +1,579 @@
+{
+  "scope": "saved R/C summary and timing metadata only, no fitted model loaded, no new inference",
+  "historical_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw",
+  "threads": 4,
+  "rows": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\teachers\\all-s17\\run.json",
+      "sha256": "9d2e5d819b185c30e6ead0a769f435e0f1448f8cd721ced685fdb59101fc3d13",
+      "kind": "teacher",
+      "selected_epoch": null,
+      "selected_step": null,
+      "deployment": {
+        "raw_fields": 42,
+        "encoded_dim": 189,
+        "model_package_bytes": 1509420
+      },
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 3.0393,
+            "p95_ms": 3.19974,
+            "mean_rows_per_second": 326.81105614875395,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 4.1989,
+            "p95_ms": 4.41226,
+            "mean_rows_per_second": 61125.68682827407,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      },
+      "compute": null,
+      "C": {
+        "false_positives": 76,
+        "n_normal": 7840,
+        "true_positives": 14448,
+        "n_attack": 16707,
+        "fpr": 0.009693877551020408,
+        "tpr": 0.8647872149398456,
+        "threshold": 2.307777003139602,
+        "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.7986111111111112
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.983402489626556
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9759671746776084
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.9506199695453557
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.2795657231485072
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.9975352112676056
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.9855371900826446
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.7662337662337663
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 1.0
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.9926518717560646,
+        "partial_auc_raw": 0.008245560030440618,
+        "partial_auc_standardized": 0.9118371874593275,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\native-trees\\catboost-reference-s17\\run.json",
+      "sha256": "05aaa7947c1a69d6bd5b76b50f5275114b673fa9ff5eee5b77645c7de92e021a",
+      "kind": "native_tree",
+      "selected_epoch": null,
+      "selected_step": null,
+      "deployment": {
+        "model_bytes": 306804,
+        "deployment_bytes": 312279,
+        "raw_fields": 42,
+        "tree_count": 256,
+        "leaf_count": 16384
+      },
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 5.0338,
+            "p95_ms": 5.29612,
+            "mean_rows_per_second": 197.69597206318682,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 5.4819,
+            "p95_ms": 6.374139999999999,
+            "mean_rows_per_second": 45680.025695014454,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> native conversion/CTRs -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement on fixed C rows; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      },
+      "compute": null,
+      "C": {
+        "false_positives": 75,
+        "n_normal": 7840,
+        "true_positives": 14439,
+        "n_attack": 16707,
+        "fpr": 0.009566326530612245,
+        "tpr": 0.8642485185850243,
+        "threshold": 1.4653482182895545,
+        "decision_rule": "float64(raw_logit)>=frozen_R_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.78125
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.979253112033195
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9753810082063306
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.9490972373286927
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.27723924001550987
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.9980633802816902
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.9834710743801653
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.8376623376623377
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 1.0
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.9917897896274688,
+        "partial_auc_raw": 0.008181973094499067,
+        "partial_auc_standardized": 0.9086418640451792,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\native-trees\\catboost-small-s17\\run.json",
+      "sha256": "a3e6d53b923f16adc7327cb2e12898e4a8ce30ea1eddbfd0c7023b1713b2aa42",
+      "kind": "native_tree",
+      "selected_epoch": null,
+      "selected_step": null,
+      "deployment": {
+        "model_bytes": 39600,
+        "deployment_bytes": 45071,
+        "raw_fields": 42,
+        "tree_count": 64,
+        "leaf_count": 1024
+      },
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 5.1144,
+            "p95_ms": 5.43784,
+            "mean_rows_per_second": 193.2591218305504,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 5.3684,
+            "p95_ms": 5.5994399999999995,
+            "mean_rows_per_second": 47562.4610303664,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> native conversion/CTRs -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement on fixed C rows; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      },
+      "compute": null,
+      "C": {
+        "false_positives": 78,
+        "n_normal": 7840,
+        "true_positives": 13637,
+        "n_attack": 16707,
+        "fpr": 0.009948979591836734,
+        "tpr": 0.81624468785539,
+        "threshold": 1.7607393932184103,
+        "decision_rule": "float64(raw_logit)>=frozen_R_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.7256944444444444
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.91701244813278
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9431418522860492
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.8990646073526213
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.16362931368747577
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.9950704225352113
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.8787878787878788
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.7077922077922078
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 0.6
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.9886448328209,
+        "partial_auc_raw": 0.007758023796697705,
+        "partial_auc_standardized": 0.8873378792310405,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\warmups\\all-small-s17\\run.json",
+      "sha256": "b3eea54ab4520390e73e4c5e537dd76e54c1a18b12bdd9a6468249d61768a8d7",
+      "kind": "hard_warmup",
+      "selected_epoch": 40,
+      "selected_step": null,
+      "deployment": {
+        "raw_fields": 42,
+        "encoded_dim": 189,
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "parameters": 6625,
+        "model_package_bytes": 34475
+      },
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 2.2737,
+            "p95_ms": 2.40206,
+            "mean_rows_per_second": 437.65285025795254,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 2.5646,
+            "p95_ms": 2.7744,
+            "mean_rows_per_second": 98730.23659775604,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      },
+      "compute": {
+        "optimizer_updates": 3360,
+        "selected_checkpoint_optimizer_updates": 3360,
+        "gradient_forward_rows": 3436640,
+        "CPU_R_C_selection_forward_rows": 1509661,
+        "training_unit": "minibatch epochs; continuation uses full-F macrosteps"
+      },
+      "C": {
+        "false_positives": 78,
+        "n_normal": 7840,
+        "true_positives": 13952,
+        "n_attack": 16707,
+        "fpr": 0.009948979591836734,
+        "tpr": 0.8350990602741366,
+        "threshold": 1.4305143356323244,
+        "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.8229166666666666
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.9294605809128631
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9548651817116061
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.9358277137263432
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.2299340829778984
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.9955985915492958
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.8243801652892562
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.6883116883116883
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 0.9
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.9886642399373108,
+        "partial_auc_raw": 0.007775289411868176,
+        "partial_auc_standardized": 0.8882054980838279,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\warmups\\all-wide-s17\\run.json",
+      "sha256": "537cf41ce315a06ef5dff9e6827f6239fd74bbd80a0eb24c534682570e04da3b",
+      "kind": "hard_warmup",
+      "selected_epoch": 34,
+      "selected_step": null,
+      "deployment": {
+        "raw_fields": 42,
+        "encoded_dim": 189,
+        "hidden_sizes": [
+          128,
+          64
+        ],
+        "parameters": 32641,
+        "model_package_bytes": 138548
+      },
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 2.2892,
+            "p95_ms": 2.81888,
+            "mean_rows_per_second": 421.0583047855803,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 2.6651,
+            "p95_ms": 3.3302799999999992,
+            "mean_rows_per_second": 93560.54902499674,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      },
+      "compute": {
+        "optimizer_updates": 3360,
+        "selected_checkpoint_optimizer_updates": 2856,
+        "gradient_forward_rows": 3436640,
+        "CPU_R_C_selection_forward_rows": 1509661,
+        "training_unit": "minibatch epochs; continuation uses full-F macrosteps"
+      },
+      "C": {
+        "false_positives": 77,
+        "n_normal": 7840,
+        "true_positives": 14017,
+        "n_attack": 16707,
+        "fpr": 0.009821428571428571,
+        "tpr": 0.8389896450589573,
+        "threshold": 1.6229385137557986,
+        "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.7951388888888888
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.941908713692946
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9554513481828839
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.9347400478572983
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.2466072120977123
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.9955985915492958
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.8402203856749312
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.7402597402597403
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 0.9
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.989591319109795,
+        "partial_auc_raw": 0.007903707721192265,
+        "partial_auc_standardized": 0.8946586794568978,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\students\\all-hard-s17\\run.json",
+      "sha256": "f87d97a409168e28d7b35a040903510f3c40bcbd5a3b6da4604184c46b943906",
+      "kind": null,
+      "selected_epoch": null,
+      "selected_step": 25,
+      "deployment": {
+        "raw_fields": 42,
+        "encoded_dim": 189,
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "parameters": 6625,
+        "model_package_bytes": 34475
+      },
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 2.2164,
+            "p95_ms": 2.4552,
+            "mean_rows_per_second": 444.1436111718108,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 2.7105,
+            "p95_ms": 3.1133599999999997,
+            "mean_rows_per_second": 92664.71877705737,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      },
+      "compute": {
+        "optimizer_updates": 40,
+        "gradient_forward_rows": 3436640,
+        "detached_global_tail_score_rows": 0,
+        "CPU_R_C_selection_forward_rows": 1509661,
+        "equal_training_FLOPs_claim": false
+      },
+      "C": {
+        "false_positives": 78,
+        "n_normal": 7840,
+        "true_positives": 13969,
+        "n_attack": 16707,
+        "fpr": 0.009948979591836734,
+        "tpr": 0.8361165978332435,
+        "threshold": 1.524279832839966,
+        "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.7986111111111112
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.9336099585062241
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9501758499413834
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.9301718512073092
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.23924001550988755
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.995774647887324
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.8415977961432507
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.7337662337662337
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 0.9
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.9889086497410959,
+        "partial_auc_raw": 0.007798878754231088,
+        "partial_auc_standardized": 0.8893908921724165,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    }
+  ],
+  "sources": {
+    "source/src/ids/budget_transfer.py": "eda36a3603915bf5d6bebdc3484cea696bb9cd01022e50c8595372d5f180dba4",
+    "source/src/ids/transfer_screen.py": "deacdf0376dc10c0411fb0cccaf7b8d43c2e2279768a51c8b9e39aa75dc63d9d",
+    "source/src/ids/native_trees.py": "8919921837e7b8a80d493d295b65e9de54f3832117463ebf749cd56a920a1b8c",
+    "environment.json": "07df0f42779ed7ca69c02b57d7e40deedb932471bb1ae94bd4f651c5ea437518",
+    "plan.json": "57b50a5b5db615d4728fe175380248fbb3631a89d3230f1572a53256b1f7fffd"
+  }
+}

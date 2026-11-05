@@ -2,13 +2,19 @@
 
 面向网络入侵检测的轻量化机器学习研究工程：在明确的正常流量误报预算下，比较检测效果、可用字段、模型包和CPU流程成本，并保存逐行可复核工件。
 
-**当前研究决定（2026-11-05）：** 24次基础screen及教师审计已回传。[机制重设计报告](docs/PROJECT_MECHANISM_REDESIGN_20261105.md)定位CIC24的主导漏报与训练范围外推有关；冻结裁剪能修复2,272行，也会产生模型相关的新误报。CIC full-F软目标接近hard，UNSW的普通KD仅保留为受控候选。最新[20项成果审查](docs/research_alignment_20261105/README.md)记录原文、作者代码、实际取舍和缺口。
+**当前实验入口（2026-11-06）：** [UNSW 零拟合诊断指南](docs/UNSW_DIAGNOSTIC_LAB.md)包含固定版本拉取、预检、运行及自动打包回传步骤。入口已实现，真实诊断待实验室运行；拟合及优化器更新均为0。只补三份冻结学生的F观测与三模型CPU成本，条件两臂续训没有执行入口。
+
+**四臂后的研究重定（2026-11-05）：** 用户确认没有模型体积、内存或延迟硬上限，按效果和实际成本比较。[最新机制研究](docs/UNSW_KD_FAILURE_RESEARCH_20261105.md)撤销“必须压成35KB small”的默认前提，将现成HGB与CatBoost-reference列为强实际参照。F缓存显示教师函数在同一混合目标上的损失0.06264，当前K最后记录0.12454；原warmup和续训同为40遍F，但更新数为3360与40，尚不能判定容量上限。[最小验证规格](docs/research_alignment_20261105/kd_failure_research/最小机制验证规格_20261105.md)及原验收条件保持，普通KD不自动追加训练。
+
+**当前研究决定（2026-11-05，第十轮已验收）：** [UNSW普通KD四臂结果](docs/UNSW_KD_RESULTS_20261105.md)确认实验完整、目标与预算正确，但冻结候选未通过：C上K相对H仅净增5 TP，低于34条门槛；K相对S/M的+63/+62不能替代H对照。R净TP−1、pAUC略降，Analysis/DoS各−1；六块成本中一块p95比值1.400056超过1.25。停止该候选，不追加训练或调整原验收规则。
+
+**此前机制依据：** 24次基础screen及教师审计已回传。[机制重设计报告](docs/PROJECT_MECHANISM_REDESIGN_20261105.md)定位CIC24的主导漏报与训练范围外推有关；冻结裁剪能修复2,272行，也会产生模型相关的新误报。CIC full-F软目标接近hard。[20项成果审查](docs/research_alignment_20261105/README.md)记录原文、作者代码、实际取舍和缺口。
 
 **第九轮已完成验收：** 两环境16模型零拟合审计与正式成本已回传。[冻结标准验收结果](docs/INPUT_EXTRAPOLATION_RESULTS_20261105.md)：CIC指定模式机制复现，16/16成本通过，14/16无新FN；有C检出收益的候选均存在新增错误，不作默认部署替换。small24 warmup／direct因重登记新增1 FN停止候选。无需重跑本轮；下一步只保留UNSW原全字段small普通KD最小协议的研究依据，不自动启动训练矩阵、CIC KD／PLE或读取V/calibration/test。
 
 此前已修复PLE零残差分支无梯度的配置错误；它不解释未使用TabM的round8结果。工程检查见[验证记录](docs/MECHANISM_REDESIGN_VERIFICATION_20261105.md)，真实结果以[第九轮验收](docs/INPUT_EXTRAPOLATION_RESULTS_20261105.md)为准。
 
-**UNSW 普通 KD 最小方案已冻结：** [主协议](docs/UNSW_KD_MINIMAL_PROTOCOL_20261105.md)与[规格 JSON](configs/unsw-small-kd-minimal-20261105.json)仅保留一个 full-F HGB、原全字段 small warmup 和 H/K/S/M 四次续训，每臂40次全F更新，固定第40步。采用同尺度混合BCE、保持重复模式的固定置乱和类别均值软化对照；[11项近期成果审查](docs/research_alignment_20261105/unsw_kd_sources.md)及工件检查解释取舍。K须相对三个对照各净增至少34个C TP，并通过误报、逐族、集中度和成本条件。专用入口、合成端到端和打包流程已实现；实验室按[运行指南](docs/UNSW_KD_LAB.md)先预检，再执行四臂。旧预算迁移脚本不用于本轮。
+**UNSW 普通 KD 冻结方案与已完成运行：** [主协议](docs/UNSW_KD_MINIMAL_PROTOCOL_20261105.md)与[规格 JSON](configs/unsw-small-kd-minimal-20261105.json)保留一个 full-F HGB、原全字段 small warmup 和 H/K/S/M 四次续训，每臂40次全F更新，固定第40步。采用同尺度混合BCE、保持重复模式的固定置乱和类别均值软化对照；[11项近期成果审查](docs/research_alignment_20261105/unsw_kd_sources.md)解释取舍。四臂均已完成；[运行指南](docs/UNSW_KD_LAB.md)保留为复现记录，当前执行决定以[第十轮验收](docs/UNSW_KD_RESULTS_20261105.md)为准。
 
 **已有证据与保留结果：** [v3复核](docs/RISK_V3_RESULTS_20261104.md)未支持候选胜出；[v4复核](docs/UPGRADE_V4_RESULTS_20261104.md)覆盖16个学生、32个未启动条件，不能给CIC新KD效果结论。[根本设计复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)说明重构原因；旧源码、配置、失败和[零拟合审计](docs/THRESHOLD_AUDIT_LAB.md)均保留。历史V已被开发使用，不能作为新的独立确认。
 

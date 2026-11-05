@@ -1,0 +1,27 @@
+{
+  "teacher_tau": 2.307777003139602,
+  "registration": {
+    "reference": 1.9709715674390604,
+    "constraint": 2.307777003139602
+  },
+  "roles": {
+    "reference": {
+      "teacher_TP": 7245,
+      "teacher_FP": 28,
+      "teacher_rescues_H": 366,
+      "teacher_loses_H": 153,
+      "K_recovers_teacher_rescuable": 2,
+      "K_rescues_H_teacher_misses": 0,
+      "K_new_FN_teacher_also_detects": 1
+    },
+    "constraint": {
+      "teacher_TP": 14448,
+      "teacher_FP": 76,
+      "teacher_rescues_H": 733,
+      "teacher_loses_H": 245,
+      "K_recovers_teacher_rescuable": 3,
+      "K_rescues_H_teacher_misses": 4,
+      "K_new_FN_teacher_also_detects": 2
+    }
+  }
+}

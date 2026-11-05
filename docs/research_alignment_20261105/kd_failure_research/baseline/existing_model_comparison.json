@@ -1,0 +1,1535 @@
+{
+  "scope": "post-hoc descriptive comparison of already developed R/C; not new model selection or independent confirmation",
+  "models": {
+    "H40": {
+      "threshold": 1.5424227714538576,
+      "metadata": null,
+      "roles": {
+        "reference": {
+          "model": "H40",
+          "role": "reference",
+          "TP": 7032,
+          "FN": 1322,
+          "FP": 39,
+          "TPR": 0.8417524539142925,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.8877776959924333,
+          "recovered_FN": 0,
+          "new_FN": 0,
+          "repaired_FP": 0,
+          "new_FP": 0
+        },
+        "constraint": {
+          "model": "H40",
+          "role": "constraint",
+          "TP": 13960,
+          "FN": 2747,
+          "FP": 78,
+          "TPR": 0.8355779014784223,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.88953982413733,
+          "recovered_FN": 0,
+          "new_FN": 0,
+          "repaired_FP": 0,
+          "new_FP": 0
+        }
+      }
+    },
+    "K40": {
+      "threshold": 1.5302335023880007,
+      "metadata": null,
+      "roles": {
+        "reference": {
+          "model": "K40",
+          "role": "reference",
+          "TP": 7031,
+          "FN": 1323,
+          "FP": 39,
+          "TPR": 0.8416327507780704,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.8877740131967338,
+          "recovered_FN": 2,
+          "new_FN": 3,
+          "repaired_FP": 0,
+          "new_FP": 0
+        },
+        "constraint": {
+          "model": "K40",
+          "role": "constraint",
+          "TP": 13965,
+          "FN": 2742,
+          "FP": 78,
+          "TPR": 0.8358771772311008,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.8896319762701796,
+          "recovered_FN": 7,
+          "new_FN": 2,
+          "repaired_FP": 0,
+          "new_FP": 0
+        }
+      }
+    },
+    "HGB": {
+      "threshold": 2.307777003139602,
+      "metadata": {
+        "deployment": {
+          "raw_fields": 42,
+          "encoded_dim": 189,
+          "model_package_bytes": 1509420
+        },
+        "historical_cpu_pipeline": {
+          "batches": {
+            "1": {
+              "p50_ms": 3.0393,
+              "p95_ms": 3.19974,
+              "mean_rows_per_second": 326.81105614875395,
+              "repeats": 25
+            },
+            "256": {
+              "p50_ms": 4.1989,
+              "p95_ms": 4.41226,
+              "mean_rows_per_second": 61125.68682827407,
+              "repeats": 25
+            }
+          },
+          "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+          "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+          "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+          "measurement_rows": "fixed first C rows, same order for all models"
+        },
+        "selection_evaluations": 1,
+        "selected_epoch": null
+      },
+      "roles": {
+        "reference": {
+          "model": "HGB",
+          "role": "reference",
+          "TP": 7245,
+          "FN": 1109,
+          "FP": 28,
+          "TPR": 0.8672492219296145,
+          "FPR": 0.007142857142857143,
+          "stdpAUC": 0.9145215445635343,
+          "recovered_FN": 366,
+          "new_FN": 153,
+          "repaired_FP": 22,
+          "new_FP": 11
+        },
+        "constraint": {
+          "model": "HGB",
+          "role": "constraint",
+          "TP": 14448,
+          "FN": 2259,
+          "FP": 76,
+          "TPR": 0.8647872149398456,
+          "FPR": 0.009693877551020408,
+          "stdpAUC": 0.9118371874593276,
+          "recovered_FN": 733,
+          "new_FN": 245,
+          "repaired_FP": 54,
+          "new_FP": 52
+        }
+      }
+    },
+    "CatBoost_reference": {
+      "threshold": 1.4653482182895545,
+      "metadata": {
+        "deployment": {
+          "model_bytes": 306804,
+          "deployment_bytes": 312279,
+          "raw_fields": 42,
+          "tree_count": 256,
+          "leaf_count": 16384
+        },
+        "historical_cpu_pipeline": {
+          "batches": {
+            "1": {
+              "p50_ms": 5.0338,
+              "p95_ms": 5.29612,
+              "mean_rows_per_second": 197.69597206318682,
+              "repeats": 25
+            },
+            "256": {
+              "p50_ms": 5.4819,
+              "p95_ms": 6.374139999999999,
+              "mean_rows_per_second": 45680.025695014454,
+              "repeats": 25
+            }
+          },
+          "includes": "existing CSV fields -> native conversion/CTRs -> CPU model -> raw threshold",
+          "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+          "scope": "laboratory CPU measurement on fixed C rows; not laptop deployment acceptance",
+          "measurement_rows": "fixed first C rows, same order for all models"
+        },
+        "selection_evaluations": 1,
+        "selected_epoch": null
+      },
+      "roles": {
+        "reference": {
+          "model": "CatBoost_reference",
+          "role": "reference",
+          "TP": 7285,
+          "FN": 1069,
+          "FP": 39,
+          "TPR": 0.8720373473785014,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.9134009005221149,
+          "recovered_FN": 348,
+          "new_FN": 95,
+          "repaired_FP": 14,
+          "new_FP": 14
+        },
+        "constraint": {
+          "model": "CatBoost_reference",
+          "role": "constraint",
+          "TP": 14439,
+          "FN": 2268,
+          "FP": 75,
+          "TPR": 0.8642485185850243,
+          "FPR": 0.009566326530612245,
+          "stdpAUC": 0.9086418640451792,
+          "recovered_FN": 656,
+          "new_FN": 177,
+          "repaired_FP": 31,
+          "new_FP": 28
+        }
+      }
+    },
+    "wide_warmup": {
+      "threshold": 1.6229385137557986,
+      "metadata": {
+        "deployment": {
+          "raw_fields": 42,
+          "encoded_dim": 189,
+          "hidden_sizes": [
+            128,
+            64
+          ],
+          "parameters": 32641,
+          "model_package_bytes": 138548
+        },
+        "historical_cpu_pipeline": {
+          "batches": {
+            "1": {
+              "p50_ms": 2.2892,
+              "p95_ms": 2.81888,
+              "mean_rows_per_second": 421.0583047855803,
+              "repeats": 25
+            },
+            "256": {
+              "p50_ms": 2.6651,
+              "p95_ms": 3.3302799999999992,
+              "mean_rows_per_second": 93560.54902499674,
+              "repeats": 25
+            }
+          },
+          "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+          "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+          "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+          "measurement_rows": "fixed first C rows, same order for all models"
+        },
+        "selection_evaluations": 41,
+        "selected_epoch": 34
+      },
+      "roles": {
+        "reference": {
+          "model": "wide_warmup",
+          "role": "reference",
+          "TP": 7052,
+          "FN": 1302,
+          "FP": 39,
+          "TPR": 0.844146516638736,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.8911988597475267,
+          "recovered_FN": 109,
+          "new_FN": 89,
+          "repaired_FP": 10,
+          "new_FP": 10
+        },
+        "constraint": {
+          "model": "wide_warmup",
+          "role": "constraint",
+          "TP": 14017,
+          "FN": 2690,
+          "FP": 77,
+          "TPR": 0.8389896450589573,
+          "FPR": 0.009821428571428571,
+          "stdpAUC": 0.8946586794568978,
+          "recovered_FN": 197,
+          "new_FN": 140,
+          "repaired_FP": 21,
+          "new_FP": 20
+        }
+      }
+    },
+    "small_warmup": {
+      "threshold": 1.4305143356323244,
+      "metadata": {
+        "deployment": {
+          "raw_fields": 42,
+          "encoded_dim": 189,
+          "hidden_sizes": [
+            32,
+            16
+          ],
+          "parameters": 6625,
+          "model_package_bytes": 34475
+        },
+        "historical_cpu_pipeline": {
+          "batches": {
+            "1": {
+              "p50_ms": 2.2737,
+              "p95_ms": 2.40206,
+              "mean_rows_per_second": 437.65285025795254,
+              "repeats": 25
+            },
+            "256": {
+              "p50_ms": 2.5646,
+              "p95_ms": 2.7744,
+              "mean_rows_per_second": 98730.23659775604,
+              "repeats": 25
+            }
+          },
+          "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+          "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+          "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+          "measurement_rows": "fixed first C rows, same order for all models"
+        },
+        "selection_evaluations": 41,
+        "selected_epoch": 40
+      },
+      "roles": {
+        "reference": {
+          "model": "small_warmup",
+          "role": "reference",
+          "TP": 7026,
+          "FN": 1328,
+          "FP": 39,
+          "TPR": 0.8410342350969595,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.8878241912881406,
+          "recovered_FN": 37,
+          "new_FN": 43,
+          "repaired_FP": 6,
+          "new_FP": 6
+        },
+        "constraint": {
+          "model": "small_warmup",
+          "role": "constraint",
+          "TP": 13952,
+          "FN": 2755,
+          "FP": 78,
+          "TPR": 0.8350990602741366,
+          "FPR": 0.009948979591836734,
+          "stdpAUC": 0.888205498083828,
+          "recovered_FN": 74,
+          "new_FN": 82,
+          "repaired_FP": 9,
+          "new_FP": 9
+        }
+      }
+    }
+  },
+  "inputs": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW四臂验收_20261105\\received\\unpacked\\unsw-kd-20261105T0533590495060000-8e7810f7\\experiment\\arms\\H\\scores.npz": "41b1fe7553f223091935efcd3055bb291c0b6eaf55f0ff3daddcf30eed949295",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW四臂验收_20261105\\received\\unpacked\\unsw-kd-20261105T0533590495060000-8e7810f7\\experiment\\arms\\K\\scores.npz": "adf5b81256cfc8bca9b11da32e354d92f671ec73dd5e8bae1f34461bd5e342cc",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\teachers\\all-s17\\training-scores.npz": "69630901408bf7262ddc0abb4001c890db71573b023cdd8e19d70d8ce6c53dde",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\teachers\\all-s17\\run.json": "9d2e5d819b185c30e6ead0a769f435e0f1448f8cd721ced685fdb59101fc3d13",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\native-trees\\catboost-reference-s17\\training-scores.npz": "f1771770bca419438b636beca0734837d5059c28c5443c53c1099c87afbb2141",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\native-trees\\catboost-reference-s17\\run.json": "05aaa7947c1a69d6bd5b76b50f5275114b673fa9ff5eee5b77645c7de92e021a",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\warmups\\all-wide-s17\\training-scores.npz": "44d3cb64df53f4e3f282a172a9a0cbf80819304ba1a4d29c60aed873c6ce898c",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\warmups\\all-wide-s17\\run.json": "537cf41ce315a06ef5dff9e6827f6239fd74bbd80a0eb24c534682570e04da3b",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\warmups\\all-small-s17\\training-scores.npz": "98027952fb7822e0a98402c3db9a8f9fa887656b88bcb68f354d1836a3dc99f1",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw\\warmups\\all-small-s17\\run.json": "b3eea54ab4520390e73e4c5e537dd76e54c1a18b12bdd9a6468249d61768a8d7"
+  },
+  "families": [
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 116,
+      "H40_TP": 116,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 123,
+      "H40_TP": 123,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 889,
+      "H40_TP": 889,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2272,
+      "H40_TP": 2272,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 316,
+      "H40_TP": 316,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2688,
+      "H40_TP": 2688,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 574,
+      "H40_TP": 574,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 50,
+      "H40_TP": 50,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 4,
+      "H40_TP": 4,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 229,
+      "H40_TP": 229,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 225,
+      "H40_TP": 225,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1622,
+      "H40_TP": 1622,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4270,
+      "H40_TP": 4270,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 612,
+      "H40_TP": 612,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5656,
+      "H40_TP": 5656,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1222,
+      "H40_TP": 1222,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 115,
+      "H40_TP": 115,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 9,
+      "H40_TP": 9,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 115,
+      "H40_TP": 116,
+      "delta_TP": -1,
+      "recovered_FN": 0,
+      "new_FN": 1
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 123,
+      "H40_TP": 123,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 888,
+      "H40_TP": 889,
+      "delta_TP": -1,
+      "recovered_FN": 0,
+      "new_FN": 1
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2272,
+      "H40_TP": 2272,
+      "delta_TP": 0,
+      "recovered_FN": 1,
+      "new_FN": 1
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 317,
+      "H40_TP": 316,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2688,
+      "H40_TP": 2688,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 574,
+      "H40_TP": 574,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 50,
+      "H40_TP": 50,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 4,
+      "H40_TP": 4,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 229,
+      "H40_TP": 229,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 225,
+      "H40_TP": 225,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1622,
+      "H40_TP": 1622,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4271,
+      "H40_TP": 4270,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 614,
+      "H40_TP": 612,
+      "delta_TP": 2,
+      "recovered_FN": 4,
+      "new_FN": 2
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5657,
+      "H40_TP": 5656,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1223,
+      "H40_TP": 1222,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 115,
+      "H40_TP": 115,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "K40",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 9,
+      "H40_TP": 9,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 112,
+      "H40_TP": 116,
+      "delta_TP": -4,
+      "recovered_FN": 0,
+      "new_FN": 4
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 126,
+      "H40_TP": 123,
+      "delta_TP": 3,
+      "recovered_FN": 5,
+      "new_FN": 2
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 899,
+      "H40_TP": 889,
+      "delta_TP": 10,
+      "recovered_FN": 25,
+      "new_FN": 15
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2332,
+      "H40_TP": 2272,
+      "delta_TP": 60,
+      "recovered_FN": 81,
+      "new_FN": 21
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 343,
+      "H40_TP": 316,
+      "delta_TP": 27,
+      "recovered_FN": 124,
+      "new_FN": 97
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2695,
+      "H40_TP": 2688,
+      "delta_TP": 7,
+      "recovered_FN": 8,
+      "new_FN": 1
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 676,
+      "H40_TP": 574,
+      "delta_TP": 102,
+      "recovered_FN": 110,
+      "new_FN": 8
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 57,
+      "H40_TP": 50,
+      "delta_TP": 7,
+      "recovered_FN": 12,
+      "new_FN": 5
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 5,
+      "H40_TP": 4,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 230,
+      "H40_TP": 229,
+      "delta_TP": 1,
+      "recovered_FN": 7,
+      "new_FN": 6
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 237,
+      "H40_TP": 225,
+      "delta_TP": 12,
+      "recovered_FN": 12,
+      "new_FN": 0
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1665,
+      "H40_TP": 1622,
+      "delta_TP": 43,
+      "recovered_FN": 54,
+      "new_FN": 11
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4370,
+      "H40_TP": 4270,
+      "delta_TP": 100,
+      "recovered_FN": 142,
+      "new_FN": 42
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 721,
+      "H40_TP": 612,
+      "delta_TP": 109,
+      "recovered_FN": 277,
+      "new_FN": 168
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5666,
+      "H40_TP": 5656,
+      "delta_TP": 10,
+      "recovered_FN": 13,
+      "new_FN": 3
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1431,
+      "H40_TP": 1222,
+      "delta_TP": 209,
+      "recovered_FN": 214,
+      "new_FN": 5
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 118,
+      "H40_TP": 115,
+      "delta_TP": 3,
+      "recovered_FN": 13,
+      "new_FN": 10
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 10,
+      "H40_TP": 9,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 113,
+      "H40_TP": 116,
+      "delta_TP": -3,
+      "recovered_FN": 0,
+      "new_FN": 3
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 127,
+      "H40_TP": 123,
+      "delta_TP": 4,
+      "recovered_FN": 4,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 904,
+      "H40_TP": 889,
+      "delta_TP": 15,
+      "recovered_FN": 21,
+      "new_FN": 6
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2324,
+      "H40_TP": 2272,
+      "delta_TP": 52,
+      "recovered_FN": 79,
+      "new_FN": 27
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 372,
+      "H40_TP": 316,
+      "delta_TP": 56,
+      "recovered_FN": 110,
+      "new_FN": 54
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2697,
+      "H40_TP": 2688,
+      "delta_TP": 9,
+      "recovered_FN": 9,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 680,
+      "H40_TP": 574,
+      "delta_TP": 106,
+      "recovered_FN": 108,
+      "new_FN": 2
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 62,
+      "H40_TP": 50,
+      "delta_TP": 12,
+      "recovered_FN": 15,
+      "new_FN": 3
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 6,
+      "H40_TP": 4,
+      "delta_TP": 2,
+      "recovered_FN": 2,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 225,
+      "H40_TP": 229,
+      "delta_TP": -4,
+      "recovered_FN": 3,
+      "new_FN": 7
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 236,
+      "H40_TP": 225,
+      "delta_TP": 11,
+      "recovered_FN": 12,
+      "new_FN": 1
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1664,
+      "H40_TP": 1622,
+      "delta_TP": 42,
+      "recovered_FN": 49,
+      "new_FN": 7
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4363,
+      "H40_TP": 4270,
+      "delta_TP": 93,
+      "recovered_FN": 126,
+      "new_FN": 33
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 715,
+      "H40_TP": 612,
+      "delta_TP": 103,
+      "recovered_FN": 223,
+      "new_FN": 120
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5669,
+      "H40_TP": 5656,
+      "delta_TP": 13,
+      "recovered_FN": 16,
+      "new_FN": 3
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1428,
+      "H40_TP": 1222,
+      "delta_TP": 206,
+      "recovered_FN": 211,
+      "new_FN": 5
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 129,
+      "H40_TP": 115,
+      "delta_TP": 14,
+      "recovered_FN": 15,
+      "new_FN": 1
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 10,
+      "H40_TP": 9,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 115,
+      "H40_TP": 116,
+      "delta_TP": -1,
+      "recovered_FN": 3,
+      "new_FN": 4
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 125,
+      "H40_TP": 123,
+      "delta_TP": 2,
+      "recovered_FN": 2,
+      "new_FN": 0
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 893,
+      "H40_TP": 889,
+      "delta_TP": 4,
+      "recovered_FN": 8,
+      "new_FN": 4
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2282,
+      "H40_TP": 2272,
+      "delta_TP": 10,
+      "recovered_FN": 34,
+      "new_FN": 24
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 324,
+      "H40_TP": 316,
+      "delta_TP": 8,
+      "recovered_FN": 50,
+      "new_FN": 42
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2689,
+      "H40_TP": 2688,
+      "delta_TP": 1,
+      "recovered_FN": 2,
+      "new_FN": 1
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 571,
+      "H40_TP": 574,
+      "delta_TP": -3,
+      "recovered_FN": 8,
+      "new_FN": 11
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 49,
+      "H40_TP": 50,
+      "delta_TP": -1,
+      "recovered_FN": 2,
+      "new_FN": 3
+    },
+    {
+      "model": "wide_warmup",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 4,
+      "H40_TP": 4,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 229,
+      "H40_TP": 229,
+      "delta_TP": 0,
+      "recovered_FN": 3,
+      "new_FN": 3
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 227,
+      "H40_TP": 225,
+      "delta_TP": 2,
+      "recovered_FN": 2,
+      "new_FN": 0
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1630,
+      "H40_TP": 1622,
+      "delta_TP": 8,
+      "recovered_FN": 19,
+      "new_FN": 11
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4297,
+      "H40_TP": 4270,
+      "delta_TP": 27,
+      "recovered_FN": 50,
+      "new_FN": 23
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 636,
+      "H40_TP": 612,
+      "delta_TP": 24,
+      "recovered_FN": 94,
+      "new_FN": 70
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5655,
+      "H40_TP": 5656,
+      "delta_TP": -1,
+      "recovered_FN": 4,
+      "new_FN": 5
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1220,
+      "H40_TP": 1222,
+      "delta_TP": -2,
+      "recovered_FN": 21,
+      "new_FN": 23
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 114,
+      "H40_TP": 115,
+      "delta_TP": -1,
+      "recovered_FN": 4,
+      "new_FN": 5
+    },
+    {
+      "model": "wide_warmup",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 9,
+      "H40_TP": 9,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 119,
+      "H40_TP": 116,
+      "delta_TP": 3,
+      "recovered_FN": 3,
+      "new_FN": 0
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 123,
+      "H40_TP": 123,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 891,
+      "H40_TP": 889,
+      "delta_TP": 2,
+      "recovered_FN": 4,
+      "new_FN": 2
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2287,
+      "H40_TP": 2272,
+      "delta_TP": 15,
+      "recovered_FN": 23,
+      "new_FN": 8
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 300,
+      "H40_TP": 316,
+      "delta_TP": -16,
+      "recovered_FN": 6,
+      "new_FN": 22
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2689,
+      "H40_TP": 2688,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 565,
+      "H40_TP": 574,
+      "delta_TP": -9,
+      "recovered_FN": 0,
+      "new_FN": 9
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 48,
+      "H40_TP": 50,
+      "delta_TP": -2,
+      "recovered_FN": 0,
+      "new_FN": 2
+    },
+    {
+      "model": "small_warmup",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 4,
+      "H40_TP": 4,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 237,
+      "H40_TP": 229,
+      "delta_TP": 8,
+      "recovered_FN": 8,
+      "new_FN": 0
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 224,
+      "H40_TP": 225,
+      "delta_TP": -1,
+      "recovered_FN": 0,
+      "new_FN": 1
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1629,
+      "H40_TP": 1622,
+      "delta_TP": 7,
+      "recovered_FN": 13,
+      "new_FN": 6
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4302,
+      "H40_TP": 4270,
+      "delta_TP": 32,
+      "recovered_FN": 39,
+      "new_FN": 7
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 593,
+      "H40_TP": 612,
+      "delta_TP": -19,
+      "recovered_FN": 14,
+      "new_FN": 33
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5655,
+      "H40_TP": 5656,
+      "delta_TP": -1,
+      "recovered_FN": 0,
+      "new_FN": 1
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1197,
+      "H40_TP": 1222,
+      "delta_TP": -25,
+      "recovered_FN": 0,
+      "new_FN": 25
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 106,
+      "H40_TP": 115,
+      "delta_TP": -9,
+      "recovered_FN": 0,
+      "new_FN": 9
+    },
+    {
+      "model": "small_warmup",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 9,
+      "H40_TP": 9,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "scope": "saved cost arrays, histories and model metadata/weights only; zero fits, zero inference, no V",
+  "experiment": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW四臂验收_20261105\\received\\unpacked\\unsw-kd-20261105T0533590495060000-8e7810f7\\experiment",
+  "summary_sha256": "9fde5fea111c45fb625bce3222b9e08ceaff8978c4d89823791ff7a72a18da78",
+  "protocol_sha256": "479f06c61991b1f554526e9454c50d5fe868c414a10a4d5e51fd2b78dba3c73f",
+  "cost": {
+    "sample_schedule_replay": {
+      "1": {
+        "rows_and_order_exact": true,
+        "normal_rows": 38,
+        "attack_rows": 37,
+        "H_first": 35,
+        "K_first": 40
+      },
+      "256": {
+        "rows_and_order_exact": true,
+        "normal_rows": 9600,
+        "attack_rows": 9600,
+        "H_first": 33,
+        "K_first": 42
+      }
+    },
+    "batches": {
+      "1": {
+        "H": {
+          "p50_ms": 2.135,
+          "p95_ms": 2.29938,
+          "rows_per_second": 462.0761760300756,
+          "mean_ms": 2.1641453333333334,
+          "min_ms": 2.0494,
+          "max_ms": 2.8268,
+          "blocks": [
+            {
+              "p50_ms": 2.1289,
+              "p95_ms": 2.20636,
+              "rows_per_second": 468.64572632589244,
+              "min_ms": 2.0494,
+              "max_ms": 2.3236
+            },
+            {
+              "p50_ms": 2.147,
+              "p95_ms": 2.3540599999999996,
+              "rows_per_second": 455.06339943280904,
+              "min_ms": 2.0907,
+              "max_ms": 2.8268
+            },
+            {
+              "p50_ms": 2.1392,
+              "p95_ms": 2.26816,
+              "rows_per_second": 462.72046316467487,
+              "min_ms": 2.0841,
+              "max_ms": 2.2884
+            }
+          ]
+        },
+        "K": {
+          "p50_ms": 2.1288,
+          "p95_ms": 2.2839199999999997,
+          "rows_per_second": 465.3347338874746,
+          "mean_ms": 2.1489906666666667,
+          "min_ms": 2.0588,
+          "max_ms": 2.8603,
+          "blocks": [
+            {
+              "p50_ms": 2.1288,
+              "p95_ms": 2.28656,
+              "rows_per_second": 467.6778485322399,
+              "min_ms": 2.0604,
+              "max_ms": 2.3733
+            },
+            {
+              "p50_ms": 2.1319,
+              "p95_ms": 2.23192,
+              "rows_per_second": 465.841692086095,
+              "min_ms": 2.0588,
+              "max_ms": 2.2796
+            },
+            {
+              "p50_ms": 2.1214,
+              "p95_ms": 2.3113799999999998,
+              "rows_per_second": 462.51415293307974,
+              "min_ms": 2.0754,
+              "max_ms": 2.8603
+            }
+          ]
+        },
+        "block_p95_ratios_K_over_H": [
+          1.0363494624630614,
+          0.9481151712360775,
+          1.019055093115124
+        ],
+        "aggregate_p95_ratio": 0.9932764484339255,
+        "aggregate_p50_ratio": 0.9970960187353631,
+        "paired_duration_ratio_quantiles": [
+          0.7877458610442903,
+          0.9923614040020619,
+          1.0446265558190044,
+          1.0690842130753657,
+          1.3724389424691714
+        ]
+      },
+      "256": {
+        "H": {
+          "p50_ms": 2.5119,
+          "p95_ms": 2.8531,
+          "rows_per_second": 99848.56301276399,
+          "mean_ms": 2.5638826666666663,
+          "min_ms": 2.3921,
+          "max_ms": 3.8967,
+          "blocks": [
+            {
+              "p50_ms": 2.5341,
+              "p95_ms": 2.7026999999999997,
+              "rows_per_second": 101258.9333320676,
+              "min_ms": 2.3921,
+              "max_ms": 2.7158
+            },
+            {
+              "p50_ms": 2.5101,
+              "p95_ms": 2.9120199999999996,
+              "rows_per_second": 98708.61371463649,
+              "min_ms": 2.3965,
+              "max_ms": 3.8967
+            },
+            {
+              "p50_ms": 2.4948,
+              "p95_ms": 2.8621,
+              "rows_per_second": 99611.51509114454,
+              "min_ms": 2.4275,
+              "max_ms": 3.0173
+            }
+          ]
+        },
+        "K": {
+          "p50_ms": 2.4929,
+          "p95_ms": 3.0974199999999996,
+          "rows_per_second": 97642.39388636562,
+          "mean_ms": 2.621812,
+          "min_ms": 2.356,
+          "max_ms": 4.6418,
+          "blocks": [
+            {
+              "p50_ms": 2.5063,
+              "p95_ms": 3.0932799999999987,
+              "rows_per_second": 97754.54749572706,
+              "min_ms": 2.3752,
+              "max_ms": 4.6417
+            },
+            {
+              "p50_ms": 2.5324,
+              "p95_ms": 2.94754,
+              "rows_per_second": 98839.40912565733,
+              "min_ms": 2.356,
+              "max_ms": 3.0541
+            },
+            {
+              "p50_ms": 2.467,
+              "p95_ms": 4.007099999999996,
+              "rows_per_second": 96364.78890841281,
+              "min_ms": 2.3875,
+              "max_ms": 4.6418
+            }
+          ]
+        },
+        "block_p95_ratios_K_over_H": [
+          1.144514744514744,
+          1.0121977184222637,
+          1.4000559030082793
+        ],
+        "aggregate_p95_ratio": 1.0856331709368756,
+        "aggregate_p50_ratio": 0.9924360046180184,
+        "paired_duration_ratio_quantiles": [
+          0.7551261323684143,
+          0.9910978074949464,
+          1.102965303732696,
+          1.2381264917152452,
+          1.8830067745730394
+        ]
+      }
+    },
+    "six_blocks_passed": 5,
+    "passed": false
+  },
+  "models": {
+    "H": {
+      "model_sha256": "1f86366caf7c43d6fc13eabd0a332d3b8624bdabd1a789d70bd2faf2c5de13bf",
+      "state_sha256": "4dfc0e88268ae09ba10d1a163ddd510c3f25af223f7c539e06d57956055b91f1",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "raw_fields": 42,
+      "encoded_dim": 189,
+      "preprocessing_sha256": "487918c52366e7b31598d87d0fd22fa976cda72e75d6fe329b823e600c71f81c",
+      "student_only": true,
+      "weights_changed_count": 6625,
+      "weights_total": 6625,
+      "delta_from_anchor_l2": 0.9851940798012838,
+      "relative_delta_l2": 0.054549607619471766,
+      "delta_from_anchor_max_abs": 0.04460683558136225,
+      "training_seconds": 7.72806379996473,
+      "cuda_peak_allocated_bytes": 70386688,
+      "cuda_peak_reserved_bytes": 90177536,
+      "history": {
+        "steps": 40,
+        "first_preupdate_objective": 0.1251524258202574,
+        "last_preupdate_objective": 0.1235049212748954,
+        "objective_relative_reduction": 0.013163984114284195,
+        "first_preupdate_hard_bce": 0.1251524258202574,
+        "last_preupdate_hard_bce": 0.1235049212748954,
+        "first_preupdate_teacher_kl": 0.0,
+        "last_preupdate_teacher_kl": 0.0,
+        "first_preupdate_normalized_hard_plus_kl": 0.1251524258202574,
+        "last_preupdate_normalized_hard_plus_kl": 0.1235049212748954,
+        "teacher_entropy_constant_min": 0.0,
+        "teacher_entropy_constant_max": 0.0,
+        "max_loss_identity_error": 0.0,
+        "preclip_grad_norm_first": 0.10094502568244934,
+        "preclip_grad_norm_last": 0.009774438105523586,
+        "preclip_grad_norm_min": 0.004725751932710409,
+        "preclip_grad_norm_max": 0.11440104991197586,
+        "clip_trigger_count": 0,
+        "objective_increase_steps": 7,
+        "hard_bce_increase_steps": 7,
+        "teacher_kl_increase_steps": 0,
+        "objective_min": 0.1235049212748954,
+        "objective_min_step": 40
+      }
+    },
+    "K": {
+      "model_sha256": "1c5738d9e3e40951921dd87fd573ffd7cc5096f83941b2b06c25aefb18b7f03e",
+      "state_sha256": "51e45fe74a0b1a9f585930009cf624783f3fa02449b97ad7a5b7ebeff82e6bf8",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "raw_fields": 42,
+      "encoded_dim": 189,
+      "preprocessing_sha256": "487918c52366e7b31598d87d0fd22fa976cda72e75d6fe329b823e600c71f81c",
+      "student_only": true,
+      "weights_changed_count": 6625,
+      "weights_total": 6625,
+      "delta_from_anchor_l2": 2.168592194181666,
+      "relative_delta_l2": 0.12007365422163295,
+      "delta_from_anchor_max_abs": 0.04449117789044976,
+      "training_seconds": 2.5422250000410713,
+      "cuda_peak_allocated_bytes": 70435840,
+      "cuda_peak_reserved_bytes": 90177536,
+      "history": {
+        "steps": 40,
+        "first_preupdate_objective": 0.12617521675506488,
+        "last_preupdate_objective": 0.1245351282113769,
+        "objective_relative_reduction": 0.012998499910420368,
+        "first_preupdate_hard_bce": 0.1251524258202574,
+        "last_preupdate_hard_bce": 0.12353956468639117,
+        "first_preupdate_teacher_kl": 0.04026304337725953,
+        "last_preupdate_teacher_kl": 0.03853219680083232,
+        "first_preupdate_normalized_hard_plus_kl": 0.10556256833341172,
+        "last_preupdate_normalized_hard_plus_kl": 0.10392247978972374,
+        "teacher_entropy_constant_min": 0.0206126484216529,
+        "teacher_entropy_constant_max": 0.0206126484216529,
+        "max_loss_identity_error": 2.8102520310824275e-16,
+        "preclip_grad_norm_first": 0.10043961554765701,
+        "preclip_grad_norm_last": 0.009644100442528725,
+        "preclip_grad_norm_min": 0.005223327782005072,
+        "preclip_grad_norm_max": 0.11295369267463684,
+        "clip_trigger_count": 0,
+        "objective_increase_steps": 7,
+        "hard_bce_increase_steps": 7,
+        "teacher_kl_increase_steps": 7,
+        "objective_min": 0.1245351282113769,
+        "objective_min_step": 40
+      }
+    },
+    "S": {
+      "model_sha256": "20e724f9343e9468d329b771e1f207e287adb73f37eedd803608349ce83b0183",
+      "state_sha256": "d5b78b136ef3323e9c0a621aa399038f6692e35846c0823f6ef226b4a7226b88",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "raw_fields": 42,
+      "encoded_dim": 189,
+      "preprocessing_sha256": "487918c52366e7b31598d87d0fd22fa976cda72e75d6fe329b823e600c71f81c",
+      "student_only": true,
+      "weights_changed_count": 6625,
+      "weights_total": 6625,
+      "delta_from_anchor_l2": 2.0859019504389735,
+      "relative_delta_l2": 0.11549514482678133,
+      "delta_from_anchor_max_abs": 0.04565376043319702,
+      "training_seconds": 2.5699584999820217,
+      "cuda_peak_allocated_bytes": 70435840,
+      "cuda_peak_reserved_bytes": 90177536,
+      "history": {
+        "steps": 40,
+        "first_preupdate_objective": 0.1874181585651769,
+        "last_preupdate_objective": 0.16371030549103677,
+        "objective_relative_reduction": 0.12649709748319532,
+        "first_preupdate_hard_bce": 0.1251524258202574,
+        "last_preupdate_hard_bce": 0.12848638286436356,
+        "first_preupdate_teacher_kl": 0.3056491245544118,
+        "last_preupdate_teacher_kl": 0.1918019044194508,
+        "first_preupdate_normalized_hard_plus_kl": 0.1668055101435238,
+        "last_preupdate_normalized_hard_plus_kl": 0.14309765706938368,
+        "teacher_entropy_constant_min": 0.020612648421652904,
+        "teacher_entropy_constant_max": 0.020612648421652904,
+        "max_loss_identity_error": 2.636779683484747e-16,
+        "preclip_grad_norm_first": 0.1253834068775177,
+        "preclip_grad_norm_last": 0.020510176196694374,
+        "preclip_grad_norm_min": 0.020510176196694374,
+        "preclip_grad_norm_max": 0.1253834068775177,
+        "clip_trigger_count": 0,
+        "objective_increase_steps": 0,
+        "hard_bce_increase_steps": 31,
+        "teacher_kl_increase_steps": 0,
+        "objective_min": 0.16371030549103677,
+        "objective_min_step": 40
+      }
+    },
+    "M": {
+      "model_sha256": "bdb32ff3e178be959e2f15fd0b94eb90e85825621f3df092cfc99f5b5b0f83ef",
+      "state_sha256": "8289dc3d5923f615365ff0efbebb93414af9f92cd96d3cdca095c595f0a82680",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "raw_fields": 42,
+      "encoded_dim": 189,
+      "preprocessing_sha256": "487918c52366e7b31598d87d0fd22fa976cda72e75d6fe329b823e600c71f81c",
+      "student_only": true,
+      "weights_changed_count": 6625,
+      "weights_total": 6625,
+      "delta_from_anchor_l2": 2.4844136386315454,
+      "relative_delta_l2": 0.13756049892133987,
+      "delta_from_anchor_max_abs": 0.045266177505254745,
+      "training_seconds": 2.5658215999719687,
+      "cuda_peak_allocated_bytes": 70435840,
+      "cuda_peak_reserved_bytes": 90177536,
+      "history": {
+        "steps": 40,
+        "first_preupdate_objective": 0.2186816863925267,
+        "last_preupdate_objective": 0.180160378519135,
+        "objective_relative_reduction": 0.17615241819677196,
+        "first_preupdate_hard_bce": 0.1251524258202574,
+        "last_preupdate_hard_bce": 0.12950664978186835,
+        "first_preupdate_teacher_kl": 0.3534311903875708,
+        "last_preupdate_teacher_kl": 0.1719914430641718,
+        "first_preupdate_normalized_hard_plus_kl": 0.17783214072040662,
+        "last_preupdate_normalized_hard_plus_kl": 0.1393108328470153,
+        "teacher_entropy_constant_min": 0.04084954567211932,
+        "teacher_entropy_constant_max": 0.04084954567211932,
+        "max_loss_identity_error": 7.494005416219807e-16,
+        "preclip_grad_norm_first": 0.1338598132133484,
+        "preclip_grad_norm_last": 0.0324837788939476,
+        "preclip_grad_norm_min": 0.031597740948200226,
+        "preclip_grad_norm_max": 0.14971476793289185,
+        "clip_trigger_count": 0,
+        "objective_increase_steps": 0,
+        "hard_bce_increase_steps": 23,
+        "teacher_kl_increase_steps": 0,
+        "objective_min": 0.180160378519135,
+        "objective_min_step": 40
+      }
+    }
+  },
+  "model_parameter_differences": {
+    "H-K": {
+      "l2": 2.8136294427899804,
+      "max_abs": 0.07912716269493103,
+      "different_parameters": 5907
+    },
+    "H-S": {
+      "l2": 2.6974152011138153,
+      "max_abs": 0.08055618405342102,
+      "different_parameters": 5939
+    },
+    "H-M": {
+      "l2": 3.1524806258242863,
+      "max_abs": 0.0791756808757782,
+      "different_parameters": 5922
+    },
+    "K-S": {
+      "l2": 1.466448832823165,
+      "max_abs": 0.08253389596939087,
+      "different_parameters": 5939
+    },
+    "K-M": {
+      "l2": 1.3570490875400925,
+      "max_abs": 0.08198395371437073,
+      "different_parameters": 5922
+    },
+    "S-M": {
+      "l2": 1.3131151968073007,
+      "max_abs": 0.07852289080619812,
+      "different_parameters": 5941
+    }
+  },
+  "first_hard_loss_all_equal": true,
+  "K_H_package_ratio": 1.0,
+  "package_passed": true,
+  "training_seconds_total": 15.406068899959791,
+  "trajectory_note": "Each log records loss before its update: step1=theta0, step40=theta39, not final theta40 F loss.",
+  "warnings": [
+    "Fixed H,K,S,M order and optimizer/GPU initialization make elapsed training_seconds unsuitable as randomized speed comparison."
+  ]
+}

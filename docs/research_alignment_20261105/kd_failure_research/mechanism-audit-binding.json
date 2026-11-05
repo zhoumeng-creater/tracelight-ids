@@ -1,0 +1,276 @@
+{
+  "protocol_id": "unsw-kd-failure-diagnosis-20261105",
+  "status": "bound_design_not_implemented_not_executed",
+  "roots_local": {
+    "screen": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw",
+    "round10": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW四臂验收_20261105\\received\\unpacked\\unsw-kd-20261105T0533590495060000-8e7810f7\\experiment"
+  },
+  "files": [
+    {
+      "root_alias": "screen",
+      "path": "teachers/all-s17/model.joblib",
+      "bytes": 1509420,
+      "sha256": "fa4602158bc7c80ef0a0b777f1c05fc0f4edfca31bebd9b36600f24874e731fa"
+    },
+    {
+      "root_alias": "screen",
+      "path": "teachers/all-s17/run.json",
+      "bytes": 4578,
+      "sha256": "9d2e5d819b185c30e6ead0a769f435e0f1448f8cd721ced685fdb59101fc3d13"
+    },
+    {
+      "root_alias": "screen",
+      "path": "teachers/all-s17/training-scores.npz",
+      "bytes": 585095,
+      "sha256": "69630901408bf7262ddc0abb4001c890db71573b023cdd8e19d70d8ce6c53dde"
+    },
+    {
+      "root_alias": "screen",
+      "path": "warmups/all-small-s17/model.joblib",
+      "bytes": 34475,
+      "sha256": "2efda2fec3a0623cf34cb228c23f0d2398fd2763fc9677a2effc9613e81d17da"
+    },
+    {
+      "root_alias": "screen",
+      "path": "warmups/all-small-s17/run.json",
+      "bytes": 3969,
+      "sha256": "b3eea54ab4520390e73e4c5e537dd76e54c1a18b12bdd9a6468249d61768a8d7"
+    },
+    {
+      "root_alias": "screen",
+      "path": "native-trees/catboost-reference-s17/model.cbm",
+      "bytes": 306804,
+      "sha256": "0bde87f312112b455d063ec5f9e23385902994bb221f5db517e89a08b9ab3e16"
+    },
+    {
+      "root_alias": "screen",
+      "path": "native-trees/catboost-reference-s17/metadata.json",
+      "bytes": 5475,
+      "sha256": "6f01eb563f170384bea6974f0a75122cd28f379e4f53ef0206b05b374bcb52fc"
+    },
+    {
+      "root_alias": "screen",
+      "path": "native-trees/catboost-reference-s17/run.json",
+      "bytes": 7157,
+      "sha256": "05aaa7947c1a69d6bd5b76b50f5275114b673fa9ff5eee5b77645c7de92e021a"
+    },
+    {
+      "root_alias": "screen",
+      "path": "native-trees/catboost-reference-s17/training-scores.npz",
+      "bytes": 183669,
+      "sha256": "f1771770bca419438b636beca0734837d5059c28c5443c53c1099c87afbb2141"
+    },
+    {
+      "root_alias": "screen",
+      "path": "TRANSFER_SCREEN_COMPLETE.json",
+      "bytes": 14863,
+      "sha256": "5dd426a8e16d775794fcc362f2894e89e73f564dba093acb708b64cca02cd972"
+    },
+    {
+      "root_alias": "round10",
+      "path": "arms/H/model.joblib",
+      "bytes": 34549,
+      "sha256": "1f86366caf7c43d6fc13eabd0a332d3b8624bdabd1a789d70bd2faf2c5de13bf"
+    },
+    {
+      "root_alias": "round10",
+      "path": "arms/H/run.json",
+      "bytes": 5946,
+      "sha256": "8bb48fcc876d1a0addcd287933a59ca8ddccd156234e12538d6fc0e7e9833416"
+    },
+    {
+      "root_alias": "round10",
+      "path": "arms/H/scores.npz",
+      "bytes": 118274,
+      "sha256": "41b1fe7553f223091935efcd3055bb291c0b6eaf55f0ff3daddcf30eed949295"
+    },
+    {
+      "root_alias": "round10",
+      "path": "arms/K/model.joblib",
+      "bytes": 34549,
+      "sha256": "1c5738d9e3e40951921dd87fd573ffd7cc5096f83941b2b06c25aefb18b7f03e"
+    },
+    {
+      "root_alias": "round10",
+      "path": "arms/K/run.json",
+      "bytes": 5953,
+      "sha256": "6c252753cde8694ac914ead044ef3332de9e79d9df42d5448ae7a04b1da2df18"
+    },
+    {
+      "root_alias": "round10",
+      "path": "arms/K/scores.npz",
+      "bytes": 118275,
+      "sha256": "adf5b81256cfc8bca9b11da32e354d92f671ec73dd5e8bae1f34461bd5e342cc"
+    },
+    {
+      "root_alias": "round10",
+      "path": "targets.npz",
+      "bytes": 4373628,
+      "sha256": "3a966c623bbe17087efb53967ecfff02cce7eea216a6739a71ee583606c5e8bf"
+    },
+    {
+      "root_alias": "round10",
+      "path": "fit-identity.parquet",
+      "bytes": 4900374,
+      "sha256": "55d370fc74c449083ccac807aa7da32ca0521fbbf5063693a9f3e0897a1c92b6"
+    },
+    {
+      "root_alias": "round10",
+      "path": "reference-identity.parquet",
+      "bytes": 592511,
+      "sha256": "e2d42f8d004c6b6e9293d44f1d2e855a4b90317a00507b4e494d1f6083b01dee"
+    },
+    {
+      "root_alias": "round10",
+      "path": "constraint-identity.parquet",
+      "bytes": 1166133,
+      "sha256": "d7aebbd137986d44c1ef39f2177176ab76796604005b3804ce73a00ef402f93f"
+    },
+    {
+      "root_alias": "round10",
+      "path": "summary.json",
+      "bytes": 5843104,
+      "sha256": "9fde5fea111c45fb625bce3222b9e08ceaff8978c4d89823791ff7a72a18da78"
+    },
+    {
+      "root_alias": "round10",
+      "path": "preflight.json",
+      "bytes": 7300,
+      "sha256": "06120e751eb479e542111538909e95c275274650098cbece3ffa4ea2490bb1ec"
+    },
+    {
+      "root_alias": "round10",
+      "path": "protocol.json",
+      "bytes": 10152,
+      "sha256": "479f06c61991b1f554526e9454c50d5fe868c414a10a4d5e51fd2b78dba3c73f"
+    },
+    {
+      "root_alias": "round10",
+      "path": "UNSW_KD_COMPLETE.json",
+      "bytes": 13130,
+      "sha256": "4a666353701a245037cb2b87b1d42e0ac9de7b1f99282e5c374d415cc5d17994"
+    }
+  ],
+  "prepared_contract": {
+    "preflight_data_dir": "D:\\zhoumeng\\Graduate\\data\\prepared-v1",
+    "data_manifest": {
+      "schema_version": "unsw-nb15-split-v1",
+      "source_files": {
+        "train": {
+          "name": "UNSW_NB15_training-set.csv",
+          "sha256": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+          "n_rows": 175341,
+          "provenance": {
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/Nir-J/ML-Projects/44bbd02b9e70f74dd915218d5eb702f125341ffc/UNSW-Network_Packet_Classification/UNSW_NB15_training-set.csv",
+            "mirror_revision": "44bbd02b9e70f74dd915218d5eb702f125341ffc",
+            "official_hash_verified": false
+          }
+        },
+        "test": {
+          "name": "UNSW_NB15_testing-set.csv",
+          "sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+          "n_rows": 82332,
+          "provenance": {
+            "url": "https://ghfast.top/https://raw.githubusercontent.com/Nir-J/ML-Projects/44bbd02b9e70f74dd915218d5eb702f125341ffc/UNSW-Network_Packet_Classification/UNSW_NB15_testing-set.csv",
+            "mirror_revision": "44bbd02b9e70f74dd915218d5eb702f125341ffc",
+            "official_hash_verified": false
+          }
+        }
+      },
+      "split_seed": 20261027,
+      "data_kind": "mirror",
+      "features": [
+        "dur",
+        "proto",
+        "service",
+        "state",
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload",
+        "sloss",
+        "dloss",
+        "sinpkt",
+        "dinpkt",
+        "sjit",
+        "djit",
+        "swin",
+        "stcpb",
+        "dtcpb",
+        "dwin",
+        "tcprtt",
+        "synack",
+        "ackdat",
+        "smean",
+        "dmean",
+        "trans_depth",
+        "response_body_len",
+        "ct_srv_src",
+        "ct_state_ttl",
+        "ct_dst_ltm",
+        "ct_src_dport_ltm",
+        "ct_dst_sport_ltm",
+        "ct_dst_src_ltm",
+        "is_ftp_login",
+        "ct_ftp_cmd",
+        "ct_flw_http_mthd",
+        "ct_src_ltm",
+        "ct_srv_dst",
+        "is_sm_ips_ports"
+      ],
+      "dataset_id": "unsw-nb15-mirror-b621297f78341e08",
+      "categorical_features": [
+        "proto",
+        "service",
+        "state"
+      ],
+      "provenance_status": "mirror_not_verified_against_official_hash",
+      "split_method": "seeded_greedy_stratified_feature_groups",
+      "target_fractions": {
+        "train": 0.7,
+        "validation": 0.15,
+        "calibration": 0.15
+      },
+      "exact_proportions_guaranteed": false,
+      "partitions": {
+        "train": {
+          "file": "train.parquet",
+          "sha256": "0812b8867aac98ad143f8651cd96d6edddaa22c5e2f36cf6c6077a2b9083fd6a",
+          "n_rows": 122737
+        },
+        "validation": {
+          "file": "validation.parquet",
+          "sha256": "95e4004ce335cf847e596a1b367e619426d008ee6f81d5964cc050b1b835a2ca",
+          "n_rows": 26302
+        },
+        "calibration": {
+          "file": "calibration.parquet",
+          "sha256": "37fe2108d4ac6d3efb8fdfb5b8baf0aa7afa558bdf7da2544be0b9033d5ffd11",
+          "n_rows": 26302
+        },
+        "test": {
+          "file": "test.parquet",
+          "sha256": "04fb201b2ec5eacd100ce62db32ddb7baad49748a3136936972a3870148fefd3",
+          "n_rows": 82332
+        }
+      },
+      "audit": {
+        "file": "audit.json",
+        "sha256": "aecd6821788f0969bb1727ce80a8bf71abbe87d71cc443a279d1e9fc21bdcfea"
+      }
+    },
+    "same_original_file_binding_required": true
+  },
+  "data_roles": {
+    "F": 85916,
+    "R": 12274,
+    "C": 24547
+  },
+  "current_fit_budget": 0,
+  "source_round10_commit": "aa6221ad89dc81d5da3ad38a7587215b64bdbb2c"
+}

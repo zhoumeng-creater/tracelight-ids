@@ -1,0 +1,274 @@
+{
+  "outer_archive": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\TraceLight-ALL-2026-11-05b.zip",
+  "outer_bytes": 3070372462,
+  "outer_sha256": "91a85c124f43d8e1e297a08a5b94bcb6cddae15b61f05f52e1371f27a96c78df",
+  "outer_sidecar_match": true,
+  "relevant_outer_members": [
+    {
+      "name": "TraceLight-ALL-2026-11-05b/round10-unsw-kd/UNSW_KD_20261105T0534199139380000-7ce490fc.zip",
+      "bytes": 11795307
+    },
+    {
+      "name": "TraceLight-ALL-2026-11-05b/round10-unsw-kd/UNSW_KD_20261105T0534199139380000-7ce490fc.zip.sha256",
+      "bytes": 65
+    },
+    {
+      "name": "TraceLight-ALL-2026-11-05b/reports/UNSW-KD-SUMMARY-2026-11-05.md",
+      "bytes": 6672
+    }
+  ],
+  "inner_archive": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW四臂验收_20261105\\received\\UNSW_KD_20261105T0534199139380000-7ce490fc.zip",
+  "inner_sha256": "0c8c3e79d63aa76f7a06fa087fe1ba12f6802dc1982ba97106edc4a43f889c00",
+  "experiment": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW四臂验收_20261105\\received\\unpacked\\unsw-kd-20261105T0533590495060000-8e7810f7\\experiment",
+  "package_manifest_files": 127,
+  "package_manifest_exact": true,
+  "experiment_manifest_files": 123,
+  "experiment_manifest_exact": true,
+  "source": {
+    "commit": "aa6221ad89dc81d5da3ad38a7587215b64bdbb2c",
+    "dirty": false,
+    "snapshot_files": 83,
+    "all_exact_git_blob_bytes": true,
+    "source_sha256": "c3a8dc633eb929bb30d9120842d30387165e2d737f3e807f51459c9fc4328691"
+  },
+  "protocol": {
+    "semantic_match_frozen": true,
+    "source_sha256": "5e0adfa8e7ba1e5021173a5d6438a2e6723ad58fd1c7eaeeaab874efcefc398e",
+    "semantic_sha256": "f367887fc71610edd10281c4c4e8a48c86769374122804c9e8b1f8dc83253437",
+    "no_scientific_changes": true,
+    "runtime_copy_sha256": "479f06c61991b1f554526e9454c50d5fe868c414a10a4d5e51fd2b78dba3c73f",
+    "runtime_copy_byte_equal_source": false,
+    "runtime_copy_exact_python_serialization": true,
+    "serialization_differences_only": [
+      "312 CRLF vs LF line endings",
+      "eps 1e-8 vs 1e-08 text"
+    ]
+  },
+  "identities": {
+    "fit": {
+      "rows": 85916,
+      "normal": 27440,
+      "attack": 58476,
+      "patterns": 49507,
+      "ordered_identity_match": true,
+      "parquet_bytes_match": true
+    },
+    "reference": {
+      "rows": 12274,
+      "normal": 3920,
+      "attack": 8354,
+      "patterns": 7073,
+      "ordered_identity_match": true,
+      "parquet_bytes_match": true
+    },
+    "constraint": {
+      "rows": 24547,
+      "normal": 7840,
+      "attack": 16707,
+      "patterns": 14145,
+      "ordered_identity_match": true,
+      "parquet_bytes_match": true
+    }
+  },
+  "input_bindings": {
+    "source_screen": true,
+    "data_manifest_matches_original": true,
+    "original_teacher_model": true,
+    "original_teacher_scores": true,
+    "original_anchor": true,
+    "prepared_train_bytes_rechecked_locally": false,
+    "prepared_train_proof": "Bound preflight receipt and exact runner source; raw prepared train not returned"
+  },
+  "targets": {
+    "all_arrays_exact_reconstruction": true,
+    "all_source_sha_match": true,
+    "audit": {
+      "fit_rows": 85916,
+      "lambda_soft_to_hard": 0.3,
+      "temperature": 1,
+      "target_source": "scipy.special.expit",
+      "teacher_q_sha256": "0c77f17a17f743f55bdd307e1f73ac82d2dc74e14068caeafbb41f0c93a09228",
+      "q_perm_sha256": "d8e453b4baa77d8a01eef0c9b51b46bb88c336479356ea48aa17f2504ae1ede0",
+      "donor_i8_sha256": "55a0a11e05da3eeecd300f0ed38de76a15f52fdb77fa593c457621a00c6640c6",
+      "weights_sha256": "1f9f0a3cbf3fa75a79b7cd5b239d412a10d946117f46ed6363d9e2928b3afecb",
+      "labels_i8_sha256": "bab918014cfeac40eb4d9e7bdbd0bc2e20a9c6eaa6e8b2c2d8cece2493e85327",
+      "targets_sha256": {
+        "H": "df02ca7d319ea7c65313cb0f7bc1d2718c401ad1c730a2b6c8c465d4683f5040",
+        "K": "8f5aba1191d68530c691dc343656678ac200eee412870958ce3f9415fed78157",
+        "S": "4122d54479580960ccdaae143fa6a34483a4751d6f28c81920cd548a4435181f",
+        "M": "44f4f8cee787161151ffccb33691d3b9113bfd4f80800f2a81581ecf77792d79"
+      },
+      "class_mean_q": {
+        "0": 0.04288529271315426,
+        "1": 0.9571102499731591
+      },
+      "class_weight_sum": {
+        "0": 0.49999999999999983,
+        "1": 0.49999999999999994
+      },
+      "feature_patterns": 49507,
+      "n_strata": 132,
+      "eligible_patterns": 49461,
+      "nonexchangeable_patterns": 46,
+      "rows": 85916,
+      "eligible_rows": 82940,
+      "eligible_row_fraction": 0.9653615158992505,
+      "eligible_abs_q_minus_y_mass_fraction": 0.9831629394556715,
+      "actually_changed_rows": 82045,
+      "actually_changed_row_fraction": 0.9549443642627683,
+      "by_class": {
+        "0": {
+          "rows": 27440,
+          "eligible_rows": 27112,
+          "eligible_row_fraction": 0.9880466472303207,
+          "eligible_abs_q_minus_y_mass_fraction": 0.9795326201626345,
+          "actually_changed_rows": 26456,
+          "actually_changed_row_fraction": 0.9641399416909621
+        },
+        "1": {
+          "rows": 58476,
+          "eligible_rows": 55828,
+          "eligible_row_fraction": 0.9547164648744784,
+          "eligible_abs_q_minus_y_mass_fraction": 0.9848662982493728,
+          "actually_changed_rows": 55589,
+          "actually_changed_row_fraction": 0.9506293180108079
+        }
+      },
+      "class_balanced_mean_abs_q_minus_qperm": 0.06553309312224101,
+      "class_balanced_mean_abs_target_K_minus_S": 0.015123021489747925,
+      "class_conditional_q_multisets_exactly_preserved": true,
+      "full_feature_pattern_consistency_preserved": true,
+      "permutation_seed_sequence": [
+        17,
+        353
+      ],
+      "mapping_count": 1
+    }
+  },
+  "anchor_saved_score_comparison": {
+    "reference": {
+      "exact_array_match": true,
+      "max_abs_score_difference": 0.0
+    },
+    "constraint": {
+      "exact_array_match": true,
+      "max_abs_score_difference": 0.0
+    }
+  },
+  "runs": {
+    "H": {
+      "updates": 40,
+      "history_rows": 40,
+      "gradient_forward_rows": 3436640,
+      "backward_calls": 1680,
+      "state_sha256": "4dfc0e88268ae09ba10d1a163ddd510c3f25af223f7c539e06d57956055b91f1",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "preprocessing_unchanged": true,
+      "teacher_free_bundle": true,
+      "loss_decomposition_passed": true,
+      "clipped_steps": 0,
+      "training_seconds": 7.72806379996473,
+      "cuda_peak_allocated_bytes": 70386688
+    },
+    "K": {
+      "updates": 40,
+      "history_rows": 40,
+      "gradient_forward_rows": 3436640,
+      "backward_calls": 1680,
+      "state_sha256": "51e45fe74a0b1a9f585930009cf624783f3fa02449b97ad7a5b7ebeff82e6bf8",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "preprocessing_unchanged": true,
+      "teacher_free_bundle": true,
+      "loss_decomposition_passed": true,
+      "clipped_steps": 0,
+      "training_seconds": 2.5422250000410713,
+      "cuda_peak_allocated_bytes": 70435840
+    },
+    "S": {
+      "updates": 40,
+      "history_rows": 40,
+      "gradient_forward_rows": 3436640,
+      "backward_calls": 1680,
+      "state_sha256": "d5b78b136ef3323e9c0a621aa399038f6692e35846c0823f6ef226b4a7226b88",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "preprocessing_unchanged": true,
+      "teacher_free_bundle": true,
+      "loss_decomposition_passed": true,
+      "clipped_steps": 0,
+      "training_seconds": 2.5699584999820217,
+      "cuda_peak_allocated_bytes": 70435840
+    },
+    "M": {
+      "updates": 40,
+      "history_rows": 40,
+      "gradient_forward_rows": 3436640,
+      "backward_calls": 1680,
+      "state_sha256": "8289dc3d5923f615365ff0efbebb93414af9f92cd96d3cdca095c595f0a82680",
+      "package_bytes": 34549,
+      "parameters": 6625,
+      "preprocessing_unchanged": true,
+      "teacher_free_bundle": true,
+      "loss_decomposition_passed": true,
+      "clipped_steps": 0,
+      "training_seconds": 2.5658215999719687,
+      "cuda_peak_allocated_bytes": 70435840
+    }
+  },
+  "budget": {
+    "student_fits": 4,
+    "teacher_fits": 0,
+    "warmup_fits": 0,
+    "optimizer_updates": 160,
+    "gradient_forward_rows": 13746560,
+    "backward_calls": 6720,
+    "R_C_scoring_rows": 184105
+  },
+  "environment": {
+    "python": "3.12.3",
+    "os": "Windows",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scipy": "1.14.0",
+      "scikit-learn": "1.5.1",
+      "pyarrow": "21.0.0",
+      "PyYAML": "6.0.2",
+      "joblib": "1.4.2",
+      "threadpoolctl": "3.5.0",
+      "psutil": "6.0.0",
+      "torch": "2.6.0+cu126"
+    },
+    "torch": {
+      "cuda_runtime": "12.6",
+      "cuda_available": true,
+      "cudnn": 90501,
+      "gpus": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "total_memory_bytes": 25756696576
+        }
+      ]
+    },
+    "selected_gpu": {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "total_memory_bytes": 25756696576
+    },
+    "nvidia_smi": [
+      "NVIDIA GeForce RTX 4090 D, 24564 MiB, 560.94"
+    ]
+  },
+  "scope": {
+    "real_training_performed_by_this_audit": false,
+    "new_model_inference_rows": 0,
+    "reserved_partitions_read": [],
+    "model_access": "Trusted deserialization of saved weights/metadata only",
+    "separate_preflight_package_present": false,
+    "in_run_preflight_receipt_present": true
+  },
+  "all_integrity_checks_passed": true
+}

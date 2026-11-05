@@ -50,6 +50,10 @@
 
 ## 5. 当前索引
 
+- 2026-11-06：[零拟合实验室入口](UNSW_DIAGNOSTIC_LAB.md)已实现，按冻结预算补F诊断与现成模型成本；没有实现或启动条件训练分支。
+
+- 四臂后以[2026-11-05失效机制研究](UNSW_KD_FAILURE_RESEARCH_20261105.md)和[最小机制验证规格](research_alignment_20261105/kd_failure_research/最小机制验证规格_20261105.md)为最新研究决定；旧四臂已失败，不将下方历史方案继续当作待运行任务。用户没有硬性极小部署预算，先比较现成强基线的效果与实际成本。
+
 - [全景成果审查](landscape_20261103/README.md)：跨 IDS、表格模型、开源工程和商业产品。
 - [v3 设计](ALGORITHM_V3_DESIGN_20261103.md)及[验收](ALGORITHM_V3_VALIDATION_20261103.md)：原型范围。
 - [v3 逐项原文／代码对照与要求审计](research_alignment_20261103/README.md)：当前主张以此后续审查为准。

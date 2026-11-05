@@ -1,0 +1,338 @@
+{
+  "scope": "post-hoc F/R/C explanation; no new inference; fixed step40 remains sole endpoint",
+  "source_teacher_cache_sha256": "69630901408bf7262ddc0abb4001c890db71573b023cdd8e19d70d8ce6c53dde",
+  "thresholds": {
+    "A": 1.4305143356323244,
+    "H": 1.5424227714538576,
+    "K": 1.5302335023880007,
+    "S": 1.363948464393616,
+    "M": 1.3635542392730715,
+    "T": 2.307777003139602
+  },
+  "absolute": {
+    "reference": {
+      "A": {
+        "TP": 7026,
+        "FP": 39,
+        "TPR": 0.8410342350969595,
+        "stdpAUC": 0.8878241912881406
+      },
+      "H": {
+        "TP": 7032,
+        "FP": 39,
+        "TPR": 0.8417524539142925,
+        "stdpAUC": 0.8877776959924333
+      },
+      "K": {
+        "TP": 7031,
+        "FP": 39,
+        "TPR": 0.8416327507780704,
+        "stdpAUC": 0.8877740131967338
+      },
+      "S": {
+        "TP": 7005,
+        "FP": 38,
+        "TPR": 0.838520469236294,
+        "stdpAUC": 0.8854576881515157
+      },
+      "M": {
+        "TP": 7021,
+        "FP": 37,
+        "TPR": 0.8404357194158487,
+        "stdpAUC": 0.8768976433471143
+      },
+      "T": {
+        "TP": 7245,
+        "FP": 28,
+        "TPR": 0.8672492219296145,
+        "stdpAUC": 0.9145215445635343
+      }
+    },
+    "constraint": {
+      "A": {
+        "TP": 13952,
+        "FP": 78,
+        "TPR": 0.8350990602741366,
+        "stdpAUC": 0.888205498083828
+      },
+      "H": {
+        "TP": 13960,
+        "FP": 78,
+        "TPR": 0.8355779014784223,
+        "stdpAUC": 0.88953982413733
+      },
+      "K": {
+        "TP": 13965,
+        "FP": 78,
+        "TPR": 0.8358771772311008,
+        "stdpAUC": 0.8896319762701796
+      },
+      "S": {
+        "TP": 13902,
+        "FP": 78,
+        "TPR": 0.8321063027473514,
+        "stdpAUC": 0.8859765060278053
+      },
+      "M": {
+        "TP": 13903,
+        "FP": 77,
+        "TPR": 0.8321661578978871,
+        "stdpAUC": 0.8805236855473482
+      },
+      "T": {
+        "TP": 14448,
+        "FP": 76,
+        "TPR": 0.8647872149398456,
+        "stdpAUC": 0.9118371874593276
+      }
+    }
+  },
+  "vs_anchor": {
+    "reference": {
+      "H": {
+        "rescued_FN": 43,
+        "new_FN": 37,
+        "repaired_FP": 6,
+        "new_FP": 6,
+        "delta_TP": 6
+      },
+      "K": {
+        "rescued_FN": 43,
+        "new_FN": 38,
+        "repaired_FP": 6,
+        "new_FP": 6,
+        "delta_TP": 5
+      },
+      "S": {
+        "rescued_FN": 49,
+        "new_FN": 70,
+        "repaired_FP": 5,
+        "new_FP": 4,
+        "delta_TP": -21
+      },
+      "M": {
+        "rescued_FN": 50,
+        "new_FN": 55,
+        "repaired_FP": 5,
+        "new_FP": 3,
+        "delta_TP": -5
+      }
+    },
+    "constraint": {
+      "H": {
+        "rescued_FN": 82,
+        "new_FN": 74,
+        "repaired_FP": 9,
+        "new_FP": 9,
+        "delta_TP": 8
+      },
+      "K": {
+        "rescued_FN": 85,
+        "new_FN": 72,
+        "repaired_FP": 9,
+        "new_FP": 9,
+        "delta_TP": 13
+      },
+      "S": {
+        "rescued_FN": 101,
+        "new_FN": 151,
+        "repaired_FP": 12,
+        "new_FP": 12,
+        "delta_TP": -50
+      },
+      "M": {
+        "rescued_FN": 100,
+        "new_FN": 149,
+        "repaired_FP": 10,
+        "new_FP": 9,
+        "delta_TP": -49
+      }
+    }
+  },
+  "teacher_headroom": {
+    "reference": {
+      "teacher_rescues_H": 366,
+      "teacher_loses_H": 153,
+      "net": 213,
+      "K_recovers_teacher_rescuable": 2,
+      "K_new_FN_teacher_also_detects": 1,
+      "K_new_FN_teacher_misses": 2,
+      "K_rescues_H_teacher_misses": 0,
+      "families": {
+        "Analysis": {
+          "teacher_rescues_H": 0,
+          "teacher_loses_H": 4,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 1
+        },
+        "Backdoor": {
+          "teacher_rescues_H": 5,
+          "teacher_loses_H": 2,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "DoS": {
+          "teacher_rescues_H": 25,
+          "teacher_loses_H": 15,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 1
+        },
+        "Exploits": {
+          "teacher_rescues_H": 81,
+          "teacher_loses_H": 21,
+          "K_recovers_teacher_rescuable": 1,
+          "K_rescues_H": 1,
+          "K_loses_H": 1
+        },
+        "Fuzzers": {
+          "teacher_rescues_H": 124,
+          "teacher_loses_H": 97,
+          "K_recovers_teacher_rescuable": 1,
+          "K_rescues_H": 1,
+          "K_loses_H": 0
+        },
+        "Generic": {
+          "teacher_rescues_H": 8,
+          "teacher_loses_H": 1,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "Reconnaissance": {
+          "teacher_rescues_H": 110,
+          "teacher_loses_H": 8,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "Shellcode": {
+          "teacher_rescues_H": 12,
+          "teacher_loses_H": 5,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "Worms": {
+          "teacher_rescues_H": 1,
+          "teacher_loses_H": 0,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        }
+      }
+    },
+    "constraint": {
+      "teacher_rescues_H": 733,
+      "teacher_loses_H": 245,
+      "net": 488,
+      "K_recovers_teacher_rescuable": 3,
+      "K_new_FN_teacher_also_detects": 2,
+      "K_new_FN_teacher_misses": 0,
+      "K_rescues_H_teacher_misses": 4,
+      "families": {
+        "Analysis": {
+          "teacher_rescues_H": 7,
+          "teacher_loses_H": 6,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "Backdoor": {
+          "teacher_rescues_H": 12,
+          "teacher_loses_H": 0,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "DoS": {
+          "teacher_rescues_H": 54,
+          "teacher_loses_H": 11,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "Exploits": {
+          "teacher_rescues_H": 142,
+          "teacher_loses_H": 42,
+          "K_recovers_teacher_rescuable": 1,
+          "K_rescues_H": 1,
+          "K_loses_H": 0
+        },
+        "Fuzzers": {
+          "teacher_rescues_H": 277,
+          "teacher_loses_H": 168,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 4,
+          "K_loses_H": 2
+        },
+        "Generic": {
+          "teacher_rescues_H": 13,
+          "teacher_loses_H": 3,
+          "K_recovers_teacher_rescuable": 1,
+          "K_rescues_H": 1,
+          "K_loses_H": 0
+        },
+        "Reconnaissance": {
+          "teacher_rescues_H": 214,
+          "teacher_loses_H": 5,
+          "K_recovers_teacher_rescuable": 1,
+          "K_rescues_H": 1,
+          "K_loses_H": 0
+        },
+        "Shellcode": {
+          "teacher_rescues_H": 13,
+          "teacher_loses_H": 10,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        },
+        "Worms": {
+          "teacher_rescues_H": 1,
+          "teacher_loses_H": 0,
+          "K_recovers_teacher_rescuable": 0,
+          "K_rescues_H": 0,
+          "K_loses_H": 0
+        }
+      }
+    }
+  },
+  "K_H_score_geometry": {
+    "reference": {
+      "pearson": 0.9984797330691507,
+      "spearman": 0.9891011538806093,
+      "raw_score_delta_mean": -0.3257796880867255,
+      "raw_score_delta_quantiles_0_01_50_99_100": [
+        -13.93426513671875,
+        -2.3581418991088867,
+        -0.02953815460205078,
+        1.0429439544677734,
+        1.0443534851074219
+      ],
+      "same_decision_rows": 12269,
+      "rows": 12274,
+      "threshold_delta": -0.012189269065856934,
+      "changed_attack_rows": 5,
+      "changed_normal_rows": 0
+    },
+    "constraint": {
+      "pearson": 0.9986110832124345,
+      "spearman": 0.9936775764869871,
+      "raw_score_delta_mean": -0.28262997239138504,
+      "raw_score_delta_quantiles_0_01_50_99_100": [
+        -5.255733489990234,
+        -2.3547277450561523,
+        -0.025664806365966797,
+        1.0429439544677734,
+        2.466336250305176
+      ],
+      "same_decision_rows": 24538,
+      "rows": 24547,
+      "threshold_delta": -0.012189269065856934,
+      "changed_attack_rows": 9,
+      "changed_normal_rows": 0
+    }
+  }
+}
