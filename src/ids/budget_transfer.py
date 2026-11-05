@@ -269,6 +269,7 @@ def _backward(net, xs, y, teacher, config, method, seed, step):
         def cosine(a, b):
             return float(a.dot(b) / (a.norm() * b.norm())) if a.norm() and b.norm() else None
         totals["gradients"] = {"hard_norm": float(h.norm()), "pauc_norm": float(direct.norm()), "kd_norm": float(kd.norm()),
+            "hard_pauc_cosine": cosine(h, direct),
             "hard_kd_cosine": cosine(h, kd), "pauc_kd_cosine": cosine(direct, kd),
             "scope": "global objectives before gradient clipping and AdamW, not scalar-loss ratios"}
     return totals

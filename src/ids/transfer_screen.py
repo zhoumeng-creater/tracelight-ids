@@ -281,6 +281,7 @@ def run_transfer_screen(v3_dir, data_dir, config, output, *, device="cuda", resu
                     record = {"working_point": wp,
                         "C": _fixed_metrics(frames["constraint"], values["constraint"], wp["threshold"]),
                         "C_rank": binary_rank_metrics(frames["constraint"].label.to_numpy(), values["constraint"], config["max_fpr"])}
+                    record["C"]["decision_rule"] = "float64(raw_score)>=frozen_training_R+C_threshold"
                     row = {"kind": "native_tree", "budget": "all", "capacity": capacity, "seed": seed,
                         "relative_dir": relative, "selection": record, "training_statistics": tree.training_statistics,
                         "fit_and_query_seconds": time.perf_counter() - started,

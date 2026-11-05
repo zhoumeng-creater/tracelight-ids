@@ -88,6 +88,48 @@ def test_official_per_head_loss_and_probability_aggregation(tabm_dependencies):
     assert not torch.allclose(actual, logits.mean(dim=1).sigmoid().squeeze(1))
 
 
+def test_piecewise_residual_receives_gradient_from_zero_initialization(tabm_dependencies):
+    import torch
+
+    torch.manual_seed(17)
+    network = recent.make_tabm_network(2, [], recent._parameters(settings()),
+        numeric_bins=[[-1., 0., 1.], [-1., 0., 1.]])
+    embedding = network.num_module
+    assert torch.count_nonzero(embedding.linear.weight) == 0
+    numeric = torch.tensor([[-.7, .3], [.2, -.5], [.8, .9]])
+    output = embedding(numeric)
+    target = torch.randn_like(output)
+    torch.nn.functional.mse_loss(output, target).backward()
+    gradient = embedding.linear.weight.grad
+    assert gradient is not None and torch.isfinite(gradient).all()
+    assert gradient.abs().max() > 0  # ReLU after the zero projection fails here.
+
+
+def test_legacy_zero_residual_bundle_keeps_predictions(
+        tabm_dependencies, schema_frames, monkeypatch, tmp_path):
+    import torch
+
+    schema, train, val = schema_frames
+    corrected_factory = recent.make_tabm_network
+
+    def legacy_factory(*args, **kwargs):
+        network = corrected_factory(*args, **kwargs)
+        network.num_module.activation = torch.nn.ReLU()
+        return network
+
+    with monkeypatch.context() as patch:
+        patch.setattr(recent, "make_tabm_network", legacy_factory)
+        bundle = recent.train_tabm(train, val, settings(epochs=1), 17, feature_schema=schema)
+        scores = bundle.predict_scores(val)
+    bundle.training_statistics["training_protocol_version"] = 2
+    assert torch.count_nonzero(bundle.network_state["num_module.linear.weight"]) == 0
+    path = tmp_path / "legacy-tabm.joblib"
+    recent.save_tabm_bundle(bundle, path)
+    restored = recent.load_tabm_bundle(path)
+    assert restored.training_statistics["training_protocol_version"] == 2
+    np.testing.assert_array_equal(scores, restored.predict_scores(val))
+
+
 @pytest.mark.parametrize("dtype_name", ["float32", "float64"])
 def test_ensemble_validation_loss_rewards_complementary_heads(dtype_name):
     torch = pytest.importorskip("torch")
@@ -128,7 +170,7 @@ def test_real_official_fit_cpu_roundtrip_and_contract(tabm_dependencies, schema_
     assert np.all((scores >= 0) & (scores <= 1))
     assert bundle.training_statistics["dependencies"]["tabm"] == "0.0.3"
     assert bundle.training_statistics["training_objective"] == "mean_independent_head_weighted_bce"
-    assert bundle.training_statistics["training_protocol_version"] == 2
+    assert bundle.training_statistics["training_protocol_version"] == 3
     assert bundle.training_statistics["early_stopping_metric"] == "val_ensemble_loss"
     assert bundle.training_statistics["validation_objective"] == "weighted_bce_of_mean_sigmoid_probability"
     assert bundle.training_statistics["validation_loss_clamp"] == {

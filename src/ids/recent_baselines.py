@@ -29,7 +29,7 @@ from .selection import normalize_feature_schema
 TABM_VERSION = "0.0.3"
 NUM_EMBEDDINGS_VERSION = "0.0.12"
 _ARTIFACT_VERSION = 1
-_TRAINING_PROTOCOL_VERSION = 2
+_TRAINING_PROTOCOL_VERSION = 3
 
 
 def recent_dependency_versions() -> dict[str, str]:
@@ -189,7 +189,9 @@ def make_tabm_network(n_num_features, cat_cardinalities, parameters, *, numeric_
             raise ValueError("Train-fitted numeric bins are required for all numeric fields")
         embeddings = PiecewiseLinearEmbeddings(
             [torch.tensor(x, dtype=torch.float32) for x in numeric_bins],
-            parameters["embedding_dim"], activation=True, version="B",
+            # Version B starts its residual projection at zero. ReLU would
+            # leave that whole branch with zero gradients; the authors use Q-L.
+            parameters["embedding_dim"], activation=False, version="B",
         )
     return TabM.make(
         n_num_features=n_num_features, cat_cardinalities=cat_cardinalities or None,

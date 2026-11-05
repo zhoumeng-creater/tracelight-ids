@@ -78,6 +78,7 @@ def test_screen_real_synthetic_models_have_twelve_fits_and_no_v_or_kd(completed)
     for row in summary["runs"] + summary["auxiliary"]:
         assert row["selection"]["C"]["fpr"] <= cfg["max_fpr"]
         c = row["selection"]["C"]
+        assert c["decision_rule"] == "float64(raw_score)>=frozen_training_R+C_threshold"
         assert set(row["cpu_pipeline"]["batches"]) == {"1", str(min(256, c["n_normal"] + c["n_attack"]))}
         assert row["cpu_pipeline"]["measurement_rows"].startswith("fixed first C")
         with np.load(output / row["relative_dir"] / "training-scores.npz") as scores:
@@ -137,6 +138,24 @@ def test_target_content_exposes_hard_label_redundancy():
     assert ambiguous["mean_absolute_soft_minus_hard"] == .5
 
 
+def test_zero_fit_input_audit_uses_sealed_screen_and_no_reserved_data(completed, tmp_path, monkeypatch):
+    import ids.input_extrapolation as extrapolation
+    output, data, _, _, _ = completed
+    target = tmp_path / "extrapolation"
+    # The fixture has physically removed prepared validation/calibration/test.
+    monkeypatch.setattr(transfer, "_warmup", lambda *a, **kw: pytest.fail("audit tried to train"))
+    monkeypatch.setattr(transfer, "_fit_method", lambda *a, **kw: pytest.fail("audit tried to continue training"))
+    done = extrapolation.run_input_extrapolation(output, data, target)
+    assert done["new_model_fits"] == 0 and done["n_models"] == 8
+    assert done["validation_loaded"] is False and done["reserved_partitions_read"] == []
+    assert done["automatic_expansion"] is False
+    summary = read_json(target / "summary.json")
+    assert all(r["fitting_encoding_unchanged"] for r in summary["models"])
+    assert all(not any(r["archived_decision_mismatches"].values()) for r in summary["models"])
+    with pytest.raises(FileExistsError):
+        extrapolation.run_input_extrapolation(output, data, target)
+
+
 def test_selected_complementarity_uses_registered_joint_thresholds_not_r_only():
     frame = pd.DataFrame({"label": [0, 0, 1, 1], "attack_cat": ["Normal", "Normal", "A", "A"]})
     def selection(t):
@@ -148,3 +167,21 @@ def test_selected_complementarity_uses_registered_joint_thresholds_not_r_only():
     assert joint["paired"]["teacher_adds_student_fp"] == 0
     assert r_only["paired"]["teacher_loses_student_tp"] == 0
     assert r_only["paired"]["teacher_adds_student_fp"] == 1
+
+
+def test_input_audit_rejects_different_data_and_changed_frozen_decisions(completed, tmp_path, monkeypatch):
+    import ids.input_extrapolation as extrapolation
+    output, data, _, _, _ = completed
+    with monkeypatch.context() as patcher:
+        patcher.setattr(extrapolation, "verify_development_inputs", lambda *a, **kw: {"different": True})
+        with pytest.raises(ValueError, match="manifest differs"):
+            extrapolation.run_input_extrapolation(output, data, tmp_path / "different-data")
+    assert not (tmp_path / "different-data").exists()
+    score = extrapolation._scores
+    monkeypatch.setattr(extrapolation, "_scores",
+                        lambda *a, **kw: {k: v + 1e6 for k, v in score(*a, **kw).items()})
+    target = tmp_path / "replay-mismatch"
+    with pytest.raises(ValueError, match="replay changed decisions"):
+        extrapolation.run_input_extrapolation(output, data, target)
+    assert (target / "REPLAY_MISMATCH.json").exists()
+    assert not (target / extrapolation.COMPLETE).exists()

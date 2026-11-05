@@ -2,13 +2,13 @@
 
 面向网络入侵检测的轻量化机器学习研究工程：在明确的正常流量误报预算下，比较检测效果、可用字段、模型包和CPU流程成本，并保存逐行可复核工件。
 
-**当前研究决定（2026-11-04）：** 按[项目重审与分阶段重构](docs/PROJECT_RECONSTRUCTION_20261104.md)，先审计实际分折教师，再比较预算内学生函数类，最后检验普通KD增量。新增官方CatBoost硬/软标签接口，默认入口改为只使用F/R/C的基础筛查；原同类排序候选保留作对照。
+**当前研究决定（2026-11-05）：** 24次基础screen及教师审计已回传。[机制重设计报告](docs/PROJECT_MECHANISM_REDESIGN_20261105.md)定位CIC24的主导漏报与训练范围外推有关；冻结裁剪能修复2,272行，也会产生模型相关的新误报。CIC full-F软目标接近hard，UNSW的普通KD仅保留为受控候选。最新[20项成果审查](docs/research_alignment_20261105/README.md)记录原文、作者代码、实际取舍和缺口。
 
-**现在的实验室优先项：** 使用[新运行指南](docs/RESEARCH_SCREEN_LAB.md)查询封存模型，新增实际OOF教师native诊断，拟合数为0。审计支持继续时才执行两环境共24次基础screen，不自动运行KD或读取V。旧46次矩阵及固定标签保留；本轮新功能须用当前checkout，旧标签不含这些修改。真实训练与CPU测量仍在实验室RTX4090D。
+**现在的实验室优先项：** 按[最小验证协议](docs/MINIMAL_VALIDATION_20261105.md)，在两环境全部16个封存MLP上做零拟合输入审计和配对CPU测量；新增拟合固定为0，不自动启动KD、PLE或读取V/calibration/test。保留旧阈值及双方R+C重登记、每类新增／修复错误和具体误报组。旧24次screen不重跑，旧46次矩阵不默认执行。
 
-本轮工程验证见[重构验证记录](docs/PROJECT_RECONSTRUCTION_VERIFICATION_20261104.md)，新增实证判断见[原工件独立复核](docs/PROJECT_EVIDENCE_REVIEW_20261104.md)。本轮代码尚无实验室效果结论。
+本轮已修复PLE零残差分支无梯度的配置错误；它不解释未使用TabM的round8结果。工程检查见[本轮验证记录](docs/MECHANISM_REDESIGN_VERIFICATION_20261105.md)。完整两环境输入审计和正式成本测量尚未回传。
 
-**已有证据与保留结果：** [v3复核](docs/RISK_V3_RESULTS_20261104.md)未支持候选胜出；[v4复核](docs/UPGRADE_V4_RESULTS_20261104.md)覆盖16个学生、32个未启动条件，不能给CIC新KD效果结论。[根本设计复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)说明重构原因；旧源码、配置、失败和[零拟合审计](docs/THRESHOLD_AUDIT_LAB.md)均保留。新实验尚未在实验室运行，历史V已被开发使用，不能作为新的独立确认。
+**已有证据与保留结果：** [v3复核](docs/RISK_V3_RESULTS_20261104.md)未支持候选胜出；[v4复核](docs/UPGRADE_V4_RESULTS_20261104.md)覆盖16个学生、32个未启动条件，不能给CIC新KD效果结论。[根本设计复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)说明重构原因；旧源码、配置、失败和[零拟合审计](docs/THRESHOLD_AUDIT_LAB.md)均保留。历史V已被开发使用，不能作为新的独立确认。
 
 **历史基线：** 前五轮及正式题目保留。第四轮CIC普通MI24小MLP曾相对全字段同款模型减少43.73%部署包、CPU单条p95约7.01→2.28ms；这些是旧验证协议结果，不能当成本轮KD效果。[第五轮协议](docs/STAGE5_PROTOCOL.md)的最终test已经打开，不再用于新模型选择。近期原文和固定作者源码分别见[关系KD审查](docs/research_alignment_20261104/new_design_review.md)、[pAUC审查](docs/research_alignment_20261104/direct_pauc_source.md)及[成果全景](docs/landscape_20261103/README.md)。
 
