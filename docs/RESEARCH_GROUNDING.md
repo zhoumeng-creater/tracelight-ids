@@ -54,3 +54,4 @@
 - [v3 设计](ALGORITHM_V3_DESIGN_20261103.md)及[验收](ALGORITHM_V3_VALIDATION_20261103.md)：原型范围。
 - [v3 逐项原文／代码对照与要求审计](research_alignment_20261103/README.md)：当前主张以此后续审查为准。
 - [2026-11-05机制与成果审查](research_alignment_20261105/README.md)：本轮20项初筛、直接近邻核查和实际设计改变；下一轮执行[最小验证](MINIMAL_VALIDATION_20261105.md)。
+- 第九轮最小验证已[完成验收](INPUT_EXTRAPOLATION_RESULTS_20261105.md)；后续仅冻结[UNSW普通KD四臂协议](UNSW_KD_MINIMAL_PROTOCOL_20261105.md)，依据为[11项补充核查](research_alignment_20261105/unsw_kd_sources.md)和全字段small工件，不自动扩矩阵。

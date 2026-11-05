@@ -4,9 +4,11 @@
 
 **当前研究决定（2026-11-05）：** 24次基础screen及教师审计已回传。[机制重设计报告](docs/PROJECT_MECHANISM_REDESIGN_20261105.md)定位CIC24的主导漏报与训练范围外推有关；冻结裁剪能修复2,272行，也会产生模型相关的新误报。CIC full-F软目标接近hard，UNSW的普通KD仅保留为受控候选。最新[20项成果审查](docs/research_alignment_20261105/README.md)记录原文、作者代码、实际取舍和缺口。
 
-**现在的实验室优先项：** 按[最小验证协议](docs/MINIMAL_VALIDATION_20261105.md)，在两环境全部16个封存MLP上做零拟合输入审计和配对CPU测量；新增拟合固定为0，不自动启动KD、PLE或读取V/calibration/test。保留旧阈值及双方R+C重登记、每类新增／修复错误和具体误报组。旧24次screen不重跑，旧46次矩阵不默认执行。
+**第九轮已完成验收：** 两环境16模型零拟合审计与正式成本已回传。[冻结标准验收结果](docs/INPUT_EXTRAPOLATION_RESULTS_20261105.md)：CIC指定模式机制复现，16/16成本通过，14/16无新FN；有C检出收益的候选均存在新增错误，不作默认部署替换。small24 warmup／direct因重登记新增1 FN停止候选。无需重跑本轮；下一步只保留UNSW原全字段small普通KD最小协议的研究依据，不自动启动训练矩阵、CIC KD／PLE或读取V/calibration/test。
 
-本轮已修复PLE零残差分支无梯度的配置错误；它不解释未使用TabM的round8结果。工程检查见[本轮验证记录](docs/MECHANISM_REDESIGN_VERIFICATION_20261105.md)。完整两环境输入审计和正式成本测量尚未回传。
+此前已修复PLE零残差分支无梯度的配置错误；它不解释未使用TabM的round8结果。工程检查见[验证记录](docs/MECHANISM_REDESIGN_VERIFICATION_20261105.md)，真实结果以[第九轮验收](docs/INPUT_EXTRAPOLATION_RESULTS_20261105.md)为准。
+
+**UNSW 普通 KD 最小方案已冻结：** [主协议](docs/UNSW_KD_MINIMAL_PROTOCOL_20261105.md)与[规格 JSON](configs/unsw-small-kd-minimal-20261105.json)仅保留一个 full-F HGB、原全字段 small warmup 和 H/K/S/M 四次续训，每臂40次全F更新，固定第40步。采用同尺度混合BCE、保持重复模式的固定置乱和类别均值软化对照；[11项近期成果审查](docs/research_alignment_20261105/unsw_kd_sources.md)及工件检查解释取舍。K须相对三个对照各净增至少34个C TP，并通过误报、逐族、集中度和成本条件。专用入口、合成端到端和打包流程已实现；实验室按[运行指南](docs/UNSW_KD_LAB.md)先预检，再执行四臂。旧预算迁移脚本不用于本轮。
 
 **已有证据与保留结果：** [v3复核](docs/RISK_V3_RESULTS_20261104.md)未支持候选胜出；[v4复核](docs/UPGRADE_V4_RESULTS_20261104.md)覆盖16个学生、32个未启动条件，不能给CIC新KD效果结论。[根本设计复盘](docs/RESEARCH_ROOT_CAUSE_REVIEW_20261104.md)说明重构原因；旧源码、配置、失败和[零拟合审计](docs/THRESHOLD_AUDIT_LAB.md)均保留。历史V已被开发使用，不能作为新的独立确认。
 

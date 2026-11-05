@@ -1,0 +1,622 @@
+{
+  "screen_root": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\实验结果分析_20261105\\received\\unpacked\\BUDGET_TRANSFER_UNSW\\budget-transfer-unsw",
+  "screen_complete_sha256": "5dd426a8e16d775794fcc362f2894e89e73f564dba093acb708b64cca02cd972",
+  "screen_binding_sha256": "99da57b53869a3cd49f781e622ea0042a1f253a36420ab10ef16d071b24adb3a",
+  "source_commit": "cabebf21cf7591fc14a3fb01c60fb94296fc8084",
+  "files_sha256": {
+    "plan.json": "57b50a5b5db615d4728fe175380248fbb3631a89d3230f1572a53256b1f7fffd",
+    "feature-selection.json": "95835b3c90ddf80c002d32cb6aa42f2c938a3ee9686f5359c0a2b930bb378afc",
+    "fit-identity.parquet": "55d370fc74c449083ccac807aa7da32ca0521fbbf5063693a9f3e0897a1c92b6",
+    "reference-identity.parquet": "e2d42f8d004c6b6e9293d44f1d2e855a4b90317a00507b4e494d1f6083b01dee",
+    "constraint-identity.parquet": "d7aebbd137986d44c1ef39f2177176ab76796604005b3804ce73a00ef402f93f",
+    "teachers/all-s17/model.joblib": "fa4602158bc7c80ef0a0b777f1c05fc0f4edfca31bebd9b36600f24874e731fa",
+    "teachers/all-s17/run.json": "9d2e5d819b185c30e6ead0a769f435e0f1448f8cd721ced685fdb59101fc3d13",
+    "teachers/all-s17/training-scores.npz": "69630901408bf7262ddc0abb4001c890db71573b023cdd8e19d70d8ce6c53dde",
+    "warmups/all-small-s17/model.joblib": "2efda2fec3a0623cf34cb228c23f0d2398fd2763fc9677a2effc9613e81d17da",
+    "warmups/all-small-s17/run.json": "b3eea54ab4520390e73e4c5e537dd76e54c1a18b12bdd9a6468249d61768a8d7",
+    "warmups/all-small-s17/training-scores.npz": "98027952fb7822e0a98402c3db9a8f9fa887656b88bcb68f354d1836a3dc99f1",
+    "students/all-hard-s17/model.joblib": "6a887ed0481d9c986888bf9c75b02af8f19910ac46b3bd78048dcae5491b2b3b",
+    "students/all-hard-s17/run.json": "f87d97a409168e28d7b35a040903510f3c40bcbd5a3b6da4604184c46b943906",
+    "students/all-hard-s17/training-scores.npz": "174f817917cfe2285ef75e65c5c863d0b1c308b467413e802974f3af4471c148",
+    "students/all-hard-s17/history.json": "9957e18fa8cbfd1a994fb32c68cbfb5cdc882e9eda9af992656dc8f24fc012a0"
+  },
+  "identities": {
+    "fit": {
+      "rows": 85916,
+      "normal": 27440,
+      "attack": 58476,
+      "feature_patterns": 49507,
+      "file_sha256": "55d370fc74c449083ccac807aa7da32ca0521fbbf5063693a9f3e0897a1c92b6",
+      "same_OOF_identity_sha256": "55d370fc74c449083ccac807aa7da32ca0521fbbf5063693a9f3e0897a1c92b6",
+      "ordered_frame_sha256": "4895eb65b4e3653d004ebc56fe39047a6e61b9d09b7a5e89132e983124f8f3ac",
+      "ordered_label_i8_sha256": "bab918014cfeac40eb4d9e7bdbd0bc2e20a9c6eaa6e8b2c2d8cece2493e85327",
+      "ordered_sample_ids_sha256": "d92322f6fa2830622d715807e3941da24534ae083678f2f570c0a42b67e12c0e",
+      "ordered_feature_hashes_sha256": "acfd89c535a964639ebe8884313124b049a25cb94a833ec034f1ed736ff4ca96"
+    },
+    "reference": {
+      "rows": 12274,
+      "normal": 3920,
+      "attack": 8354,
+      "feature_patterns": 7073,
+      "file_sha256": "e2d42f8d004c6b6e9293d44f1d2e855a4b90317a00507b4e494d1f6083b01dee",
+      "same_OOF_identity_sha256": "e2d42f8d004c6b6e9293d44f1d2e855a4b90317a00507b4e494d1f6083b01dee",
+      "ordered_frame_sha256": "4ed49e5f03a2245194da65e464b95f80018cc33331349791a751603578495e49",
+      "ordered_label_i8_sha256": "919f81c1211d9d84992c4b7de9383771217aafbeae73a38ee73da653f0600d6c",
+      "ordered_sample_ids_sha256": "f201ee6990b665b3ee0818f6cc07fc95040b98dbc914381b1ee95f41fc4b7392",
+      "ordered_feature_hashes_sha256": "03a01e35481206e8af96e2d5ca9bf81a0e8cad65cd636b0327780b49f5b305a5"
+    },
+    "constraint": {
+      "rows": 24547,
+      "normal": 7840,
+      "attack": 16707,
+      "feature_patterns": 14145,
+      "file_sha256": "d7aebbd137986d44c1ef39f2177176ab76796604005b3804ce73a00ef402f93f",
+      "same_OOF_identity_sha256": "d7aebbd137986d44c1ef39f2177176ab76796604005b3804ce73a00ef402f93f",
+      "ordered_frame_sha256": "1af2ed3f4da5478573afd5290d746cfdf121a0cb85bc46c0152b5c54aee8f453",
+      "ordered_label_i8_sha256": "76f4c32b961afc0214866be437a84109c1b719c48cf9390e6f9a401ad84da121",
+      "ordered_sample_ids_sha256": "eb05e60fb2bf6bc0b44368731661d91481b71f3b2749ef03e6bdb8c44543778b",
+      "ordered_feature_hashes_sha256": "4ded6ae7b3dd57e9b2653409ca3f696e70285abfd1ea65b3908f81b91da8ef1b"
+    }
+  },
+  "F_R_C_sample_and_feature_groups_disjoint": true,
+  "score_sha256_little_endian_f8": {
+    "fit": "02123566eca5ad45b7d3bf2743c36eab8c43063cf2b60618f13b978130e5e423",
+    "reference": "6bd8d0a88b8f086e2e92e88b3d5523a68a91f76de1fd4d0ffd1f11d1c0248753",
+    "constraint": "596061f51f8df32aa4cca47f291875b94570bbf548f3c648c209bcbd6c5ed5c5"
+  },
+  "score_order_contract": "archive training-scores uses saved identity order; source _scores preserves input order",
+  "saved_preprocessing_semantic_sha256": "487918c52366e7b31598d87d0fd22fa976cda72e75d6fe329b823e600c71f81c",
+  "preprocessing_state_file": "preprocessing_state.json",
+  "preprocessing_semantic_hash_rule": "SHA256(json.dumps(state,sort_keys=True,ensure_ascii=True,allow_nan=False).encode())",
+  "teacher_warmup_hard_preprocessing_identical": true,
+  "teacher": {
+    "relative_dir": "teachers/all-s17",
+    "algorithm": "HistGradientBoostingClassifier",
+    "hyperparameters": {
+      "categorical_features": "warn",
+      "class_weight": null,
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 0.0,
+      "learning_rate": 0.1,
+      "loss": "log_loss",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 200,
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "random_state": 17,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "target_source": "in_sample_F_native_margin_not_OOF",
+    "class_balanced_sample_weights": true,
+    "seed": 17,
+    "target_T": 1,
+    "no_teacher_logit_shift": true,
+    "deployment": {
+      "raw_fields": 42,
+      "encoded_dim": 189,
+      "model_package_bytes": 1509420
+    },
+    "C_selection": {
+      "working_point": {
+        "threshold": 2.307777003139602,
+        "reference_only": {
+          "threshold": 1.9709715674390604,
+          "n_normal": 3920,
+          "allowed_false_positives": 39,
+          "false_positives": 39,
+          "achieved_fpr": 0.009948979591836734,
+          "max_fpr": 0.01,
+          "decision_rule": "float64(score)>=float64(threshold)",
+          "scope": "empirical_training_calibration_only"
+        },
+        "constraint_normal": {
+          "threshold": 2.307777003139602,
+          "n_normal": 7840,
+          "allowed_false_positives": 78,
+          "false_positives": 76,
+          "achieved_fpr": 0.009693877551020408,
+          "max_fpr": 0.01,
+          "decision_rule": "float64(score)>=float64(threshold)",
+          "scope": "empirical_training_calibration_only"
+        },
+        "source": "maximum of conservative training R-normal and C-normal thresholds; C is used for training selection",
+        "population_guarantee": false
+      },
+      "C": {
+        "false_positives": 76,
+        "n_normal": 7840,
+        "true_positives": 14448,
+        "n_attack": 16707,
+        "fpr": 0.009693877551020408,
+        "tpr": 0.8647872149398456,
+        "threshold": 2.307777003139602,
+        "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+        "families": {
+          "Analysis": {
+            "support": 288,
+            "tpr": 0.7986111111111112
+          },
+          "Backdoor": {
+            "support": 241,
+            "tpr": 0.983402489626556
+          },
+          "DoS": {
+            "support": 1706,
+            "tpr": 0.9759671746776084
+          },
+          "Exploits": {
+            "support": 4597,
+            "tpr": 0.9506199695453557
+          },
+          "Fuzzers": {
+            "support": 2579,
+            "tpr": 0.2795657231485072
+          },
+          "Generic": {
+            "support": 5680,
+            "tpr": 0.9975352112676056
+          },
+          "Reconnaissance": {
+            "support": 1452,
+            "tpr": 0.9855371900826446
+          },
+          "Shellcode": {
+            "support": 154,
+            "tpr": 0.7662337662337663
+          },
+          "Worms": {
+            "support": 10,
+            "tpr": 1.0
+          }
+        }
+      },
+      "C_rank": {
+        "roc_auc": 0.9926518717560646,
+        "partial_auc_raw": 0.008245560030440618,
+        "partial_auc_standardized": 0.9118371874593275,
+        "max_fpr": 0.01,
+        "reason": null
+      }
+    }
+  },
+  "warmup": {
+    "relative_dir": "warmups/all-small-s17",
+    "network": "Linear(189,32),ReLU,Linear(32,16),ReLU,Linear(16,1)",
+    "common_initial_state_sha256": "314e0471675e82b46f8f3028adcc2eccab10820c70a07753302d5a96cb2d5274",
+    "run": {
+      "seed": 17,
+      "kind": "hard_warmup",
+      "selection": {
+        "working_point": {
+          "threshold": 1.4305143356323244,
+          "reference_only": {
+            "threshold": 1.427324175834656,
+            "n_normal": 3920,
+            "allowed_false_positives": 39,
+            "false_positives": 39,
+            "achieved_fpr": 0.009948979591836734,
+            "max_fpr": 0.01,
+            "decision_rule": "float64(score)>=float64(threshold)",
+            "scope": "empirical_training_calibration_only"
+          },
+          "constraint_normal": {
+            "threshold": 1.4305143356323244,
+            "n_normal": 7840,
+            "allowed_false_positives": 78,
+            "false_positives": 78,
+            "achieved_fpr": 0.009948979591836734,
+            "max_fpr": 0.01,
+            "decision_rule": "float64(score)>=float64(threshold)",
+            "scope": "empirical_training_calibration_only"
+          },
+          "source": "maximum of conservative training R-normal and C-normal thresholds; C is used for training selection",
+          "population_guarantee": false
+        },
+        "C": {
+          "false_positives": 78,
+          "n_normal": 7840,
+          "true_positives": 13952,
+          "n_attack": 16707,
+          "fpr": 0.009948979591836734,
+          "tpr": 0.8350990602741366,
+          "threshold": 1.4305143356323244,
+          "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+          "families": {
+            "Analysis": {
+              "support": 288,
+              "tpr": 0.8229166666666666
+            },
+            "Backdoor": {
+              "support": 241,
+              "tpr": 0.9294605809128631
+            },
+            "DoS": {
+              "support": 1706,
+              "tpr": 0.9548651817116061
+            },
+            "Exploits": {
+              "support": 4597,
+              "tpr": 0.9358277137263432
+            },
+            "Fuzzers": {
+              "support": 2579,
+              "tpr": 0.2299340829778984
+            },
+            "Generic": {
+              "support": 5680,
+              "tpr": 0.9955985915492958
+            },
+            "Reconnaissance": {
+              "support": 1452,
+              "tpr": 0.8243801652892562
+            },
+            "Shellcode": {
+              "support": 154,
+              "tpr": 0.6883116883116883
+            },
+            "Worms": {
+              "support": 10,
+              "tpr": 0.9
+            }
+          }
+        },
+        "C_rank": {
+          "roc_auc": 0.9886642399373108,
+          "partial_auc_raw": 0.007775289411868176,
+          "partial_auc_standardized": 0.8882054980838279,
+          "max_fpr": 0.01,
+          "reason": null
+        }
+      },
+      "selected_epoch": 40,
+      "training_seconds": 13.769489700032864,
+      "selection_evaluations": 41,
+      "selection_stage": "C selection over initialization and every warmup epoch",
+      "compute": {
+        "optimizer_updates": 3360,
+        "selected_checkpoint_optimizer_updates": 3360,
+        "gradient_forward_rows": 3436640,
+        "CPU_R_C_selection_forward_rows": 1509661,
+        "training_unit": "minibatch epochs; continuation uses full-F macrosteps"
+      },
+      "deployment": {
+        "raw_fields": 42,
+        "encoded_dim": 189,
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "parameters": 6625,
+        "model_package_bytes": 34475
+      },
+      "fit_rows": 85916,
+      "C_is_selection": true,
+      "validation_used": false,
+      "budget": "all",
+      "capacity": "small",
+      "relative_dir": "warmups/all-small-s17",
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 2.2737,
+            "p95_ms": 2.40206,
+            "mean_rows_per_second": 437.65285025795254,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 2.5646,
+            "p95_ms": 2.7744,
+            "mean_rows_per_second": 98730.23659775604,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      }
+    }
+  },
+  "historical_hard": {
+    "relative_dir": "students/all-hard-s17",
+    "run": {
+      "seed": 17,
+      "method": "hard",
+      "status": "trained",
+      "selected_step": 25,
+      "common_initial_state_sha256": "314e0471675e82b46f8f3028adcc2eccab10820c70a07753302d5a96cb2d5274",
+      "selection": {
+        "working_point": {
+          "threshold": 1.524279832839966,
+          "reference_only": {
+            "threshold": 1.5225508213043215,
+            "n_normal": 3920,
+            "allowed_false_positives": 39,
+            "false_positives": 39,
+            "achieved_fpr": 0.009948979591836734,
+            "max_fpr": 0.01,
+            "decision_rule": "float64(score)>=float64(threshold)",
+            "scope": "empirical_training_calibration_only"
+          },
+          "constraint_normal": {
+            "threshold": 1.524279832839966,
+            "n_normal": 7840,
+            "allowed_false_positives": 78,
+            "false_positives": 78,
+            "achieved_fpr": 0.009948979591836734,
+            "max_fpr": 0.01,
+            "decision_rule": "float64(score)>=float64(threshold)",
+            "scope": "empirical_training_calibration_only"
+          },
+          "source": "maximum of conservative training R-normal and C-normal thresholds; C is used for training selection",
+          "population_guarantee": false
+        },
+        "C": {
+          "false_positives": 78,
+          "n_normal": 7840,
+          "true_positives": 13969,
+          "n_attack": 16707,
+          "fpr": 0.009948979591836734,
+          "tpr": 0.8361165978332435,
+          "threshold": 1.524279832839966,
+          "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+          "families": {
+            "Analysis": {
+              "support": 288,
+              "tpr": 0.7986111111111112
+            },
+            "Backdoor": {
+              "support": 241,
+              "tpr": 0.9336099585062241
+            },
+            "DoS": {
+              "support": 1706,
+              "tpr": 0.9501758499413834
+            },
+            "Exploits": {
+              "support": 4597,
+              "tpr": 0.9301718512073092
+            },
+            "Fuzzers": {
+              "support": 2579,
+              "tpr": 0.23924001550988755
+            },
+            "Generic": {
+              "support": 5680,
+              "tpr": 0.995774647887324
+            },
+            "Reconnaissance": {
+              "support": 1452,
+              "tpr": 0.8415977961432507
+            },
+            "Shellcode": {
+              "support": 154,
+              "tpr": 0.7337662337662337
+            },
+            "Worms": {
+              "support": 10,
+              "tpr": 0.9
+            }
+          }
+        },
+        "C_rank": {
+          "roc_auc": 0.9889086497410959,
+          "partial_auc_raw": 0.007798878754231088,
+          "partial_auc_standardized": 0.8893908921724165,
+          "max_fpr": 0.01,
+          "reason": null
+        }
+      },
+      "training_seconds": 6.210017500037793,
+      "fit_rows": 85916,
+      "compute": {
+        "optimizer_updates": 40,
+        "gradient_forward_rows": 3436640,
+        "detached_global_tail_score_rows": 0,
+        "CPU_R_C_selection_forward_rows": 1509661,
+        "equal_training_FLOPs_claim": false
+      },
+      "fixed_teacher_permutation_sha256": null,
+      "deployment": {
+        "raw_fields": 42,
+        "encoded_dim": 189,
+        "hidden_sizes": [
+          32,
+          16
+        ],
+        "parameters": 6625,
+        "model_package_bytes": 34475
+      },
+      "validation_used_for_selection": false,
+      "budget": "all",
+      "relative_dir": "students/all-hard-s17",
+      "warmup_selected_epoch": 40,
+      "warmup_selected_optimizer_updates": 3360,
+      "selection_evaluations": 41,
+      "warmup_selection_evaluations": 41,
+      "selection_stage": "C selection over continuation steps after C-selected warmup",
+      "cpu_pipeline": {
+        "batches": {
+          "1": {
+            "p50_ms": 2.2164,
+            "p95_ms": 2.4552,
+            "mean_rows_per_second": 444.1436111718108,
+            "repeats": 25
+          },
+          "256": {
+            "p50_ms": 2.7105,
+            "p95_ms": 3.1133599999999997,
+            "mean_rows_per_second": 92664.71877705737,
+            "repeats": 25
+          }
+        },
+        "includes": "existing CSV fields -> preprocessing -> CPU model -> raw threshold",
+        "excludes": "CSV disk read, network capture and raw packet/flow field extraction",
+        "scope": "laboratory CPU measurement; not laptop deployment acceptance",
+        "measurement_rows": "fixed first C rows, same order for all models"
+      }
+    }
+  },
+  "source_config": {
+    "schema_version": 1,
+    "purpose": "budget_transfer_development_only",
+    "seeds": [
+      17
+    ],
+    "threads": 4,
+    "max_fpr": 0.01,
+    "reduced_k": 24,
+    "small_hidden": [
+      32,
+      16
+    ],
+    "wide_hidden": [
+      128,
+      64
+    ],
+    "warmup_epochs": 40,
+    "warmup_batch_size": 1024,
+    "macro_steps": 40,
+    "chunk_size": 2048,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 10.0,
+    "pauc_pairs": 65536,
+    "rank_pairs_per_class": 4096,
+    "pauc_weight": 1.0,
+    "kd_weight": 0.3,
+    "tail_multiplier": 5.0,
+    "teacher_hyperparameters": {
+      "max_iter": 200,
+      "max_leaf_nodes": 63,
+      "learning_rate": 0.1,
+      "early_stopping": false
+    },
+    "qualification_min_pauc_gain": 0.002,
+    "qualification_min_tpr_gain": 0.002,
+    "measure_cpu": true
+  },
+  "historical_hard_step40": {
+    "step": 40,
+    "losses": {
+      "hard": 0.12350494533893652,
+      "pauc": 0.0,
+      "kd": 0.0,
+      "gradient_forward_rows": 85916,
+      "detached_global_tail_score_rows": 0,
+      "preclip_gradient_norm": 0.009776882827281952
+    },
+    "working_point": {
+      "threshold": 1.5425018072128298,
+      "reference_only": {
+        "threshold": 1.5425018072128298,
+        "n_normal": 3920,
+        "allowed_false_positives": 39,
+        "false_positives": 39,
+        "achieved_fpr": 0.009948979591836734,
+        "max_fpr": 0.01,
+        "decision_rule": "float64(score)>=float64(threshold)",
+        "scope": "empirical_training_calibration_only"
+      },
+      "constraint_normal": {
+        "threshold": 1.5296455621719363,
+        "n_normal": 7840,
+        "allowed_false_positives": 78,
+        "false_positives": 78,
+        "achieved_fpr": 0.009948979591836734,
+        "max_fpr": 0.01,
+        "decision_rule": "float64(score)>=float64(threshold)",
+        "scope": "empirical_training_calibration_only"
+      },
+      "source": "maximum of conservative training R-normal and C-normal thresholds; C is used for training selection",
+      "population_guarantee": false
+    },
+    "C": {
+      "false_positives": 78,
+      "n_normal": 7840,
+      "true_positives": 13960,
+      "n_attack": 16707,
+      "fpr": 0.009948979591836734,
+      "tpr": 0.8355779014784223,
+      "threshold": 1.5425018072128298,
+      "decision_rule": "float64(raw_score)>=frozen_training_R+C_threshold",
+      "families": {
+        "Analysis": {
+          "support": 288,
+          "tpr": 0.7951388888888888
+        },
+        "Backdoor": {
+          "support": 241,
+          "tpr": 0.9336099585062241
+        },
+        "DoS": {
+          "support": 1706,
+          "tpr": 0.9507620164126612
+        },
+        "Exploits": {
+          "support": 4597,
+          "tpr": 0.9288666521644551
+        },
+        "Fuzzers": {
+          "support": 2579,
+          "tpr": 0.23730127956572314
+        },
+        "Generic": {
+          "support": 5680,
+          "tpr": 0.995774647887324
+        },
+        "Reconnaissance": {
+          "support": 1452,
+          "tpr": 0.8415977961432507
+        },
+        "Shellcode": {
+          "support": 154,
+          "tpr": 0.7467532467532467
+        },
+        "Worms": {
+          "support": 10,
+          "tpr": 0.9
+        }
+      }
+    },
+    "C_rank": {
+      "roc_auc": 0.9889266444591843,
+      "partial_auc_raw": 0.007801898996265772,
+      "partial_auc_standardized": 0.8895426631289333,
+      "max_fpr": 0.01,
+      "reason": null
+    }
+  },
+  "audited_code_sha256": {
+    "src/ids/budget_transfer.py": "f943657a71b3235965561928f0af278f9cc637ade4483a4af0295d21f0b04284",
+    "src/ids/transfer_screen.py": "39324b1ba6ff24af935edca4eeb5894fa556d6860b0efd94099877b1b49075ea",
+    "src/ids/models.py": "088793a4e383f5ba0e9e435e354f2fb9e492a7e8cf5cafa80992726dcb48fb88",
+    "src/ids/upgrade_kd.py": "f00820a768502be952d4159c571f347bf8fa4bc8af5650263fd2e4c3962a0aeb"
+  },
+  "inspection_package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.14.0",
+    "scikit-learn": "1.5.1",
+    "torch": "2.6.0+cu126",
+    "joblib": "1.4.2"
+  },
+  "execution": {
+    "new_fits": 0,
+    "new_inference_rows": 0,
+    "raw_feature_data_loaded": false,
+    "model_bundle_access": "trusted deserialization only for metadata, preprocessing and weight hashes; no model calls",
+    "script_reserved_arrays_loaded": [],
+    "prior_interactive_inspection_exception": "Earlier NPZ structure enumeration accessed shape/dtype of native_validation and legacy_clipped_validation arrays; no values output, metrics computed, or decisions based on them. This script never opens those arrays."
+  },
+  "fit_teacher_q_little_endian_f8_sha256": "0c77f17a17f743f55bdd307e1f73ac82d2dc74e14068caeafbb41f0c93a09228"
+}

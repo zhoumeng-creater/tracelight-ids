@@ -26,3 +26,7 @@ v4回传以[最新复核](docs/UPGRADE_V4_RESULTS_20261104.md)为准：两环境
 本次整体重审以[项目重构](docs/PROJECT_RECONSTRUCTION_20261104.md)为执行依据：先零拟合查询实际OOF折教师；默认screen只用F/R/C，两环境24次基础拟合，加入官方CatBoost两档hard树检查学生函数类，不自动扩展KD/V。CatBoost软标签接口是普通CrossEntropy适配，不作为新损失。各家族C选择次数不同，screen不充当充分调优排行；C误报由训练阈值构造。新代码用当前checkout，旧固定标签及封存结果不改。
 
 最新执行依据改为[2026-11-05机制重设计](docs/PROJECT_MECHANISM_REDESIGN_20261105.md)与[最小验证](docs/MINIMAL_VALIDATION_20261105.md)。24次screen已回传，不默认重跑。下一轮两环境全部16个冻结MLP、0新拟合，只比identity与统一F数值极值裁剪；旧阈值与双方R+C登记分列，误报修复／新增和具体组都保留。CIC 2,272行恢复属于已见开发模式，不是独立泛化或KD收益；74条新增FP不能被净FP掩盖。UNSW非硬教师内容支持受控候选，三seed OOF原生分数完全相同不算独立重复。PLE无梯度错误已修为训练协议3，round8未用TabM。研究与下一步决策须同时读[本轮20项成果记录](docs/research_alignment_20261105/README.md)。
+
+第九轮已回传，最新状态以[冻结标准验收](docs/INPUT_EXTRAPOLATION_RESULTS_20261105.md)为准：16模型完整、16成本通过、14无新FN；有C检出收益的4份工件均有新增错误，small24 warmup／direct各新增同一FN而停止候选。局部机制成立不能被单模式集中反向否定；2,272是完整模式，所属联合组为14,098行18模式，不能混同。hard24和wide24仍有不同正常模式排序冲突；不靠净FP掩盖，不为裁剪重训或自动加CIC KD／PLE。本轮不用重跑；UNSW仅保留原全字段small普通KD另立最小协议的依据。原协议不可事后放宽，旧V/test不承担新选择或独立确认。
+
+UNSW普通KD下一步以[冻结四臂协议](docs/UNSW_KD_MINIMAL_PROTOCOL_20261105.md)及[JSON规格](configs/unsw-small-kd-minimal-20261105.json)为准：full-F all HGB、原all-small warmup17、H/K/S/M四次续训、统一归一化BCE、40次全F更新、只取step40。S按完整模式(n0,n1)分层固定循环置换，M为类别条件均值；不增加T/λ/教师/架构矩阵。K相对三个对照各至少+34个C净TP并通过误报、逐族、集中度和成本条件，失败不就地调参。普通KD不作新颖性主张；seed续训在固定anchor下不是独立重复。用户已授权推送并在实验室执行本轮。专用入口RUN_UNSW_KD.ps1及训练/验收/打包已实现，按实验室指南先预检再4次续训；本机仍只做合成与工件核验。旧runner不用于新协议，不扩大预算。研究依据见[本轮11项实时审查](docs/research_alignment_20261105/unsw_kd_sources.md)。

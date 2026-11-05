@@ -1,0 +1,42 @@
+{
+  "protocol_id": "unsw-all-small-ordinary-kd-20261105",
+  "frozen_date": "2026-11-05",
+  "stage": "implemented and locally verified; waiting for laboratory training",
+  "original_design_config_sha256": "c44539c50a7b141ef7480570134721ffb913befdf5d2d433dac6f3e5b08f3a98",
+  "scientific_configuration_unchanged": true,
+  "configuration_changes": [
+    "status",
+    "training_runner_implemented"
+  ],
+  "checks": {
+    "pytest_passed": 1193,
+    "pytest_skipped": 22,
+    "new_tests": 37,
+    "ruff_passed": true,
+    "powershell_command_blocks_parsed": 5
+  },
+  "files_sha256": {
+    "configs/unsw-small-kd-minimal-20261105.json": "5e0adfa8e7ba1e5021173a5d6438a2e6723ad58fd1c7eaeeaab874efcefc398e",
+    "docs/UNSW_KD_MINIMAL_PROTOCOL_20261105.md": "cd92aca33cd543c626214a9c4f2c3cba191f24538bce94095c75631c94709d43",
+    "docs/research_alignment_20261105/unsw_kd_sources.md": "d5d68fc6b63648e75b79da9bc38c19228be06d163ba8bc56a8dabf2c021e97b7",
+    "docs/research_alignment_20261105/unsw_kd_design_review.md": "ad4b140104cf35301d520bc0769cc84cc02b44a0638b899eedb22156fa2bf9de",
+    "docs/research_alignment_20261105/unsw_kd_objective_verification.json": "87af937d1d837ab909d02770ad5e35e67abd1e9fe9b3a72a6a1e1b9ca74d771e",
+    "docs/research_alignment_20261105/verify_unsw_kd_objective.py": "e70a4652a5287c32a2b4fe01e14f85ea63545287bb20f4e803a5c74bb13ec77b",
+    "docs/research_alignment_20261105/unsw_kd_artifacts/artifact_review.md": "781e65e0fdc8747f67940875f79d4621eecf292df508711d895d1d631bc2eed8",
+    "docs/research_alignment_20261105/unsw_kd_artifacts/binding.json": "f447d8e8deafc3315355679c071cad60a4c4b67ceb5d273cc4789df2a820c54d",
+    "docs/research_alignment_20261105/unsw_kd_artifacts/preprocessing_state.json": "9f3735f60d6f536eb263f6a54a29181712fded8d10c6a64f88f7ec7871eb0751",
+    "docs/research_alignment_20261105/unsw_kd_artifacts/target_diagnostics.json": "638dc54415e5874d2d20fa489edbe8cb441f2426108106c6a8600d70cefa6949",
+    "src/ids/unsw_kd.py": "65677604740bf2b963aba35c7027a93bcee136f985d8972898b2e5472ec61d4d",
+    "src/ids/unsw_kd_evaluation.py": "cb2a4b14f5c58005c10a7eb3366bb9534ac54648507a27f670aea886c100c10c",
+    "src/ids/unsw_kd_experiment.py": "36a873e342f2de29413904da44d07aea9fc4995dfcfe0859faa89cd273f6ebab",
+    "scripts/run_unsw_kd_lab.py": "4f751231ee60088b38a6fa0c3b1653cbbdc9149cfab92ec8f9ceca5cb60a2a4d",
+    "scripts/RUN_UNSW_KD.ps1": "9905f7e47228a3ecc63e4410cd4546fe9ee6d36971cebbf3b159ebd47f8f1dd3",
+    "docs/UNSW_KD_LAB.md": "ecad7b2d5017bc7f2536f409ff93b18f4d441edf94d9aec3ae1c02210c64b620",
+    "docs/UNSW_KD_VERIFICATION_20261105.md": "ebe19616fbeadf3a27308c6283d0e57be11036a08d3510ef1221451c00dbf7df",
+    "tests/test_unsw_kd.py": "ff9ecda4faf41420d4bcf14a804b2977d5acfd15df6dd82a54acb2dcae49200a",
+    "tests/test_unsw_kd_evaluation.py": "bf1169d5f203002a29c777a01687764bae3fab71a5f945838f57d65cdfd9c415",
+    "tests/test_unsw_kd_experiment.py": "93f06536558d443f03624b7c280e2ce960eb3e62e72d1c923389230322444a64",
+    "tests/test_unsw_kd_lab.py": "5aabc8eeb0bb4bd4dd90e6305edbbe656edee5dfc4161887e310488cd9c5e6e3"
+  },
+  "local_target_npz_sha256": "912e00e6828cead4de163629d46b25771adc3e12488bcdacf16fada3ece7defb"
+}
