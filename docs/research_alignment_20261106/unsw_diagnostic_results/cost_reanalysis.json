@@ -1,0 +1,1371 @@
+{
+  "scope": "Archived cost and developed R/C only; zero new model calls or fits",
+  "checks": {
+    "timing_records": 450,
+    "timing_rows": 57825,
+    "warmup_records": 30,
+    "warmup_rows": 3855,
+    "rss_processes": 3,
+    "rss_calls": 3,
+    "rss_rows": 768,
+    "total_calls": 483,
+    "total_rows": 62448,
+    "all_records_complete": true,
+    "old_batch_ids_match": true,
+    "frozen_rng_order_match": true,
+    "saved_statistics_max_abs_error": 0.0,
+    "rss_inputs_match": true
+  },
+  "stats": {
+    "1": {
+      "H40": {
+        "pooled": {
+          "n": 75,
+          "p50_ms": 2.2331,
+          "p95_ms": 2.39274,
+          "mean_ms": 2.2491586666666668,
+          "rows_per_second": 444.61069591058936,
+          "min_ms": 2.1294,
+          "max_ms": 2.6096
+        },
+        "blocks": [
+          {
+            "n": 25,
+            "p50_ms": 2.2615,
+            "p95_ms": 2.36514,
+            "mean_ms": 2.263852,
+            "rows_per_second": 441.72498908939275,
+            "min_ms": 2.1725,
+            "max_ms": 2.394
+          },
+          {
+            "n": 25,
+            "p50_ms": 2.2396,
+            "p95_ms": 2.50306,
+            "mean_ms": 2.2777200000000004,
+            "rows_per_second": 439.0355267548249,
+            "min_ms": 2.1468,
+            "max_ms": 2.6096
+          },
+          {
+            "n": 25,
+            "p50_ms": 2.1978,
+            "p95_ms": 2.3170599999999997,
+            "mean_ms": 2.205904,
+            "rows_per_second": 453.3288846658785,
+            "min_ms": 2.1294,
+            "max_ms": 2.3491
+          }
+        ]
+      },
+      "HGB": {
+        "pooled": {
+          "n": 75,
+          "p50_ms": 3.0434,
+          "p95_ms": 3.20741,
+          "mean_ms": 3.06674,
+          "rows_per_second": 326.0791589766332,
+          "min_ms": 2.9436,
+          "max_ms": 3.3682
+        },
+        "blocks": [
+          {
+            "n": 25,
+            "p50_ms": 3.0765,
+            "p95_ms": 3.19618,
+            "mean_ms": 3.090224,
+            "rows_per_second": 323.601137004955,
+            "min_ms": 3.0143,
+            "max_ms": 3.3431
+          },
+          {
+            "n": 25,
+            "p50_ms": 3.0484,
+            "p95_ms": 3.19312,
+            "mean_ms": 3.0663759999999995,
+            "rows_per_second": 326.117866823899,
+            "min_ms": 2.9436,
+            "max_ms": 3.3682
+          },
+          {
+            "n": 25,
+            "p50_ms": 3.017,
+            "p95_ms": 3.2036999999999995,
+            "mean_ms": 3.04362,
+            "rows_per_second": 328.55612724321696,
+            "min_ms": 2.9608,
+            "max_ms": 3.234
+          }
+        ]
+      },
+      "CatBoost_reference": {
+        "pooled": {
+          "n": 75,
+          "p50_ms": 5.0413,
+          "p95_ms": 5.32301,
+          "mean_ms": 5.076244,
+          "rows_per_second": 196.99604668333515,
+          "min_ms": 4.9054,
+          "max_ms": 5.8174
+        },
+        "blocks": [
+          {
+            "n": 25,
+            "p50_ms": 5.0848,
+            "p95_ms": 5.2413799999999995,
+            "mean_ms": 5.098520000000001,
+            "rows_per_second": 196.13534908169427,
+            "min_ms": 4.9523,
+            "max_ms": 5.3305
+          },
+          {
+            "n": 25,
+            "p50_ms": 5.0326,
+            "p95_ms": 5.384060000000001,
+            "mean_ms": 5.114631999999999,
+            "rows_per_second": 195.51748786618472,
+            "min_ms": 4.9405,
+            "max_ms": 5.8174
+          },
+          {
+            "n": 25,
+            "p50_ms": 4.993,
+            "p95_ms": 5.1688,
+            "mean_ms": 5.01558,
+            "rows_per_second": 199.37873585906317,
+            "min_ms": 4.9054,
+            "max_ms": 5.2828
+          }
+        ]
+      }
+    },
+    "256": {
+      "H40": {
+        "pooled": {
+          "n": 75,
+          "p50_ms": 2.7656,
+          "p95_ms": 3.086,
+          "mean_ms": 2.7899426666666662,
+          "rows_per_second": 91758.15799321087,
+          "min_ms": 2.5111,
+          "max_ms": 3.3196
+        },
+        "blocks": [
+          {
+            "n": 25,
+            "p50_ms": 2.7449,
+            "p95_ms": 3.04466,
+            "mean_ms": 2.7795359999999993,
+            "rows_per_second": 92101.70330587553,
+            "min_ms": 2.6215,
+            "max_ms": 3.3196
+          },
+          {
+            "n": 25,
+            "p50_ms": 2.7506,
+            "p95_ms": 2.99518,
+            "mean_ms": 2.7778720000000003,
+            "rows_per_second": 92156.8740388326,
+            "min_ms": 2.5691,
+            "max_ms": 3.1063
+          },
+          {
+            "n": 25,
+            "p50_ms": 2.7822,
+            "p95_ms": 3.0885000000000002,
+            "mean_ms": 2.8124199999999995,
+            "rows_per_second": 91024.81137241238,
+            "min_ms": 2.5111,
+            "max_ms": 3.1194
+          }
+        ]
+      },
+      "HGB": {
+        "pooled": {
+          "n": 75,
+          "p50_ms": 4.3603,
+          "p95_ms": 4.88469,
+          "mean_ms": 4.417727999999999,
+          "rows_per_second": 57948.33905573182,
+          "min_ms": 4.1472,
+          "max_ms": 5.3916
+        },
+        "blocks": [
+          {
+            "n": 25,
+            "p50_ms": 4.3446,
+            "p95_ms": 4.57702,
+            "mean_ms": 4.384308,
+            "rows_per_second": 58390.058362688025,
+            "min_ms": 4.1805,
+            "max_ms": 5.0851
+          },
+          {
+            "n": 25,
+            "p50_ms": 4.4509,
+            "p95_ms": 5.084899999999999,
+            "mean_ms": 4.501396,
+            "rows_per_second": 56871.24616452319,
+            "min_ms": 4.2099,
+            "max_ms": 5.3916
+          },
+          {
+            "n": 25,
+            "p50_ms": 4.3072,
+            "p95_ms": 4.775099999999999,
+            "mean_ms": 4.36748,
+            "rows_per_second": 58615.036588604875,
+            "min_ms": 4.1472,
+            "max_ms": 5.0018
+          }
+        ]
+      },
+      "CatBoost_reference": {
+        "pooled": {
+          "n": 75,
+          "p50_ms": 5.5718,
+          "p95_ms": 5.80732,
+          "mean_ms": 5.579572,
+          "rows_per_second": 45881.65543880427,
+          "min_ms": 5.3316,
+          "max_ms": 6.5176
+        },
+        "blocks": [
+          {
+            "n": 25,
+            "p50_ms": 5.5573,
+            "p95_ms": 5.81152,
+            "mean_ms": 5.56514,
+            "rows_per_second": 46000.639696395774,
+            "min_ms": 5.3316,
+            "max_ms": 6.038
+          },
+          {
+            "n": 25,
+            "p50_ms": 5.5755,
+            "p95_ms": 5.991559999999999,
+            "mean_ms": 5.615788000000001,
+            "rows_per_second": 45585.76641425922,
+            "min_ms": 5.3446,
+            "max_ms": 6.5176
+          },
+          {
+            "n": 25,
+            "p50_ms": 5.5718,
+            "p95_ms": 5.77604,
+            "mean_ms": 5.5577879999999995,
+            "rows_per_second": 46061.49065059697,
+            "min_ms": 5.3649,
+            "max_ms": 5.8031
+          }
+        ]
+      }
+    }
+  },
+  "paired": {
+    "1": {
+      "HGB_over_H40": {
+        "median_paired_delta_ms": 0.8132000000000001,
+        "mean_paired_delta_ms": 0.8175813333333334,
+        "median_paired_duration_ratio": 1.364269545533693,
+        "b_slower_groups": 75,
+        "b_faster_groups": 0,
+        "pooled_p95_ratio": 1.340475772545283,
+        "pooled_p95_delta_ms": 0.81467,
+        "block_p95_ratios": [
+          1.3513703205729894,
+          1.2756865596509872,
+          1.382657332999577
+        ]
+      },
+      "CatBoost_reference_over_H40": {
+        "median_paired_delta_ms": 2.806,
+        "mean_paired_delta_ms": 2.8270853333333332,
+        "median_paired_duration_ratio": 2.2552169076751944,
+        "b_slower_groups": 75,
+        "b_faster_groups": 0,
+        "pooled_p95_ratio": 2.2246504007957406,
+        "pooled_p95_delta_ms": 2.93027,
+        "block_p95_ratios": [
+          2.216097144355091,
+          2.1509911867873726,
+          2.2307579432556777
+        ]
+      },
+      "CatBoost_reference_over_HGB": {
+        "median_paired_delta_ms": 1.9922000000000004,
+        "mean_paired_delta_ms": 2.0095039999999993,
+        "median_paired_duration_ratio": 1.6529855775711013,
+        "b_slower_groups": 75,
+        "b_faster_groups": 0,
+        "pooled_p95_ratio": 1.6595976192628945,
+        "pooled_p95_delta_ms": 2.1156,
+        "block_p95_ratios": [
+          1.6398888673353815,
+          1.686143959512953,
+          1.6133845241439588
+        ]
+      }
+    },
+    "256": {
+      "HGB_over_H40": {
+        "median_paired_delta_ms": 1.6136000000000004,
+        "mean_paired_delta_ms": 1.6277853333333334,
+        "median_paired_duration_ratio": 1.5863547758284602,
+        "b_slower_groups": 75,
+        "b_faster_groups": 0,
+        "pooled_p95_ratio": 1.582854828256643,
+        "pooled_p95_delta_ms": 1.7986900000000001,
+        "block_p95_ratios": [
+          1.503294292301932,
+          1.6976942955014387,
+          1.5460903351141326
+        ]
+      },
+      "CatBoost_reference_over_H40": {
+        "median_paired_delta_ms": 2.7773000000000003,
+        "mean_paired_delta_ms": 2.7896293333333335,
+        "median_paired_duration_ratio": 2.012028751650286,
+        "b_slower_groups": 75,
+        "b_faster_groups": 0,
+        "pooled_p95_ratio": 1.8818276085547634,
+        "pooled_p95_delta_ms": 2.72132,
+        "block_p95_ratios": [
+          1.9087582849973397,
+          2.000400643700879,
+          1.8701764610652418
+        ]
+      },
+      "CatBoost_reference_over_HGB": {
+        "median_paired_delta_ms": 1.1818999999999997,
+        "mean_paired_delta_ms": 1.1618439999999997,
+        "median_paired_duration_ratio": 1.2735121147965185,
+        "b_slower_groups": 75,
+        "b_faster_groups": 0,
+        "pooled_p95_ratio": 1.1888819966057211,
+        "pooled_p95_delta_ms": 0.9226299999999998,
+        "block_p95_ratios": [
+          1.2697169774219907,
+          1.1783043914334599,
+          1.2096165525329314
+        ]
+      }
+    }
+  },
+  "execution_order_counts": {
+    "1": {
+      "H40,HGB,CatBoost_reference": 14,
+      "H40,CatBoost_reference,HGB": 10,
+      "HGB,H40,CatBoost_reference": 13,
+      "HGB,CatBoost_reference,H40": 12,
+      "CatBoost_reference,H40,HGB": 14,
+      "CatBoost_reference,HGB,H40": 12
+    },
+    "256": {
+      "H40,HGB,CatBoost_reference": 12,
+      "H40,CatBoost_reference,HGB": 19,
+      "HGB,H40,CatBoost_reference": 7,
+      "HGB,CatBoost_reference,H40": 10,
+      "CatBoost_reference,H40,HGB": 15,
+      "CatBoost_reference,HGB,H40": 12
+    }
+  },
+  "by_execution_position": {
+    "1": {
+      "H40": {
+        "0": {
+          "n": 24,
+          "p50_ms": 2.1997,
+          "p95_ms": 2.316665,
+          "mean_ms": 2.2163333333333335,
+          "rows_per_second": 451.19566852158215,
+          "min_ms": 2.1294,
+          "max_ms": 2.4821
+        },
+        "1": {
+          "n": 27,
+          "p50_ms": 2.2396,
+          "p95_ms": 2.4740100000000003,
+          "mean_ms": 2.2672481481481483,
+          "rows_per_second": 441.06332199092714,
+          "min_ms": 2.1545,
+          "max_ms": 2.6096
+        },
+        "2": {
+          "n": 24,
+          "p50_ms": 2.2516499999999997,
+          "p95_ms": 2.376365,
+          "mean_ms": 2.261633333333333,
+          "rows_per_second": 442.15832215655354,
+          "min_ms": 2.146,
+          "max_ms": 2.3922
+        }
+      },
+      "HGB": {
+        "0": {
+          "n": 25,
+          "p50_ms": 3.0289,
+          "p95_ms": 3.18918,
+          "mean_ms": 3.0505199999999997,
+          "rows_per_second": 327.8129630358103,
+          "min_ms": 2.9436,
+          "max_ms": 3.3431
+        },
+        "1": {
+          "n": 26,
+          "p50_ms": 3.033,
+          "p95_ms": 3.176825,
+          "mean_ms": 3.058023076923077,
+          "rows_per_second": 327.00865063653487,
+          "min_ms": 2.9685,
+          "max_ms": 3.234
+        },
+        "2": {
+          "n": 24,
+          "p50_ms": 3.085,
+          "p95_ms": 3.216045,
+          "mean_ms": 3.093079166666667,
+          "rows_per_second": 323.30242651942035,
+          "min_ms": 2.9608,
+          "max_ms": 3.3682
+        }
+      },
+      "CatBoost_reference": {
+        "0": {
+          "n": 26,
+          "p50_ms": 4.9874,
+          "p95_ms": 5.318575,
+          "mean_ms": 5.041453846153846,
+          "rows_per_second": 198.35548048563524,
+          "min_ms": 4.914,
+          "max_ms": 5.3851
+        },
+        "1": {
+          "n": 22,
+          "p50_ms": 5.0793,
+          "p95_ms": 5.316085,
+          "mean_ms": 5.1135090909090914,
+          "rows_per_second": 195.5604228371906,
+          "min_ms": 4.9054,
+          "max_ms": 5.8174
+        },
+        "2": {
+          "n": 27,
+          "p50_ms": 5.0686,
+          "p95_ms": 5.238219999999999,
+          "mean_ms": 5.079381481481482,
+          "rows_per_second": 196.8743642598654,
+          "min_ms": 4.9556,
+          "max_ms": 5.3799
+        }
+      }
+    },
+    "256": {
+      "H40": {
+        "0": {
+          "n": 31,
+          "p50_ms": 2.7353,
+          "p95_ms": 2.98925,
+          "mean_ms": 2.757058064516129,
+          "rows_per_second": 92852.5965030514,
+          "min_ms": 2.5691,
+          "max_ms": 3.3196
+        },
+        "1": {
+          "n": 22,
+          "p50_ms": 2.77115,
+          "p95_ms": 3.07955,
+          "mean_ms": 2.7882136363636363,
+          "rows_per_second": 91815.05916952367,
+          "min_ms": 2.5111,
+          "max_ms": 3.1063
+        },
+        "2": {
+          "n": 22,
+          "p50_ms": 2.79375,
+          "p95_ms": 3.055055,
+          "mean_ms": 2.838009090909091,
+          "rows_per_second": 90204.08032519596,
+          "min_ms": 2.6295,
+          "max_ms": 3.0895
+        }
+      },
+      "HGB": {
+        "0": {
+          "n": 17,
+          "p50_ms": 4.3335,
+          "p95_ms": 5.01846,
+          "mean_ms": 4.397617647058823,
+          "rows_per_second": 58213.33743537612,
+          "min_ms": 4.1472,
+          "max_ms": 5.0851
+        },
+        "1": {
+          "n": 24,
+          "p50_ms": 4.3431,
+          "p95_ms": 4.51256,
+          "mean_ms": 4.363416666666667,
+          "rows_per_second": 58669.62051908863,
+          "min_ms": 4.1773,
+          "max_ms": 4.8193
+        },
+        "2": {
+          "n": 34,
+          "p50_ms": 4.3954,
+          "p95_ms": 4.945379999999999,
+          "mean_ms": 4.4661205882352935,
+          "rows_per_second": 57320.4406245452,
+          "min_ms": 4.2221,
+          "max_ms": 5.3916
+        }
+      },
+      "CatBoost_reference": {
+        "0": {
+          "n": 27,
+          "p50_ms": 5.5344,
+          "p95_ms": 5.80429,
+          "mean_ms": 5.565692592592592,
+          "rows_per_second": 45996.072499712194,
+          "min_ms": 5.3316,
+          "max_ms": 6.5176
+        },
+        "1": {
+          "n": 29,
+          "p50_ms": 5.5755,
+          "p95_ms": 5.7495199999999995,
+          "mean_ms": 5.5792241379310346,
+          "rows_per_second": 45884.51613900091,
+          "min_ms": 5.3909,
+          "max_ms": 6.038
+        },
+        "2": {
+          "n": 19,
+          "p50_ms": 5.5971,
+          "p95_ms": 5.836119999999999,
+          "mean_ms": 5.599826315789474,
+          "rows_per_second": 45715.70358855115,
+          "min_ms": 5.3946,
+          "max_ms": 6.0424
+        }
+      }
+    }
+  },
+  "rss": {
+    "H40": {
+      "model": "H40",
+      "pid": 19028,
+      "threads": 4,
+      "rss_after_import_bytes": 526626816,
+      "rss_after_input_bytes": 539897856,
+      "rss_after_load_bytes": 541065216,
+      "rss_after_probe_bytes": 544202752,
+      "model_load_ms": 2.297,
+      "forward_calls": 1,
+      "forward_rows": 256,
+      "scope": "one fresh process; resident snapshots, not peak RSS",
+      "MiB": {
+        "rss_after_import": 502.23046875,
+        "rss_after_input": 514.88671875,
+        "rss_after_load": 516.0,
+        "rss_after_probe": 518.9921875
+      },
+      "incremental_MiB": {
+        "input_loading": 12.65625,
+        "model_loading": 1.11328125,
+        "probe": 2.9921875,
+        "model_load_plus_probe": 4.10546875
+      }
+    },
+    "HGB": {
+      "model": "HGB",
+      "pid": 21008,
+      "threads": 4,
+      "rss_after_import_bytes": 146444288,
+      "rss_after_input_bytes": 157249536,
+      "rss_after_load_bytes": 159641600,
+      "rss_after_probe_bytes": 161091584,
+      "model_load_ms": 11.9265,
+      "forward_calls": 1,
+      "forward_rows": 256,
+      "scope": "one fresh process; resident snapshots, not peak RSS",
+      "MiB": {
+        "rss_after_import": 139.66015625,
+        "rss_after_input": 149.96484375,
+        "rss_after_load": 152.24609375,
+        "rss_after_probe": 153.62890625
+      },
+      "incremental_MiB": {
+        "input_loading": 10.3046875,
+        "model_loading": 2.28125,
+        "probe": 1.3828125,
+        "model_load_plus_probe": 3.6640625
+      }
+    },
+    "CatBoost_reference": {
+      "model": "CatBoost_reference",
+      "pid": 28924,
+      "threads": 4,
+      "rss_after_import_bytes": 153870336,
+      "rss_after_input_bytes": 164745216,
+      "rss_after_load_bytes": 167161856,
+      "rss_after_probe_bytes": 169365504,
+      "model_load_ms": 3.0275,
+      "forward_calls": 1,
+      "forward_rows": 256,
+      "scope": "one fresh process; resident snapshots, not peak RSS",
+      "MiB": {
+        "rss_after_import": 146.7421875,
+        "rss_after_input": 157.11328125,
+        "rss_after_load": 159.41796875,
+        "rss_after_probe": 161.51953125
+      },
+      "incremental_MiB": {
+        "input_loading": 10.37109375,
+        "model_loading": 2.3046875,
+        "probe": 2.1015625,
+        "model_load_plus_probe": 4.40625
+      }
+    }
+  },
+  "model_packages_bytes": {
+    "H40": 34549,
+    "HGB": 1509420,
+    "CatBoost_reference": 312279
+  },
+  "developed_R_C_metrics": {
+    "H40": {
+      "reference": {
+        "model": "H40",
+        "role": "reference",
+        "TP": 7032,
+        "FN": 1322,
+        "FP": 39,
+        "TPR": 0.8417524539142925,
+        "FPR": 0.009948979591836734,
+        "stdpAUC": 0.8877776959924333,
+        "recovered_FN": 0,
+        "new_FN": 0,
+        "repaired_FP": 0,
+        "new_FP": 0
+      },
+      "constraint": {
+        "model": "H40",
+        "role": "constraint",
+        "TP": 13960,
+        "FN": 2747,
+        "FP": 78,
+        "TPR": 0.8355779014784223,
+        "FPR": 0.009948979591836734,
+        "stdpAUC": 0.88953982413733,
+        "recovered_FN": 0,
+        "new_FN": 0,
+        "repaired_FP": 0,
+        "new_FP": 0
+      }
+    },
+    "HGB": {
+      "reference": {
+        "model": "HGB",
+        "role": "reference",
+        "TP": 7245,
+        "FN": 1109,
+        "FP": 28,
+        "TPR": 0.8672492219296145,
+        "FPR": 0.007142857142857143,
+        "stdpAUC": 0.9145215445635343,
+        "recovered_FN": 366,
+        "new_FN": 153,
+        "repaired_FP": 22,
+        "new_FP": 11
+      },
+      "constraint": {
+        "model": "HGB",
+        "role": "constraint",
+        "TP": 14448,
+        "FN": 2259,
+        "FP": 76,
+        "TPR": 0.8647872149398456,
+        "FPR": 0.009693877551020408,
+        "stdpAUC": 0.9118371874593276,
+        "recovered_FN": 733,
+        "new_FN": 245,
+        "repaired_FP": 54,
+        "new_FP": 52
+      }
+    },
+    "CatBoost_reference": {
+      "reference": {
+        "model": "CatBoost_reference",
+        "role": "reference",
+        "TP": 7285,
+        "FN": 1069,
+        "FP": 39,
+        "TPR": 0.8720373473785014,
+        "FPR": 0.009948979591836734,
+        "stdpAUC": 0.9134009005221149,
+        "recovered_FN": 348,
+        "new_FN": 95,
+        "repaired_FP": 14,
+        "new_FP": 14
+      },
+      "constraint": {
+        "model": "CatBoost_reference",
+        "role": "constraint",
+        "TP": 14439,
+        "FN": 2268,
+        "FP": 75,
+        "TPR": 0.8642485185850243,
+        "FPR": 0.009566326530612245,
+        "stdpAUC": 0.9086418640451792,
+        "recovered_FN": 656,
+        "new_FN": 177,
+        "repaired_FP": 31,
+        "new_FP": 28
+      }
+    }
+  },
+  "developed_R_C_families": [
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 116,
+      "H40_TP": 116,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 123,
+      "H40_TP": 123,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 889,
+      "H40_TP": 889,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2272,
+      "H40_TP": 2272,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 316,
+      "H40_TP": 316,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2688,
+      "H40_TP": 2688,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 574,
+      "H40_TP": 574,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 50,
+      "H40_TP": 50,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 4,
+      "H40_TP": 4,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 229,
+      "H40_TP": 229,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 225,
+      "H40_TP": 225,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1622,
+      "H40_TP": 1622,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4270,
+      "H40_TP": 4270,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 612,
+      "H40_TP": 612,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5656,
+      "H40_TP": 5656,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1222,
+      "H40_TP": 1222,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 115,
+      "H40_TP": 115,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "H40",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 9,
+      "H40_TP": 9,
+      "delta_TP": 0,
+      "recovered_FN": 0,
+      "new_FN": 0
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 112,
+      "H40_TP": 116,
+      "delta_TP": -4,
+      "recovered_FN": 0,
+      "new_FN": 4
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 126,
+      "H40_TP": 123,
+      "delta_TP": 3,
+      "recovered_FN": 5,
+      "new_FN": 2
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 899,
+      "H40_TP": 889,
+      "delta_TP": 10,
+      "recovered_FN": 25,
+      "new_FN": 15
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2332,
+      "H40_TP": 2272,
+      "delta_TP": 60,
+      "recovered_FN": 81,
+      "new_FN": 21
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 343,
+      "H40_TP": 316,
+      "delta_TP": 27,
+      "recovered_FN": 124,
+      "new_FN": 97
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2695,
+      "H40_TP": 2688,
+      "delta_TP": 7,
+      "recovered_FN": 8,
+      "new_FN": 1
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 676,
+      "H40_TP": 574,
+      "delta_TP": 102,
+      "recovered_FN": 110,
+      "new_FN": 8
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 57,
+      "H40_TP": 50,
+      "delta_TP": 7,
+      "recovered_FN": 12,
+      "new_FN": 5
+    },
+    {
+      "model": "HGB",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 5,
+      "H40_TP": 4,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 230,
+      "H40_TP": 229,
+      "delta_TP": 1,
+      "recovered_FN": 7,
+      "new_FN": 6
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 237,
+      "H40_TP": 225,
+      "delta_TP": 12,
+      "recovered_FN": 12,
+      "new_FN": 0
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1665,
+      "H40_TP": 1622,
+      "delta_TP": 43,
+      "recovered_FN": 54,
+      "new_FN": 11
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4370,
+      "H40_TP": 4270,
+      "delta_TP": 100,
+      "recovered_FN": 142,
+      "new_FN": 42
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 721,
+      "H40_TP": 612,
+      "delta_TP": 109,
+      "recovered_FN": 277,
+      "new_FN": 168
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5666,
+      "H40_TP": 5656,
+      "delta_TP": 10,
+      "recovered_FN": 13,
+      "new_FN": 3
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1431,
+      "H40_TP": 1222,
+      "delta_TP": 209,
+      "recovered_FN": 214,
+      "new_FN": 5
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 118,
+      "H40_TP": 115,
+      "delta_TP": 3,
+      "recovered_FN": 13,
+      "new_FN": 10
+    },
+    {
+      "model": "HGB",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 10,
+      "H40_TP": 9,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Analysis",
+      "support": 151,
+      "TP": 113,
+      "H40_TP": 116,
+      "delta_TP": -3,
+      "recovered_FN": 0,
+      "new_FN": 3
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Backdoor",
+      "support": 129,
+      "TP": 127,
+      "H40_TP": 123,
+      "delta_TP": 4,
+      "recovered_FN": 4,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "DoS",
+      "support": 928,
+      "TP": 904,
+      "H40_TP": 889,
+      "delta_TP": 15,
+      "recovered_FN": 21,
+      "new_FN": 6
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Exploits",
+      "support": 2451,
+      "TP": 2324,
+      "H40_TP": 2272,
+      "delta_TP": 52,
+      "recovered_FN": 79,
+      "new_FN": 27
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Fuzzers",
+      "support": 1217,
+      "TP": 372,
+      "H40_TP": 316,
+      "delta_TP": 56,
+      "recovered_FN": 110,
+      "new_FN": 54
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Generic",
+      "support": 2704,
+      "TP": 2697,
+      "H40_TP": 2688,
+      "delta_TP": 9,
+      "recovered_FN": 9,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Reconnaissance",
+      "support": 694,
+      "TP": 680,
+      "H40_TP": 574,
+      "delta_TP": 106,
+      "recovered_FN": 108,
+      "new_FN": 2
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Shellcode",
+      "support": 74,
+      "TP": 62,
+      "H40_TP": 50,
+      "delta_TP": 12,
+      "recovered_FN": 15,
+      "new_FN": 3
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "reference",
+      "family": "Worms",
+      "support": 6,
+      "TP": 6,
+      "H40_TP": 4,
+      "delta_TP": 2,
+      "recovered_FN": 2,
+      "new_FN": 0
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Analysis",
+      "support": 288,
+      "TP": 225,
+      "H40_TP": 229,
+      "delta_TP": -4,
+      "recovered_FN": 3,
+      "new_FN": 7
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Backdoor",
+      "support": 241,
+      "TP": 236,
+      "H40_TP": 225,
+      "delta_TP": 11,
+      "recovered_FN": 12,
+      "new_FN": 1
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "DoS",
+      "support": 1706,
+      "TP": 1664,
+      "H40_TP": 1622,
+      "delta_TP": 42,
+      "recovered_FN": 49,
+      "new_FN": 7
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Exploits",
+      "support": 4597,
+      "TP": 4363,
+      "H40_TP": 4270,
+      "delta_TP": 93,
+      "recovered_FN": 126,
+      "new_FN": 33
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Fuzzers",
+      "support": 2579,
+      "TP": 715,
+      "H40_TP": 612,
+      "delta_TP": 103,
+      "recovered_FN": 223,
+      "new_FN": 120
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Generic",
+      "support": 5680,
+      "TP": 5669,
+      "H40_TP": 5656,
+      "delta_TP": 13,
+      "recovered_FN": 16,
+      "new_FN": 3
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Reconnaissance",
+      "support": 1452,
+      "TP": 1428,
+      "H40_TP": 1222,
+      "delta_TP": 206,
+      "recovered_FN": 211,
+      "new_FN": 5
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Shellcode",
+      "support": 154,
+      "TP": 129,
+      "H40_TP": 115,
+      "delta_TP": 14,
+      "recovered_FN": 15,
+      "new_FN": 1
+    },
+    {
+      "model": "CatBoost_reference",
+      "role": "constraint",
+      "family": "Worms",
+      "support": 10,
+      "TP": 10,
+      "H40_TP": 9,
+      "delta_TP": 1,
+      "recovered_FN": 1,
+      "new_FN": 0
+    }
+  ],
+  "input_sha256": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\timings.jsonl": "f0c6734bbdd914c90b37e59896ea72fc63814a980db5806827bdfb212791aaf4",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\warmup.jsonl": "9a5b357df87fb96b73e5e59b1f4ca7dcf6bc801e7c2f9e894ba83fb3712c5b7d",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\cost-summary.json": "2991799cb7b968f0898512acc66a416b0501a9f6a89e212cb44ceb80a95c24c8",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\cost-plan.json": "ee48111acb8e2d523dc70e10e0bb7a5ea8a12512f12cace1fbd9e911da421bc1",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\LAB_ENVIRONMENT.json": "0a333746e1452bd0aae69108f5d779ddb98109e6665573c50c0e0599d350fd27",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\rss-H40.json": "dec1a62386d26ecfa371c8c31bfc025886bd4fbbdb8e2b994433cdd052088fe5",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\rss-HGB.json": "b54cfad5a39ba661e602eda644843f0a77dd4cd2f12e792348a6cc5cb35d8fbd",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\unpacked\\unsw-diagnostic-20261105T1626331303350000-1e232a11\\experiment\\cost\\rss-CatBoost_reference.json": "c48ddb73d541af4718fb502ad16764f6c19317bf5a0bc9520d5051930cfef4f6"
+  },
+  "cpu_environment": {
+    "python": "3.12.3",
+    "os": "Windows",
+    "os_release": "10",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "cpu_physical": 24,
+    "cpu_logical": 32,
+    "ram_total_bytes": 68327444480,
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scipy": "1.14.0",
+      "scikit-learn": "1.5.1",
+      "pyarrow": "21.0.0",
+      "PyYAML": "6.0.2",
+      "joblib": "1.4.2",
+      "threadpoolctl": "3.5.0",
+      "psutil": "6.0.0",
+      "torch": "2.6.0+cu126"
+    },
+    "recorded_at": "2026-11-05T16:26:33.299343+00:00",
+    "torch": {
+      "cuda_runtime": "12.6",
+      "cuda_available": true,
+      "cudnn": 90501,
+      "gpus": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 4090 D",
+          "total_memory_bytes": 25756696576
+        }
+      ]
+    },
+    "nvidia_smi": [
+      "NVIDIA GeForce RTX 4090 D, 24564 MiB, 560.94"
+    ]
+  }
+}

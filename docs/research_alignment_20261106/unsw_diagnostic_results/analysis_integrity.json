@@ -1,0 +1,156 @@
+{
+  "independent_validity_passed": true,
+  "checks": {
+    "completion_inventory_exact": true,
+    "source_same_in_plan_and_environment": true,
+    "source_commit_and_clean": true,
+    "source_inventory_fingerprint": true,
+    "source_snapshots_hash_exact": true,
+    "binding_sha_matches_frozen_git": true,
+    "git_source_matches_allow_CRLF": true,
+    "frozen_protocol_semantics": true,
+    "frozen_binding_semantics": true,
+    "frozen_protocol_source_sha": true,
+    "original_24_bound_artifacts": true,
+    "preflight_24_hashes_match_binding": true,
+    "initial_logs_match_old_history": true,
+    "F_identity_exact": true,
+    "F_labels_weights_aligned": true,
+    "F_losses_recomputed": true,
+    "anchor_loss_atol_1e7": true,
+    "pattern_bounds_recomputed": true,
+    "pattern_lower_bound_acceptance": true,
+    "four_finite_parameter_gradients": true,
+    "gradient_identity_independent": true,
+    "F_batches_complete": true,
+    "F_budget_reconstructed": true,
+    "states_match_original_and_unchanged": true,
+    "CPU_counts_from_raw_logs": true,
+    "CPU_raw_log_status_finite": true,
+    "CPU_timed_inputs_frozen": true,
+    "CPU_warmup_inputs_frozen": true,
+    "CPU_order_seed_recomputed": true,
+    "RSS_independent_probes": true,
+    "zero_fit_and_reserved_access_records": true,
+    "all_split_summary_copies_equal": true,
+    "frozen_hardware_and_environment": true,
+    "all_locked_dependencies_match": true,
+    "cost_threads_four": true,
+    "original_prepared_train_physical_SHA": true
+  },
+  "completion_payload_count": 120,
+  "source": {
+    "commit": "b5f558561a741eab9154b44430ce2311eb3f2172",
+    "files": 89,
+    "byte_exact_git_files": 89,
+    "CRLF_only_files": [],
+    "other_changes": [],
+    "source_sha256": "9d3453c72792564a7ab5b6f96abee79cdf8baa82eb2e3b4643f66b41d7643f90"
+  },
+  "original_bound_files_verified": 24,
+  "anchor_loss_absolute_delta": {
+    "hard_bce": 4.811248899283527e-10,
+    "mixed_bce": 4.995184266221031e-10
+  },
+  "original_prepared_train": {
+    "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261101_实验室4090D\\TraceLight-Run-2026-11-01\\data\\prepared-v1\\train.parquet",
+    "sha256": "0812b8867aac98ad143f8651cd96d6edddaa22c5e2f36cf6c6077a2b9083fd6a",
+    "manifest_equal": true,
+    "reserved_partitions_opened": []
+  },
+  "gradient_identity": {
+    "residual_l2": 2.3398666988053662e-08,
+    "tolerance": 1.1043957522789515e-06
+  },
+  "F_losses_recomputed": {
+    "anchor": {
+      "hard_bce": 0.1251524253391325,
+      "teacher_kl": 0.040263042816429395,
+      "mixed_bce": 0.12617521625554645
+    },
+    "H40": {
+      "hard_bce": 0.12348475236975806,
+      "teacher_kl": 0.038856974195403814,
+      "mixed_bce": 0.12456791352040633
+    },
+    "K40": {
+      "hard_bce": 0.1235220691709886,
+      "teacher_kl": 0.038510705486920246,
+      "mixed_bce": 0.1245167105886259
+    }
+  },
+  "pattern_bounds_recomputed": {
+    "H": 0.0028998801712908457,
+    "K": 0.038211190129088385
+  },
+  "state_checks": {
+    "anchor": true,
+    "H40": true,
+    "K40": true
+  },
+  "budget": {
+    "student_fits": 0,
+    "teacher_fits": 0,
+    "optimizer_updates": 0,
+    "F_forward_rows": 257748,
+    "F_forward_calls": 252,
+    "F_backward_calls": 336,
+    "CPU_formal_calls": 450,
+    "CPU_formal_rows": 57825,
+    "CPU_warmup_calls": 30,
+    "CPU_warmup_rows": 3855,
+    "RSS_calls": 3,
+    "RSS_rows": 768,
+    "CPU_total_calls": 483,
+    "CPU_total_rows": 62448
+  },
+  "environment": {
+    "environment": {
+      "python": "3.12.3",
+      "os": "Windows",
+      "os_release": "10",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+      "cpu_physical": 24,
+      "cpu_logical": 32,
+      "ram_total_bytes": 68327444480,
+      "packages": {
+        "numpy": "1.26.4",
+        "pandas": "2.2.2",
+        "scipy": "1.14.0",
+        "scikit-learn": "1.5.1",
+        "pyarrow": "21.0.0",
+        "PyYAML": "6.0.2",
+        "joblib": "1.4.2",
+        "threadpoolctl": "3.5.0",
+        "psutil": "6.0.0",
+        "torch": "2.6.0+cu126"
+      },
+      "recorded_at": "2026-11-05T16:26:33.299343+00:00",
+      "torch": {
+        "cuda_runtime": "12.6",
+        "cuda_available": true,
+        "cudnn": 90501,
+        "gpus": [
+          {
+            "index": 0,
+            "name": "NVIDIA GeForce RTX 4090 D",
+            "total_memory_bytes": 25756696576
+          }
+        ]
+      },
+      "nvidia_smi": [
+        "NVIDIA GeForce RTX 4090 D, 24564 MiB, 560.94"
+      ]
+    },
+    "selected_gpu": {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090 D",
+      "total_memory_bytes": 25756696576
+    },
+    "cuda_checked": true,
+    "python_executable": "D:\\zhoumeng\\Graduate\\venv\\Scripts\\python.exe",
+    "python_prefix": "D:\\zhoumeng\\Graduate\\venv"
+  },
+  "failure_mechanism_scope": "This audit validates measurement integrity; it does not identify endpoint gradients, capacity limits, or generalization."
+}

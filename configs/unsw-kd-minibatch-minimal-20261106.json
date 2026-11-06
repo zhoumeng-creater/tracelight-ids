@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "protocol_id": "unsw-all-small-hk-minibatch-20261106",
+  "purpose": "fixed_development_optimizer_objective_interaction",
+  "protocol_document": "docs/UNSW_KD_MINIBATCH_PROTOCOL_20261106.md",
+  "binding": "docs/research_alignment_20261105/kd_failure_research/mechanism-audit-binding.json",
+  "qualification": {
+    "path": "docs/research_alignment_20261106/unsw_diagnostic_results/analysis_integrity.json",
+    "semantic_sha256": "545072afb20c2752c7fd3d94720b4fbc557b9e4dffc76c696b62d703aac0d311",
+    "diagnostic_commit": "b5f558561a741eab9154b44430ce2311eb3f2172",
+    "required_independent_validity": true
+  },
+  "data": {
+    "dataset": "UNSW-NB15",
+    "raw_fields": 42,
+    "encoded_features": 189,
+    "binding": "docs/research_alignment_20261105/unsw_kd_artifacts/binding.json",
+    "source_screen_commit": "cabebf21cf7591fc14a3fb01c60fb94296fc8084",
+    "screen_complete_sha256": "5dd426a8e16d775794fcc362f2894e89e73f564dba093acb708b64cca02cd972",
+    "roles": {
+      "fit": {
+        "rows": 85916,
+        "normal": 27440,
+        "attack": 58476
+      },
+      "reference": {
+        "rows": 12274,
+        "normal": 3920,
+        "attack": 8354
+      },
+      "constraint": {
+        "rows": 24547,
+        "normal": 7840,
+        "attack": 16707
+      }
+    },
+    "gradient_roles": [
+      "fit"
+    ],
+    "evaluation_roles": [
+      "reference",
+      "constraint"
+    ],
+    "forbidden_roles": [
+      "validation",
+      "calibration",
+      "test"
+    ],
+    "reuse_existing_splits": true,
+    "refit_preprocessing": false,
+    "input_range_clipping": false,
+    "preprocessing_semantic_sha256": "487918c52366e7b31598d87d0fd22fa976cda72e75d6fe329b823e600c71f81c"
+  },
+  "teacher": {
+    "artifact": "teachers/all-s17/model.joblib",
+    "model_sha256": "fa4602158bc7c80ef0a0b777f1c05fc0f4edfca31bebd9b36600f24874e731fa",
+    "scores": "teachers/all-s17/training-scores.npz",
+    "scores_sha256": "69630901408bf7262ddc0abb4001c890db71573b023cdd8e19d70d8ce6c53dde",
+    "algorithm": "HistGradientBoostingClassifier",
+    "training_role": "full_F",
+    "target": "float64 scipy.special.expit(native fit margin)",
+    "scipy_version": "1.14.0",
+    "frozen_equivalent_target": "frozen_pattern_permutation.npz:teacher_q",
+    "frozen_target_npz_sha256": "912e00e6828cead4de163629d46b25771adc3e12488bcdacf16fada3ece7defb",
+    "q_le_f8_sha256": "0c77f17a17f743f55bdd307e1f73ac82d2dc74e14068caeafbb41f0c93a09228",
+    "new_fits": 0,
+    "temperature": 1,
+    "teacher_logit_shift": 0,
+    "probability_clipping": false,
+    "temperature_search": false,
+    "hyperparameter_binding": "binding.json:teacher.hyperparameters"
+  },
+  "student": {
+    "anchor": "warmups/all-small-s17/model.joblib",
+    "anchor_model_sha256": "2efda2fec3a0623cf34cb228c23f0d2398fd2763fc9677a2effc9613e81d17da",
+    "anchor_state_sha256": "314e0471675e82b46f8f3028adcc2eccab10820c70a07753302d5a96cb2d5274",
+    "anchor_epoch": 40,
+    "anchor_historical_updates": 3360,
+    "hidden": [
+      32,
+      16
+    ],
+    "input_features": 189,
+    "output_logits": 1,
+    "activation": "ReLU",
+    "parameters": 6625,
+    "dropout": 0,
+    "new_warmup_fits": 0
+  },
+  "training": {
+    "arms": [
+      "H",
+      "K"
+    ],
+    "epochs": 40,
+    "batch_size": 1024,
+    "batches_per_epoch": 84,
+    "last_batch_rows": 924,
+    "seed": 17,
+    "endpoint_epoch": 40,
+    "checkpoint_selection": false,
+    "kd_weight": 0.3,
+    "temperature": 1,
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false,
+      "foreach": false,
+      "fused": false,
+      "state_reset": true,
+      "clip_norm": 10.0,
+      "clip_per_batch": true
+    },
+    "weighting": "fixed full-F class weights multiplied by N / actual batch rows",
+    "network_dtype": "float32",
+    "loss_dtype": "float64",
+    "amp": false,
+    "tf32": false,
+    "threads": 4,
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "endpoint_score_chunk_size": 2048,
+    "extra_F_evaluation": false,
+    "intermediate_R_C_evaluation": false
+  },
+  "permutations": {
+    "generator": "numpy.random.Generator(PCG64(SeedSequence))",
+    "seed_sequence": [
+      17,
+      20261106,
+      12
+    ],
+    "numpy_version": "1.26.4",
+    "shape": [
+      40,
+      85916
+    ],
+    "dtype": "<i8",
+    "sha256": "c9f2ea0a786c77a2321a245e6037152c24f1bc43f3618f0c3e10bc276223cbed",
+    "epoch_sha256": [
+      "99ba279b5a2c2ccb1ba02f291cb9e2599fbb365099a5ec1e3aed8750b8d7d35c",
+      "756dc51b11c10f5f6d52132fa67464208052bc4d6b7c372d45744746bba0eaaa",
+      "6443061a3064aa64495e959c84b654dd31447dbe0986141c8bdeb731003898fc",
+      "8f51f66e0c18a4e847b8022ca6aadee7c18bbfa0b0af0b31d191c13ec31927f9",
+      "20b609f5d0ef37a41b9d1b220ffae1d41548b08ecf053bdb598929dffc3ecbda",
+      "f686b452c28c8d89893101c583ab696839c6ecc2e8d557316260fdccabd49363",
+      "9191b8356bd42bd24fff0822e34d2829e3889f0cc1dfc11992e3119802232714",
+      "117ec0f751de5e7cb367a6a4061affb7d668618920b6bb641518e95e2074345a",
+      "687bb94f41e571b081e2801d68c44a085ec31e44cd5c0188881037e12ef29d5b",
+      "b1f85624a4f7cd3c2e21e956b9e728cc09d6bedaa8a34936121b0bed8f8f9974",
+      "931ae64193c513d7ec5f820f3ca8deb529a147b5bbca6ff4f12886dc3901251f",
+      "2e3af56bf3756c6dfed529db9ae6e81af0c00cae79368b5d5d168cc14de83679",
+      "22ebd6b789b8c35070e5ded79a5bf6c1daf84813be360afee2e9694b7fa41a86",
+      "ab936ee16a7dec8ad02d166aeac1300c3deeb99ae3707d205c068d231da73337",
+      "f797b231cabdfd9bd3669f6ed8e99c3c10859d4590ffcd120d22d87718f8513b",
+      "b5fc6adb29aabaaaa634e4dff74dfa3f8e23fde56fae3110be3ea24231a01222",
+      "5bf71f689fdedde04fab558e854a46a111704c2c7fed9408ee6f451ffa4cd7a8",
+      "a454c024a4d74ab824447a0e40140c063131832e5e0927f99bb0acd8e70fde38",
+      "4c347fbc1fd2044d6b0eb9cc95c47892392f91cad978334e666aedf45abe321c",
+      "83ca41461d048e928dfadf0a521772c8f0b9d851f9e01b703491050bb80a0099",
+      "b1c90189b53f8a243096cfc38a41f07268c701bea4c29534f9ef4a6d6721495b",
+      "cf610723f018f657985ebcd8369801d49e79152db511a2cf80f38762d2202286",
+      "ee491536340a279e28c007c2358635fa9a949420e57042d812d1efdb6e28af2f",
+      "f9133649adfd7e099791bc2a2f8dfbe56cce280be085cfff1bf25bda53faea1f",
+      "33541b0b4aa2d3c22f45d0ea8420cc987e017534e261e9aea409433d4d7826f6",
+      "ce1ff9ca3c412d23ae1589f06532534772a34dd9ff5dd20ad7b7be47c5032a9f",
+      "9bc9d280fb905ac0c6b250fd3b731432fcb04f78e5f7452371cafb82cb0e12cf",
+      "51ec3926a944f282e959b7779ae3c96a53f8103e845a12872b71376187e4d528",
+      "3bd23abbc23c55a46e490af7dc0989826abb5ca6567bc02f72013bb6c6107c08",
+      "0e61d1c11ef745725512bfcf85f87920dfd68fbe46fca1c5bdb99a2aec7b6a34",
+      "3b5434cf8728fcfc352c5006c8b3d4e4936375459850b16470fa4f62b630819c",
+      "88120d930e4cf90d14f21d60017354d18d37c5c47ab16814abfdb2ab4863593a",
+      "c02e10f54107c5061934013b5702a176a143b5c6d64ffd4b0afbc412faf1a351",
+      "32c389a8e8bdaf9a11cd86735ed2601cef2b6d40f7147ce13344c7fb74724fbe",
+      "9f074c0cb7574147fe7f6b5caa7f34be37edf3cba9f4ddc84c9d7d5c3b724834",
+      "c30a687540dfe72cfc5ba6e9354b453274423c03094478aa9683c975d587370b",
+      "bd0d24a2c7aa280d3464055a5fa01e8495646070010cfdf10aed9f687844592f",
+      "4f394f92b5a7ac169bd9d32cecd2df573184d5f8db754dda1504bb38feaf02b6",
+      "8af1ddeb77b67675b363da93e5e9e3cb205a534c7b84221fc4155bc74fa80633",
+      "1bcbef593c5e687e358f85ced8f894dbe79294b897b916144023fca07e724301"
+    ]
+  },
+  "budget": {
+    "student_fits": 2,
+    "teacher_fits": 0,
+    "warmup_fits": 0,
+    "teacher_queries": 0,
+    "gradient_forward_rows": 6873280,
+    "forward_calls": 6720,
+    "backward_calls": 6720,
+    "optimizer_updates": 6720,
+    "endpoint_R_C_scoring_rows": 73642,
+    "endpoint_R_C_scoring_calls": 36,
+    "endpoint_models": 2,
+    "extra_F_evaluation_rows": 0,
+    "intermediate_R_C_scoring_rows": 0,
+    "CPU_cost_calls": 0,
+    "reserved_score_rows": 0
+  },
+  "acceptance": {
+    "minimum_C_net_TP": 34,
+    "minimum_interaction_TP": 34,
+    "historical_full_C_net_TP": 5,
+    "max_fpr": 0.01,
+    "max_FP": {
+      "reference": 39,
+      "constraint": 78
+    },
+    "pauc_tolerance": 1e-12,
+    "require_R_TP_and_pauc_nondecrease": true,
+    "require_C_pauc_nondecrease": true,
+    "require_K_minus_H_FP_nonpositive": true,
+    "require_each_supported_family_TP_nondecrease": true,
+    "drop_largest_positive_feature_hash_remaining_net_TP": "strictly_positive",
+    "new_CPU_cost_gate": false,
+    "independent_confirmation": false
+  },
+  "automatic_expansion": false,
+  "automatic_retry": false,
+  "reserved_partitions_read": []
+}

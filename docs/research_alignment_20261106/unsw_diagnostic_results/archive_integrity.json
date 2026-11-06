@@ -1,0 +1,17 @@
+{
+  "outer_zip": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\TraceLight-ALL-2026-11-06.zip",
+  "outer_bytes": 3098394664,
+  "outer_sha256": "0782fe6a5db60d0d7b40d722f0ac130aa77b902fa191d30abb6c49681f75232b",
+  "outer_sha_verified": true,
+  "inner_zip": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\UNSW零拟合诊断分析_20261106\\received\\round11-unsw-diagnostic\\UNSW_DIAGNOSTIC_20261105T1626447421690000-30be6261.zip",
+  "inner_sha256": "13672655ccb44aab5fb1598c92b6c2d21f04e49bc43a5842eabd5feded983345",
+  "inner_sha_verified": true,
+  "inner_members": 125,
+  "payload_hashes_verified": 124,
+  "selected_outer_manifest_files_verified": [
+    "README.md",
+    "reports/UNSW-DIAGNOSTIC-SUMMARY-2026-11-06.md",
+    "round11-unsw-diagnostic/UNSW_DIAGNOSTIC_20261105T1626447421690000-30be6261.zip",
+    "round11-unsw-diagnostic/UNSW_DIAGNOSTIC_20261105T1626447421690000-30be6261.zip.sha256"
+  ]
+}

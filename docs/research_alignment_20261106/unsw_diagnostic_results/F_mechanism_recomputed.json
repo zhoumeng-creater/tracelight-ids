@@ -1,0 +1,213 @@
+{
+  "scope": "Saved F logits/gradients/cache only; no model loading/inference/fitting; no reserved data",
+  "sources_sha256": {
+    "fit-scores.parquet": "d8a8de7a12cbd8fd464b16122a4f12f8da3a02334b0ae67245c247c232c12c00",
+    "anchor-gradients.npz": "dd013b261ba2b363820f5dfda91272f07f531d836ed69cfe780ea40c9e9ada9a",
+    "gradient-batches.csv": "ce70845c2d051e8600f10357429350defa825e7761cfa72c21bcf842dda1de24",
+    "targets.npz": "3a966c623bbe17087efb53967ecfff02cce7eea216a6739a71ee583606c5e8bf",
+    "fit-identity.parquet": "55d370fc74c449083ccac807aa7da32ca0521fbbf5063693a9f3e0897a1c92b6"
+  },
+  "counts": {
+    "rows": 85916,
+    "patterns": 49507,
+    "parameters": 6625
+  },
+  "losses": {
+    "anchor": {
+      "hard_bce": 0.12515242533913287,
+      "mixed_bce": 0.12617521625554695,
+      "teacher_kl": 0.04026304281642922,
+      "target_kl": 0.0893568229061718,
+      "abs_q_error": 0.045731519595659506,
+      "abs_r_error": 0.07454582650542374
+    },
+    "H40": {
+      "hard_bce": 0.12348475236975753,
+      "mixed_bce": 0.1245679135204065,
+      "teacher_kl": 0.03885697419540374,
+      "target_kl": 0.0877495201710325,
+      "abs_q_error": 0.04504829597010715,
+      "abs_r_error": 0.07362366816187985
+    },
+    "K40": {
+      "hard_bce": 0.12352206917098832,
+      "mixed_bce": 0.12451671058862658,
+      "teacher_kl": 0.03851070548691968,
+      "target_kl": 0.0876983172392517,
+      "abs_q_error": 0.04514938595633407,
+      "abs_r_error": 0.07377117872681718
+    }
+  },
+  "pattern_bounds": {
+    "H": {
+      "minimum_bce": 0.0028998801712908457,
+      "target_entropy": 0.0,
+      "minimum_kl_conflict": 0.0028998801712908457
+    },
+    "K": {
+      "minimum_bce": 0.038211190129088635,
+      "target_entropy": 0.0368183933493743,
+      "minimum_kl_conflict": 0.0013927967797143365
+    },
+    "M": {
+      "minimum_bce": 0.05817962502853949,
+      "target_entropy": 0.05552825348284148,
+      "minimum_kl_conflict": 0.002651371545698007
+    }
+  },
+  "teacher_function": {
+    "hard_bce": 0.05463909958144497,
+    "mixed_bce": 0.06264272502276565
+  },
+  "gradient_geometry": {
+    "norms": {
+      "hard_bce": 0.10094499798588423,
+      "teacher_kl": 0.09888313591841648,
+      "class_mean_kl": 0.45779318064944924,
+      "mixed_bce": 0.10043957522789515
+    },
+    "hard_teacher_cosine": 0.9983212600119159,
+    "hard_mixed_cosine": 0.9999134180182285,
+    "hard_teacher_angle_degrees": 3.32039783765138,
+    "hard_mixed_angle_degrees": 0.7539707967959941,
+    "hard_teacher_dot": 0.009965001179890149,
+    "teacher_minus_hard_norm": 0.0061453094022923035,
+    "mixed_minus_hard_norm": 0.0014181465192943618,
+    "mixed_minus_hard_relative_to_hard_norm": 0.014048705211650706,
+    "mixed_minus_hard_projection_coefficient_on_hard": -0.005093060832320738,
+    "mixed_minus_hard_cosine_with_hard": -0.3625288420243185,
+    "instance_gradient_norm": 0.4620902388320437,
+    "class_mean_teacher_cosine": 0.06433991713949828,
+    "class_mean_hard_cosine": 0.044381094018291815,
+    "gradient_identity_l2_residual": 2.3398666988053662e-08,
+    "gradient_identity_tolerance": 1.1043957522789515e-06,
+    "mixed_hard_nonzero_sign_disagreements": 3502,
+    "mixed_hard_common_zero_coordinates": 728,
+    "sign_flip_hard_squared_norm_share": 5.1386644503568923e-08,
+    "sign_flip_mixed_squared_norm_share": 5.168843987862573e-07,
+    "sign_flip_abs_hard_gradient_median": 6.873131237761232e-09,
+    "reset_adam_gradient_term_algebra": {
+      "formula": "g/(abs(g)+1e-8)",
+      "hard_mixed_cosine": 0.2581343994976636,
+      "relative_difference": 1.407717180842077,
+      "scope": "Saved chunk1024 gradients only; no optimizer step, no model query, no common weight decay term. Not a reconstruction of original chunk2048 float32 accumulation or its parameter trajectory."
+    },
+    "class_mean_mixed_gradient_norm": 0.13385978695397058,
+    "class_mean_mixed_hard_cosine": 0.6151109483174947,
+    "real_vs_class_mean_mixed_gradient_difference_norm": 0.10663620957267073
+  },
+  "layer_geometry": [
+    {
+      "parameter": "0.weight",
+      "n": 6048,
+      "hard_norm": 0.08928860293955503,
+      "teacher_norm": 0.08774217069241094,
+      "mixed_norm": 0.08890966585892762,
+      "hard_teacher_cosine": 0.9985890501087542,
+      "hard_mixed_cosine": 0.999926869785444,
+      "correction_relative_to_hard_norm": 0.012792610581418387,
+      "hard_squared_norm_share": 0.7823884817515058
+    },
+    {
+      "parameter": "0.bias",
+      "n": 32,
+      "hard_norm": 0.027849562542691764,
+      "teacher_norm": 0.026893816863834217,
+      "mixed_norm": 0.027625677297350864,
+      "hard_teacher_cosine": 0.9993083326277892,
+      "hard_mixed_cosine": 0.9999651027812692,
+      "correction_relative_to_hard_norm": 0.011569804770445152,
+      "hard_squared_norm_share": 0.07611445604648126
+    },
+    {
+      "parameter": "2.weight",
+      "n": 512,
+      "hard_norm": 0.031938096522403314,
+      "teacher_norm": 0.03082166363486441,
+      "mixed_norm": 0.03166911401967627,
+      "hard_teacher_cosine": 0.9979417131601976,
+      "hard_mixed_cosine": 0.9998962781828724,
+      "correction_relative_to_hard_norm": 0.016632094029910293,
+      "hard_squared_norm_share": 0.10010331292750191
+    },
+    {
+      "parameter": "2.bias",
+      "n": 16,
+      "hard_norm": 0.01010518828401505,
+      "teacher_norm": 0.009647001318885627,
+      "mixed_norm": 0.009996718253447778,
+      "hard_teacher_cosine": 0.9984202805503275,
+      "hard_mixed_cosine": 0.9999217151007416,
+      "correction_relative_to_hard_norm": 0.01643502101404674,
+      "hard_squared_norm_share": 0.010021188061521288
+    },
+    {
+      "parameter": "4.weight",
+      "n": 16,
+      "hard_norm": 0.016926281975947064,
+      "teacher_norm": 0.016724555369217065,
+      "mixed_norm": 0.01685100268144176,
+      "hard_teacher_cosine": 0.9903586005455071,
+      "hard_mixed_cosine": 0.9994965405547105,
+      "correction_relative_to_hard_norm": 0.031972186576446834,
+      "hard_squared_norm_share": 0.02811600006586671
+    },
+    {
+      "parameter": "4.bias",
+      "n": 1,
+      "hard_norm": 0.005760556257371263,
+      "teacher_norm": 0.00575832699428247,
+      "mixed_norm": 0.005760042766894458,
+      "hard_teacher_cosine": 1.0,
+      "hard_mixed_cosine": 1.0,
+      "correction_relative_to_hard_norm": 8.913904384642247e-05,
+      "hard_squared_norm_share": 0.003256561147122947
+    }
+  ],
+  "batch_statistics": {
+    "n_batches": 84,
+    "negative_hard_teacher_cosine_batches": 1,
+    "hard_teacher_cosine_quantiles": {
+      "0": -0.7611955437057973,
+      "0.25": 0.9748057579365825,
+      "0.5": 0.9875920103586304,
+      "0.75": 0.9931846242278191,
+      "1": 0.9999333419085874
+    },
+    "cancellation": {
+      "hard_bce": 0.10876744757684252,
+      "teacher_kl": 0.2003159567240534,
+      "class_mean_kl": 0.3615303278870703,
+      "mixed_bce": 0.12181771571104259
+    }
+  },
+  "K_minus_H": {
+    "hard_bce": 3.7316801230785623e-05,
+    "mixed_bce": -5.1202931779917304e-05,
+    "teacher_kl": -0.0003462687084840599,
+    "target_kl": -5.120293178080548e-05,
+    "abs_q_error": 0.00010108998622691823,
+    "abs_r_error": 0.0001475105649373365
+  },
+  "improvement": {
+    "H40": {
+      "mixed_drop_from_anchor": 0.0016073027351404534,
+      "fraction_of_anchor_teacher_function_gap_closed": 0.025298909328950132,
+      "mixed_excess_above_pattern_bound": 0.08635672339131786,
+      "mixed_excess_above_teacher_function": 0.06192518849764085
+    },
+    "K40": {
+      "mixed_drop_from_anchor": 0.0016585056669203707,
+      "fraction_of_anchor_teacher_function_gap_closed": 0.026104842337185418,
+      "mixed_excess_above_pattern_bound": 0.08630552045953795,
+      "mixed_excess_above_teacher_function": 0.061873985565860934
+    }
+  },
+  "checks": {
+    "max_loss_error_vs_return": 6.800116025829084e-16,
+    "max_family_error_vs_return": 2.498001805406602e-16,
+    "identity_exact": true,
+    "targets_weights_exact": true,
+    "logits_float32_exactly_represented": true
+  }
+}
