@@ -1,0 +1,260 @@
+{
+  "checked_at": "2026-11-06",
+  "research_window": "2025-2026 methods only",
+  "scope": "Architecture and deployment cost design; no training, inference experiment or model-weight download performed.",
+  "official_backbone": {
+    "repository": "soda-inria/tabicl",
+    "commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+    "commit_date": "2026-10-27T20:09:25Z",
+    "model_checkpoint_name": "tabicl-classifier-v2-20260212.ckpt",
+    "checkpoint_downloaded": false,
+    "source_config_crosscheck": "Paper A.4 classification configuration agrees with constructor defaults.",
+    "files": [
+      {
+        "name": "classifier.py",
+        "path": "src/tabicl/_sklearn/classifier.py",
+        "lines": [
+          282,
+          305
+        ],
+        "claim": "8 estimators, caching off by default, v2 checkpoint",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_sklearn/classifier.py#L282"
+      },
+      {
+        "name": "tabicl.py",
+        "path": "src/tabicl/_model/tabicl.py",
+        "lines": [
+          615,
+          798
+        ],
+        "claim": "repr versus full KV paths",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/tabicl.py#L615"
+      },
+      {
+        "name": "embedding.py",
+        "path": "src/tabicl/_model/embedding.py",
+        "lines": [
+          773,
+          800
+        ],
+        "claim": "target-aware label insertion in cache-store path",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/embedding.py#L773"
+      },
+      {
+        "name": "embedding.py grouping",
+        "path": "src/tabicl/_model/embedding.py",
+        "lines": [
+          208,
+          244
+        ],
+        "claim": "same grouping keeps one group per feature",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/embedding.py#L208"
+      },
+      {
+        "name": "embedding.py CLS",
+        "path": "src/tabicl/_model/embedding.py",
+        "lines": [
+          862,
+          877
+        ],
+        "claim": "reserved CLS groups and query label omission",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/embedding.py#L862"
+      },
+      {
+        "name": "learning.py repr",
+        "path": "src/tabicl/_model/learning.py",
+        "lines": [
+          551,
+          608
+        ],
+        "claim": "repr contains added target embedding",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/learning.py#L551"
+      },
+      {
+        "name": "learning.py KV",
+        "path": "src/tabicl/_model/learning.py",
+        "lines": [
+          675,
+          734
+        ],
+        "claim": "cached ICL forward",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/learning.py#L675"
+      },
+      {
+        "name": "layers.py ISAB",
+        "path": "src/tabicl/_model/layers.py",
+        "lines": [
+          686,
+          738
+        ],
+        "claim": "column cache is projected inducing-state memory",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/layers.py#L686"
+      },
+      {
+        "name": "attention.py source length",
+        "path": "src/tabicl/_model/attention.py",
+        "lines": [
+          97,
+          128
+        ],
+        "claim": "QASSMax uses physical K length; custom mask bypasses FlashAttention3",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/attention.py#L97"
+      },
+      {
+        "name": "attention.py cached projections",
+        "path": "src/tabicl/_model/attention.py",
+        "lines": [
+          237,
+          259
+        ],
+        "claim": "cached path projects Q only",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/attention.py#L237"
+      },
+      {
+        "name": "kv_cache.py entries",
+        "path": "src/tabicl/_model/kv_cache.py",
+        "lines": [
+          19,
+          88
+        ],
+        "claim": "KV metadata container and transfer/concat boundary",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/kv_cache.py#L19"
+      },
+      {
+        "name": "kv_cache.py accounting",
+        "path": "src/tabicl/_model/kv_cache.py",
+        "lines": [
+          198,
+          328
+        ],
+        "claim": "cache modes, byte counting, slicing, transfers",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/kv_cache.py#L198"
+      },
+      {
+        "name": "inference.py no_grad",
+        "path": "src/tabicl/_model/inference.py",
+        "lines": [
+          1227,
+          1235
+        ],
+        "claim": "inference manager suppresses gradients",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_model/inference.py#L1227"
+      },
+      {
+        "name": "base.py cache dtype",
+        "path": "src/tabicl/_sklearn/base.py",
+        "lines": [
+          178,
+          209
+        ],
+        "claim": "upcasts cache when AMP disabled",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_sklearn/base.py#L178"
+      },
+      {
+        "name": "base.py serialization",
+        "path": "src/tabicl/_sklearn/base.py",
+        "lines": [
+          211,
+          293
+        ],
+        "claim": "weight exclusion and optional raw/preprocessed data removal",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_sklearn/base.py#L211"
+      },
+      {
+        "name": "preprocessing.py fit",
+        "path": "src/tabicl/_sklearn/preprocessing.py",
+        "lines": [
+          1026,
+          1088
+        ],
+        "claim": "retained X/y and fitted preprocessing",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_sklearn/preprocessing.py#L1026"
+      },
+      {
+        "name": "preprocessing.py test path",
+        "path": "src/tabicl/_sklearn/preprocessing.py",
+        "lines": [
+          1190,
+          1202
+        ],
+        "claim": "query-only transform after training data removal",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_sklearn/preprocessing.py#L1190"
+      }
+    ]
+  },
+  "papers": [
+    {
+      "id": "tabiclv2",
+      "year": 2026,
+      "title": "TabICLv2: A better, faster, scalable, and open tabular foundation model",
+      "url": "https://arxiv.org/abs/2602.11139",
+      "read_url": "https://arxiv.org/html/2602.11139v1",
+      "formal_publication": "https://proceedings.mlr.press/v306/qu26a.html",
+      "use": "Classification dimensions and 2026 method identity; implementation claims grounded separately in fixed source."
+    },
+    {
+      "id": "localized_tabiclv2",
+      "year": 2026,
+      "title": "Localized TabICLv2: Scaling Tabular In-Context Learning through k-NN",
+      "url": "https://arxiv.org/abs/2608.16429",
+      "read_url": "https://arxiv.org/html/2608.16429v1",
+      "status": "2026 workshop paper",
+      "author_implementation": "Not verified: no repository link found in paper; exact-title/author searches did not establish an official implementation.",
+      "use": "Query-specific retrieval tradeoff; repr-cache baseline and A100 evaluation do not establish full-KV CPU speedup."
+    },
+    {
+      "id": "qcoc",
+      "year": 2026,
+      "title": "Compile the Table: Query-Calibrated Operator Compression for Tabular In-Context Learning",
+      "url": "https://arxiv.org/abs/2610.11784",
+      "read_url": "https://arxiv.org/html/2610.11784v1",
+      "first_public": "2026-10-08",
+      "status": "Preprint",
+      "author_implementation": "Not verified: original article lacks implementation link; exact-title GitHub search found a third-party minimal package only.",
+      "use": "Joint KV prototypes, cluster multiplicity, original source count, anchored value fitting, one-time compilation cost."
+    }
+  ],
+  "third_party_not_official": [
+    {
+      "repository": "teddytennant/qcoc",
+      "commit": "bd4ef77039c6e6b615c15e67a5ccfd2b7325e2ee",
+      "url": "https://github.com/teddytennant/qcoc/tree/bd4ef77039c6e6b615c15e67a5ccfd2b7325e2ee",
+      "created_at": "2026-10-10T17:04:50Z",
+      "verified_claims": "README explicitly excludes scalable-softmax and OpenML, uses vanilla scaled-dot-product attention plus multiplicity bias.",
+      "author_affiliation_verified": false,
+      "adopted": false
+    }
+  ],
+  "derived_cost_example": {
+    "status": "Analytical calculation, not measurement",
+    "E": 1,
+    "N": 8192,
+    "M": 512,
+    "F": 42,
+    "G": 42,
+    "C": 4,
+    "I": 128,
+    "column_row_dimension": 128,
+    "icl_dimension": 512,
+    "Lc": 3,
+    "L": 12,
+    "H": 8,
+    "b": 4,
+    "full_stage3_KV_MiB": 384,
+    "compressed_stage3_KV_MiB": 24,
+    "log_mass_MiB": 0.1875,
+    "column_KV_MiB": 17.25,
+    "backbone_stage3_main_matrices_lower_bound_MiB": 96,
+    "row_repr_if_retained_MiB": 16,
+    "deployment_tensor_compression_upper_bound": 3.6180081855388813,
+    "omitted_costs": "Remaining backbone parameters, preprocessing, metadata, framework allocations, peak activations and serialization overhead decrease total compression ratio."
+  },
+  "primary_design": "CALIBRATION_AWARE_CONTEXT_DESIGN_20261106.md is authoritative for the main algorithm, notation, and validation protocol; this attachment covers source interfaces and costs.",
+  "proposed_architecture": "Frozen 2026 TabICLv2; accumulate source-state-specific, coordinate-wise squared margin-Jacobian differences g_i,d on the full KV cache; use this geometry for prototype assignment and coordinate-wise centers at the same M; apply QCOC's original closed-form value fit; independent final normal calibration; no deployed N-row bank. QCOC plus CRT value-only adaptation is a comparator, not the main algorithm.",
+  "unresolved_before_implementation": [
+    "No verified official QCOC/Localized implementation; formula-level adaptation must not be described as executing author code.",
+    "Actual checkpoint tensor inventory and CPU timings not measured.",
+    "Full-cache margin-Jacobian accumulation and the value-only training comparator require a differentiable Stage3 path bypassing official inference no_grad wrappers.",
+    "Custom mass bias changes attention backend; matched backend and official fastest full-KV references both required."
+  ]
+}

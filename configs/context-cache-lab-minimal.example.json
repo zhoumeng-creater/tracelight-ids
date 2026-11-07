@@ -1,0 +1,51 @@
+{
+  "protocol": "tracelight-context-csv-comparison-v1",
+  "data_kind": "development",
+  "schema": {
+    "features": [
+      "duration",
+      "flow_bytes",
+      "protocol"
+    ],
+    "numeric": [
+      "duration",
+      "flow_bytes"
+    ],
+    "categorical": [
+      "protocol"
+    ],
+    "label_column": "label",
+    "label_mapping": null,
+    "id_column": "sample_id",
+    "group_column": "session_id",
+    "family_column": "attack_family"
+  },
+  "files": {
+    "support": {
+      "path": "REPLACE/support.csv",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rows": 8192
+    },
+    "calibration": {
+      "path": "REPLACE/normal_calibration.csv",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rows": 5000
+    },
+    "evaluation": {
+      "path": "REPLACE/development_evaluation.csv",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "rows": 10000
+    }
+  },
+  "checkpoint": {
+    "path": "REPLACE/tabicl-classifier-v2-20260212.ckpt",
+    "sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0"
+  },
+  "slots": 512,
+  "alpha": 0.01,
+  "build_device": "cuda",
+  "query_batch_size": 128,
+  "query_chunk_size": 256,
+  "threads": 1,
+  "seed": 20261107
+}

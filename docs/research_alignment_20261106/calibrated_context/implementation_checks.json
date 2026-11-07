@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-06",
+  "stage": "implementation_and_synthetic_validation",
+  "upstream_commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+  "real_pretrained_weights_loaded": false,
+  "real_dataset_rows_read": false,
+  "official_test_read": false,
+  "training_or_optimizer_updates": false,
+  "formal_hardware_benchmark": false,
+  "synthetic_model": "official tiny architecture with random nonzero weights and active QASSMax query modulation",
+  "environment": {
+    "torch": "2.6.0+cu126",
+    "execution_device": "cpu",
+    "pythonpath": ["src", "local/vendor/tabicl/src"]
+  },
+  "pytest": {
+    "command": "python -m pytest -q tests/test_weighted_context_cache.py tests/test_context_compiler.py tests/test_tabicl_cache_adapter.py tests/test_context_cache_cli.py",
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds_test_run_only": 10.20
+  },
+  "ruff": {
+    "command": "python -m ruff check src/ids/context_cache tests/test_weighted_context_cache.py tests/test_context_compiler.py tests/test_tabicl_cache_adapter.py tests/test_context_cache_cli.py",
+    "passed": true
+  },
+  "diff_check_passed": true,
+  "synthetic_cli": {
+    "command": "python -m ids.context_cache --tabicl-source local/vendor/tabicl synthetic-check --output local/context-cache-synthetic-20261106-a",
+    "passed": true,
+    "report": "implementation_synthetic_report.json"
+  },
+  "implemented_scope": [
+    "native prepared numeric tensor input; normal=0, attack=1; no sklearn ensemble permutations",
+    "official full KV extraction and per-layer full-support query capture",
+    "independent weighted Stage 3 with original source N and true mass",
+    "ordinary QCOC joint KV and anchored value fit",
+    "weights plus column/ICL cache export; fresh-process restoration",
+    "lab compile and native uncalibrated prediction entry points"
+  ],
+  "remaining_research_stages": [
+    "raw CSV preprocessing artifact integration and independent data-role protocol",
+    "real pretrained-model full-versus-QCOC development comparison in laboratory",
+    "source-state calibration-margin geometry and same-label V-only comparison",
+    "independent final risk calibration and evaluation; whole-system resource measurement"
+  ]
+}

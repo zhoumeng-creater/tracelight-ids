@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-07",
+  "scope": "delivery synthetic checks; no real CSV or pretrained checkpoint loaded",
+  "pytest": {
+    "passed": 120,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 19.75,
+    "output": "120 passed in 19.75s",
+    "command": "python -m pytest -q tests/test_weighted_context_cache.py tests/test_context_compiler.py tests/test_tabicl_cache_adapter.py tests/test_context_cache_cli.py tests/test_context_csv_preprocessing.py tests/test_context_calibration.py tests/test_context_csv_workflow.py tests/test_context_lab_data.py"
+  },
+  "ruff": "All checks passed!",
+  "raw_csv_cold_process_report": "delivery_synthetic_report.json",
+  "source_files_matched": 12,
+  "lab_schema_matches_preparer": true,
+  "power_shell_setup_parse": "passed",
+  "power_shell_run_guide_blocks_parsed": 7,
+  "power_shell_argument_forwarding_with_spaces": "passed",
+  "dependency_resolution": {
+    "platform": "Windows CPython 3.12",
+    "mode": "pip dry-run ignore-installed only-binary",
+    "pinned_packages": 41,
+    "requirements_sha256": "c1704a6b2ef0274bb0c09888cc3ec0707b268364c617e04ec3d3913c651abd3d",
+    "local_report_sha256": "655881c82a5c06f3d30505f27ff151ea8e64f9e96034490df0f5d552377c058b"
+  },
+  "lab_environment_install_executed_locally": false,
+  "real_model_comparison_executed": false,
+  "official_dataset_bytes_read": "ZIP directory, feature-description and checksum manifest only; no raw CSV header or rows",
+  "pretrained_checkpoint_downloaded_locally": false
+}

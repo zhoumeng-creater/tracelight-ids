@@ -1,0 +1,4 @@
+# Optional pinned TabICLv2 implementation, separate from the historical lock.
+# Install in the lab's dedicated context-cache environment with its CPU/CUDA
+# PyTorch wheel. Local source-checkout use is documented and needs no install.
+tabicl @ git+https://github.com/soda-inria/tabicl.git@d83091b845a8c5f7c087bd54964f755a9e560f45

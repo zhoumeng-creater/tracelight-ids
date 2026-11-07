@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-07",
+  "scope": "local synthetic engineering verification only",
+  "pytest": {
+    "command": "python -m pytest -q tests/test_weighted_context_cache.py tests/test_context_compiler.py tests/test_tabicl_cache_adapter.py tests/test_context_cache_cli.py tests/test_context_csv_preprocessing.py tests/test_context_calibration.py tests/test_context_csv_workflow.py",
+    "pythonpath": "src;local/vendor/tabicl/src",
+    "passed": 110,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 22.01,
+    "output": "110 passed in 22.01s"
+  },
+  "ruff": {
+    "command": "python -m ruff check src/ids/context_cache tests/test_weighted_context_cache.py tests/test_context_compiler.py tests/test_tabicl_cache_adapter.py tests/test_context_cache_cli.py tests/test_context_csv_preprocessing.py tests/test_context_calibration.py tests/test_context_csv_workflow.py",
+    "output": "All checks passed!"
+  },
+  "synthetic_csv": {
+    "command": "python -m ids.context_cache --tabicl-source local/vendor/tabicl synthetic-csv-check --output local/context-csv-synthetic-20261107-b",
+    "exit_code": 0,
+    "report": "synthetic_csv_report.json",
+    "full_fresh_process_scores_and_decisions_equal": true,
+    "qcoc_fresh_process_scores_and_decisions_equal": true
+  },
+  "environment": {
+    "device": "cpu",
+    "torch": "2.6.0+cu126",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.5.1",
+    "scipy": "1.14.0",
+    "joblib": "1.4.2",
+    "pytest": "8.3.4",
+    "ruff": "0.9.4"
+  },
+  "real_data_read": false,
+  "pretrained_checkpoint_downloaded_or_loaded": false,
+  "real_model_comparison_executed": false
+}

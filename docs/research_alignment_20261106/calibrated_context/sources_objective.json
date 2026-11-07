@@ -1,0 +1,108 @@
+{
+  "checked_at": "2026-11-06",
+  "scope": "Research design only; no training, checkpoint loading or old-test access.",
+  "sources": [
+    {
+      "id": "tabiclv2",
+      "title": "TabICLv2: A Better, Faster, Scalable, and Open Tabular Foundation Model",
+      "year": 2026,
+      "status": "ICML 2026 main conference",
+      "url": "https://proceedings.mlr.press/v306/qu26a.html",
+      "fulltext": "https://arxiv.org/html/2602.11139v1",
+      "read": "official proceedings abstract; architecture and target-aware embedding sections",
+      "use": "Frozen backbone and its three-stage/cache semantics",
+      "not_claimed": "Local IDS performance or hardware fit"
+    },
+    {
+      "id": "localized_tabiclv2",
+      "title": "Localized TabICLv2: Scaling Tabular In-Context Learning through k-NN",
+      "year": 2026,
+      "first_posted": "2026-08-17",
+      "status": "arXiv authors state accepted at FMSD workshop @ ICML 2026; not ICML main conference",
+      "url": "https://arxiv.org/abs/2608.16429",
+      "fulltext": "https://arxiv.org/html/2608.16429v1",
+      "read": "method, cache implementation, evaluation protocol, k-sensitivity",
+      "use": "Frozen Stage 1/2 representations, Stage 2 cosine retrieval, Stage 3 localized inference",
+      "not_claimed": "98.64% accuracy retention implies low-FPR retention; reported speedups transfer locally",
+      "current_role": "Historical retrieval-design comparison; not adopted by the current KV prototype algorithm."
+    },
+    {
+      "id": "vip_cop",
+      "title": "VIP-COp: Black-box Context Optimization for Tabular Foundation Models",
+      "year": 2026,
+      "first_posted": "2026-05-13",
+      "version": "v2 2026-09-29",
+      "status": "preprint; no main-conference acceptance verified",
+      "url": "https://arxiv.org/abs/2605.12904",
+      "fulltext": "https://arxiv.org/html/2605.12904v2",
+      "read": "problem statement, additive-surrogate selection, global context semantics, updated TabICLv2 evaluation scope",
+      "use": "Nearest black-box hard-context optimizer and strong same-objective comparator",
+      "not_claimed": "Only v1/TabPFN results exist; validation AUROC is same as calibrated TPR",
+      "current_role": "Historical retrieval-design comparison; not adopted by the current KV prototype algorithm."
+    },
+    {
+      "id": "crumb",
+      "title": "CRUMB: Efficient Prior Fitted Network Inference via Distributionally Matched Context Batching",
+      "year": 2026,
+      "first_posted": "2026-06-09",
+      "status": "preprint",
+      "url": "https://arxiv.org/abs/2606.11473",
+      "fulltext": "https://arxiv.org/html/2606.11473v1",
+      "read": "method equations 2-3 and batched inference",
+      "use": "Distinguish query-batch-dependent distribution matching from frozen-bank selection",
+      "not_claimed": "MMD or low average distribution discrepancy controls normal-tail risk",
+      "current_role": "Historical retrieval-design comparison; not adopted by the current KV prototype algorithm."
+    },
+    {
+      "id": "crt",
+      "title": "Conformal Risk Training: End-to-End Optimization of Conformal Risk Control",
+      "year": 2025,
+      "first_posted": "2025-10-09",
+      "status": "NeurIPS 2025 main conference",
+      "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/6559542f75b4452ebaaf82094c7defb7-Abstract-Conference.html",
+      "fulltext": "https://proceedings.neurips.cc/paper_files/paper/2025/file/6559542f75b4452ebaaf82094c7defb7-Paper-Conference.pdf",
+      "read": "CORC theorem special case, algorithm 2, pseudo-calibration and fresh final calibration",
+      "use": "Normal-threshold-centered utility, development pseudo-calibration and fresh final calibration; strong V-only task-adaptation comparator.",
+      "not_claimed": "High-probability class-conditional deployment FPR guarantee; the original image task directly proves IDS performance"
+    },
+    {
+      "id": "taco",
+      "title": "End-to-End Compression for Tabular Foundation Models",
+      "year": 2026,
+      "status": "ICML 2026 main conference",
+      "url": "https://proceedings.mlr.press/v306/zabergja26a.html",
+      "read": "official abstract only",
+      "use": "Identify latent compression as competing method family, not a required module",
+      "not_claimed": "Implementation reviewed or local effectiveness established",
+      "current_role": "Historical latent-compression comparison; not adopted by the current KV prototype algorithm."
+    },
+    {
+      "id": "qcoc",
+      "title": "Compile the Table: Query-Calibrated Operator Compression for Tabular In-Context Learning",
+      "year": 2026,
+      "first_posted": "2026-10-08",
+      "status": "arXiv preprint; no peer-reviewed acceptance verified",
+      "url": "https://arxiv.org/abs/2610.11784",
+      "fulltext": "https://arxiv.org/html/2610.11784v1",
+      "read": "Sections 3.1-3.4; Appendix C deterministic farthest-point initialization and 15 Lloyd iterations; Appendix F iterative V-only centered-logit refinement; serving and compilation boundaries",
+      "use": "Primary cache compiler and nearest V-only adaptation prior; proposed change is source-state-specific calibrated-margin diagonal prototype cost",
+      "not_claimed": "Novelty of reusable KV, preserving counts/N, or V-only refinement"
+    }
+  ],
+  "new_design_claim": "Primary candidate: source-state-specific diagonal joint-KV costs from normal-threshold-centered decision Jacobians, with equal attack weights, cost-specific assignments and coordinate centroids, followed by QCOC anchored closed-form value fitting. Same source seed IDs, at most 15 iterations, same slots, original N and exact source mass. Proposed; no real-model validation.",
+  "rejected_simplification": "Averaging the diagonal Jacobian squares over source index into one shared head metric failed an exact six-partition synthetic example. It merged critical rare states just as ordinary normalized joint-KV clustering did. This is retained as negative design evidence, not tuned away.",
+  "synthetic_evidence": {
+    "script": "docs/research_alignment_20261106/calibrated_context/geometry_reference.py",
+    "results": "docs/research_alignment_20261106/calibrated_context/geometry_reference_results.json",
+    "verified_by": "Parent agent executed the pure synthetic check; this agent inspected code and stored results.",
+    "ordinary_and_shared_metric_tp": 0,
+    "source_specific_metric_tp": 1000,
+    "fp_in_both": 0,
+    "scope": "One scalar-output attention example and exhaustive 4-to-3 partition comparison; not full TabICLv2, QCOC value-fit evaluation or a guarantee for finite-iteration Lloyd optimization. Derivatives use individual source states; grouped duplicates are divided by their mass before sensitivity accumulation."
+  },
+  "files_touched": [
+    "objective_and_novelty.md",
+    "sources_objective.json"
+  ],
+  "historical_retrieval_alternative": "The retrieval-bank selection design is historical and inactive; it is not part of the current source-state-specific KV prototype design."
+}

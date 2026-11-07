@@ -1,0 +1,65 @@
+{
+  "stage": "raw_csv_synthetic_integration",
+  "data_kind": "synthetic",
+  "weights": "random_tiny_official_architecture_not_pretrained",
+  "support_rows": 32,
+  "normal_calibration_rows": 199,
+  "evaluation_rows": 80,
+  "slots": 4,
+  "alpha": 0.01,
+  "candidate_count": 2,
+  "cold_checks": {
+    "full": {
+      "fresh_process_raw_csv_scores_equal": true,
+      "fresh_process_registered_decisions_equal": true,
+      "files_required": [
+        "deployment.json",
+        "model.pt",
+        "preprocessor.joblib",
+        "threshold.json"
+      ]
+    },
+    "qcoc": {
+      "fresh_process_raw_csv_scores_equal": true,
+      "fresh_process_registered_decisions_equal": true,
+      "files_required": [
+        "deployment.json",
+        "model.pt",
+        "preprocessor.joblib",
+        "threshold.json"
+      ]
+    }
+  },
+  "raw_text_label_mapping": {
+    "BENIGN": 0,
+    "synthetic_attack": 1
+  },
+  "removed_support_constant": true,
+  "different_model_bindings": true,
+  "each_threshold_uses_own_scores": {
+    "full": "4b30bdb13a56dca93998b0438317ea50ec7ad90963346e95fd08cc2523df136b",
+    "qcoc": "1eee5e886fc3d4f3caca5287d95a7b36d0ce70bc3695bfcb2b087e3e3cc682ed"
+  },
+  "nontrivial_thresholds": {
+    "full": true,
+    "qcoc": true
+  },
+  "source_snapshot": {
+    "source_files_sha256": {
+      "__init__.py": "9c09432e86f5fc322d94142eea50bfa8cf8b00b0bf7fb4ec8227eb4de651e03b",
+      "__main__.py": "8ba62397164f229a0d8554767d43a232a3a6f533ddd2adedcf1026e73ce1353f",
+      "attention.py": "c89f76222851a67f98b678de5cfb9f2ed126dc038b406d7cf435d9ea3daf35cb",
+      "cache.py": "4d4d66fa7aef1b3f04e0f37204f57c699fecd534643817289b564197606cf0f0",
+      "calibration.py": "6f0d335b30576176e4f602cfcdee7d12f56817ffb0a14814642fb35518772775",
+      "compiler.py": "b8f1c2dbf05fd5fc180e53c29216e03ec95b87e191ada8214d461eecadae22fa",
+      "csv_synthetic.py": "cb64d0f72b8f146a10587ccb9a854b8f28dcec6262e8a8ba8ada1a2cf5e12903",
+      "csv_workflow.py": "6700cbbc17f2bbaed3c0ee1921b5fd8ccee430343810f66a61b8ea6aa23d3eed",
+      "lab_data.py": "c8a14e12f78b69c913617d543fa8c98404bdd87b056f4aefdd0dc46fcf288e98",
+      "preprocessing.py": "82e38b87024bca02bad4c1d7c4fc3874af7fb37d86e3c119297d2b50f19d61a3",
+      "tabicl_adapter.py": "1faab61d9f4807e3385f214832eec66acf98427497f9d40d76cfa32652c9bf0e",
+      "upstream.py": "a5bcf65ed50092592fe2e877322f4624d4a015a7b0e2a6d3d2ba3f725d9a84f1"
+    },
+    "combined_sha256": "ca0a927f20b3f51cfaa9e48e183b49fbefa783798d6b77a0b974c289d4830e5d"
+  },
+  "scope": "CSV, calibration, package and paired-report engineering verification; no IDS result"
+}

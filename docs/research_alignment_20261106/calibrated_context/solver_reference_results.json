@@ -1,0 +1,825 @@
+{
+  "scope": "Pure synthetic 15-round Lloyd solver audit; no V-fit or real model.",
+  "source_states": {
+    "keys": [
+      [
+        5.0,
+        0.0
+      ],
+      [
+        -5.0,
+        0.0
+      ],
+      [
+        0.0,
+        -8.0
+      ],
+      [
+        0.0,
+        -12.0
+      ]
+    ],
+    "values": [
+      0.0,
+      1.0,
+      -100.0,
+      -120.0
+    ],
+    "masses": [
+      1,
+      1,
+      49,
+      49
+    ]
+  },
+  "scales": [
+    5.215361924162119,
+    18.366434057813184
+  ],
+  "initialization": {
+    "euclidean": [
+      {
+        "selected_before": [
+          0
+        ],
+        "candidate_priorities": {
+          "1": 3.679435080437049,
+          "2": 32.91698084107979,
+          "3": 48.901922999390194
+        },
+        "chosen": 3
+      },
+      {
+        "selected_before": [
+          0,
+          3
+        ],
+        "candidate_priorities": {
+          "1": 3.679435080437049,
+          "2": 1.774032174819662
+        },
+        "chosen": 1
+      }
+    ],
+    "source_weighted": [
+      {
+        "selected_before": [
+          0
+        ],
+        "candidate_priorities": {
+          "1": 1.0128628277151148,
+          "2": 0.0002527338984145067,
+          "3": 1.218937599148383e-07
+        },
+        "chosen": 1
+      },
+      {
+        "selected_before": [
+          0,
+          1
+        ],
+        "candidate_priorities": {
+          "2": 0.0002527338984145067,
+          "3": 1.218937599148383e-07
+        },
+        "chosen": 2
+      }
+    ]
+  },
+  "cases": {
+    "ordinary_euclidean_init": {
+      "seeds": [
+        0,
+        3,
+        1
+      ],
+      "centers": [
+        [
+          0.958706236059213,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.9174124721184262,
+          -5.9891865592278855
+        ],
+        [
+          -0.958706236059213,
+          0.0,
+          0.054447150538435324
+        ]
+      ],
+      "assignments": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "stable": true,
+      "history": [
+        {
+          "round": 1,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 86.92757656616344,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 2,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 3,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 4,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 5,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 6,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 7,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 8,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 9,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 10,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 11,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 12,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 13,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 14,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        },
+        {
+          "round": 15,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 43.46378828308171,
+          "after_centroid": 43.46378828308171
+        }
+      ],
+      "objective": 43.46378828308171,
+      "source_groups": [
+        [
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "output_keys": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          -10.0
+        ],
+        [
+          -5.0,
+          0.0
+        ]
+      ],
+      "output_values": [
+        0.0,
+        -109.99999999999999,
+        0.9999999999999999
+      ],
+      "output_masses": [
+        1,
+        98,
+        1
+      ],
+      "evaluation_before_V_fit": {
+        "common_score": -109.9998976186206,
+        "rare_score": -0.003251981956189787,
+        "attack_score": 0.9966272488602587,
+        "threshold": -0.003251981956189787,
+        "fp": 0,
+        "tp": 1000
+      }
+    },
+    "state_metric_euclidean_init": {
+      "seeds": [
+        0,
+        3,
+        1
+      ],
+      "centers": [
+        [
+          0.958706236059213,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.534187179503814,
+          -5.9891865592278855
+        ],
+        [
+          -0.958706236059213,
+          0.0,
+          0.054447150538435324
+        ]
+      ],
+      "assignments": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "stable": true,
+      "history": [
+        {
+          "round": 1,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 4.0026288864418525e-09,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 2,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 3,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 4,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 5,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 6,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 7,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 8,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 9,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 10,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 11,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 12,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 13,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 14,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 15,
+          "assignments": [
+            0,
+            2,
+            1,
+            1
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        }
+      ],
+      "objective": 1.3422821192771736e-12,
+      "source_groups": [
+        [
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "output_keys": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          0.0,
+          -8.001341400521866
+        ],
+        [
+          -5.0,
+          0.0
+        ]
+      ],
+      "output_values": [
+        0.0,
+        -109.99999999999999,
+        0.9999999999999999
+      ],
+      "output_masses": [
+        1,
+        98,
+        1
+      ],
+      "evaluation_before_V_fit": {
+        "common_score": -109.99924451680093,
+        "rare_score": -0.024281814051089347,
+        "attack_score": 0.9754062539108372,
+        "threshold": -0.024281814051089347,
+        "fp": 0,
+        "tp": 1000
+      }
+    },
+    "state_metric_source_weighted_init": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "centers": [
+        [
+          0.958706236059213,
+          0.0,
+          0.0
+        ],
+        [
+          -0.958706236059213,
+          0.0,
+          0.054447150538435324
+        ],
+        [
+          0.0,
+          -1.534187179503814,
+          -5.9891865592278855
+        ]
+      ],
+      "assignments": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "stable": true,
+      "history": [
+        {
+          "round": 1,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3427324047642928e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 2,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 3,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 4,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 5,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 6,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 7,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 8,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 9,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 10,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 11,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 12,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 13,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 14,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        },
+        {
+          "round": 15,
+          "assignments": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "before_centroid": 1.3422821192771736e-12,
+          "after_centroid": 1.3422821192771736e-12
+        }
+      ],
+      "objective": 1.3422821192771736e-12,
+      "source_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "output_keys": [
+        [
+          5.0,
+          0.0
+        ],
+        [
+          -5.0,
+          0.0
+        ],
+        [
+          0.0,
+          -8.001341400521866
+        ]
+      ],
+      "output_values": [
+        0.0,
+        0.9999999999999999,
+        -109.99999999999999
+      ],
+      "output_masses": [
+        1,
+        1,
+        98
+      ],
+      "evaluation_before_V_fit": {
+        "common_score": -109.99924451680093,
+        "rare_score": -0.024281814051089347,
+        "attack_score": 0.9754062539108372,
+        "threshold": -0.024281814051089347,
+        "fp": 0,
+        "tp": 1000
+      }
+    }
+  },
+  "criterion_exhaustive_best_merge": [
+    2,
+    3
+  ],
+  "important_limit": "Source-weighted initialization is an explicit algorithm change. This toy does not establish global convergence, real-model utility, or utility after anchored V-fit."
+}

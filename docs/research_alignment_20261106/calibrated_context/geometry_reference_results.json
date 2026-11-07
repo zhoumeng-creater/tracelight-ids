@@ -1,0 +1,140 @@
+{
+  "scope": "constructed mathematical example; no IDS data, TabICLv2 weights, or runtime benchmark",
+  "source_states": {
+    "keys": [
+      [
+        5.0,
+        0.0
+      ],
+      [
+        -5.0,
+        0.0
+      ],
+      [
+        0.0,
+        -8.0
+      ],
+      [
+        0.0,
+        -12.0
+      ]
+    ],
+    "values": [
+      0.0,
+      1.0,
+      -100.0,
+      -120.0
+    ],
+    "masses": [
+      1,
+      1,
+      49,
+      49
+    ]
+  },
+  "normalized_diagonal_metric": [
+    1.0842363012483865e-05,
+    1.0431071757779512e-05,
+    1.0
+  ],
+  "per_source_state_diagonal_metrics": [
+    [
+      0.0034273421001564546,
+      0.0034823632587953754,
+      337.188587003065
+    ],
+    [
+      0.0036094103584541834,
+      0.0035521066283193746,
+      337.188587003065
+    ],
+    [
+      5.611368612940193e-06,
+      1.3886671646839081e-10,
+      0.0
+    ],
+    [
+      2.7062706684007475e-09,
+      4.658459363467955e-14,
+      0.0
+    ]
+  ],
+  "same_three_slot_comparison": {
+    "full": {
+      "common_score": -119.64024621339675,
+      "rare_score": -0.01127185946727518,
+      "attack_score": 0.9885245881616341,
+      "threshold": -0.01127185946727518,
+      "fp": 0,
+      "tp": 1000
+    },
+    "ordinary_geometry_merge": [
+      0,
+      1
+    ],
+    "ordinary_geometry_result": {
+      "common_score": -119.64024621339675,
+      "rare_score": -0.3371258921655568,
+      "attack_score": -0.3371258921655568,
+      "threshold": -0.3371258921655568,
+      "fp": 0,
+      "tp": 0
+    },
+    "rejected_shared_head_metric_merge": [
+      0,
+      1
+    ],
+    "calibration_geometry_merge": [
+      2,
+      3
+    ],
+    "calibration_geometry_result": {
+      "common_score": -109.99924451680093,
+      "rare_score": -0.024281814051089347,
+      "attack_score": 0.9754062539108374,
+      "threshold": -0.024281814051089347,
+      "fp": 0,
+      "tp": 1000
+    },
+    "ordinary_distortions": {
+      "(0, 1)": 1.8397175402185244,
+      "(0, 2)": 32.25864122425819,
+      "(0, 3)": 47.92388453940239,
+      "(1, 2)": 32.84258689815991,
+      "(1, 3)": 48.6240383076129,
+      "(2, 3)": 43.46378828308172
+    },
+    "shared_metric_distortions": {
+      "(0, 1)": 0.0015021769152387026,
+      "(0, 2)": 29.0520573961227,
+      "(0, 3)": 41.834977836120785,
+      "(1, 2)": 29.636003070024408,
+      "(1, 3)": 42.53513160433129,
+      "(2, 3)": 29.05217390735117
+    },
+    "state_metric_distortions": {
+      "(0, 1)": 0.506259741913667,
+      "(0, 2)": 0.00023396540752495246,
+      "(0, 3)": 1.2188904437446206e-07,
+      "(1, 2)": 0.00023484512514018223,
+      "(1, 3)": 1.218892822301215e-07,
+      "(2, 3)": 1.3422821192771736e-12
+    }
+  },
+  "value_only_cannot_recover": true,
+  "gradient_check": {
+    "analytic": 0.00023402293187437724,
+    "finite_difference": 0.00023402292881335993
+  },
+  "tail_mse_counterexample": {
+    "normal_mse": 0.00125,
+    "before_tp": 1000,
+    "after_tp": 0
+  },
+  "common_shift_preserves_decisions": true,
+  "multiplicity": {
+    "correct": 0.01,
+    "omitted": 0.5
+  },
+  "ties_and_insufficient_calibration_checked": true
+}
