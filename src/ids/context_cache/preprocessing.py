@@ -1,16 +1,20 @@
-"""Support-fitted, single-view preprocessing from pinned TabICLv2 (2026).
+"""Support-fitted CSV preprocessing around pinned TabICLv2 (2026).
 
 The transformation chain is the official TransformToNumerical, constant-feature
 filter, and PreprocessingPipeline(normalization_method='none'). No ensemble,
 feature permutation or class permutation is created. This 'none' option still
 uses the official standard scaling and outlier handling. Pickled state files
 are trusted project artifacts; verify their registered SHA before loading.
+The opt-in NF-v3 profile preserves four integer identifiers without a vocabulary,
+constant-column removal or clipping. It is an input-contract repair, not a claim
+that numerical identifier distances express application-protocol semantics.
 """
 
 from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
+from decimal import Decimal, InvalidOperation
 import hashlib
 import importlib
 from pathlib import Path
@@ -28,6 +32,16 @@ _PREPROCESSING_FILES = {
     "sklearn_utils.py": "e5639073a9c80bcaf13c1b59de424be76f17d4e66418f74ff0c41840920d54b2",
 }
 _FORMAT = "tracelight-tabicl-csv-preprocessor-v1"
+_PROTECTED_FORMAT = "tracelight-tabicl-csv-preprocessor-v2"
+OFFICIAL_PROFILE = "official_single_view_v1"
+PROTECTED_IDS_PROFILE = "nf_v3_protected_ids_v2"
+PROTECTED_ID_DOMAINS = {
+    "L4_SRC_PORT": (0, 65535),
+    "L4_DST_PORT": (0, 65535),
+    "PROTOCOL": (0, 255),
+    # An explicit project acceptance domain, not a claimed publisher upper bound.
+    "L7_PROTO": (0, 65535),
+}
 
 
 def require_pinned_preprocessing():
@@ -232,12 +246,87 @@ def read_csv(path, schema, require_label=True):
 class CSVPreprocessor:
     """Fit official transform state on support rows; transform every later role."""
 
-    def __init__(self, schema):
+    def __init__(self, schema, profile=OFFICIAL_PROFILE):
         self.schema = schema if isinstance(schema, CSVSchema) else CSVSchema.from_dict(schema)
+        if profile not in (OFFICIAL_PROFILE, PROTECTED_IDS_PROFILE):
+            raise ValueError(f"unknown preprocessing profile: {profile}")
+        self.profile = profile
+        if profile == PROTECTED_IDS_PROFILE and set(self.schema.categorical) != set(PROTECTED_ID_DOMAINS):
+            raise ValueError("protected-ID profile requires exactly the four NF-v3 identifier categoricals")
+
+    def _protected_ids(self, features):
+        """Canonical integer identity; Decimal prevents tiny fractions rounding in."""
+        output = np.empty((len(features), len(self.schema.categorical)), dtype=np.float64)
+        for index, name in enumerate(self.schema.categorical):
+            lower, upper = PROTECTED_ID_DOMAINS[name]
+            for row_index, value in enumerate(features[name]):
+                try:
+                    number = Decimal(str(value))
+                    valid = (number.is_finite() and number == number.to_integral_value()
+                             and lower <= number <= upper)
+                except (InvalidOperation, ValueError, TypeError):
+                    valid = False
+                if not valid:
+                    raise ValueError(f"protected ID {name} must be a nonmissing integer in [{lower}, {upper}]")
+                output[row_index, index] = int(number)
+        return output
+
+    def _verify_protected_domains(self):
+        """Check the actual fitted affine transform over every accepted integer."""
+        evidence = {}
+        for index, name in enumerate(self.schema.categorical):
+            lower, upper = PROTECTED_ID_DOMAINS[name]
+            domain = np.arange(lower, upper + 1, dtype=np.float64)
+            encoded = ((domain - self.protected_mean_[index]) / self.protected_scale_[index]).astype(np.float32)
+            reconstructed = encoded.astype(np.float64) * self.protected_scale_[index] + self.protected_mean_[index]
+            unique = np.isfinite(encoded).all() and np.unique(encoded).size == domain.size
+            recoverable = np.array_equal(np.rint(reconstructed), domain)
+            if not unique or not recoverable:
+                raise ValueError(f"protected ID {name} loses identity after FP32 conversion")
+            evidence[name] = {"domain": [lower, upper], "domain_size": int(domain.size),
+                              "fp32_unique": True, "rounded_inverse_exact": True,
+                              "max_inverse_absolute_error": float(np.max(np.abs(reconstructed - domain)))}
+        self.protected_verification_ = evidence
+
+    def _fit_protected(self, features, official):
+        identifiers = self._protected_ids(features)
+        self.protected_mean_ = identifiers.mean(axis=0)
+        standard_deviation = identifiers.std(axis=0)
+        self.protected_scale_ = np.where(standard_deviation > 0, standard_deviation, 1.0)
+        self.protected_support_constant_ = standard_deviation == 0
+        self._verify_protected_domains()
+        self.encoder_ = self.feature_filter_ = self.pipeline_ = None
+        numeric_output = ()
+        if self.schema.numeric:
+            numeric = features.loc[:, list(self.schema.numeric)]
+            self.encoder_ = official.TransformToNumerical(verbose=False).fit(numeric)
+            encoded = self.encoder_.transform(numeric)
+            self.feature_filter_ = official.UniqueFeatureFilter().fit(encoded)
+            # Unlike the legacy all-constant fallback, the four protected ID
+            # channels already guarantee nonzero input width.
+            if all(np.unique(encoded[:, i]).size <= 1 for i in range(encoded.shape[1])):
+                self.feature_filter_.features_to_keep_ = np.zeros(encoded.shape[1], dtype=bool)
+                self.feature_filter_.n_features_out_ = 0
+            mask = self.feature_filter_.features_to_keep_
+            numeric_output = tuple(name for name, keep in zip(self.schema.numeric, mask) if keep)
+            if numeric_output:
+                filtered = self.feature_filter_.transform(encoded)
+                self.pipeline_ = official.PreprocessingPipeline(
+                    normalization_method="none", outlier_threshold=4.0, random_state=0,
+                ).fit(filtered)
+                del self.pipeline_.X_transformed_
+        self.output_features_ = (*self.schema.categorical, *numeric_output)
 
     def fit(self, support_frame):
         official, source = require_pinned_preprocessing()
         features = frame_features(support_frame, self.schema)
+        if self.profile == PROTECTED_IDS_PROFILE:
+            self._fit_protected(features, official)
+            self.source_ = source
+            self.support_rows_ = len(features)
+            self.encoded_features_ = (*self.schema.categorical, *self.schema.numeric)
+            self.n_features_out_ = len(self.output_features_)
+            return self
         encoder = official.TransformToNumerical(verbose=False).fit(features)
         encoded = encoder.transform(features)
         feature_filter = official.UniqueFeatureFilter().fit(encoded)
@@ -266,16 +355,26 @@ class CSVPreprocessor:
     def transform(self, frame):
         self._fitted()
         features = frame_features(frame, self.schema)
-        encoded = self.encoder_.transform(features)
-        filtered = self.feature_filter_.transform(encoded)
-        output = self.pipeline_.transform(filtered).astype(np.float32)
+        if self.profile == PROTECTED_IDS_PROFILE:
+            identifiers = self._protected_ids(features)
+            output = ((identifiers - self.protected_mean_) / self.protected_scale_).astype(np.float32)
+            if self.pipeline_ is not None:
+                encoded = self.encoder_.transform(features.loc[:, list(self.schema.numeric)])
+                filtered = self.feature_filter_.transform(encoded)
+                numeric = self.pipeline_.transform(filtered).astype(np.float32)
+                output = np.concatenate((output, numeric), axis=1)
+        else:
+            encoded = self.encoder_.transform(features)
+            filtered = self.feature_filter_.transform(encoded)
+            output = self.pipeline_.transform(filtered).astype(np.float32)
         if output.ndim != 2 or output.shape[1] != self.n_features_out_ or not np.isfinite(output).all():
             raise ValueError("official preprocessing did not produce finite registered float32 features")
         return np.ascontiguousarray(output)
 
     def report(self):
         self._fitted()
-        return {"method": "TabICLv2-2026-official-single-view",
+        result = {"method": "TabICLv2-2026-official-single-view",
+                "profile": self.profile,
                 "normalization_method": "none", "feature_shuffle": "none", "class_shuffle": "none",
                 "support_rows": self.support_rows_, "input_features": list(self.schema.features),
                 "encoded_feature_order": list(self.encoded_features_),
@@ -283,14 +382,30 @@ class CSVPreprocessor:
                 "removed_constant_features": [v for v in self.encoded_features_ if v not in self.output_features_],
                 "n_features_in": len(self.schema.features), "n_features_out": self.n_features_out_,
                 "stored_support_rows": False, "source": self.source_}
+        if self.profile == PROTECTED_IDS_PROFILE:
+            result["method"] = "TabICLv2-2026-nf-v3-protected-ids"
+            result["protected_ids"] = {
+                "columns": list(self.schema.categorical),
+                "transform": "P-fitted mean/std affine; constant std uses 1; no clipping or removal",
+                "mean": self.protected_mean_.tolist(), "scale": self.protected_scale_.tolist(),
+                "support_constant": self.protected_support_constant_.tolist(),
+                "domain_verification": self.protected_verification_,
+                "l7_domain_scope": "project acceptance domain; verify full source at laboratory preparation",
+                "scope": "identifier identity preservation only; not a detection or categorical-distance guarantee",
+            }
+        return result
 
     def save(self, path):
         self._fitted()
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
-        joblib.dump({"format": _FORMAT, "schema": self.schema.to_dict(), "encoder": self.encoder_,
-                     "feature_filter": self.feature_filter_, "pipeline": self.pipeline_,
-                     "report": self.report()}, path, compress=3)
+        state = {"format": _FORMAT, "schema": self.schema.to_dict(), "encoder": self.encoder_,
+                 "feature_filter": self.feature_filter_, "pipeline": self.pipeline_, "report": self.report()}
+        if self.profile == PROTECTED_IDS_PROFILE:
+            state.update({"format": _PROTECTED_FORMAT, "profile": self.profile,
+                          "protected_mean": self.protected_mean_, "protected_scale": self.protected_scale_,
+                          "protected_support_constant": self.protected_support_constant_})
+        joblib.dump(state, path, compress=3)
         return path
 
     @classmethod
@@ -303,9 +418,14 @@ class CSVPreprocessor:
             if digest != expected_sha256.lower():
                 raise ValueError("CSV preprocessor SHA-256 does not match the registered state")
         state = joblib.load(path)
-        if state.get("format") != _FORMAT or state["report"]["source"] != source:
+        if state.get("format") not in (_FORMAT, _PROTECTED_FORMAT) or state["report"]["source"] != source:
             raise ValueError("CSV preprocessor format or pinned source does not match")
-        result = cls(CSVSchema.from_dict(state["schema"]))
+        profile = state.get("profile", OFFICIAL_PROFILE)
+        if (state["format"] == _PROTECTED_FORMAT) != (profile == PROTECTED_IDS_PROFILE):
+            raise ValueError("CSV preprocessor format/profile mismatch")
+        if state["report"].get("profile", OFFICIAL_PROFILE) != profile:
+            raise ValueError("CSV preprocessor report/profile mismatch")
+        result = cls(CSVSchema.from_dict(state["schema"]), profile=profile)
         result.encoder_ = state["encoder"]
         result.feature_filter_ = state["feature_filter"]
         result.pipeline_ = state["pipeline"]
@@ -316,4 +436,16 @@ class CSVPreprocessor:
         result.encoded_features_ = tuple(state["report"]["encoded_feature_order"])
         result.output_features_ = tuple(state["report"]["output_features"])
         result.n_features_out_ = len(result.output_features_)
+        if profile == PROTECTED_IDS_PROFILE:
+            result.protected_mean_ = np.asarray(state["protected_mean"], dtype=np.float64)
+            result.protected_scale_ = np.asarray(state["protected_scale"], dtype=np.float64)
+            result.protected_support_constant_ = np.asarray(state["protected_support_constant"], dtype=bool)
+            if (result.protected_mean_.shape != (4,) or result.protected_scale_.shape != (4,)
+                    or result.protected_support_constant_.shape != (4,)
+                    or not np.isfinite(result.protected_mean_).all()
+                    or not np.isfinite(result.protected_scale_).all() or not (result.protected_scale_ > 0).all()):
+                raise ValueError("invalid protected-ID affine state")
+            if result.output_features_[:4] != result.schema.categorical:
+                raise ValueError("protected identifier columns must remain first and present")
+            result._verify_protected_domains()
         return result

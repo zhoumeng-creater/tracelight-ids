@@ -1,0 +1,91 @@
+{
+  "format": "tracelight-context-input-v2-local-validation-v1",
+  "scope": "synthetic_only",
+  "junit": {
+    "tests": 192,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "seconds": 37.174,
+    "test_files": [
+      "tests/test_weighted_context_cache.py",
+      "tests/test_tabicl_cache_adapter.py",
+      "tests/test_context_compiler.py",
+      "tests/test_context_cache_cli.py",
+      "tests/test_context_csv_preprocessing.py",
+      "tests/test_context_calibration.py",
+      "tests/test_context_csv_workflow.py",
+      "tests/test_context_lab_data.py",
+      "tests/test_context_id_preprocessing.py",
+      "tests/test_context_lab_data_v2.py",
+      "tests/test_context_representation_audit.py",
+      "tests/test_context_input_workflow_v2.py",
+      "tests/test_context_input_cli_v2.py"
+    ],
+    "xml_sha256": "a78629c0e184acc658ca9ba3b09fa55cffdbef0643c25769389d4a19f892594a"
+  },
+  "runtime": {
+    "python": "3.12.4",
+    "packages": {
+      "torch": "2.6.0+cu126",
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scikit-learn": "1.5.1",
+      "pytest": "8.3.4"
+    }
+  },
+  "checks": {
+    "ruff": "passed",
+    "git_diff_check": "passed",
+    "configuration_schema": "passed",
+    "powershell_document_blocks": 2,
+    "powershell_setup_syntax": "passed",
+    "independent_cold_deployment_arms": [
+      "legacy_full",
+      "full",
+      "qcoc"
+    ]
+  },
+  "execution_scope": {
+    "pretrained_checkpoint_loads": 0,
+    "real_csv_preprocessor_fits": 0,
+    "real_model_comparisons": 0,
+    "random_tiny_official_models": true,
+    "synthetic_csv_fixtures": true
+  },
+  "environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "official_source": "local/vendor/tabicl/src"
+  },
+  "source_sha256_lf": {
+    "configs/context-cache-nf-ton-v3-input-v2.json": "75e45bda540c6c2ab64f5970d391c5c6ff408bff4b362d86176d4421205ab32a",
+    "scripts/setup_context_cache_lab.ps1": "d86fc074d26418921be59ec412bfecb2a065a2c9e428851dca8a5964a8bc11f8",
+    "src/ids/context_cache/__init__.py": "9c09432e86f5fc322d94142eea50bfa8cf8b00b0bf7fb4ec8227eb4de651e03b",
+    "src/ids/context_cache/__main__.py": "c27f58fc918e1a3e946b5a58bed87019678509d16f438e9254aee636bd12f951",
+    "src/ids/context_cache/attention.py": "c89f76222851a67f98b678de5cfb9f2ed126dc038b406d7cf435d9ea3daf35cb",
+    "src/ids/context_cache/cache.py": "4d4d66fa7aef1b3f04e0f37204f57c699fecd534643817289b564197606cf0f0",
+    "src/ids/context_cache/calibration.py": "53014b6ab6fe6e692dafed932eb00ea8c2f87b17d08614877230ed26143d39fc",
+    "src/ids/context_cache/compiler.py": "b8f1c2dbf05fd5fc180e53c29216e03ec95b87e191ada8214d461eecadae22fa",
+    "src/ids/context_cache/csv_synthetic.py": "cb64d0f72b8f146a10587ccb9a854b8f28dcec6262e8a8ba8ada1a2cf5e12903",
+    "src/ids/context_cache/csv_workflow.py": "14ad996f845ab8829eb93c9a4076a9b853ff446716ed6b096945fd355efb8329",
+    "src/ids/context_cache/lab_data.py": "a80676a12328a1c6961f6b709091f93de12f728ba02a97c08b981723c48fb633",
+    "src/ids/context_cache/preprocessing.py": "f0025386b5e64a14c55bc332c9000bbe95a64dbc95f466b154f66c4289906644",
+    "src/ids/context_cache/representation_audit.py": "c8711827cafc7b8b288494ecffbe9dc11db6c1bb107b7f59cc2dd3fea4aae654",
+    "src/ids/context_cache/tabicl_adapter.py": "1faab61d9f4807e3385f214832eec66acf98427497f9d40d76cfa32652c9bf0e",
+    "src/ids/context_cache/upstream.py": "a5bcf65ed50092592fe2e877322f4624d4a015a7b0e2a6d3d2ba3f725d9a84f1",
+    "tests/test_context_cache_cli.py": "8294a0c75f2aebc270b81fac3f76d77e5e8a30947f8962245a7a2f2dda36e055",
+    "tests/test_context_calibration.py": "bfa1a7873e7fe5e79bf3726bf3fa1b68a88ddce5970ea46300c818587372b203",
+    "tests/test_context_compiler.py": "7cf80a99f5e9545155664182cf3f55a91d0c68801b8ec77ef98339465fe43340",
+    "tests/test_context_csv_preprocessing.py": "0cfb51419c44c3399ab70c4069573395a6e4024b1d079310611929a7fd90d138",
+    "tests/test_context_csv_workflow.py": "61ed1cc9f3c93a55b2920e1b321062810153135244e21e7a7713beb303cf292e",
+    "tests/test_context_id_preprocessing.py": "6ccc0069f30201ae8faff01073a6e6d06f02effdaca9845ec0a29e5529d79559",
+    "tests/test_context_input_cli_v2.py": "b077bb71551ba73108c843799aef79d9ab1a7b60f99e33b755d92ba2d8b3f658",
+    "tests/test_context_input_workflow_v2.py": "c3ca78984c9e619c7265c76a8823a978049f39a654cc33e99947af313a85a2fd",
+    "tests/test_context_lab_data.py": "f52abc69417b380398a584f21d63d94016c12b22c99f201695d6e255a01cbdc6",
+    "tests/test_context_lab_data_v2.py": "0b5e3ac85101cddb443e6067df846f6038844981bb9f7f88fa53dcfc98dbe0e8",
+    "tests/test_context_representation_audit.py": "0e022d132232d202b05523ad5ce562de5d421bd782e472d3a9ae5ed3d9256872",
+    "tests/test_tabicl_cache_adapter.py": "acdd8d5bebf1bf4e88dc6d179da93781c75cba6de2a393dc0d827d3db3f633f9",
+    "tests/test_weighted_context_cache.py": "5583d6c941da3e968970f57bddcd991bce430796ee1e4e589b3b64450a6389a8"
+  }
+}

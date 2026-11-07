@@ -1,14 +1,16 @@
 """Bounded-memory preparation of the official 2025 NF-ToN-IoT-v3 release.
 
 This is a development comparison split, not a temporal/generalization test.
-The three sequential scans give support, calibration, then evaluation priority
-over exact-input collisions. No checkpoint or model is loaded here.
+The legacy profile gives earlier roles priority over exact-input collisions.
+The v2 profile samples each fixed group pool independently and reports shared
+inputs without discarding their flow frequency. No model is loaded here.
 """
 
 from __future__ import annotations
 
 from collections import Counter
 import csv
+from decimal import Decimal, InvalidOperation
 from functools import lru_cache
 import hashlib
 import heapq
@@ -26,6 +28,13 @@ DATASET = "NF-ToN-IoT-v3"
 SOURCE_SHA1 = "24854ca3072ab7c2ade9ebfb202345a666a94cfe"
 SOURCE_BYTES = 5302886266
 SEED = 20261107
+LEGACY_SAMPLING = "legacy_sequential_v1"
+FLOW_SAMPLING = "group_disjoint_flow_v2"
+# L7's bound is this project's accepted input domain, not a claim about the
+# complete set of identifiers defined by the dataset publisher.
+IDENTIFIER_DOMAINS = (
+    ("L4_SRC_PORT", 65535), ("L4_DST_PORT", 65535), ("PROTOCOL", 255), ("L7_PROTO", 65535),
+)
 RAW_FEATURES = (
     "IPV4_SRC_ADDR", "IPV4_DST_ADDR", "L4_SRC_PORT", "L4_DST_PORT", "PROTOCOL", "L7_PROTO",
     "IN_BYTES", "OUT_BYTES", "IN_PKTS", "OUT_PKTS", "FLOW_DURATION_MILLISECONDS", "TCP_FLAGS",
@@ -85,6 +94,33 @@ def _communication_group(src_ip, dst_ip, src_port, dst_port, protocol):
 
 
 @lru_cache(maxsize=32768)
+def _communication_group_from_ids(src_ip, dst_ip, src_port, dst_port, protocol):
+    """Use already validated identifiers; keep the legacy group digest."""
+    endpoints = sorted(((_ipv4(src_ip), src_port), (_ipv4(dst_ip), dst_port)))
+    return _digest([endpoints, protocol])
+
+
+@lru_cache(maxsize=65536)
+def _source_identifier(raw, maximum):
+    """Exact integer parsing, bounded cache for repeated source spellings."""
+    value = raw.strip()
+    if not value:
+        raise ValueError("missing identifier")
+    try:
+        if value.isascii() and value.isdecimal():
+            number = int(value)
+        else:
+            number = Decimal(value)
+            if not number.is_finite() or number != number.to_integral_value():
+                raise ValueError("identifier is not a finite integer")
+        if not 0 <= number <= maximum:
+            raise ValueError("identifier outside accepted domain")
+        return int(number)
+    except (InvalidOperation, OverflowError) as exc:
+        raise ValueError("identifier is not a finite integer") from exc
+
+
+@lru_cache(maxsize=32768)
 def _group_role(group, seed):
     bucket = int(_digest(["communication-role-v1", seed, group])[:16], 16) % 100
     return "support" if bucket < 50 else "calibration" if bucket < 70 else "evaluation"
@@ -122,10 +158,11 @@ def _features(row, indices):
     return values, _digest(signature_values)
 
 
-def _scan(path, role, quotas, forbidden, source_sha256, seed):
+def _scan(path, role, quotas, forbidden, source_sha256, seed, *, validate_identifiers=False):
     heaps = {key: [] for key in quotas}
     counters = Counter()
     eligible_families = Counter()
+    identifier_ranges = {name: [None, None] for name, _ in IDENTIFIER_DOMAINS}
     with path.open("r", encoding="utf-8-sig", newline="") as stream:
         reader = csv.reader(stream, strict=True)
         try:
@@ -139,16 +176,35 @@ def _scan(path, role, quotas, forbidden, source_sha256, seed):
         if not required <= set(header):
             raise ValueError(f"official CSV header mismatch; missing {sorted(required - set(header))}")
         indices = {name: i for i, name in enumerate(header)}
+        identifier_columns = [(name, indices[name], maximum) for name, maximum in IDENTIFIER_DOMAINS]
         for row_number, row in enumerate(reader, 1):
             counters["source_rows_scanned"] += 1
             if len(row) != len(header):
                 raise ValueError(f"wrong source field count at row {row_number}")
+            if validate_identifiers:
+                identifiers = []
+                for name, index, maximum in identifier_columns:
+                    try:
+                        value = _source_identifier(row[index], maximum)
+                    except ValueError as exc:
+                        raise ValueError(f"invalid identifier {name} at source row {row_number}: {exc}") from exc
+                    identifiers.append(value)
+                    bounds = identifier_ranges[name]
+                    if bounds[0] is None or value < bounds[0]:
+                        bounds[0] = value
+                    if bounds[1] is None or value > bounds[1]:
+                        bounds[1] = value
             label = _integer(row[indices["Label"]], "binary label", 1)
             family = FAMILIES.get(row[indices["Attack"]].strip().casefold())
             if family is None or (family == "Benign") != (label == 0):
                 raise ValueError(f"binary/family label disagreement or unknown family at row {row_number}")
-            group = _communication_group(*(row[indices[name]] for name in (
-                "IPV4_SRC_ADDR", "IPV4_DST_ADDR", "L4_SRC_PORT", "L4_DST_PORT", "PROTOCOL")))
+            if validate_identifiers:
+                group = _communication_group_from_ids(
+                    row[indices["IPV4_SRC_ADDR"]], row[indices["IPV4_DST_ADDR"]], *identifiers[:3],
+                )
+            else:
+                group = _communication_group(*(row[indices[name]] for name in (
+                    "IPV4_SRC_ADDR", "IPV4_DST_ADDR", "L4_SRC_PORT", "L4_DST_PORT", "PROTOCOL")))
             if _group_role(group, seed) != role:
                 continue
             counters["assigned_group_rows"] += 1
@@ -180,7 +236,7 @@ def _scan(path, role, quotas, forbidden, source_sha256, seed):
                 raise ValueError(f"insufficient eligible {role} rows for {key}: {len(heaps[key])} < {quota}; "
                                  "the frozen seed and quotas were not changed")
     chosen = sorted((item for heap in heaps.values() for item in heap), key=lambda item: (-item[0], -item[1]))
-    return chosen, {
+    report = {
         **{name: int(counters[name]) for name in (
             "source_rows_scanned", "assigned_group_rows", "label_eligible_rows",
             "non_normal_rows_excluded_by_calibration_contract", "noncompetitive_priority_rows",
@@ -190,10 +246,31 @@ def _scan(path, role, quotas, forbidden, source_sha256, seed):
         "selected_family_counts": dict(sorted(Counter(item[3][-1] for item in chosen).items())),
         "source_header": raw_header, "ignored_source_columns": sorted(set(header) - required),
     }
+    if validate_identifiers:
+        report["identifier_validation"] = {
+            "scope": "all source rows before role, label-quota or bottom-k filtering",
+            "rows_validated": int(counters["source_rows_scanned"]),
+            "fields": {name: {"minimum": identifier_ranges[name][0], "maximum": identifier_ranges[name][1],
+                              "accepted_minimum": 0, "accepted_maximum": maximum,
+                              "domain_basis": "project input contract" if name == "L7_PROTO" else "wire field width"}
+                       for name, maximum in IDENTIFIER_DOMAINS},
+        }
+    return chosen, report
+
+
+def _selected_concentration(frame):
+    """Describe selected flow frequency; do not reinterpret it as sample ESS."""
+    group_sizes = Counter(frame["communication_group"].astype(str))
+    sizes = sorted(group_sizes.values(), reverse=True)
+    return {"rows": len(frame), "unique_communication_groups": len(group_sizes),
+            "largest_group_rows": sizes[0], "largest_group_fraction": sizes[0] / len(frame),
+            "top_five_group_rows": sum(sizes[:5]), "top_five_group_fraction": sum(sizes[:5]) / len(frame),
+            "scope": "selected flow counts; not independent sample count or inferential effective sample size"}
 
 
 def prepare_lab_data(raw_csv, output, *, data_kind="development", support_per_class=4096,
-                     calibration_rows=5000, evaluation_rows=20000, seed=SEED):
+                     calibration_rows=5000, evaluation_rows=20000, seed=SEED,
+                     sampling_profile=LEGACY_SAMPLING):
     """Write the fixed source's P/C/E CSVs and an auditable preparation report.
 
     Development uses only the frozen official source and default budgets.
@@ -202,6 +279,8 @@ def prepare_lab_data(raw_csv, output, *, data_kind="development", support_per_cl
     """
     if data_kind not in {"development", "synthetic"}:
         raise ValueError("data_kind must be development or synthetic; final test is not accepted")
+    if sampling_profile not in {LEGACY_SAMPLING, FLOW_SAMPLING}:
+        raise ValueError("unknown sampling profile")
     budgets = (support_per_class, calibration_rows, evaluation_rows)
     if any(type(value) is not int or value < 1 for value in budgets):
         raise ValueError("sample budgets must be positive integers")
@@ -221,8 +300,12 @@ def prepare_lab_data(raw_csv, output, *, data_kind="development", support_per_cl
     quotas = {"support": {0: support_per_class, 1: support_per_class},
               "calibration": {"all": calibration_rows}, "evaluation": {"all": evaluation_rows}}
     for role in ROLES:
-        selected[role], scans[role] = _scan(raw_csv, role, quotas[role], forbidden, source["sha256"], seed)
-        forbidden.update(item[2] for item in selected[role])
+        selected[role], scans[role] = _scan(
+            raw_csv, role, quotas[role], forbidden, source["sha256"], seed,
+            validate_identifiers=sampling_profile == FLOW_SAMPLING,
+        )
+        if sampling_profile == LEGACY_SAMPLING:
+            forbidden.update(item[2] for item in selected[role])
     # Only the bounded selected rows enter pandas/the standard role auditor.
     output.mkdir(parents=True)
     files, frames = {}, {}
@@ -236,7 +319,8 @@ def prepare_lab_data(raw_csv, output, *, data_kind="development", support_per_cl
             writer.writerows(item[3] for item in selected[role])
         files[role] = {"path": str(path), "rows": len(selected[role]), "sha256": sha256_file(path)}
         frames[role] = read_csv(path, schema)
-    audit = audit_roles(frames, schema)
+    audit = (audit_roles(frames, schema, exact_feature_policy="report")
+             if sampling_profile == FLOW_SAMPLING else audit_roles(frames, schema))
     report = {
         "format": "tracelight-nf-ton-v3-preparation-v1", "data_kind": data_kind,
         "source": source, "seed": seed, "schema": schema.to_dict(), "files": files,
@@ -255,6 +339,20 @@ def prepare_lab_data(raw_csv, output, *, data_kind="development", support_per_cl
         "scans": scans, "audit": audit,
         "scope": "new-source development comparison; no temporal or cross-source generalization claim",
     }
+    if sampling_profile == FLOW_SAMPLING:
+        report["format"] = "tracelight-nf-ton-v3-preparation-v2"
+        report.update({"sampling_profile": FLOW_SAMPLING, "risk_unit": "flow", "exact_feature_policy": "report"})
+        report["split"].update({
+            "sampling_profile": FLOW_SAMPLING, "risk_unit": "flow", "exact_feature_policy": "report",
+            "role_priority": None,
+            "cross_role_duplicate_policy": "retain equal inputs across distinct groups; reject shared IDs or groups",
+            "duplicate_count_scope": "selected rows; no feature-based candidate exclusion",
+            "within_role_duplicates": "retained at their sampled flow frequency; no per-group cap",
+            "role_selection": "independent bottom-k within each fixed group-role pool",
+        })
+        report["selected_concentration"] = {role: _selected_concentration(frames[role]) for role in ROLES}
+        report["scope"] = ("flow-weighted development comparison on fixed communication-group pools; "
+                           "no IID, exchangeability, temporal or population FPR guarantee")
     write_json(output / "schema.json", schema.to_dict())
     write_json(output / "preparation.json", report)
     return report

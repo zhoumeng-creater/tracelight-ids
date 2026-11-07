@@ -223,6 +223,9 @@ def build_parser():
     prepare = sub.add_parser("lab-prepare", help="Lab: frozen NF-ToN-IoT-v3 support/calibration/evaluation CSVs")
     prepare.add_argument("--raw-csv", type=Path, required=True)
     prepare.add_argument("--output", type=Path, required=True)
+    prepare_v2 = sub.add_parser("lab-prepare-v2", help="Lab: group-disjoint flow sampling without sequential feature exclusion")
+    prepare_v2.add_argument("--raw-csv", type=Path, required=True)
+    prepare_v2.add_argument("--output", type=Path, required=True)
     register = sub.add_parser("lab-register", help="Register explicit CSV files and verified checkpoint; no model loading")
     register.add_argument("--template", type=Path, required=True)
     register.add_argument("--support-csv", type=Path, required=True)
@@ -237,6 +240,9 @@ def build_parser():
     comparison = sub.add_parser("lab-compare", help="Lab: exactly full KV and one QCOC budget from three development CSVs")
     comparison.add_argument("--config", type=Path, required=True)
     comparison.add_argument("--output", type=Path, required=True)
+    input_comparison = sub.add_parser("lab-input-compare", help="Lab: legacy full, protected-ID full, and protected-ID QCOC on the same v2 data")
+    input_comparison.add_argument("--config", type=Path, required=True)
+    input_comparison.add_argument("--output", type=Path, required=True)
     raw_predict = sub.add_parser("predict-csv", help="Load model + fitted preprocessing + registered threshold for raw CSV")
     raw_predict.add_argument("--deployment", type=Path, required=True)
     raw_predict.add_argument("--input", type=Path, required=True)
@@ -247,8 +253,10 @@ def build_parser():
 def csv_command(args):
     from .csv_workflow import CSVDetector, preflight_protocol, run_comparison
 
-    if args.command == "lab-prepare":
+    if args.command in {"lab-prepare", "lab-prepare-v2"}:
         from .lab_data import prepare_lab_data
+        if args.command == "lab-prepare-v2":
+            return prepare_lab_data(args.raw_csv, args.output, sampling_profile="group_disjoint_flow_v2")
         return prepare_lab_data(args.raw_csv, args.output)
     if args.command == "lab-register":
         from .csv_workflow import register_protocol
@@ -271,6 +279,13 @@ def csv_command(args):
     if args.command == "synthetic-csv-check":
         from .csv_synthetic import synthetic_csv_check
         return synthetic_csv_check(args.output)
+    if args.command == "lab-input-compare":
+        from .csv_workflow import run_input_comparison
+        report = run_input_comparison(args.config, args.output)
+        return {"output": str(args.output.resolve()), "scope": report["scope"],
+                "candidate_count": report["candidate_count"],
+                "evaluation": report["evaluation"],
+                "paired_changes": {name: value["changes"] for name, value in report["paired"].items()}}
     report = run_comparison(args.config, args.output)
     return {"output": str(args.output.resolve()), "scope": report["scope"],
             "candidate_count": report["candidate_count"], "nontrivial_thresholds": report["nontrivial_thresholds"],

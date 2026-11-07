@@ -223,13 +223,15 @@ def _row_ids(ids, length: int) -> tuple[list, str]:
     return result, "caller_aligned_ids"
 
 
-def compare_decisions(labels, fullscores, fullreg, qcocscores, qcocreg, ids=None) -> dict:
+def compare_decisions(labels, fullscores, fullreg, qcocscores, qcocreg, ids=None, *,
+                      require_same_preprocessing=True) -> dict:
     """Compare two separately calibrated models on the same ordered rows.
 
     IDs bind the common row order; they do not realign independent score files.
     The runner must join/verify prediction IDs before passing these arrays.
-    Both registrations must name the same preprocessing and normal cohort,
-    and the same exact alpha. The model hashes and score hashes may differ.
+    Both registrations must name the same normal cohort and exact alpha.
+    Matching preprocessing is required by default. An explicit input-profile
+    comparison may relax only that match; both original bindings remain intact.
     """
     left = _scores(fullscores, "fullscores")
     right = _scores(qcocscores, "qcocscores")
@@ -239,7 +241,11 @@ def compare_decisions(labels, fullscores, fullreg, qcocscores, qcocreg, ids=None
     fullreg, qcocreg = _registration(fullreg), _registration(qcocreg)
     if _alpha(fullreg["alpha_exact"]) != _alpha(qcocreg["alpha_exact"]):
         raise ValueError("paired comparison requires the same alpha")
-    for name in ("preprocessing_sha256", "calibration_sha256"):
+    if not isinstance(require_same_preprocessing, bool):
+        raise ValueError("require_same_preprocessing must be boolean")
+    bindings = ("preprocessing_sha256", "calibration_sha256") if require_same_preprocessing else (
+        "calibration_sha256",)
+    for name in bindings:
         if fullreg["binding"][name] != qcocreg["binding"][name]:
             raise ValueError(f"paired comparison requires the same {name}")
     row_ids, alignment = _row_ids(ids, len(truth))
@@ -265,7 +271,7 @@ def compare_decisions(labels, fullscores, fullreg, qcocscores, qcocreg, ids=None
              "qcoc_score": float(right[i]), "full_predicted": bool(before[i]),
              "qcoc_predicted": bool(after[i]), "change": states[i]} for i in range(len(truth))]
     row_bytes = json.dumps(row_ids, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode("utf-8")
-    return {
+    result = {
         "scope": "development_paired_comparison",
         "alignment": alignment,
         "ordered_row_ids_sha256": hashlib.sha256(row_bytes).hexdigest(),
@@ -277,3 +283,9 @@ def compare_decisions(labels, fullscores, fullreg, qcocscores, qcocreg, ids=None
         "net_fp": changes["new_fp"] - changes["repaired_fp"],
         "rows": rows,
     }
+    if not require_same_preprocessing:
+        result["preprocessing_comparison"] = {
+            "different_preprocessing_authorized": True,
+            "same_preprocessing": fullreg["binding"]["preprocessing_sha256"] == qcocreg["binding"]["preprocessing_sha256"],
+        }
+    return result

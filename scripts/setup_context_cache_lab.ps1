@@ -139,7 +139,12 @@ print(json.dumps(report, indent=2))
         'tests/test_context_csv_preprocessing.py',
         'tests/test_context_calibration.py',
         'tests/test_context_csv_workflow.py',
-        'tests/test_context_lab_data.py'
+        'tests/test_context_lab_data.py',
+        'tests/test_context_id_preprocessing.py',
+        'tests/test_context_lab_data_v2.py',
+        'tests/test_context_representation_audit.py',
+        'tests/test_context_input_workflow_v2.py',
+        'tests/test_context_input_cli_v2.py'
     )
     Invoke-Checked -Executable $venvPython -ArgumentList (
         @('-m', 'pytest', '-q', '--junitxml', (Join-Path $checkPath 'synthetic-tests.xml')) + $testFiles
