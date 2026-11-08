@@ -1,7 +1,8 @@
 """Pinned TabICLv2 tensor bridge for complete and QCOC-compressed caches.
 
 Inputs are *already prepared* numeric tables, not raw CSV/sklearn inputs. The
-caller owns frozen preprocessing and maps normal/attack to 0/1. No checkpoint
+caller owns frozen preprocessing and maps normal to 0 and attack classes to
+contiguous positive labels. No checkpoint
 download, data fitting, class permutation or ensemble generation occurs here.
 Stage 1/2 use the official implementation. Stage 3 retains its learned layers
 but executes attention over our explicit weighted entries, outside upstream's
@@ -25,6 +26,27 @@ from .upstream import require_pinned_tabicl
 
 
 _FORMAT = "tracelight-tabicl-numeric-cache-v1"
+_MULTICLASS_FORMAT = "tracelight-tabicl-numeric-cache-v2"
+_BINARY_INPUT_CONTRACT = "prepared-numeric-single-view; normal=0, attack=1; no class permutation"
+_MULTICLASS_INPUT_CONTRACT = "prepared-numeric-single-view; normal=0, attack=1..K-1; no class permutation"
+
+
+def _class_contract(num_classes, maximum):
+    if type(num_classes) is not int or not 2 <= num_classes <= maximum:
+        raise ValueError("num_classes must be an integer from 2 through the backbone class capacity")
+    return {"normal_class": 0, "attack_classes": list(range(1, num_classes)),
+            "score": "attack-union-log-odds-v1", "temperature": 1.0}
+
+
+def attack_union_log_odds(logits):
+    """Combine all positive-label classes at temperature 1; retain binary arithmetic."""
+    if not isinstance(logits, Tensor) or logits.ndim < 1 or logits.shape[-1] < 2:
+        raise ValueError("logits must have normal column 0 and at least one attack column")
+    if not logits.is_floating_point() or not bool(torch.isfinite(logits).all()):
+        raise ValueError("logits must contain finite floating-point values")
+    if logits.shape[-1] == 2:
+        return logits[..., 1] - logits[..., 0]
+    return torch.logsumexp(logits[..., 1:], dim=-1) - logits[..., 0]
 
 
 def _official_types():
@@ -99,7 +121,7 @@ def _pack_columns(cache):
 
 
 class CompactPredictor:
-    """Single-view binary predictor with official columns/rows and weighted ICL.
+    """Single-view attack-union predictor with official columns/rows and weighted ICL.
 
     B can contain multiple separately prepared contexts with equal N/F. It is
     not a sklearn ensemble: there are no class or feature permutations. This
@@ -108,11 +130,13 @@ class CompactPredictor:
     """
 
     def __init__(self, model, *, model_config, column_cache, entries, train_shape,
-                 provenance=None, cache_kind="compiled"):
+                 provenance=None, cache_kind="compiled", num_classes=2):
         _, _, _, _, source = _official_types()
         if int(model.max_classes) < 2:
             raise ValueError("a classification backbone with at least two output classes is required")
         self.model = model.eval().requires_grad_(False)
+        self.class_contract = _class_contract(num_classes, int(model.max_classes))
+        self.num_classes = num_classes
         self.model_config = _configuration(model, model_config)
         self.column_cache = column_cache
         self.entries = dict(entries)
@@ -173,7 +197,7 @@ class CompactPredictor:
                 out = block.norm2(out + block._ff_block(out))
         if predictor.norm_first:
             out = predictor.ln(out)
-        return predictor.decoder(out)[..., :2]
+        return predictor.decoder(out)[..., :self.num_classes]
 
     @torch.no_grad()
     def predict_logits(self, query_x):
@@ -182,7 +206,7 @@ class CompactPredictor:
     @torch.no_grad()
     def score(self, query_x):
         logits = self.predict_logits(query_x)
-        return logits[..., 1] - logits[..., 0]
+        return attack_union_log_odds(logits)
 
     def to(self, device, dtype=None):
         if dtype is not None and dtype not in (torch.float32, torch.float64):
@@ -206,7 +230,7 @@ class CompactPredictor:
             self.model, model_config=self.model_config, column_cache=self.column_cache[slice(start, end)],
             entries={i: e.slice_batch(slice(start, end)) for i, e in self.entries.items()},
             train_shape=(end - start, *self.train_shape[1:]), provenance=self.provenance,
-            cache_kind=self.cache_kind,
+            cache_kind=self.cache_kind, num_classes=self.num_classes,
         )
 
     def size_report(self):
@@ -228,15 +252,19 @@ class CompactPredictor:
         path.parent.mkdir(parents=True, exist_ok=True)
         _, dtype = _device_dtype(self.model)
         payload = {
-            "format": _FORMAT, "model_config": self.model_config,
+            "format": _FORMAT if self.num_classes == 2 else _MULTICLASS_FORMAT,
+            "model_config": self.model_config,
             "model_state": {k: v.detach().cpu().clone() for k, v in self.model.state_dict().items()},
             "column_cache": _pack_columns(self.column_cache),
             "icl_cache": {str(i): e.state_dict() for i, e in self.entries.items()},
-            "train_shape": list(self.train_shape), "num_classes": 2,
+            "train_shape": list(self.train_shape), "num_classes": self.num_classes,
             "dtype": str(dtype).removeprefix("torch."), "cache_kind": self.cache_kind,
-            "input_contract": "prepared-numeric-single-view; normal=0, attack=1; no class permutation",
+            "input_contract": (_BINARY_INPUT_CONTRACT if self.num_classes == 2
+                               else _MULTICLASS_INPUT_CONTRACT),
             "upstream": self.upstream, "provenance": self.provenance,
         }
+        if self.num_classes != 2:
+            payload["class_contract"] = _class_contract(self.num_classes, int(self.model.max_classes))
         torch.save(payload, path)
         return path
 
@@ -244,8 +272,17 @@ class CompactPredictor:
     def load(cls, path, *, device="cpu"):
         TabICL, KVCache, KVCacheEntry, _, source = _official_types()
         payload = torch.load(Path(path), map_location="cpu", weights_only=True)
-        if payload.get("format") != _FORMAT or payload.get("num_classes") != 2:
-            raise ValueError("not a supported binary numeric cache artifact")
+        artifact_format = payload.get("format")
+        num_classes = payload.get("num_classes")
+        if artifact_format == _FORMAT:
+            if type(num_classes) is not int or num_classes != 2 or payload.get("input_contract") != _BINARY_INPUT_CONTRACT:
+                raise ValueError("legacy numeric cache must bind both prepared labels normal=0 and attack=1")
+        elif artifact_format == _MULTICLASS_FORMAT:
+            contract = _class_contract(num_classes, int(payload["model_config"]["max_classes"]))
+            if payload.get("input_contract") != _MULTICLASS_INPUT_CONTRACT or payload.get("class_contract") != contract:
+                raise ValueError("multiclass numeric cache class/score contract differs from the fixed attack union")
+        else:
+            raise ValueError("not a supported numeric cache artifact")
         if payload.get("upstream") != source:
             raise ValueError("artifact upstream source differs from the verified pinned implementation")
         dtypes = {"float32": torch.float32, "float64": torch.float64}
@@ -257,7 +294,8 @@ class CompactPredictor:
         entries = {int(i): WeightedKVEntry.from_state_dict(values) for i, values in payload["icl_cache"].items()}
         result = cls(model, model_config=payload["model_config"], column_cache=columns,
                      entries=entries, train_shape=payload["train_shape"],
-                     provenance=payload.get("provenance"), cache_kind=payload["cache_kind"])
+                     provenance=payload.get("provenance"), cache_kind=payload["cache_kind"],
+                     num_classes=num_classes)
         return result.to(device)
 
 
@@ -268,7 +306,7 @@ class FullCacheAdapter:
     CompactPredictor.save, including when exporting the full-cache baseline.
     """
 
-    def __init__(self, model, *, model_config=None, provenance=None):
+    def __init__(self, model, *, model_config=None, provenance=None, num_classes=None):
         TabICL, _, _, _, source = _official_types()
         if not isinstance(model, TabICL) or model.max_classes < 2:
             raise ValueError("expected the pinned official TabICL classification model")
@@ -276,13 +314,17 @@ class FullCacheAdapter:
         self.model_config = _configuration(model, model_config)
         self.provenance = dict(provenance or {})
         self.upstream = source
+        if num_classes is not None:
+            _class_contract(num_classes, int(model.max_classes))
+        self._requested_num_classes = num_classes
+        self.num_classes = None
         self.cache = None
         self.entries = {}
         self.support_queries = {}
         _device_dtype(model)
 
     @classmethod
-    def from_checkpoint(cls, path, *, device="cpu", expected_sha256=None):
+    def from_checkpoint(cls, path, *, device="cpu", expected_sha256=None, num_classes=None):
         """Read an existing official config/state_dict file; never auto-download."""
         TabICL, _, _, _, _ = _official_types()
         path = Path(path)
@@ -298,7 +340,7 @@ class FullCacheAdapter:
         model = TabICL(**checkpoint["config"])
         model.load_state_dict(checkpoint["state_dict"], strict=True)
         model.to(device)
-        return cls(model, model_config=checkpoint["config"], provenance={
+        return cls(model, model_config=checkpoint["config"], num_classes=num_classes, provenance={
             "checkpoint_name": path.name, "checkpoint_sha256": digest,
             "checkpoint_hash_was_required": expected_sha256 is not None,
         })
@@ -312,9 +354,17 @@ class FullCacheAdapter:
         x = _validate_x(support_x, self.model)
         if not isinstance(support_y, Tensor) or support_y.shape != x.shape[:2]:
             raise ValueError("support labels must have shape [B,N]")
-        if not all(torch.equal(torch.unique(row).cpu(), torch.tensor([0, 1], dtype=row.dtype))
+        if support_y.is_complex() or not bool(torch.isfinite(support_y).all()):
+            raise ValueError("support labels must be finite integer class indices")
+        classes = int(torch.unique(support_y[0]).numel())
+        _class_contract(classes, int(self.model.max_classes))
+        expected = torch.arange(classes, dtype=torch.float64)
+        if not all(torch.equal(torch.unique(row).to(device="cpu", dtype=torch.float64), expected)
                    for row in support_y):
-            raise ValueError("every context must contain both prepared labels normal=0 and attack=1")
+            raise ValueError("every context must contain both prepared labels normal=0 and attack=1, "
+                             "with any further attack labels contiguous through K-1")
+        if self._requested_num_classes is not None and classes != self._requested_num_classes:
+            raise ValueError("support labels differ from the requested num_classes")
         y = support_y.to(device=x.device)
         source_count = x.shape[1]
         encoder = self.model.icl_predictor.tf_icl
@@ -337,7 +387,7 @@ class FullCacheAdapter:
                 X_train=x, y_train=y, use_cache=False, store_cache=True, cache_mode="kv",
                 inference_config=_inference_config(self.model),
             )
-            self.cache = self.model._cache
+            built_cache = self.model._cache
         finally:
             for handle in handles:
                 handle.remove()
@@ -347,6 +397,8 @@ class FullCacheAdapter:
             if phi.shape[0] != x.shape[0] or phi.shape[2] != source_count:
                 raise RuntimeError("support capture count mismatch (including possible retried batches)")
         self.support_queries = queries
+        self.cache = built_cache
+        self.num_classes = classes
         self.entries = {i: WeightedKVEntry.full(e.key.detach(), e.value.detach())
                         for i, e in self.cache.icl_cache.kv.items()}
         return self
@@ -372,7 +424,7 @@ class FullCacheAdapter:
         return CompactPredictor(
             self.model, model_config=self.model_config, column_cache=self.cache.col_cache,
             entries=self.entries, train_shape=self.cache.train_shape,
-            provenance=self.provenance, cache_kind="full",
+            provenance=self.provenance, cache_kind="full", num_classes=self.num_classes,
         )
 
     def compile(self, *, slots, iterations=15, ridge=1e-3, query_chunk_size=256):
@@ -388,7 +440,7 @@ class FullCacheAdapter:
         predictor = CompactPredictor(
             self.model, model_config=self.model_config, column_cache=self.cache.col_cache,
             entries=entries, train_shape=self.cache.train_shape,
-            provenance=self.provenance, cache_kind="qcoc",
+            provenance=self.provenance, cache_kind="qcoc", num_classes=self.num_classes,
         )
         return predictor, {"method": "QCOC-2026-paper-adaptation", "layers": reports,
                            "full": self.as_predictor().size_report(), "compiled": predictor.size_report(),

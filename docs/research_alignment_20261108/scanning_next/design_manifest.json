@@ -1,0 +1,152 @@
+{
+  "format": "tracelight-scanning-next-design-v1",
+  "date": "2026-11-08",
+  "status": "implemented_synthetic_verified_lab_ready",
+  "selected_next_probe": "support_label_granularity_with_grouped_sham_control",
+  "main_protocol": "docs/SCANNING_NEXT_DESIGN_20261108.md",
+  "baseline_result_round": 15,
+  "baseline_experiment_commit": "d239d513197899bffd44e407c008d5048163e88b",
+  "wrapper_maintenance_commit": "536f7b0dddfc95dc31514d91154ba4eebf3aadf2",
+  "upstream_commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+  "data_files": {
+    "support": {
+      "archive_relative_path": "prepared/support.csv",
+      "rows": 8192,
+      "sha256": "ee6c1470f90caa3fcf5d47e884db71b82a6a5ab574ad8ebfe61cc5ba120a8fbf"
+    },
+    "calibration": {
+      "archive_relative_path": "prepared/normal_calibration.csv",
+      "rows": 5000,
+      "sha256": "fe0d56b6d87411f6b24af534a5543ea0774fdd1812fdf224572b5f6c750e24b2"
+    },
+    "evaluation": {
+      "archive_relative_path": "prepared/development_evaluation.csv",
+      "rows": 20000,
+      "sha256": "20883897adfa29498765174666a88dc2cc206a2f30f659476b07e416ee81f408"
+    }
+  },
+  "data_scope": "already_opened_development_diagnosis_not_independent_confirmation",
+  "arms": {
+    "T0": {
+      "classes": [
+        "Normal",
+        "Attack"
+      ],
+      "support_counts": [
+        4096,
+        4096
+      ]
+    },
+    "TF": {
+      "classes": [
+        "Normal",
+        "Scanning",
+        "OtherAttack"
+      ],
+      "support_counts": [
+        4096,
+        512,
+        3584
+      ]
+    },
+    "TP": {
+      "classes": [
+        "Normal",
+        "AttackA",
+        "AttackB"
+      ],
+      "support_counts": [
+        4096,
+        512,
+        3584
+      ],
+      "group_key": "complete frozen finite FP32 input, little endian, signed zero canonicalized",
+      "hash_prefix_json": [
+        "scanning-label-group-sham-v1",
+        20261108
+      ],
+      "hash_prefix_separator_hex": "00",
+      "selection": "one hash-sorted pass, whole group only if it fits remaining quota; exact 512 or fail; no retry"
+    }
+  },
+  "invariants": {
+    "P_rows": 8192,
+    "C_normal_rows": 5000,
+    "E_rows": 20000,
+    "features": 48,
+    "source_port_intervention": false,
+    "preprocessing_refit": false,
+    "backbone_changed": false,
+    "new_optimizer_steps": 0,
+    "cache": "full column and ICL rebuilt per arm",
+    "query_family_input": false,
+    "score": "binary z1-z0; three-class logsumexp(z1,z2)-z0; temperature=1",
+    "alpha": 0.01,
+    "calibration_rank": 4951,
+    "threshold_comparison": ">",
+    "model_seed": 20261107,
+    "query_batch_rows": 128,
+    "scoring": "CPU FP32 one thread"
+  },
+  "baseline_gate": {
+    "score_atol": 3e-05,
+    "score_rtol": 3e-05,
+    "all_C_E_decisions_identical": true,
+    "failure_action": "stop before TF/TP"
+  },
+  "candidate_gate": {
+    "Scanning_TP": "TF strictly greater than T0 and TP",
+    "overall_TP": "TF at least T0",
+    "normal_FP": "TF at most T0",
+    "normalized_scan_pAUC": "TF strictly greater than T0 and TP on same E Scanning+normal, FPR[0,.01]",
+    "normalization": "raw area divided by .01; ties grouped; boundary linearly interpolated",
+    "interpretation": "candidate for fresh confirmation, not proof; if TF FP exceeds TP do not claim equal-cost operating-point superiority"
+  },
+  "deferred_branch": "causal completed-flow history after label result review; never automatic parallel run",
+  "compression_status": "research branch pending useful full-KV reference",
+  "validation": {
+    "artifact_input_hashes_rechecked": 14,
+    "array_checks_passed": 23,
+    "tail_synthetic_assertions_passed": 5,
+    "native_tiny_random_multiclass": "passed; in-memory new model object, not serialized cold process",
+    "ruff": "passed",
+    "formal_adapter_unchanged": false,
+    "full_synthetic_tests_passed": 397,
+    "encoding_regression_tests_passed": 2,
+    "formal_adapter_binary_backward_compatible": true,
+    "code_frozen_files": 54,
+    "implementation_report": "implementation_validation.json"
+  },
+  "execution": {
+    "formal_multiclass_adapter_implemented": true,
+    "formal_lab_runner_implemented": true,
+    "real_pretrained_model_runs_local": 0,
+    "real_preprocessing_fits_local": 0,
+    "real_support_sham_assignments_local": 0,
+    "real_history_features_constructed_local": 0
+  },
+  "evidence_sha256": {
+    "docs/research_alignment_20261108/scanning_next/encoding-fix-junit.xml": "75f56bf79511a22febcab78cd4381decda0456115ec71d411a6d3f22f22f0018",
+    "docs/research_alignment_20261108/scanning_next/implementation-junit.xml": "e0e30b6fc6bce1f32a3e7ce362d89042ac1af8703d2bd3b9ff351d4b0266876b",
+    "docs/research_alignment_20261108/scanning_next/implementation_validation.json": "6007372b48e020b49b0106fbd1e18672c17525d5544effaf7a93b15fbd55c9ba",
+    "docs/research_alignment_20261108/scanning_next/label_reference.py": "a54b7d2792a0277886c3a2edcbc506b2a355e46197e7fc4ef8ba589fdb99e317",
+    "docs/research_alignment_20261108/scanning_next/label_synthetic_checks.json": "0036d2ada4bcaeb000f327954e6d631f4eb215c9ef875b5842811dcd5dc295b7",
+    "docs/research_alignment_20261108/scanning_next/label_synthetic_checks.py": "252eb1807682c332ed444ad063599a3bb560c9ae5d41b857e2ff150e5565d7d4",
+    "docs/research_alignment_20261108/scanning_next/native_multiclass_synthetic.json": "692a6ef9675520bf8b7221e33e6ebba1a9be80b55b5bc81b57e78ad26463d18e",
+    "docs/research_alignment_20261108/scanning_next/native_multiclass_synthetic.py": "9191a167c395dc6eb92f1c7c09032ca1f5c040470dca943ccccae946f16d7ccc",
+    "docs/research_alignment_20261108/scanning_next/native_multiclass_synthetic_initial.json": "3785b47edd5fc4f830e195b926483c94083123303f265d11f32fd0a54782e1af",
+    "docs/research_alignment_20261108/scanning_next/network_context_research.md": "75eb251f6b667a264ebc0895b71a6f84848a5b65083c3579fc42d0d348230b85",
+    "docs/research_alignment_20261108/scanning_next/network_context_sources.json": "191ada6bfdcf96dbf7433178b1cb3ff87335aebfe9beb9e24218b8d23dc85b5b",
+    "docs/research_alignment_20261108/scanning_next/README.md": "e6f8e5727cc858a0c2015c8e775bee0005e48e92d2b18258faded76c560f93a9",
+    "docs/research_alignment_20261108/scanning_next/tail_audit.json": "c5dde5fd3b1dc409f304fe22ca4ae097a670de2151293d26486773d6708c0e16",
+    "docs/research_alignment_20261108/scanning_next/tail_audit.py": "76b8d7eff651ef87ecf7ee7d5bebe81ec8927a77345e87af7d6b8c18d864eab5",
+    "docs/research_alignment_20261108/scanning_next/tail_findings.md": "8d194314252733f5b8b2d20c3456cdaff2e633e399a24e010a337473d942ae98",
+    "docs/research_alignment_20261108/scanning_next/tfm_context_research.md": "686a2a8b91182b3cdd40906989657920579662dded203b63dcc3d354b4d2d5de",
+    "docs/research_alignment_20261108/scanning_next/tfm_context_sources.json": "3d6b0d0250b7fc3028d33b0ad242c61e525876a136520eb8aa65677e834d0daf",
+    "docs/SCANNING_LABEL_LAB_V1.md": "b2f0424ee24bd372313edabfc2f3a285ca5e3d33879060e5a53da7ec840b3e19",
+    "docs/SCANNING_NEXT_DESIGN_20261108.md": "3e36f6b1232c21a440f5096018f3074ad98547c395d4ba489b3f46348210aebd"
+  },
+  "release_tag": "scanning-label-lab-v1",
+  "lab_guide": "docs/SCANNING_LABEL_LAB_V1.md",
+  "evidence_hash_encoding": "SHA256 of versioned text bytes with CRLF normalized to LF"
+}

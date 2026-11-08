@@ -182,6 +182,7 @@ def test_three_full_caches_frozen_preprocessing_and_cold_cli(tiny_protocol, monk
     repo = Path(__file__).resolve().parents[1]
     vendor = repo / 'local/vendor/tabicl'
     env = os.environ.copy()
+    env['PYTHONIOENCODING'] = 'utf-8'
     env['PYTHONPATH'] = str(repo / 'src')
     for arm in ARMS:
         shutil.copytree(output / arm, cold_root / arm)
@@ -189,7 +190,8 @@ def test_three_full_caches_frozen_preprocessing_and_cold_cli(tiny_protocol, monk
         command = [sys.executable, '-m', 'ids.context_cache', '--tabicl-source', str(vendor),
                    'scanning-predict', '--deployment', str(cold_root / arm), '--input', str(feature_csv),
                    '--output', str(prediction)]
-        completed = subprocess.run(command, cwd=cold_root, env=env, capture_output=True, text=True, timeout=60)
+        completed = subprocess.run(command, cwd=cold_root, env=env, capture_output=True,
+                                   text=True, encoding='utf-8', timeout=60)
         assert completed.returncode == 0, completed.stderr[-4000:]
         cold = pd.read_csv(prediction, float_precision='round_trip')
         np.testing.assert_array_equal(cold['score'], scores[f'{arm}_score'])

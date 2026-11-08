@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-11-08",
+  "scope": "Primary papers, fixed author source, and archived-artifact mechanism analysis; no model weights, real fit, or real inference.",
+  "year_rule": "New methods must first appear in 2025 or 2026. Earlier papers below are exclusion records only.",
+  "selected_next_probe": {
+    "status": "design_only_not_implemented_or_lab_frozen",
+    "order": "label_granularity_first; history_observation_branch_if_no_semantic_discrimination_gain",
+    "arms": [
+      {"id": "T0", "labels": ["Normal", "Attack"], "counts": [4096, 4096]},
+      {"id": "TF", "labels": ["Normal", "Scanning", "OtherAttack"], "counts": [4096, 512, 3584]},
+      {"id": "TP", "labels": ["Normal", "AttackA", "AttackB"], "counts": [4096, 512, 3584]}
+    ],
+    "pseudo_control": {
+      "unit": "Full 48-field final-FP32 bit-pattern group among P attack rows",
+      "assignment": "Sort whole groups by preregistered hash; admit group to AttackA if size does not exceed remaining 512-row quota; otherwise skip; all remaining groups go to AttackB.",
+      "infeasible": "Hard failure if exact quota is not filled; no seed or mapping search.",
+      "sufficient_feasibility_condition": "At least 512 singleton attack input groups guarantees greedy quota completion.",
+      "preserve": "Identical attack inputs are never split into conflicting pseudo classes; original Normal/Attack collisions are retained.",
+      "audit": "Record real-family by pseudo-class counts and any Scanning/OtherAttack collisions within full-input groups. Do not force real Scanning balance across pseudo classes.",
+      "interpretation": "One fixed nonsemantic partition; not a control for every meaningful subclass partition and not proof of a unique cause. Group selection is not uniform row sampling."
+    },
+    "fixed": ["P/C/E row identities", "8192 support rows", "48 features and preprocessing", "frozen TabICLv2", "one class-order and seed", "ensemble feature plan", "normal C", "1 percent threshold registration rule"],
+    "score": "log(pAttack)-log(pNormal); for TF/TP pAttack=p1+p2 after fixed aggregation or algebraically equivalent log-sum-exp; never argmax or scanning-only score",
+    "forbidden_inputs": "C/E family metadata cannot enter model/preprocessing/threshold inputs; family is evaluation metadata only.",
+    "cache": "Rebuild both column and ICL KV per arm because target embeddings are baked into both.",
+    "cost_prediction": "Same N/features/ensemble/model dimensions imply unchanged core KV tensor shapes; output columns and metadata differ; verify in synthetic tests instead of claiming exact file-byte equality.",
+    "supervision": "TF uses existing archived P family labels; same row count does not mean equal annotation information to binary-only deployment.",
+    "optimization": "No new optimizer, task fitting, retrieval search, or additional seed matrix."
+  },
+  "sources": [
+    {
+      "id": "tabiclv2_2026",
+      "title": "TabICLv2: A Better, Faster, Scalable, and Open Tabular Foundation Model",
+      "year": 2026,
+      "first_public_date": "2026-02-11",
+      "publication": "ICML 2026",
+      "paper": "https://arxiv.org/html/2602.11139v2",
+      "publisher": "https://proceedings.mlr.press/v306/qu26a.html",
+      "sections": ["Section 2 target-aware embedding", "Appendix A.2 compression then ICL", "Appendix A.4 model configuration"],
+      "author_repository": "https://github.com/soda-inria/tabicl",
+      "commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+      "code": [
+        {"path": "src/tabicl/_model/tabicl.py", "lines": [155, 164, 254, 279], "finding": "max_classes defaults to 10; target-aware columns default true; same class capacity passed to column embedding and ICL."},
+        {"path": "src/tabicl/_model/layers.py", "lines": [55, 68, 88], "function": "OneHotAndLinear", "finding": "Class values are one-hot encoded into configured class capacity, then linearly embedded."},
+        {"path": "src/tabicl/_model/embedding.py", "lines": [170, 172, 736, 780, 789, 848, 854], "function": "ColEmbedding._compute_embeddings_with_cache / forward_with_cache", "finding": "At cache creation y_train is encoded and added before column transformer. Reusing cache skips it because labels are baked into KV. Only classes beyond max_classes trigger mixed-radix cache rejection."},
+        {"path": "src/tabicl/_model/learning.py", "lines": [111, 115, 675, 711, 721, 732, 798, 808, 832], "function": "ICLearning._icl_predictions_with_cache / forward_with_cache", "finding": "Separate one-hot target encoder, fixed MLP decoder, cached target injection, max_classes guard, and slicing of outputs to requested classes."}
+      ],
+      "decision": "adopt_mechanism_for_label_probe",
+      "reason": "Same P labels can affect pre-ICL column representation as well as ICL. A 3-class probe uses native capacity; this is a diagnostic intervention, not a new algorithm claim.",
+      "executed": false
+    },
+    {
+      "id": "limix_2025",
+      "title": "LimiX: Unleashing Structured-Data Modeling Capability for Generalist Intelligence",
+      "year": 2025,
+      "first_public_date": "2025-09-03",
+      "paper": "https://arxiv.org/html/2509.03505v2",
+      "history": "https://arxiv.org/abs/2509.03505",
+      "sections": ["Section 5 Retrieval-based Ensemble"],
+      "author_repository": "https://github.com/limix-ldm-ai/LimiX",
+      "commit": "b4d06eadca6f0cd58ae259034b02c86f4a905950",
+      "commit_date": "2026-11-06T03:04:50Z",
+      "code_version_note": "Fixed 2026 repository snapshot, v1_0 implementation; do not attribute v2_0 changes to the 2025 paper.",
+      "code": [
+        {"path": "inference/v1_0/inference_method.py", "function": "InferenceAttentionMap.inference", "lines": [309, 336, 344]},
+        {"path": "inference/v1_0/inference_method.py", "function": "InferenceResultWithRetrieval.inference", "lines": [95, 142, 146, 171, 241]},
+        {"path": "inference/v1_0/retrieval_utils.py", "function": "find_top_K_indice / RelabelRetrievalY", "lines": [6, 40, 84]},
+        {"path": "inference/v1_0/predictor.py", "function": "get_xy_cls / _predict_cls", "lines": [612, 651, 669, 684, 742]}
+      ],
+      "mechanism": "First forward obtains feature-weighted sample attention; a second forward predicts from selected context.",
+      "decision": "retain_direct_neighbor_defer_adoption",
+      "reason": "Query-specific context is a valid recent design, but it adds scoring, selection and multiple context construction. It cannot supply omitted network history; switching backbone confounds the current mechanism test.",
+      "executed": false
+    },
+    {
+      "id": "ttc_tfm_2026",
+      "title": "Test-Time Compute for Tabular Foundation Models: Mechanisms, Gains, and Limits",
+      "year": 2026,
+      "first_public_date": "2026-10-08",
+      "publication": "arXiv preprint",
+      "paper": "https://arxiv.org/html/2610.12005v1",
+      "sections": ["Section 7 attention-guided row selection and retrieval failure", "Appendix D.2 Algorithm 2", "Appendix D.3"],
+      "author_repository": "https://github.com/kanghui-learning/test-time-compute-for-tabular-foundation-models",
+      "commit": "45fb141b2acf15518e70885aa149c8e1898cd15c",
+      "commit_date": "2026-10-09T02:27:59Z",
+      "code": [
+        {"path": "src/ttc/retrieval/host_probe.py", "function": "capture_attention_topk", "lines": [155, 180, 203]},
+        {"path": "src/ttc/benchmarks/row_modelaware.py", "function": "_score_attn / _cluster_queries / _eval_modelaware", "lines": [78, 94, 162, 170, 190, 212]},
+        {"path": "docs/retrieval.md", "finding": "Documents scoring, query grouping, union-based context refits, batch dependence, cost, and reproducibility differences."}
+      ],
+      "mechanism": "Last-ICL-layer query-context attention ranks support rows, query groups use retrieved unions, each group rebuilds a predictor; matched-size random contexts distinguish selection from size reduction.",
+      "failure_evidence": {"dataset": "COMET_MC", "backbone": "TabPFN-3", "full_logloss": 0.0151, "retrieval_logloss": 0.2302, "rare_class_pool_percent": 1.7, "retrieved_rare_class_median_percent": 40.3, "fixed_N_prior_corrected_logloss": 0.127},
+      "decision": "adopt_control_principle_and_counterexample_defer_retrieval",
+      "reason": "Supports a matched-N control and shows class-composition correction is insufficient in at least one reported setting. Does not demonstrate a Scanning effect or TabICLv2 retrieval effect.",
+      "executed": false
+    },
+    {
+      "id": "distpfn_2026",
+      "title": "Mitigating Label Shift in Tabular In-Context Learning via Test-Time Posterior Adjustment",
+      "year": 2026,
+      "first_verified_arxiv_date": "2026-05-06",
+      "earlier_version_note": "An ICLR 2026 anonymous submission is also visible; no claim that May 2026 is first public disclosure across venues.",
+      "publication": "ICML 2026",
+      "publisher": "https://proceedings.mlr.press/v306/lee26aw.html",
+      "paper": "https://arxiv.org/abs/2605.04363",
+      "author_repository": "https://github.com/seunghan96/DistPFN",
+      "commit": "6b375c8a7624e614e84072c419c4d127229c77b0",
+      "commit_date": "2026-09-17T09:21:21Z",
+      "code": [
+        {"path": "src/evals/eval_TABPFN_shift_O.py", "lines": [20, 32, 34, 79, 91, 113], "finding": "Global per-class reweighting; DistPFN-T passes 1D P_test_avg into axis=1 reduction; code selects highest test AUC among ensemble settings."},
+        {"path": "README.md", "finding": "Public formula agrees on multiplying class probabilities by global P_test_avg / training_prior, followed by row normalization."}
+      ],
+      "decision": "exclude_as_binary_tail_ranking_repair",
+      "reason": "With shared positive weights a,b, p -> a*p/(a*p+b*(1-p)) is strictly increasing. Same transform of C/E plus quantile recalibration preserves alerts. Separate query-batch weights change the deployment protocol. No benchmark gain is imported from the inspected script.",
+      "executed": false
+    },
+    {
+      "id": "two_is_enough_2026",
+      "title": "Two Is Enough: Binary Classification Priors Suffice for Multi-Class In-Context Tabular Prediction",
+      "year": 2026,
+      "first_public_date": "2026-10-20",
+      "paper": "https://arxiv.org/html/2610.27569v1",
+      "sections": ["Abstract", "Sections 3.1-3.3", "Section 5 limitations"],
+      "author_code": null,
+      "decision": "exclude_unverified_mechanism",
+      "reason": "Claims a class-prototype comparison decoder without fixed output head for TabICLv2, conflicting with official Appendix A.4 and fixed MLP decoder source. The paper itself says single-variable comparison and code-level mechanism verification are incomplete. No author implementation was found in the checked primary text."
+    },
+    {
+      "id": "taar_2025_2026_submission",
+      "title": "Task-Aligned Attention Retrieval for Scaling Tabular Foundation Models",
+      "year_window": [2025, 2026],
+      "paper": "https://openreview.net/pdf/55d78dfa9704c8813df8505e36609ed52f7b0590.pdf",
+      "forum": "https://openreview.net/forum?id=qBMNsGiE3u",
+      "author_code": null,
+      "decision": "defer_no_separate_fixed_author_code_verified",
+      "reason": "Primary draft describes feature and context retrieval by model attention. Use the verified LimiX/TTC mechanisms instead of importing unverified summary effects or treating a similarly named repository as this paper's implementation."
+    },
+    {"id": "localpfn_2024", "title": "Retrieval & Fine-Tuning for In-Context Tabular Models", "first_public_date": "2024-06-07", "paper": "https://arxiv.org/abs/2406.05207", "decision": "exclude_year"},
+    {"id": "tunetables_2024", "title": "TuneTables: Context Optimization for Scalable Prior-Data Fitted Networks", "first_public_date": "2024-02-17", "paper": "https://arxiv.org/abs/2402.11137", "decision": "exclude_year"},
+    {"id": "tabdpt_2024", "title": "TabDPT: Scaling Tabular Foundation Models on Real Data", "first_public_date": "2024-10-23", "paper": "https://arxiv.org/abs/2410.18164", "decision": "exclude_year_despite_neurips2025_and_2026_revision"},
+    {"id": "context_sampling_2026_prior_exclusion", "paper": "https://arxiv.org/abs/2607.26628", "prior_evidence": "../scanning_mechanism/tfm_sources.json", "author_readme": "https://github.com/mohammed1916/tabmx/blob/5c2882fb7c93b9e650cc6f47a7463780c4f1409d/README.md#L93", "decision": "retain_prior_exclusion_no_effect_values_used", "reason": "Earlier fixed author README acknowledged fabricated early draft measurements; current turn does not independently validate later experiment logs or assert all later data fabricated."}
+  ]
+}

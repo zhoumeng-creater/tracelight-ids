@@ -1,0 +1,309 @@
+{
+  "status": "passed",
+  "data_kind": "synthetic tensors only",
+  "model_kind": "tiny random initialization, no pretrained checkpoint",
+  "vendor_commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+  "vendor_tracked_worktree_clean": true,
+  "torch_version": "2.6.0+cu126",
+  "device": "cpu",
+  "num_threads": 1,
+  "model_seed": 812,
+  "tensor_seed": 716,
+  "model_config": {
+    "max_classes": 10,
+    "embed_dim": 16,
+    "col_num_blocks": 1,
+    "col_nhead": 2,
+    "col_num_inds": 4,
+    "row_num_blocks": 1,
+    "row_nhead": 2,
+    "row_num_cls": 2,
+    "icl_num_blocks": 2,
+    "icl_nhead": 4,
+    "ff_factor": 2,
+    "dropout": 0.0,
+    "norm_first": true,
+    "zero_init": false
+  },
+  "cases": {
+    "binary": {
+      "num_classes": 2,
+      "output_shape": [
+        2,
+        5,
+        2
+      ],
+      "labels_per_table": [
+        6,
+        6
+      ],
+      "direct_vs_external_cache_max_abs_error": 1.4901161193847656e-07,
+      "native_probabilities_vs_softmax_max_abs_error": 0.0,
+      "sigmoid_union_vs_softmax_attack_sum_max_abs_error": 5.960464477539063e-08,
+      "binary_union_vs_old_logit_difference_max_abs_error": 0.0,
+      "fresh_model_had_no_internal_cache": true,
+      "cached_query_arguments": [
+        "X_test",
+        "cache",
+        "return_logits",
+        "inference_config"
+      ],
+      "cached_query_received_support_or_labels": false,
+      "cache_layout": {
+        "col_cache": {
+          "0": {
+            "key_shape": [
+              2,
+              5,
+              2,
+              4,
+              8
+            ],
+            "value_shape": [
+              2,
+              5,
+              2,
+              4,
+              8
+            ],
+            "key_value_numel": 1280
+          }
+        },
+        "icl_cache": {
+          "0": {
+            "key_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "value_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "key_value_numel": 1536
+          },
+          "1": {
+            "key_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "value_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "key_value_numel": 1536
+          }
+        }
+      }
+    },
+    "three_class": {
+      "num_classes": 3,
+      "output_shape": [
+        2,
+        5,
+        3
+      ],
+      "labels_per_table": [
+        6,
+        2,
+        4
+      ],
+      "direct_vs_external_cache_max_abs_error": 2.384185791015625e-07,
+      "native_probabilities_vs_softmax_max_abs_error": 0.0,
+      "sigmoid_union_vs_softmax_attack_sum_max_abs_error": 5.960464477539063e-08,
+      "binary_union_vs_old_logit_difference_max_abs_error": null,
+      "fresh_model_had_no_internal_cache": true,
+      "cached_query_arguments": [
+        "X_test",
+        "cache",
+        "return_logits",
+        "inference_config"
+      ],
+      "cached_query_received_support_or_labels": false,
+      "cache_layout": {
+        "col_cache": {
+          "0": {
+            "key_shape": [
+              2,
+              5,
+              2,
+              4,
+              8
+            ],
+            "value_shape": [
+              2,
+              5,
+              2,
+              4,
+              8
+            ],
+            "key_value_numel": 1280
+          }
+        },
+        "icl_cache": {
+          "0": {
+            "key_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "value_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "key_value_numel": 1536
+          },
+          "1": {
+            "key_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "value_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "key_value_numel": 1536
+          }
+        }
+      }
+    },
+    "three_class_same_counts_changed_labels": {
+      "num_classes": 3,
+      "output_shape": [
+        2,
+        5,
+        3
+      ],
+      "labels_per_table": [
+        6,
+        2,
+        4
+      ],
+      "direct_vs_external_cache_max_abs_error": 3.5762786865234375e-07,
+      "native_probabilities_vs_softmax_max_abs_error": 0.0,
+      "sigmoid_union_vs_softmax_attack_sum_max_abs_error": 1.1920928955078125e-07,
+      "binary_union_vs_old_logit_difference_max_abs_error": null,
+      "fresh_model_had_no_internal_cache": true,
+      "cached_query_arguments": [
+        "X_test",
+        "cache",
+        "return_logits",
+        "inference_config"
+      ],
+      "cached_query_received_support_or_labels": false,
+      "cache_layout": {
+        "col_cache": {
+          "0": {
+            "key_shape": [
+              2,
+              5,
+              2,
+              4,
+              8
+            ],
+            "value_shape": [
+              2,
+              5,
+              2,
+              4,
+              8
+            ],
+            "key_value_numel": 1280
+          }
+        },
+        "icl_cache": {
+          "0": {
+            "key_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "value_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "key_value_numel": 1536
+          },
+          "1": {
+            "key_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "value_shape": [
+              2,
+              4,
+              12,
+              8
+            ],
+            "key_value_numel": 1536
+          }
+        }
+      }
+    }
+  },
+  "cache_changes_binary_to_three_class": {
+    "col_cache": {
+      "0": {
+        "key_max_abs_change": 1.09287691116333,
+        "value_max_abs_change": 0.5315786004066467
+      }
+    },
+    "icl_cache": {
+      "0": {
+        "key_max_abs_change": 1.2020351886749268,
+        "value_max_abs_change": 1.3008289337158203
+      },
+      "1": {
+        "key_max_abs_change": 1.1921591758728027,
+        "value_max_abs_change": 0.9157073497772217
+      }
+    }
+  },
+  "cache_changes_three_class_same_counts_reassignment": {
+    "col_cache": {
+      "0": {
+        "key_max_abs_change": 0.13681860268115997,
+        "value_max_abs_change": 0.05711778253316879
+      }
+    },
+    "icl_cache": {
+      "0": {
+        "key_max_abs_change": 1.3641437292099,
+        "value_max_abs_change": 1.3000119924545288
+      },
+      "1": {
+        "key_max_abs_change": 1.3299832344055176,
+        "value_max_abs_change": 0.9046887159347534
+      }
+    }
+  },
+  "cache_shapes_and_tensor_counts_equal_for_two_and_three_classes": true,
+  "formal_adapter_source_sha256": "1faab61d9f4807e3385f214832eec66acf98427497f9d40d76cfa32652c9bf0e",
+  "formal_adapter_still_binary_only": true,
+  "formal_adapter_modified": false,
+  "multiclass_lab_runner_ready": false,
+  "cold_check_scope": "fresh model object and explicit in-memory cache, not artifact serialization or a new-process runner",
+  "score_check_scope": "single-model logits at temperature 1; production ensemble/temperature convention remains to be frozen",
+  "real_checkpoint_csv_joblib_reads": 0,
+  "real_model_runs": 0,
+  "real_preprocessing_fits": 0
+}

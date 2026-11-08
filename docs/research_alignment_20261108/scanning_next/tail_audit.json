@@ -1,0 +1,2286 @@
+{
+  "scope": "opened-development saved-score diagnosis; no model load, fit, new real representation, mapping construction, or threshold registration",
+  "score_comparison": "float64 strict >; round_trip CSV parsing; ties included in descriptive required-recall counts",
+  "input_files": {
+    "实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\prepared\\support.csv": {
+      "sha256": "ee6c1470f90caa3fcf5d47e884db71b82a6a5ab574ad8ebfe61cc5ba120a8fbf",
+      "bytes": 2248879
+    },
+    "实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\prepared\\normal_calibration.csv": {
+      "sha256": "fe0d56b6d87411f6b24af534a5543ea0774fdd1812fdf224572b5f6c750e24b2",
+      "bytes": 1331334
+    },
+    "实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\prepared\\development_evaluation.csv": {
+      "sha256": "20883897adfa29498765174666a88dc2cc206a2f30f659476b07e416ee81f408",
+      "bytes": 5480270
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\evaluation_scores.csv": {
+      "sha256": "15616d7d77b1e7d0857d5d8c3d09f88d9b061ab74f60c3a7cb2a6a2329800b13",
+      "bytes": 3524396
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\evaluation_cohorts.csv": {
+      "sha256": "bfdd0578ff4e0a2223f4d22275f64ab9fc255f2efb54450ff339127e4ad0cefb",
+      "bytes": 2208775
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\mapping_audit.json": {
+      "sha256": "303ad1ee0d9a5e5833aa7efedbc36194225ebbe16bb2629d9ad93cff5ed7891d",
+      "bytes": 18812
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\input_collisions.json": {
+      "sha256": "f23df9b48003cbb45a07fd22292647868e449fb3e2208c4036c65c922182ca28",
+      "bytes": 6459
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\shared\\source_port_mapping.npy": {
+      "sha256": "832be24a13cf8ad0670745a7dfd7e706bc461e2e8cfa3f71ad751b2f5da23a7f",
+      "bytes": 131200
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\baseline_calibration.csv": {
+      "sha256": "0c2093830579ccfa7d1b2f213810c63bb0fd6275afb9dc937d58ad01a6305333",
+      "bytes": 488830
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\src_frequency_bijection_calibration.csv": {
+      "sha256": "1ed70e0797adf0bcdbfcbd0d52a6fb8be7e12c82382eee939e33770c205f7038",
+      "bytes": 488842
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\src_mask_zero_calibration.csv": {
+      "sha256": "f09c7e6b7d535189ed3f3af978d00e2ed55ca3e69cd21d2419d7fcbea64cfa90",
+      "bytes": 487647
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\baseline\\threshold.json": {
+      "sha256": "c371cef58fe7b0a69c4005fe36dfbf639d402f48fcf5f5fb3be349dbc5c6d302",
+      "bytes": 1073
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\src_frequency_bijection\\threshold.json": {
+      "sha256": "02ccdb0382c9a34a6e266790dee5f601965f2a24866b18fbc0e0b54cbf3b8081",
+      "bytes": 1073
+    },
+    "实验归档\\20261108_第十五轮Scanning机制\\核验材料\\context-scanning-v1\\comparison\\src_mask_zero\\threshold.json": {
+      "sha256": "406d45963de689fd29460dc95d06b5cc1106f7c45b5efa840cd1dc600accb6a0",
+      "bytes": 1074
+    }
+  },
+  "synthetic_checks": {
+    "assertions_passed": 5,
+    "data_kind": "synthetic arrays only"
+  },
+  "rows": {
+    "P": 8192,
+    "C_normal": 5000,
+    "E": 20000,
+    "E_normal": 11830,
+    "E_scanning": 1078
+  },
+  "arms": {
+    "baseline": {
+      "threshold": 2.337514877319336,
+      "strict_C_fp": 49,
+      "strict_E_fp": 118,
+      "strict_E_tp": 6711,
+      "strict_Scanning_tp": 3,
+      "Scanning_vs_all_normal_AUC": 0.9001536924613848,
+      "required_recall_normal_cost": {
+        "Scanning": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 1078,
+            "score_boundary_inclusive": 3.414731025695801,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 36,
+            "C_normal_rate": 0.0072,
+            "E_normal_at_or_above": 76,
+            "E_normal_rate": 0.006424344885883348
+          },
+          "at_least_25pct": {
+            "required_targets": 270,
+            "target_rows": 1078,
+            "score_boundary_inclusive": 0.8279800415039062,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 270,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 99,
+            "C_normal_rate": 0.0198,
+            "E_normal_at_or_above": 298,
+            "E_normal_rate": 0.025190194420963652
+          },
+          "at_least_50pct": {
+            "required_targets": 539,
+            "target_rows": 1078,
+            "score_boundary_inclusive": -0.5309505462646484,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 539,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 208,
+            "C_normal_rate": 0.0416,
+            "E_normal_at_or_above": 625,
+            "E_normal_rate": 0.05283178360101437
+          },
+          "at_least_100pct": {
+            "required_targets": 1078,
+            "target_rows": 1078,
+            "score_boundary_inclusive": -5.944056987762451,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1078,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 2495,
+            "C_normal_rate": 0.499,
+            "E_normal_at_or_above": 7293,
+            "E_normal_rate": 0.6164835164835165
+          }
+        },
+        "old_54": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 54,
+            "score_boundary_inclusive": 2.2008495330810547,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 53,
+            "C_normal_rate": 0.0106,
+            "E_normal_at_or_above": 121,
+            "E_normal_rate": 0.010228233305156383
+          },
+          "at_least_25pct": {
+            "required_targets": 14,
+            "target_rows": 54,
+            "score_boundary_inclusive": 2.087984085083008,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 14,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 58,
+            "C_normal_rate": 0.0116,
+            "E_normal_at_or_above": 135,
+            "E_normal_rate": 0.011411665257819104
+          },
+          "at_least_50pct": {
+            "required_targets": 27,
+            "target_rows": 54,
+            "score_boundary_inclusive": 2.042668342590332,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 27,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 62,
+            "C_normal_rate": 0.0124,
+            "E_normal_at_or_above": 143,
+            "E_normal_rate": 0.012087912087912088
+          },
+          "at_least_100pct": {
+            "required_targets": 54,
+            "target_rows": 54,
+            "score_boundary_inclusive": 0.3843679428100586,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 54,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 119,
+            "C_normal_rate": 0.0238,
+            "E_normal_at_or_above": 356,
+            "E_normal_rate": 0.030092983939137785
+          }
+        },
+        "exact_P_positive_15": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 15,
+            "score_boundary_inclusive": 2.2008495330810547,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 53,
+            "C_normal_rate": 0.0106,
+            "E_normal_at_or_above": 121,
+            "E_normal_rate": 0.010228233305156383
+          },
+          "at_least_25pct": {
+            "required_targets": 4,
+            "target_rows": 15,
+            "score_boundary_inclusive": 2.094632148742676,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 4,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 58,
+            "C_normal_rate": 0.0116,
+            "E_normal_at_or_above": 134,
+            "E_normal_rate": 0.011327134404057481
+          },
+          "at_least_50pct": {
+            "required_targets": 8,
+            "target_rows": 15,
+            "score_boundary_inclusive": 2.0437192916870117,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 8,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 62,
+            "C_normal_rate": 0.0124,
+            "E_normal_at_or_above": 141,
+            "E_normal_rate": 0.011918850380388842
+          },
+          "at_least_100pct": {
+            "required_targets": 15,
+            "target_rows": 15,
+            "score_boundary_inclusive": 1.9046802520751953,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 15,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 69,
+            "C_normal_rate": 0.0138,
+            "E_normal_at_or_above": 171,
+            "E_normal_rate": 0.014454775993237532
+          }
+        },
+        "main47_scanning": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 217,
+            "score_boundary_inclusive": 2.2008495330810547,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 53,
+            "C_normal_rate": 0.0106,
+            "E_normal_at_or_above": 121,
+            "E_normal_rate": 0.010228233305156383
+          },
+          "at_least_25pct": {
+            "required_targets": 55,
+            "target_rows": 217,
+            "score_boundary_inclusive": 2.092310905456543,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 55,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 58,
+            "C_normal_rate": 0.0116,
+            "E_normal_at_or_above": 135,
+            "E_normal_rate": 0.011411665257819104
+          },
+          "at_least_50pct": {
+            "required_targets": 109,
+            "target_rows": 217,
+            "score_boundary_inclusive": 2.043961524963379,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 109,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 62,
+            "C_normal_rate": 0.0124,
+            "E_normal_at_or_above": 140,
+            "E_normal_rate": 0.011834319526627219
+          },
+          "at_least_100pct": {
+            "required_targets": 217,
+            "target_rows": 217,
+            "score_boundary_inclusive": 1.7473974227905273,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 217,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 77,
+            "C_normal_rate": 0.0154,
+            "E_normal_at_or_above": 196,
+            "E_normal_rate": 0.016568047337278107
+          }
+        }
+      },
+      "local_ranking": {
+        "target_service_6_91_443": {
+          "Scanning": {
+            "rows": 237,
+            "min": -1.6556682586669922,
+            "median": 2.0434064865112305,
+            "max": 3.414731025695801,
+            "distinct": 231
+          },
+          "normal": {
+            "rows": 72,
+            "min": -2.2930378913879395,
+            "median": 1.596268653869629,
+            "max": 2.9475955963134766,
+            "distinct": 71
+          },
+          "Scanning_vs_normal_AUC": 0.7402133145804032,
+          "score_only_cost": {
+            "0.25": {
+              "required_scanning": 60,
+              "scanning_with_ties": 61,
+              "local_normals_at_or_above": 10,
+              "local_normal_denominator": 72
+            },
+            "0.5": {
+              "required_scanning": 119,
+              "scanning_with_ties": 119,
+              "local_normals_at_or_above": 15,
+              "local_normal_denominator": 72
+            },
+            "1.0": {
+              "required_scanning": 237,
+              "scanning_with_ties": 237,
+              "local_normals_at_or_above": 67,
+              "local_normal_denominator": 72
+            }
+          }
+        },
+        "main47": {
+          "Scanning": {
+            "rows": 217,
+            "min": 1.7473974227905273,
+            "median": 2.043961524963379,
+            "max": 2.2008495330810547,
+            "distinct": 211
+          },
+          "normal": {
+            "rows": 33,
+            "min": 1.8895330429077148,
+            "median": 2.039854049682617,
+            "max": 2.200840950012207,
+            "distinct": 32
+          },
+          "Scanning_vs_normal_AUC": 0.5423823488339617,
+          "score_only_cost": {
+            "0.25": {
+              "required_scanning": 55,
+              "scanning_with_ties": 55,
+              "local_normals_at_or_above": 9,
+              "local_normal_denominator": 33
+            },
+            "0.5": {
+              "required_scanning": 109,
+              "scanning_with_ties": 109,
+              "local_normals_at_or_above": 13,
+              "local_normal_denominator": 33
+            },
+            "1.0": {
+              "required_scanning": 217,
+              "scanning_with_ties": 217,
+              "local_normals_at_or_above": 33,
+              "local_normal_denominator": 33
+            }
+          }
+        }
+      }
+    },
+    "src_frequency_bijection": {
+      "threshold": 2.320807933807373,
+      "strict_C_fp": 49,
+      "strict_E_fp": 118,
+      "strict_E_tp": 6710,
+      "strict_Scanning_tp": 4,
+      "Scanning_vs_all_normal_AUC": 0.8994046377484368,
+      "required_recall_normal_cost": {
+        "Scanning": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 1078,
+            "score_boundary_inclusive": 3.4105162620544434,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 35,
+            "C_normal_rate": 0.007,
+            "E_normal_at_or_above": 79,
+            "E_normal_rate": 0.006677937447168217
+          },
+          "at_least_25pct": {
+            "required_targets": 270,
+            "target_rows": 1078,
+            "score_boundary_inclusive": 0.8117103576660156,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 270,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 98,
+            "C_normal_rate": 0.0196,
+            "E_normal_at_or_above": 282,
+            "E_normal_rate": 0.023837700760777684
+          },
+          "at_least_50pct": {
+            "required_targets": 539,
+            "target_rows": 1078,
+            "score_boundary_inclusive": -0.5602235794067383,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 539,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 220,
+            "C_normal_rate": 0.044,
+            "E_normal_at_or_above": 657,
+            "E_normal_rate": 0.05553677092138631
+          },
+          "at_least_100pct": {
+            "required_targets": 1078,
+            "target_rows": 1078,
+            "score_boundary_inclusive": -5.6706390380859375,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1078,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 2471,
+            "C_normal_rate": 0.4942,
+            "E_normal_at_or_above": 7193,
+            "E_normal_rate": 0.6080304311073542
+          }
+        },
+        "old_54": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 54,
+            "score_boundary_inclusive": 2.1161842346191406,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 3,
+            "target_boundary_ties": 3,
+            "C_normal_at_or_above": 55,
+            "C_normal_rate": 0.011,
+            "E_normal_at_or_above": 129,
+            "E_normal_rate": 0.010904480135249367
+          },
+          "at_least_25pct": {
+            "required_targets": 14,
+            "target_rows": 54,
+            "score_boundary_inclusive": 2.056227684020996,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 14,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 57,
+            "C_normal_rate": 0.0114,
+            "E_normal_at_or_above": 136,
+            "E_normal_rate": 0.011496196111580727
+          },
+          "at_least_50pct": {
+            "required_targets": 27,
+            "target_rows": 54,
+            "score_boundary_inclusive": 2.031280517578125,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 27,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 60,
+            "C_normal_rate": 0.012,
+            "E_normal_at_or_above": 148,
+            "E_normal_rate": 0.012510566356720203
+          },
+          "at_least_100pct": {
+            "required_targets": 54,
+            "target_rows": 54,
+            "score_boundary_inclusive": 0.6660747528076172,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 54,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 114,
+            "C_normal_rate": 0.0228,
+            "E_normal_at_or_above": 347,
+            "E_normal_rate": 0.02933220625528318
+          }
+        },
+        "exact_P_positive_15": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 15,
+            "score_boundary_inclusive": 2.1161842346191406,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 3,
+            "target_boundary_ties": 3,
+            "C_normal_at_or_above": 55,
+            "C_normal_rate": 0.011,
+            "E_normal_at_or_above": 129,
+            "E_normal_rate": 0.010904480135249367
+          },
+          "at_least_25pct": {
+            "required_targets": 4,
+            "target_rows": 15,
+            "score_boundary_inclusive": 2.078420639038086,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 4,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 56,
+            "C_normal_rate": 0.0112,
+            "E_normal_at_or_above": 132,
+            "E_normal_rate": 0.011158072696534235
+          },
+          "at_least_50pct": {
+            "required_targets": 8,
+            "target_rows": 15,
+            "score_boundary_inclusive": 2.035327911376953,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 8,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 59,
+            "C_normal_rate": 0.0118,
+            "E_normal_at_or_above": 145,
+            "E_normal_rate": 0.012256973795435333
+          },
+          "at_least_100pct": {
+            "required_targets": 15,
+            "target_rows": 15,
+            "score_boundary_inclusive": 1.7846260070800781,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 15,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 77,
+            "C_normal_rate": 0.0154,
+            "E_normal_at_or_above": 195,
+            "E_normal_rate": 0.016483516483516484
+          }
+        },
+        "main47_scanning": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 217,
+            "score_boundary_inclusive": 2.12906551361084,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 55,
+            "C_normal_rate": 0.011,
+            "E_normal_at_or_above": 125,
+            "E_normal_rate": 0.010566356720202874
+          },
+          "at_least_25pct": {
+            "required_targets": 55,
+            "target_rows": 217,
+            "score_boundary_inclusive": 2.058363914489746,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 55,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 57,
+            "C_normal_rate": 0.0114,
+            "E_normal_at_or_above": 136,
+            "E_normal_rate": 0.011496196111580727
+          },
+          "at_least_50pct": {
+            "required_targets": 109,
+            "target_rows": 217,
+            "score_boundary_inclusive": 2.03391170501709,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 109,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 60,
+            "C_normal_rate": 0.012,
+            "E_normal_at_or_above": 146,
+            "E_normal_rate": 0.012341504649196956
+          },
+          "at_least_100pct": {
+            "required_targets": 217,
+            "target_rows": 217,
+            "score_boundary_inclusive": 1.7611494064331055,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 217,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 77,
+            "C_normal_rate": 0.0154,
+            "E_normal_at_or_above": 196,
+            "E_normal_rate": 0.016568047337278107
+          }
+        }
+      },
+      "local_ranking": {
+        "target_service_6_91_443": {
+          "Scanning": {
+            "rows": 237,
+            "min": -1.963449478149414,
+            "median": 2.03255558013916,
+            "max": 3.4105162620544434,
+            "distinct": 231
+          },
+          "normal": {
+            "rows": 72,
+            "min": -2.278355121612549,
+            "median": 1.7060856819152832,
+            "max": 3.506981372833252,
+            "distinct": 71
+          },
+          "Scanning_vs_normal_AUC": 0.7201711204875761,
+          "score_only_cost": {
+            "0.25": {
+              "required_scanning": 60,
+              "scanning_with_ties": 60,
+              "local_normals_at_or_above": 8,
+              "local_normal_denominator": 72
+            },
+            "0.5": {
+              "required_scanning": 119,
+              "scanning_with_ties": 119,
+              "local_normals_at_or_above": 19,
+              "local_normal_denominator": 72
+            },
+            "1.0": {
+              "required_scanning": 237,
+              "scanning_with_ties": 237,
+              "local_normals_at_or_above": 68,
+              "local_normal_denominator": 72
+            }
+          }
+        },
+        "main47": {
+          "Scanning": {
+            "rows": 217,
+            "min": 1.7611494064331055,
+            "median": 2.03391170501709,
+            "max": 2.12906551361084,
+            "distinct": 211
+          },
+          "normal": {
+            "rows": 33,
+            "min": 1.7693634033203125,
+            "median": 2.03383731842041,
+            "max": 2.1290245056152344,
+            "distinct": 32
+          },
+          "Scanning_vs_normal_AUC": 0.4935064935064935,
+          "score_only_cost": {
+            "0.25": {
+              "required_scanning": 55,
+              "scanning_with_ties": 55,
+              "local_normals_at_or_above": 7,
+              "local_normal_denominator": 33
+            },
+            "0.5": {
+              "required_scanning": 109,
+              "scanning_with_ties": 109,
+              "local_normals_at_or_above": 16,
+              "local_normal_denominator": 33
+            },
+            "1.0": {
+              "required_scanning": 217,
+              "scanning_with_ties": 217,
+              "local_normals_at_or_above": 33,
+              "local_normal_denominator": 33
+            }
+          }
+        }
+      }
+    },
+    "src_mask_zero": {
+      "threshold": 2.3320846557617188,
+      "strict_C_fp": 49,
+      "strict_E_fp": 116,
+      "strict_E_tp": 6696,
+      "strict_Scanning_tp": 4,
+      "Scanning_vs_all_normal_AUC": 0.899216756555846,
+      "required_recall_normal_cost": {
+        "Scanning": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 1078,
+            "score_boundary_inclusive": 3.867551803588867,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 29,
+            "C_normal_rate": 0.0058,
+            "E_normal_at_or_above": 66,
+            "E_normal_rate": 0.005579036348267117
+          },
+          "at_least_25pct": {
+            "required_targets": 270,
+            "target_rows": 1078,
+            "score_boundary_inclusive": 0.7610950469970703,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 393,
+            "target_boundary_ties": 156,
+            "C_normal_at_or_above": 111,
+            "C_normal_rate": 0.0222,
+            "E_normal_at_or_above": 344,
+            "E_normal_rate": 0.02907861369399831
+          },
+          "at_least_50pct": {
+            "required_targets": 539,
+            "target_rows": 1078,
+            "score_boundary_inclusive": -0.5758066177368164,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 539,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 221,
+            "C_normal_rate": 0.0442,
+            "E_normal_at_or_above": 643,
+            "E_normal_rate": 0.05435333896872358
+          },
+          "at_least_100pct": {
+            "required_targets": 1078,
+            "target_rows": 1078,
+            "score_boundary_inclusive": -5.797572135925293,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 1078,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 2488,
+            "C_normal_rate": 0.4976,
+            "E_normal_at_or_above": 7351,
+            "E_normal_rate": 0.6213863060016906
+          }
+        },
+        "old_54": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 54,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 48,
+            "target_boundary_ties": 48,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_25pct": {
+            "required_targets": 14,
+            "target_rows": 54,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 48,
+            "target_boundary_ties": 48,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_50pct": {
+            "required_targets": 27,
+            "target_rows": 54,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 48,
+            "target_boundary_ties": 48,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_100pct": {
+            "required_targets": 54,
+            "target_rows": 54,
+            "score_boundary_inclusive": 0.9553184509277344,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 54,
+            "target_boundary_ties": 1,
+            "C_normal_at_or_above": 92,
+            "C_normal_rate": 0.0184,
+            "E_normal_at_or_above": 256,
+            "E_normal_rate": 0.021639898562975487
+          }
+        },
+        "exact_P_positive_15": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 15,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 15,
+            "target_boundary_ties": 15,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_25pct": {
+            "required_targets": 4,
+            "target_rows": 15,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 15,
+            "target_boundary_ties": 15,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_50pct": {
+            "required_targets": 8,
+            "target_rows": 15,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 15,
+            "target_boundary_ties": 15,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_100pct": {
+            "required_targets": 15,
+            "target_rows": 15,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 15,
+            "target_boundary_ties": 15,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          }
+        },
+        "main47_scanning": {
+          "at_least_1": {
+            "required_targets": 1,
+            "target_rows": 217,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 207,
+            "target_boundary_ties": 207,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_25pct": {
+            "required_targets": 55,
+            "target_rows": 217,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 207,
+            "target_boundary_ties": 207,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_50pct": {
+            "required_targets": 109,
+            "target_rows": 217,
+            "score_boundary_inclusive": 1.9402236938476562,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 207,
+            "target_boundary_ties": 207,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 158,
+            "E_normal_rate": 0.013355874894336433
+          },
+          "at_least_100pct": {
+            "required_targets": 217,
+            "target_rows": 217,
+            "score_boundary_inclusive": 1.9402132034301758,
+            "explanation": "Any strict > threshold detecting at least required_targets must be below this score; all ties are included.",
+            "targets_detected_with_ties": 217,
+            "target_boundary_ties": 10,
+            "C_normal_at_or_above": 66,
+            "C_normal_rate": 0.0132,
+            "E_normal_at_or_above": 162,
+            "E_normal_rate": 0.013693998309382924
+          }
+        }
+      },
+      "local_ranking": {
+        "target_service_6_91_443": {
+          "Scanning": {
+            "rows": 237,
+            "min": -1.6332244873046875,
+            "median": 1.9402236938476562,
+            "max": 3.867551803588867,
+            "distinct": 22
+          },
+          "normal": {
+            "rows": 72,
+            "min": -2.4264168739318848,
+            "median": 1.852917194366455,
+            "max": 3.0808897018432617,
+            "distinct": 31
+          },
+          "Scanning_vs_normal_AUC": 0.7258263009845288,
+          "score_only_cost": {
+            "0.25": {
+              "required_scanning": 60,
+              "scanning_with_ties": 209,
+              "local_normals_at_or_above": 31,
+              "local_normal_denominator": 72
+            },
+            "0.5": {
+              "required_scanning": 119,
+              "scanning_with_ties": 209,
+              "local_normals_at_or_above": 31,
+              "local_normal_denominator": 72
+            },
+            "1.0": {
+              "required_scanning": 237,
+              "scanning_with_ties": 237,
+              "local_normals_at_or_above": 67,
+              "local_normal_denominator": 72
+            }
+          }
+        },
+        "main47": {
+          "Scanning": {
+            "rows": 217,
+            "min": 1.9402132034301758,
+            "median": 1.9402236938476562,
+            "max": 1.9402236938476562,
+            "distinct": 2
+          },
+          "normal": {
+            "rows": 33,
+            "min": 1.9402132034301758,
+            "median": 1.9402236938476562,
+            "max": 1.9402236938476562,
+            "distinct": 2
+          },
+          "Scanning_vs_normal_AUC": 0.5375645859516828,
+          "score_only_cost": {
+            "0.25": {
+              "required_scanning": 55,
+              "scanning_with_ties": 207,
+              "local_normals_at_or_above": 29,
+              "local_normal_denominator": 33
+            },
+            "0.5": {
+              "required_scanning": 109,
+              "scanning_with_ties": 207,
+              "local_normals_at_or_above": 29,
+              "local_normal_denominator": 33
+            },
+            "1.0": {
+              "required_scanning": 217,
+              "scanning_with_ties": 217,
+              "local_normals_at_or_above": 33,
+              "local_normal_denominator": 33
+            }
+          }
+        }
+      }
+    }
+  },
+  "baseline_normal_bands": {
+    "current_alerts_strict": {
+      "score_lower": 2.337514877319336,
+      "score_upper": null,
+      "lower_inclusive": false,
+      "C": {
+        "rows": 49,
+        "score": {
+          "rows": 49,
+          "min": 2.3409342765808105,
+          "median": 4.148107528686523,
+          "max": 6.3556718826293945,
+          "distinct": 49
+        },
+        "communication_groups": 49,
+        "largest_group_rows": 1,
+        "groups_with_multiple_rows": 0,
+        "top_services": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "rows": 32
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "rows": 15
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 370,
+            "L4_DST_PORT": 135,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 10,
+            "L4_DST_PORT": 445,
+            "rows": 1
+          }
+        ],
+        "top_raw_patterns": [
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 3,
+            "TCP_FLAGS": 0,
+            "rows": 6
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 2,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 18,
+            "rows": 3
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 0,
+            "rows": 3
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 10,
+            "L4_DST_PORT": 445,
+            "IN_PKTS": 7,
+            "OUT_PKTS": 3,
+            "FLOW_DURATION_MILLISECONDS": 29,
+            "TCP_FLAGS": 31,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 991,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 5,
+            "TCP_FLAGS": 0,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 138,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          }
+        ]
+      },
+      "E": {
+        "rows": 118,
+        "score": {
+          "rows": 118,
+          "min": 2.342815399169922,
+          "median": 4.007218599319458,
+          "max": 6.193303108215332,
+          "distinct": 118
+        },
+        "communication_groups": 117,
+        "largest_group_rows": 2,
+        "groups_with_multiple_rows": 1,
+        "top_services": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "rows": 83
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "rows": 23
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 10,
+            "L4_DST_PORT": 445,
+            "rows": 6
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 8080,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 0,
+            "L4_DST_PORT": 50838,
+            "rows": 1
+          }
+        ],
+        "top_raw_patterns": [
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 2,
+            "TCP_FLAGS": 0,
+            "rows": 9
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 6,
+            "TCP_FLAGS": 0,
+            "rows": 4
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 0,
+            "rows": 4
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 4,
+            "TCP_FLAGS": 27,
+            "rows": 3
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 2,
+            "TCP_FLAGS": 27,
+            "rows": 3
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 4,
+            "FLOW_DURATION_MILLISECONDS": 11,
+            "TCP_FLAGS": 27,
+            "rows": 3
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 7,
+            "FLOW_DURATION_MILLISECONDS": 3,
+            "TCP_FLAGS": 27,
+            "rows": 3
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 4,
+            "FLOW_DURATION_MILLISECONDS": 12,
+            "TCP_FLAGS": 27,
+            "rows": 2
+          }
+        ]
+      }
+    },
+    "normal_between_old54_min_max_inclusive": {
+      "score_lower": 0.3843679428100586,
+      "score_upper": 2.2008495330810547,
+      "lower_inclusive": true,
+      "C": {
+        "rows": 66,
+        "score": {
+          "rows": 66,
+          "min": 0.4283123016357422,
+          "median": 1.3144993782043457,
+          "max": 2.1868791580200195,
+          "distinct": 66
+        },
+        "communication_groups": 66,
+        "largest_group_rows": 1,
+        "groups_with_multiple_rows": 0,
+        "top_services": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "rows": 27
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "rows": 13
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "rows": 11
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "rows": 7
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 170,
+            "L4_DST_PORT": 43,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 3,
+            "L4_DST_PORT": 25,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 8080,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 89,
+            "L4_DST_PORT": 5800,
+            "rows": 1
+          }
+        ],
+        "top_raw_patterns": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 16,
+            "rows": 15
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 9
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 8
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 2,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 24,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 3,
+            "TCP_FLAGS": 0,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 2,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 8,
+            "OUT_PKTS": 6,
+            "FLOW_DURATION_MILLISECONDS": 185,
+            "TCP_FLAGS": 31,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 8,
+            "OUT_PKTS": 7,
+            "FLOW_DURATION_MILLISECONDS": 113,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          }
+        ]
+      },
+      "E": {
+        "rows": 235,
+        "score": {
+          "rows": 235,
+          "min": 0.3927440643310547,
+          "median": 1.1356515884399414,
+          "max": 2.200840950012207,
+          "distinct": 228
+        },
+        "communication_groups": 234,
+        "largest_group_rows": 2,
+        "groups_with_multiple_rows": 1,
+        "top_services": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "rows": 97
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "rows": 52
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "rows": 49
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "rows": 19
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 170,
+            "L4_DST_PORT": 43,
+            "rows": 5
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 29,
+            "L4_DST_PORT": 465,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 23,
+            "L4_DST_PORT": 110,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 3,
+            "L4_DST_PORT": 587,
+            "rows": 2
+          }
+        ],
+        "top_raw_patterns": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 16,
+            "rows": 69
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 33
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 19
+          },
+          {
+            "PROTOCOL": 17,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 2,
+            "TCP_FLAGS": 0,
+            "rows": 10
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 2,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 7
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 2,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 24,
+            "rows": 4
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 11,
+            "TCP_FLAGS": 16,
+            "rows": 4
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 3
+          }
+        ]
+      }
+    },
+    "normal_between_main47_scan_min_max_inclusive": {
+      "score_lower": 1.7473974227905273,
+      "score_upper": 2.2008495330810547,
+      "lower_inclusive": true,
+      "C": {
+        "rows": 24,
+        "score": {
+          "rows": 24,
+          "min": 1.8048315048217773,
+          "median": 1.9631094932556152,
+          "max": 2.1868791580200195,
+          "distinct": 24
+        },
+        "communication_groups": 24,
+        "largest_group_rows": 1,
+        "groups_with_multiple_rows": 0,
+        "top_services": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "rows": 9
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "rows": 8
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "rows": 6
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 8080,
+            "rows": 1
+          }
+        ],
+        "top_raw_patterns": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 9
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 8
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 8,
+            "OUT_PKTS": 7,
+            "FLOW_DURATION_MILLISECONDS": 1001,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 8080,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1467,
+            "TCP_FLAGS": 24,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 4,
+            "FLOW_DURATION_MILLISECONDS": 24,
+            "TCP_FLAGS": 24,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 6,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 2,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 8,
+            "OUT_PKTS": 7,
+            "FLOW_DURATION_MILLISECONDS": 113,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 7,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 174,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          }
+        ]
+      },
+      "E": {
+        "rows": 75,
+        "score": {
+          "rows": 75,
+          "min": 1.7661266326904297,
+          "median": 1.955409049987793,
+          "max": 2.200840950012207,
+          "distinct": 74
+        },
+        "communication_groups": 75,
+        "largest_group_rows": 1,
+        "groups_with_multiple_rows": 0,
+        "top_services": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "rows": 34
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "rows": 20
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "rows": 12
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 3,
+            "L4_DST_PORT": 587,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 23,
+            "L4_DST_PORT": 110,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 4,
+            "L4_DST_PORT": 143,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 5,
+            "L4_DST_PORT": 53,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 2,
+            "L4_DST_PORT": 110,
+            "rows": 1
+          }
+        ],
+        "top_raw_patterns": [
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 33
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 1,
+            "L4_DST_PORT": 21,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 22,
+            "rows": 19
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 8,
+            "OUT_PKTS": 7,
+            "FLOW_DURATION_MILLISECONDS": 207,
+            "TCP_FLAGS": 27,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 3,
+            "L4_DST_PORT": 587,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 2
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 5,
+            "OUT_PKTS": 5,
+            "FLOW_DURATION_MILLISECONDS": 78,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 7,
+            "L4_DST_PORT": 80,
+            "IN_PKTS": 8,
+            "OUT_PKTS": 7,
+            "FLOW_DURATION_MILLISECONDS": 188,
+            "TCP_FLAGS": 27,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 91,
+            "L4_DST_PORT": 443,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 1,
+            "FLOW_DURATION_MILLISECONDS": 206,
+            "TCP_FLAGS": 16,
+            "rows": 1
+          },
+          {
+            "PROTOCOL": 6,
+            "L7_PROTO": 41,
+            "L4_DST_PORT": 445,
+            "IN_PKTS": 1,
+            "OUT_PKTS": 0,
+            "FLOW_DURATION_MILLISECONDS": 1,
+            "TCP_FLAGS": 2,
+            "rows": 1
+          }
+        ]
+      }
+    }
+  },
+  "high_normal_raw47_P_overlap": {
+    "C": {
+      "alert_normal_rows": 49,
+      "same_raw47_P_normal_count": {
+        "rows": 49,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0,
+        "distinct": 2
+      },
+      "same_raw47_P_attack_count": {
+        "rows": 49,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 310.0,
+        "distinct": 9
+      },
+      "rows_with_P_normal_match": 6,
+      "rows_with_P_attack_match": 16,
+      "rows_with_both": 6
+    },
+    "E": {
+      "alert_normal_rows": 118,
+      "same_raw47_P_normal_count": {
+        "rows": 118,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0,
+        "distinct": 2
+      },
+      "same_raw47_P_attack_count": {
+        "rows": 118,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 310.0,
+        "distinct": 12
+      },
+      "rows_with_P_normal_match": 6,
+      "rows_with_P_attack_match": 22,
+      "rows_with_both": 6
+    }
+  },
+  "main47_support_and_query": {
+    "nonzero_raw47_fields": {
+      "L4_DST_PORT": "443",
+      "PROTOCOL": "6",
+      "L7_PROTO": "91",
+      "IN_BYTES": "44",
+      "IN_PKTS": "1",
+      "FLOW_DURATION_MILLISECONDS": "1",
+      "TCP_FLAGS": "2",
+      "CLIENT_TCP_FLAGS": "2",
+      "LONGEST_FLOW_PKT": "44",
+      "SHORTEST_FLOW_PKT": "44",
+      "MAX_IP_PKT_LEN": "44",
+      "SRC_TO_DST_AVG_THROUGHPUT": "352000",
+      "NUM_PKTS_UP_TO_128_BYTES": "1",
+      "TCP_WIN_MAX_IN": "1024"
+    },
+    "zero_fields": 33,
+    "roles": {
+      "P": {
+        "rows": 100,
+        "families": {
+          "Scanning": 89,
+          "Benign": 11
+        },
+        "Scanning_share": 0.89,
+        "normal_share": 0.11,
+        "communication_groups": 100,
+        "source_ports_by_family": {
+          "Benign": {
+            "rows": 11,
+            "min": 38665.0,
+            "median": 52440.0,
+            "max": 59907.0,
+            "distinct": 11
+          },
+          "Scanning": {
+            "rows": 89,
+            "min": 33090.0,
+            "median": 49722.0,
+            "max": 65193.0,
+            "distinct": 85
+          }
+        },
+        "full_raw48_mixed_label_patterns_within_main47": 0,
+        "full_raw48_total_error_lower_bound_within_main47": 0
+      },
+      "C": {
+        "rows": 9,
+        "families": {
+          "Benign": 9
+        },
+        "Scanning_share": 0.0,
+        "normal_share": 1.0,
+        "communication_groups": 9,
+        "source_ports_by_family": {
+          "Benign": {
+            "rows": 9,
+            "min": 37173.0,
+            "median": 47156.0,
+            "max": 64849.0,
+            "distinct": 9
+          }
+        },
+        "full_raw48_mixed_label_patterns_within_main47": 0,
+        "full_raw48_total_error_lower_bound_within_main47": 0,
+        "score_by_arm": {
+          "baseline": {
+            "rows": 9,
+            "min": 1.8269948959350586,
+            "median": 2.0503902435302734,
+            "max": 2.1284351348876953,
+            "distinct": 9
+          },
+          "src_frequency_bijection": {
+            "rows": 9,
+            "min": 1.842646598815918,
+            "median": 2.0241289138793945,
+            "max": 2.1291112899780273,
+            "distinct": 9
+          },
+          "src_mask_zero": {
+            "rows": 9,
+            "min": 1.9402236938476562,
+            "median": 1.9402236938476562,
+            "max": 1.9402236938476562,
+            "distinct": 1
+          }
+        }
+      },
+      "E": {
+        "rows": 250,
+        "families": {
+          "Scanning": 217,
+          "Benign": 33
+        },
+        "Scanning_share": 0.868,
+        "normal_share": 0.132,
+        "communication_groups": 250,
+        "source_ports_by_family": {
+          "Benign": {
+            "rows": 33,
+            "min": 33158.0,
+            "median": 52728.0,
+            "max": 63995.0,
+            "distinct": 32
+          },
+          "Scanning": {
+            "rows": 217,
+            "min": 33022.0,
+            "median": 49677.0,
+            "max": 65215.0,
+            "distinct": 211
+          }
+        },
+        "full_raw48_mixed_label_patterns_within_main47": 0,
+        "full_raw48_total_error_lower_bound_within_main47": 0,
+        "score_by_arm_and_family": {
+          "baseline": {
+            "Benign": {
+              "rows": 33,
+              "min": 1.8895330429077148,
+              "median": 2.039854049682617,
+              "max": 2.200840950012207,
+              "distinct": 32
+            },
+            "Scanning": {
+              "rows": 217,
+              "min": 1.7473974227905273,
+              "median": 2.043961524963379,
+              "max": 2.2008495330810547,
+              "distinct": 211
+            }
+          },
+          "src_frequency_bijection": {
+            "Benign": {
+              "rows": 33,
+              "min": 1.7693634033203125,
+              "median": 2.03383731842041,
+              "max": 2.1290245056152344,
+              "distinct": 32
+            },
+            "Scanning": {
+              "rows": 217,
+              "min": 1.7611494064331055,
+              "median": 2.03391170501709,
+              "max": 2.12906551361084,
+              "distinct": 211
+            }
+          },
+          "src_mask_zero": {
+            "Benign": {
+              "rows": 33,
+              "min": 1.9402132034301758,
+              "median": 1.9402236938476562,
+              "max": 1.9402236938476562,
+              "distinct": 2
+            },
+            "Scanning": {
+              "rows": 217,
+              "min": 1.9402132034301758,
+              "median": 1.9402236938476562,
+              "max": 1.9402236938476562,
+              "distinct": 2
+            }
+          }
+        }
+      }
+    }
+  },
+  "P_label_granularity_input_consistency": {
+    "source": "raw 48-field numeric equality only; no new label map or real FP32 representation",
+    "P_unique_raw48_patterns": 7705,
+    "saved_baseline_P_unique_FP32_patterns": 7705,
+    "T1_counts": {
+      "normal": 4096,
+      "Scanning": 512,
+      "other_attack": 3584
+    },
+    "attack_rows": 4096,
+    "attack_input_groups": 4068,
+    "attack_rows_per_input_group_histogram": {
+      "1": 4040,
+      "2": 28
+    },
+    "attack_duplicate_input_groups": 28,
+    "attack_rows_in_duplicate_groups": 56,
+    "attack_duplicate_family_compositions": {
+      "{\"DDoS\": 2}": 23,
+      "{\"Scanning\": 2}": 5
+    },
+    "pure_attack_singleton_groups": 4039,
+    "T1_Scanning_vs_other_attack_conflict_groups": 0,
+    "existing_normal_vs_attack_conflict_groups": [
+      {
+        "Scanning": 1,
+        "Benign": 1
+      }
+    ],
+    "rowwise_pseudo_split_exposure": "28 identical-input attack pairs could receive different pseudo subclasses if hashing rows independently; no actual pseudo-label allocation was performed",
+    "groupwise_512_feasibility": "4039 pure attack singleton groups suffice to achieve a 512-row pseudo class without splitting any attack pair; actual mapping and FP32 group audit remain laboratory work"
+  },
+  "coarse_service_support_and_query": [
+    {
+      "service": {
+        "PROTOCOL": 6,
+        "L7_PROTO": 91,
+        "L4_DST_PORT": 443
+      },
+      "roles": {
+        "P": {
+          "rows": 1015,
+          "families": {
+            "DDoS": 882,
+            "Scanning": 99,
+            "Benign": 18,
+            "Injection": 16
+          },
+          "communication_groups": 988
+        },
+        "C": {
+          "rows": 17,
+          "families": {
+            "Benign": 17
+          },
+          "communication_groups": 17,
+          "baseline_normal_alerts": 0,
+          "normal_rows": 17,
+          "baseline_local_normal_FPR": 0.0
+        },
+        "E": {
+          "rows": 2166,
+          "families": {
+            "DDoS": 1823,
+            "Scanning": 237,
+            "Benign": 72,
+            "Injection": 34
+          },
+          "communication_groups": 2016,
+          "baseline_normal_alerts": 1,
+          "normal_rows": 72,
+          "baseline_local_normal_FPR": 0.013888888888888888
+        }
+      }
+    },
+    {
+      "service": {
+        "PROTOCOL": 6,
+        "L7_PROTO": 7,
+        "L4_DST_PORT": 80
+      },
+      "roles": {
+        "P": {
+          "rows": 2086,
+          "families": {
+            "XSS": 613,
+            "DDoS": 596,
+            "Password": 576,
+            "Injection": 112,
+            "Benign": 92,
+            "Scanning": 60,
+            "Backdoor": 36,
+            "DoS": 1
+          },
+          "communication_groups": 2070
+        },
+        "C": {
+          "rows": 77,
+          "families": {
+            "Benign": 77
+          },
+          "communication_groups": 77,
+          "baseline_normal_alerts": 32,
+          "normal_rows": 77,
+          "baseline_local_normal_FPR": 0.4155844155844156
+        },
+        "E": {
+          "rows": 4237,
+          "families": {
+            "DDoS": 1257,
+            "XSS": 1182,
+            "Password": 1146,
+            "Injection": 228,
+            "Benign": 221,
+            "Scanning": 168,
+            "Backdoor": 29,
+            "DoS": 5,
+            "MITM": 1
+          },
+          "communication_groups": 4140,
+          "baseline_normal_alerts": 83,
+          "normal_rows": 221,
+          "baseline_local_normal_FPR": 0.3755656108597285
+        }
+      }
+    },
+    {
+      "service": {
+        "PROTOCOL": 17,
+        "L7_PROTO": 5,
+        "L4_DST_PORT": 53
+      },
+      "roles": {
+        "P": {
+          "rows": 817,
+          "families": {
+            "XSS": 502,
+            "Benign": 242,
+            "DDoS": 33,
+            "DoS": 31,
+            "Injection": 6,
+            "MITM": 2,
+            "Scanning": 1
+          },
+          "communication_groups": 798
+        },
+        "C": {
+          "rows": 246,
+          "families": {
+            "Benign": 246
+          },
+          "communication_groups": 244,
+          "baseline_normal_alerts": 15,
+          "normal_rows": 246,
+          "baseline_local_normal_FPR": 0.06097560975609756
+        },
+        "E": {
+          "rows": 1715,
+          "families": {
+            "XSS": 907,
+            "Benign": 650,
+            "DoS": 79,
+            "DDoS": 66,
+            "Injection": 9,
+            "MITM": 2,
+            "Scanning": 1,
+            "Password": 1
+          },
+          "communication_groups": 1679,
+          "baseline_normal_alerts": 23,
+          "normal_rows": 650,
+          "baseline_local_normal_FPR": 0.03538461538461538
+        }
+      }
+    }
+  ],
+  "saved_B1_mapping_response": {
+    "mapping_source": "saved .npy only; no construction",
+    "tolerance": "abs(B1-B0) > 3e-5 + 3e-5*abs(B0)",
+    "roles": {
+      "C": {
+        "all": {
+          "rows": 5000,
+          "unchanged_query_port_rows": 2529,
+          "changed_query_port_rows": 2471,
+          "score_changed_beyond_tolerance": 4999,
+          "unchanged_query_port_score_changed": 2529,
+          "unchanged_query_port_score_unchanged": 0,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 2529,
+            "min": 0.0008687973022460938,
+            "median": 0.17518043518066406,
+            "max": 1.1102933883666992,
+            "distinct": 1362
+          }
+        },
+        "normal": {
+          "rows": 5000,
+          "unchanged_query_port_rows": 2529,
+          "changed_query_port_rows": 2471,
+          "score_changed_beyond_tolerance": 4999,
+          "unchanged_query_port_score_changed": 2529,
+          "unchanged_query_port_score_unchanged": 0,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 2529,
+            "min": 0.0008687973022460938,
+            "median": 0.17518043518066406,
+            "max": 1.1102933883666992,
+            "distinct": 1362
+          }
+        }
+      },
+      "E": {
+        "all": {
+          "rows": 20000,
+          "unchanged_query_port_rows": 4623,
+          "changed_query_port_rows": 15377,
+          "score_changed_beyond_tolerance": 19987,
+          "unchanged_query_port_score_changed": 4620,
+          "unchanged_query_port_score_unchanged": 3,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 4623,
+            "min": 8.58306884765625e-05,
+            "median": 0.15672779083251953,
+            "max": 1.645216464996338,
+            "distinct": 4258
+          }
+        },
+        "normal": {
+          "rows": 11830,
+          "unchanged_query_port_rows": 4619,
+          "changed_query_port_rows": 7211,
+          "score_changed_beyond_tolerance": 11824,
+          "unchanged_query_port_score_changed": 4616,
+          "unchanged_query_port_score_unchanged": 3,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 4619,
+            "min": 8.58306884765625e-05,
+            "median": 0.15683937072753906,
+            "max": 1.645216464996338,
+            "distinct": 4254
+          }
+        },
+        "Scanning": {
+          "rows": 1078,
+          "unchanged_query_port_rows": 3,
+          "changed_query_port_rows": 1075,
+          "score_changed_beyond_tolerance": 1078,
+          "unchanged_query_port_score_changed": 3,
+          "unchanged_query_port_score_unchanged": 0,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 3,
+            "min": 0.006411552429199219,
+            "median": 0.031371116638183594,
+            "max": 0.09384632110595703,
+            "distinct": 3
+          }
+        },
+        "old_54": {
+          "rows": 54,
+          "unchanged_query_port_rows": 0,
+          "changed_query_port_rows": 54,
+          "score_changed_beyond_tolerance": 54,
+          "unchanged_query_port_score_changed": 0,
+          "unchanged_query_port_score_unchanged": 0,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 0
+          }
+        },
+        "exact_P_positive_15": {
+          "rows": 15,
+          "unchanged_query_port_rows": 0,
+          "changed_query_port_rows": 15,
+          "score_changed_beyond_tolerance": 15,
+          "unchanged_query_port_score_changed": 0,
+          "unchanged_query_port_score_unchanged": 0,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 0
+          }
+        },
+        "main47_scanning": {
+          "rows": 217,
+          "unchanged_query_port_rows": 0,
+          "changed_query_port_rows": 217,
+          "score_changed_beyond_tolerance": 217,
+          "unchanged_query_port_score_changed": 0,
+          "unchanged_query_port_score_unchanged": 0,
+          "unchanged_query_port_abs_score_delta": {
+            "rows": 0
+          }
+        }
+      }
+    },
+    "P_rows_with_port_change": 6493,
+    "interpretation": "B1 jointly changes support and queries. Changed scores for unchanged full query rows establish context-side or batch-path influence, not an isolated causal effect of the query source port. Frozen preprocessing is unchanged; no claim about which internal support rows caused the response."
+  },
+  "strict_monotone_calibration": {
+    "identity": "For strictly increasing f: f(s)>f(t) iff s>t. Transforming calibration order statistic and query scores together therefore preserves all decisions, ranks and ties.",
+    "scope": "common scalar strictly increasing transform; does not cover group-dependent transformations or new conditional scores",
+    "group_calibration_observation": {
+      "target_service_C_normals": 17,
+      "main47_C_normals": 9,
+      "alpha": 0.01,
+      "target_service_rank": 18,
+      "main47_rank": 10,
+      "finite_threshold_minimum_n_at_alpha_001": 99
+    }
+  }
+}

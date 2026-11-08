@@ -246,6 +246,7 @@ def test_three_fixed_random_model_arms_export_independent_cold_detectors(v2_prot
         feature_only = tmp_path / "queries.csv"
         frames["evaluation"].loc[:, SCHEMA["features"]].to_csv(feature_only, index=False)
         env = os.environ.copy()
+        env["PYTHONIOENCODING"] = "utf-8"
         env["PYTHONPATH"] = os.pathsep.join(str(Path(p).resolve()) for p in sys.path if p and Path(p).is_dir())
         for name in names:
             registration = report["registrations"][name]
@@ -259,7 +260,8 @@ def test_three_fixed_random_model_arms_export_independent_cold_detectors(v2_prot
             prediction_path = cold / "predictions.csv"
             command = [sys.executable, "-m", "ids.context_cache", "predict-csv", "--deployment", str(cold),
                        "--input", str(feature_only), "--output", str(prediction_path)]
-            result = subprocess.run(command, cwd=cold, env=env, capture_output=True, text=True, timeout=60)
+            result = subprocess.run(command, cwd=cold, env=env, capture_output=True,
+                                    text=True, encoding="utf-8", timeout=60)
             assert result.returncode == 0, result.stderr[-3000:]
             predicted = pd.read_csv(prediction_path, float_precision="round_trip")
             np.testing.assert_array_equal(predicted["score"], scores[f"{name}_score"])

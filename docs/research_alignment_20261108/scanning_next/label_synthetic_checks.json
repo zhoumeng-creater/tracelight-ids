@@ -1,0 +1,129 @@
+{
+  "format": "tracelight-scanning-label-reference-synthetic-v1",
+  "scope": "fabricated arrays only; no real model, support labels, preprocessing fit or sham assignment",
+  "passed": 23,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "semantic_partition_preserves_original_binary_target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic_counts_are_4_5_14",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "only_support_scanning_gets_semantic_class1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sham_exactly_matches_semantic_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sham_preserves_normal_attack_partition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sham_does_not_split_repeated_attack_input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "caller_arrays_not_mutated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_hash_assignment_repeatable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "assignment_independent_of_input_row_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "signed_zero_does_not_create_pseudo_class_conflict",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unfillable_whole_group_quota_fails_without_seed_search",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "binary_family_disagreement_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing_semantic_class_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "non_FP32_support_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "binary_score_byte_exact_to_existing_subtraction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_class_score_is_all_attack_probability_log_odds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "attack_output_column_swap_preserves_union",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "common_logit_shift_does_not_change_union",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "extreme_logits_stay_finite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "binary_argmax_is_not_a_valid_union_replacement",
+      "passed": true,
+      "detail": "Normal is largest single class, while the sum of both attacks exceeds normal."
+    },
+    {
+      "name": "splitting_one_attack_logit_mass_in_two_is_score_invariant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "global_binary_class_weight_preserves_calibrated_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "strict_threshold_keeps_all_equal_scores_together",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "real_pretrained_model_runs": 0,
+  "real_support_sham_assignments": 0,
+  "source_sha256": {
+    "label_reference.py": "a54b7d2792a0277886c3a2edcbc506b2a355e46197e7fc4ef8ba589fdb99e317",
+    "label_synthetic_checks.py": "252eb1807682c332ed444ad063599a3bb560c9ae5d41b857e2ff150e5565d7d4"
+  }
+}

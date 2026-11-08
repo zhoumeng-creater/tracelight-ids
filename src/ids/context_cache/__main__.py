@@ -268,6 +268,27 @@ def build_parser():
     scan_pack = sub.add_parser("scanning-pack", help="Archive this run only, with member SHA verification")
     scan_pack.add_argument("--run-root", type=Path, required=True)
     scan_pack.add_argument("--output", type=Path, required=True)
+    label_register = sub.add_parser("label-register", help="Bind the frozen round14 inputs and references; no fitting")
+    label_register.add_argument("--round14-root", type=Path, required=True)
+    label_register.add_argument("--checkpoint", type=Path, required=True)
+    label_register.add_argument("--output", type=Path, required=True)
+    for command, help_text in (
+        ("label-preflight", "Lab: verify frozen identities, runtime and CUDA without loading weights"),
+        ("lab-label-compare", "Lab: binary replay, semantic family labels and grouped sham; full KV only"),
+    ):
+        item = sub.add_parser(command, help=help_text)
+        item.add_argument("--config", type=Path, required=True)
+        item.add_argument("--output", type=Path, required=True)
+    label_predict = sub.add_parser("label-predict", help="Cold arm-specific full-KV prediction from raw features")
+    label_predict.add_argument("--deployment", type=Path, required=True)
+    label_predict.add_argument("--input", type=Path, required=True)
+    label_predict.add_argument("--output", type=Path, required=True)
+    label_verify = sub.add_parser("label-verify", help="Recompute saved results without loading a model")
+    label_verify.add_argument("--results", type=Path, required=True)
+    label_verify.add_argument("--output", type=Path, required=True)
+    label_pack = sub.add_parser("label-pack", help="Archive this run only, with member SHA verification")
+    label_pack.add_argument("--run-root", type=Path, required=True)
+    label_pack.add_argument("--output", type=Path, required=True)
     return parser
 
 
@@ -300,6 +321,40 @@ def scanning_command(args):
         if args.output.exists():
             raise FileExistsError(args.output)
         _, _, _, _, result = preflight_scanning(args.config)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    _write_json(args.output, result)
+    return result
+
+
+def label_command(args):
+    from .label_protocol import (
+        load_label_protocol, pack_label_results, preflight_label, register_label_protocol,
+    )
+
+    if args.command == "label-register":
+        return register_label_protocol(round14_root=args.round14_root, checkpoint=args.checkpoint,
+                                          output=args.output)
+    if args.command == "label-pack":
+        return pack_label_results(args.run_root, args.output)
+    if args.command == "label-predict":
+        from .label_workflow import LabelDetector
+        return LabelDetector.load(args.deployment).predict_csv(args.input, args.output)
+    if args.command == "label-verify":
+        from .label_workflow import verify_label_result
+        if args.output.exists():
+            raise FileExistsError(args.output)
+        result = verify_label_result(args.results)
+    else:
+        spec, _, _ = load_label_protocol(args.config)
+        if spec["data_kind"] != "development":
+            raise ValueError("laboratory label CLI requires frozen development data; synthetic fixtures use Python API")
+        if args.command == "lab-label-compare":
+            from .label_workflow import run_label
+            report = run_label(args.config, args.output)
+            return {"status": "complete", "output": str(args.output.resolve()), "workload": report["workload"]}
+        if args.output.exists():
+            raise FileExistsError(args.output)
+        _, _, _, _, result = preflight_label(args.config)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     _write_json(args.output, result)
     return result
@@ -357,6 +412,8 @@ def main(argv=None):
     actions = {"synthetic-check": synthetic_command, "compile": compile_command, "predict": predict_command}
     if "scanning" in args.command:
         actions[args.command] = scanning_command
+    if "label" in args.command:
+        actions[args.command] = label_command
     result = actions.get(args.command, csv_command)(args)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
