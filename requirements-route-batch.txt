@@ -1,0 +1,5 @@
+# New dedicated route-batch core environment; do not install into an old lab venv.
+# CUDA Torch 2.6.0+cu126 is installed separately by setup_route_batch_lab.ps1.
+-r requirements-context-cache-lab.txt
+tabm==0.0.3
+rtdl_num_embeddings==0.0.12
