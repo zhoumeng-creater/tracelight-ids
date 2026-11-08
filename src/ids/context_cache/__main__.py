@@ -247,7 +247,62 @@ def build_parser():
     raw_predict.add_argument("--deployment", type=Path, required=True)
     raw_predict.add_argument("--input", type=Path, required=True)
     raw_predict.add_argument("--output", type=Path, required=True)
+    scan_register = sub.add_parser("scanning-register", help="Bind the frozen round14 inputs and references; no fitting")
+    scan_register.add_argument("--round14-root", type=Path, required=True)
+    scan_register.add_argument("--checkpoint", type=Path, required=True)
+    scan_register.add_argument("--output", type=Path, required=True)
+    for command, help_text in (
+        ("scanning-preflight", "Lab: verify frozen identities, runtime and CUDA without loading weights"),
+        ("lab-scanning-compare", "Lab: B0 replay then source-port bijection and masking; full KV only"),
+    ):
+        item = sub.add_parser(command, help=help_text)
+        item.add_argument("--config", type=Path, required=True)
+        item.add_argument("--output", type=Path, required=True)
+    scan_predict = sub.add_parser("scanning-predict", help="Cold arm-specific full-KV prediction from raw features")
+    scan_predict.add_argument("--deployment", type=Path, required=True)
+    scan_predict.add_argument("--input", type=Path, required=True)
+    scan_predict.add_argument("--output", type=Path, required=True)
+    scan_verify = sub.add_parser("scanning-verify", help="Recompute saved results without loading a model")
+    scan_verify.add_argument("--results", type=Path, required=True)
+    scan_verify.add_argument("--output", type=Path, required=True)
+    scan_pack = sub.add_parser("scanning-pack", help="Archive this run only, with member SHA verification")
+    scan_pack.add_argument("--run-root", type=Path, required=True)
+    scan_pack.add_argument("--output", type=Path, required=True)
     return parser
+
+
+def scanning_command(args):
+    from .scanning_protocol import (
+        load_scanning_protocol, pack_scanning_results, preflight_scanning, register_scanning_protocol,
+    )
+
+    if args.command == "scanning-register":
+        return register_scanning_protocol(round14_root=args.round14_root, checkpoint=args.checkpoint,
+                                          output=args.output)
+    if args.command == "scanning-pack":
+        return pack_scanning_results(args.run_root, args.output)
+    if args.command == "scanning-predict":
+        from .scanning_workflow import ScanningDetector
+        return ScanningDetector.load(args.deployment).predict_csv(args.input, args.output)
+    if args.command == "scanning-verify":
+        from .scanning_workflow import verify_scanning_result
+        if args.output.exists():
+            raise FileExistsError(args.output)
+        result = verify_scanning_result(args.results)
+    else:
+        spec, _, _ = load_scanning_protocol(args.config)
+        if spec["data_kind"] != "development":
+            raise ValueError("laboratory scanning CLI requires frozen development data; synthetic fixtures use Python API")
+        if args.command == "lab-scanning-compare":
+            from .scanning_workflow import run_scanning
+            report = run_scanning(args.config, args.output)
+            return {"status": "complete", "output": str(args.output.resolve()), "workload": report["workload"]}
+        if args.output.exists():
+            raise FileExistsError(args.output)
+        _, _, _, _, result = preflight_scanning(args.config)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    _write_json(args.output, result)
+    return result
 
 
 def csv_command(args):
@@ -300,6 +355,8 @@ def main(argv=None):
             raise ValueError("--tabicl-source must point to the official source repository")
         sys.path.insert(0, str(source))
     actions = {"synthetic-check": synthetic_command, "compile": compile_command, "predict": predict_command}
+    if "scanning" in args.command:
+        actions[args.command] = scanning_command
     result = actions.get(args.command, csv_command)(args)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0

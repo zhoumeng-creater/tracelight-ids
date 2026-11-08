@@ -1,0 +1,152 @@
+{
+  "format": "tracelight-scanning-source-port-mechanism-design-v1",
+  "status": "implemented_synthetic_verified_lab_ready",
+  "formal_lab_runner_implemented": true,
+  "real_model_runs": 0,
+  "real_source_port_maps_constructed_locally": 0,
+  "data_scope": "opened_round14_development_diagnosis_not_independent_confirmation",
+  "baseline_code_tag": "context-input-lab-v2",
+  "baseline_commit": "cff1d5c58144650552ce13e346dc0080fc40f30e",
+  "upstream_commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+  "files": {
+    "support": {
+      "archive_relative_path": "prepared/support.csv",
+      "rows": 8192,
+      "sha256": "ee6c1470f90caa3fcf5d47e884db71b82a6a5ab574ad8ebfe61cc5ba120a8fbf"
+    },
+    "calibration": {
+      "archive_relative_path": "prepared/normal_calibration.csv",
+      "rows": 5000,
+      "sha256": "fe0d56b6d87411f6b24af534a5543ea0774fdd1812fdf224572b5f6c750e24b2"
+    },
+    "evaluation": {
+      "archive_relative_path": "prepared/development_evaluation.csv",
+      "rows": 20000,
+      "sha256": "20883897adfa29498765174666a88dc2cc206a2f30f659476b07e416ee81f408"
+    }
+  },
+  "preparation_sha256": "f6de37c295fb82a59d73e17b0f17184636f32b2e033d9847be245f1fa35c12e7",
+  "checkpoint_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "frozen_preprocessor_sha256": "7a3189d5c3d6393b16600e9c84e4aea4ab4977d24f660ed4a8a996b5212161fb",
+  "archived_baseline_deployment_files": {
+    "model.pt": "61ffaf8a225026cfbe67f7e79dc3a9e7e53b9fed6297dbe26c88d7cee5432179",
+    "preprocessor.joblib": "7a3189d5c3d6393b16600e9c84e4aea4ab4977d24f660ed4a8a996b5212161fb",
+    "threshold.json": "198e312e6f928d16f01b8d1a882c69ece91d45eb883f4c0b431ec4497626aad6"
+  },
+  "source_port_column": 0,
+  "width": 48,
+  "source_port_domain": [
+    0,
+    65535
+  ],
+  "frozen_source_port_center": 35989.91845703125,
+  "frozen_source_port_scale": 21268.044830665465,
+  "model_seed": 20261107,
+  "mapping_seed": 20261108,
+  "mapping_version": "src-port-frequency-bijection-v1",
+  "mapping_key": "SHA256(UTF8 compact JSON [version,seed,P_frequency,value]); value tie-break",
+  "mapping_sha256_encoding": "table[0..65535] little-endian uint16 bytes; laboratory generated before model scoring",
+  "arms": [
+    {
+      "name": "baseline",
+      "intervention": "archived_v2_inputs",
+      "cache": "rebuild_full"
+    },
+    {
+      "name": "src_frequency_bijection",
+      "intervention": "P_frequency_stratified_domain_bijection_then_frozen_scaling",
+      "cache": "rebuild_full"
+    },
+    {
+      "name": "src_mask_zero",
+      "intervention": "set_only_final_fp32_source_port_slot_to_positive_zero",
+      "cache": "rebuild_full"
+    }
+  ],
+  "held_fixed": [
+    "P/C/E rows and order",
+    "binary labels and class counts",
+    "frozen preprocessing",
+    "other 47 FP32 input slots",
+    "checkpoint",
+    "48 feature positions",
+    "full cache support count 8192",
+    "CPU FP32 scoring",
+    "one thread",
+    "query batch 128"
+  ],
+  "calibration": {
+    "alpha": 0.01,
+    "normal_rows": 5000,
+    "rank": 4951,
+    "comparison": ">",
+    "per_arm_registration": true
+  },
+  "baseline_replay": {
+    "score_atol": 3e-05,
+    "score_rtol": 3e-05,
+    "threshold_atol": 3e-05,
+    "threshold_rtol": 3e-05,
+    "identical_C_E_decisions_required": true,
+    "on_mismatch": "stop and investigate; no tolerance or threshold retuning"
+  },
+  "lab_work": {
+    "full_context_builds": 3,
+    "calibration_scored_rows": 15000,
+    "evaluation_scored_rows": 60000,
+    "optimizer_updates": 0,
+    "qcoc_compilations": 0
+  },
+  "mapping_effect_reports": [
+    "all_P_C_E",
+    "old_54_lost",
+    "15_exact_P_positive_matches",
+    "TCP6_L791_DST443",
+    "dominant_47_field_pattern"
+  ],
+  "interpretation": {
+    "B1": "P marginal preserving numbering intervention; not semantic invariance or proof of spurious correlation",
+    "B2": "information deletion control; audit induced collisions",
+    "no_seed_or_threshold_search": true,
+    "fresh_confirmation_required_for_new_method": true
+  },
+  "reference_sha256_lf": "bc40e90f341f98bbc842b068df1ee9e8726eabef1144539f54ca6e4885f63757",
+  "synthetic_report": "mechanism_synthetic_checks.json",
+  "raw_metadata_audit": {
+    "report": "raw_metadata_audit.json",
+    "sha256": "667dbf5105d20f05eeaf7d6aa51ff32255be5f1ae24f0ede5d3b82454fc49b31",
+    "aligned_rows": 33192,
+    "numeric_comparisons": 1593216,
+    "mismatches": 0,
+    "split_claim": "communication_group_separated; not host-held-out or forward-time confirmation",
+    "raw_metadata_in_model_inputs": false
+  },
+  "scanning_partial_roc": {
+    "negative_class": "E normal rows",
+    "positive_class": "E Scanning rows",
+    "fpr_interval": [
+      0.0,
+      0.01
+    ],
+    "ties": "enter equal scores simultaneously",
+    "boundary": "linear interpolation",
+    "report": [
+      "raw area",
+      "raw area / 0.01"
+    ],
+    "threshold_selection_from_E": false
+  },
+  "mapping_required_audits": [
+    "frequency-stratum fixed points",
+    "moved-row proportion for P/C/E and the target 54/15 cohorts",
+    "number displacement",
+    "port-band changes",
+    "source/destination port equality changes",
+    "unchanged other 47 FP32 slots",
+    "unchanged P source-port FP32 multiset",
+    "unchanged source-port equality and P seen/unseen states"
+  ],
+  "release_tag": "scanning-mechanism-lab-v1",
+  "runtime_configuration": "../../../configs/context-scanning-mechanism-v1.json",
+  "implementation_validation": "implementation_validation.json"
+}

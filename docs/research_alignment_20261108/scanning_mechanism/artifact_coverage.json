@@ -1,0 +1,4013 @@
+{
+  "scope": "descriptive stored raw CSV and fixed registered predictions only; zero model load/forward/fit, zero threshold selection",
+  "projections": {
+    "all48": [
+      "L4_SRC_PORT",
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO",
+      "IN_BYTES",
+      "OUT_BYTES",
+      "IN_PKTS",
+      "OUT_PKTS",
+      "FLOW_DURATION_MILLISECONDS",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "DURATION_IN",
+      "DURATION_OUT",
+      "MIN_TTL",
+      "MAX_TTL",
+      "LONGEST_FLOW_PKT",
+      "SHORTEST_FLOW_PKT",
+      "MIN_IP_PKT_LEN",
+      "MAX_IP_PKT_LEN",
+      "SRC_TO_DST_SECOND_BYTES",
+      "DST_TO_SRC_SECOND_BYTES",
+      "RETRANSMITTED_IN_BYTES",
+      "RETRANSMITTED_IN_PKTS",
+      "RETRANSMITTED_OUT_BYTES",
+      "RETRANSMITTED_OUT_PKTS",
+      "SRC_TO_DST_AVG_THROUGHPUT",
+      "DST_TO_SRC_AVG_THROUGHPUT",
+      "NUM_PKTS_UP_TO_128_BYTES",
+      "NUM_PKTS_128_TO_256_BYTES",
+      "NUM_PKTS_256_TO_512_BYTES",
+      "NUM_PKTS_512_TO_1024_BYTES",
+      "NUM_PKTS_1024_TO_1514_BYTES",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "DNS_TTL_ANSWER",
+      "FTP_COMMAND_RET_CODE",
+      "SRC_TO_DST_IAT_MIN",
+      "SRC_TO_DST_IAT_MAX",
+      "SRC_TO_DST_IAT_AVG",
+      "SRC_TO_DST_IAT_STDDEV",
+      "DST_TO_SRC_IAT_MIN",
+      "DST_TO_SRC_IAT_MAX",
+      "DST_TO_SRC_IAT_AVG",
+      "DST_TO_SRC_IAT_STDDEV"
+    ],
+    "without_source_port47": [
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO",
+      "IN_BYTES",
+      "OUT_BYTES",
+      "IN_PKTS",
+      "OUT_PKTS",
+      "FLOW_DURATION_MILLISECONDS",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "DURATION_IN",
+      "DURATION_OUT",
+      "MIN_TTL",
+      "MAX_TTL",
+      "LONGEST_FLOW_PKT",
+      "SHORTEST_FLOW_PKT",
+      "MIN_IP_PKT_LEN",
+      "MAX_IP_PKT_LEN",
+      "SRC_TO_DST_SECOND_BYTES",
+      "DST_TO_SRC_SECOND_BYTES",
+      "RETRANSMITTED_IN_BYTES",
+      "RETRANSMITTED_IN_PKTS",
+      "RETRANSMITTED_OUT_BYTES",
+      "RETRANSMITTED_OUT_PKTS",
+      "SRC_TO_DST_AVG_THROUGHPUT",
+      "DST_TO_SRC_AVG_THROUGHPUT",
+      "NUM_PKTS_UP_TO_128_BYTES",
+      "NUM_PKTS_128_TO_256_BYTES",
+      "NUM_PKTS_256_TO_512_BYTES",
+      "NUM_PKTS_512_TO_1024_BYTES",
+      "NUM_PKTS_1024_TO_1514_BYTES",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "DNS_TTL_ANSWER",
+      "FTP_COMMAND_RET_CODE",
+      "SRC_TO_DST_IAT_MIN",
+      "SRC_TO_DST_IAT_MAX",
+      "SRC_TO_DST_IAT_AVG",
+      "SRC_TO_DST_IAT_STDDEV",
+      "DST_TO_SRC_IAT_MIN",
+      "DST_TO_SRC_IAT_MAX",
+      "DST_TO_SRC_IAT_AVG",
+      "DST_TO_SRC_IAT_STDDEV"
+    ],
+    "non_ID44": [
+      "IN_BYTES",
+      "OUT_BYTES",
+      "IN_PKTS",
+      "OUT_PKTS",
+      "FLOW_DURATION_MILLISECONDS",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "DURATION_IN",
+      "DURATION_OUT",
+      "MIN_TTL",
+      "MAX_TTL",
+      "LONGEST_FLOW_PKT",
+      "SHORTEST_FLOW_PKT",
+      "MIN_IP_PKT_LEN",
+      "MAX_IP_PKT_LEN",
+      "SRC_TO_DST_SECOND_BYTES",
+      "DST_TO_SRC_SECOND_BYTES",
+      "RETRANSMITTED_IN_BYTES",
+      "RETRANSMITTED_IN_PKTS",
+      "RETRANSMITTED_OUT_BYTES",
+      "RETRANSMITTED_OUT_PKTS",
+      "SRC_TO_DST_AVG_THROUGHPUT",
+      "DST_TO_SRC_AVG_THROUGHPUT",
+      "NUM_PKTS_UP_TO_128_BYTES",
+      "NUM_PKTS_128_TO_256_BYTES",
+      "NUM_PKTS_256_TO_512_BYTES",
+      "NUM_PKTS_512_TO_1024_BYTES",
+      "NUM_PKTS_1024_TO_1514_BYTES",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "DNS_TTL_ANSWER",
+      "FTP_COMMAND_RET_CODE",
+      "SRC_TO_DST_IAT_MIN",
+      "SRC_TO_DST_IAT_MAX",
+      "SRC_TO_DST_IAT_AVG",
+      "SRC_TO_DST_IAT_STDDEV",
+      "DST_TO_SRC_IAT_MIN",
+      "DST_TO_SRC_IAT_MAX",
+      "DST_TO_SRC_IAT_AVG",
+      "DST_TO_SRC_IAT_STDDEV"
+    ],
+    "all_four_IDs": [
+      "L4_SRC_PORT",
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO"
+    ],
+    "protocol_L7_destination_port": [
+      "PROTOCOL",
+      "L7_PROTO",
+      "L4_DST_PORT"
+    ]
+  },
+  "registered_thresholds": {
+    "legacy_full": 1.8944053649902344,
+    "full": 2.337514877319336,
+    "qcoc": 2.3238344192504883
+  },
+  "projection_warning": "non-ID44 and without-source-port47 are diagnostic projections, not current deployed inputs; their collision bounds do not apply to all48",
+  "populations": {
+    "P_scanning": {
+      "rows": 512,
+      "unique_communication_groups": 512,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 507,
+        "without_source_port47": 344,
+        "non_ID44": 45,
+        "all_four_IDs": 507,
+        "protocol_L7_destination_port": 320
+      },
+      "source_port": {
+        "n": 512,
+        "unique": 498,
+        "min": 24.0,
+        "median": 44220.5,
+        "max": 65193.0
+      },
+      "destination_port": {
+        "n": 512,
+        "unique": 317,
+        "min": 21.0,
+        "median": 2577.5,
+        "max": 65309.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 419
+    },
+    "P_normal": {
+      "rows": 4096,
+      "unique_communication_groups": 3588,
+      "largest_group_rows": 197,
+      "unique_patterns": {
+        "all48": 3638,
+        "without_source_port47": 3090,
+        "non_ID44": 613,
+        "all_four_IDs": 3517,
+        "protocol_L7_destination_port": 2483
+      },
+      "source_port": {
+        "n": 4096,
+        "unique": 1916,
+        "min": 0.0,
+        "median": 33439.0,
+        "max": 65531.0
+      },
+      "destination_port": {
+        "n": 4096,
+        "unique": 2438,
+        "min": 0.0,
+        "median": 32773.0,
+        "max": 65415.0
+      },
+      "source_equals_destination_port_rows": 74,
+      "destination_port_numerically_smaller_rows": 2041
+    },
+    "C_normal": {
+      "rows": 5000,
+      "unique_communication_groups": 3770,
+      "largest_group_rows": 1133,
+      "unique_patterns": {
+        "all48": 3823,
+        "without_source_port47": 3282,
+        "non_ID44": 589,
+        "all_four_IDs": 3713,
+        "protocol_L7_destination_port": 2709
+      },
+      "source_port": {
+        "n": 5000,
+        "unique": 1912,
+        "min": 0.0,
+        "median": 443.0,
+        "max": 65420.0
+      },
+      "destination_port": {
+        "n": 5000,
+        "unique": 2658,
+        "min": 0.0,
+        "median": 40456.0,
+        "max": 65515.0
+      },
+      "source_equals_destination_port_rows": 59,
+      "destination_port_numerically_smaller_rows": 2027
+    },
+    "E_scanning": {
+      "rows": 1078,
+      "unique_communication_groups": 1078,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 1061,
+        "without_source_port47": 636,
+        "non_ID44": 69,
+        "all_four_IDs": 1060,
+        "protocol_L7_destination_port": 574
+      },
+      "source_port": {
+        "n": 1078,
+        "unique": 1015,
+        "min": 79.0,
+        "median": 44343.0,
+        "max": 65417.0
+      },
+      "destination_port": {
+        "n": 1078,
+        "unique": 569,
+        "min": 1.0,
+        "median": 1491.0,
+        "max": 65389.0
+      },
+      "source_equals_destination_port_rows": 1,
+      "destination_port_numerically_smaller_rows": 851
+    },
+    "E_normal": {
+      "rows": 11830,
+      "unique_communication_groups": 10842,
+      "largest_group_rows": 136,
+      "unique_patterns": {
+        "all48": 11457,
+        "without_source_port47": 8610,
+        "non_ID44": 1694,
+        "all_four_IDs": 10567,
+        "protocol_L7_destination_port": 6208
+      },
+      "source_port": {
+        "n": 11830,
+        "unique": 4494,
+        "min": 0.0,
+        "median": 34075.5,
+        "max": 65513.0
+      },
+      "destination_port": {
+        "n": 11830,
+        "unique": 5909,
+        "min": 0.0,
+        "median": 27351.0,
+        "max": 65460.0
+      },
+      "source_equals_destination_port_rows": 245,
+      "destination_port_numerically_smaller_rows": 6032
+    },
+    "lost54": {
+      "rows": 54,
+      "unique_communication_groups": 54,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 51,
+        "without_source_port47": 4,
+        "non_ID44": 4,
+        "all_four_IDs": 51,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 54,
+        "unique": 51,
+        "min": 33147.0,
+        "median": 51363.5,
+        "max": 65214.0
+      },
+      "destination_port": {
+        "n": 54,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 54
+    },
+    "gained3": {
+      "rows": 3,
+      "unique_communication_groups": 3,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 3,
+        "without_source_port47": 3,
+        "non_ID44": 3,
+        "all_four_IDs": 3,
+        "protocol_L7_destination_port": 2
+      },
+      "source_port": {
+        "n": 3,
+        "unique": 3,
+        "min": 36976.0,
+        "median": 38970.0,
+        "max": 51113.0
+      },
+      "destination_port": {
+        "n": 3,
+        "unique": 2,
+        "min": 110.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 3
+    }
+  },
+  "coverage_by_projection": {
+    "E_scanning": {
+      "all48": {
+        "P_scanning": 21,
+        "P_normal": 4,
+        "C_normal": 0,
+        "E_normal": 1,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 1053
+      },
+      "without_source_port47": {
+        "P_scanning": 432,
+        "P_normal": 482,
+        "C_normal": 477,
+        "E_normal": 560,
+        "in_both_P_scanning_and_P_normal": 401,
+        "in_neither_P_scanning_nor_P_normal": 565
+      },
+      "non_ID44": {
+        "P_scanning": 1017,
+        "P_normal": 1023,
+        "C_normal": 1026,
+        "E_normal": 1023,
+        "in_both_P_scanning_and_P_normal": 1013,
+        "in_neither_P_scanning_nor_P_normal": 51
+      },
+      "all_four_IDs": {
+        "P_scanning": 21,
+        "P_normal": 4,
+        "C_normal": 0,
+        "E_normal": 2,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 1053
+      },
+      "protocol_L7_destination_port": {
+        "P_scanning": 506,
+        "P_normal": 610,
+        "C_normal": 603,
+        "E_normal": 652,
+        "in_both_P_scanning_and_P_normal": 490,
+        "in_neither_P_scanning_nor_P_normal": 452
+      }
+    },
+    "lost54": {
+      "all48": {
+        "P_scanning": 15,
+        "P_normal": 1,
+        "C_normal": 0,
+        "E_normal": 0,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 38
+      },
+      "without_source_port47": {
+        "P_scanning": 52,
+        "P_normal": 50,
+        "C_normal": 52,
+        "E_normal": 52,
+        "in_both_P_scanning_and_P_normal": 50,
+        "in_neither_P_scanning_nor_P_normal": 2
+      },
+      "non_ID44": {
+        "P_scanning": 52,
+        "P_normal": 52,
+        "C_normal": 52,
+        "E_normal": 52,
+        "in_both_P_scanning_and_P_normal": 52,
+        "in_neither_P_scanning_nor_P_normal": 2
+      },
+      "all_four_IDs": {
+        "P_scanning": 15,
+        "P_normal": 1,
+        "C_normal": 0,
+        "E_normal": 0,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 38
+      },
+      "protocol_L7_destination_port": {
+        "P_scanning": 54,
+        "P_normal": 54,
+        "C_normal": 54,
+        "E_normal": 54,
+        "in_both_P_scanning_and_P_normal": 54,
+        "in_neither_P_scanning_nor_P_normal": 0
+      }
+    },
+    "gained3": {
+      "all48": {
+        "P_scanning": 0,
+        "P_normal": 0,
+        "C_normal": 0,
+        "E_normal": 0,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 3
+      },
+      "without_source_port47": {
+        "P_scanning": 1,
+        "P_normal": 0,
+        "C_normal": 0,
+        "E_normal": 1,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 2
+      },
+      "non_ID44": {
+        "P_scanning": 1,
+        "P_normal": 1,
+        "C_normal": 1,
+        "E_normal": 1,
+        "in_both_P_scanning_and_P_normal": 1,
+        "in_neither_P_scanning_nor_P_normal": 2
+      },
+      "all_four_IDs": {
+        "P_scanning": 0,
+        "P_normal": 0,
+        "C_normal": 0,
+        "E_normal": 0,
+        "in_both_P_scanning_and_P_normal": 0,
+        "in_neither_P_scanning_nor_P_normal": 3
+      },
+      "protocol_L7_destination_port": {
+        "P_scanning": 3,
+        "P_normal": 2,
+        "C_normal": 2,
+        "E_normal": 3,
+        "in_both_P_scanning_and_P_normal": 2,
+        "in_neither_P_scanning_nor_P_normal": 0
+      }
+    }
+  },
+  "individual_ID_coverage": {
+    "E_scanning": {
+      "P_all": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 264,
+          "L4_DST_PORT": 634,
+          "PROTOCOL": 1078,
+          "L7_PROTO": 1075
+        },
+        "all_four_IDs_individually_seen": 201,
+        "exact_four_ID_tuple_seen": 41
+      },
+      "P_scanning": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 70,
+          "L4_DST_PORT": 508,
+          "PROTOCOL": 1078,
+          "L7_PROTO": 1049
+        },
+        "all_four_IDs_individually_seen": 47,
+        "exact_four_ID_tuple_seen": 21
+      },
+      "P_normal": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 137,
+          "L4_DST_PORT": 621,
+          "PROTOCOL": 1078,
+          "L7_PROTO": 1064
+        },
+        "all_four_IDs_individually_seen": 100,
+        "exact_four_ID_tuple_seen": 4
+      }
+    },
+    "lost54": {
+      "P_all": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 51,
+          "L4_DST_PORT": 54,
+          "PROTOCOL": 54,
+          "L7_PROTO": 54
+        },
+        "all_four_IDs_individually_seen": 51,
+        "exact_four_ID_tuple_seen": 20
+      },
+      "P_scanning": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 19,
+          "L4_DST_PORT": 54,
+          "PROTOCOL": 54,
+          "L7_PROTO": 54
+        },
+        "all_four_IDs_individually_seen": 19,
+        "exact_four_ID_tuple_seen": 15
+      },
+      "P_normal": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 14,
+          "L4_DST_PORT": 54,
+          "PROTOCOL": 54,
+          "L7_PROTO": 54
+        },
+        "all_four_IDs_individually_seen": 14,
+        "exact_four_ID_tuple_seen": 1
+      }
+    },
+    "gained3": {
+      "P_all": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 1,
+          "L4_DST_PORT": 3,
+          "PROTOCOL": 3,
+          "L7_PROTO": 3
+        },
+        "all_four_IDs_individually_seen": 1,
+        "exact_four_ID_tuple_seen": 0
+      },
+      "P_scanning": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 0,
+          "L4_DST_PORT": 3,
+          "PROTOCOL": 3,
+          "L7_PROTO": 3
+        },
+        "all_four_IDs_individually_seen": 0,
+        "exact_four_ID_tuple_seen": 0
+      },
+      "P_normal": {
+        "each_ID_seen": {
+          "L4_SRC_PORT": 1,
+          "L4_DST_PORT": 3,
+          "PROTOCOL": 3,
+          "L7_PROTO": 2
+        },
+        "all_four_IDs_individually_seen": 0,
+        "exact_four_ID_tuple_seen": 0
+      }
+    }
+  },
+  "E_scanning_normal_collisions": {
+    "all48": {
+      "shared_patterns": 1,
+      "scanning_rows_in_shared_patterns": 1,
+      "normal_rows_in_shared_patterns": 1,
+      "total_error_lower_bound_if_only_this_projection_is_observable": 1
+    },
+    "without_source_port47": {
+      "shared_patterns": 130,
+      "scanning_rows_in_shared_patterns": 560,
+      "normal_rows_in_shared_patterns": 480,
+      "total_error_lower_bound_if_only_this_projection_is_observable": 248
+    },
+    "non_ID44": {
+      "shared_patterns": 16,
+      "scanning_rows_in_shared_patterns": 1023,
+      "normal_rows_in_shared_patterns": 5532,
+      "total_error_lower_bound_if_only_this_projection_is_observable": 925
+    },
+    "all_four_IDs": {
+      "shared_patterns": 2,
+      "scanning_rows_in_shared_patterns": 2,
+      "normal_rows_in_shared_patterns": 2,
+      "total_error_lower_bound_if_only_this_projection_is_observable": 2
+    },
+    "protocol_L7_destination_port": {
+      "shared_patterns": 162,
+      "scanning_rows_in_shared_patterns": 652,
+      "normal_rows_in_shared_patterns": 1680,
+      "total_error_lower_bound_if_only_this_projection_is_observable": 470
+    }
+  },
+  "cross_role_communication_group_intersections": {
+    "P/C": 0,
+    "P/E": 0,
+    "C/E": 0
+  },
+  "top20_E_scanning_services": [
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        91.0,
+        443.0
+      ],
+      "E_scanning_rows": 237,
+      "P_scanning": 99,
+      "P_normal": 18,
+      "C_normal": 17,
+      "E_normal": 72,
+      "registered_E_TP": {
+        "legacy_full": 54,
+        "full": 2,
+        "qcoc": 2
+      },
+      "registered_E_FP": {
+        "legacy_full": 22,
+        "full": 1,
+        "qcoc": 1
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        7.0,
+        80.0
+      ],
+      "E_scanning_rows": 168,
+      "P_scanning": 60,
+      "P_normal": 92,
+      "C_normal": 77,
+      "E_normal": 221,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 84,
+        "full": 83,
+        "qcoc": 83
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        51.0,
+        993.0
+      ],
+      "E_scanning_rows": 11,
+      "P_scanning": 1,
+      "P_normal": 2,
+      "C_normal": 2,
+      "E_normal": 0,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        4.0,
+        143.0
+      ],
+      "E_scanning_rows": 11,
+      "P_scanning": 1,
+      "P_normal": 1,
+      "C_normal": 1,
+      "E_normal": 8,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        92.0,
+        22.0
+      ],
+      "E_scanning_rows": 8,
+      "P_scanning": 2,
+      "P_normal": 10,
+      "C_normal": 9,
+      "E_normal": 24,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        131.0,
+        8080.0
+      ],
+      "E_scanning_rows": 8,
+      "P_scanning": 4,
+      "P_normal": 1,
+      "C_normal": 2,
+      "E_normal": 2,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        3.0,
+        587.0
+      ],
+      "E_scanning_rows": 7,
+      "P_scanning": 13,
+      "P_normal": 6,
+      "C_normal": 0,
+      "E_normal": 8,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        41.0,
+        445.0
+      ],
+      "E_scanning_rows": 6,
+      "P_scanning": 2,
+      "P_normal": 4,
+      "C_normal": 1,
+      "E_normal": 7,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        10.0,
+        139.0
+      ],
+      "E_scanning_rows": 6,
+      "P_scanning": 3,
+      "P_normal": 4,
+      "C_normal": 1,
+      "E_normal": 4,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        88.0,
+        3389.0
+      ],
+      "E_scanning_rows": 5,
+      "P_scanning": 0,
+      "P_normal": 3,
+      "C_normal": 4,
+      "E_normal": 7,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        77.0,
+        23.0
+      ],
+      "E_scanning_rows": 5,
+      "P_scanning": 0,
+      "P_normal": 2,
+      "C_normal": 0,
+      "E_normal": 6,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        50.0,
+        554.0
+      ],
+      "E_scanning_rows": 4,
+      "P_scanning": 1,
+      "P_normal": 0,
+      "C_normal": 1,
+      "E_normal": 5,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        3.0,
+        25.0
+      ],
+      "E_scanning_rows": 4,
+      "P_scanning": 3,
+      "P_normal": 4,
+      "C_normal": 4,
+      "E_normal": 5,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        158.0,
+        1720.0
+      ],
+      "E_scanning_rows": 4,
+      "P_scanning": 0,
+      "P_normal": 1,
+      "C_normal": 0,
+      "E_normal": 6,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        370.0,
+        135.0
+      ],
+      "E_scanning_rows": 4,
+      "P_scanning": 2,
+      "P_normal": 0,
+      "C_normal": 2,
+      "E_normal": 3,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        0.0,
+        199.0
+      ],
+      "E_scanning_rows": 3,
+      "P_scanning": 0,
+      "P_normal": 6,
+      "C_normal": 2,
+      "E_normal": 7,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        5.0,
+        53.0
+      ],
+      "E_scanning_rows": 3,
+      "P_scanning": 1,
+      "P_normal": 1,
+      "C_normal": 2,
+      "E_normal": 2,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        20.0,
+        3306.0
+      ],
+      "E_scanning_rows": 3,
+      "P_scanning": 1,
+      "P_normal": 3,
+      "C_normal": 2,
+      "E_normal": 5,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        89.0,
+        5800.0
+      ],
+      "E_scanning_rows": 3,
+      "P_scanning": 0,
+      "P_normal": 1,
+      "C_normal": 2,
+      "E_normal": 1,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    },
+    {
+      "PROTOCOL_L7_DST": [
+        6.0,
+        2.0,
+        110.0
+      ],
+      "E_scanning_rows": 3,
+      "P_scanning": 4,
+      "P_normal": 0,
+      "C_normal": 0,
+      "E_normal": 5,
+      "registered_E_TP": {
+        "legacy_full": 0,
+        "full": 1,
+        "qcoc": 0
+      },
+      "registered_E_FP": {
+        "legacy_full": 0,
+        "full": 0,
+        "qcoc": 0
+      }
+    }
+  ],
+  "TCP6_L7_91_DST443": {
+    "P_scanning": {
+      "rows": 99,
+      "unique_communication_groups": 99,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 95,
+        "without_source_port47": 7,
+        "non_ID44": 7,
+        "all_four_IDs": 95,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 99,
+        "unique": 95,
+        "min": 33090.0,
+        "median": 48723.0,
+        "max": 65193.0
+      },
+      "destination_port": {
+        "n": 99,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 99
+    },
+    "P_normal": {
+      "rows": 18,
+      "unique_communication_groups": 17,
+      "largest_group_rows": 2,
+      "unique_patterns": {
+        "all48": 17,
+        "without_source_port47": 7,
+        "non_ID44": 7,
+        "all_four_IDs": 17,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 18,
+        "unique": 17,
+        "min": 38665.0,
+        "median": 52584.5,
+        "max": 59907.0
+      },
+      "destination_port": {
+        "n": 18,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 18
+    },
+    "C_normal": {
+      "rows": 17,
+      "unique_communication_groups": 17,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 17,
+        "without_source_port47": 9,
+        "non_ID44": 9,
+        "all_four_IDs": 17,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 17,
+        "unique": 17,
+        "min": 37173.0,
+        "median": 51043.0,
+        "max": 64849.0
+      },
+      "destination_port": {
+        "n": 17,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 17
+    },
+    "E_scanning": {
+      "rows": 237,
+      "unique_communication_groups": 237,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 231,
+        "without_source_port47": 20,
+        "non_ID44": 20,
+        "all_four_IDs": 230,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 237,
+        "unique": 230,
+        "min": 33022.0,
+        "median": 49471.0,
+        "max": 65215.0
+      },
+      "destination_port": {
+        "n": 237,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 237
+    },
+    "E_normal": {
+      "rows": 72,
+      "unique_communication_groups": 72,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 71,
+        "without_source_port47": 29,
+        "non_ID44": 29,
+        "all_four_IDs": 71,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 72,
+        "unique": 71,
+        "min": 39.0,
+        "median": 47299.0,
+        "max": 63995.0
+      },
+      "destination_port": {
+        "n": 72,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 71
+    },
+    "lost54": {
+      "rows": 54,
+      "unique_communication_groups": 54,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 51,
+        "without_source_port47": 4,
+        "non_ID44": 4,
+        "all_four_IDs": 51,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 54,
+        "unique": 51,
+        "min": 33147.0,
+        "median": 51363.5,
+        "max": 65214.0
+      },
+      "destination_port": {
+        "n": 54,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 54
+    },
+    "gained3": {
+      "rows": 2,
+      "unique_communication_groups": 2,
+      "largest_group_rows": 1,
+      "unique_patterns": {
+        "all48": 2,
+        "without_source_port47": 2,
+        "non_ID44": 2,
+        "all_four_IDs": 2,
+        "protocol_L7_destination_port": 1
+      },
+      "source_port": {
+        "n": 2,
+        "unique": 2,
+        "min": 36976.0,
+        "median": 37973.0,
+        "max": 38970.0
+      },
+      "destination_port": {
+        "n": 2,
+        "unique": 1,
+        "min": 443.0,
+        "median": 443.0,
+        "max": 443.0
+      },
+      "source_equals_destination_port_rows": 0,
+      "destination_port_numerically_smaller_rows": 2
+    }
+  },
+  "dominant_lost54_non_ID_pattern": {
+    "lost54_rows": 50,
+    "non_ID44_values": {
+      "IN_BYTES": 44.0,
+      "OUT_BYTES": 0.0,
+      "IN_PKTS": 1.0,
+      "OUT_PKTS": 0.0,
+      "FLOW_DURATION_MILLISECONDS": 1.0,
+      "TCP_FLAGS": 2.0,
+      "CLIENT_TCP_FLAGS": 2.0,
+      "SERVER_TCP_FLAGS": 0.0,
+      "DURATION_IN": 0.0,
+      "DURATION_OUT": 0.0,
+      "MIN_TTL": 0.0,
+      "MAX_TTL": 0.0,
+      "LONGEST_FLOW_PKT": 44.0,
+      "SHORTEST_FLOW_PKT": 44.0,
+      "MIN_IP_PKT_LEN": 0.0,
+      "MAX_IP_PKT_LEN": 44.0,
+      "SRC_TO_DST_SECOND_BYTES": 0.0,
+      "DST_TO_SRC_SECOND_BYTES": 0.0,
+      "RETRANSMITTED_IN_BYTES": 0.0,
+      "RETRANSMITTED_IN_PKTS": 0.0,
+      "RETRANSMITTED_OUT_BYTES": 0.0,
+      "RETRANSMITTED_OUT_PKTS": 0.0,
+      "SRC_TO_DST_AVG_THROUGHPUT": 352000.0,
+      "DST_TO_SRC_AVG_THROUGHPUT": 0.0,
+      "NUM_PKTS_UP_TO_128_BYTES": 1.0,
+      "NUM_PKTS_128_TO_256_BYTES": 0.0,
+      "NUM_PKTS_256_TO_512_BYTES": 0.0,
+      "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+      "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+      "TCP_WIN_MAX_IN": 1024.0,
+      "TCP_WIN_MAX_OUT": 0.0,
+      "ICMP_TYPE": 0.0,
+      "ICMP_IPV4_TYPE": 0.0,
+      "DNS_QUERY_TYPE": 0.0,
+      "DNS_TTL_ANSWER": 0.0,
+      "FTP_COMMAND_RET_CODE": 0.0,
+      "SRC_TO_DST_IAT_MIN": 0.0,
+      "SRC_TO_DST_IAT_MAX": 0.0,
+      "SRC_TO_DST_IAT_AVG": 0.0,
+      "SRC_TO_DST_IAT_STDDEV": 0.0,
+      "DST_TO_SRC_IAT_MIN": 0.0,
+      "DST_TO_SRC_IAT_MAX": 0.0,
+      "DST_TO_SRC_IAT_AVG": 0.0,
+      "DST_TO_SRC_IAT_STDDEV": 0.0
+    },
+    "same_service_populations": {
+      "P_scanning": {
+        "rows": 89,
+        "unique_communication_groups": 89,
+        "largest_group_rows": 1,
+        "unique_patterns": {
+          "all48": 85,
+          "without_source_port47": 1,
+          "non_ID44": 1,
+          "all_four_IDs": 85,
+          "protocol_L7_destination_port": 1
+        },
+        "source_port": {
+          "n": 89,
+          "unique": 85,
+          "min": 33090.0,
+          "median": 49722.0,
+          "max": 65193.0
+        },
+        "destination_port": {
+          "n": 89,
+          "unique": 1,
+          "min": 443.0,
+          "median": 443.0,
+          "max": 443.0
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 89
+      },
+      "P_normal": {
+        "rows": 11,
+        "unique_communication_groups": 11,
+        "largest_group_rows": 1,
+        "unique_patterns": {
+          "all48": 11,
+          "without_source_port47": 1,
+          "non_ID44": 1,
+          "all_four_IDs": 11,
+          "protocol_L7_destination_port": 1
+        },
+        "source_port": {
+          "n": 11,
+          "unique": 11,
+          "min": 38665.0,
+          "median": 52440.0,
+          "max": 59907.0
+        },
+        "destination_port": {
+          "n": 11,
+          "unique": 1,
+          "min": 443.0,
+          "median": 443.0,
+          "max": 443.0
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 11
+      },
+      "C_normal": {
+        "rows": 9,
+        "unique_communication_groups": 9,
+        "largest_group_rows": 1,
+        "unique_patterns": {
+          "all48": 9,
+          "without_source_port47": 1,
+          "non_ID44": 1,
+          "all_four_IDs": 9,
+          "protocol_L7_destination_port": 1
+        },
+        "source_port": {
+          "n": 9,
+          "unique": 9,
+          "min": 37173.0,
+          "median": 47156.0,
+          "max": 64849.0
+        },
+        "destination_port": {
+          "n": 9,
+          "unique": 1,
+          "min": 443.0,
+          "median": 443.0,
+          "max": 443.0
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 9
+      },
+      "E_scanning": {
+        "rows": 217,
+        "unique_communication_groups": 217,
+        "largest_group_rows": 1,
+        "unique_patterns": {
+          "all48": 211,
+          "without_source_port47": 1,
+          "non_ID44": 1,
+          "all_four_IDs": 211,
+          "protocol_L7_destination_port": 1
+        },
+        "source_port": {
+          "n": 217,
+          "unique": 211,
+          "min": 33022.0,
+          "median": 49677.0,
+          "max": 65215.0
+        },
+        "destination_port": {
+          "n": 217,
+          "unique": 1,
+          "min": 443.0,
+          "median": 443.0,
+          "max": 443.0
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 217
+      },
+      "E_normal": {
+        "rows": 33,
+        "unique_communication_groups": 33,
+        "largest_group_rows": 1,
+        "unique_patterns": {
+          "all48": 32,
+          "without_source_port47": 1,
+          "non_ID44": 1,
+          "all_four_IDs": 32,
+          "protocol_L7_destination_port": 1
+        },
+        "source_port": {
+          "n": 33,
+          "unique": 32,
+          "min": 33158.0,
+          "median": 52728.0,
+          "max": 63995.0
+        },
+        "destination_port": {
+          "n": 33,
+          "unique": 1,
+          "min": 443.0,
+          "median": 443.0,
+          "max": 443.0
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 33
+      },
+      "lost54": {
+        "rows": 50,
+        "unique_communication_groups": 50,
+        "largest_group_rows": 1,
+        "unique_patterns": {
+          "all48": 47,
+          "without_source_port47": 1,
+          "non_ID44": 1,
+          "all_four_IDs": 47,
+          "protocol_L7_destination_port": 1
+        },
+        "source_port": {
+          "n": 50,
+          "unique": 47,
+          "min": 33147.0,
+          "median": 51363.5,
+          "max": 65214.0
+        },
+        "destination_port": {
+          "n": 50,
+          "unique": 1,
+          "min": 443.0,
+          "median": 443.0,
+          "max": 443.0
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 50
+      },
+      "gained3": {
+        "rows": 0,
+        "unique_communication_groups": 0,
+        "largest_group_rows": 0,
+        "unique_patterns": {
+          "all48": 0,
+          "without_source_port47": 0,
+          "non_ID44": 0,
+          "all_four_IDs": 0,
+          "protocol_L7_destination_port": 0
+        },
+        "source_port": {
+          "n": 0,
+          "unique": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "destination_port": {
+          "n": 0,
+          "unique": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "source_equals_destination_port_rows": 0,
+        "destination_port_numerically_smaller_rows": 0
+      }
+    },
+    "same_service_source_port_overlaps": {
+      "P_scanning/P_normal": {
+        "shared_source_port_values": 0,
+        "left_rows": 0,
+        "right_rows": 0
+      },
+      "P_scanning/C_normal": {
+        "shared_source_port_values": 0,
+        "left_rows": 0,
+        "right_rows": 0
+      },
+      "P_scanning/E_scanning": {
+        "shared_source_port_values": 13,
+        "left_rows": 15,
+        "right_rows": 15
+      },
+      "P_scanning/E_normal": {
+        "shared_source_port_values": 0,
+        "left_rows": 0,
+        "right_rows": 0
+      },
+      "P_normal/C_normal": {
+        "shared_source_port_values": 1,
+        "left_rows": 1,
+        "right_rows": 1
+      },
+      "P_normal/E_scanning": {
+        "shared_source_port_values": 1,
+        "left_rows": 1,
+        "right_rows": 1
+      },
+      "P_normal/E_normal": {
+        "shared_source_port_values": 1,
+        "left_rows": 1,
+        "right_rows": 1
+      },
+      "C_normal/E_scanning": {
+        "shared_source_port_values": 0,
+        "left_rows": 0,
+        "right_rows": 0
+      },
+      "C_normal/E_normal": {
+        "shared_source_port_values": 1,
+        "left_rows": 1,
+        "right_rows": 1
+      },
+      "E_scanning/E_normal": {
+        "shared_source_port_values": 0,
+        "left_rows": 0,
+        "right_rows": 0
+      }
+    }
+  },
+  "top10_E_scanning_non_ID_patterns": [
+    {
+      "E_scanning_rows": 379,
+      "non_ID44_values": {
+        "IN_BYTES": 44.0,
+        "OUT_BYTES": 0.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 0.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 2.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 0.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 44.0,
+        "SHORTEST_FLOW_PKT": 44.0,
+        "MIN_IP_PKT_LEN": 0.0,
+        "MAX_IP_PKT_LEN": 44.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 352000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 0.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 1.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 1024.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 184,
+      "P_normal_matching_rows": 920,
+      "C_normal_matching_rows": 970,
+      "E_scanning_matching_rows": 379,
+      "E_normal_matching_rows": 2959,
+      "lost54_matching_rows": 50,
+      "gained3_matching_rows": 1
+    },
+    {
+      "E_scanning_rows": 301,
+      "non_ID44_values": {
+        "IN_BYTES": 48.0,
+        "OUT_BYTES": 0.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 0.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 2.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 0.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 48.0,
+        "SHORTEST_FLOW_PKT": 48.0,
+        "MIN_IP_PKT_LEN": 0.0,
+        "MAX_IP_PKT_LEN": 48.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 384000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 0.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 1.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 4096.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 130,
+      "P_normal_matching_rows": 432,
+      "C_normal_matching_rows": 431,
+      "E_scanning_matching_rows": 301,
+      "E_normal_matching_rows": 1199,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 167,
+      "non_ID44_values": {
+        "IN_BYTES": 40.0,
+        "OUT_BYTES": 0.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 0.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 16.0,
+        "CLIENT_TCP_FLAGS": 16.0,
+        "SERVER_TCP_FLAGS": 0.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 40.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 0.0,
+        "MAX_IP_PKT_LEN": 40.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 320000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 0.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 1.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 1024.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 58,
+      "P_normal_matching_rows": 27,
+      "C_normal_matching_rows": 14,
+      "E_scanning_matching_rows": 167,
+      "E_normal_matching_rows": 69,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 76,
+      "non_ID44_values": {
+        "IN_BYTES": 48.0,
+        "OUT_BYTES": 40.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 1.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 22.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 20.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 48.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 40.0,
+        "MAX_IP_PKT_LEN": 48.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 384000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 320000.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 2.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 4096.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 60,
+      "P_normal_matching_rows": 76,
+      "C_normal_matching_rows": 76,
+      "E_scanning_matching_rows": 76,
+      "E_normal_matching_rows": 216,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 42,
+      "non_ID44_values": {
+        "IN_BYTES": 40.0,
+        "OUT_BYTES": 0.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 0.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 20.0,
+        "CLIENT_TCP_FLAGS": 20.0,
+        "SERVER_TCP_FLAGS": 0.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 40.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 0.0,
+        "MAX_IP_PKT_LEN": 40.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 320000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 0.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 1.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 0.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 21,
+      "P_normal_matching_rows": 103,
+      "C_normal_matching_rows": 120,
+      "E_scanning_matching_rows": 42,
+      "E_normal_matching_rows": 328,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 25,
+      "non_ID44_values": {
+        "IN_BYTES": 44.0,
+        "OUT_BYTES": 40.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 1.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 22.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 20.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 44.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 40.0,
+        "MAX_IP_PKT_LEN": 44.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 352000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 320000.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 2.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 1024.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 8,
+      "P_normal_matching_rows": 255,
+      "C_normal_matching_rows": 228,
+      "E_scanning_matching_rows": 25,
+      "E_normal_matching_rows": 683,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 13,
+      "non_ID44_values": {
+        "IN_BYTES": 48.0,
+        "OUT_BYTES": 40.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 1.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 22.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 20.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 48.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 40.0,
+        "MAX_IP_PKT_LEN": 48.0,
+        "SRC_TO_DST_SECOND_BYTES": 40.0,
+        "DST_TO_SRC_SECOND_BYTES": 48.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 192000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 160000.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 2.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 4096.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 6,
+      "P_normal_matching_rows": 3,
+      "C_normal_matching_rows": 5,
+      "E_scanning_matching_rows": 13,
+      "E_normal_matching_rows": 14,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 4,
+      "non_ID44_values": {
+        "IN_BYTES": 48.0,
+        "OUT_BYTES": 40.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 1.0,
+        "FLOW_DURATION_MILLISECONDS": 4.0,
+        "TCP_FLAGS": 22.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 20.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 48.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 40.0,
+        "MAX_IP_PKT_LEN": 48.0,
+        "SRC_TO_DST_SECOND_BYTES": 10.0,
+        "DST_TO_SRC_SECOND_BYTES": 12.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 76800.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 64000.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 2.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 4096.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 0,
+      "P_normal_matching_rows": 4,
+      "C_normal_matching_rows": 1,
+      "E_scanning_matching_rows": 4,
+      "E_normal_matching_rows": 9,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 3,
+      "non_ID44_values": {
+        "IN_BYTES": 40.0,
+        "OUT_BYTES": 0.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 0.0,
+        "FLOW_DURATION_MILLISECONDS": 1.0,
+        "TCP_FLAGS": 4.0,
+        "CLIENT_TCP_FLAGS": 4.0,
+        "SERVER_TCP_FLAGS": 0.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 40.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 0.0,
+        "MAX_IP_PKT_LEN": 40.0,
+        "SRC_TO_DST_SECOND_BYTES": 0.0,
+        "DST_TO_SRC_SECOND_BYTES": 0.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 320000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 0.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 1.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 0.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 1,
+      "P_normal_matching_rows": 0,
+      "C_normal_matching_rows": 2,
+      "E_scanning_matching_rows": 3,
+      "E_normal_matching_rows": 0,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    },
+    {
+      "E_scanning_rows": 3,
+      "non_ID44_values": {
+        "IN_BYTES": 48.0,
+        "OUT_BYTES": 40.0,
+        "IN_PKTS": 1.0,
+        "OUT_PKTS": 1.0,
+        "FLOW_DURATION_MILLISECONDS": 3.0,
+        "TCP_FLAGS": 22.0,
+        "CLIENT_TCP_FLAGS": 2.0,
+        "SERVER_TCP_FLAGS": 20.0,
+        "DURATION_IN": 0.0,
+        "DURATION_OUT": 0.0,
+        "MIN_TTL": 0.0,
+        "MAX_TTL": 0.0,
+        "LONGEST_FLOW_PKT": 48.0,
+        "SHORTEST_FLOW_PKT": 40.0,
+        "MIN_IP_PKT_LEN": 40.0,
+        "MAX_IP_PKT_LEN": 48.0,
+        "SRC_TO_DST_SECOND_BYTES": 13.0,
+        "DST_TO_SRC_SECOND_BYTES": 16.0,
+        "RETRANSMITTED_IN_BYTES": 0.0,
+        "RETRANSMITTED_IN_PKTS": 0.0,
+        "RETRANSMITTED_OUT_BYTES": 0.0,
+        "RETRANSMITTED_OUT_PKTS": 0.0,
+        "SRC_TO_DST_AVG_THROUGHPUT": 96000.0,
+        "DST_TO_SRC_AVG_THROUGHPUT": 80000.0,
+        "NUM_PKTS_UP_TO_128_BYTES": 2.0,
+        "NUM_PKTS_128_TO_256_BYTES": 0.0,
+        "NUM_PKTS_256_TO_512_BYTES": 0.0,
+        "NUM_PKTS_512_TO_1024_BYTES": 0.0,
+        "NUM_PKTS_1024_TO_1514_BYTES": 0.0,
+        "TCP_WIN_MAX_IN": 4096.0,
+        "TCP_WIN_MAX_OUT": 0.0,
+        "ICMP_TYPE": 0.0,
+        "ICMP_IPV4_TYPE": 0.0,
+        "DNS_QUERY_TYPE": 0.0,
+        "DNS_TTL_ANSWER": 0.0,
+        "FTP_COMMAND_RET_CODE": 0.0,
+        "SRC_TO_DST_IAT_MIN": 0.0,
+        "SRC_TO_DST_IAT_MAX": 0.0,
+        "SRC_TO_DST_IAT_AVG": 0.0,
+        "SRC_TO_DST_IAT_STDDEV": 0.0,
+        "DST_TO_SRC_IAT_MIN": 0.0,
+        "DST_TO_SRC_IAT_MAX": 0.0,
+        "DST_TO_SRC_IAT_AVG": 0.0,
+        "DST_TO_SRC_IAT_STDDEV": 0.0
+      },
+      "P_scanning_matching_rows": 1,
+      "P_normal_matching_rows": 2,
+      "C_normal_matching_rows": 4,
+      "E_scanning_matching_rows": 3,
+      "E_normal_matching_rows": 8,
+      "lost54_matching_rows": 0,
+      "gained3_matching_rows": 0
+    }
+  ],
+  "subgroup_non_ID_field_ranges": {
+    "P_scanning": {
+      "IN_BYTES": {
+        "n": 99,
+        "unique": 5,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 863.0
+      },
+      "OUT_BYTES": {
+        "n": 99,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1984.0
+      },
+      "IN_PKTS": {
+        "n": 99,
+        "unique": 4,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 6.0
+      },
+      "OUT_PKTS": {
+        "n": 99,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 6.0
+      },
+      "FLOW_DURATION_MILLISECONDS": {
+        "n": 99,
+        "unique": 4,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 140.0
+      },
+      "TCP_FLAGS": {
+        "n": 99,
+        "unique": 6,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 31.0
+      },
+      "CLIENT_TCP_FLAGS": {
+        "n": 99,
+        "unique": 4,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 30.0
+      },
+      "SERVER_TCP_FLAGS": {
+        "n": 99,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 27.0
+      },
+      "DURATION_IN": {
+        "n": 99,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 140.0
+      },
+      "DURATION_OUT": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 124.0
+      },
+      "MIN_TTL": {
+        "n": 99,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64.0
+      },
+      "MAX_TTL": {
+        "n": 99,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64.0
+      },
+      "LONGEST_FLOW_PKT": {
+        "n": 99,
+        "unique": 3,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SHORTEST_FLOW_PKT": {
+        "n": 99,
+        "unique": 2,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "MIN_IP_PKT_LEN": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 44.0
+      },
+      "MAX_IP_PKT_LEN": {
+        "n": 99,
+        "unique": 3,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SRC_TO_DST_SECOND_BYTES": {
+        "n": 99,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 44.0
+      },
+      "DST_TO_SRC_SECOND_BYTES": {
+        "n": 99,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 84.0
+      },
+      "RETRANSMITTED_IN_BYTES": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_IN_PKTS": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_BYTES": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_PKTS": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_AVG_THROUGHPUT": {
+        "n": 99,
+        "unique": 6,
+        "min": 48964.0,
+        "median": 352000.0,
+        "max": 352000.0
+      },
+      "DST_TO_SRC_AVG_THROUGHPUT": {
+        "n": 99,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 352000.0
+      },
+      "NUM_PKTS_UP_TO_128_BYTES": {
+        "n": 99,
+        "unique": 5,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 7.0
+      },
+      "NUM_PKTS_128_TO_256_BYTES": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_256_TO_512_BYTES": {
+        "n": 99,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_512_TO_1024_BYTES": {
+        "n": 99,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "NUM_PKTS_1024_TO_1514_BYTES": {
+        "n": 99,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "TCP_WIN_MAX_IN": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 1024.0,
+        "max": 29200.0
+      },
+      "TCP_WIN_MAX_OUT": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 65535.0
+      },
+      "ICMP_TYPE": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "ICMP_IPV4_TYPE": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_QUERY_TYPE": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_TTL_ANSWER": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "FTP_COMMAND_RET_CODE": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_IAT_MIN": {
+        "n": 99,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 10.0
+      },
+      "SRC_TO_DST_IAT_MAX": {
+        "n": 99,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 63.0
+      },
+      "SRC_TO_DST_IAT_AVG": {
+        "n": 99,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 34.0
+      },
+      "SRC_TO_DST_IAT_STDDEV": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 24.0
+      },
+      "DST_TO_SRC_IAT_MIN": {
+        "n": 99,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DST_TO_SRC_IAT_MAX": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 82.0
+      },
+      "DST_TO_SRC_IAT_AVG": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 24.0
+      },
+      "DST_TO_SRC_IAT_STDDEV": {
+        "n": 99,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 31.0
+      }
+    },
+    "P_normal": {
+      "IN_BYTES": {
+        "n": 18,
+        "unique": 5,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 1175.0
+      },
+      "OUT_BYTES": {
+        "n": 18,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2741.0
+      },
+      "IN_PKTS": {
+        "n": 18,
+        "unique": 5,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 8.0
+      },
+      "OUT_PKTS": {
+        "n": 18,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 5.0
+      },
+      "FLOW_DURATION_MILLISECONDS": {
+        "n": 18,
+        "unique": 5,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 155.0
+      },
+      "TCP_FLAGS": {
+        "n": 18,
+        "unique": 4,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 30.0
+      },
+      "CLIENT_TCP_FLAGS": {
+        "n": 18,
+        "unique": 3,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 30.0
+      },
+      "SERVER_TCP_FLAGS": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 26.0
+      },
+      "DURATION_IN": {
+        "n": 18,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 155.0
+      },
+      "DURATION_OUT": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 66.0
+      },
+      "MIN_TTL": {
+        "n": 18,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 128.0
+      },
+      "MAX_TTL": {
+        "n": 18,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 128.0
+      },
+      "LONGEST_FLOW_PKT": {
+        "n": 18,
+        "unique": 5,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SHORTEST_FLOW_PKT": {
+        "n": 18,
+        "unique": 2,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "MIN_IP_PKT_LEN": {
+        "n": 18,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 40.0
+      },
+      "MAX_IP_PKT_LEN": {
+        "n": 18,
+        "unique": 5,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SRC_TO_DST_SECOND_BYTES": {
+        "n": 18,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 120.0
+      },
+      "DST_TO_SRC_SECOND_BYTES": {
+        "n": 18,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 29.0
+      },
+      "RETRANSMITTED_IN_BYTES": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_IN_PKTS": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_BYTES": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_PKTS": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_AVG_THROUGHPUT": {
+        "n": 18,
+        "unique": 5,
+        "min": 9384.0,
+        "median": 352000.0,
+        "max": 352000.0
+      },
+      "DST_TO_SRC_AVG_THROUGHPUT": {
+        "n": 18,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 879272.0
+      },
+      "NUM_PKTS_UP_TO_128_BYTES": {
+        "n": 18,
+        "unique": 5,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 7.0
+      },
+      "NUM_PKTS_128_TO_256_BYTES": {
+        "n": 18,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_256_TO_512_BYTES": {
+        "n": 18,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 3.0
+      },
+      "NUM_PKTS_512_TO_1024_BYTES": {
+        "n": 18,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "NUM_PKTS_1024_TO_1514_BYTES": {
+        "n": 18,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "TCP_WIN_MAX_IN": {
+        "n": 18,
+        "unique": 3,
+        "min": 1024.0,
+        "median": 1024.0,
+        "max": 29200.0
+      },
+      "TCP_WIN_MAX_OUT": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 65535.0
+      },
+      "ICMP_TYPE": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "ICMP_IPV4_TYPE": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_QUERY_TYPE": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_TTL_ANSWER": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "FTP_COMMAND_RET_CODE": {
+        "n": 18,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_IAT_MIN": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 155.0
+      },
+      "SRC_TO_DST_IAT_MAX": {
+        "n": 18,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 155.0
+      },
+      "SRC_TO_DST_IAT_AVG": {
+        "n": 18,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 155.0
+      },
+      "SRC_TO_DST_IAT_STDDEV": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 14.0
+      },
+      "DST_TO_SRC_IAT_MIN": {
+        "n": 18,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 13.0
+      },
+      "DST_TO_SRC_IAT_MAX": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 38.0
+      },
+      "DST_TO_SRC_IAT_AVG": {
+        "n": 18,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 21.0
+      },
+      "DST_TO_SRC_IAT_STDDEV": {
+        "n": 18,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 11.0
+      }
+    },
+    "C_normal": {
+      "IN_BYTES": {
+        "n": 17,
+        "unique": 9,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 2583.0
+      },
+      "OUT_BYTES": {
+        "n": 17,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 4528.0
+      },
+      "IN_PKTS": {
+        "n": 17,
+        "unique": 7,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 12.0
+      },
+      "OUT_PKTS": {
+        "n": 17,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 9.0
+      },
+      "FLOW_DURATION_MILLISECONDS": {
+        "n": 17,
+        "unique": 8,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1069.0
+      },
+      "TCP_FLAGS": {
+        "n": 17,
+        "unique": 6,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 31.0
+      },
+      "CLIENT_TCP_FLAGS": {
+        "n": 17,
+        "unique": 6,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 30.0
+      },
+      "SERVER_TCP_FLAGS": {
+        "n": 17,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 27.0
+      },
+      "DURATION_IN": {
+        "n": 17,
+        "unique": 9,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1069.0
+      },
+      "DURATION_OUT": {
+        "n": 17,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 857.0
+      },
+      "MIN_TTL": {
+        "n": 17,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 128.0
+      },
+      "MAX_TTL": {
+        "n": 17,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 128.0
+      },
+      "LONGEST_FLOW_PKT": {
+        "n": 17,
+        "unique": 6,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SHORTEST_FLOW_PKT": {
+        "n": 17,
+        "unique": 2,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "MIN_IP_PKT_LEN": {
+        "n": 17,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 40.0
+      },
+      "MAX_IP_PKT_LEN": {
+        "n": 17,
+        "unique": 6,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SRC_TO_DST_SECOND_BYTES": {
+        "n": 17,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 46.0
+      },
+      "DST_TO_SRC_SECOND_BYTES": {
+        "n": 17,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 90.0
+      },
+      "RETRANSMITTED_IN_BYTES": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_IN_PKTS": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_BYTES": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_PKTS": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_AVG_THROUGHPUT": {
+        "n": 17,
+        "unique": 9,
+        "min": 9230.0,
+        "median": 352000.0,
+        "max": 544000.0
+      },
+      "DST_TO_SRC_AVG_THROUGHPUT": {
+        "n": 17,
+        "unique": 9,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 278000.0
+      },
+      "NUM_PKTS_UP_TO_128_BYTES": {
+        "n": 17,
+        "unique": 5,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 15.0
+      },
+      "NUM_PKTS_128_TO_256_BYTES": {
+        "n": 17,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_256_TO_512_BYTES": {
+        "n": 17,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "NUM_PKTS_512_TO_1024_BYTES": {
+        "n": 17,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 3.0
+      },
+      "NUM_PKTS_1024_TO_1514_BYTES": {
+        "n": 17,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "TCP_WIN_MAX_IN": {
+        "n": 17,
+        "unique": 5,
+        "min": 1024.0,
+        "median": 1024.0,
+        "max": 65535.0
+      },
+      "TCP_WIN_MAX_OUT": {
+        "n": 17,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 65535.0
+      },
+      "ICMP_TYPE": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "ICMP_IPV4_TYPE": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_QUERY_TYPE": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_TTL_ANSWER": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "FTP_COMMAND_RET_CODE": {
+        "n": 17,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_IAT_MIN": {
+        "n": 17,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 155.0
+      },
+      "SRC_TO_DST_IAT_MAX": {
+        "n": 17,
+        "unique": 9,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 216.0
+      },
+      "SRC_TO_DST_IAT_AVG": {
+        "n": 17,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 155.0
+      },
+      "SRC_TO_DST_IAT_STDDEV": {
+        "n": 17,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 103.0
+      },
+      "DST_TO_SRC_IAT_MIN": {
+        "n": 17,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 101.0
+      },
+      "DST_TO_SRC_IAT_MAX": {
+        "n": 17,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 213.0
+      },
+      "DST_TO_SRC_IAT_AVG": {
+        "n": 17,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 122.0
+      },
+      "DST_TO_SRC_IAT_STDDEV": {
+        "n": 17,
+        "unique": 6,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 104.0
+      }
+    },
+    "E_scanning": {
+      "IN_BYTES": {
+        "n": 237,
+        "unique": 15,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1289.0
+      },
+      "OUT_BYTES": {
+        "n": 237,
+        "unique": 11,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2741.0
+      },
+      "IN_PKTS": {
+        "n": 237,
+        "unique": 7,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 8.0
+      },
+      "OUT_PKTS": {
+        "n": 237,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 6.0
+      },
+      "FLOW_DURATION_MILLISECONDS": {
+        "n": 237,
+        "unique": 15,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 192.0
+      },
+      "TCP_FLAGS": {
+        "n": 237,
+        "unique": 7,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 31.0
+      },
+      "CLIENT_TCP_FLAGS": {
+        "n": 237,
+        "unique": 7,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 30.0
+      },
+      "SERVER_TCP_FLAGS": {
+        "n": 237,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 27.0
+      },
+      "DURATION_IN": {
+        "n": 237,
+        "unique": 16,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 192.0
+      },
+      "DURATION_OUT": {
+        "n": 237,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 62.0
+      },
+      "MIN_TTL": {
+        "n": 237,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64.0
+      },
+      "MAX_TTL": {
+        "n": 237,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64.0
+      },
+      "LONGEST_FLOW_PKT": {
+        "n": 237,
+        "unique": 7,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SHORTEST_FLOW_PKT": {
+        "n": 237,
+        "unique": 2,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "MIN_IP_PKT_LEN": {
+        "n": 237,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 40.0
+      },
+      "MAX_IP_PKT_LEN": {
+        "n": 237,
+        "unique": 7,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SRC_TO_DST_SECOND_BYTES": {
+        "n": 237,
+        "unique": 15,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 98.0
+      },
+      "DST_TO_SRC_SECOND_BYTES": {
+        "n": 237,
+        "unique": 15,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 84.0
+      },
+      "RETRANSMITTED_IN_BYTES": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_IN_PKTS": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_BYTES": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_PKTS": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_AVG_THROUGHPUT": {
+        "n": 237,
+        "unique": 20,
+        "min": 3481.0,
+        "median": 352000.0,
+        "max": 5256000.0
+      },
+      "DST_TO_SRC_AVG_THROUGHPUT": {
+        "n": 237,
+        "unique": 19,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 12856000.0
+      },
+      "NUM_PKTS_UP_TO_128_BYTES": {
+        "n": 237,
+        "unique": 7,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 8.0
+      },
+      "NUM_PKTS_128_TO_256_BYTES": {
+        "n": 237,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_256_TO_512_BYTES": {
+        "n": 237,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 3.0
+      },
+      "NUM_PKTS_512_TO_1024_BYTES": {
+        "n": 237,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "NUM_PKTS_1024_TO_1514_BYTES": {
+        "n": 237,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "TCP_WIN_MAX_IN": {
+        "n": 237,
+        "unique": 4,
+        "min": 0.0,
+        "median": 1024.0,
+        "max": 29200.0
+      },
+      "TCP_WIN_MAX_OUT": {
+        "n": 237,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 65535.0
+      },
+      "ICMP_TYPE": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "ICMP_IPV4_TYPE": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_QUERY_TYPE": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_TTL_ANSWER": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "FTP_COMMAND_RET_CODE": {
+        "n": 237,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_IAT_MIN": {
+        "n": 237,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 192.0
+      },
+      "SRC_TO_DST_IAT_MAX": {
+        "n": 237,
+        "unique": 15,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 192.0
+      },
+      "SRC_TO_DST_IAT_AVG": {
+        "n": 237,
+        "unique": 13,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 192.0
+      },
+      "SRC_TO_DST_IAT_STDDEV": {
+        "n": 237,
+        "unique": 9,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 14.0
+      },
+      "DST_TO_SRC_IAT_MIN": {
+        "n": 237,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 14.0
+      },
+      "DST_TO_SRC_IAT_MAX": {
+        "n": 237,
+        "unique": 10,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 41.0
+      },
+      "DST_TO_SRC_IAT_AVG": {
+        "n": 237,
+        "unique": 9,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 20.0
+      },
+      "DST_TO_SRC_IAT_STDDEV": {
+        "n": 237,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 16.0
+      }
+    },
+    "E_normal": {
+      "IN_BYTES": {
+        "n": 72,
+        "unique": 17,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1624.0
+      },
+      "OUT_BYTES": {
+        "n": 72,
+        "unique": 16,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 7437.0
+      },
+      "IN_PKTS": {
+        "n": 72,
+        "unique": 7,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 12.0
+      },
+      "OUT_PKTS": {
+        "n": 72,
+        "unique": 8,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 13.0
+      },
+      "FLOW_DURATION_MILLISECONDS": {
+        "n": 72,
+        "unique": 21,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1010.0
+      },
+      "TCP_FLAGS": {
+        "n": 72,
+        "unique": 9,
+        "min": 2.0,
+        "median": 18.0,
+        "max": 41.0
+      },
+      "CLIENT_TCP_FLAGS": {
+        "n": 72,
+        "unique": 8,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 41.0
+      },
+      "SERVER_TCP_FLAGS": {
+        "n": 72,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 27.0
+      },
+      "DURATION_IN": {
+        "n": 72,
+        "unique": 16,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 132.0
+      },
+      "DURATION_OUT": {
+        "n": 72,
+        "unique": 14,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1010.0
+      },
+      "MIN_TTL": {
+        "n": 72,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 128.0
+      },
+      "MAX_TTL": {
+        "n": 72,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 128.0
+      },
+      "LONGEST_FLOW_PKT": {
+        "n": 72,
+        "unique": 11,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SHORTEST_FLOW_PKT": {
+        "n": 72,
+        "unique": 4,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 141.0
+      },
+      "MIN_IP_PKT_LEN": {
+        "n": 72,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 52.0
+      },
+      "MAX_IP_PKT_LEN": {
+        "n": 72,
+        "unique": 11,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 1500.0
+      },
+      "SRC_TO_DST_SECOND_BYTES": {
+        "n": 72,
+        "unique": 18,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 73.0
+      },
+      "DST_TO_SRC_SECOND_BYTES": {
+        "n": 72,
+        "unique": 16,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 84.0
+      },
+      "RETRANSMITTED_IN_BYTES": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_IN_PKTS": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_BYTES": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_PKTS": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_AVG_THROUGHPUT": {
+        "n": 72,
+        "unique": 25,
+        "min": 316.0,
+        "median": 352000.0,
+        "max": 1128000.0
+      },
+      "DST_TO_SRC_AVG_THROUGHPUT": {
+        "n": 72,
+        "unique": 25,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 577631.0
+      },
+      "NUM_PKTS_UP_TO_128_BYTES": {
+        "n": 72,
+        "unique": 9,
+        "min": 0.0,
+        "median": 1.0,
+        "max": 15.0
+      },
+      "NUM_PKTS_128_TO_256_BYTES": {
+        "n": 72,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_256_TO_512_BYTES": {
+        "n": 72,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 4.0
+      },
+      "NUM_PKTS_512_TO_1024_BYTES": {
+        "n": 72,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 2.0
+      },
+      "NUM_PKTS_1024_TO_1514_BYTES": {
+        "n": 72,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 4.0
+      },
+      "TCP_WIN_MAX_IN": {
+        "n": 72,
+        "unique": 11,
+        "min": 304.0,
+        "median": 1024.0,
+        "max": 65535.0
+      },
+      "TCP_WIN_MAX_OUT": {
+        "n": 72,
+        "unique": 7,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 65535.0
+      },
+      "ICMP_TYPE": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "ICMP_IPV4_TYPE": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_QUERY_TYPE": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_TTL_ANSWER": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "FTP_COMMAND_RET_CODE": {
+        "n": 72,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_IAT_MIN": {
+        "n": 72,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 104.0
+      },
+      "SRC_TO_DST_IAT_MAX": {
+        "n": 72,
+        "unique": 14,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 104.0
+      },
+      "SRC_TO_DST_IAT_AVG": {
+        "n": 72,
+        "unique": 12,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 104.0
+      },
+      "SRC_TO_DST_IAT_STDDEV": {
+        "n": 72,
+        "unique": 10,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 22.0
+      },
+      "DST_TO_SRC_IAT_MIN": {
+        "n": 72,
+        "unique": 5,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1010.0
+      },
+      "DST_TO_SRC_IAT_MAX": {
+        "n": 72,
+        "unique": 14,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1010.0
+      },
+      "DST_TO_SRC_IAT_AVG": {
+        "n": 72,
+        "unique": 11,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1010.0
+      },
+      "DST_TO_SRC_IAT_STDDEV": {
+        "n": 72,
+        "unique": 9,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 39.0
+      }
+    },
+    "lost54": {
+      "IN_BYTES": {
+        "n": 54,
+        "unique": 2,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 84.0
+      },
+      "OUT_BYTES": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 44.0
+      },
+      "IN_PKTS": {
+        "n": 54,
+        "unique": 2,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 2.0
+      },
+      "OUT_PKTS": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "FLOW_DURATION_MILLISECONDS": {
+        "n": 54,
+        "unique": 3,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 98.0
+      },
+      "TCP_FLAGS": {
+        "n": 54,
+        "unique": 2,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 22.0
+      },
+      "CLIENT_TCP_FLAGS": {
+        "n": 54,
+        "unique": 2,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 6.0
+      },
+      "SERVER_TCP_FLAGS": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 18.0
+      },
+      "DURATION_IN": {
+        "n": 54,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 98.0
+      },
+      "DURATION_OUT": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "MIN_TTL": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64.0
+      },
+      "MAX_TTL": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64.0
+      },
+      "LONGEST_FLOW_PKT": {
+        "n": 54,
+        "unique": 1,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "SHORTEST_FLOW_PKT": {
+        "n": 54,
+        "unique": 2,
+        "min": 40.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "MIN_IP_PKT_LEN": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 40.0
+      },
+      "MAX_IP_PKT_LEN": {
+        "n": 54,
+        "unique": 1,
+        "min": 44.0,
+        "median": 44.0,
+        "max": 44.0
+      },
+      "SRC_TO_DST_SECOND_BYTES": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 44.0
+      },
+      "DST_TO_SRC_SECOND_BYTES": {
+        "n": 54,
+        "unique": 3,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 84.0
+      },
+      "RETRANSMITTED_IN_BYTES": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_IN_PKTS": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_BYTES": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "RETRANSMITTED_OUT_PKTS": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_AVG_THROUGHPUT": {
+        "n": 54,
+        "unique": 4,
+        "min": 6787.0,
+        "median": 352000.0,
+        "max": 352000.0
+      },
+      "DST_TO_SRC_AVG_THROUGHPUT": {
+        "n": 54,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 176000.0
+      },
+      "NUM_PKTS_UP_TO_128_BYTES": {
+        "n": 54,
+        "unique": 2,
+        "min": 1.0,
+        "median": 1.0,
+        "max": 3.0
+      },
+      "NUM_PKTS_128_TO_256_BYTES": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "NUM_PKTS_256_TO_512_BYTES": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "NUM_PKTS_512_TO_1024_BYTES": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "NUM_PKTS_1024_TO_1514_BYTES": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "TCP_WIN_MAX_IN": {
+        "n": 54,
+        "unique": 1,
+        "min": 1024.0,
+        "median": 1024.0,
+        "max": 1024.0
+      },
+      "TCP_WIN_MAX_OUT": {
+        "n": 54,
+        "unique": 2,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 64240.0
+      },
+      "ICMP_TYPE": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "ICMP_IPV4_TYPE": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_QUERY_TYPE": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DNS_TTL_ANSWER": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "FTP_COMMAND_RET_CODE": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "SRC_TO_DST_IAT_MIN": {
+        "n": 54,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 98.0
+      },
+      "SRC_TO_DST_IAT_MAX": {
+        "n": 54,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 98.0
+      },
+      "SRC_TO_DST_IAT_AVG": {
+        "n": 54,
+        "unique": 4,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 98.0
+      },
+      "SRC_TO_DST_IAT_STDDEV": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DST_TO_SRC_IAT_MIN": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DST_TO_SRC_IAT_MAX": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DST_TO_SRC_IAT_AVG": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "DST_TO_SRC_IAT_STDDEV": {
+        "n": 54,
+        "unique": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      }
+    }
+  },
+  "metadata_available": [
+    "sample_id",
+    "communication_group",
+    "label",
+    "attack_family"
+  ],
+  "metadata_not_in_prepared_CSV": [
+    "IPV4_SRC_ADDR",
+    "IPV4_DST_ADDR",
+    "FLOW_START_MILLISECONDS",
+    "FLOW_END_MILLISECONDS"
+  ],
+  "sources": {
+    "protocol.json": "2494b5fbf52c320ab2c920292dd15f91ba98bf591c64841130dc57bfc4707835",
+    "comparison/evaluation_scores.csv": "64ad5b5b0dc9133ba78a909741157253e63290cc16c2abb6f403c79f1d855a26",
+    "comparison/legacy_full/threshold.json": "4bff4b10b48388ec205ce2293444a5e053b1a18f2486fe9a346b686e94f58df1",
+    "comparison/full/threshold.json": "198e312e6f928d16f01b8d1a882c69ece91d45eb883f4c0b431ec4497626aad6",
+    "comparison/qcoc/threshold.json": "8209898ebac5b76806db1ff88bfa856973560903cc7e33decf39d1dd6cd09409",
+    "prepared/support.csv": "ee6c1470f90caa3fcf5d47e884db71b82a6a5ab574ad8ebfe61cc5ba120a8fbf",
+    "prepared/normal_calibration.csv": "fe0d56b6d87411f6b24af534a5543ea0774fdd1812fdf224572b5f6c750e24b2",
+    "prepared/development_evaluation.csv": "20883897adfa29498765174666a88dc2cc206a2f30f659476b07e416ee81f408"
+  }
+}

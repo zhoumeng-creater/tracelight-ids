@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-08",
+  "purpose": "Scanning 输入表示与支持集机制对照的一手来源；不构成外部方法复现",
+  "execution": "papers_and_pinned_source_read_only; no_weights_downloaded; no_real_model_execution",
+  "year_policy": "采用候选限于 2025—2026 实际公开成果；更新代码或正式录用不改变旧方法首发年份",
+  "recommended_next_probe": "固定 TabICLv2、P/C/E、48 字段与完整 KV：B0 原源端口数值；B1 按 P 出现频次分层的全域固定双射，保留 P 单列多重集并冻结原 scaler；B2 固定常数消融。不按结果筛选映射种子。",
+  "sources": [
+    {
+      "id": "tabicl_v2_2026",
+      "title": "TabICLv2: A Better, Faster, Scalable, and Open Tabular Foundation Model",
+      "publication": "ICML 2026, PMLR 306:102477-102555",
+      "year": 2026,
+      "first_public": "2026-02-11",
+      "paper_urls": [
+        "https://proceedings.mlr.press/v306/qu26a.html",
+        "https://arxiv.org/html/2602.11139v2"
+      ],
+      "paper_locations": [
+        "Appendix E.3: categorical cardinalities LogInt(2,M), M~LogInt(2,9)",
+        "Appendix E.6: categorical converters",
+        "Appendix L.1: ensemble size"
+      ],
+      "author_code": {
+        "repository": "soda-inria/tabicl",
+        "commit": "d83091b845a8c5f7c087bd54964f755a9e560f45",
+        "url": "https://github.com/soda-inria/tabicl/blob/d83091b845a8c5f7c087bd54964f755a9e560f45/src/tabicl/_sklearn/preprocessing.py",
+        "locations": [
+          "TransformToNumerical.fit, lines 101-145",
+          "EnsembleGenerator._generate_ensemble, lines 1106-1117",
+          "EnsembleGenerator.transform, lines 1181-1186"
+        ],
+        "inspection": "read pinned local vendor source; not executed",
+        "blob_sha": "34ec20ba411ef963c8cdd981850d8204438334d0"
+      },
+      "mechanism": "DataFrame 类别列经 OrdinalEncoder，未见类别与缺失值均为 -1；高于 40 类给出提示。ensemble 打乱的是特征位置和目标类别标签，不是输入类别值。",
+      "project_difference": "本项目四个 ID 的 P-only 无裁剪仿射是身份保留修订；高基数端口的数值几何仍由模型解释。官方低基数先验不能证明 65536 源端口身份的任意编号不变性。",
+      "decision": "保持当前冻结骨干，先定位输入表示；不靠换骨干或加 ensemble 解释 Scanning。",
+      "falsifiable_probe": "固定支持集和其他字段，改变源端口的可逆编号；若逐行分数与阈值决策稳定，则削弱该特定编号变化导致失效的解释。"
+    },
+    {
+      "id": "tabpfn_v2_2025",
+      "title": "Accurate predictions on small data with a tabular foundation model",
+      "publication": "Nature 637, 319-326, published 2025-01-08",
+      "year": 2025,
+      "paper_urls": [
+        "https://www.nature.com/articles/s41586-024-08328-6",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11711098/"
+      ],
+      "year_note": "DOI 含 2024，正式发表日期为 2025-01-08；本条指 TabPFNv2 成果，不把早期 TabPFN 重列为新方法。",
+      "paper_locations": [
+        "Methods / Inference details / Category shuffling: low-cardinality categorical labels"
+      ],
+      "author_code": {
+        "repository": "PriorLabs/TabPFN",
+        "commit": "a05404514dee58ce86ce01f9b0f315d32a59d8ff",
+        "commit_date": "2025-01-15",
+        "url": "https://github.com/PriorLabs/TabPFN/blob/a05404514dee58ce86ce01f9b0f315d32a59d8ff/src/tabpfn/model/preprocessing.py",
+        "blob_sha": "9575b5f209ad6479a415bae23727ffc822c00dc4",
+        "locations": [
+          "EncodeCategoricalFeaturesStep, lines 1053-1054: unknown -> NaN",
+          "lines 1101-1112: fit ordinal categories and rng.permutation",
+          "line 1195: apply stored mapping"
+        ],
+        "inspection": "GitHub connector read fixed 2025 source; not executed"
+      },
+      "mechanism": "小集成中的一种预处理会随机重排低基数类别的整数标签；作者源码对拟合词表生成固定置换。",
+      "project_difference": "源端口全域固定双射覆盖 P 外身份、保持宽度和相等关系，但基数远高于原文范围，且改变真实端口区间结构；这是项目诊断探针，不是原方法复现。",
+      "decision": "采用类别编号敏感性这一诊断动机，不照搬未知类别折叠、不扩展种子/集成调参。",
+      "falsifiable_probe": "B1 与 B0 的配对分数、各自 C 阈值后的修复/新增错误；差异只说明数值排列参与决策，不单独证明伪相关。"
+    },
+    {
+      "id": "contexttab_2025",
+      "title": "ConTextTab: A Semantics-Aware Tabular In-Context Learner",
+      "publication": "NeurIPS 2025 main conference",
+      "year": 2025,
+      "paper_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2025/file/d807e7678ba3afd3a904f4af52819e77-Paper-Conference.pdf"
+      ],
+      "paper_locations": [
+        "Introduction: column names and categorical semantics",
+        "Model input embeddings and real-data pretraining"
+      ],
+      "author_code": {
+        "repository": "SAP-samples/sap-rpt-1-oss",
+        "original_repository": "SAP-samples/contexttab",
+        "commit": "a0067b3c9db56bc35a6dcab09a9223a3ff0821e0",
+        "commit_date": "2026-06-16",
+        "url": "https://github.com/SAP-samples/sap-rpt-1-oss/blob/a0067b3c9db56bc35a6dcab09a9223a3ff0821e0/sap_rpt_oss/data/tokenizer.py",
+        "blob_sha": "2d3c615cf6360d2795177fe20292295516a474a8",
+        "locations": [
+          "lines 22-41: sentence embedding model and texts_to_tensor",
+          "lines 287-292: column value embeddings",
+          "line 347: column name embeddings"
+        ],
+        "inspection": "read renamed author repository; README identifies rename and unchanged checkpoint/functionality; not executed"
+      },
+      "mechanism": "通过文本嵌入表达字段名和类别/文本值，并在真实表格上预训练；语义来自输入路径和预训练。",
+      "project_difference": "当前 TabICLv2 原生数值入口没有该文本语义路径；把端口整数改写为字符串不能自动获得服务语义。",
+      "decision": "用来界定身份保留与语义建模的差别；暂缓新骨干/文本模型对照，避免同时改变输入、预训练和模型。",
+      "falsifiable_probe": "先检查输入张量与预处理路径；若改字段名后张量相同，则不能将预测归因于字段名语义。此检查无需真实模型。"
+    },
+    {
+      "id": "tabpfn_2_5_2025",
+      "title": "TabPFN-2.5: Advancing the State of the Art in Tabular Foundation Models",
+      "publication": "2025 technical report; arXiv v2 revised 2026-02-05",
+      "year": 2025,
+      "first_public": "2025-11-11",
+      "paper_urls": [
+        "https://arxiv.org/abs/2511.08667",
+        "https://arxiv.org/html/2511.08667v2"
+      ],
+      "paper_locations": [
+        "Architecture",
+        "Preprocessing",
+        "Tuning custom metrics"
+      ],
+      "author_code": {
+        "repository": "PriorLabs/TabPFN",
+        "commit": "b4cdb0c2992ee3c0792fa18338c02c1e06028baa",
+        "commit_date": "2025-11-12",
+        "url": "https://github.com/PriorLabs/TabPFN/blob/b4cdb0c2992ee3c0792fa18338c02c1e06028baa/src/tabpfn/inference_config.py",
+        "blob_sha": "daeaff82a9da51ef2eddc45969fb9b2f2a193504",
+        "locations": [
+          "_get_v2_5_config, lines 265-286",
+          "SUBSAMPLE_SAMPLES definition, lines 119-126"
+        ],
+        "inspection": "read fixed release-period inference configuration; not executed"
+      },
+      "mechanism": "新版改变深度、特征分组和预训练；推理还组合多种变换与排列。报告的 robust scaling/soft clipping 属于组合流程，不能据此孤立归因端口问题。",
+      "project_difference": "换为该模型同时改变多个因子；其报告阈值优化也不能替代当前正常 C 独立误报登记。",
+      "decision": "作为 2025/26 强近邻登记，当前不增加模型竞争矩阵；待现有模型失败环节可干预后再另冻骨干比较。",
+      "falsifiable_probe": "本轮不能用跨模型成绩解释单一输入机制；同骨干三臂已足以检验源端口表示敏感性。"
+    }
+  ],
+  "screened_out": [
+    {
+      "id": "context_sampling_2026",
+      "title": "Understanding Context Sampling in TabPFN on Small Tabular Datasets",
+      "publication": "arXiv preprint, submitted 2026-07-29; not treated as confirmed conference publication",
+      "year": 2026,
+      "paper_urls": [
+        "https://arxiv.org/abs/2607.26628",
+        "https://arxiv.org/html/2607.26628v1"
+      ],
+      "paper_locations": [
+        "Controlled context constructions separating mean shift and diversity",
+        "15 small OpenML datasets"
+      ],
+      "author_code": {
+        "repository": "mohammed1916/tabmx",
+        "commit": "5c2882fb7c93b9e650cc6f47a7463780c4f1409d",
+        "commit_date": "2026-08-05",
+        "url": "https://github.com/mohammed1916/tabmx/blob/5c2882fb7c93b9e650cc6f47a7463780c4f1409d/experiments/exp16_disentangle.py",
+        "blob_sha": "0d17bc561516f875eaf7a8490fd98dc8415e1f13",
+        "locations": [
+          "experiment docstring, lines 2-26",
+          "context construction and geometric descriptors"
+        ],
+        "inspection": "read source and paper; results/logs not independently reproduced"
+      },
+      "mechanism": "构造不同均值偏移与多样性的上下文以检查二者混杂；代码中的部分相关分析不能自行确立因果。",
+      "project_difference": "小表格上下文研究不能直接外推 P8192、极低误报、扫描/正常重合模式；重复行数与覆盖不同结构也不等价。",
+      "decision": "不采用为设计依据；只留审查与排除记录。不采用其效应数值、因果表述或旧采样算法。",
+      "falsifiable_probe": "只有 P 池中确有相关结构覆盖不足时，才另设计等 N/类预算的覆盖替换与随机替换；本轮先不变支持集。",
+      "reliability_note": "作者固定 README 自述早期草稿曾含虚构的 GPU 内存、OOM 点和 R2 数值，随后移除并要求所有报告来自测量；本轮未独立复核其后续日志。这是早期草稿可靠性警讯，不据此断言现版本全部数据虚构。当前三臂无须借用其数值结果。",
+      "reliability_source": "https://github.com/mohammed1916/tabmx/blob/5c2882fb7c93b9e650cc6f47a7463780c4f1409d/README.md#L93"
+    },
+    {
+      "id": "tabdpt_year_boundary",
+      "title": "TabDPT: Scaling Tabular Foundation Models on Real Data",
+      "formal_publication": "NeurIPS 2025",
+      "first_public": "2024-10-23",
+      "paper_urls": [
+        "https://arxiv.org/abs/2410.18164",
+        "https://www.cs.toronto.edu/~mvolkovs/NeurIPS2025_TabDPT.pdf"
+      ],
+      "author_code": {
+        "repository": "layer6ai-labs/TabDPT-inference",
+        "commit": "62f55b558b25c392f045f8a592d733f8292f8d14",
+        "commit_date": "2025-12-15",
+        "url": "https://github.com/layer6ai-labs/TabDPT-inference/blob/62f55b558b25c392f045f8a592d733f8292f8d14/src/tabdpt/estimator.py",
+        "blob_sha": "02cdf03564a31c1ccf739fe786800c21c2c76f80",
+        "locations": [
+          "_get_faiss_knn_indices, lines 179-186"
+        ],
+        "inspection": "fixed historical source read; not executed"
+      },
+      "reason": "检索 ICL 机制首发 2024，不因 2025 录用或 2026 仓库更新变成新候选；查询依赖检索还会改变当前共享 KV 的部署接口。",
+      "decision": "只保留排除记录，不作为新方案依据或新增实验臂。"
+    }
+  ],
+  "interpretation_rules": [
+    "双射保留身份/相等关系，不保留源端口的区间/距离/角色规律；差异不能单独证明伪相关。",
+    "源端口置常数删除身份和数值结构；保持 48 列不等于实际模型输入行为完全不变，须审计内部常数特征处理。",
+    "映射先固定、全域一致，不从 E 标签或结果选择；同一 P/C/E 与其他字段不变。",
+    "分别登记各臂正常 C 阈值，保留原始分数差、逐族和逐行新增/修复错误。",
+    "15 条失检扫描具有 P 全 48 字段精确扫描匹配，已排除这些行的简单 P 未见解释；不推出所有扫描覆盖充分。",
+    "本轮 E 为已见开发数据，三臂诊断不产生独立泛化结论；不为获得赢家扩展映射种子。",
+    "B1 同频次层内按预登记 SHA256 排序构造全域双射，c=0 层也保留；不以真实 E 构造或选择映射。",
+    "B1 的 P 源端口值多重集相同，沿用冻结 P mean/std；C/E 边缘分布不保证相同。",
+    "真实实验须报告整体和目标子组的实际移动比例；singleton 频次层不动，不能以未被干预的样本支持编号不敏感。"
+  ]
+}

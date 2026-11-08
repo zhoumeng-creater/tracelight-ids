@@ -1,0 +1,257 @@
+{
+  "scope": "pure synthetic fixtures only; no CSV, model, labels, calibration or evaluation used to construct mapping",
+  "checks_passed": 20,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "full_domain_bijection",
+      "passed": true,
+      "detail": 65536
+    },
+    {
+      "check": "each_value_stays_in_its_P_frequency_stratum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "P_multiset_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "positive_singleton_strata_are_fixed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "deterministic_and_P_row_order_invariant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "declared_mapping_hash_matches_explicit_little_endian_bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "standardized_P_marginal_bitwise_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "seen_unseen_membership_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pairwise_ID_equality_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "synthetic_scaling_retains_full_domain_FP32_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "B1_other47_slots_byte_identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "B2_other47_slots_byte_identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "B1_only_supplied_mapping_and_frozen_scaling_used",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "B2_exact_positive_zero_slot_with_shape_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "input_arrays_unmodified",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "B1_preserves_input_distinction_while_B2_creates_projection_collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "constant_P_singleton_and_zero_frequency_domain_handled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "invalid_source_port_domains_rejected",
+      "passed": true,
+      "detail": 7
+    },
+    {
+      "check": "nonbijective_mapping_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_port_matrix_alignment_mismatch_rejected",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "synthetic_support_ports": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    443,
+    443,
+    443,
+    443,
+    65000,
+    65000,
+    65000,
+    65000,
+    65000
+  ],
+  "synthetic_baseline_center": 5780.701754385965,
+  "synthetic_baseline_scale": 18363.43818279969,
+  "synthetic_mapping": {
+    "intervention": "src-port-frequency-bijection-v1",
+    "seed": 20261108,
+    "domain": [
+      0,
+      65535
+    ],
+    "source_port_column": 0,
+    "key_encoding": "UTF-8 compact JSON [version,seed,P_frequency,value]; SHA-256 byte ordering; value tie-break",
+    "mapping_hash_encoding": "domain order 0..65535, little-endian uint16, 131072 bytes",
+    "mapping_sha256": "7bed797abfa8356256276fd0267c0b414e19b0b8719d63d70e7cf24a5224c0d0",
+    "support_rows": 57,
+    "distinct_support_ports": 26,
+    "unseen_domain_values": 65510,
+    "changed_supported_values": 21,
+    "changed_supported_rows": 42,
+    "changed_unseen_values": 65509,
+    "singleton_frequency_strata": [
+      {
+        "P_frequency": 4,
+        "domain_values": 1,
+        "fixed_values": 1,
+        "changed_values": 0,
+        "support_rows_in_stratum": 4
+      },
+      {
+        "P_frequency": 5,
+        "domain_values": 1,
+        "fixed_values": 1,
+        "changed_values": 0,
+        "support_rows_in_stratum": 5
+      }
+    ],
+    "frequency_strata": [
+      {
+        "P_frequency": 0,
+        "domain_values": 65510,
+        "fixed_values": 1,
+        "changed_values": 65509,
+        "support_rows_in_stratum": 0
+      },
+      {
+        "P_frequency": 1,
+        "domain_values": 8,
+        "fixed_values": 1,
+        "changed_values": 7,
+        "support_rows_in_stratum": 8
+      },
+      {
+        "P_frequency": 2,
+        "domain_values": 8,
+        "fixed_values": 1,
+        "changed_values": 7,
+        "support_rows_in_stratum": 16
+      },
+      {
+        "P_frequency": 3,
+        "domain_values": 8,
+        "fixed_values": 1,
+        "changed_values": 7,
+        "support_rows_in_stratum": 24
+      },
+      {
+        "P_frequency": 4,
+        "domain_values": 1,
+        "fixed_values": 1,
+        "changed_values": 0,
+        "support_rows_in_stratum": 4
+      },
+      {
+        "P_frequency": 5,
+        "domain_values": 1,
+        "fixed_values": 1,
+        "changed_values": 0,
+        "support_rows_in_stratum": 5
+      }
+    ],
+    "support_count_vector_sha256": "935c8984680c2d5cedb6354b8453b24d1a35aee0a6cae8b33a9c9ff38f883e92",
+    "P_multiset_preserved": true,
+    "scaling": "caller-provided baseline P center/scale remain frozen; no refit",
+    "labels_calibration_or_evaluation_used_to_construct_map": false
+  },
+  "numpy_version": "1.26.4",
+  "real_CSV_reads": 0,
+  "real_support_maps_constructed": 0,
+  "real_preprocessing_fits": 0,
+  "model_loads_or_forwards": 0,
+  "algorithm_effect_claim": false,
+  "reference_sha256": "bc40e90f341f98bbc842b068df1ee9e8726eabef1144539f54ca6e4885f63757"
+}

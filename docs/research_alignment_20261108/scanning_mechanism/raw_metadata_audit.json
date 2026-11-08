@@ -1,0 +1,3931 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-08",
+  "method": "Read-only zip stream with csv.reader(strict=True), actual CSV records, all 48 numeric values and labels aligned; no fit, no model call, no feature generation.",
+  "source": {
+    "archive": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\nf-ton-iot-v3\\NF-ToN-IoT-v3-official.zip",
+    "archive_sha256": "b3b6256e970a8986d87716edea4bfd436d68f04058bf5c26cf67e6d839c83698",
+    "member": "02934b58528a226b_NFV3DATA-A11964_A11964/data/NF-ToN-IoT-v3.csv",
+    "uncompressed_bytes": 5302886266,
+    "observed_uncompressed_bytes": 5302886266,
+    "csv_sha256": "53ec8f468a43ede9b1536fabc0390af2fa33ab4312b23ce4d864f186a4651f78",
+    "sample_id_prefix_matches_csv_sha256": true,
+    "zip_crc32_hex": "deafe3bf",
+    "zip_read_to_eof_crc_validated": true,
+    "csv_data_records": 27520260,
+    "physical_lines_including_header": 27520261,
+    "multiline_csv_records_observed": false
+  },
+  "provenance": {
+    "P": {
+      "file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\prepared\\support.csv",
+      "sha256": "ee6c1470f90caa3fcf5d47e884db71b82a6a5ab574ad8ebfe61cc5ba120a8fbf",
+      "rows": 8192
+    },
+    "C": {
+      "file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\prepared\\normal_calibration.csv",
+      "sha256": "fe0d56b6d87411f6b24af534a5543ea0774fdd1812fdf224572b5f6c750e24b2",
+      "rows": 5000
+    },
+    "E": {
+      "file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\prepared\\development_evaluation.csv",
+      "sha256": "20883897adfa29498765174666a88dc2cc206a2f30f659476b07e416ee81f408",
+      "rows": 20000
+    },
+    "scores": {
+      "file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261108_第十四轮输入修复\\核验材料\\context-input-v2\\comparison\\evaluation_scores.csv",
+      "sha256": "64ad5b5b0dc9133ba78a909741157253e63290cc16c2abb6f403c79f1d855a26"
+    }
+  },
+  "alignment": {
+    "selected_records": 33192,
+    "aligned_records": 33192,
+    "numeric_field_comparisons": 1593216,
+    "label_comparisons": 33192,
+    "family_comparisons": 33192,
+    "family_comparison_rule": "original Attack.strip().casefold() equals prepared attack_family.casefold(), matching lab_data.py FAMILIES normalization",
+    "family_normalizations": [
+      {
+        "value": [
+          "Benign",
+          "Benign"
+        ],
+        "count": 20926
+      },
+      {
+        "value": [
+          "ddos",
+          "DDoS"
+        ],
+        "count": 4687
+      },
+      {
+        "value": [
+          "xss",
+          "XSS"
+        ],
+        "count": 3204
+      },
+      {
+        "value": [
+          "password",
+          "Password"
+        ],
+        "count": 1883
+      },
+      {
+        "value": [
+          "scanning",
+          "Scanning"
+        ],
+        "count": 1590
+      },
+      {
+        "value": [
+          "injection",
+          "Injection"
+        ],
+        "count": 406
+      },
+      {
+        "value": [
+          "dos",
+          "DoS"
+        ],
+        "count": 251
+      },
+      {
+        "value": [
+          "Backdoor",
+          "Backdoor"
+        ],
+        "count": 230
+      },
+      {
+        "value": [
+          "ransomware",
+          "Ransomware"
+        ],
+        "count": 10
+      },
+      {
+        "value": [
+          "mitm",
+          "MITM"
+        ],
+        "count": 5
+      }
+    ],
+    "mismatches": 0,
+    "feature_order": [
+      "L4_SRC_PORT",
+      "L4_DST_PORT",
+      "PROTOCOL",
+      "L7_PROTO",
+      "IN_BYTES",
+      "OUT_BYTES",
+      "IN_PKTS",
+      "OUT_PKTS",
+      "FLOW_DURATION_MILLISECONDS",
+      "TCP_FLAGS",
+      "CLIENT_TCP_FLAGS",
+      "SERVER_TCP_FLAGS",
+      "DURATION_IN",
+      "DURATION_OUT",
+      "MIN_TTL",
+      "MAX_TTL",
+      "LONGEST_FLOW_PKT",
+      "SHORTEST_FLOW_PKT",
+      "MIN_IP_PKT_LEN",
+      "MAX_IP_PKT_LEN",
+      "SRC_TO_DST_SECOND_BYTES",
+      "DST_TO_SRC_SECOND_BYTES",
+      "RETRANSMITTED_IN_BYTES",
+      "RETRANSMITTED_IN_PKTS",
+      "RETRANSMITTED_OUT_BYTES",
+      "RETRANSMITTED_OUT_PKTS",
+      "SRC_TO_DST_AVG_THROUGHPUT",
+      "DST_TO_SRC_AVG_THROUGHPUT",
+      "NUM_PKTS_UP_TO_128_BYTES",
+      "NUM_PKTS_128_TO_256_BYTES",
+      "NUM_PKTS_256_TO_512_BYTES",
+      "NUM_PKTS_512_TO_1024_BYTES",
+      "NUM_PKTS_1024_TO_1514_BYTES",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT",
+      "ICMP_TYPE",
+      "ICMP_IPV4_TYPE",
+      "DNS_QUERY_TYPE",
+      "DNS_TTL_ANSWER",
+      "FTP_COMMAND_RET_CODE",
+      "SRC_TO_DST_IAT_MIN",
+      "SRC_TO_DST_IAT_MAX",
+      "SRC_TO_DST_IAT_AVG",
+      "SRC_TO_DST_IAT_STDDEV",
+      "DST_TO_SRC_IAT_MIN",
+      "DST_TO_SRC_IAT_MAX",
+      "DST_TO_SRC_IAT_AVG",
+      "DST_TO_SRC_IAT_STDDEV"
+    ]
+  },
+  "definitions": {
+    "P": "support",
+    "C": "normal calibration",
+    "E": "opened development evaluation",
+    "main47": "most frequent all-but-L4_SRC_PORT pattern among 54 legacy-to-v2 lost Scanning rows; fixed from prior opened artifacts",
+    "directed_ip_pair": "(IPV4_SRC_ADDR, IPV4_DST_ADDR), ports excluded",
+    "directed_transport_five_tuple": "(source IP, source port, destination IP, destination port, IP protocol)",
+    "any_host_occurrences": "two endpoint occurrences per row, not row count",
+    "time": "original Unix millisecond flow timestamps, rendered UTC; start-time envelope overlap is not event identity",
+    "interpretation": "Host/time overlap bounds the split claim; IP/time are absent from model inputs, so overlap alone is not feature leakage."
+  },
+  "subsets": {
+    "P": {
+      "rows": 8192,
+      "labels": {
+        "0": 4096,
+        "1": 4096
+      },
+      "families": {
+        "Benign": 4096,
+        "Scanning": 512,
+        "DoS": 82,
+        "Injection": 135,
+        "DDoS": 1523,
+        "Password": 631,
+        "XSS": 1115,
+        "Ransomware": 4,
+        "Backdoor": 92,
+        "MITM": 2
+      },
+      "source_hosts": 39,
+      "destination_hosts": 201,
+      "any_hosts": 213,
+      "directed_ip_pairs": 431,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.32",
+          "count": 1733
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 1631
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 1346
+        },
+        {
+          "value": "192.168.1.184",
+          "count": 750
+        },
+        {
+          "value": "192.168.1.35",
+          "count": 539
+        },
+        {
+          "value": "192.168.1.1",
+          "count": 448
+        },
+        {
+          "value": "192.168.1.39",
+          "count": 423
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 242
+        },
+        {
+          "value": "192.168.1.33",
+          "count": 180
+        },
+        {
+          "value": "192.168.1.38",
+          "count": 178
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.1.184",
+          "count": 1027
+        },
+        {
+          "value": "192.168.1.195",
+          "count": 986
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 806
+        },
+        {
+          "value": "192.168.1.1",
+          "count": 760
+        },
+        {
+          "value": "192.168.1.169",
+          "count": 624
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 541
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 483
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 445
+        },
+        {
+          "value": "192.168.1.180",
+          "count": 361
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 309
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.195"
+          ],
+          "count": 518
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.184"
+          ],
+          "count": 447
+        },
+        {
+          "value": [
+            "192.168.1.1",
+            "192.168.1.169"
+          ],
+          "count": 436
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.184"
+          ],
+          "count": 429
+        },
+        {
+          "value": [
+            "192.168.1.184",
+            "192.168.1.30"
+          ],
+          "count": 356
+        },
+        {
+          "value": [
+            "192.168.1.184",
+            "192.168.1.31"
+          ],
+          "count": 327
+        },
+        {
+          "value": [
+            "192.168.1.35",
+            "192.168.1.1"
+          ],
+          "count": 241
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.49"
+          ],
+          "count": 196
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.180"
+          ],
+          "count": 195
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.190"
+          ],
+          "count": 189
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:09:50.920000+00:00",
+      "start_max_utc": "2019-04-29T14:14:21.394000+00:00",
+      "end_min_utc": "2019-04-23T14:09:50.920000+00:00",
+      "end_max_utc": "2019-04-29T14:14:21.404000+00:00",
+      "start_span_seconds": 518670.474,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:09:50.920000+00:00",
+        "0.25": "2019-04-24T03:49:58.275000+00:00",
+        "0.5": "2019-04-25T21:39:16.772000+00:00",
+        "0.75": "2019-04-26T23:46:45.910000+00:00",
+        "1": "2019-04-29T14:14:21.394000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 8188,
+      "active_start_minutes": 2392,
+      "largest_start_minute": {
+        "utc": "2019-04-29T12:55:00+00:00",
+        "count": 169
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-29T12:55:00+00:00",
+          "count": 169
+        },
+        {
+          "utc": "2019-04-29T12:56:00+00:00",
+          "count": 145
+        },
+        {
+          "utc": "2019-04-29T12:57:00+00:00",
+          "count": 64
+        },
+        {
+          "utc": "2019-04-24T06:51:00+00:00",
+          "count": 58
+        },
+        {
+          "utc": "2019-04-24T03:30:00+00:00",
+          "count": 44
+        },
+        {
+          "utc": "2019-04-23T16:10:00+00:00",
+          "count": 37
+        },
+        {
+          "utc": "2019-04-23T16:17:00+00:00",
+          "count": 36
+        },
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 35
+        },
+        {
+          "utc": "2019-04-29T12:58:00+00:00",
+          "count": 35
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 34
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 1529,
+        "2019-04-24": 1260,
+        "2019-04-25": 1867,
+        "2019-04-26": 1500,
+        "2019-04-27": 1419,
+        "2019-04-28": 102,
+        "2019-04-29": 515
+      }
+    },
+    "C": {
+      "rows": 5000,
+      "labels": {
+        "0": 5000
+      },
+      "families": {
+        "Benign": 5000
+      },
+      "source_hosts": 37,
+      "destination_hosts": 125,
+      "any_hosts": 136,
+      "directed_ip_pairs": 243,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.1",
+          "count": 1165
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 933
+        },
+        {
+          "value": "192.168.1.184",
+          "count": 919
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 712
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 557
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 259
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 99
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 73
+        },
+        {
+          "value": "192.168.1.193",
+          "count": 56
+        },
+        {
+          "value": "192.168.1.180",
+          "count": 34
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.1.169",
+          "count": 1291
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 648
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 559
+        },
+        {
+          "value": "192.168.1.195",
+          "count": 341
+        },
+        {
+          "value": "192.168.1.180",
+          "count": 324
+        },
+        {
+          "value": "192.168.1.49",
+          "count": 257
+        },
+        {
+          "value": "192.168.1.193",
+          "count": 193
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 192
+        },
+        {
+          "value": "192.168.1.1",
+          "count": 179
+        },
+        {
+          "value": "192.168.1.186",
+          "count": 156
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.1",
+            "192.168.1.169"
+          ],
+          "count": 1150
+        },
+        {
+          "value": [
+            "192.168.1.184",
+            "192.168.1.31"
+          ],
+          "count": 420
+        },
+        {
+          "value": [
+            "192.168.1.184",
+            "192.168.1.30"
+          ],
+          "count": 417
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.180"
+          ],
+          "count": 175
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.49"
+          ],
+          "count": 174
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.195"
+          ],
+          "count": 152
+        },
+        {
+          "value": [
+            "192.168.1.194",
+            "192.168.1.31"
+          ],
+          "count": 112
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.193"
+          ],
+          "count": 109
+        },
+        {
+          "value": [
+            "192.168.1.194",
+            "192.168.1.30"
+          ],
+          "count": 103
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.1"
+          ],
+          "count": 89
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:09:51.109000+00:00",
+      "start_max_utc": "2019-04-29T14:27:21.360000+00:00",
+      "end_min_utc": "2019-04-23T14:09:51.115000+00:00",
+      "end_max_utc": "2019-04-29T14:27:21.360000+00:00",
+      "start_span_seconds": 519450.251,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:09:51.109000+00:00",
+        "0.25": "2019-04-23T16:59:03.560000+00:00",
+        "0.5": "2019-04-25T18:57:23.116000+00:00",
+        "0.75": "2019-04-27T07:23:12.326000+00:00",
+        "1": "2019-04-29T14:27:21.360000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 4981,
+      "active_start_minutes": 1231,
+      "largest_start_minute": {
+        "utc": "2019-04-29T12:58:00+00:00",
+        "count": 525
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-29T12:58:00+00:00",
+          "count": 525
+        },
+        {
+          "utc": "2019-04-29T12:57:00+00:00",
+          "count": 400
+        },
+        {
+          "utc": "2019-04-29T12:56:00+00:00",
+          "count": 135
+        },
+        {
+          "utc": "2019-04-23T16:14:00+00:00",
+          "count": 44
+        },
+        {
+          "utc": "2019-04-23T16:10:00+00:00",
+          "count": 43
+        },
+        {
+          "utc": "2019-04-23T14:28:00+00:00",
+          "count": 37
+        },
+        {
+          "utc": "2019-04-23T16:16:00+00:00",
+          "count": 37
+        },
+        {
+          "utc": "2019-04-29T12:55:00+00:00",
+          "count": 37
+        },
+        {
+          "utc": "2019-04-23T16:17:00+00:00",
+          "count": 36
+        },
+        {
+          "utc": "2019-04-23T16:52:00+00:00",
+          "count": 36
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 1428,
+        "2019-04-24": 793,
+        "2019-04-25": 915,
+        "2019-04-26": 555,
+        "2019-04-27": 101,
+        "2019-04-28": 42,
+        "2019-04-29": 1166
+      }
+    },
+    "E": {
+      "rows": 20000,
+      "labels": {
+        "0": 11830,
+        "1": 8170
+      },
+      "families": {
+        "Benign": 11830,
+        "Scanning": 1078,
+        "DoS": 169,
+        "Injection": 271,
+        "DDoS": 3164,
+        "Password": 1252,
+        "XSS": 2089,
+        "Ransomware": 6,
+        "Backdoor": 138,
+        "MITM": 3
+      },
+      "source_hosts": 49,
+      "destination_hosts": 326,
+      "any_hosts": 344,
+      "directed_ip_pairs": 705,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.32",
+          "count": 4310
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 4088
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 3230
+        },
+        {
+          "value": "192.168.1.184",
+          "count": 2611
+        },
+        {
+          "value": "192.168.1.35",
+          "count": 1020
+        },
+        {
+          "value": "192.168.1.39",
+          "count": 808
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 783
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 579
+        },
+        {
+          "value": "192.168.1.38",
+          "count": 387
+        },
+        {
+          "value": "192.168.1.33",
+          "count": 355
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.1.195",
+          "count": 2296
+        },
+        {
+          "value": "192.168.1.184",
+          "count": 2097
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 1863
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 1850
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 1661
+        },
+        {
+          "value": "192.168.1.1",
+          "count": 1521
+        },
+        {
+          "value": "192.168.1.180",
+          "count": 1063
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 1005
+        },
+        {
+          "value": "192.168.1.49",
+          "count": 873
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 830
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.184",
+            "192.168.1.30"
+          ],
+          "count": 1235
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.195"
+          ],
+          "count": 1206
+        },
+        {
+          "value": [
+            "192.168.1.184",
+            "192.168.1.31"
+          ],
+          "count": 1113
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.184"
+          ],
+          "count": 912
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.184"
+          ],
+          "count": 838
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.49"
+          ],
+          "count": 587
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.180"
+          ],
+          "count": 585
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.190"
+          ],
+          "count": 470
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.190"
+          ],
+          "count": 412
+        },
+        {
+          "value": [
+            "192.168.1.35",
+            "192.168.1.1"
+          ],
+          "count": 400
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:09:50.940000+00:00",
+      "start_max_utc": "2019-04-29T14:44:46.987000+00:00",
+      "end_min_utc": "2019-04-23T14:09:50.940000+00:00",
+      "end_max_utc": "2019-04-29T14:44:48.191000+00:00",
+      "start_span_seconds": 520496.047,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:09:50.940000+00:00",
+        "0.25": "2019-04-24T03:25:10.758000+00:00",
+        "0.5": "2019-04-25T19:47:05.787000+00:00",
+        "0.75": "2019-04-26T03:41:18.130000+00:00",
+        "1": "2019-04-29T14:44:46.987000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 19955,
+      "active_start_minutes": 3213,
+      "largest_start_minute": {
+        "utc": "2019-04-23T16:10:00+00:00",
+        "count": 115
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-23T16:10:00+00:00",
+          "count": 115
+        },
+        {
+          "utc": "2019-04-24T03:29:00+00:00",
+          "count": 111
+        },
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 105
+        },
+        {
+          "utc": "2019-04-23T16:11:00+00:00",
+          "count": 100
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 100
+        },
+        {
+          "utc": "2019-04-23T14:27:00+00:00",
+          "count": 99
+        },
+        {
+          "utc": "2019-04-24T03:30:00+00:00",
+          "count": 99
+        },
+        {
+          "utc": "2019-04-23T14:28:00+00:00",
+          "count": 96
+        },
+        {
+          "utc": "2019-04-23T14:29:00+00:00",
+          "count": 94
+        },
+        {
+          "utc": "2019-04-23T16:16:00+00:00",
+          "count": 93
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 4556,
+        "2019-04-24": 3308,
+        "2019-04-25": 4945,
+        "2019-04-26": 3656,
+        "2019-04-27": 2862,
+        "2019-04-28": 338,
+        "2019-04-29": 335
+      }
+    },
+    "P_Scanning": {
+      "rows": 512,
+      "labels": {
+        "1": 512
+      },
+      "families": {
+        "Scanning": 512
+      },
+      "source_hosts": 10,
+      "destination_hosts": 126,
+      "any_hosts": 126,
+      "directed_ip_pairs": 174,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.32",
+          "count": 261
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 156
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 74
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 9
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 5
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 2
+        },
+        {
+          "value": "192.168.1.79",
+          "count": 2
+        },
+        {
+          "value": "192.168.1.169",
+          "count": 1
+        },
+        {
+          "value": "192.168.1.193",
+          "count": 1
+        },
+        {
+          "value": "192.168.1.49",
+          "count": 1
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.1.194",
+          "count": 63
+        },
+        {
+          "value": "192.168.1.195",
+          "count": 53
+        },
+        {
+          "value": "192.168.1.180",
+          "count": 43
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 40
+        },
+        {
+          "value": "192.168.1.193",
+          "count": 37
+        },
+        {
+          "value": "192.168.1.169",
+          "count": 36
+        },
+        {
+          "value": "192.168.1.79",
+          "count": 30
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 24
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 13
+        },
+        {
+          "value": "192.168.1.133",
+          "count": 7
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.169"
+          ],
+          "count": 33
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.194"
+          ],
+          "count": 33
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.190"
+          ],
+          "count": 32
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.194"
+          ],
+          "count": 26
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.195"
+          ],
+          "count": 26
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.180"
+          ],
+          "count": 22
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.152"
+          ],
+          "count": 21
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.195"
+          ],
+          "count": 19
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.193"
+          ],
+          "count": 17
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.193"
+          ],
+          "count": 17
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:11:41.006000+00:00",
+      "start_max_utc": "2019-04-24T06:53:51.893000+00:00",
+      "end_min_utc": "2019-04-23T14:11:41.355000+00:00",
+      "end_max_utc": "2019-04-24T06:53:51.893000+00:00",
+      "start_span_seconds": 60130.887,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:11:41.006000+00:00",
+        "0.25": "2019-04-24T03:22:25.827000+00:00",
+        "0.5": "2019-04-24T03:41:25.751000+00:00",
+        "0.75": "2019-04-24T06:20:58.122000+00:00",
+        "1": "2019-04-24T06:53:51.893000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 511,
+      "active_start_minutes": 79,
+      "largest_start_minute": {
+        "utc": "2019-04-24T06:51:00+00:00",
+        "count": 57
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T06:51:00+00:00",
+          "count": 57
+        },
+        {
+          "utc": "2019-04-24T06:52:00+00:00",
+          "count": 30
+        },
+        {
+          "utc": "2019-04-24T06:12:00+00:00",
+          "count": 28
+        },
+        {
+          "utc": "2019-04-24T06:11:00+00:00",
+          "count": 21
+        },
+        {
+          "utc": "2019-04-24T03:21:00+00:00",
+          "count": 19
+        },
+        {
+          "utc": "2019-04-24T06:53:00+00:00",
+          "count": 18
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 17
+        },
+        {
+          "utc": "2019-04-24T03:29:00+00:00",
+          "count": 15
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 14
+        },
+        {
+          "utc": "2019-04-24T03:30:00+00:00",
+          "count": 14
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 90,
+        "2019-04-24": 422
+      }
+    },
+    "P_main47_all": {
+      "rows": 100,
+      "labels": {
+        "1": 89,
+        "0": 11
+      },
+      "families": {
+        "Scanning": 89,
+        "Benign": 11
+      },
+      "source_hosts": 3,
+      "destination_hosts": 79,
+      "any_hosts": 82,
+      "directed_ip_pairs": 93,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.31",
+          "count": 42
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 36
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 22
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.101",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.110",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.223",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.116",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.124",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.129",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.154",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.157",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.175",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.189",
+          "count": 2
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.101"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.110"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.154"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.175"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.47"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.56"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.198"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.101"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.110"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.124"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:12:37.991000+00:00",
+      "start_max_utc": "2019-04-24T03:31:02.086000+00:00",
+      "end_min_utc": "2019-04-23T14:12:37.991000+00:00",
+      "end_max_utc": "2019-04-24T03:31:02.086000+00:00",
+      "start_span_seconds": 47904.095,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:12:37.991000+00:00",
+        "0.25": "2019-04-23T14:19:34.887000+00:00",
+        "0.5": "2019-04-23T16:15:37.342000+00:00",
+        "0.75": "2019-04-24T03:22:56.298000+00:00",
+        "1": "2019-04-24T03:31:02.086000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 100,
+      "active_start_minutes": 28,
+      "largest_start_minute": {
+        "utc": "2019-04-24T03:21:00+00:00",
+        "count": 9
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T03:21:00+00:00",
+          "count": 9
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 9
+        },
+        {
+          "utc": "2019-04-23T14:16:00+00:00",
+          "count": 7
+        },
+        {
+          "utc": "2019-04-23T14:13:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T14:19:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T14:20:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-24T03:24:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-24T03:26:00+00:00",
+          "count": 5
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 52,
+        "2019-04-24": 48
+      }
+    },
+    "P_main47_Scanning": {
+      "rows": 89,
+      "labels": {
+        "1": 89
+      },
+      "families": {
+        "Scanning": 89
+      },
+      "source_hosts": 3,
+      "destination_hosts": 74,
+      "any_hosts": 77,
+      "directed_ip_pairs": 84,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.31",
+          "count": 37
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 36
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 16
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.101",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.110",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.124",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.129",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.157",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.189",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.198",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.199",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.200",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.223",
+          "count": 2
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.101"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.110"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.47"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.56"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.198"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.101"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.124"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.129"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.136"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.138"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:12:37.991000+00:00",
+      "start_max_utc": "2019-04-24T03:31:02.086000+00:00",
+      "end_min_utc": "2019-04-23T14:12:37.991000+00:00",
+      "end_max_utc": "2019-04-24T03:31:02.086000+00:00",
+      "start_span_seconds": 47904.095,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:12:37.991000+00:00",
+        "0.25": "2019-04-23T14:17:42.256000+00:00",
+        "0.5": "2019-04-24T03:20:52.751000+00:00",
+        "0.75": "2019-04-24T03:24:00.427000+00:00",
+        "1": "2019-04-24T03:31:02.086000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 89,
+      "active_start_minutes": 25,
+      "largest_start_minute": {
+        "utc": "2019-04-24T03:21:00+00:00",
+        "count": 9
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T03:21:00+00:00",
+          "count": 9
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 9
+        },
+        {
+          "utc": "2019-04-23T14:16:00+00:00",
+          "count": 7
+        },
+        {
+          "utc": "2019-04-23T14:13:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T14:19:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T14:20:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-24T03:24:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-24T03:26:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T14:14:00+00:00",
+          "count": 4
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 41,
+        "2019-04-24": 48
+      }
+    },
+    "P_main47_normal": {
+      "rows": 11,
+      "labels": {
+        "0": 11
+      },
+      "families": {
+        "Benign": 11
+      },
+      "source_hosts": 2,
+      "destination_hosts": 11,
+      "any_hosts": 13,
+      "directed_ip_pairs": 11,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.30",
+          "count": 6
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 5
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.110",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.116",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.127",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.134",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.154",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.164",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.175",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.190",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.193",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.223",
+          "count": 1
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.110"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.127"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.190"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.193"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.223"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.78"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.116"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.134"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.154"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.164"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:26:42.797000+00:00",
+      "start_max_utc": "2019-04-23T16:15:45.402000+00:00",
+      "end_min_utc": "2019-04-23T14:26:42.797000+00:00",
+      "end_max_utc": "2019-04-23T16:15:45.402000+00:00",
+      "start_span_seconds": 6542.605,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:26:42.797000+00:00",
+        "0.25": "2019-04-23T14:26:47.562000+00:00",
+        "0.5": "2019-04-23T14:27:40.395000+00:00",
+        "0.75": "2019-04-23T16:15:36.787000+00:00",
+        "1": "2019-04-23T16:15:45.402000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 11,
+      "active_start_minutes": 3,
+      "largest_start_minute": {
+        "utc": "2019-04-23T16:15:00+00:00",
+        "count": 5
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T14:26:00+00:00",
+          "count": 4
+        },
+        {
+          "utc": "2019-04-23T14:27:00+00:00",
+          "count": 2
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 11
+      }
+    },
+    "C_Scanning": {
+      "rows": 0
+    },
+    "C_main47_all": {
+      "rows": 9,
+      "labels": {
+        "0": 9
+      },
+      "families": {
+        "Benign": 9
+      },
+      "source_hosts": 2,
+      "destination_hosts": 9,
+      "any_hosts": 11,
+      "directed_ip_pairs": 9,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.30",
+          "count": 7
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 2
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.156",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.163",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.172",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.216",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.222",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.246",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.69",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.96",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.99",
+          "count": 1
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.156"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.163"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.172"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.222"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.69"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.96"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.99"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.216"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.246"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:26:38.135000+00:00",
+      "start_max_utc": "2019-04-23T16:15:52.719000+00:00",
+      "end_min_utc": "2019-04-23T14:26:38.135000+00:00",
+      "end_max_utc": "2019-04-23T16:15:52.719000+00:00",
+      "start_span_seconds": 6554.584,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:26:38.135000+00:00",
+        "0.25": "2019-04-23T14:27:13.949000+00:00",
+        "0.5": "2019-04-23T14:27:23.820000+00:00",
+        "0.75": "2019-04-23T14:28:38.350000+00:00",
+        "1": "2019-04-23T16:15:52.719000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 9,
+      "active_start_minutes": 4,
+      "largest_start_minute": {
+        "utc": "2019-04-23T14:27:00+00:00",
+        "count": 5
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-23T14:27:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 2
+        },
+        {
+          "utc": "2019-04-23T14:26:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:28:00+00:00",
+          "count": 1
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 9
+      }
+    },
+    "C_main47_Scanning": {
+      "rows": 0
+    },
+    "C_main47_normal": {
+      "rows": 9,
+      "labels": {
+        "0": 9
+      },
+      "families": {
+        "Benign": 9
+      },
+      "source_hosts": 2,
+      "destination_hosts": 9,
+      "any_hosts": 11,
+      "directed_ip_pairs": 9,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.30",
+          "count": 7
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 2
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.156",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.163",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.172",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.216",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.222",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.246",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.69",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.96",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.99",
+          "count": 1
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.156"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.163"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.172"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.222"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.69"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.96"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.99"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.216"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.246"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:26:38.135000+00:00",
+      "start_max_utc": "2019-04-23T16:15:52.719000+00:00",
+      "end_min_utc": "2019-04-23T14:26:38.135000+00:00",
+      "end_max_utc": "2019-04-23T16:15:52.719000+00:00",
+      "start_span_seconds": 6554.584,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:26:38.135000+00:00",
+        "0.25": "2019-04-23T14:27:13.949000+00:00",
+        "0.5": "2019-04-23T14:27:23.820000+00:00",
+        "0.75": "2019-04-23T14:28:38.350000+00:00",
+        "1": "2019-04-23T16:15:52.719000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 9,
+      "active_start_minutes": 4,
+      "largest_start_minute": {
+        "utc": "2019-04-23T14:27:00+00:00",
+        "count": 5
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-23T14:27:00+00:00",
+          "count": 5
+        },
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 2
+        },
+        {
+          "utc": "2019-04-23T14:26:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:28:00+00:00",
+          "count": 1
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 9
+      }
+    },
+    "E_Scanning": {
+      "rows": 1078,
+      "labels": {
+        "1": 1078
+      },
+      "families": {
+        "Scanning": 1078
+      },
+      "source_hosts": 9,
+      "destination_hosts": 200,
+      "any_hosts": 200,
+      "directed_ip_pairs": 325,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.32",
+          "count": 525
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 349
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 162
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 15
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 8
+        },
+        {
+          "value": "192.168.1.193",
+          "count": 6
+        },
+        {
+          "value": "192.168.1.79",
+          "count": 6
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 5
+        },
+        {
+          "value": "192.168.1.133",
+          "count": 2
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.1.194",
+          "count": 126
+        },
+        {
+          "value": "192.168.1.180",
+          "count": 115
+        },
+        {
+          "value": "192.168.1.195",
+          "count": 110
+        },
+        {
+          "value": "192.168.1.190",
+          "count": 72
+        },
+        {
+          "value": "192.168.1.193",
+          "count": 71
+        },
+        {
+          "value": "192.168.1.169",
+          "count": 55
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 39
+        },
+        {
+          "value": "192.168.1.79",
+          "count": 37
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 30
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 11
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.194"
+          ],
+          "count": 80
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.180"
+          ],
+          "count": 70
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.195"
+          ],
+          "count": 57
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.190"
+          ],
+          "count": 50
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.194"
+          ],
+          "count": 40
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.169"
+          ],
+          "count": 40
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.193"
+          ],
+          "count": 39
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.195"
+          ],
+          "count": 33
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.152"
+          ],
+          "count": 32
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.1.193"
+          ],
+          "count": 27
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:09:57.600000+00:00",
+      "start_max_utc": "2019-04-24T06:55:29.364000+00:00",
+      "end_min_utc": "2019-04-23T14:09:57.600000+00:00",
+      "end_max_utc": "2019-04-24T06:55:29.368000+00:00",
+      "start_span_seconds": 60331.764,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:09:57.600000+00:00",
+        "0.25": "2019-04-24T03:21:42.417000+00:00",
+        "0.5": "2019-04-24T03:32:26.143000+00:00",
+        "0.75": "2019-04-24T06:12:37.010000+00:00",
+        "1": "2019-04-24T06:55:29.364000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 1072,
+      "active_start_minutes": 101,
+      "largest_start_minute": {
+        "utc": "2019-04-24T06:51:00+00:00",
+        "count": 75
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T06:51:00+00:00",
+          "count": 75
+        },
+        {
+          "utc": "2019-04-24T06:52:00+00:00",
+          "count": 56
+        },
+        {
+          "utc": "2019-04-24T06:53:00+00:00",
+          "count": 55
+        },
+        {
+          "utc": "2019-04-24T06:12:00+00:00",
+          "count": 54
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 48
+        },
+        {
+          "utc": "2019-04-24T06:11:00+00:00",
+          "count": 47
+        },
+        {
+          "utc": "2019-04-24T03:28:00+00:00",
+          "count": 36
+        },
+        {
+          "utc": "2019-04-24T03:21:00+00:00",
+          "count": 32
+        },
+        {
+          "utc": "2019-04-24T03:24:00+00:00",
+          "count": 32
+        },
+        {
+          "utc": "2019-04-24T05:53:00+00:00",
+          "count": 32
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 221,
+        "2019-04-24": 857
+      }
+    },
+    "E_main47_all": {
+      "rows": 250,
+      "labels": {
+        "1": 217,
+        "0": 33
+      },
+      "families": {
+        "Scanning": 217,
+        "Benign": 33
+      },
+      "source_hosts": 3,
+      "destination_hosts": 153,
+      "any_hosts": 156,
+      "directed_ip_pairs": 204,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.31",
+          "count": 102
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 86
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 62
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.50",
+          "count": 6
+        },
+        {
+          "value": "192.168.35.155",
+          "count": 5
+        },
+        {
+          "value": "192.168.35.91",
+          "count": 5
+        },
+        {
+          "value": "192.168.35.164",
+          "count": 4
+        },
+        {
+          "value": "192.168.35.122",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.135",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.142",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.156",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.158",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.177",
+          "count": 3
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.50"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.58"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.253"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.46"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.60"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.91"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.133"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.156"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.162"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.188"
+          ],
+          "count": 2
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:12:57.944000+00:00",
+      "start_max_utc": "2019-04-24T05:10:47.677000+00:00",
+      "end_min_utc": "2019-04-23T14:12:57.944000+00:00",
+      "end_max_utc": "2019-04-24T05:10:47.677000+00:00",
+      "start_span_seconds": 53869.733,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:12:57.944000+00:00",
+        "0.25": "2019-04-23T14:19:09.225000+00:00",
+        "0.5": "2019-04-23T16:15:23.806000+00:00",
+        "0.75": "2019-04-24T03:23:20.148000+00:00",
+        "1": "2019-04-24T05:10:47.677000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 250,
+      "active_start_minutes": 33,
+      "largest_start_minute": {
+        "utc": "2019-04-24T03:22:00+00:00",
+        "count": 23
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 23
+        },
+        {
+          "utc": "2019-04-23T14:13:00+00:00",
+          "count": 15
+        },
+        {
+          "utc": "2019-04-24T03:21:00+00:00",
+          "count": 15
+        },
+        {
+          "utc": "2019-04-23T14:16:00+00:00",
+          "count": 14
+        },
+        {
+          "utc": "2019-04-23T14:17:00+00:00",
+          "count": 14
+        },
+        {
+          "utc": "2019-04-24T03:25:00+00:00",
+          "count": 13
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 12
+        },
+        {
+          "utc": "2019-04-24T03:29:00+00:00",
+          "count": 12
+        },
+        {
+          "utc": "2019-04-23T14:20:00+00:00",
+          "count": 11
+        },
+        {
+          "utc": "2019-04-24T03:28:00+00:00",
+          "count": 11
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 132,
+        "2019-04-24": 118
+      }
+    },
+    "E_main47_Scanning": {
+      "rows": 217,
+      "labels": {
+        "1": 217
+      },
+      "families": {
+        "Scanning": 217
+      },
+      "source_hosts": 3,
+      "destination_hosts": 140,
+      "any_hosts": 143,
+      "directed_ip_pairs": 179,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.31",
+          "count": 91
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 85
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 41
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.50",
+          "count": 6
+        },
+        {
+          "value": "192.168.35.91",
+          "count": 5
+        },
+        {
+          "value": "192.168.35.155",
+          "count": 4
+        },
+        {
+          "value": "192.168.35.164",
+          "count": 4
+        },
+        {
+          "value": "192.168.35.142",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.156",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.187",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.223",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.248",
+          "count": 3
+        },
+        {
+          "value": "192.168.35.253",
+          "count": 3
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.50"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.253"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.46"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.60"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.91"
+          ],
+          "count": 3
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.156"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.58"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.101"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.118"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.154"
+          ],
+          "count": 2
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:12:57.944000+00:00",
+      "start_max_utc": "2019-04-24T03:31:24.131000+00:00",
+      "end_min_utc": "2019-04-23T14:12:57.944000+00:00",
+      "end_max_utc": "2019-04-24T03:31:24.131000+00:00",
+      "start_span_seconds": 47906.187,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:12:57.944000+00:00",
+        "0.25": "2019-04-23T14:17:40.695000+00:00",
+        "0.5": "2019-04-24T03:20:53.709000+00:00",
+        "0.75": "2019-04-24T03:24:12.981000+00:00",
+        "1": "2019-04-24T03:31:24.131000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 217,
+      "active_start_minutes": 25,
+      "largest_start_minute": {
+        "utc": "2019-04-24T03:22:00+00:00",
+        "count": 23
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 23
+        },
+        {
+          "utc": "2019-04-23T14:13:00+00:00",
+          "count": 15
+        },
+        {
+          "utc": "2019-04-24T03:21:00+00:00",
+          "count": 15
+        },
+        {
+          "utc": "2019-04-23T14:16:00+00:00",
+          "count": 14
+        },
+        {
+          "utc": "2019-04-23T14:17:00+00:00",
+          "count": 14
+        },
+        {
+          "utc": "2019-04-24T03:25:00+00:00",
+          "count": 13
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 12
+        },
+        {
+          "utc": "2019-04-24T03:29:00+00:00",
+          "count": 12
+        },
+        {
+          "utc": "2019-04-23T14:20:00+00:00",
+          "count": 11
+        },
+        {
+          "utc": "2019-04-24T03:28:00+00:00",
+          "count": 11
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 100,
+        "2019-04-24": 117
+      }
+    },
+    "E_main47_normal": {
+      "rows": 33,
+      "labels": {
+        "0": 33
+      },
+      "families": {
+        "Benign": 33
+      },
+      "source_hosts": 3,
+      "destination_hosts": 31,
+      "any_hosts": 34,
+      "directed_ip_pairs": 31,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.30",
+          "count": 21
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 11
+        },
+        {
+          "value": "192.168.1.32",
+          "count": 1
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.133",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.188",
+          "count": 2
+        },
+        {
+          "value": "192.168.1.194",
+          "count": 1
+        },
+        {
+          "value": "192.168.1.49",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.110",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.122",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.135",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.140",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.155",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.158",
+          "count": 1
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.133"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.188"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.135"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.140"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.155"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.162"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.177"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.180"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.201"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.209"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:25:52.419000+00:00",
+      "start_max_utc": "2019-04-24T05:10:47.677000+00:00",
+      "end_min_utc": "2019-04-23T14:25:52.419000+00:00",
+      "end_max_utc": "2019-04-24T05:10:47.677000+00:00",
+      "start_span_seconds": 53095.258,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:25:52.419000+00:00",
+        "0.25": "2019-04-23T14:26:58.610000+00:00",
+        "0.5": "2019-04-23T14:27:30.546000+00:00",
+        "0.75": "2019-04-23T16:15:23.806000+00:00",
+        "1": "2019-04-24T05:10:47.677000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 33,
+      "active_start_minutes": 8,
+      "largest_start_minute": {
+        "utc": "2019-04-23T14:27:00+00:00",
+        "count": 10
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-23T14:27:00+00:00",
+          "count": 10
+        },
+        {
+          "utc": "2019-04-23T16:15:00+00:00",
+          "count": 9
+        },
+        {
+          "utc": "2019-04-23T14:26:00+00:00",
+          "count": 8
+        },
+        {
+          "utc": "2019-04-23T14:28:00+00:00",
+          "count": 2
+        },
+        {
+          "utc": "2019-04-23T14:25:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T16:11:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T16:12:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-24T05:10:00+00:00",
+          "count": 1
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 32,
+        "2019-04-24": 1
+      }
+    },
+    "E_lost54": {
+      "rows": 54,
+      "labels": {
+        "1": 54
+      },
+      "families": {
+        "Scanning": 54
+      },
+      "source_hosts": 3,
+      "destination_hosts": 47,
+      "any_hosts": 50,
+      "directed_ip_pairs": 51,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.32",
+          "count": 24
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 20
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 10
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.1.195",
+          "count": 4
+        },
+        {
+          "value": "192.168.35.115",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.142",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.239",
+          "count": 2
+        },
+        {
+          "value": "192.168.35.46",
+          "count": 2
+        },
+        {
+          "value": "192.168.1.152",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.100",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.103",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.104",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.106",
+          "count": 1
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.1.195"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.46"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.115"
+          ],
+          "count": 2
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.1.195"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.104"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.156"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.222"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.229"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.239"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.250"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:13:34.601000+00:00",
+      "start_max_utc": "2019-04-24T03:55:04.425000+00:00",
+      "end_min_utc": "2019-04-23T14:13:34.601000+00:00",
+      "end_max_utc": "2019-04-24T03:55:04.426000+00:00",
+      "start_span_seconds": 49289.824,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:13:34.601000+00:00",
+        "0.25": "2019-04-23T14:18:59.145000+00:00",
+        "0.5": "2019-04-24T03:21:22.563000+00:00",
+        "0.75": "2019-04-24T03:24:44.139000+00:00",
+        "1": "2019-04-24T03:55:04.425000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 54,
+      "active_start_minutes": 21,
+      "largest_start_minute": {
+        "utc": "2019-04-24T03:22:00+00:00",
+        "count": 8
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 8
+        },
+        {
+          "utc": "2019-04-23T14:16:00+00:00",
+          "count": 4
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 4
+        },
+        {
+          "utc": "2019-04-24T03:24:00+00:00",
+          "count": 4
+        },
+        {
+          "utc": "2019-04-24T03:25:00+00:00",
+          "count": 4
+        },
+        {
+          "utc": "2019-04-23T14:13:00+00:00",
+          "count": 3
+        },
+        {
+          "utc": "2019-04-23T14:14:00+00:00",
+          "count": 3
+        },
+        {
+          "utc": "2019-04-23T14:17:00+00:00",
+          "count": 3
+        },
+        {
+          "utc": "2019-04-24T03:28:00+00:00",
+          "count": 3
+        },
+        {
+          "utc": "2019-04-23T14:19:00+00:00",
+          "count": 2
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 22,
+        "2019-04-24": 32
+      }
+    },
+    "E_lost_exact_P_Scanning15": {
+      "rows": 15,
+      "labels": {
+        "1": 15
+      },
+      "families": {
+        "Scanning": 15
+      },
+      "source_hosts": 3,
+      "destination_hosts": 15,
+      "any_hosts": 18,
+      "directed_ip_pairs": 15,
+      "top_source_hosts": [
+        {
+          "value": "192.168.1.32",
+          "count": 10
+        },
+        {
+          "value": "192.168.1.30",
+          "count": 3
+        },
+        {
+          "value": "192.168.1.31",
+          "count": 2
+        }
+      ],
+      "top_destination_hosts": [
+        {
+          "value": "192.168.35.103",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.106",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.115",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.117",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.127",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.142",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.144",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.153",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.156",
+          "count": 1
+        },
+        {
+          "value": "192.168.35.196",
+          "count": 1
+        }
+      ],
+      "top_directed_ip_pairs": [
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.156"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.254"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.30",
+            "192.168.35.86"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.144"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.31",
+            "192.168.35.153"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.103"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.106"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.115"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.117"
+          ],
+          "count": 1
+        },
+        {
+          "value": [
+            "192.168.1.32",
+            "192.168.35.127"
+          ],
+          "count": 1
+        }
+      ],
+      "start_min_utc": "2019-04-23T14:14:53.260000+00:00",
+      "start_max_utc": "2019-04-24T03:28:59.034000+00:00",
+      "end_min_utc": "2019-04-23T14:14:53.260000+00:00",
+      "end_max_utc": "2019-04-24T03:28:59.034000+00:00",
+      "start_span_seconds": 47645.774,
+      "start_quantiles_utc": {
+        "0": "2019-04-23T14:14:53.260000+00:00",
+        "0.25": "2019-04-23T14:21:40.046000+00:00",
+        "0.5": "2019-04-24T03:22:00.122000+00:00",
+        "0.75": "2019-04-24T03:24:44.139000+00:00",
+        "1": "2019-04-24T03:28:59.034000+00:00"
+      },
+      "end_before_start_rows": 0,
+      "unique_start_milliseconds": 15,
+      "active_start_minutes": 11,
+      "largest_start_minute": {
+        "utc": "2019-04-24T03:25:00+00:00",
+        "count": 3
+      },
+      "top_start_minutes": [
+        {
+          "utc": "2019-04-24T03:25:00+00:00",
+          "count": 3
+        },
+        {
+          "utc": "2019-04-24T03:22:00+00:00",
+          "count": 2
+        },
+        {
+          "utc": "2019-04-24T03:24:00+00:00",
+          "count": 2
+        },
+        {
+          "utc": "2019-04-23T14:14:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:16:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:18:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:20:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:21:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-23T14:24:00+00:00",
+          "count": 1
+        },
+        {
+          "utc": "2019-04-24T03:20:00+00:00",
+          "count": 1
+        }
+      ],
+      "start_utc_day_counts": {
+        "2019-04-23": 6,
+        "2019-04-24": 9
+      }
+    }
+  },
+  "overlaps": {
+    "P__C": {
+      "source_host": {
+        "a_unique": 39,
+        "b_unique": 37,
+        "shared_unique": 28,
+        "a_occurrences_seen_in_b": 7704,
+        "b_occurrences_seen_in_a": 4982,
+        "a_occurrences": 8192,
+        "b_occurrences": 5000
+      },
+      "destination_host": {
+        "a_unique": 201,
+        "b_unique": 125,
+        "shared_unique": 80,
+        "a_occurrences_seen_in_b": 7968,
+        "b_occurrences_seen_in_a": 4951,
+        "a_occurrences": 8192,
+        "b_occurrences": 5000
+      },
+      "any_host": {
+        "a_unique": 213,
+        "b_unique": 136,
+        "shared_unique": 86,
+        "a_occurrences_seen_in_b": 16168,
+        "b_occurrences_seen_in_a": 9946,
+        "a_occurrences": 16384,
+        "b_occurrences": 10000
+      },
+      "directed_ip_pair": {
+        "a_unique": 431,
+        "b_unique": 243,
+        "shared_unique": 144,
+        "a_occurrences_seen_in_b": 5736,
+        "b_occurrences_seen_in_a": 4873,
+        "a_occurrences": 8192,
+        "b_occurrences": 5000
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 7639,
+        "b_unique": 3771,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 8192,
+        "b_occurrences": 5000
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 518670.285,
+        "a_start_rows_inside_b_envelope": 8191,
+        "b_start_rows_inside_a_envelope": 4998,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24",
+          "2019-04-25",
+          "2019-04-26",
+          "2019-04-27",
+          "2019-04-28",
+          "2019-04-29"
+        ]
+      }
+    },
+    "P__E": {
+      "source_host": {
+        "a_unique": 39,
+        "b_unique": 49,
+        "shared_unique": 31,
+        "a_occurrences_seen_in_b": 8182,
+        "b_occurrences_seen_in_a": 19966,
+        "a_occurrences": 8192,
+        "b_occurrences": 20000
+      },
+      "destination_host": {
+        "a_unique": 201,
+        "b_unique": 326,
+        "shared_unique": 179,
+        "a_occurrences_seen_in_b": 8162,
+        "b_occurrences_seen_in_a": 19695,
+        "a_occurrences": 8192,
+        "b_occurrences": 20000
+      },
+      "any_host": {
+        "a_unique": 213,
+        "b_unique": 344,
+        "shared_unique": 184,
+        "a_occurrences_seen_in_b": 16345,
+        "b_occurrences_seen_in_a": 39680,
+        "a_occurrences": 16384,
+        "b_occurrences": 40000
+      },
+      "directed_ip_pair": {
+        "a_unique": 431,
+        "b_unique": 705,
+        "shared_unique": 314,
+        "a_occurrences_seen_in_b": 8054,
+        "b_occurrences_seen_in_a": 19316,
+        "a_occurrences": 8192,
+        "b_occurrences": 20000
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 7639,
+        "b_unique": 18738,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 8192,
+        "b_occurrences": 20000
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 518670.454,
+        "a_start_rows_inside_b_envelope": 8191,
+        "b_start_rows_inside_a_envelope": 19978,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24",
+          "2019-04-25",
+          "2019-04-26",
+          "2019-04-27",
+          "2019-04-28",
+          "2019-04-29"
+        ]
+      }
+    },
+    "C__E": {
+      "source_host": {
+        "a_unique": 37,
+        "b_unique": 49,
+        "shared_unique": 30,
+        "a_occurrences_seen_in_b": 4993,
+        "b_occurrences_seen_in_a": 19104,
+        "a_occurrences": 5000,
+        "b_occurrences": 20000
+      },
+      "destination_host": {
+        "a_unique": 125,
+        "b_unique": 326,
+        "shared_unique": 94,
+        "a_occurrences_seen_in_b": 4969,
+        "b_occurrences_seen_in_a": 19376,
+        "a_occurrences": 5000,
+        "b_occurrences": 20000
+      },
+      "any_host": {
+        "a_unique": 136,
+        "b_unique": 344,
+        "shared_unique": 102,
+        "a_occurrences_seen_in_b": 9966,
+        "b_occurrences_seen_in_a": 39388,
+        "a_occurrences": 10000,
+        "b_occurrences": 40000
+      },
+      "directed_ip_pair": {
+        "a_unique": 243,
+        "b_unique": 705,
+        "shared_unique": 174,
+        "a_occurrences_seen_in_b": 4925,
+        "b_occurrences_seen_in_a": 14858,
+        "a_occurrences": 5000,
+        "b_occurrences": 20000
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 3771,
+        "b_unique": 18738,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 5000,
+        "b_occurrences": 20000
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 519450.251,
+        "a_start_rows_inside_b_envelope": 5000,
+        "b_start_rows_inside_a_envelope": 19978,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24",
+          "2019-04-25",
+          "2019-04-26",
+          "2019-04-27",
+          "2019-04-28",
+          "2019-04-29"
+        ]
+      }
+    },
+    "P_Scanning__E_Scanning": {
+      "source_host": {
+        "a_unique": 10,
+        "b_unique": 9,
+        "shared_unique": 8,
+        "a_occurrences_seen_in_b": 510,
+        "b_occurrences_seen_in_a": 1076,
+        "a_occurrences": 512,
+        "b_occurrences": 1078
+      },
+      "destination_host": {
+        "a_unique": 126,
+        "b_unique": 200,
+        "shared_unique": 110,
+        "a_occurrences_seen_in_b": 490,
+        "b_occurrences_seen_in_a": 896,
+        "a_occurrences": 512,
+        "b_occurrences": 1078
+      },
+      "any_host": {
+        "a_unique": 126,
+        "b_unique": 200,
+        "shared_unique": 110,
+        "a_occurrences_seen_in_b": 1002,
+        "b_occurrences_seen_in_a": 1974,
+        "a_occurrences": 1024,
+        "b_occurrences": 2156
+      },
+      "directed_ip_pair": {
+        "a_unique": 174,
+        "b_unique": 325,
+        "shared_unique": 106,
+        "a_occurrences_seen_in_b": 435,
+        "b_occurrences_seen_in_a": 772,
+        "a_occurrences": 512,
+        "b_occurrences": 1078
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 512,
+        "b_unique": 1078,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 512,
+        "b_occurrences": 1078
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 60130.887,
+        "a_start_rows_inside_b_envelope": 512,
+        "b_start_rows_inside_a_envelope": 1070,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24"
+        ]
+      }
+    },
+    "P__E_lost54": {
+      "source_host": {
+        "a_unique": 39,
+        "b_unique": 3,
+        "shared_unique": 3,
+        "a_occurrences_seen_in_b": 4710,
+        "b_occurrences_seen_in_a": 54,
+        "a_occurrences": 8192,
+        "b_occurrences": 54
+      },
+      "destination_host": {
+        "a_unique": 201,
+        "b_unique": 47,
+        "shared_unique": 31,
+        "a_occurrences_seen_in_b": 1471,
+        "b_occurrences_seen_in_a": 37,
+        "a_occurrences": 8192,
+        "b_occurrences": 54
+      },
+      "any_host": {
+        "a_unique": 213,
+        "b_unique": 50,
+        "shared_unique": 34,
+        "a_occurrences_seen_in_b": 7425,
+        "b_occurrences_seen_in_a": 91,
+        "a_occurrences": 16384,
+        "b_occurrences": 108
+      },
+      "directed_ip_pair": {
+        "a_unique": 431,
+        "b_unique": 51,
+        "shared_unique": 20,
+        "a_occurrences_seen_in_b": 872,
+        "b_occurrences_seen_in_a": 22,
+        "a_occurrences": 8192,
+        "b_occurrences": 54
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 7639,
+        "b_unique": 54,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 8192,
+        "b_occurrences": 54
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 49289.824,
+        "a_start_rows_inside_b_envelope": 2050,
+        "b_start_rows_inside_a_envelope": 54,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24"
+        ]
+      }
+    },
+    "P_Scanning__E_lost54": {
+      "source_host": {
+        "a_unique": 10,
+        "b_unique": 3,
+        "shared_unique": 3,
+        "a_occurrences_seen_in_b": 491,
+        "b_occurrences_seen_in_a": 54,
+        "a_occurrences": 512,
+        "b_occurrences": 54
+      },
+      "destination_host": {
+        "a_unique": 126,
+        "b_unique": 47,
+        "shared_unique": 24,
+        "a_occurrences_seen_in_b": 103,
+        "b_occurrences_seen_in_a": 30,
+        "a_occurrences": 512,
+        "b_occurrences": 54
+      },
+      "any_host": {
+        "a_unique": 126,
+        "b_unique": 50,
+        "shared_unique": 27,
+        "a_occurrences_seen_in_b": 620,
+        "b_occurrences_seen_in_a": 84,
+        "a_occurrences": 1024,
+        "b_occurrences": 108
+      },
+      "directed_ip_pair": {
+        "a_unique": 174,
+        "b_unique": 51,
+        "shared_unique": 17,
+        "a_occurrences_seen_in_b": 68,
+        "b_occurrences_seen_in_a": 19,
+        "a_occurrences": 512,
+        "b_occurrences": 54
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 512,
+        "b_unique": 54,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 512,
+        "b_occurrences": 54
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 49289.824,
+        "a_start_rows_inside_b_envelope": 274,
+        "b_start_rows_inside_a_envelope": 54,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24"
+        ]
+      }
+    },
+    "P_main47_Scanning__E_main47_Scanning": {
+      "source_host": {
+        "a_unique": 3,
+        "b_unique": 3,
+        "shared_unique": 3,
+        "a_occurrences_seen_in_b": 89,
+        "b_occurrences_seen_in_a": 217,
+        "a_occurrences": 89,
+        "b_occurrences": 217
+      },
+      "destination_host": {
+        "a_unique": 74,
+        "b_unique": 140,
+        "shared_unique": 44,
+        "a_occurrences_seen_in_b": 52,
+        "b_occurrences_seen_in_a": 74,
+        "a_occurrences": 89,
+        "b_occurrences": 217
+      },
+      "any_host": {
+        "a_unique": 77,
+        "b_unique": 143,
+        "shared_unique": 47,
+        "a_occurrences_seen_in_b": 141,
+        "b_occurrences_seen_in_a": 291,
+        "a_occurrences": 178,
+        "b_occurrences": 434
+      },
+      "directed_ip_pair": {
+        "a_unique": 84,
+        "b_unique": 179,
+        "shared_unique": 29,
+        "a_occurrences_seen_in_b": 31,
+        "b_occurrences_seen_in_a": 37,
+        "a_occurrences": 89,
+        "b_occurrences": 217
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 89,
+        "b_unique": 217,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 89,
+        "b_occurrences": 217
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 47884.142,
+        "a_start_rows_inside_b_envelope": 88,
+        "b_start_rows_inside_a_envelope": 215,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24"
+        ]
+      }
+    },
+    "P_main47_normal__E_main47_Scanning": {
+      "source_host": {
+        "a_unique": 2,
+        "b_unique": 3,
+        "shared_unique": 2,
+        "a_occurrences_seen_in_b": 11,
+        "b_occurrences_seen_in_a": 132,
+        "a_occurrences": 11,
+        "b_occurrences": 217
+      },
+      "destination_host": {
+        "a_unique": 11,
+        "b_unique": 140,
+        "shared_unique": 9,
+        "a_occurrences_seen_in_b": 9,
+        "b_occurrences_seen_in_a": 17,
+        "a_occurrences": 11,
+        "b_occurrences": 217
+      },
+      "any_host": {
+        "a_unique": 13,
+        "b_unique": 143,
+        "shared_unique": 11,
+        "a_occurrences_seen_in_b": 20,
+        "b_occurrences_seen_in_a": 149,
+        "a_occurrences": 22,
+        "b_occurrences": 434
+      },
+      "directed_ip_pair": {
+        "a_unique": 11,
+        "b_unique": 179,
+        "shared_unique": 7,
+        "a_occurrences_seen_in_b": 7,
+        "b_occurrences_seen_in_a": 9,
+        "a_occurrences": 11,
+        "b_occurrences": 217
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 11,
+        "b_unique": 217,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 11,
+        "b_occurrences": 217
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 6542.605,
+        "a_start_rows_inside_b_envelope": 11,
+        "b_start_rows_inside_a_envelope": 0,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23"
+        ]
+      }
+    },
+    "E_main47_normal__E_main47_Scanning": {
+      "source_host": {
+        "a_unique": 3,
+        "b_unique": 3,
+        "shared_unique": 3,
+        "a_occurrences_seen_in_b": 33,
+        "b_occurrences_seen_in_a": 217,
+        "a_occurrences": 33,
+        "b_occurrences": 217
+      },
+      "destination_host": {
+        "a_unique": 31,
+        "b_unique": 140,
+        "shared_unique": 18,
+        "a_occurrences_seen_in_b": 18,
+        "b_occurrences_seen_in_a": 29,
+        "a_occurrences": 33,
+        "b_occurrences": 217
+      },
+      "any_host": {
+        "a_unique": 34,
+        "b_unique": 143,
+        "shared_unique": 21,
+        "a_occurrences_seen_in_b": 51,
+        "b_occurrences_seen_in_a": 246,
+        "a_occurrences": 66,
+        "b_occurrences": 434
+      },
+      "directed_ip_pair": {
+        "a_unique": 31,
+        "b_unique": 179,
+        "shared_unique": 6,
+        "a_occurrences_seen_in_b": 6,
+        "b_occurrences_seen_in_a": 7,
+        "a_occurrences": 33,
+        "b_occurrences": 217
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 33,
+        "b_unique": 217,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 33,
+        "b_occurrences": 217
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 47131.712,
+        "a_start_rows_inside_b_envelope": 32,
+        "b_start_rows_inside_a_envelope": 117,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24"
+        ]
+      }
+    },
+    "P_Scanning__E_lost_exact_P_Scanning15": {
+      "source_host": {
+        "a_unique": 10,
+        "b_unique": 3,
+        "shared_unique": 3,
+        "a_occurrences_seen_in_b": 491,
+        "b_occurrences_seen_in_a": 15,
+        "a_occurrences": 512,
+        "b_occurrences": 15
+      },
+      "destination_host": {
+        "a_unique": 126,
+        "b_unique": 15,
+        "shared_unique": 7,
+        "a_occurrences_seen_in_b": 7,
+        "b_occurrences_seen_in_a": 7,
+        "a_occurrences": 512,
+        "b_occurrences": 15
+      },
+      "any_host": {
+        "a_unique": 126,
+        "b_unique": 18,
+        "shared_unique": 10,
+        "a_occurrences_seen_in_b": 519,
+        "b_occurrences_seen_in_a": 22,
+        "a_occurrences": 1024,
+        "b_occurrences": 30
+      },
+      "directed_ip_pair": {
+        "a_unique": 174,
+        "b_unique": 15,
+        "shared_unique": 2,
+        "a_occurrences_seen_in_b": 2,
+        "b_occurrences_seen_in_a": 2,
+        "a_occurrences": 512,
+        "b_occurrences": 15
+      },
+      "directed_transport_five_tuple": {
+        "a_unique": 512,
+        "b_unique": 15,
+        "shared_unique": 0,
+        "a_occurrences_seen_in_b": 0,
+        "b_occurrences_seen_in_a": 0,
+        "a_occurrences": 512,
+        "b_occurrences": 15
+      },
+      "time": {
+        "overlap_start_envelope_seconds": 47645.774,
+        "a_start_rows_inside_b_envelope": 170,
+        "b_start_rows_inside_a_envelope": 15,
+        "a_all_flows_end_before_b_starts": false,
+        "b_all_flows_end_before_a_starts": false,
+        "shared_start_utc_days": [
+          "2019-04-23",
+          "2019-04-24"
+        ]
+      }
+    }
+  },
+  "elapsed_seconds": 79.568
+}

@@ -1,0 +1,88 @@
+{
+  "checked_date": "2026-11-08",
+  "scope": "2025-2026 primary sources and official archived metadata; no models loaded",
+  "sources": [
+    {
+      "id": "nf_v3_release",
+      "year": 2025,
+      "title": "NF-ToN-IoT-v3 official release metadata and NetFlow_v3_Features.csv",
+      "url": "https://staff.itee.uq.edu.au/marius/NIDS_datasets/",
+      "doi": "10.48610/44d7c5e",
+      "status": "author release page inspected; official local BagIt metadata inspected; DOI landing page returned 403 through web tool",
+      "local_zip": "data/raw/nf-ton-iot-v3/NF-ToN-IoT-v3-official.zip",
+      "member": "02934b58528a226b_NFV3DATA-A11964_A11964/data/NetFlow_v3_Features.csv",
+      "member_bytes": 2935,
+      "member_sha256": "abe3ce6e6ff731d72d76e029b512585c0dbcbd8e03ff6dbe2bd04b560723bd67",
+      "bagging_date": "2025-02-28",
+      "use": "field definitions and release identity",
+      "limits": ["No L7 numeric-name map", "No nProbe or nDPI build/version", "DURATION_OUT description repeats client-to-server", "Reverse IAT descriptions contain copy errors"]
+    },
+    {
+      "id": "luay_temporal_2025_2026",
+      "year": 2025,
+      "revision_year": 2026,
+      "title": "Temporal Analysis of NetFlow Datasets for Network Intrusion Detection Systems",
+      "url": "https://arxiv.org/html/2503.04404v1",
+      "revision_url": "https://arxiv.org/html/2503.04404v3",
+      "first_submitted": "2025-03-06",
+      "revision_date": "2026-08-28",
+      "sections_checked": ["4.1/Table 1", "4.2", "5.4.2", "6"],
+      "use": "flow-inner timing versus cross-flow aggregation; categorical ports; timestamp and five-tuple label matching",
+      "author_conversion_code": "not located in inspected paper or author dataset landing page",
+      "limits": ["Not a low-FPR classifier validation", "Scanning label transferred from ground truth", "Do not conflate with linked journal DOI full text"]
+    },
+    {
+      "id": "butt_nids_representations_2026",
+      "year": 2026,
+      "title": "Evaluating Tabular Representation Learning for Network Intrusion Detection",
+      "url": "https://arxiv.org/html/2605.02519v1",
+      "first_submitted": "2026-05-04",
+      "use": "dataset-model dependence and attack-category coverage; high-cardinality feature semantics",
+      "author_code": "No experiment code link located in inspected paper HTML",
+      "limits": ["Different datasets/protocols", "No reproduction performed", "Earlier algorithms discussed in paper not adopted as candidates"]
+    },
+    {
+      "id": "aldahmani_iot_tfm_2026",
+      "year": 2026,
+      "title": "Optimizing IoT Intrusion Detection with Tabular Foundation Models for Smart City Forensics",
+      "url": "https://arxiv.org/html/2604.11394v1",
+      "first_submitted": "2026-04-13",
+      "sections_checked": ["3.1", "3.4", "4.3/Table 4"],
+      "use": "related evidence motivating family-level inspection only",
+      "author_code": "No experiment code link located in inspected paper HTML",
+      "limits": ["69.8 percent Scanning F1 is Random Forest multi-class, not TabPFNv2.5", "Seven device telemetry categories are not NF-ToN-IoT-v3 flows", "80/20 stratified split and 5-fold CV; no same 1 percent FPR calibration protocol", "Do not use speed or accuracy claims as our target"]
+    },
+    {
+      "id": "contextualized_netflow_review_2026",
+      "year": 2026,
+      "title": "Deep Learning for Contextualized NetFlow-Based Network Intrusion Detection: Methods, Data, Evaluation and Deployment",
+      "url": "https://arxiv.org/abs/2602.05594",
+      "version": "v3, 2026-03-03",
+      "use": "evaluation and state-cost questions for any future cross-flow context",
+      "limits": ["Review, not evidence that this project's Scanning requires context", "No model selected or run"]
+    },
+    {
+      "id": "time_matters_publisher_2026",
+      "year": 2026,
+      "title": "Time Matters: Temporal NetFlow Features for ML-Based Network Intrusion Detection",
+      "url": "https://ieeexplore.ieee.org/document/11498288/",
+      "doi": "10.1109/ACCESS.2026.3688204",
+      "publication_date": "2026-04-28",
+      "use": "version provenance check only",
+      "limits": ["Publisher title and abstract differ materially from inspected arXiv v3 text", "Full journal experimental setup not audited", "Reported F1 gains not adopted"]
+    }
+  ],
+  "unresolved": {
+    "L7_PROTO_91_name_in_this_release": "unknown",
+    "flow_src_dst_guaranteed_client_server_mapping": "not established by checked release materials",
+    "TCP_flags_exact_bit_mapping_for_extractor_build": "not supplied in checked release materials",
+    "nprobe_ndpi_build": "unknown"
+  },
+  "inference_boundaries": [
+    "Identity preservation does not establish a meaningful metric on identifiers",
+    "No exact-input collisions does not establish learnable cross-group separation",
+    "Marginal ID support coverage does not imply joint or behavioral support coverage",
+    "Current 48 feature schema has no host-time window aggregation",
+    "Query attack-family labels cannot be used for a deployable selector without changing supervision scope"
+  ]
+}
