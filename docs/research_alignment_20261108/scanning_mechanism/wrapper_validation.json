@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-08",
+  "release_tag": "scanning-mechanism-lab-v1.1",
+  "historical_experiment_tag": "scanning-mechanism-lab-v1",
+  "historical_experiment_commit": "d239d513197899bffd44e407c008d5048163e88b",
+  "change": "PowerShell pip --editable replaces ambiguous -e; experimental Python and data protocol unchanged",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 1.496,
+  "coverage": [
+    "actual helper and pip command from script AST",
+    "Windows PowerShell5.1 and pwsh",
+    "dot argument and Unicode/space project paths",
+    "no pip installation or real model execution"
+  ],
+  "junit": "wrapper-junit.xml",
+  "junit_sha256": "b949c0d196544d6f8fc65750166342ee6b1a18e6cdddeef7a93b482cd535a518",
+  "source_freeze": "../../../configs/scanning-mechanism-code-freeze-v1.json",
+  "source_freeze_lf_sha256": "42c75459b5e23ebc53a4b376b4287f8fe64366ee3dccd0c295ca255bee84ae63",
+  "historical_validation": "implementation_validation.json describes original v1 288-test run; its source freeze raw SHA is historical",
+  "initial_localized_harness_attempt": "2 passed and 2 failed due to implicit GBK decoding; explicit UTF-8 stream encoding fixed the test harness; four tests rerun passed",
+  "real_model_runs": 0
+}

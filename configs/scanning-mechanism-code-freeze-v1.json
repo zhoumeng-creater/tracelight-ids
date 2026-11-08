@@ -1,12 +1,12 @@
 {
   "format": "tracelight-scanning-code-freeze-v1",
-  "release_tag": "scanning-mechanism-lab-v1",
+  "release_tag": "scanning-mechanism-lab-v1.1",
   "hash_encoding": "SHA256 of bytes with CRLF normalized to LF",
   "files": {
     "configs/context-scanning-mechanism-v1.json": "01f8379bfe7a63fbafd21c7bc94bec4e9f3750e8b1afc01d9593f76695098d9e",
     "pyproject.toml": "3a925ccc1a9892240ab069bd6e9d88963e335ebbb933b7738b2e2530424da677",
     "requirements-lock.txt": "4d1a776bc6f272514712b0a5c16c43308d45827046a45726b2e99b53bbde17aa",
-    "scripts/RUN_SCANNING_MECHANISM.ps1": "3c35fe0336aa9ec8d4d3d49800774944134615d2bc151a67a3229335b3d42419",
+    "scripts/RUN_SCANNING_MECHANISM.ps1": "94ca80944e558ad836a59ea4212eed7c3ecb22a169447e612f7e0568b67bfd81",
     "src/ids/common.py": "438245a59a042c4d95a9586d6b010a4ea2c61733bb490597cff3335cecdd7b57",
     "src/ids/context_cache/__init__.py": "9c09432e86f5fc322d94142eea50bfa8cf8b00b0bf7fb4ec8227eb4de651e03b",
     "src/ids/context_cache/__main__.py": "ca6491f683cc16a28416c7e4422bb8eb0f5fb487fb70983838d4b967d3311eef",
@@ -39,6 +39,7 @@
     "tests/test_scanning_cli.py": "f5032d9119584e8eeb84c10b0fa215c88d20b59cdb42b1a246b62f4b9bff0c15",
     "tests/test_scanning_inputs.py": "7d1417b129f423197d784d30c843485df1cd3951660c753df0f3cc9addc4b67b",
     "tests/test_scanning_metrics.py": "c9e256f5d175a4fd329f37677143d9d16344c36a7ff035c9de970370977ba5c4",
+    "tests/test_scanning_powershell.py": "e1077e1e74793bada23609bea8769f8f95176e9bd9392e7ae21940aff0a366ef",
     "tests/test_scanning_protocol.py": "51894e1832038a1263b3d69a7fa888e59bd4ee36fc9d6f0bcf4c65376cda83d8",
     "tests/test_scanning_workflow.py": "0475aee234dda32d2a51ab8add4d763b6fd603b78825a4c72ed9f88b43b40850",
     "tests/test_tabicl_cache_adapter.py": "acdd8d5bebf1bf4e88dc6d179da93781c75cba6de2a393dc0d827d3db3f633f9",

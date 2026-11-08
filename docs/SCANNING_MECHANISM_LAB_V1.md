@@ -1,6 +1,8 @@
 # Scanning 三臂实验室执行说明
 
-固定标签：`scanning-mechanism-lab-v1`。运行协议见[机制设计](SCANNING_MECHANISM_PROTOCOL_20261108.md)，参数与文件身份见[冻结配置](../configs/context-scanning-mechanism-v1.json)。本轮复用第十四轮P8192／正常C5000／E20000、冻结预处理和TabICLv2权重，不重新抽样、不拟合预处理、不训练权重。
+v1.1仅修订PowerShell安装调用：将`-e`改为`--editable`，避免`Invoke-ScanPython`公共参数缩写歧义。三臂、数据身份、算法和阈值协议均不改变；原v1标签保持原样。第十五轮已完成，本修订供后续复现使用，不要求重跑已验收实验。
+
+固定标签：`scanning-mechanism-lab-v1.1`。运行协议见[机制设计](SCANNING_MECHANISM_PROTOCOL_20261108.md)，参数与文件身份见[冻结配置](../configs/context-scanning-mechanism-v1.json)。本轮复用第十四轮P8192／正常C5000／E20000、冻结预处理和TabICLv2权重，不重新抽样、不拟合预处理、不训练权重。
 
 三臂依次为`baseline`、`src_frequency_bijection`、`src_mask_zero`。CUDA分别构建完整上下文，保存后在CPU FP32、单线程、批128评分。总计3次完整缓存构建、15000条C评分、60000条E评分、0优化器更新、0 QCOC编译。B0的分数和阈值容差固定为`3e-5 + 3e-5 * abs(old)`，C/E判决必须逐行一致；失败即停止，不执行B1/B2。
 
@@ -15,7 +17,7 @@ $py = 'D:\zhoumeng\Graduate\venvs\context-cache\Scripts\python.exe'
 Set-Location -LiteralPath $repo
 git fetch origin --tags
 if ($LASTEXITCODE -ne 0) { throw 'git fetch failed' }
-git checkout --detach scanning-mechanism-lab-v1
+git checkout --detach scanning-mechanism-lab-v1.1
 if ($LASTEXITCODE -ne 0) { throw 'frozen checkout failed' }
 
 $round14 = Join-Path $repo 'local\context-input-v2'

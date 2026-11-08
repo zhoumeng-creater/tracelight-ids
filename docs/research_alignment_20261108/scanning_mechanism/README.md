@@ -14,3 +14,5 @@
 | 正式入口与完整回归 | [实施验证](implementation_validation.json)、[JUnit](implementation-junit.xml)、[实验室指南](../../SCANNING_MECHANISM_LAB_V1.md) | 288项合成回归通过；真实模型仍只在实验室执行 |
 
 可复现入口为`artifact_coverage.py`、`raw_metadata_audit.py`和`mechanism_synthetic_checks.py`，分别读取已保存工件、流式读取官方ZIP、核查合成数组。真实模型干预与新的独立确认均留在实验室。
+
+维护记录：`scanning-mechanism-lab-v1.1`只修复PowerShell的pip参数转发；[4项实际shell回归](wrapper_validation.json)与原v1的288项合成记录分列。原v1对应第十五轮实验结果，不因修复脚本而重跑。

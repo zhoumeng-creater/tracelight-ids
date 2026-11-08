@@ -27,10 +27,10 @@ function Invoke-ScanPython {
 }
 
 # Fail before scoring if the checkout is not the released code.
-$expectedCommit = & git rev-parse 'scanning-mechanism-lab-v1^{commit}'
-if ($LASTEXITCODE -ne 0) { throw 'Fetch the frozen scanning-mechanism-lab-v1 tag first.' }
+$expectedCommit = & git rev-parse 'scanning-mechanism-lab-v1.1^{commit}'
+if ($LASTEXITCODE -ne 0) { throw 'Fetch the frozen scanning-mechanism-lab-v1.1 tag first.' }
 $actualCommit = & git rev-parse HEAD
-if ($LASTEXITCODE -ne 0 -or $actualCommit -ne $expectedCommit) { throw 'Checkout scanning-mechanism-lab-v1 first.' }
+if ($LASTEXITCODE -ne 0 -or $actualCommit -ne $expectedCommit) { throw 'Checkout scanning-mechanism-lab-v1.1 first.' }
 
 if ($Stage -eq 'Preflight') {
     if (Test-Path -LiteralPath $runPath) { throw 'RunRoot already exists; preserve it and diagnose before another run.' }
@@ -50,7 +50,7 @@ try {
     }
     switch ($Stage) {
         'Preflight' {
-            Invoke-ScanPython -m pip install --no-deps --no-build-isolation -e .
+            Invoke-ScanPython -m pip install --no-deps --no-build-isolation --editable .
             $tests = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot 'tests') -File | Where-Object {
                 $_.Name -like 'test_context_*.py' -or $_.Name -like 'test_scanning_*.py' -or
                 $_.Name -in @('test_weighted_context_cache.py', 'test_tabicl_cache_adapter.py')
