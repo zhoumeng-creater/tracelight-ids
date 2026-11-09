@@ -132,14 +132,28 @@ class FoundationModel:
         API probability rounding is retained. In particular, saturated 0/1
         probabilities are tied after clipping; this is not a native-logit score.
         """
+        return self.predict_outputs(x, batch_size=batch_size)["scores"]
+
+    def predict_outputs(self, x, batch_size=QUERY_BATCH_SIZE, *, diagnostics=False):
+        """Return unchanged API probabilities and the registered clipped log odds.
+
+        Probabilities are cast to float64 without clipping; ``scores`` retain
+        the existing clipping rule. Diagnostics never alter model state/rules.
+        """
+        if type(diagnostics) is not bool:
+            raise ValueError("diagnostics must be boolean")
         if type(batch_size) is not int or batch_size != QUERY_BATCH_SIZE:
             raise ValueError("registered foundation inference requires query batch_size=128")
         values = _numeric(x, width=self._support_x.shape[1], allow_empty=True)
         output = np.empty(len(values), dtype=np.float64)
+        raw_probabilities = np.empty((len(values), 2), dtype=np.float64)
+        probability_dtypes = set()
         with _runtime():
             for start in range(0, len(values), batch_size):
                 stop = min(start + batch_size, len(values))
-                probabilities = np.asarray(self.estimator.predict_proba(values[start:stop]), dtype=np.float64)
+                api_output = np.asarray(self.estimator.predict_proba(values[start:stop]))
+                probability_dtypes.add(str(api_output.dtype))
+                probabilities = np.asarray(api_output, dtype=np.float64)
                 if probabilities.shape != (stop - start, 2) or not np.isfinite(probabilities).all():
                     raise ValueError("foundation predict_proba returned invalid binary probabilities")
                 if (probabilities < 0).any() or (probabilities > 1).any():
@@ -147,8 +161,21 @@ class FoundationModel:
                 if not np.allclose(probabilities.sum(axis=1), 1.0, rtol=0, atol=2e-6):
                     raise ValueError("foundation probability rows do not sum to one")
                 p = np.clip(probabilities[:, 1], SCORE_EPSILON, 1.0 - SCORE_EPSILON)
+                raw_probabilities[start:stop] = probabilities
                 output[start:stop] = np.log(p) - np.log1p(-p)
-        return output
+        result = {"probabilities": raw_probabilities, "scores": output}
+        if diagnostics:
+            attack = raw_probabilities[:, 1]
+            result["diagnostics"] = {
+                "api_probability_dtypes": sorted(probability_dtypes),
+                "returned_probability_dtype": "float64", "returned_probabilities_are_clipped": False,
+                "score_clip_epsilon": SCORE_EPSILON, "rows": len(values),
+                "raw_attack_probability_zero": int((attack == 0).sum()),
+                "raw_attack_probability_one": int((attack == 1).sum()),
+                "attack_probability_clipped_low": int((attack < SCORE_EPSILON).sum()),
+                "attack_probability_clipped_high": int((attack > 1 - SCORE_EPSILON).sum()),
+            }
+        return result
 
     def save(self, path):
         """Save trusted support/recipe data; loading rebuilds the fitted model/cache."""
@@ -260,12 +287,18 @@ def fit_foundation(kind, x, y, *, checkpoint_path, seed, device, n_estimators):
     return FoundationModel(kind, estimator, metadata, values.copy(), truth)
 
 
-def load_foundation(path, *, checkpoint_path=None, device="cpu"):
+def load_foundation(path, *, checkpoint_path=None, device="cpu", preserve_build_device=False,
+                    diagnostics=False):
     """Load a trusted recipe, verify its external checkpoint, and rebuild.
 
     The caller must verify the registered SHA of this joblib artifact before
     loading it; joblib may execute code. The return metadata records reload cost.
+    By default rebuilding still uses ``device='cpu'``. Explicitly setting
+    ``preserve_build_device=True`` overrides ``device`` with the recipe's
+    original build device; scoring remains CPU in both cases.
     """
+    if type(preserve_build_device) is not bool or type(diagnostics) is not bool:
+        raise ValueError("preserve_build_device and diagnostics must be boolean")
     started = time.perf_counter()
     payload = joblib.load(path)
     if not isinstance(payload, dict) or payload.get("format") != _FORMAT:
@@ -276,8 +309,17 @@ def load_foundation(path, *, checkpoint_path=None, device="cpu"):
         raise FoundationUnavailable(payload["kind"], f"recipe requires external checkpoint: {checkpoint}")
     if _sha256(checkpoint) != metadata["checkpoint_sha256"]:
         raise ValueError("foundation recipe checkpoint SHA-256 mismatch")
+    build_device = metadata["build_device"] if preserve_build_device else device
     result = fit_foundation(payload["kind"], payload["support_x"], payload["support_y"],
-                            checkpoint_path=checkpoint, seed=metadata["seed"], device=device,
+                            checkpoint_path=checkpoint, seed=metadata["seed"], device=build_device,
                             n_estimators=metadata["requested_estimators"])
     result.metadata["load_including_rebuild_seconds"] = time.perf_counter() - started
+    if diagnostics:
+        result.metadata["rebuild_diagnostic"] = {
+            "recipe_sha256": _sha256(Path(path)), "recipe_build_device": metadata["build_device"],
+            "requested_device": str(device), "effective_build_device": str(build_device),
+            "preserve_build_device": preserve_build_device, "score_device": "cpu",
+            "recipe_seed": metadata["seed"], "recipe_requested_estimators": metadata["requested_estimators"],
+            "numpy_version": np.__version__,
+        }
     return result

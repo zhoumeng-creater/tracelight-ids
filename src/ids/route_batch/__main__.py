@@ -44,6 +44,33 @@ def main():
     pack.add_argument("--run-dir", required=True)
     pack.add_argument("--output", required=True)
     pack.add_argument("--include-models", action="store_true")
+    for name in ("followup-preflight", "followup"):
+        followup = commands.add_parser(name)
+        followup.add_argument("--original-run", required=True)
+        followup.add_argument("--output", required=True)
+        followup.add_argument("--tabpfn-python", required=True)
+        followup.add_argument("--tabpfn-checkpoint", required=True)
+        followup.add_argument("--preparation-report")
+        if name == "followup-preflight":
+            followup.add_argument("--report")
+        else:
+            followup.add_argument("--resume", action="store_true")
+    followup_worker = commands.add_parser("_followup-worker")
+    followup_worker.add_argument("--run-dir", required=True)
+    followup_worker.add_argument("--task", required=True)
+    followup_worker.add_argument("--output", required=True)
+    followup_pack = commands.add_parser("followup-pack")
+    followup_pack.add_argument("--run-dir", required=True)
+    followup_pack.add_argument("--output", required=True)
+    full_replay = commands.add_parser("_followup-full-replay")
+    full_replay.add_argument("--config", required=True)
+    full_replay.add_argument("--output", required=True)
+    replay = commands.add_parser("_replay-path-worker")
+    replay.add_argument("--original-run", required=True)
+    replay.add_argument("--task", required=True)
+    replay.add_argument("--output", required=True)
+    replay.add_argument("--build-path", choices=("original", "cpu"), required=True)
+    replay.add_argument("--checkpoint")
     args = parser.parse_args()
     if args.command == "register":
         from .protocol import register
@@ -52,6 +79,28 @@ def main():
     elif args.command == "_cost-worker":
         from .cost_worker import run_cost
         result = run_cost(args.config, args.output)
+    elif args.command == "_replay-path-worker":
+        from .replay import replay_path_worker
+        result = replay_path_worker(args.original_run, args.task, args.output,
+                                    build_path=args.build_path, checkpoint_path=args.checkpoint)
+    elif args.command == "_followup-full-replay":
+        from .deployment_replay import run
+        result = run(args.config, args.output)
+    elif args.command in {"followup-preflight", "followup", "_followup-worker", "followup-pack"}:
+        from . import followup
+        if args.command == "_followup-worker":
+            result = followup.worker(args.run_dir, args.task, args.output)
+        elif args.command == "followup-pack":
+            result = followup.pack(args.run_dir, args.output)
+        else:
+            options = {"tabpfn_python": args.tabpfn_python, "tabpfn_checkpoint": args.tabpfn_checkpoint,
+                       "preparation_report": args.preparation_report}
+            if args.command == "followup-preflight":
+                result = followup.preflight(args.original_run, args.output, **options)
+                if args.report:
+                    write_json(args.report, result)
+            else:
+                result = followup.run(args.original_run, args.output, resume=args.resume, **options)
     elif args.command == "confirm":
         from .confirm_runner import run_confirmation
         result = run_confirmation(args.run_dir, args.source_zip, args.round13_prepared,

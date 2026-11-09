@@ -103,6 +103,44 @@ def test_replay_mismatch_is_rejected(deployment, monkeypatch, column):
     with pytest.raises(ValueError, match="replay IDs or labels|reproduce saved evaluation scores"):
         run_cost(config, target)
     assert not (target / "cost.json").exists()
+    if column == "score":
+        diagnostic = json.loads((target / "replay_diagnostic.json").read_text(encoding="utf-8"))
+        assert diagnostic["mismatched_rows"] == 1
+        assert diagnostic["max_absolute_score_error"] == 1000
+        assert diagnostic["timing_allowed"] is False
+        assert len(pd.read_csv(target / "replay_scores.csv")) == 128
+
+
+def test_failed_replay_retains_threshold_decision_flips(deployment, monkeypatch):
+    config, target, schema, *_ = deployment
+    patch_tabm(monkeypatch, schema)
+    saved = pd.read_csv(target / "evaluation.csv")
+    saved.loc[0, "score"] = 1000
+    saved.to_csv(target / "evaluation.csv", index=False)
+    (target / "threshold.json").write_text('{"threshold":500}', encoding="utf-8")
+    with pytest.raises(ValueError, match="reproduce saved evaluation scores"):
+        run_cost(config, target)
+    diagnostic = json.loads((target / "replay_diagnostic.json").read_text(encoding="utf-8"))
+    assert diagnostic["decision_changed_rows"] == 1
+    row = pd.read_csv(target / "replay_scores.csv").iloc[0]
+    assert row["saved_threshold_decision"] and not row["replayed_threshold_decision"]
+    assert not (target / "cost.json").exists()
+
+
+def test_within_tolerance_threshold_flip_stops_cost(deployment, monkeypatch):
+    config, target, schema, *_ = deployment
+    patch_tabm(monkeypatch, schema)
+    saved = pd.read_csv(target / "evaluation.csv")
+    saved.loc[0, "score"] = -2e-5
+    saved.to_csv(target / "evaluation.csv", index=False)
+    (target / "threshold.json").write_text('{"threshold":-0.00001}', encoding="utf-8")
+    with pytest.raises(ValueError, match="reproduce saved evaluation scores"):
+        run_cost(config, target)
+    report = json.loads((target / "replay_diagnostic.json").read_text(encoding="utf-8"))
+    assert report["scores_within_tolerance"] and report["mismatched_rows"] == 0
+    assert report["decision_changed_rows"] == 1
+    assert report["status"] == "mismatch" and not report["timing_allowed"]
+    assert not (target / "cost.json").exists()
 
 
 @pytest.mark.parametrize("filename", ["model.pt", "preprocessing.joblib"])

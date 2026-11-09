@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**当前实验室入口（2026-11-09）：** [TabICL 重放诊断与 TabPFN 一次准备指南](docs/ROUTE_FOLLOWUP_LAB.md)，固定标签 `route-followup-lab-v1`。只运行两个 TabICL 诊断和一个 TabPFN 开发集补测；不重跑已完成的 TabM 或新通信组确认。统一脚本准备独立环境与固定权重，保存完整 C/E 冷重放、逐行差值、判决翻转和独立 CPU 成本；失败也保留报告并打包。旧 run 全部文件在运行前后核对 SHA，新结果写入独立目录。下方批次指南为历史执行记录。
+
 **当前实验室批次（2026-11-08）：** [一次完整运行指南](docs/ROUTE_BATCH_LAB_20261108.md)已准备，比较输入表示、监督训练、容量与学习率：24 条 TabM 轨迹、24 次全 P 重训，并列已有完整 KV／QCOC、官方 TabICL 1／8 视图与可选 TabPFN 2.5；冻结全部可用最终模型后自动进行新通信组确认。用户不设总时限，候选和轮数固定。135 项新增合成测试及 Ruff 通过，真实结果等待实验室运行。当前以[批次设计](docs/ROUTE_BATCH_DESIGN_20261108.md)为准，下方历史记录保留。
 
 **实验室执行（2026-11-08）：** [Scanning标签粒度三臂指南](docs/SCANNING_LABEL_LAB_V1.md)已接通。使用冻结标签`scanning-label-lab-v1`，依次执行`RUN_SCANNING_LABEL.ps1`的Preflight、Run、Verify、Pack；复用第十四轮数据、预处理器和权重，只比较T0二分类、TF真实扫描三类、TP整组伪三类。二分类兼容、多类冷加载和三臂逐位复现已做合成验收，真实对照留在实验室。回传本轮ZIP与SHA，完整命令见指南；下述“待接入”为前一阶段状态。

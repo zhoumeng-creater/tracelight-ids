@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "stage": "complete",
+  "repo_id": "Prior-Labs/tabpfn_2_5",
+  "revision": "6c45f3a6d0d07c6c5f62572e04a0c2929de91b8b",
+  "checkpoint_url": "https://huggingface.co/Prior-Labs/tabpfn_2_5/resolve/6c45f3a6d0d07c6c5f62572e04a0c2929de91b8b/tabpfn-v2.5-classifier-v2.5_default.ckpt",
+  "license_url": "https://huggingface.co/Prior-Labs/tabpfn_2_5/resolve/6c45f3a6d0d07c6c5f62572e04a0c2929de91b8b/LICENSE",
+  "license_sha256": "ac1d23429431a622b91c73db741868e69a0140d401ebb20b9e869a835e036e28",
+  "account_license_acceptance_claimed": false,
+  "real_model_loads": 0,
+  "hub_access": {
+    "id": "Prior-Labs/tabpfn_2_5",
+    "sha": "6c45f3a6d0d07c6c5f62572e04a0c2929de91b8b",
+    "private": false,
+    "gated": false
+  },
+  "license_file": {
+    "bytes": 16905,
+    "sha256": "ac1d23429431a622b91c73db741868e69a0140d401ebb20b9e869a835e036e28"
+  },
+  "download": "downloaded",
+  "checkpoint": {
+    "bytes": 42935499,
+    "sha256": "5d7170e2d3af01f9c501bb09ec3bd12e9944f8604de18002c647873c6ec04a12"
+  }
+}

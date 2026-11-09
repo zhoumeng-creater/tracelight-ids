@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-09",
+  "release_tag": "route-followup-lab-v1",
+  "status": "local_synthetic_validation_passed_real_lab_run_pending",
+  "source_sha256": "9ed2533934071392f38a8e6c054d1cd17c58a5b3aa6d9f0a8f85e0e597f56bad",
+  "source_files": 83,
+  "pytest": {
+    "tests": 244,
+    "passed": 244,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 145.094,
+    "junit": "synthetic-tests.xml",
+    "junit_sha256": "5aa7d15102d74d48bdec336737df393653352868e102b5080d22a772103ec30d",
+    "test_files": {
+      "tests/test_route_batch_benchmark.py": "3f30101235d7a9fdb0ef3236de277bc45db2812c2261091a80d4214079207a9e",
+      "tests/test_route_batch_confirm_runner.py": "6281254c413d640e873e53bb49842b0ea2288b43359e057d1c082b7a72e4b757",
+      "tests/test_route_batch_confirmation.py": "98da2662bd73ee9a56c73eca7741297c8bc51cd14ed4922e20b96d075dc602e2",
+      "tests/test_route_batch_cost_worker.py": "a15b9f3f9f195660ad1b8625a71cdaf32808f48657b1b1acf1bf8bc79a4e7c22",
+      "tests/test_route_batch_data.py": "0c3d5329abf33d105396e8ef8838148eb4310354df0f283ff8234837264e7ef6",
+      "tests/test_route_batch_deployment_replay.py": "a932c1ab4d907e0f00f3ae41ba932f7bcf2211821c4812015d1a4a0e99bb2f76",
+      "tests/test_route_batch_followup.py": "d034180fea9d21d7cac1889ea412ae74bd92c9e4f36934338cb050ce4e95d569",
+      "tests/test_route_batch_followup_cli.py": "07f5dec3c44f3192f0c04ca9c45c2288c81392209ea35803d2a09bb103546053",
+      "tests/test_route_batch_followup_powershell.py": "ec41810081de19e96342effd3701f0df634ce76956eb534d8bab01976a7d3e54",
+      "tests/test_route_batch_foundation.py": "443cd65ce5997ec4e1121d3b0a8fa6a9cce025579788561634f5ac31834fc958",
+      "tests/test_route_batch_metrics.py": "3c284954c9a78b8212a40c406e46a0f0e358bc182ae191696cd31e5b2313c924",
+      "tests/test_route_batch_powershell.py": "576252a5478f0a89d2b2ea2252f6f855339497fb9258139bb045dd84c3d8e283",
+      "tests/test_route_batch_preprocessing.py": "c3102fc4dc8fd453b3cdbc30b8052574fa33a7a5837ed13cbdc7d5ea6959d368",
+      "tests/test_route_batch_replay.py": "14c155b0869e24de939b6ac2ed1f299ca81dec915d0dd847d3dad51a4cad9e03",
+      "tests/test_route_batch_runner.py": "49c95fe1874f138493ce2e1a91b97691afeb62236990aef471b66b3afc271dd1",
+      "tests/test_route_batch_setup.py": "11a97dbf602a8ef3e2d0000663d90fa17d25ddbe91991f2028d72f7af50a6e94",
+      "tests/test_route_batch_tabm.py": "5470e4e78a54c394810cca634c304ca638effb9ecc003ae290fa7ae880b268f8",
+      "tests/test_route_batch_tabpfn_prepare.py": "3e24acfe78b42e8f440f86ff67a0369aa3b38c1ba9033b26cfa1007a6660341b",
+      "tests/test_route_batch_tabpfn_prepare_powershell.py": "7cc0d82f560da9dfcdeede076c62583ce20cf5301133d83fb039cc3537d9ce6b"
+    }
+  },
+  "ruff": "passed",
+  "git_diff_check": "passed",
+  "source_unchanged_during_final_suite": true,
+  "real_pretrained_model_loads": 0,
+  "real_tabm_experiment_runs": 0,
+  "tabpfn_weight_download": {
+    "status": "ready",
+    "bytes": 42935499,
+    "sha256": "5d7170e2d3af01f9c501bb09ec3bd12e9944f8604de18002c647873c6ec04a12",
+    "report": "checkpoint-download-validation.json",
+    "deserialized": false
+  },
+  "validated_paths": [
+    "original C then E before probes",
+    "one/eight-view random tiny official TabICL via actual child processes",
+    "complete C/E cold replay before independent CPU cost worker",
+    "score-tolerant decision flips rejected",
+    "TabPFN missing preparation does not block TabICL",
+    "resume skips complete tasks",
+    "original TabM and confirmation sentinels unchanged",
+    "Windows PowerShell 5.1 and pwsh wrappers",
+    "partial result archive verified by member hashes"
+  ],
+  "laboratory_entry": "scripts/RUN_ROUTE_FOLLOWUP.ps1",
+  "scripts": {
+    "scripts/PREPARE_ROUTE_TABPFN.ps1": "41a44723bdea727ead0147e56f482fc8954c97255b936e4277159a1b7929b0e6",
+    "scripts/RUN_ROUTE_FOLLOWUP.ps1": "854600ee43b9fe370e799e9abf72d03096d7faeae36ea6fcef78888c180a037e"
+  }
+}

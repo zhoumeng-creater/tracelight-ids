@@ -64,7 +64,7 @@ def _load_deployment(directory, descriptor, schema, query_batch_size):
     elif kind == "foundation":
         from .foundation import load_foundation
         model_path = _verified_file(directory, descriptor, "model_file", "model_sha256")
-        model = load_foundation(model_path, device="cpu")
+        model = load_foundation(model_path, device=descriptor.get("rebuild_device", "cpu"))
         checkpoint_path = Path(model.metadata["checkpoint_path"])
         # The loader checks its hash; count the required file itself, not a cached size.
         sizes = _file_sizes([*common, model_path, checkpoint_path])
@@ -95,6 +95,52 @@ def _load_deployment(directory, descriptor, schema, query_batch_size):
         return result
 
     return checked, sizes, storage
+
+
+def _record_replay(directory, saved, actual, descriptor):
+    """Persist row-level evidence before a failed score check can abort timing."""
+    expected = saved["score"].to_numpy(dtype=np.float64)
+    actual = np.asarray(actual, dtype=np.float64)
+    absolute = np.abs(actual - expected)
+    allowed = 3e-5 + 3e-5 * np.abs(expected)
+    close = absolute <= allowed
+    registration = read_json(directory / "threshold.json")
+    rows = saved[["row_id", "label"]].copy()
+    rows["saved_score"] = expected
+    rows["replayed_score"] = actual
+    rows["signed_error"] = actual - expected
+    rows["absolute_error"] = absolute
+    rows["allowed_error"] = allowed
+    rows["within_tolerance"] = close
+    threshold_available = "threshold" in registration
+    flips = None
+    if threshold_available:
+        value = registration["threshold"]
+        old = np.zeros(len(rows), dtype=bool) if value is None else expected > value
+        new = np.zeros(len(rows), dtype=bool) if value is None else actual > value
+        rows["saved_threshold_decision"] = old
+        rows["replayed_threshold_decision"] = new
+        rows["decision_changed"] = old != new
+        flips = int((old != new).sum())
+    csv_path = directory / "replay_scores.csv"
+    rows.to_csv(csv_path, index=False)
+    accepted = bool(close.all()) and (flips is None or flips == 0)
+    diagnostic = {
+        "status": "matched" if accepted else "mismatch",
+        "rows": len(rows), "ids_and_labels_match": True,
+        "atol": 3e-5, "rtol": 3e-5, "reference_for_relative_tolerance": "saved_score",
+        "mismatched_rows": int((~close).sum()),
+        "max_absolute_score_error": float(absolute.max()),
+        "mean_absolute_score_error": float(absolute.mean()),
+        "threshold_available": threshold_available, "decision_changed_rows": flips,
+        "score_contract": descriptor.get("score_contract"),
+        "rebuild_device": descriptor.get("rebuild_device", "cpu"),
+        "score_device": "cpu", "timing_allowed": accepted,
+        "scores_within_tolerance": bool(close.all()),
+        "row_evidence": {"path": "replay_scores.csv", "sha256": sha256_file(csv_path)},
+    }
+    write_json(directory / "replay_diagnostic.json", diagnostic)
+    return diagnostic
 
 
 def run_cost(config_path, deployment_dir) -> dict:
@@ -146,8 +192,10 @@ def run_cost(config_path, deployment_dir) -> dict:
             if torch.get_num_threads() != 1:
                 raise ValueError("loaded deployment changed the single-thread cost contract")
             replay = predict(frame.iloc[:replay_rows].loc[:, list(schema.features)])
-            if not np.allclose(replay, expected_scores, atol=3e-5, rtol=3e-5):
-                raise ValueError("cost deployment does not reproduce saved evaluation scores")
+            replay_diagnostic = _record_replay(directory, saved, replay, descriptor)
+            if not replay_diagnostic["timing_allowed"]:
+                raise ValueError("cost deployment does not reproduce saved evaluation scores; "
+                                 "row differences and decisions saved in replay_diagnostic.json/replay_scores.csv")
             selected = np.linspace(0, len(frame) - 1, min(512, len(frame)), dtype=int)
             feature_sample = frame.iloc[selected].loc[:, list(schema.features)].copy()
             cost = benchmark_predictor(predict, feature_sample, batch_size=settings["query_batch_size"],
@@ -173,8 +221,8 @@ def run_cost(config_path, deployment_dir) -> dict:
         "cold_model_load_measured": True,
         "required_deployment_file_bytes": sum(sizes.values()),
         "deployment_files": sizes, "deployment_storage": storage,
-        "replay": {"rows": replay_rows, "ids_and_labels_match": True, "atol": 3e-5, "rtol": 3e-5,
-                   "max_absolute_score_error": float(np.max(np.abs(replay - expected_scores)))},
+        "replay": replay_diagnostic,
+        "rebuild_device": descriptor.get("rebuild_device", "cpu"),
         "benchmark_evaluation_row_indices": selected.tolist(),
         "csv_to_scores": {"rows": len(feature_sample), "seconds": durations,
                           "scope": "disk CSV parse + preprocessing + CPU scores; warm model; excludes UI/export",
