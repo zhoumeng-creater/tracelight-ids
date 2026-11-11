@@ -1,0 +1,989 @@
+{
+  "source": "forward-threshold-results-20261111T153339544399Z.zip",
+  "sha256": "9a6abd421aa0a08ca5ee02b0c86f5243fe34e057cf4b52fd3f5898e03eaabfe8",
+  "cut_rule": "ceil(0.99*(n+1)), strict >",
+  "manifest_entries_verified": 50,
+  "fixed": {
+    "raw": {
+      "rank": 1809,
+      "cut": 0.969384090147706,
+      "n": 1826,
+      "strictly_above": 7
+    },
+    "history": {
+      "rank": 1809,
+      "cut": 4.574562542124803,
+      "n": 1826,
+      "strictly_above": 17
+    }
+  },
+  "scenarios": {
+    "CTU-IoT-Malware-Capture-34-1": {
+      "rows": 23145,
+      "normal_denominator": 1923,
+      "max_false_alerts": 19,
+      "policy_and_contamination_checks": {
+        "raw": {
+          "fixed": {
+            "blocks": 97,
+            "by_status": {
+              "fixed": 97
+            },
+            "alerts": 22,
+            "rows_verified": 23145,
+            "rows_on_updated_cut": 0,
+            "max_reference": null,
+            "families_on_updated_cut": {},
+            "first_active_ms": null,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          },
+          "unlabeled": {
+            "blocks": 97,
+            "by_status": {
+              "insufficient_reference": 86,
+              "updated": 11
+            },
+            "alerts": 22,
+            "rows_verified": 23145,
+            "rows_on_updated_cut": 1856,
+            "max_reference": 14648,
+            "families_on_updated_cut": {
+              "Benign": 287,
+              "C&C": 1569,
+              "OtherAttack": 0,
+              "Scanning": 0
+            },
+            "first_active_ms": 1545411600000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": [
+              0.7321755027422303,
+              0.8410404624277457,
+              0.9982250136537412
+            ]
+          },
+          "recent_normal": {
+            "blocks": 97,
+            "by_status": {
+              "insufficient_reference": 30,
+              "updated": 67
+            },
+            "alerts": 22,
+            "rows_verified": 23145,
+            "rows_on_updated_cut": 18581,
+            "max_reference": 1902,
+            "families_on_updated_cut": {
+              "Benign": 898,
+              "C&C": 3288,
+              "OtherAttack": 14394,
+              "Scanning": 1
+            },
+            "first_active_ms": 1545430500000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          }
+        },
+        "history": {
+          "fixed": {
+            "blocks": 97,
+            "by_status": {
+              "fixed": 97
+            },
+            "alerts": 3,
+            "rows_verified": 23145,
+            "rows_on_updated_cut": 0,
+            "max_reference": null,
+            "families_on_updated_cut": {},
+            "first_active_ms": null,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          },
+          "unlabeled": {
+            "blocks": 97,
+            "by_status": {
+              "insufficient_reference": 86,
+              "updated": 11
+            },
+            "alerts": 38,
+            "rows_verified": 23145,
+            "rows_on_updated_cut": 1856,
+            "max_reference": 14648,
+            "families_on_updated_cut": {
+              "Benign": 287,
+              "C&C": 1569,
+              "OtherAttack": 0,
+              "Scanning": 0
+            },
+            "first_active_ms": 1545411600000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": [
+              0.7321755027422303,
+              0.8410404624277457,
+              0.9982250136537412
+            ]
+          },
+          "recent_normal": {
+            "blocks": 97,
+            "by_status": {
+              "insufficient_reference": 30,
+              "updated": 67
+            },
+            "alerts": 9,
+            "rows_verified": 23145,
+            "rows_on_updated_cut": 18581,
+            "max_reference": 1902,
+            "families_on_updated_cut": {
+              "Benign": 898,
+              "C&C": 3288,
+              "OtherAttack": 14394,
+              "Scanning": 1
+            },
+            "first_active_ms": 1545430500000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          }
+        }
+      },
+      "paired": {
+        "raw_vs_history_fixed": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 22,
+              "candidate": 3,
+              "added": 1,
+              "lost": 20,
+              "net": -19
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "raw_vs_history_unlabeled": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 22,
+              "candidate": 3,
+              "added": 1,
+              "lost": 20,
+              "net": -19
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 35,
+              "added": 35,
+              "lost": 0,
+              "net": 35
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 35,
+              "added": 35,
+              "lost": 0,
+              "net": 35
+            }
+          }
+        },
+        "raw_vs_history_recent_normal": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 22,
+              "candidate": 4,
+              "added": 2,
+              "lost": 20,
+              "net": -18
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 5,
+              "added": 5,
+              "lost": 0,
+              "net": 5
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 5,
+              "added": 5,
+              "lost": 0,
+              "net": 5
+            }
+          }
+        },
+        "raw_fixed_vs_unlabeled": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": false,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 22,
+              "candidate": 22,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "history_fixed_vs_unlabeled": {
+          "base_within_1pct": true,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 3,
+              "candidate": 3,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 35,
+              "added": 35,
+              "lost": 0,
+              "net": 35
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 35,
+              "added": 35,
+              "lost": 0,
+              "net": 35
+            }
+          }
+        },
+        "raw_fixed_vs_recent_normal": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": false,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 22,
+              "candidate": 22,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "history_fixed_vs_recent_normal": {
+          "base_within_1pct": true,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 1923,
+              "baseline": 3,
+              "candidate": 4,
+              "added": 1,
+              "lost": 0,
+              "net": 1
+            },
+            "C&C": {
+              "rows": 6706,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "baseline": 0,
+              "candidate": 5,
+              "added": 5,
+              "lost": 0,
+              "net": 5
+            },
+            "Scanning": {
+              "rows": 122,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "all_attacks": {
+              "rows": 21222,
+              "baseline": 0,
+              "candidate": 5,
+              "added": 5,
+              "lost": 0,
+              "net": 5
+            }
+          }
+        }
+      },
+      "score_decision_checks": 138870
+    },
+    "CTU-IoT-Malware-Capture-49-1": {
+      "rows": 5410561,
+      "normal_denominator": 3665,
+      "max_false_alerts": 36,
+      "policy_and_contamination_checks": {
+        "raw": {
+          "fixed": {
+            "blocks": 30,
+            "by_status": {
+              "fixed": 30
+            },
+            "alerts": 5406787,
+            "rows_verified": 5410561,
+            "rows_on_updated_cut": 0,
+            "max_reference": null,
+            "families_on_updated_cut": {},
+            "first_active_ms": null,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          },
+          "unlabeled": {
+            "blocks": 30,
+            "by_status": {
+              "insufficient_reference": 1,
+              "updated": 29
+            },
+            "alerts": 112960,
+            "rows_verified": 5410561,
+            "rows_on_updated_cut": 5297559,
+            "max_reference": 739328,
+            "families_on_updated_cut": {
+              "Benign": 3586,
+              "C&C": 1881,
+              "Mixed": 1,
+              "OtherAttack": 0,
+              "Scanning": 5292091
+            },
+            "first_active_ms": 1551384000000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": [
+              0.9992307869401706,
+              0.9993232363788386,
+              0.9994015138179898
+            ]
+          },
+          "recent_normal": {
+            "blocks": 30,
+            "by_status": {
+              "insufficient_reference": 10,
+              "updated": 20
+            },
+            "alerts": 1773928,
+            "rows_verified": 5410561,
+            "rows_on_updated_cut": 3635434,
+            "max_reference": 3491,
+            "families_on_updated_cut": {
+              "Benign": 2436,
+              "C&C": 1292,
+              "Mixed": 1,
+              "OtherAttack": 0,
+              "Scanning": 3631705
+            },
+            "first_active_ms": 1551392100000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          }
+        },
+        "history": {
+          "fixed": {
+            "blocks": 30,
+            "by_status": {
+              "fixed": 30
+            },
+            "alerts": 833,
+            "rows_verified": 5410561,
+            "rows_on_updated_cut": 0,
+            "max_reference": null,
+            "families_on_updated_cut": {},
+            "first_active_ms": null,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          },
+          "unlabeled": {
+            "blocks": 30,
+            "by_status": {
+              "insufficient_reference": 1,
+              "updated": 29
+            },
+            "alerts": 17549,
+            "rows_verified": 5410561,
+            "rows_on_updated_cut": 5297559,
+            "max_reference": 739328,
+            "families_on_updated_cut": {
+              "Benign": 3586,
+              "C&C": 1881,
+              "Mixed": 1,
+              "OtherAttack": 0,
+              "Scanning": 5292091
+            },
+            "first_active_ms": 1551384000000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": [
+              0.9992307869401706,
+              0.9993232363788386,
+              0.9994015138179898
+            ]
+          },
+          "recent_normal": {
+            "blocks": 30,
+            "by_status": {
+              "insufficient_reference": 10,
+              "updated": 20
+            },
+            "alerts": 837,
+            "rows_verified": 5410561,
+            "rows_on_updated_cut": 3635434,
+            "max_reference": 3491,
+            "families_on_updated_cut": {
+              "Benign": 2436,
+              "C&C": 1292,
+              "Mixed": 1,
+              "OtherAttack": 0,
+              "Scanning": 3631705
+            },
+            "first_active_ms": 1551392100000,
+            "active_unlabeled_reference_attack_fraction_min_median_max": null
+          }
+        }
+      },
+      "paired": {
+        "raw_vs_history_fixed": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 1836,
+              "candidate": 13,
+              "added": 1,
+              "lost": 1824,
+              "net": -1823
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 5404950,
+              "candidate": 819,
+              "added": 8,
+              "lost": 5404139,
+              "net": -5404131
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 5404951,
+              "candidate": 820,
+              "added": 8,
+              "lost": 5404139,
+              "net": -5404131
+            }
+          }
+        },
+        "raw_vs_history_unlabeled": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": false,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 50,
+              "candidate": 497,
+              "added": 490,
+              "lost": 43,
+              "net": 447
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 112909,
+              "candidate": 17051,
+              "added": 16268,
+              "lost": 112126,
+              "net": -95858
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 112910,
+              "candidate": 17052,
+              "added": 16268,
+              "lost": 112126,
+              "net": -95858
+            }
+          }
+        },
+        "raw_vs_history_recent_normal": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 648,
+              "candidate": 14,
+              "added": 5,
+              "lost": 639,
+              "net": -634
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 1773279,
+              "candidate": 822,
+              "added": 31,
+              "lost": 1772488,
+              "net": -1772457
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 1773280,
+              "candidate": 823,
+              "added": 31,
+              "lost": 1772488,
+              "net": -1772457
+            }
+          }
+        },
+        "raw_fixed_vs_unlabeled": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": false,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 1836,
+              "candidate": 50,
+              "added": 0,
+              "lost": 1786,
+              "net": -1786
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 5404950,
+              "candidate": 112909,
+              "added": 0,
+              "lost": 5292041,
+              "net": -5292041
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 5404951,
+              "candidate": 112910,
+              "added": 0,
+              "lost": 5292041,
+              "net": -5292041
+            }
+          }
+        },
+        "history_fixed_vs_unlabeled": {
+          "base_within_1pct": true,
+          "candidate_within_1pct": false,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 13,
+              "candidate": 497,
+              "added": 484,
+              "lost": 0,
+              "net": 484
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 819,
+              "candidate": 17051,
+              "added": 16232,
+              "lost": 0,
+              "net": 16232
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 820,
+              "candidate": 17052,
+              "added": 16232,
+              "lost": 0,
+              "net": 16232
+            }
+          }
+        },
+        "raw_fixed_vs_recent_normal": {
+          "base_within_1pct": false,
+          "candidate_within_1pct": false,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 1836,
+              "candidate": 648,
+              "added": 0,
+              "lost": 1188,
+              "net": -1188
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 5404950,
+              "candidate": 1773279,
+              "added": 0,
+              "lost": 3631671,
+              "net": -3631671
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 5404951,
+              "candidate": 1773280,
+              "added": 0,
+              "lost": 3631671,
+              "net": -3631671
+            }
+          }
+        },
+        "history_fixed_vs_recent_normal": {
+          "base_within_1pct": true,
+          "candidate_within_1pct": true,
+          "nonvacuous_joint_success": false,
+          "groups": {
+            "normal": {
+              "rows": 3665,
+              "baseline": 13,
+              "candidate": 14,
+              "added": 1,
+              "lost": 0,
+              "net": 1
+            },
+            "C&C": {
+              "rows": 1922,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Mixed": {
+              "rows": 1,
+              "baseline": 0,
+              "candidate": 0,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14,
+              "baseline": 1,
+              "candidate": 1,
+              "added": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 5404959,
+              "baseline": 819,
+              "candidate": 822,
+              "added": 3,
+              "lost": 0,
+              "net": 3
+            },
+            "all_attacks": {
+              "rows": 5406896,
+              "baseline": 820,
+              "candidate": 823,
+              "added": 3,
+              "lost": 0,
+              "net": 3
+            }
+          }
+        }
+      },
+      "score_decision_checks": 32463366
+    }
+  },
+  "total_score_decision_checks": 32602236
+}
