@@ -1,0 +1,84 @@
+{
+  "34": {
+    "unlabeled": {
+      "max_reference": 14648,
+      "nonempty_decision_blocks": 97,
+      "n_with_1000": 11,
+      "rows_decided_with_1000": 1856,
+      "rows": 23145,
+      "n_with_100": 61,
+      "rows_decided_with_100": 21949,
+      "active_decision_families": {
+        "C&C": 1569,
+        "Benign": 287
+      }
+    },
+    "simulated_15m_normal_confirmation": {
+      "max_reference": 293,
+      "nonempty_decision_blocks": 97,
+      "n_with_1000": 0,
+      "rows_decided_with_1000": 0,
+      "rows": 23145,
+      "n_with_100": 20,
+      "rows_decided_with_100": 3346,
+      "active_decision_families": {}
+    },
+    "simulated_15m_normal_confirmation_max_24h": {
+      "max_reference": 1902,
+      "nonempty_decision_blocks": 97,
+      "n_with_1000": 67,
+      "rows_decided_with_1000": 18581,
+      "rows": 23145,
+      "n_with_100": 94,
+      "rows_decided_with_100": 22621,
+      "active_decision_families": {
+        "Benign": 898,
+        "C&C": 3288,
+        "PartOfAHorizontalPortScan": 1,
+        "DDoS": 14394
+      }
+    }
+  },
+  "49": {
+    "unlabeled": {
+      "max_reference": 739328,
+      "nonempty_decision_blocks": 30,
+      "n_with_1000": 29,
+      "rows_decided_with_1000": 5297559,
+      "rows": 5410561,
+      "n_with_100": 29,
+      "rows_decided_with_100": 5297559,
+      "active_decision_families": {
+        "PartOfAHorizontalPortScan": 5292091,
+        "Benign": 3586,
+        "C&C": 1881,
+        "C&C-FileDownload": 1
+      }
+    },
+    "simulated_15m_normal_confirmation": {
+      "max_reference": 568,
+      "nonempty_decision_blocks": 30,
+      "n_with_1000": 0,
+      "rows_decided_with_1000": 0,
+      "rows": 5410561,
+      "n_with_100": 27,
+      "rows_decided_with_100": 4927379,
+      "active_decision_families": {}
+    },
+    "simulated_15m_normal_confirmation_max_24h": {
+      "max_reference": 3491,
+      "nonempty_decision_blocks": 30,
+      "n_with_1000": 20,
+      "rows_decided_with_1000": 3635434,
+      "rows": 5410561,
+      "n_with_100": 27,
+      "rows_decided_with_100": 4927379,
+      "active_decision_families": {
+        "PartOfAHorizontalPortScan": 3631705,
+        "Benign": 2436,
+        "C&C": 1292,
+        "C&C-FileDownload": 1
+      }
+    }
+  }
+}

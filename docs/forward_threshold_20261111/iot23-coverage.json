@@ -1,0 +1,227 @@
+{
+  "time_rule": "flow end = ts + duration in integer microseconds; Zeek '-' duration uses ts as flow observation proxy.",
+  "source_scope": "all author log lines, unchanged labels including other/multi-action attacks",
+  "new_scores_read": 0,
+  "new_fits": 0,
+  "captures": [
+    {
+      "capture": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "rows": 1008748,
+      "source_sha256": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+      "source_first_start_us": 1525879831015073,
+      "first_completed_us": 1525879831015073,
+      "last_completed_us": 1526282683030512,
+      "first_completed_utc": "2018-05-09T15:30:31.015073+00:00",
+      "last_completed_utc": "2018-05-14T07:24:43.030512+00:00",
+      "field_count": {
+        "23": 1008748
+      },
+      "labels": {
+        "malicious/PartOfAHorizontalPortScan": 539465,
+        "benign/-": 469275,
+        "malicious/C&C": 8
+      },
+      "missing_duration_by_label": {
+        "malicious/PartOfAHorizontalPortScan": 350174,
+        "benign/-": 446118,
+        "malicious/C&C": 8
+      },
+      "daily_labels_utc": {
+        "2018-05-09": {
+          "malicious/PartOfAHorizontalPortScan": 45287,
+          "benign/-": 36834
+        },
+        "2018-05-10": {
+          "malicious/PartOfAHorizontalPortScan": 122765,
+          "benign/-": 104113,
+          "malicious/C&C": 3
+        },
+        "2018-05-11": {
+          "benign/-": 103512,
+          "malicious/PartOfAHorizontalPortScan": 123369,
+          "malicious/C&C": 4
+        },
+        "2018-05-12": {
+          "malicious/PartOfAHorizontalPortScan": 110698,
+          "benign/-": 99721
+        },
+        "2018-05-13": {
+          "benign/-": 95623,
+          "malicious/PartOfAHorizontalPortScan": 104900,
+          "malicious/C&C": 1
+        },
+        "2018-05-14": {
+          "malicious/PartOfAHorizontalPortScan": 32446,
+          "benign/-": 29472
+        }
+      }
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-8-1",
+      "role": "P",
+      "rows": 10403,
+      "source_sha256": "4877ca8f0f01902fbd18d28b7d06cb3d0be082355b7f2c8862c9deef1782eb8a",
+      "source_first_start_us": 1533042911474174,
+      "first_completed_us": 1533042911479664,
+      "last_completed_us": 1533129306734905,
+      "first_completed_utc": "2018-07-31T13:15:11.479664+00:00",
+      "last_completed_utc": "2018-08-01T13:15:06.734905+00:00",
+      "field_count": {
+        "23": 10403
+      },
+      "labels": {
+        "benign/-": 2181,
+        "malicious/C&C": 8222
+      },
+      "missing_duration_by_label": {
+        "benign/-": 19,
+        "malicious/C&C": 6166
+      },
+      "daily_labels_utc": {
+        "2018-07-31": {
+          "benign/-": 1017,
+          "malicious/C&C": 3454
+        },
+        "2018-08-01": {
+          "malicious/C&C": 4768,
+          "benign/-": 1164
+        }
+      }
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-5-1",
+      "role": "C",
+      "rows": 1374,
+      "source_sha256": "f36db06e7d6ba7364e932a5b003f75835e004b320d70019e8a2f0ba8685d9262",
+      "source_first_start_us": 1537522822965530,
+      "first_completed_us": 1537522831287918,
+      "last_completed_us": 1537542574600219,
+      "first_completed_utc": "2018-09-21T09:40:31.287918+00:00",
+      "last_completed_utc": "2018-09-21T15:09:34.600219+00:00",
+      "field_count": {
+        "23": 1374
+      },
+      "labels": {
+        "benign/-": 1374
+      },
+      "missing_duration_by_label": {
+        "benign/-": 298
+      },
+      "daily_labels_utc": {
+        "2018-09-21": {
+          "benign/-": 1374
+        }
+      }
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-4-1",
+      "role": "C",
+      "rows": 452,
+      "source_sha256": "aebe40ea0e03b120265a5c7bc140dd9b0d3fe2fce65559e84776b7dd5360e71e",
+      "source_first_start_us": 1540469197400159,
+      "first_completed_us": 1540469302652824,
+      "last_completed_us": 1540548038806853,
+      "first_completed_utc": "2018-10-25T12:08:22.652824+00:00",
+      "last_completed_utc": "2018-10-26T10:00:38.806853+00:00",
+      "field_count": {
+        "23": 452
+      },
+      "labels": {
+        "benign/-": 452
+      },
+      "missing_duration_by_label": {
+        "benign/-": 1
+      },
+      "daily_labels_utc": {
+        "2018-10-25": {
+          "benign/-": 242
+        },
+        "2018-10-26": {
+          "benign/-": 210
+        }
+      }
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-34-1",
+      "role": "E1",
+      "rows": 23145,
+      "source_sha256": "d69e49b2aae8c1bd33286936531658202dec47d989f0439bad3f8be180467a6e",
+      "source_first_start_us": 1545403816870900,
+      "first_completed_us": 1545403820101305,
+      "last_completed_us": 1545490213942227,
+      "first_completed_utc": "2018-12-21T14:50:20.101305+00:00",
+      "last_completed_utc": "2018-12-22T14:50:13.942227+00:00",
+      "field_count": {
+        "23": 23145
+      },
+      "labels": {
+        "benign/-": 1923,
+        "malicious/C&C": 6706,
+        "malicious/PartOfAHorizontalPortScan": 122,
+        "malicious/DDoS": 14394
+      },
+      "missing_duration_by_label": {
+        "benign/-": 920,
+        "malicious/C&C": 2412,
+        "malicious/PartOfAHorizontalPortScan": 111,
+        "malicious/DDoS": 14381
+      },
+      "daily_labels_utc": {
+        "2018-12-21": {
+          "benign/-": 1152,
+          "malicious/C&C": 3418,
+          "malicious/PartOfAHorizontalPortScan": 121
+        },
+        "2018-12-22": {
+          "benign/-": 771,
+          "malicious/C&C": 3288,
+          "malicious/PartOfAHorizontalPortScan": 1,
+          "malicious/DDoS": 14394
+        }
+      }
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-49-1",
+      "role": "E2",
+      "rows": 5410561,
+      "source_sha256": "12e12cd6d01cb0f2b5330c217069ab4de103aa2044a97dd60d8af5f0d3cfa54f",
+      "source_first_start_us": 1551383430865908,
+      "first_completed_us": 1551383433016670,
+      "last_completed_us": 1551409817668471,
+      "first_completed_utc": "2019-02-28T19:50:33.016670+00:00",
+      "last_completed_utc": "2019-03-01T03:10:17.668471+00:00",
+      "field_count": {
+        "23": 5410561
+      },
+      "labels": {
+        "malicious/FileDownload": 14,
+        "benign/-": 3665,
+        "malicious/PartOfAHorizontalPortScan": 5404959,
+        "malicious/C&C": 1922,
+        "malicious/C&C-FileDownload": 1
+      },
+      "missing_duration_by_label": {
+        "malicious/FileDownload": 0,
+        "benign/-": 0,
+        "malicious/PartOfAHorizontalPortScan": 1,
+        "malicious/C&C": 0,
+        "malicious/C&C-FileDownload": 0
+      },
+      "daily_labels_utc": {
+        "2019-02-28": {
+          "malicious/FileDownload": 14,
+          "benign/-": 2124,
+          "malicious/PartOfAHorizontalPortScan": 3064662,
+          "malicious/C&C": 1099
+        },
+        "2019-03-01": {
+          "malicious/PartOfAHorizontalPortScan": 2340297,
+          "malicious/C&C": 823,
+          "benign/-": 1541,
+          "malicious/C&C-FileDownload": 1
+        }
+      }
+    }
+  ]
+}

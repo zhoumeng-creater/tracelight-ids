@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十一轮前向阈值复验**　[实验入口与判读条件](docs/FORWARD_THRESHOLD_LAB.md)。复核 CIC2018 校准高分的来源，在 IoT-23 的两个后续场景比较固定阈值、只用过去无标签分数的阈值，以及延迟正常反馈。固定版本为 `forward-threshold-lab-v1`。
+
 **第二十轮实验室入口（2026-11-11）**　[CIC2018 独立采集复验](docs/INDEPENDENT_CAPTURE_LAB.md)。在同一批已核对标签的记录上比较原 48 字段 HGB 与加入四项 60 秒历史的 HGB，同时测扫描、未见 Bot、正常误报与逐流成本。固定标签为 `independent-capture-lab-v1`。
 
 **第十九轮实验室入口（2026-11-11）**　[过去 60 秒的流行为与低误报检测](docs/FLOW_HISTORY_LAB.md)。在旧开发集和前向新通信组上比较原始 48 字段与四项历史观测，复用旧分数；GPU 训练小型 MLP，多核 CPU 训练树模型，分别测量含历史状态的部署成本。固定标签为 `flow-history-lab-v1`。

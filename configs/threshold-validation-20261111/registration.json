@@ -1,0 +1,112 @@
+{
+  "study": "iot23-forward-threshold-v1",
+  "release": "forward-threshold-lab-v1",
+  "seed": 20261111,
+  "train_rows_per_class": 4096,
+  "sources": [
+    {
+      "name": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-1-1/bro/conn.log.labeled",
+      "bytes": 148305428,
+      "sha256": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+      "rows": 1008748,
+      "families": {
+        "Scanning": 539465,
+        "Benign": 469275,
+        "C&C": 8
+      },
+      "first_completed_utc": "2018-05-09T15:30:31.015073+00:00",
+      "last_completed_utc": "2018-05-14T07:24:43.030512+00:00"
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-8-1",
+      "role": "P",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-8-1/bro/conn.log.labeled",
+      "bytes": 1431000,
+      "sha256": "4877ca8f0f01902fbd18d28b7d06cb3d0be082355b7f2c8862c9deef1782eb8a",
+      "rows": 10403,
+      "families": {
+        "Benign": 2181,
+        "C&C": 8222
+      },
+      "first_completed_utc": "2018-07-31T13:15:11.479664+00:00",
+      "last_completed_utc": "2018-08-01T13:15:06.734905+00:00"
+    },
+    {
+      "name": "CTU-Honeypot-Capture-5-1",
+      "role": "C",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-Honeypot-Capture-5-1/bro/conn.log.labeled",
+      "bytes": 182147,
+      "sha256": "f36db06e7d6ba7364e932a5b003f75835e004b320d70019e8a2f0ba8685d9262",
+      "rows": 1374,
+      "families": {
+        "Benign": 1374
+      },
+      "first_completed_utc": "2018-09-21T09:40:31.287918+00:00",
+      "last_completed_utc": "2018-09-21T15:09:34.600219+00:00"
+    },
+    {
+      "name": "CTU-Honeypot-Capture-4-1",
+      "role": "C",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-Honeypot-Capture-4-1/bro/conn.log.labeled",
+      "bytes": 61653,
+      "sha256": "aebe40ea0e03b120265a5c7bc140dd9b0d3fe2fce65559e84776b7dd5360e71e",
+      "rows": 452,
+      "families": {
+        "Benign": 452
+      },
+      "first_completed_utc": "2018-10-25T12:08:22.652824+00:00",
+      "last_completed_utc": "2018-10-26T10:00:38.806853+00:00"
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-34-1",
+      "role": "E",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-34-1/bro/conn.log.labeled",
+      "bytes": 2926718,
+      "sha256": "d69e49b2aae8c1bd33286936531658202dec47d989f0439bad3f8be180467a6e",
+      "rows": 23145,
+      "families": {
+        "Benign": 1923,
+        "C&C": 6706,
+        "Scanning": 122,
+        "OtherAttack": 14394
+      },
+      "first_completed_utc": "2018-12-21T14:50:20.101305+00:00",
+      "last_completed_utc": "2018-12-22T14:50:13.942227+00:00"
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-49-1",
+      "role": "E",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-49-1/bro/conn.log.labeled",
+      "bytes": 853630635,
+      "sha256": "12e12cd6d01cb0f2b5330c217069ab4de103aa2044a97dd60d8af5f0d3cfa54f",
+      "rows": 5410561,
+      "families": {
+        "OtherAttack": 14,
+        "Benign": 3665,
+        "Scanning": 5404959,
+        "C&C": 1922,
+        "Mixed": 1
+      },
+      "first_completed_utc": "2019-02-28T19:50:33.016670+00:00",
+      "last_completed_utc": "2019-03-01T03:10:17.668471+00:00"
+    }
+  ],
+  "model": "HGB 200 rounds, 31 leaves, learning rate 0.1, no early stopping; two input sets Zeek 8 vs same 8 + R20 4 causal histories.",
+  "calibration": "All 1826 known normal controls from two captures strictly after training and before E1/E2. Same ceil(.99*(n+1)) rank, strict greater.",
+  "primary": "Compare raw vs history under the same unlabeled policy separately in both held-out scenarios, reset at each recording. Count budget, gained and lost scans/C&C individually; absence of baseline hits is not evidence of retained C&C.",
+  "thresholds": {
+    "update_every_minutes": 15,
+    "unlabeled_reference_hours": 1,
+    "conditional_trusted_normal_window_hours": 24,
+    "simulated_feedback_lag_minutes": 15,
+    "minimum_reference": 1000,
+    "shortfall": "fixed C threshold",
+    "same_timestamp": "previous blocks only",
+    "alpha": 0.01
+  },
+  "conditional": "Only the fixed and unlabeled policies are accessible without post-alert labels. Conditional oracle normal confirmations assumed available after 15 min, never supplied to fixed or unlabeled decisions.",
+  "endpoint": "Exact author PartOfAHorizontalPortScan vs exact C&C. Mixed and other malicious included in replay/overall counts; C&C is not the native CIC2018 Bot class.",
+  "small_sample": "Finite capture pointwise FPR under 1%, not a production population guarantee. Do not pool two scenarios to mask a failure."
+}

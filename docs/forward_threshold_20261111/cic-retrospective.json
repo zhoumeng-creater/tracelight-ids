@@ -1,0 +1,749 @@
+{
+  "type": "retrospective_R20_previously_opened_E_only",
+  "source_result_sha256": "c19bdf20f745801f3b860e0ef849025e73a748ada0da04659b7acffcb7aed63e",
+  "model_sha256": {
+    "hgb48": "b1ba959fc0efab8bb1920b8f70f1b5f6f28a4ba34b6bfa777122fb1716404036",
+    "hgb52_history": "2dfe99171dbe03ff9facaa151ae647c5ff5f4ec799bf6ce2318e4cdc875e51f3"
+  },
+  "rows": 50000,
+  "utc_first_flow_end_ms": 1519912860078,
+  "utc_last_flow_end_ms": 1520021152849,
+  "config": {
+    "refresh_ms": 900000,
+    "window_ms": 3600000,
+    "min_reference": 1000,
+    "trusted_lag_ms": 900000
+  },
+  "alpha": 0.01,
+  "population": "Observed R20 adjudicated E sample only. Normal-only C provides fixed thresholds and no update rows.",
+  "feedback": "Conditional oracle: every registered normal is assumed confirmed after a 15-minute delay. No actual feedback timestamps in this source. Neither fixed nor unlabeled uses it.",
+  "reference_rule": "At UTC refresh, unlabeled uses all previous one-hour E scores. Recent-normal's one-hour flow window ends 15 minutes earlier, with confirmation strictly before refresh. Insufficient pool falls back to fixed.",
+  "between_models_same_policy": {
+    "fixed": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 472,
+          "candidate": 37,
+          "added": 8,
+          "lost": 443,
+          "net": -435,
+          "baseline_rate": 0.01008180789029626,
+          "candidate_rate": 0.0007903112117393254
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 205,
+          "candidate": 190,
+          "added": 5,
+          "lost": 20,
+          "net": -15,
+          "baseline_rate": 0.06440464970153943,
+          "candidate_rate": 0.05969211435752435
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 6,
+          "candidate": 0,
+          "added": 0,
+          "lost": 6,
+          "net": -6,
+          "baseline_rate": 0.0020174848688634837,
+          "candidate_rate": 0.0
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 199,
+          "candidate": 190,
+          "added": 5,
+          "lost": 14,
+          "net": -9,
+          "baseline_rate": 0.9521531100478469,
+          "candidate_rate": 0.9090909090909091
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": false,
+      "candidate_within_one_percent": true
+    },
+    "recent_normal": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 407,
+          "candidate": 398,
+          "added": 249,
+          "lost": 258,
+          "net": -9,
+          "baseline_rate": 0.00869342332913258,
+          "candidate_rate": 0.008501185466817609
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 379,
+          "candidate": 2499,
+          "added": 2309,
+          "lost": 189,
+          "net": 2120,
+          "baseline_rate": 0.11907005969211436,
+          "candidate_rate": 0.7851083883129123
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 178,
+          "candidate": 2307,
+          "added": 2303,
+          "lost": 174,
+          "net": 2129,
+          "baseline_rate": 0.05985205110961668,
+          "candidate_rate": 0.7757229320780095
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 201,
+          "candidate": 192,
+          "added": 6,
+          "lost": 15,
+          "net": -9,
+          "baseline_rate": 0.9617224880382775,
+          "candidate_rate": 0.9186602870813397
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    },
+    "unlabeled": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 423,
+          "candidate": 298,
+          "added": 159,
+          "lost": 284,
+          "net": -125,
+          "baseline_rate": 0.009035179528803639,
+          "candidate_rate": 0.006365209218873486
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 267,
+          "candidate": 1050,
+          "added": 812,
+          "lost": 29,
+          "net": 783,
+          "baseline_rate": 0.08388312912346843,
+          "candidate_rate": 0.3298774740810556
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 66,
+          "candidate": 858,
+          "added": 806,
+          "lost": 14,
+          "net": 792,
+          "baseline_rate": 0.02219233355749832,
+          "candidate_rate": 0.2885003362474781
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 201,
+          "candidate": 192,
+          "added": 6,
+          "lost": 15,
+          "net": -9,
+          "baseline_rate": 0.9617224880382775,
+          "candidate_rate": 0.9186602870813397
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    }
+  },
+  "adaptive_vs_fixed_same_model": {
+    "hgb48/recent_normal": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 472,
+          "candidate": 407,
+          "added": 37,
+          "lost": 102,
+          "net": -65,
+          "baseline_rate": 0.01008180789029626,
+          "candidate_rate": 0.00869342332913258
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 205,
+          "candidate": 379,
+          "added": 176,
+          "lost": 2,
+          "net": 174,
+          "baseline_rate": 0.06440464970153943,
+          "candidate_rate": 0.11907005969211436
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 6,
+          "candidate": 178,
+          "added": 174,
+          "lost": 2,
+          "net": 172,
+          "baseline_rate": 0.0020174848688634837,
+          "candidate_rate": 0.05985205110961668
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 199,
+          "candidate": 201,
+          "added": 2,
+          "lost": 0,
+          "net": 2,
+          "baseline_rate": 0.9521531100478469,
+          "candidate_rate": 0.9617224880382775
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": false,
+      "candidate_within_one_percent": true
+    },
+    "hgb48/unlabeled": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 472,
+          "candidate": 423,
+          "added": 37,
+          "lost": 86,
+          "net": -49,
+          "baseline_rate": 0.01008180789029626,
+          "candidate_rate": 0.009035179528803639
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 205,
+          "candidate": 267,
+          "added": 62,
+          "lost": 0,
+          "net": 62,
+          "baseline_rate": 0.06440464970153943,
+          "candidate_rate": 0.08388312912346843
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 6,
+          "candidate": 66,
+          "added": 60,
+          "lost": 0,
+          "net": 60,
+          "baseline_rate": 0.0020174848688634837,
+          "candidate_rate": 0.02219233355749832
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 199,
+          "candidate": 201,
+          "added": 2,
+          "lost": 0,
+          "net": 2,
+          "baseline_rate": 0.9521531100478469,
+          "candidate_rate": 0.9617224880382775
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": false,
+      "candidate_within_one_percent": true
+    },
+    "hgb52_history/recent_normal": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 37,
+          "candidate": 398,
+          "added": 361,
+          "lost": 0,
+          "net": 361,
+          "baseline_rate": 0.0007903112117393254,
+          "candidate_rate": 0.008501185466817609
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 190,
+          "candidate": 2499,
+          "added": 2309,
+          "lost": 0,
+          "net": 2309,
+          "baseline_rate": 0.05969211435752435,
+          "candidate_rate": 0.7851083883129123
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 0,
+          "candidate": 2307,
+          "added": 2307,
+          "lost": 0,
+          "net": 2307,
+          "baseline_rate": 0.0,
+          "candidate_rate": 0.7757229320780095
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 190,
+          "candidate": 192,
+          "added": 2,
+          "lost": 0,
+          "net": 2,
+          "baseline_rate": 0.9090909090909091,
+          "candidate_rate": 0.9186602870813397
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    },
+    "hgb52_history/unlabeled": {
+      "groups": {
+        "normal": {
+          "rows": 46817,
+          "baseline": 37,
+          "candidate": 298,
+          "added": 262,
+          "lost": 1,
+          "net": 261,
+          "baseline_rate": 0.0007903112117393254,
+          "candidate_rate": 0.006365209218873486
+        },
+        "all_attacks": {
+          "rows": 3183,
+          "baseline": 190,
+          "candidate": 1050,
+          "added": 860,
+          "lost": 0,
+          "net": 860,
+          "baseline_rate": 0.05969211435752435,
+          "candidate_rate": 0.3298774740810556
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 0,
+          "candidate": 858,
+          "added": 858,
+          "lost": 0,
+          "net": 858,
+          "baseline_rate": 0.0,
+          "candidate_rate": 0.2885003362474781
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 190,
+          "candidate": 192,
+          "added": 2,
+          "lost": 0,
+          "net": 2,
+          "baseline_rate": 0.9090909090909091,
+          "candidate_rate": 0.9186602870813397
+        }
+      },
+      "normal_false_alert_budget": 468,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    }
+  },
+  "per_UTC_day_same_policy": [
+    {
+      "date_utc": "2018-03-01",
+      "policy": "fixed",
+      "groups": {
+        "normal": {
+          "rows": 23336,
+          "baseline": 208,
+          "candidate": 15,
+          "added": 0,
+          "lost": 193,
+          "net": -193,
+          "baseline_rate": 0.008913267055193692,
+          "candidate_rate": 0.0006427836818649297
+        },
+        "all_attacks": {
+          "rows": 209,
+          "baseline": 199,
+          "candidate": 190,
+          "added": 5,
+          "lost": 14,
+          "net": -9,
+          "baseline_rate": 0.9521531100478469,
+          "candidate_rate": 0.9090909090909091
+        },
+        "Bot": {
+          "rows": 0,
+          "baseline": 0,
+          "candidate": 0,
+          "added": 0,
+          "lost": 0,
+          "net": 0,
+          "baseline_rate": null,
+          "candidate_rate": null
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 199,
+          "candidate": 190,
+          "added": 5,
+          "lost": 14,
+          "net": -9,
+          "baseline_rate": 0.9521531100478469,
+          "candidate_rate": 0.9090909090909091
+        }
+      },
+      "normal_false_alert_budget": 233,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    },
+    {
+      "date_utc": "2018-03-01",
+      "policy": "recent_normal",
+      "groups": {
+        "normal": {
+          "rows": 23336,
+          "baseline": 210,
+          "candidate": 188,
+          "added": 78,
+          "lost": 100,
+          "net": -22,
+          "baseline_rate": 0.008998971546109015,
+          "candidate_rate": 0.008056222146040452
+        },
+        "all_attacks": {
+          "rows": 209,
+          "baseline": 201,
+          "candidate": 192,
+          "added": 6,
+          "lost": 15,
+          "net": -9,
+          "baseline_rate": 0.9617224880382775,
+          "candidate_rate": 0.9186602870813397
+        },
+        "Bot": {
+          "rows": 0,
+          "baseline": 0,
+          "candidate": 0,
+          "added": 0,
+          "lost": 0,
+          "net": 0,
+          "baseline_rate": null,
+          "candidate_rate": null
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 201,
+          "candidate": 192,
+          "added": 6,
+          "lost": 15,
+          "net": -9,
+          "baseline_rate": 0.9617224880382775,
+          "candidate_rate": 0.9186602870813397
+        }
+      },
+      "normal_false_alert_budget": 233,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    },
+    {
+      "date_utc": "2018-03-01",
+      "policy": "unlabeled",
+      "groups": {
+        "normal": {
+          "rows": 23336,
+          "baseline": 195,
+          "candidate": 188,
+          "added": 81,
+          "lost": 88,
+          "net": -7,
+          "baseline_rate": 0.008356187864244087,
+          "candidate_rate": 0.008056222146040452
+        },
+        "all_attacks": {
+          "rows": 209,
+          "baseline": 201,
+          "candidate": 192,
+          "added": 6,
+          "lost": 15,
+          "net": -9,
+          "baseline_rate": 0.9617224880382775,
+          "candidate_rate": 0.9186602870813397
+        },
+        "Bot": {
+          "rows": 0,
+          "baseline": 0,
+          "candidate": 0,
+          "added": 0,
+          "lost": 0,
+          "net": 0,
+          "baseline_rate": null,
+          "candidate_rate": null
+        },
+        "Scanning": {
+          "rows": 209,
+          "baseline": 201,
+          "candidate": 192,
+          "added": 6,
+          "lost": 15,
+          "net": -9,
+          "baseline_rate": 0.9617224880382775,
+          "candidate_rate": 0.9186602870813397
+        }
+      },
+      "normal_false_alert_budget": 233,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    },
+    {
+      "date_utc": "2018-03-02",
+      "policy": "fixed",
+      "groups": {
+        "normal": {
+          "rows": 23481,
+          "baseline": 264,
+          "candidate": 22,
+          "added": 8,
+          "lost": 250,
+          "net": -242,
+          "baseline_rate": 0.011243132745624121,
+          "candidate_rate": 0.0009369277288020101
+        },
+        "all_attacks": {
+          "rows": 2974,
+          "baseline": 6,
+          "candidate": 0,
+          "added": 0,
+          "lost": 6,
+          "net": -6,
+          "baseline_rate": 0.0020174848688634837,
+          "candidate_rate": 0.0
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 6,
+          "candidate": 0,
+          "added": 0,
+          "lost": 6,
+          "net": -6,
+          "baseline_rate": 0.0020174848688634837,
+          "candidate_rate": 0.0
+        },
+        "Scanning": {
+          "rows": 0,
+          "baseline": 0,
+          "candidate": 0,
+          "added": 0,
+          "lost": 0,
+          "net": 0,
+          "baseline_rate": null,
+          "candidate_rate": null
+        }
+      },
+      "normal_false_alert_budget": 234,
+      "baseline_within_one_percent": false,
+      "candidate_within_one_percent": true
+    },
+    {
+      "date_utc": "2018-03-02",
+      "policy": "recent_normal",
+      "groups": {
+        "normal": {
+          "rows": 23481,
+          "baseline": 197,
+          "candidate": 210,
+          "added": 171,
+          "lost": 158,
+          "net": 13,
+          "baseline_rate": 0.008389761935181636,
+          "candidate_rate": 0.008943401047655552
+        },
+        "all_attacks": {
+          "rows": 2974,
+          "baseline": 178,
+          "candidate": 2307,
+          "added": 2303,
+          "lost": 174,
+          "net": 2129,
+          "baseline_rate": 0.05985205110961668,
+          "candidate_rate": 0.7757229320780095
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 178,
+          "candidate": 2307,
+          "added": 2303,
+          "lost": 174,
+          "net": 2129,
+          "baseline_rate": 0.05985205110961668,
+          "candidate_rate": 0.7757229320780095
+        },
+        "Scanning": {
+          "rows": 0,
+          "baseline": 0,
+          "candidate": 0,
+          "added": 0,
+          "lost": 0,
+          "net": 0,
+          "baseline_rate": null,
+          "candidate_rate": null
+        }
+      },
+      "normal_false_alert_budget": 234,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    },
+    {
+      "date_utc": "2018-03-02",
+      "policy": "unlabeled",
+      "groups": {
+        "normal": {
+          "rows": 23481,
+          "baseline": 228,
+          "candidate": 110,
+          "added": 78,
+          "lost": 196,
+          "net": -118,
+          "baseline_rate": 0.009709978280311742,
+          "candidate_rate": 0.004684638644010051
+        },
+        "all_attacks": {
+          "rows": 2974,
+          "baseline": 66,
+          "candidate": 858,
+          "added": 806,
+          "lost": 14,
+          "net": 792,
+          "baseline_rate": 0.02219233355749832,
+          "candidate_rate": 0.2885003362474781
+        },
+        "Bot": {
+          "rows": 2974,
+          "baseline": 66,
+          "candidate": 858,
+          "added": 806,
+          "lost": 14,
+          "net": 792,
+          "baseline_rate": 0.02219233355749832,
+          "candidate_rate": 0.2885003362474781
+        },
+        "Scanning": {
+          "rows": 0,
+          "baseline": 0,
+          "candidate": 0,
+          "added": 0,
+          "lost": 0,
+          "net": 0,
+          "baseline_rate": null,
+          "candidate_rate": null
+        }
+      },
+      "normal_false_alert_budget": 234,
+      "baseline_within_one_percent": true,
+      "candidate_within_one_percent": true
+    }
+  ],
+  "policy_update_coverage": [
+    {
+      "arm": "hgb48",
+      "policy": "fixed",
+      "status": "fixed",
+      "blocks": 68,
+      "decisions": 50000
+    },
+    {
+      "arm": "hgb48",
+      "policy": "recent_normal",
+      "status": "insufficient_reference",
+      "blocks": 10,
+      "decisions": 5394
+    },
+    {
+      "arm": "hgb48",
+      "policy": "recent_normal",
+      "status": "updated",
+      "blocks": 58,
+      "decisions": 44606
+    },
+    {
+      "arm": "hgb48",
+      "policy": "unlabeled",
+      "status": "insufficient_reference",
+      "blocks": 9,
+      "decisions": 3730
+    },
+    {
+      "arm": "hgb48",
+      "policy": "unlabeled",
+      "status": "updated",
+      "blocks": 59,
+      "decisions": 46270
+    },
+    {
+      "arm": "hgb52_history",
+      "policy": "fixed",
+      "status": "fixed",
+      "blocks": 68,
+      "decisions": 50000
+    },
+    {
+      "arm": "hgb52_history",
+      "policy": "recent_normal",
+      "status": "insufficient_reference",
+      "blocks": 10,
+      "decisions": 5394
+    },
+    {
+      "arm": "hgb52_history",
+      "policy": "recent_normal",
+      "status": "updated",
+      "blocks": 58,
+      "decisions": 44606
+    },
+    {
+      "arm": "hgb52_history",
+      "policy": "unlabeled",
+      "status": "insufficient_reference",
+      "blocks": 9,
+      "decisions": 3730
+    },
+    {
+      "arm": "hgb52_history",
+      "policy": "unlabeled",
+      "status": "updated",
+      "blocks": 59,
+      "decisions": 46270
+    }
+  ],
+  "registered_calibration": {
+    "hgb48": {
+      "alpha": 0.01,
+      "n_normal": 10000,
+      "rank": 9901,
+      "threshold": -7.447559661871572,
+      "comparison": ">",
+      "comparison_dtype": "float64",
+      "calibration_fp": 96,
+      "scope": "development_normal_calibration"
+    },
+    "hgb52_history": {
+      "alpha": 0.01,
+      "n_normal": 10000,
+      "rank": 9901,
+      "threshold": 9.11931622107732,
+      "comparison": ">",
+      "comparison_dtype": "float64",
+      "calibration_fp": 95,
+      "scope": "development_normal_calibration"
+    }
+  },
+  "reference_contamination": {
+    "evaluated_blocks": 68,
+    "blocks_with_known_attacks": 35,
+    "max_fraction_of_labeled_flows_in_one_reference_window": 0.23358473824312334
+  }
+}

@@ -1,0 +1,1159 @@
+{
+  "source_csv_sha256": "242a6971cc801eae621b1fc4d966db2cd0af9cc866805f36a6fc5d0058dfbb74",
+  "evidence_sha256": "c19bdf20f745801f3b860e0ef849025e73a748ada0da04659b7acffcb7aed63e",
+  "normal_rows_only": true,
+  "rows_scored_in_round20": 56817,
+  "max_replay_error": {
+    "raw": 0.0,
+    "hist": 0.0
+  },
+  "fixed_thresholds": {
+    "raw": -7.447559661871572,
+    "hist": 9.11931622107732
+  },
+  "dates": {
+    "('C_time', '2018-02-28')": {
+      "normal_n": 5361,
+      "history_fp": 90,
+      "raw_fp": 69,
+      "history_at_fixed_threshold": 15,
+      "source_hosts": 781,
+      "communication_groups": 5285
+    },
+    "('C_time', '2018-03-01')": {
+      "normal_n": 4639,
+      "history_fp": 5,
+      "raw_fp": 27,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 754,
+      "communication_groups": 4547
+    },
+    "('E_time', '2018-03-01')": {
+      "normal_n": 23336,
+      "history_fp": 15,
+      "raw_fp": 208,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 2099,
+      "communication_groups": 22643
+    },
+    "('E_time', '2018-03-02')": {
+      "normal_n": 23481,
+      "history_fp": 22,
+      "raw_fp": 264,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 2263,
+      "communication_groups": 22864
+    }
+  },
+  "hours": {
+    "('C_time', '2018-02-28 19')": {
+      "normal_n": 2241,
+      "history_fp": 90,
+      "raw_fp": 40,
+      "history_at_fixed_threshold": 15,
+      "source_hosts": 461,
+      "communication_groups": 2217
+    },
+    "('C_time', '2018-02-28 20')": {
+      "normal_n": 2230,
+      "history_fp": 0,
+      "raw_fp": 20,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 463,
+      "communication_groups": 2206
+    },
+    "('C_time', '2018-02-28 21')": {
+      "normal_n": 841,
+      "history_fp": 0,
+      "raw_fp": 9,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 291,
+      "communication_groups": 828
+    },
+    "('C_time', '2018-02-28 22')": {
+      "normal_n": 24,
+      "history_fp": 0,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 11,
+      "communication_groups": 24
+    },
+    "('C_time', '2018-02-28 23')": {
+      "normal_n": 25,
+      "history_fp": 0,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 9,
+      "communication_groups": 25
+    },
+    "('C_time', '2018-03-01 00')": {
+      "normal_n": 5,
+      "history_fp": 0,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 5,
+      "communication_groups": 5
+    },
+    "('C_time', '2018-03-01 12')": {
+      "normal_n": 2035,
+      "history_fp": 1,
+      "raw_fp": 11,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 435,
+      "communication_groups": 1990
+    },
+    "('C_time', '2018-03-01 13')": {
+      "normal_n": 2599,
+      "history_fp": 4,
+      "raw_fp": 16,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 544,
+      "communication_groups": 2564
+    },
+    "('E_time', '2018-03-01 14')": {
+      "normal_n": 3527,
+      "history_fp": 0,
+      "raw_fp": 39,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 605,
+      "communication_groups": 3441
+    },
+    "('E_time', '2018-03-01 15')": {
+      "normal_n": 3414,
+      "history_fp": 4,
+      "raw_fp": 24,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 593,
+      "communication_groups": 3360
+    },
+    "('E_time', '2018-03-01 16')": {
+      "normal_n": 2404,
+      "history_fp": 1,
+      "raw_fp": 25,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 499,
+      "communication_groups": 2359
+    },
+    "('E_time', '2018-03-01 17')": {
+      "normal_n": 2981,
+      "history_fp": 2,
+      "raw_fp": 27,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 532,
+      "communication_groups": 2914
+    },
+    "('E_time', '2018-03-01 18')": {
+      "normal_n": 3515,
+      "history_fp": 1,
+      "raw_fp": 22,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 582,
+      "communication_groups": 3441
+    },
+    "('E_time', '2018-03-01 19')": {
+      "normal_n": 3255,
+      "history_fp": 2,
+      "raw_fp": 26,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 535,
+      "communication_groups": 3199
+    },
+    "('E_time', '2018-03-01 20')": {
+      "normal_n": 3092,
+      "history_fp": 3,
+      "raw_fp": 29,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 558,
+      "communication_groups": 3039
+    },
+    "('E_time', '2018-03-01 21')": {
+      "normal_n": 1107,
+      "history_fp": 2,
+      "raw_fp": 15,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 329,
+      "communication_groups": 1079
+    },
+    "('E_time', '2018-03-01 22')": {
+      "normal_n": 37,
+      "history_fp": 0,
+      "raw_fp": 1,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 22,
+      "communication_groups": 36
+    },
+    "('E_time', '2018-03-01 23')": {
+      "normal_n": 4,
+      "history_fp": 0,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 3,
+      "communication_groups": 4
+    },
+    "('E_time', '2018-03-02 12')": {
+      "normal_n": 940,
+      "history_fp": 4,
+      "raw_fp": 16,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 282,
+      "communication_groups": 919
+    },
+    "('E_time', '2018-03-02 13')": {
+      "normal_n": 3348,
+      "history_fp": 2,
+      "raw_fp": 45,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 639,
+      "communication_groups": 3281
+    },
+    "('E_time', '2018-03-02 14')": {
+      "normal_n": 3387,
+      "history_fp": 1,
+      "raw_fp": 40,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 601,
+      "communication_groups": 3313
+    },
+    "('E_time', '2018-03-02 15')": {
+      "normal_n": 3442,
+      "history_fp": 5,
+      "raw_fp": 28,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 632,
+      "communication_groups": 3399
+    },
+    "('E_time', '2018-03-02 16')": {
+      "normal_n": 2509,
+      "history_fp": 2,
+      "raw_fp": 32,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 581,
+      "communication_groups": 2471
+    },
+    "('E_time', '2018-03-02 17')": {
+      "normal_n": 3116,
+      "history_fp": 1,
+      "raw_fp": 31,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 573,
+      "communication_groups": 3068
+    },
+    "('E_time', '2018-03-02 18')": {
+      "normal_n": 3118,
+      "history_fp": 2,
+      "raw_fp": 41,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 591,
+      "communication_groups": 3059
+    },
+    "('E_time', '2018-03-02 19')": {
+      "normal_n": 3359,
+      "history_fp": 5,
+      "raw_fp": 30,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 566,
+      "communication_groups": 3296
+    },
+    "('E_time', '2018-03-02 20')": {
+      "normal_n": 262,
+      "history_fp": 0,
+      "raw_fp": 1,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 127,
+      "communication_groups": 260
+    }
+  },
+  "sets": {
+    "C_time": {
+      "counts": {
+        "normal_n": 10000,
+        "history_fp": 95,
+        "raw_fp": 96,
+        "history_at_fixed_threshold": 15,
+        "source_hosts": 1335,
+        "communication_groups": 9828
+      },
+      "history_quantiles": {
+        "0.5": -16.135361402231553,
+        "0.95": -12.674525998672602,
+        "0.98": -10.638373930672207,
+        "0.99": 9.11931622107732,
+        "0.995": 9.233862845038745,
+        "0.999": 9.277315420896427,
+        "1.0": 9.322918617831197
+      },
+      "raw_quantiles": {
+        "0.5": -16.496795019900844,
+        "0.95": -11.033231177635823,
+        "0.98": -8.435490602947278,
+        "0.99": -7.506807772806827,
+        "0.995": -6.260866404114201,
+        "0.999": 5.035803294840317,
+        "1.0": 9.868621770883667
+      }
+    },
+    "E_time": {
+      "counts": {
+        "normal_n": 46817,
+        "history_fp": 37,
+        "raw_fp": 472,
+        "history_at_fixed_threshold": 0,
+        "source_hosts": 3808,
+        "communication_groups": 45310
+      },
+      "history_quantiles": {
+        "0.5": -16.1353619256044,
+        "0.95": -13.286206936037079,
+        "0.98": -11.369504845991692,
+        "0.99": -6.666829824280022,
+        "0.995": -5.992986426438548,
+        "0.999": 2.774941255534964,
+        "1.0": 11.05565331701776
+      },
+      "raw_quantiles": {
+        "0.5": -16.54497292934671,
+        "0.95": -12.99777487021282,
+        "0.98": -10.684162009745386,
+        "0.99": -7.330747921259555,
+        "0.995": -6.858104852693543,
+        "0.999": 9.279175570197507,
+        "1.0": 11.74234067652669
+      }
+    }
+  },
+  "leading_C_host": "0f74092c9edee49d",
+  "leading_C_host_all": {
+    "normal_n": 135,
+    "history_fp": 88,
+    "raw_fp": 26,
+    "history_at_fixed_threshold": 15,
+    "source_hosts": 1,
+    "communication_groups": 135,
+    "first_end_utc": "2018-02-28T19:41:55.122000+00:00",
+    "last_end_utc": "2018-02-28T20:31:01.692000+00:00",
+    "PROTOCOL_top": {
+      "6": 135
+    },
+    "L4_DST_PORT_top": {
+      "135": 135
+    },
+    "L4_SRC_PORT_top": {
+      "4445": 3,
+      "3965": 2,
+      "4315": 1,
+      "3119": 1,
+      "3861": 1,
+      "4323": 1
+    },
+    "TCP_FLAGS_top": {
+      "27": 84,
+      "30": 47,
+      "22": 3,
+      "28": 1
+    },
+    "IN_PKTS_top": {
+      "7": 52,
+      "6": 52,
+      "8": 17,
+      "5": 6,
+      "2": 3,
+      "10": 3
+    },
+    "OUT_PKTS_top": {
+      "6": 81,
+      "3": 30,
+      "4": 11,
+      "5": 6,
+      "1": 3,
+      "7": 3
+    },
+    "L7_PROTO_top": {
+      "370": 135
+    },
+    "IPV4_SRC_ADDR_top": {
+      "23.225.163.149": 135
+    },
+    "IPV4_DST_ADDR_top": {
+      "172.31.69.5": 7,
+      "172.31.69.8": 6,
+      "172.31.65.112": 6,
+      "172.31.65.20": 5,
+      "172.31.65.44": 5,
+      "172.31.68.4": 5
+    },
+    "source_family_top": {
+      "Benign": 135
+    },
+    "truth_source_top": {
+      "UQ_native": 135
+    },
+    "Attack_top": {
+      "Benign": 135
+    },
+    "hist_flows_60s": {
+      "min": 11.0,
+      "median": 1119.0,
+      "max": 2485.0
+    },
+    "hist_dst_ips_60s": {
+      "min": 1.0,
+      "median": 44.0,
+      "max": 109.0
+    },
+    "hist_dst_ports_60s": {
+      "min": 1.0,
+      "median": 1.0,
+      "max": 1.0
+    },
+    "hist_no_reply_fraction_60s": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.004905395935529082
+    }
+  },
+  "leading_C_host_above": {
+    "normal_n": 88,
+    "history_fp": 88,
+    "raw_fp": 23,
+    "history_at_fixed_threshold": 0,
+    "source_hosts": 1,
+    "communication_groups": 88,
+    "first_end_utc": "2018-02-28T19:42:18.273000+00:00",
+    "last_end_utc": "2018-02-28T19:49:59.643000+00:00",
+    "PROTOCOL_top": {
+      "6": 88
+    },
+    "L4_DST_PORT_top": {
+      "135": 88
+    },
+    "L4_SRC_PORT_top": {
+      "4445": 3,
+      "3965": 2,
+      "3267": 1,
+      "4610": 1,
+      "1355": 1,
+      "2532": 1
+    },
+    "TCP_FLAGS_top": {
+      "27": 58,
+      "30": 27,
+      "22": 3
+    },
+    "IN_PKTS_top": {
+      "6": 37,
+      "7": 32,
+      "8": 12,
+      "2": 3,
+      "5": 2,
+      "10": 2
+    },
+    "OUT_PKTS_top": {
+      "6": 57,
+      "3": 16,
+      "4": 8,
+      "1": 3,
+      "5": 3,
+      "7": 1
+    },
+    "L7_PROTO_top": {
+      "370": 88
+    },
+    "IPV4_SRC_ADDR_top": {
+      "23.225.163.149": 88
+    },
+    "IPV4_DST_ADDR_top": {
+      "172.31.65.57": 4,
+      "172.31.69.8": 4,
+      "172.31.64.33": 4,
+      "172.31.66.103": 4,
+      "172.31.67.23": 3,
+      "172.31.68.4": 3
+    },
+    "source_family_top": {
+      "Benign": 88
+    },
+    "truth_source_top": {
+      "UQ_native": 88
+    },
+    "Attack_top": {
+      "Benign": 88
+    },
+    "hist_flows_60s": {
+      "min": 799.0,
+      "median": 1319.5,
+      "max": 2485.0
+    },
+    "hist_dst_ips_60s": {
+      "min": 24.0,
+      "median": 53.5,
+      "max": 109.0
+    },
+    "hist_dst_ports_60s": {
+      "min": 1.0,
+      "median": 1.0,
+      "max": 1.0
+    },
+    "hist_no_reply_fraction_60s": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.004905395935529082
+    }
+  },
+  "leading_C_host_boundary": {
+    "normal_n": 15,
+    "history_fp": 0,
+    "raw_fp": 0,
+    "history_at_fixed_threshold": 15,
+    "source_hosts": 1,
+    "communication_groups": 15,
+    "first_end_utc": "2018-02-28T19:42:22.811000+00:00",
+    "last_end_utc": "2018-02-28T19:48:50.205000+00:00",
+    "PROTOCOL_top": {
+      "6": 15
+    },
+    "L4_DST_PORT_top": {
+      "135": 15
+    },
+    "L4_SRC_PORT_top": {
+      "1157": 1,
+      "4037": 1,
+      "4447": 1,
+      "3786": 1,
+      "4466": 1,
+      "2933": 1
+    },
+    "TCP_FLAGS_top": {
+      "30": 15
+    },
+    "IN_PKTS_top": {
+      "6": 9,
+      "5": 3,
+      "8": 1,
+      "12": 1,
+      "7": 1
+    },
+    "OUT_PKTS_top": {
+      "3": 12,
+      "4": 2,
+      "6": 1
+    },
+    "L7_PROTO_top": {
+      "370": 15
+    },
+    "IPV4_SRC_ADDR_top": {
+      "23.225.163.149": 15
+    },
+    "IPV4_DST_ADDR_top": {
+      "172.31.66.28": 3,
+      "172.31.64.16": 2,
+      "172.31.65.41": 2,
+      "172.31.66.60": 1,
+      "172.31.68.25": 1,
+      "172.31.68.6": 1
+    },
+    "source_family_top": {
+      "Benign": 15
+    },
+    "truth_source_top": {
+      "UQ_native": 15
+    },
+    "Attack_top": {
+      "Benign": 15
+    },
+    "hist_flows_60s": {
+      "min": 823.0,
+      "median": 1295.0,
+      "max": 2420.0
+    },
+    "hist_dst_ips_60s": {
+      "min": 30.0,
+      "median": 56.0,
+      "max": 108.0
+    },
+    "hist_dst_ports_60s": {
+      "min": 1.0,
+      "median": 1.0,
+      "max": 1.0
+    },
+    "hist_no_reply_fraction_60s": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.00482315112540193
+    }
+  },
+  "leading_C_host_E": {
+    "normal_n": 3,
+    "history_fp": 0,
+    "raw_fp": 2,
+    "history_at_fixed_threshold": 0,
+    "source_hosts": 1,
+    "communication_groups": 3,
+    "first_end_utc": "2018-03-02T18:45:11.091000+00:00",
+    "last_end_utc": "2018-03-02T19:02:10.087000+00:00",
+    "PROTOCOL_top": {
+      "6": 3
+    },
+    "L4_DST_PORT_top": {
+      "135": 3
+    },
+    "L4_SRC_PORT_top": {
+      "4723": 1,
+      "3045": 1,
+      "4447": 1
+    },
+    "TCP_FLAGS_top": {
+      "27": 3
+    },
+    "IN_PKTS_top": {
+      "6": 2,
+      "7": 1
+    },
+    "OUT_PKTS_top": {
+      "6": 3
+    },
+    "L7_PROTO_top": {
+      "370": 3
+    },
+    "IPV4_SRC_ADDR_top": {
+      "23.225.163.149": 3
+    },
+    "IPV4_DST_ADDR_top": {
+      "172.31.64.51": 2,
+      "172.31.68.9": 1
+    },
+    "source_family_top": {
+      "Benign": 3
+    },
+    "truth_source_top": {
+      "UQ_native": 3
+    },
+    "Attack_top": {
+      "Benign": 3
+    },
+    "hist_flows_60s": {
+      "min": 13.0,
+      "median": 21.0,
+      "max": 27.0
+    },
+    "hist_dst_ips_60s": {
+      "min": 2.0,
+      "median": 2.0,
+      "max": 3.0
+    },
+    "hist_dst_ports_60s": {
+      "min": 1.0,
+      "median": 1.0,
+      "max": 1.0
+    },
+    "hist_no_reply_fraction_60s": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.0
+    }
+  },
+  "C_others_fixed": {
+    "normal_n": 9865,
+    "history_fp": 7,
+    "raw_fp": 70,
+    "history_at_fixed_threshold": 0,
+    "source_hosts": 1334,
+    "communication_groups": 9693
+  },
+  "E_others_fixed": {
+    "normal_n": 46814,
+    "history_fp": 37,
+    "raw_fp": 470,
+    "history_at_fixed_threshold": 0,
+    "source_hosts": 3807,
+    "communication_groups": 45307
+  },
+  "fp_hosts": {
+    "('C_time', '0f74092c9edee49d')": {
+      "normal_n": 88,
+      "history_fp": 88,
+      "raw_fp": 23,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 1,
+      "communication_groups": 88,
+      "first_end_utc": "2018-02-28T19:42:18.273000+00:00",
+      "last_end_utc": "2018-02-28T19:49:59.643000+00:00",
+      "PROTOCOL_top": {
+        "6": 88
+      },
+      "L4_DST_PORT_top": {
+        "135": 88
+      },
+      "L4_SRC_PORT_top": {
+        "4445": 3,
+        "3965": 2,
+        "3267": 1,
+        "4610": 1,
+        "1355": 1,
+        "2532": 1
+      },
+      "TCP_FLAGS_top": {
+        "27": 58,
+        "30": 27,
+        "22": 3
+      },
+      "IN_PKTS_top": {
+        "6": 37,
+        "7": 32,
+        "8": 12,
+        "2": 3,
+        "5": 2,
+        "10": 2
+      },
+      "OUT_PKTS_top": {
+        "6": 57,
+        "3": 16,
+        "4": 8,
+        "1": 3,
+        "5": 3,
+        "7": 1
+      },
+      "L7_PROTO_top": {
+        "370": 88
+      },
+      "IPV4_SRC_ADDR_top": {
+        "23.225.163.149": 88
+      },
+      "IPV4_DST_ADDR_top": {
+        "172.31.65.57": 4,
+        "172.31.69.8": 4,
+        "172.31.64.33": 4,
+        "172.31.66.103": 4,
+        "172.31.67.23": 3,
+        "172.31.68.4": 3
+      },
+      "source_family_top": {
+        "Benign": 88
+      },
+      "truth_source_top": {
+        "UQ_native": 88
+      },
+      "Attack_top": {
+        "Benign": 88
+      },
+      "hist_flows_60s": {
+        "min": 799.0,
+        "median": 1319.5,
+        "max": 2485.0
+      },
+      "hist_dst_ips_60s": {
+        "min": 24.0,
+        "median": 53.5,
+        "max": 109.0
+      },
+      "hist_dst_ports_60s": {
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      "hist_no_reply_fraction_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.004905395935529082
+      }
+    },
+    "('C_time', 'b5251af88b35a803')": {
+      "normal_n": 7,
+      "history_fp": 7,
+      "raw_fp": 7,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 1,
+      "communication_groups": 1,
+      "first_end_utc": "2018-02-28T19:05:06.006000+00:00",
+      "last_end_utc": "2018-03-01T13:55:46.756000+00:00",
+      "PROTOCOL_top": {
+        "17": 7
+      },
+      "L4_DST_PORT_top": {
+        "500": 7
+      },
+      "L4_SRC_PORT_top": {
+        "1024": 7
+      },
+      "TCP_FLAGS_top": {
+        "0": 7
+      },
+      "IN_PKTS_top": {
+        "6": 7
+      },
+      "OUT_PKTS_top": {
+        "0": 7
+      },
+      "L7_PROTO_top": {
+        "79": 7
+      },
+      "IPV4_SRC_ADDR_top": {
+        "52.14.77.172": 7
+      },
+      "IPV4_DST_ADDR_top": {
+        "172.31.69.28": 7
+      },
+      "source_family_top": {
+        "Benign": 7
+      },
+      "truth_source_top": {
+        "UQ_native": 7
+      },
+      "Attack_top": {
+        "Benign": 7
+      },
+      "hist_flows_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "hist_dst_ips_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "hist_dst_ports_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "hist_no_reply_fraction_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      }
+    },
+    "('E_time', '28d428b855c7310d')": {
+      "normal_n": 29,
+      "history_fp": 29,
+      "raw_fp": 29,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 1,
+      "communication_groups": 1,
+      "first_end_utc": "2018-03-01T15:03:46.377000+00:00",
+      "last_end_utc": "2018-03-02T19:26:40.483000+00:00",
+      "PROTOCOL_top": {
+        "17": 29
+      },
+      "L4_DST_PORT_top": {
+        "500": 29
+      },
+      "L4_SRC_PORT_top": {
+        "1028": 29
+      },
+      "TCP_FLAGS_top": {
+        "0": 29
+      },
+      "IN_PKTS_top": {
+        "6": 29
+      },
+      "OUT_PKTS_top": {
+        "0": 29
+      },
+      "L7_PROTO_top": {
+        "79": 29
+      },
+      "IPV4_SRC_ADDR_top": {
+        "13.58.42.57": 29
+      },
+      "IPV4_DST_ADDR_top": {
+        "172.31.69.28": 29
+      },
+      "source_family_top": {
+        "Benign": 29
+      },
+      "truth_source_top": {
+        "UQ_native": 29
+      },
+      "Attack_top": {
+        "Benign": 29
+      },
+      "hist_flows_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "hist_dst_ips_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "hist_dst_ports_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "hist_no_reply_fraction_60s": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      }
+    },
+    "('E_time', '30d4ab62db18b878')": {
+      "normal_n": 4,
+      "history_fp": 4,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 1,
+      "communication_groups": 4,
+      "first_end_utc": "2018-03-02T12:52:27.473000+00:00",
+      "last_end_utc": "2018-03-02T12:52:41.691000+00:00",
+      "PROTOCOL_top": {
+        "6": 4
+      },
+      "L4_DST_PORT_top": {
+        "49682": 1,
+        "49888": 1,
+        "49761": 1,
+        "49759": 1
+      },
+      "L4_SRC_PORT_top": {
+        "80": 4
+      },
+      "TCP_FLAGS_top": {
+        "21": 2,
+        "17": 2
+      },
+      "IN_PKTS_top": {
+        "10": 2,
+        "2": 2
+      },
+      "OUT_PKTS_top": {
+        "2": 4
+      },
+      "L7_PROTO_top": {
+        "7": 4
+      },
+      "IPV4_SRC_ADDR_top": {
+        "93.184.215.240": 4
+      },
+      "IPV4_DST_ADDR_top": {
+        "172.31.65.28": 3,
+        "172.31.66.49": 1
+      },
+      "source_family_top": {
+        "Benign": 4
+      },
+      "truth_source_top": {
+        "UQ_native": 4
+      },
+      "Attack_top": {
+        "Benign": 4
+      },
+      "hist_flows_60s": {
+        "min": 398.0,
+        "median": 476.0,
+        "max": 498.0
+      },
+      "hist_dst_ips_60s": {
+        "min": 3.0,
+        "median": 3.0,
+        "max": 3.0
+      },
+      "hist_dst_ports_60s": {
+        "min": 297.0,
+        "median": 339.0,
+        "max": 340.0
+      },
+      "hist_no_reply_fraction_60s": {
+        "min": 0.0,
+        "median": 0.0021009887005649717,
+        "max": 0.006024096385542169
+      }
+    },
+    "('E_time', '5727f1e2bf19ff1d')": {
+      "normal_n": 3,
+      "history_fp": 3,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 1,
+      "communication_groups": 3,
+      "first_end_utc": "2018-03-02T19:04:34.518000+00:00",
+      "last_end_utc": "2018-03-02T19:04:35.087000+00:00",
+      "PROTOCOL_top": {
+        "6": 3
+      },
+      "L4_DST_PORT_top": {
+        "4135": 1,
+        "4138": 1,
+        "4131": 1
+      },
+      "L4_SRC_PORT_top": {
+        "65532": 1,
+        "65526": 1,
+        "65528": 1
+      },
+      "TCP_FLAGS_top": {
+        "2": 3
+      },
+      "IN_PKTS_top": {
+        "1": 3
+      },
+      "OUT_PKTS_top": {
+        "0": 3
+      },
+      "L7_PROTO_top": {
+        "0": 3
+      },
+      "IPV4_SRC_ADDR_top": {
+        "139.60.160.164": 3
+      },
+      "IPV4_DST_ADDR_top": {
+        "172.31.67.52": 1,
+        "172.31.65.39": 1,
+        "172.31.64.8": 1
+      },
+      "source_family_top": {
+        "Benign": 3
+      },
+      "truth_source_top": {
+        "UQ_native": 3
+      },
+      "Attack_top": {
+        "Benign": 3
+      },
+      "hist_flows_60s": {
+        "min": 830.0,
+        "median": 840.0,
+        "max": 880.0
+      },
+      "hist_dst_ips_60s": {
+        "min": 84.0,
+        "median": 85.0,
+        "max": 89.0
+      },
+      "hist_dst_ports_60s": {
+        "min": 10.0,
+        "median": 10.0,
+        "max": 10.0
+      },
+      "hist_no_reply_fraction_60s": {
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      }
+    },
+    "('E_time', 'eeb12121f250288d')": {
+      "normal_n": 1,
+      "history_fp": 1,
+      "raw_fp": 0,
+      "history_at_fixed_threshold": 0,
+      "source_hosts": 1,
+      "communication_groups": 1,
+      "first_end_utc": "2018-03-02T15:14:34.849000+00:00",
+      "last_end_utc": "2018-03-02T15:14:34.849000+00:00",
+      "PROTOCOL_top": {
+        "6": 1
+      },
+      "L4_DST_PORT_top": {
+        "4127": 1
+      },
+      "L4_SRC_PORT_top": {
+        "65533": 1
+      },
+      "TCP_FLAGS_top": {
+        "2": 1
+      },
+      "IN_PKTS_top": {
+        "1": 1
+      },
+      "OUT_PKTS_top": {
+        "0": 1
+      },
+      "L7_PROTO_top": {
+        "0": 1
+      },
+      "IPV4_SRC_ADDR_top": {
+        "185.222.211.98": 1
+      },
+      "IPV4_DST_ADDR_top": {
+        "172.31.66.20": 1
+      },
+      "source_family_top": {
+        "Benign": 1
+      },
+      "truth_source_top": {
+        "UQ_native": 1
+      },
+      "Attack_top": {
+        "Benign": 1
+      },
+      "hist_flows_60s": {
+        "min": 792.0,
+        "median": 792.0,
+        "max": 792.0
+      },
+      "hist_dst_ips_60s": {
+        "min": 81.0,
+        "median": 81.0,
+        "max": 81.0
+      },
+      "hist_dst_ports_60s": {
+        "min": 10.0,
+        "median": 10.0,
+        "max": 10.0
+      },
+      "hist_no_reply_fraction_60s": {
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      }
+    }
+  },
+  "known_scanners": {
+    "source_hosts_in_round20_positive": [
+      "2885348be49b95d1",
+      "4eb765e27dfc2153"
+    ],
+    "source_normal_fp_is_registered_scanner": 0
+  },
+  "history_zero_ablation": {
+    "rule": "Archived 52-field HGB and threshold, same 56,817 already-opened C/E normal records, replace four observed history fields only by the physically possible all-zero vector. This is a counterfactual sensitivity check.",
+    "subsets": {
+      "C": {
+        "n": 10000,
+        "actual_fp": 95,
+        "zero_history_fp": 7,
+        "actual_above_then_below": 88,
+        "actual_nonalert_then_above": 0,
+        "zero_score_median": -16.148229911860923,
+        "actual_score_median": -16.135361402231553
+      },
+      "E": {
+        "n": 46817,
+        "actual_fp": 37,
+        "zero_history_fp": 29,
+        "actual_above_then_below": 8,
+        "actual_nonalert_then_above": 0,
+        "zero_score_median": -16.18532877796293,
+        "actual_score_median": -16.1353619256044
+      },
+      "C_major_host": {
+        "n": 135,
+        "actual_fp": 88,
+        "zero_history_fp": 0,
+        "actual_above_then_below": 88,
+        "actual_nonalert_then_above": 0,
+        "zero_score_median": -11.335885184234671,
+        "actual_score_median": 9.119321420664157
+      },
+      "C_major_host_actual_above": {
+        "n": 88,
+        "actual_fp": 88,
+        "zero_history_fp": 0,
+        "actual_above_then_below": 88,
+        "actual_nonalert_then_above": 0,
+        "zero_score_median": -11.206395398137172,
+        "actual_score_median": 9.233862845038745
+      },
+      "C_major_host_at_boundary": {
+        "n": 15,
+        "actual_fp": 0,
+        "zero_history_fp": 0,
+        "actual_above_then_below": 0,
+        "actual_nonalert_then_above": 0,
+        "zero_score_median": -13.248256359723463,
+        "actual_score_median": 9.11931622107732
+      }
+    }
+  }
+}
