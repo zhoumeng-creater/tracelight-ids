@@ -1,0 +1,1639 @@
+{
+  "verified_NF_row_list": {
+    "name": "cic2018_verified_nmap_rows.npy",
+    "rows": 25496,
+    "format": "1-D little-endian uint32, strictly increasing, one-based original UQ CSV data row number (header excluded).",
+    "sha256": "a158630fec757ed5efa61babf6ca520f1db22183bb09a6a7a9b7986677ba0273"
+  },
+  "purpose": "Metadata and direct corrected-label agreement on two independent-collection dates. No models, thresholds or score selection.",
+  "ground_truth_author": "https://intrusion-detection.distrinet-research.be/CNS2022/CSECICIDS2018.html#infiltration",
+  "ground_truth_archive": "https://intrusion-detection.distrinet-research.be/CNS2022/Datasets/CSECICIDS2018_improved.zip",
+  "matching": "Exact directional (source IP,port,destination IP,port,protocol) plus floor(author first UTC packet microsecond/1000)=NF first packet ms. Require uniqueness on both sides of the retained comparison, then separately check exact last ms, NF IN/OUT packet counts. For scanner endpoint flows, both input tables contain all endpoint rows. For non-endpoint UQ controls NF-side uniqueness is among the selected sample. No fuzzy timestamp alignment or assumption of equality for unmatched records.",
+  "results": {
+    "2018-02-28": {
+      "day": "2018-02-28",
+      "corrected": {
+        "name": "Wednesday-28-02-2018.csv",
+        "method": "deflate",
+        "offset": 6251644566,
+        "compressed_bytes": 1113130663,
+        "uncompressed_bytes": 3812223732,
+        "crc32": 757055952,
+        "full_read_rows": 6568726,
+        "selected_for_join": 71277,
+        "selected_file": "2018-02-28.corrected_endpoints.parquet",
+        "selection": "Every corrected flow touching the specified scanner host in either direction plus every flow starting in a +/-1ms bin of a deterministic UQ metadata probe, on the date.",
+        "crc_verified": true,
+        "uncompressed_sha256": "419c3860788ba909b396ee8259c0f883da2cb58eb9f6d878407fed097225c2fa",
+        "compressed_sha256": "a025df30000989c4b516a32bee7ac05a306fa68228ada2bf2e03635fdd79358f",
+        "counts_by_original_CNS_label": [
+          {
+            "label": "BENIGN",
+            "attempted_category": "-1",
+            "rows": 6518882
+          },
+          {
+            "label": "Infiltration - Communication Victim Attacker",
+            "attempted_category": "-1",
+            "rows": 43
+          },
+          {
+            "label": "Infiltration - Dropbox Download",
+            "attempted_category": "-1",
+            "rows": 46
+          },
+          {
+            "label": "Infiltration - Dropbox Download - Attempted",
+            "attempted_category": "4",
+            "rows": 15
+          },
+          {
+            "label": "Infiltration - NMAP Portscan",
+            "attempted_category": "-1",
+            "rows": 49740
+          }
+        ],
+        "per_label_min_start_us_max_end_us": {
+          "BENIGN": [
+            1519820449532235,
+            1519866352729027
+          ],
+          "Infiltration - NMAP Portscan": [
+            1519829205730767,
+            1519843129776934
+          ],
+          "Infiltration - Communication Victim Attacker": [
+            1519829140706215,
+            1519843199733308
+          ],
+          "Infiltration - Dropbox Download": [
+            1519828404627743,
+            1519839824149292
+          ],
+          "Infiltration - Dropbox Download - Attempted": [
+            1519828405142961,
+            1519839823923481
+          ]
+        }
+      },
+      "nmap_exact_author_label": "Infiltration - NMAP Portscan",
+      "strict_by_original_NF_class": [
+        {
+          "original_NF_attack": "Benign",
+          "rows": 6482,
+          "single_unanswered_SYN": 0,
+          "round19_syn47": 0
+        },
+        {
+          "original_NF_attack": "Infilteration",
+          "rows": 13280,
+          "single_unanswered_SYN": 0,
+          "round19_syn47": 0
+        }
+      ],
+      "retained_corrected_NMAP_other_orientation": 0,
+      "total_author_NMAP_rows": 49740,
+      "NF_forward_strict_unique_NMAP": 19762,
+      "NMAP_ground_truth_coverage_by_matched_forward_NF": 0.3973059911540008,
+      "checks": {
+        "all_nf_endpoint_forward": {
+          "nf_rows": 64008,
+          "no_exact_start_and_directional_tuple": 41584,
+          "ambiguous_key_in_either_observed_table": 2634,
+          "unique_both": 19790,
+          "same_end_ms": 19765,
+          "same_two_packet_counts": 19762,
+          "same_start_and_end_ms_direction_and_packet_counts": 19762,
+          "corrected_NMAP_at_unique_key": 19790,
+          "corrected_NMAP_strict_full_match": 19762,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 15
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 6482
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 10
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 3
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 13280
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14656010,
+              "corrected_author_id": 4490531,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272728,
+              "corrected_start_us": 1519829272728728,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 139,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14656016,
+              "corrected_author_id": 4491674,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272730,
+              "corrected_start_us": 1519829272730062,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 135,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14656018,
+              "corrected_author_id": 4488512,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272745,
+              "corrected_start_us": 1519829272745740,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "all_nf_endpoint_other": {
+          "nf_rows": 5482,
+          "no_exact_start_and_directional_tuple": 436,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 5046,
+          "same_end_ms": 4884,
+          "same_two_packet_counts": 4675,
+          "same_start_and_end_ms_direction_and_packet_counts": 4675,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 157
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 207
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 4663
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Communication Victim Attacker",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 5
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 2
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 7
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download - Attempted",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 5
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14116067,
+              "corrected_author_id": 4440022,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519820538613,
+              "corrected_start_us": 1519820538613984,
+              "src": "5.101.40.105",
+              "sport": 52760,
+              "dst": "172.31.69.24",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14116266,
+              "corrected_author_id": 4421830,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519820540503,
+              "corrected_start_us": 1519820540503110,
+              "src": "50.28.98.37",
+              "sport": 49724,
+              "dst": "172.31.69.24",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14116293,
+              "corrected_author_id": 4447740,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519820540837,
+              "corrected_start_us": 1519820540837699,
+              "src": "172.31.69.24",
+              "sport": 54525,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "all_forward_Benign": {
+          "nf_rows": 48074,
+          "no_exact_start_and_directional_tuple": 41555,
+          "ambiguous_key_in_either_observed_table": 22,
+          "unique_both": 6497,
+          "same_end_ms": 6482,
+          "same_two_packet_counts": 6482,
+          "same_start_and_end_ms_direction_and_packet_counts": 6482,
+          "corrected_NMAP_at_unique_key": 6497,
+          "corrected_NMAP_strict_full_match": 6482,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 15
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 6482
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14656010,
+              "corrected_author_id": 4490531,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272728,
+              "corrected_start_us": 1519829272728728,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 139,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14656016,
+              "corrected_author_id": 4491674,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272730,
+              "corrected_start_us": 1519829272730062,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 135,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14656018,
+              "corrected_author_id": 4488512,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272745,
+              "corrected_start_us": 1519829272745740,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "all_forward_Infilteration": {
+          "nf_rows": 15934,
+          "no_exact_start_and_directional_tuple": 29,
+          "ambiguous_key_in_either_observed_table": 2612,
+          "unique_both": 13293,
+          "same_end_ms": 13283,
+          "same_two_packet_counts": 13280,
+          "same_start_and_end_ms_direction_and_packet_counts": 13280,
+          "corrected_NMAP_at_unique_key": 13293,
+          "corrected_NMAP_strict_full_match": 13280,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 10
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 3
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 13280
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14667102,
+              "corrected_author_id": 4411569,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829404741,
+              "corrected_start_us": 1519829404741487,
+              "src": "172.31.69.24",
+              "sport": 58692,
+              "dst": "172.31.69.7",
+              "dport": 80,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14667103,
+              "corrected_author_id": 4418046,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829404741,
+              "corrected_start_us": 1519829404741009,
+              "src": "172.31.69.24",
+              "sport": 58692,
+              "dst": "172.31.69.7",
+              "dport": 443,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14667104,
+              "corrected_author_id": 4417885,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829404741,
+              "corrected_start_us": 1519829404741076,
+              "src": "172.31.69.24",
+              "sport": 58692,
+              "dst": "172.31.69.7",
+              "dport": 587,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_normal_single_syn": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 512,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 0,
+          "same_end_ms": 0,
+          "same_two_packet_counts": 0,
+          "same_start_and_end_ms_direction_and_packet_counts": 0,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [],
+          "examples": []
+        },
+        "probe_other_benign": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 88,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 424,
+          "same_end_ms": 368,
+          "same_two_packet_counts": 353,
+          "same_start_and_end_ms_direction_and_packet_counts": 353,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 56
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 15
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 353
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 15230899,
+              "corrected_author_id": 3262735,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519838321767,
+              "corrected_start_us": 1519838321767553,
+              "src": "172.31.66.5",
+              "sport": 51793,
+              "dst": "35.162.179.12",
+              "dport": 443,
+              "proto": 6,
+              "end_and_pkts_match": false
+            },
+            {
+              "NF_csv_row_zero_based": 14282467,
+              "corrected_author_id": 6233912,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519822767534,
+              "corrected_start_us": 1519822767534422,
+              "src": "172.31.65.51",
+              "sport": 63382,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 15777553,
+              "corrected_author_id": 2402815,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519846914668,
+              "corrected_start_us": 1519846914668117,
+              "src": "96.233.49.71",
+              "sport": 65356,
+              "dst": "172.31.64.121",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_other_uq_infiltration": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 60,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 452,
+          "same_end_ms": 435,
+          "same_two_packet_counts": 413,
+          "same_start_and_end_ms_direction_and_packet_counts": 413,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 17
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 22
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 413
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 15159342,
+              "corrected_author_id": 4372216,
+              "native": "Infilteration",
+              "corrected": "BENIGN",
+              "start_ms": 1519836915684,
+              "corrected_start_us": 1519836915684058,
+              "src": "172.31.69.17",
+              "sport": 51342,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 15329236,
+              "corrected_author_id": 4335955,
+              "native": "Infilteration",
+              "corrected": "BENIGN",
+              "start_ms": 1519839958090,
+              "corrected_start_us": 1519839958090801,
+              "src": "172.31.69.14",
+              "sport": 50642,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": false
+            },
+            {
+              "NF_csv_row_zero_based": 14895782,
+              "corrected_author_id": 4555777,
+              "native": "Infilteration",
+              "corrected": "BENIGN",
+              "start_ms": 1519832299115,
+              "corrected_start_us": 1519832299115659,
+              "src": "172.31.69.9",
+              "sport": 61274,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_rule_uq_attack": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 1,
+          "ambiguous_key_in_either_observed_table": 83,
+          "unique_both": 428,
+          "same_end_ms": 428,
+          "same_two_packet_counts": 428,
+          "same_start_and_end_ms_direction_and_packet_counts": 428,
+          "corrected_NMAP_at_unique_key": 428,
+          "corrected_NMAP_strict_full_match": 428,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 428
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14667123,
+              "corrected_author_id": 4439799,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829404744,
+              "corrected_start_us": 1519829404744460,
+              "src": "172.31.69.24",
+              "sport": 58692,
+              "dst": "172.31.69.7",
+              "dport": 25,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14667133,
+              "corrected_author_id": 4414169,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829404756,
+              "corrected_start_us": 1519829404756197,
+              "src": "172.31.69.24",
+              "sport": 58692,
+              "dst": "172.31.69.7",
+              "dport": 15004,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14667161,
+              "corrected_author_id": 4447380,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829404757,
+              "corrected_start_us": 1519829404757887,
+              "src": "172.31.69.24",
+              "sport": 58692,
+              "dst": "172.31.69.7",
+              "dport": 3283,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_rule_uq_benign": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 434,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 78,
+          "same_end_ms": 78,
+          "same_two_packet_counts": 78,
+          "same_start_and_end_ms_direction_and_packet_counts": 78,
+          "corrected_NMAP_at_unique_key": 78,
+          "corrected_NMAP_strict_full_match": 78,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 78
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14656016,
+              "corrected_author_id": 4491674,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829272730,
+              "corrected_start_us": 1519829272730062,
+              "src": "172.31.69.24",
+              "sport": 48842,
+              "dst": "172.31.69.5",
+              "dport": 135,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14664939,
+              "corrected_author_id": 4430148,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829372635,
+              "corrected_start_us": 1519829372635803,
+              "src": "172.31.69.24",
+              "sport": 51686,
+              "dst": "172.31.69.6",
+              "dport": 445,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14709825,
+              "corrected_author_id": 4434739,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519829851881,
+              "corrected_start_us": 1519829851881570,
+              "src": "172.31.69.24",
+              "sport": 51985,
+              "dst": "172.31.69.14",
+              "dport": 445,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_same_source_normal_outside_rule": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 29,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 483,
+          "same_end_ms": 467,
+          "same_two_packet_counts": 438,
+          "same_start_and_end_ms_direction_and_packet_counts": 438,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 15
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 29
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 437
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Communication Victim Attacker",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 1
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 1
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 14116347,
+              "corrected_author_id": 4440689,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519820541060,
+              "corrected_start_us": 1519820541060354,
+              "src": "172.31.69.24",
+              "sport": 57112,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14116349,
+              "corrected_author_id": 4404905,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519820541060,
+              "corrected_start_us": 1519820541060886,
+              "src": "172.31.69.24",
+              "sport": 49684,
+              "dst": "54.230.207.12",
+              "dport": 443,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 14116353,
+              "corrected_author_id": 4405642,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519820541084,
+              "corrected_start_us": 1519820541084357,
+              "src": "172.31.69.24",
+              "sport": 57566,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            }
+          ]
+        }
+      }
+    },
+    "2018-03-01": {
+      "day": "2018-03-01",
+      "corrected": {
+        "name": "Thursday-01-03-2018.csv",
+        "method": "deflate",
+        "offset": 7364775330,
+        "compressed_bytes": 1116100289,
+        "uncompressed_bytes": 3808397458,
+        "crc32": 3350688237,
+        "full_read_rows": 6551401,
+        "selected_for_join": 64031,
+        "selected_file": "2018-03-01.corrected_endpoints.parquet",
+        "selection": "Every corrected flow touching the specified scanner host in either direction plus every flow starting in a +/-1ms bin of a deterministic UQ metadata probe, on the date.",
+        "crc_verified": true,
+        "uncompressed_sha256": "55b29d7b05cbe04192d31bdfe23e6c900c40d2497e26b21916e85c3cd64fc9e8",
+        "compressed_sha256": "86be956d5f41aa9916f00ee7d86a5b386f5e9ed300ddcd5b8cc1993892325308",
+        "counts_by_original_CNS_label": [
+          {
+            "label": "BENIGN",
+            "attempted_category": "-1",
+            "rows": 6511554
+          },
+          {
+            "label": "Infiltration - Communication Victim Attacker",
+            "attempted_category": "-1",
+            "rows": 161
+          },
+          {
+            "label": "Infiltration - Dropbox Download",
+            "attempted_category": "-1",
+            "rows": 39
+          },
+          {
+            "label": "Infiltration - Dropbox Download - Attempted",
+            "attempted_category": "4",
+            "rows": 13
+          },
+          {
+            "label": "Infiltration - NMAP Portscan",
+            "attempted_category": "-1",
+            "rows": 39634
+          }
+        ],
+        "per_label_min_start_us_max_end_us": {
+          "BENIGN": [
+            1519906528926174,
+            1519947615718778
+          ],
+          "Infiltration - NMAP Portscan": [
+            1519913417833657,
+            1519933081151021
+          ],
+          "Infiltration - Communication Victim Attacker": [
+            1519912674262686,
+            1519933041872344
+          ],
+          "Infiltration - Dropbox Download": [
+            1519912390945186,
+            1519914854505576
+          ],
+          "Infiltration - Dropbox Download - Attempted": [
+            1519912391264488,
+            1519912760415545
+          ]
+        }
+      },
+      "nmap_exact_author_label": "Infiltration - NMAP Portscan",
+      "strict_by_original_NF_class": [
+        {
+          "original_NF_attack": "Benign",
+          "rows": 3,
+          "single_unanswered_SYN": 0,
+          "round19_syn47": 0
+        },
+        {
+          "original_NF_attack": "Infilteration",
+          "rows": 5731,
+          "single_unanswered_SYN": 0,
+          "round19_syn47": 0
+        }
+      ],
+      "retained_corrected_NMAP_other_orientation": 0,
+      "total_author_NMAP_rows": 39634,
+      "NF_forward_strict_unique_NMAP": 5734,
+      "NMAP_ground_truth_coverage_by_matched_forward_NF": 0.14467376494928597,
+      "checks": {
+        "all_nf_endpoint_forward": {
+          "nf_rows": 47984,
+          "no_exact_start_and_directional_tuple": 12530,
+          "ambiguous_key_in_either_observed_table": 29718,
+          "unique_both": 5736,
+          "same_end_ms": 5734,
+          "same_two_packet_counts": 5734,
+          "same_start_and_end_ms_direction_and_packet_counts": 5734,
+          "corrected_NMAP_at_unique_key": 5736,
+          "corrected_NMAP_strict_full_match": 5734,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 3
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 2
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 5731
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16625094,
+              "corrected_author_id": 5772141,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913417896,
+              "corrected_start_us": 1519913417896145,
+              "src": "172.31.69.13",
+              "sport": 54111,
+              "dst": "172.31.69.1",
+              "dport": 33330,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16625095,
+              "corrected_author_id": 5747583,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913417927,
+              "corrected_start_us": 1519913417927463,
+              "src": "172.31.69.13",
+              "sport": 54058,
+              "dst": "172.31.69.1",
+              "dport": 33561,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16625096,
+              "corrected_author_id": 5758748,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913417958,
+              "corrected_start_us": 1519913417958643,
+              "src": "172.31.69.13",
+              "sport": 54059,
+              "dst": "172.31.69.1",
+              "dport": 33561,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "all_nf_endpoint_other": {
+          "nf_rows": 5028,
+          "no_exact_start_and_directional_tuple": 408,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 4620,
+          "same_end_ms": 4493,
+          "same_two_packet_counts": 4390,
+          "same_start_and_end_ms_direction_and_packet_counts": 4390,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 56
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 56
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 2998
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 2
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 16
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download - Attempted",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 12
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 70
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 44
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 1349
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - Communication Victim Attacker",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 1
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - Communication Victim Attacker",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 1
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 1
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 13
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - Dropbox Download - Attempted",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 1
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16149390,
+              "corrected_author_id": 5742355,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519906598911,
+              "corrected_start_us": 1519906598911214,
+              "src": "96.233.49.71",
+              "sport": 56053,
+              "dst": "172.31.69.13",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16149680,
+              "corrected_author_id": 5749492,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519906600836,
+              "corrected_start_us": 1519906600836782,
+              "src": "1.234.27.248",
+              "sport": 58215,
+              "dst": "172.31.69.13",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16150165,
+              "corrected_author_id": 5765205,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519906607168,
+              "corrected_start_us": 1519906607168523,
+              "src": "172.31.69.13",
+              "sport": 50368,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "all_forward_Benign": {
+          "nf_rows": 12545,
+          "no_exact_start_and_directional_tuple": 12521,
+          "ambiguous_key_in_either_observed_table": 21,
+          "unique_both": 3,
+          "same_end_ms": 3,
+          "same_two_packet_counts": 3,
+          "same_start_and_end_ms_direction_and_packet_counts": 3,
+          "corrected_NMAP_at_unique_key": 3,
+          "corrected_NMAP_strict_full_match": 3,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 3
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16686681,
+              "corrected_author_id": 5761477,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519914141182,
+              "corrected_start_us": 1519914141182613,
+              "src": "172.31.69.13",
+              "sport": 64089,
+              "dst": "172.31.69.15",
+              "dport": 22,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16853197,
+              "corrected_author_id": 4798016,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519916093437,
+              "corrected_start_us": 1519916093437754,
+              "src": "172.31.69.13",
+              "sport": 52241,
+              "dst": "172.31.69.23",
+              "dport": 1433,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 17686323,
+              "corrected_author_id": 4798352,
+              "native": "Benign",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519929915869,
+              "corrected_start_us": 1519929915869199,
+              "src": "172.31.69.13",
+              "sport": 54503,
+              "dst": "172.31.69.23",
+              "dport": 445,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "all_forward_Infilteration": {
+          "nf_rows": 35439,
+          "no_exact_start_and_directional_tuple": 9,
+          "ambiguous_key_in_either_observed_table": 29697,
+          "unique_both": 5733,
+          "same_end_ms": 5731,
+          "same_two_packet_counts": 5731,
+          "same_start_and_end_ms_direction_and_packet_counts": 5731,
+          "corrected_NMAP_at_unique_key": 5733,
+          "corrected_NMAP_strict_full_match": 5731,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 2
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 5731
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16625094,
+              "corrected_author_id": 5772141,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913417896,
+              "corrected_start_us": 1519913417896145,
+              "src": "172.31.69.13",
+              "sport": 54111,
+              "dst": "172.31.69.1",
+              "dport": 33330,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16625095,
+              "corrected_author_id": 5747583,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913417927,
+              "corrected_start_us": 1519913417927463,
+              "src": "172.31.69.13",
+              "sport": 54058,
+              "dst": "172.31.69.1",
+              "dport": 33561,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16625096,
+              "corrected_author_id": 5758748,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913417958,
+              "corrected_start_us": 1519913417958643,
+              "src": "172.31.69.13",
+              "sport": 54059,
+              "dst": "172.31.69.1",
+              "dport": 33561,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_normal_single_syn": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 512,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 0,
+          "same_end_ms": 0,
+          "same_two_packet_counts": 0,
+          "same_start_and_end_ms_direction_and_packet_counts": 0,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [],
+          "examples": []
+        },
+        "probe_other_benign": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 69,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 443,
+          "same_end_ms": 406,
+          "same_two_packet_counts": 396,
+          "same_start_and_end_ms_direction_and_packet_counts": 396,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 37
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 10
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 396
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16610313,
+              "corrected_author_id": 5751382,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519913191293,
+              "corrected_start_us": 1519913191293903,
+              "src": "96.233.49.71",
+              "sport": 49172,
+              "dst": "172.31.69.13",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 17430932,
+              "corrected_author_id": 5999919,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519926379501,
+              "corrected_start_us": 1519926379501355,
+              "src": "172.31.67.62",
+              "sport": 50091,
+              "dst": "52.73.123.67",
+              "dport": 80,
+              "proto": 6,
+              "end_and_pkts_match": false
+            },
+            {
+              "NF_csv_row_zero_based": 17532486,
+              "corrected_author_id": 70457,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519927859192,
+              "corrected_start_us": 1519927859192732,
+              "src": "5.101.40.105",
+              "sport": 54631,
+              "dst": "172.31.64.122",
+              "dport": 3389,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_other_uq_infiltration": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 43,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 469,
+          "same_end_ms": 455,
+          "same_two_packet_counts": 434,
+          "same_start_and_end_ms_direction_and_packet_counts": 434,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 14
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 21
+            },
+            {
+              "NF": "Infilteration",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 434
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16237715,
+              "corrected_author_id": 5767176,
+              "native": "Infilteration",
+              "corrected": "BENIGN",
+              "start_ms": 1519907813899,
+              "corrected_start_us": 1519907813899119,
+              "src": "172.31.69.13",
+              "sport": 62566,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16541327,
+              "corrected_author_id": 5736460,
+              "native": "Infilteration",
+              "corrected": "BENIGN",
+              "start_ms": 1519912252257,
+              "corrected_start_us": 1519912252257741,
+              "src": "172.31.69.13",
+              "sport": 57081,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16623488,
+              "corrected_author_id": 5765572,
+              "native": "Infilteration",
+              "corrected": "BENIGN",
+              "start_ms": 1519913395410,
+              "corrected_start_us": 1519913395410396,
+              "src": "172.31.69.13",
+              "sport": 56910,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_rule_uq_attack": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 0,
+          "ambiguous_key_in_either_observed_table": 427,
+          "unique_both": 85,
+          "same_end_ms": 85,
+          "same_two_packet_counts": 85,
+          "same_start_and_end_ms_direction_and_packet_counts": 85,
+          "corrected_NMAP_at_unique_key": 85,
+          "corrected_NMAP_strict_full_match": 85,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 85
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16628842,
+              "corrected_author_id": 5742415,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913479332,
+              "corrected_start_us": 1519913479332775,
+              "src": "172.31.69.13",
+              "sport": 51051,
+              "dst": "172.31.69.4",
+              "dport": 135,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16642074,
+              "corrected_author_id": 5751935,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913659481,
+              "corrected_start_us": 1519913659481349,
+              "src": "172.31.69.13",
+              "sport": 59149,
+              "dst": "172.31.69.7",
+              "dport": 995,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16642401,
+              "corrected_author_id": 5760613,
+              "native": "Infilteration",
+              "corrected": "Infiltration - NMAP Portscan",
+              "start_ms": 1519913659492,
+              "corrected_start_us": 1519913659492342,
+              "src": "172.31.69.13",
+              "sport": 59149,
+              "dst": "172.31.69.7",
+              "dport": 5678,
+              "proto": 6,
+              "end_and_pkts_match": true
+            }
+          ]
+        },
+        "probe_rule_uq_benign": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 511,
+          "ambiguous_key_in_either_observed_table": 1,
+          "unique_both": 0,
+          "same_end_ms": 0,
+          "same_two_packet_counts": 0,
+          "same_start_and_end_ms_direction_and_packet_counts": 0,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [],
+          "examples": []
+        },
+        "probe_same_source_normal_outside_rule": {
+          "nf_rows": 512,
+          "no_exact_start_and_directional_tuple": 29,
+          "ambiguous_key_in_either_observed_table": 0,
+          "unique_both": 483,
+          "same_end_ms": 466,
+          "same_two_packet_counts": 447,
+          "same_start_and_end_ms_direction_and_packet_counts": 447,
+          "corrected_NMAP_at_unique_key": 0,
+          "corrected_NMAP_strict_full_match": 0,
+          "NF_vs_corrected_unique": [
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": false,
+              "packets_equal": false,
+              "n": 17
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 18
+            },
+            {
+              "NF": "Benign",
+              "corrected": "BENIGN",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 437
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": false,
+              "n": 1
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 7
+            },
+            {
+              "NF": "Benign",
+              "corrected": "Infiltration - Dropbox Download - Attempted",
+              "end_ms_equal": true,
+              "packets_equal": true,
+              "n": 3
+            }
+          ],
+          "examples": [
+            {
+              "NF_csv_row_zero_based": 16150178,
+              "corrected_author_id": 5736062,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519906607185,
+              "corrected_start_us": 1519906607185064,
+              "src": "172.31.69.13",
+              "sport": 62036,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": false
+            },
+            {
+              "NF_csv_row_zero_based": 16150185,
+              "corrected_author_id": 5735992,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519906607291,
+              "corrected_start_us": 1519906607291475,
+              "src": "172.31.69.13",
+              "sport": 49684,
+              "dst": "23.15.8.131",
+              "dport": 80,
+              "proto": 6,
+              "end_and_pkts_match": true
+            },
+            {
+              "NF_csv_row_zero_based": 16150206,
+              "corrected_author_id": 5743543,
+              "native": "Benign",
+              "corrected": "BENIGN",
+              "start_ms": 1519906607457,
+              "corrected_start_us": 1519906607457190,
+              "src": "172.31.69.13",
+              "sport": 58923,
+              "dst": "172.31.0.2",
+              "dport": 53,
+              "proto": 17,
+              "end_and_pkts_match": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

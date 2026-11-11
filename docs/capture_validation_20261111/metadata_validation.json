@@ -1,0 +1,33 @@
+{
+  "metadata_only": true,
+  "fits": 0,
+  "scores": 0,
+  "metadata_threads": 8,
+  "official_zip_sha256": "7399bdef73d29875ab388a53e2ae7e592d1952c4ef07ae6de195ba133823d97f",
+  "official_csv_sha256": "242a6971cc801eae621b1fc4d966db2cd0af9cc866805f36a6fc5d0058dfbb74",
+  "roles_sha256_checked": {
+    "P_time": "2b79ea062a5b77348580c25f601c4a28d4c79eea9ca848289c8c473a158d0eca",
+    "C_time": "56aee6629215aaa986508ad533d626c3a9547102d63c53c0ba48302e27cef535",
+    "E_time": "64f2a59c48d83a8febb4889a9856a410f262d5a1d758a80d5c9c8e78b690206b"
+  },
+  "finite_raw_features_checked": 48,
+  "selected_rows": 68192,
+  "publisher_vs_registered_changed": 166,
+  "per_role": {
+    "C_time": {
+      "rows": 10000,
+      "native_benign_to_scanning": 0,
+      "n_intended_fields": 48
+    },
+    "E_time": {
+      "rows": 50000,
+      "native_benign_to_scanning": 125,
+      "n_intended_fields": 48
+    },
+    "P_time": {
+      "rows": 8192,
+      "native_benign_to_scanning": 41,
+      "n_intended_fields": 48
+    }
+  }
+}

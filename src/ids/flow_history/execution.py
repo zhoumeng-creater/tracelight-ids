@@ -150,10 +150,10 @@ class ResourceLog:
         self.worker.join()
 
 
-def pack(root):
+def pack(root, *, prefix="flow-history-results"):
     """Return the new small detectors and their evidence; leave the capture and raw IP fixtures in the lab."""
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
-    output = root / f"flow-history-results-{stamp}.zip"
+    output = root / f"{prefix}-{stamp}.zip"
     files = list(root.glob("*.json")) + list(root.glob("resources-*.csv"))
     for folder in ("receipts", "evidence"):
         files.extend(p for p in (root / folder).rglob("*") if p.is_file() and not p.name.endswith(".tmp")

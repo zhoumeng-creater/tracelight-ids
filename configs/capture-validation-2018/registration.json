@@ -1,0 +1,53 @@
+{
+  "title": "Temporal paired multi-family HGB replication on independent CSE-CIC-IDS2018 capture",
+  "release": "independent-capture-lab-v1",
+  "selection": "Coverage-only inspection before model scoring. Source, labels, cuts, quotas, verified row IDs, acceptance conditions and HGB arms fixed at release.",
+  "source": {
+    "dataset": "NF-CSE-CIC-IDS2018-v3",
+    "CSV_sha256": "242a6971cc801eae621b1fc4d966db2cd0af9cc866805f36a6fc5d0058dfbb74",
+    "source_rows": 20115529
+  },
+  "labels": {
+    "file": "cic2018_verified_nmap_rows.npy",
+    "rows": 25496,
+    "bytes": 102112,
+    "sha256": "a158630fec757ed5efa61babf6ca520f1db22183bb09a6a7a9b7986677ba0273"
+  },
+  "packet_labels": {
+    "file": "cic2018_packet_nmap_rows.npy",
+    "rows": 25446,
+    "bytes": 101912,
+    "sha256": "376acaa6fb7506215ca2f26666cecf615779fe92987b5088339cc987e4acda81"
+  },
+  "label_index_unit": "Little-endian uint32 one-based CSV data row excluding header; index types disjoint.",
+  "role_identity_sha256": {
+    "P_time": "2b79ea062a5b77348580c25f601c4a28d4c79eea9ca848289c8c473a158d0eca",
+    "C_time": "56aee6629215aaa986508ad533d626c3a9547102d63c53c0ba48302e27cef535",
+    "E_time": "64f2a59c48d83a8febb4889a9856a410f262d5a1d758a80d5c9c8e78b690206b"
+  },
+  "quotas": {
+    "P_normal": 4096,
+    "P_attack": 4096,
+    "C_time": 10000,
+    "E_time": 50000
+  },
+  "seed": 20261111,
+  "end_time_cuts_utc": [
+    "2018-02-28T19:00:00Z",
+    "2018-03-01T14:00:00Z",
+    "2018-03-03T00:00:00Z"
+  ],
+  "cohorts": "Canonical endpoint pair + IP protocol, designated 50/20/30 buckets by group. P/C/E strictly chronological. C is normal only; E sampled without class balancing from adjudicable records. Quarantine unresolved event flows and remaining native Infilteration.",
+  "models": {
+    "hgb48": "registered R19 48 raw fields",
+    "hgb52_history": "same 48 plus four strictly previous 60s measures",
+    "iterations": 200,
+    "max_leaf_nodes": 31,
+    "learning_rate": 0.1,
+    "early_stopping": false,
+    "random_state": 20261111
+  },
+  "operating_point": "Each arm independently registers ceil((n_normal+1)*.99) on C, score strictly greater; E is opened once.",
+  "comparison": "On E, distinguish R19 gate (observed FPR <=1%, FP not higher, overall TP not lower, scanning TP and low-FPR partial AUC higher) from losses of non-scanning TP. Report each scanning evidence source, broad one-packet SYN, exact R19 signature, family, day, train-seen/unseen hosts, isolated CPU cost and stream replay.",
+  "scope": "Retraining fixed learning recipes inside another capture. E other attacks are Bot, absent in P. E scanning has one source host. Exact47 E has zero scans and one nominal benign, so that particular R19 mechanism is not evaluable."
+}

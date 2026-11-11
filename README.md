@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十轮实验室入口（2026-11-11）**　[CIC2018 独立采集复验](docs/INDEPENDENT_CAPTURE_LAB.md)。在同一批已核对标签的记录上比较原 48 字段 HGB 与加入四项 60 秒历史的 HGB，同时测扫描、未见 Bot、正常误报与逐流成本。固定标签为 `independent-capture-lab-v1`。
+
 **第十九轮实验室入口（2026-11-11）**　[过去 60 秒的流行为与低误报检测](docs/FLOW_HISTORY_LAB.md)。在旧开发集和前向新通信组上比较原始 48 字段与四项历史观测，复用旧分数；GPU 训练小型 MLP，多核 CPU 训练树模型，分别测量含历史状态的部署成本。固定标签为 `flow-history-lab-v1`。
 
 **第十八轮复现入口（2026-11-09）** [TabICL 重放诊断与 TabPFN 一次准备指南](docs/ROUTE_FOLLOWUP_LAB.md)，固定标签 `route-followup-lab-v1`。只运行两个 TabICL 诊断和一个 TabPFN 开发集补测；不重跑已完成的 TabM 或新通信组确认。统一脚本准备独立环境与固定权重，保存完整 C/E 冷重放、逐行差值、判决翻转和独立 CPU 成本；失败也保留报告并打包。旧 run 全部文件在运行前后核对 SHA，新结果写入独立目录。下方批次指南为历史执行记录。

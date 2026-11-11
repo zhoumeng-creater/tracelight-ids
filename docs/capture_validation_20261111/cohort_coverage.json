@@ -1,0 +1,304 @@
+{
+  "source_sha256": "242a6971cc801eae621b1fc4d966db2cd0af9cc866805f36a6fc5d0058dfbb74",
+  "source_rows": 20115529,
+  "confirmed_rows": 25496,
+  "packet_confirmed_rows": 25446,
+  "all_confirmed_rows": 50942,
+  "packet_uint32_payload_sha256": "d1ff06956b0671c7f68716644b489fec746dde8808195f30216f7831a523565d",
+  "source_truth_counts_before_sampling": [
+    {
+      "truth_source": "DistriNet_unique_NMAP",
+      "end_day_utc": "2018-02-28",
+      "host_key": "4eb765e27dfc2153",
+      "native_family": "Benign",
+      "rows": 6482
+    },
+    {
+      "truth_source": "DistriNet_unique_NMAP",
+      "end_day_utc": "2018-02-28",
+      "host_key": "4eb765e27dfc2153",
+      "native_family": "Infilteration",
+      "rows": 13280
+    },
+    {
+      "truth_source": "DistriNet_unique_NMAP",
+      "end_day_utc": "2018-03-01",
+      "host_key": "2885348be49b95d1",
+      "native_family": "Benign",
+      "rows": 3
+    },
+    {
+      "truth_source": "DistriNet_unique_NMAP",
+      "end_day_utc": "2018-03-01",
+      "host_key": "2885348be49b95d1",
+      "native_family": "Infilteration",
+      "rows": 5731
+    },
+    {
+      "truth_source": "published_Nmap_event_packet_match",
+      "end_day_utc": "2018-02-28",
+      "host_key": "4eb765e27dfc2153",
+      "native_family": "Benign",
+      "rows": 16418
+    },
+    {
+      "truth_source": "published_Nmap_event_packet_match",
+      "end_day_utc": "2018-03-01",
+      "host_key": "2885348be49b95d1",
+      "native_family": "Benign",
+      "rows": 9028
+    }
+  ],
+  "confirmed_uint32_payload_sha256": "2301e07ab4f324730c3daebccbec7a8b5e21f5c5bad5e3a4106125539acd8b7d",
+  "excluded": {
+    "uncertain_scan_rows": 61050,
+    "remaining_native_infiltration": 136779,
+    "verified_original_native_benign": 31931
+  },
+  "eligible_before_priority": {
+    "P_normal": 6628911,
+    "P_attack": 1121927,
+    "C_time": 183406,
+    "E_time": 1039254
+  },
+  "quotas": {
+    "P_normal": 4096,
+    "P_attack": 4096,
+    "C_time": 10000,
+    "E_time": 50000
+  },
+  "seed": 20261111,
+  "p_end": 1519844400000,
+  "c_end": 1519912800000,
+  "e_end": 1520035200000,
+  "opening_warmup_ms": 60000,
+  "cross_role_group_overlap": 0,
+  "rows_by_role": {
+    "P_time": {
+      "rows": 8192,
+      "groups": 8123,
+      "hosts": 1026,
+      "unseen_train_hosts": 0,
+      "families": {
+        "Benign": 4096,
+        "DDoS": 2408,
+        "BruteForce": 1059,
+        "DoS": 555,
+        "Scanning": 70,
+        "Web Attacks": 4
+      },
+      "native_families": {
+        "Benign": 4137,
+        "DDOS_attack-HOIC": 1898,
+        "FTP-BruteForce": 698,
+        "DDoS_attacks-LOIC-HTTP": 502,
+        "SSH-Bruteforce": 361,
+        "DoS_attacks-Hulk": 210,
+        "DoS_attacks-SlowHTTPTest": 181,
+        "DoS_attacks-GoldenEye": 100,
+        "DoS_attacks-Slowloris": 64,
+        "Infilteration": 29,
+        "DDOS_attack-LOIC-UDP": 8,
+        "Brute_Force_-Web": 3,
+        "SQL_Injection": 1
+      },
+      "daily_families": {
+        "2018-02-14": {
+          "BruteForce": 1059,
+          "Benign": 475
+        },
+        "2018-02-15": {
+          "Benign": 487,
+          "DoS": 164
+        },
+        "2018-02-16": {
+          "Benign": 485,
+          "DoS": 391
+        },
+        "2018-02-20": {
+          "DDoS": 502,
+          "Benign": 481
+        },
+        "2018-02-21": {
+          "DDoS": 1906,
+          "Benign": 495
+        },
+        "2018-02-22": {
+          "Benign": 633,
+          "Web Attacks": 4
+        },
+        "2018-02-23": {
+          "Benign": 597
+        },
+        "2018-02-28": {
+          "Benign": 443,
+          "Scanning": 70
+        }
+      },
+      "scan_source_hosts": {
+        "4eb765e27dfc2153": 70
+      },
+      "scan_on_unseen_sources": 0,
+      "scan_on_source_unseen_as_scanner": 0,
+      "confirmed_scans_by_evidence": [
+        {
+          "truth_source": "DistriNet_unique_NMAP",
+          "end_day_utc": "2018-02-28",
+          "host_key": "4eb765e27dfc2153",
+          "native_family": "Benign",
+          "rows": 14
+        },
+        {
+          "truth_source": "DistriNet_unique_NMAP",
+          "end_day_utc": "2018-02-28",
+          "host_key": "4eb765e27dfc2153",
+          "native_family": "Infilteration",
+          "rows": 29
+        },
+        {
+          "truth_source": "published_Nmap_event_packet_match",
+          "end_day_utc": "2018-02-28",
+          "host_key": "4eb765e27dfc2153",
+          "native_family": "Benign",
+          "rows": 27
+        }
+      ],
+      "scan_syn": 27,
+      "normal_syn": 160,
+      "scan_syn47": 0,
+      "normal_syn47": 0,
+      "min_end_ms": 1518611298400,
+      "max_end_ms": 1519844388931
+    },
+    "C_time": {
+      "rows": 10000,
+      "groups": 9828,
+      "hosts": 1335,
+      "unseen_train_hosts": 969,
+      "families": {
+        "Benign": 10000
+      },
+      "native_families": {
+        "Benign": 10000
+      },
+      "daily_families": {
+        "2018-02-28": {
+          "Benign": 5361
+        },
+        "2018-03-01": {
+          "Benign": 4639
+        }
+      },
+      "scan_source_hosts": {},
+      "scan_on_unseen_sources": 0,
+      "scan_on_source_unseen_as_scanner": 0,
+      "confirmed_scans_by_evidence": [],
+      "scan_syn": 0,
+      "normal_syn": 338,
+      "scan_syn47": 0,
+      "normal_syn47": 0,
+      "min_end_ms": 1519844464821,
+      "max_end_ms": 1519912797640
+    },
+    "E_time": {
+      "rows": 50000,
+      "groups": 48416,
+      "hosts": 3809,
+      "unseen_train_hosts": 3463,
+      "families": {
+        "Benign": 46817,
+        "Bot": 2974,
+        "Scanning": 209
+      },
+      "native_families": {
+        "Benign": 46942,
+        "Bot": 2974,
+        "Infilteration": 84
+      },
+      "daily_families": {
+        "2018-03-01": {
+          "Benign": 23336,
+          "Scanning": 209
+        },
+        "2018-03-02": {
+          "Benign": 23481,
+          "Bot": 2974
+        }
+      },
+      "scan_source_hosts": {
+        "2885348be49b95d1": 209
+      },
+      "scan_on_unseen_sources": 0,
+      "scan_on_source_unseen_as_scanner": 209,
+      "confirmed_scans_by_evidence": [
+        {
+          "truth_source": "DistriNet_unique_NMAP",
+          "end_day_utc": "2018-03-01",
+          "host_key": "2885348be49b95d1",
+          "native_family": "Infilteration",
+          "rows": 84
+        },
+        {
+          "truth_source": "published_Nmap_event_packet_match",
+          "end_day_utc": "2018-03-01",
+          "host_key": "2885348be49b95d1",
+          "native_family": "Benign",
+          "rows": 125
+        }
+      ],
+      "scan_syn": 125,
+      "normal_syn": 1365,
+      "scan_syn47": 0,
+      "normal_syn47": 1,
+      "min_end_ms": 1519912860078,
+      "max_end_ms": 1520021152849,
+      "seven_field_overlap": {
+        "fields": [
+          "PROTOCOL",
+          "L4_DST_PORT",
+          "IN_PKTS",
+          "OUT_PKTS",
+          "TCP_FLAGS",
+          "CLIENT_TCP_FLAGS",
+          "SERVER_TCP_FLAGS"
+        ],
+        "all_days": {
+          "matched_scan_rows": 23,
+          "matched_normal_rows": 54,
+          "matched_keys": 21,
+          "distinct_signatures": 21,
+          "n_scan": 209,
+          "n_normal": 46817
+        },
+        "within_day": {
+          "matched_scan_rows": 13,
+          "matched_normal_rows": 24,
+          "matched_keys": 12,
+          "distinct_signatures": 12,
+          "n_scan": 209,
+          "n_normal": 46817
+        }
+      }
+    }
+  },
+  "role_identity_sha256": {
+    "P_time": "2b79ea062a5b77348580c25f601c4a28d4c79eea9ca848289c8c473a158d0eca",
+    "C_time": "56aee6629215aaa986508ad533d626c3a9547102d63c53c0ba48302e27cef535",
+    "E_time": "64f2a59c48d83a8febb4889a9856a410f262d5a1d758a80d5c9c8e78b690206b"
+  },
+  "identity_encoding": "One-based native record number, final attack_family, truth_source; numerically row-sorted, UTF-8 TSV, LF after every row, no header.",
+  "eligible_for_training": true,
+  "coverage_checks": {
+    "target_quotas": true,
+    "train_scan_and_other_attack": true,
+    "calibration_can_register_one_percent": true,
+    "evaluation_scan_other_attack_and_normal": true,
+    "evaluation_has_similar_normal_syn": true
+  },
+  "subgroup_evaluable": {
+    "one_unanswered_syn": true,
+    "original_47_field_signature": false
+  },
+  "evaluation_selection": "Within the adjudicable pool, E sampled by source row priority without label stratification.",
+  "truth_scope": "Scanning from uniquely matched corrected NMAP flows or verified native SYN packets inside published Nmap events; non-scan positives and eligible normal from native UQ. Others quarantined."
+}

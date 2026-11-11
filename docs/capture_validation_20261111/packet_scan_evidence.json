@@ -1,0 +1,452 @@
+{
+  "matching": "Both native TCP flows and raw pure SYN packets must be unique at the directed IPv4 address/port 5-tuple and first millisecond. Require NF 1 forward packet, zero reverse, pure SYN bits, start=end, NF IN_BYTES=MAX_IP_PKT_LEN=actual IPv4 total_length, and TCP_WIN_MAX_IN=actual TCP receive window. TTL is compared descriptively because the NF values are commonly both zero.",
+  "interpretation": "NMAP labels combine packet observation with independent author-documented scanner direction, endpoints, no DHCP, and time window; different evidence source from the corrected-flow match. Controls are observed SYN packets with native Benign label outside this NMAP rule, not individually guaranteed benign. Reverse counts describe later TCP packets at the reverse tuple, not proof of causal replies or packet absence in the physical network.",
+  "ids": {
+    "nmap": {
+      "rows": 25446,
+      "file": "cic2018_packet_nmap_rows.npy",
+      "sha256": "376acaa6fb7506215ca2f26666cecf615779fe92987b5088339cc987e4acda81"
+    },
+    "nominal_benign_control": {
+      "rows": 267,
+      "file": "cic2018_packet_nominal_benign_control_rows.npy",
+      "sha256": "2ce37bdddf00548f4c9e0bf47904e33b7cbb2473e714dd08e3da7db9eeb2f983"
+    }
+  },
+  "days": {
+    "2018-02-28": {
+      "source_host": "172.31.69.24",
+      "capture_files": [
+        {
+          "day": "2018-02-28",
+          "host": "172.31.69.24",
+          "member": "pcap/capEC2AMAZ-O4EL3NG-172.31.69.24- part1",
+          "label": "2018-02-28-0",
+          "input_url": "https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Original%20Network%20Traffic%20and%20Log%20data/Wednesday-28-02-2018/pcap.zip",
+          "zip_bytes": 53251694487,
+          "etag": "\"b688b1c7c529c8754fe11aec1a963270-3175\"",
+          "offset": 31605811737,
+          "compressed_bytes": 90027418,
+          "bytes": 98445934,
+          "crc32": 841171055,
+          "index_first_in_member_one_based": true,
+          "packets": 123131,
+          "compact_scanner_TCP_events": 106918,
+          "scanner_TCP_pure_SYN_packets": 523,
+          "first_us": 1519820534887710,
+          "last_us": 1519828479616085,
+          "pcap_sha256": "19b8769d3e97acfce4983184ff81c39094f2082682a25ceb84fd531c370d0834",
+          "deflate_sha256": "1aa5fff9fe46c16e76f00c01759c5a5101c88c8faf3c4a958125a1d7db03d70d",
+          "crc32_verified": true
+        },
+        {
+          "day": "2018-02-28",
+          "host": "172.31.69.24",
+          "member": "pcap/capEC2AMAZ-O4EL3NG-172.31.69.24-part2",
+          "label": "2018-02-28-1",
+          "input_url": "https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Original%20Network%20Traffic%20and%20Log%20data/Wednesday-28-02-2018/pcap.zip",
+          "zip_bytes": 53251694487,
+          "etag": "\"b688b1c7c529c8754fe11aec1a963270-3175\"",
+          "offset": 31695839227,
+          "compressed_bytes": 298278501,
+          "bytes": 347870553,
+          "crc32": 3547627704,
+          "index_first_in_member_one_based": true,
+          "packets": 796406,
+          "compact_scanner_TCP_events": 474788,
+          "scanner_TCP_pure_SYN_packets": 182547,
+          "first_us": 1519828704907344,
+          "last_us": 1519854179188053,
+          "pcap_sha256": "f3412318a76a9de67dd1b4fdb143613080adecec3fdcc477fc06463d227e58d3",
+          "deflate_sha256": "fd44b8b4ed172cd7022a6f5fb74e7e96f4f79367dd8f72cfa3792f516663778b",
+          "crc32_verified": true
+        }
+      ],
+      "comparison": {
+        "native_Benign_outside_directed_rule": {
+          "NF_one_packet_rows": 147,
+          "native_directed_tuple_and_ms_observed_in_PCAP": 147,
+          "both_unique": 147,
+          "strict_packet_field_match": 147,
+          "round19_exact47": 0,
+          "native_class": {
+            "Benign": 147
+          },
+          "NF_TTL_minmax_both_zero": 147,
+          "actual_TTL_range": [
+            33,
+            237
+          ],
+          "orig_source_is_scanner": 0,
+          "destination_is_scanner": 147,
+          "next_reverse_packet_within_1s": 0,
+          "next_reverse_packet_within_60s": 0,
+          "inside_capture_time_extent_for_1s": 147,
+          "inside_capture_time_extent_for_60s": 146,
+          "examples": [
+            {
+              "one_based_id": 14117295,
+              "member": "2018-02-28-0",
+              "packet": 248.0,
+              "start_us": 1519820547563340.0,
+              "IPV4_SRC_ADDR": "77.72.82.80",
+              "L4_SRC_PORT": 49204,
+              "IPV4_DST_ADDR": "172.31.69.24",
+              "L4_DST_PORT": 8095,
+              "ip_len": 40.0,
+              "win": 1024.0,
+              "ttl": 231.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 14121940,
+              "member": "2018-02-28-0",
+              "packet": 457.0,
+              "start_us": 1519820600990508.0,
+              "IPV4_SRC_ADDR": "112.117.94.185",
+              "L4_SRC_PORT": 3594,
+              "IPV4_DST_ADDR": "172.31.69.24",
+              "L4_DST_PORT": 8080,
+              "ip_len": 40.0,
+              "win": 13314.0,
+              "ttl": 36.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 14124945,
+              "member": "2018-02-28-0",
+              "packet": 572.0,
+              "start_us": 1519820633296354.0,
+              "IPV4_SRC_ADDR": "46.105.160.133",
+              "L4_SRC_PORT": 28982,
+              "IPV4_DST_ADDR": "172.31.69.24",
+              "L4_DST_PORT": 22,
+              "ip_len": 48.0,
+              "win": 65535.0,
+              "ttl": 106.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            }
+          ]
+        },
+        "published_NMAP_window": {
+          "NF_one_packet_rows": 41491,
+          "native_directed_tuple_and_ms_observed_in_PCAP": 16418,
+          "both_unique": 16418,
+          "strict_packet_field_match": 16418,
+          "round19_exact47": 16,
+          "native_class": {
+            "Benign": 16418
+          },
+          "NF_TTL_minmax_both_zero": 16418,
+          "actual_TTL_range": [
+            37,
+            59
+          ],
+          "orig_source_is_scanner": 16418,
+          "destination_is_scanner": 0,
+          "next_reverse_packet_within_1s": 0,
+          "next_reverse_packet_within_60s": 0,
+          "inside_capture_time_extent_for_1s": 16418,
+          "inside_capture_time_extent_for_60s": 16418,
+          "examples": [
+            {
+              "one_based_id": 14662373,
+              "member": "2018-02-28-1",
+              "packet": 38831.0,
+              "start_us": 1519829345464914.0,
+              "IPV4_SRC_ADDR": "172.31.69.24",
+              "L4_SRC_PORT": 33840,
+              "IPV4_DST_ADDR": "172.31.69.6",
+              "L4_DST_PORT": 8008,
+              "ip_len": 44.0,
+              "win": 1024.0,
+              "ttl": 58.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 14662374,
+              "member": "2018-02-28-1",
+              "packet": 38832.0,
+              "start_us": 1519829345464957.0,
+              "IPV4_SRC_ADDR": "172.31.69.24",
+              "L4_SRC_PORT": 33840,
+              "IPV4_DST_ADDR": "172.31.69.6",
+              "L4_DST_PORT": 1494,
+              "ip_len": 44.0,
+              "win": 1024.0,
+              "ttl": 58.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 14662375,
+              "member": "2018-02-28-1",
+              "packet": 38828.0,
+              "start_us": 1519829345464776.0,
+              "IPV4_SRC_ADDR": "172.31.69.24",
+              "L4_SRC_PORT": 33840,
+              "IPV4_DST_ADDR": "172.31.69.6",
+              "L4_DST_PORT": 2998,
+              "ip_len": 44.0,
+              "win": 1024.0,
+              "ttl": 54.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            }
+          ]
+        }
+      }
+    },
+    "2018-03-01": {
+      "source_host": "172.31.69.13",
+      "capture_files": [
+        {
+          "day": "2018-03-01",
+          "host": "172.31.69.13",
+          "member": "pcap/capEC2AMAZ-O4EL3NG-172.31.69.13 part1",
+          "label": "2018-03-01-2",
+          "input_url": "https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Original%20Network%20Traffic%20and%20Log%20data/Thursday-01-03-2018/pcap.zip",
+          "zip_bytes": 52358069106,
+          "etag": "\"652d07144e22ca627d2362fa9e77c75e-3121\"",
+          "offset": 32856472636,
+          "compressed_bytes": 137301127,
+          "bytes": 150323355,
+          "crc32": 62038514,
+          "index_first_in_member_one_based": true,
+          "packets": 198804,
+          "compact_scanner_TCP_events": 119745,
+          "scanner_TCP_pure_SYN_packets": 609,
+          "first_us": 1519906598911214,
+          "last_us": 1519912760651742,
+          "pcap_sha256": "6700eb239ab55916a91d537869c5ec55f5c9461afa9a7a8f2dc27225a6ce609c",
+          "deflate_sha256": "7287b560b790152667fc962df4ba2aaab531f79047e6677b7405b00676ceed90",
+          "crc32_verified": true
+        },
+        {
+          "day": "2018-03-01",
+          "host": "172.31.69.13",
+          "member": "pcap/capEC2AMAZ-O4EL3NG-172.31.69.13 part2",
+          "label": "2018-03-01-3",
+          "input_url": "https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Original%20Network%20Traffic%20and%20Log%20data/Thursday-01-03-2018/pcap.zip",
+          "zip_bytes": 52358069106,
+          "etag": "\"652d07144e22ca627d2362fa9e77c75e-3121\"",
+          "offset": 32993773835,
+          "compressed_bytes": 29272564,
+          "bytes": 36372624,
+          "crc32": 4172528167,
+          "index_first_in_member_one_based": true,
+          "packets": 121383,
+          "compact_scanner_TCP_events": 93436,
+          "scanner_TCP_pure_SYN_packets": 48657,
+          "first_us": 1519913029678936,
+          "last_us": 1519914953592423,
+          "pcap_sha256": "48a0ba4955296db31b3241541aaf2f6fc5b3cb2902b9482813834ae62546ebb5",
+          "deflate_sha256": "9d08475679c7f642e816224f71d7b597e63a6962662e77c17ea24c0d3de7536f",
+          "crc32_verified": true
+        },
+        {
+          "day": "2018-03-01",
+          "host": "172.31.69.13",
+          "member": "pcap/capEC2AMAZ-O4EL3NG-172.31.69.13 part3",
+          "label": "2018-03-01-4",
+          "input_url": "https://cse-cic-ids2018.s3.ca-central-1.amazonaws.com/Original%20Network%20Traffic%20and%20Log%20data/Thursday-01-03-2018/pcap.zip",
+          "zip_bytes": 52358069106,
+          "etag": "\"652d07144e22ca627d2362fa9e77c75e-3121\"",
+          "offset": 33023046471,
+          "compressed_bytes": 92388163,
+          "bytes": 129061367,
+          "crc32": 637076065,
+          "index_first_in_member_one_based": true,
+          "packets": 462067,
+          "compact_scanner_TCP_events": 403526,
+          "scanner_TCP_pure_SYN_packets": 101442,
+          "first_us": 1519914976978649,
+          "last_us": 1519939807117250,
+          "pcap_sha256": "527482105338be17fa8cbab9fbf7728fb6c925e1598ac39350504728ea502bbd",
+          "deflate_sha256": "319929fe5cb8cc7ab92c4005c168b89cd0df8ed91d88bd74301a683d24c8dec7",
+          "crc32_verified": true
+        }
+      ],
+      "comparison": {
+        "native_Benign_outside_directed_rule": {
+          "NF_one_packet_rows": 120,
+          "native_directed_tuple_and_ms_observed_in_PCAP": 120,
+          "both_unique": 120,
+          "strict_packet_field_match": 120,
+          "round19_exact47": 0,
+          "native_class": {
+            "Benign": 120
+          },
+          "NF_TTL_minmax_both_zero": 120,
+          "actual_TTL_range": [
+            32,
+            240
+          ],
+          "orig_source_is_scanner": 0,
+          "destination_is_scanner": 120,
+          "next_reverse_packet_within_1s": 0,
+          "next_reverse_packet_within_60s": 0,
+          "inside_capture_time_extent_for_1s": 120,
+          "inside_capture_time_extent_for_60s": 118,
+          "examples": [
+            {
+              "one_based_id": 16152859,
+              "member": "2018-03-01-2",
+              "packet": 1148.0,
+              "start_us": 1519906654961573.0,
+              "IPV4_SRC_ADDR": "27.140.130.126",
+              "L4_SRC_PORT": 45147,
+              "IPV4_DST_ADDR": "172.31.69.13",
+              "L4_DST_PORT": 23,
+              "ip_len": 40.0,
+              "win": 43072.0,
+              "ttl": 33.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 16152946,
+              "member": "2018-03-01-2",
+              "packet": 1157.0,
+              "start_us": 1519906656978093.0,
+              "IPV4_SRC_ADDR": "77.72.82.57",
+              "L4_SRC_PORT": 58837,
+              "IPV4_DST_ADDR": "172.31.69.13",
+              "L4_DST_PORT": 6887,
+              "ip_len": 40.0,
+              "win": 1024.0,
+              "ttl": 231.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 16162932,
+              "member": "2018-03-01-2",
+              "packet": 2201.0,
+              "start_us": 1519906812137532.0,
+              "IPV4_SRC_ADDR": "216.243.31.2",
+              "L4_SRC_PORT": 35914,
+              "IPV4_DST_ADDR": "172.31.69.13",
+              "L4_DST_PORT": 80,
+              "ip_len": 40.0,
+              "win": 65535.0,
+              "ttl": 232.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            }
+          ]
+        },
+        "other": {
+          "NF_one_packet_rows": 1,
+          "native_directed_tuple_and_ms_observed_in_PCAP": 1,
+          "both_unique": 1,
+          "strict_packet_field_match": 1,
+          "round19_exact47": 0,
+          "native_class": {
+            "Infilteration": 1
+          },
+          "NF_TTL_minmax_both_zero": 1,
+          "actual_TTL_range": [
+            35,
+            35
+          ],
+          "orig_source_is_scanner": 0,
+          "destination_is_scanner": 1,
+          "next_reverse_packet_within_1s": 0,
+          "next_reverse_packet_within_60s": 0,
+          "inside_capture_time_extent_for_1s": 1,
+          "inside_capture_time_extent_for_60s": 1,
+          "examples": [
+            {
+              "one_based_id": 16354071,
+              "member": "2018-03-01-2",
+              "packet": 56635.0,
+              "start_us": 1519909575110677.0,
+              "IPV4_SRC_ADDR": "123.201.139.242",
+              "L4_SRC_PORT": 19801,
+              "IPV4_DST_ADDR": "172.31.69.13",
+              "L4_DST_PORT": 23,
+              "ip_len": 40.0,
+              "win": 39088.0,
+              "ttl": 35.0,
+              "Attack": "Infilteration",
+              "next_reverse_delta_us": -1
+            }
+          ]
+        },
+        "published_NMAP_window": {
+          "NF_one_packet_rows": 12509,
+          "native_directed_tuple_and_ms_observed_in_PCAP": 9028,
+          "both_unique": 9028,
+          "strict_packet_field_match": 9028,
+          "round19_exact47": 3,
+          "native_class": {
+            "Benign": 9028
+          },
+          "NF_TTL_minmax_both_zero": 9028,
+          "actual_TTL_range": [
+            37,
+            59
+          ],
+          "orig_source_is_scanner": 9028,
+          "destination_is_scanner": 0,
+          "next_reverse_packet_within_1s": 0,
+          "next_reverse_packet_within_60s": 0,
+          "inside_capture_time_extent_for_1s": 9028,
+          "inside_capture_time_extent_for_60s": 9028,
+          "examples": [
+            {
+              "one_based_id": 16677909,
+              "member": "2018-03-01-3",
+              "packet": 69982.0,
+              "start_us": 1519914079855791.0,
+              "IPV4_SRC_ADDR": "172.31.69.13",
+              "L4_SRC_PORT": 63878,
+              "IPV4_DST_ADDR": "172.31.69.14",
+              "L4_DST_PORT": 9944,
+              "ip_len": 44.0,
+              "win": 1024.0,
+              "ttl": 44.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 16677910,
+              "member": "2018-03-01-3",
+              "packet": 69980.0,
+              "start_us": 1519914079855690.0,
+              "IPV4_SRC_ADDR": "172.31.69.13",
+              "L4_SRC_PORT": 63878,
+              "IPV4_DST_ADDR": "172.31.69.14",
+              "L4_DST_PORT": 1080,
+              "ip_len": 44.0,
+              "win": 1024.0,
+              "ttl": 48.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            },
+            {
+              "one_based_id": 16677911,
+              "member": "2018-03-01-3",
+              "packet": 69981.0,
+              "start_us": 1519914079855742.0,
+              "IPV4_SRC_ADDR": "172.31.69.13",
+              "L4_SRC_PORT": 63878,
+              "IPV4_DST_ADDR": "172.31.69.14",
+              "L4_DST_PORT": 6667,
+              "ip_len": 44.0,
+              "win": 1024.0,
+              "ttl": 49.0,
+              "Attack": "Benign",
+              "next_reverse_delta_us": -1
+            }
+          ]
+        }
+      }
+    }
+  }
+}
