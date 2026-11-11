@@ -146,3 +146,14 @@ def test_failed_read_preserves_previous_destination(tmp_path):
 )
 def test_exact_native_endpoints(coarse, fine, expected):
     assert obs._family(coarse, fine) == expected
+
+
+def test_zeek34_original_detail_header_alias(tmp_path):
+    path = tmp_path / "observations.gz"
+    write_log(path, [("1000.1", "s", "d", 123, "tcp", "-", 0, "Malicious", "C&C")])
+    with gzip.open(path, "rb") as src:
+        contents = src.read().replace(b"   label   detailed-label", b"\tlabel\tdet_label")
+    with gzip.open(path, "wb") as dest:
+        dest.write(contents)
+    stats = obs.prepare(path, tmp_path / "ready.parquet")
+    assert stats["family_counts"] == {"C&C": 1}

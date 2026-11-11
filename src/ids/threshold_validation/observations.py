@@ -196,7 +196,9 @@ def prepare(path, dest):
         with opener(path, "rt", encoding="utf-8", newline="") as stream:
             for line in stream:
                 if line.startswith("#fields"):
-                    fields = line.split()[1:]
+                    fields = [
+                        "detailed-label" if column == "det_label" else column for column in line.split()[1:]
+                    ]
                     break
                 if not line.startswith("#"):
                     raise ValueError("Zeek data appeared before #fields")
