@@ -1,0 +1,201 @@
+{
+  "scope": "Synthetic local Windows spawn execution only. No real IDS records, fitted real-data preprocessing or pretrained weights. Process dispatch/receipts and one streaming endpoint validated; no lab performance or detection claim.",
+  "seed": 191111,
+  "role_sizes": {
+    "P": 4096,
+    "C": 320,
+    "E": 640,
+    "P_time": 4096,
+    "C_time": 320,
+    "E_time": 640
+  },
+  "source_sha256": {
+    "model.py": "507d8e03d233db212812e1545dc9f0db4d33984a7c01b7a738eeb81ea0d28c61",
+    "trees.py": "6ce21532f529ef9996dc4eb43152dbb24b509034fdc613e0358dd8f85e5fdaea",
+    "features.py": "df54b0ea0161ec3d040aaeb6ac865ceaf68a18da46a4643ae7b9bc75086f8862",
+    "arm_cost.py": "3c46fa8eb964a4bb4700a5c2eca126543d693ef18434c6ae7370a624e7178e50",
+    "streaming.py": "e8223399de008e02f8c7fcb1272dea8fcb124ee0b3e94139825b4f7447fe9c88",
+    "pipeline.py": "8efd9497505ae786e37c8701569443ab74a050ea15638504d6f0b6cea1c50048",
+    "evaluation.py": "a722e8a6d16e6eb003cfc52adcdf63011d5428926153dd33c56201089f39373e",
+    "execution.py": "2f19ee49fc7ef68895d4871b6b0ec5ab036e70de4d74014d869d3e168e22582a"
+  },
+  "input_sha256": {
+    "P": "490754b1026b238223cf31d77ff1b3e3328e41625b9828a34305cb926d3da7fd",
+    "C": "139dbf818c00c737a09b7d6b7cb887b6dd3e9916141d0680b20fd14b92bfe5b6",
+    "E": "85b9c17b15644e206b332cae10d6104e11fb2f1d0b72cd691c48fd5ddd0cc5e0",
+    "P_time": "791880316973f277709a697b14ae99d29c8225808b5384c2d3629e019a33f2be",
+    "C_time": "18cfb9bbee4d321e3aab181c103bc79652f97a29a0ff87d3aef8f99f9b7e10c9",
+    "E_time": "ee0a3b53f37b4da9715f16c4344be30ae54a8f6fcbf12a09cf0ff92e351cb55d"
+  },
+  "execution": {
+    "two_spawn_processes": true,
+    "first_lane_overlap_seconds": 5.994541,
+    "first": {
+      "mlp": {
+        "pid": 4636,
+        "start_ns": 1794383424765906800,
+        "end_ns": 1794383434088509000,
+        "failures": {}
+      },
+      "hgb": {
+        "pid": 25436,
+        "start_ns": 1794383424765906800,
+        "end_ns": 1794383430760447800,
+        "failures": {}
+      }
+    },
+    "second": {
+      "mlp": {
+        "pid": 31152,
+        "start_ns": 1794383435668797300,
+        "end_ns": 1794383435692733000,
+        "failures": {}
+      },
+      "hgb": {
+        "pid": 33872,
+        "start_ns": 1794383435668797300,
+        "end_ns": 1794383435685779300,
+        "failures": {}
+      }
+    },
+    "fit_receipts": 10,
+    "score_receipts": 10,
+    "reentry_verified_all_20_receipts_and_output_hashes_and_mtimes_preserved": true
+  },
+  "GPU_probe": {
+    "candidates": [
+      512,
+      2048,
+      4096
+    ],
+    "P_rows_per_candidate": 4096,
+    "synchronized_trials_per_candidate": 5
+  },
+  "arms": {
+    "development/mlp48": {
+      "device": "cuda:0",
+      "threads": 2,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "3929d5ac100c336039f8f0d625ea5414c66ed15779d0d33cd7038e27acf8842b",
+      "score_receipt_sha256": "f82562bd5ec3bf26e2d98288159b46f375fad6915188c1a702916dd214928023",
+      "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "training_epochs": 80,
+      "selected_gpu_batch": 4096
+    },
+    "development/mlp52_zero": {
+      "device": "cuda:0",
+      "threads": 2,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "41efcc4558761cfed4b1d580e33cffa1d6ec8cb31cd62608a46b72d318f10b40",
+      "score_receipt_sha256": "d00ea14242606c2a25ae516aad14ef1cb15282251b1037435b23eb2c093d2727",
+      "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "training_epochs": 80,
+      "selected_gpu_batch": 4096
+    },
+    "development/mlp52_history": {
+      "device": "cuda:0",
+      "threads": 2,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "8385e002f8982f03ede0185087afcf924dee019ce6c12c4b8ced360bbcefdf64",
+      "score_receipt_sha256": "e4c734969ba37ea7ec877afa7cbaf46158638311f9527990fea4894df78969e2",
+      "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "training_epochs": 80,
+      "selected_gpu_batch": 4096
+    },
+    "development/hgb48": {
+      "device": "cpu",
+      "threads": 4,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "f993b3bf41345fdbb4f7d3081cf7ea118105d03ad091dd6a72ccc89a23fbff87",
+      "score_receipt_sha256": "d875ed4c30a5b05ac8479251dfdb9c93f72f9c209335815c32d458fdc4c7f876",
+      "boosting_iterations": 200
+    },
+    "development/hgb52_history": {
+      "device": "cpu",
+      "threads": 4,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "f26b1595559d51bf50f2259e739aaac841022f119180552b48a8513e8bf80619",
+      "score_receipt_sha256": "83758dec7332bee1cbe445be52e5331e989ffecde45f51d49d9261f9421cfe4e",
+      "boosting_iterations": 200
+    },
+    "forward/mlp48": {
+      "device": "cuda:0",
+      "threads": 2,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "b68603ca09a4e0bff8a3d262c26be237412e34c54bb9cf6f614c30bdbee9c78d",
+      "score_receipt_sha256": "5e42de3dfa65332a0ec3bb24fe0f7c2b3b6222c6048594c82fb54c23ab053aa4",
+      "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "training_epochs": 80,
+      "selected_gpu_batch": 4096
+    },
+    "forward/mlp52_zero": {
+      "device": "cuda:0",
+      "threads": 2,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "f2df7570bfdf2b5960002a3bd68169e5ac7b4e2618ecbad6d75b4e0119178aae",
+      "score_receipt_sha256": "fdc428879a81176c4b145ea4810883bdcd51d493ff233814045caa5654d2174e",
+      "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "training_epochs": 80,
+      "selected_gpu_batch": 4096
+    },
+    "forward/mlp52_history": {
+      "device": "cuda:0",
+      "threads": 2,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "54c2df344a1447faea64e8b4dd215af73140b8d74c9a2d8ca1a8a401733ae73a",
+      "score_receipt_sha256": "5333269a332dfc33d865a1f68f0d95e7ced1f0a30a43e7b59455e250264971f9",
+      "device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "training_epochs": 80,
+      "selected_gpu_batch": 4096
+    },
+    "forward/hgb48": {
+      "device": "cpu",
+      "threads": 4,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "453160ff04022a4d5dabfbca9e885e6d976ac024c06de0a563eb211a37608732",
+      "score_receipt_sha256": "3617a309454d59d1ec3a80d566553b4adeb47dc943743282fb2baeeebc872e04",
+      "boosting_iterations": 200
+    },
+    "forward/hgb52_history": {
+      "device": "cpu",
+      "threads": 4,
+      "P": 4096,
+      "C": 320,
+      "E": 640,
+      "fit_receipt_sha256": "26bf622a331c2f0000fe925fa69f3dca7ad4178a657a98f053f5f150860c0fc2",
+      "score_receipt_sha256": "9ca5e6b07b6abd1341794ba7e45347806a250f10ee11570b0b163456f2e221c2",
+      "boosting_iterations": 200
+    }
+  },
+  "one_full_cost": {
+    "arm": "forward/mlp52_history",
+    "type": "synthetic exported flows and unseen history",
+    "warmup_rows": 480,
+    "timed_rows": 513,
+    "tied_group_max": 2,
+    "CPU_threads": 1,
+    "four_history_features_match": true,
+    "score_and_alert_replay_match": true,
+    "CPU_score_receipt_sha256": "4d5e0a5f95db23b4142c20120ec0d3361fe876fb50c38210eefcb4fe97d0118d",
+    "CPU_stream_receipt_sha256": "7207200e04d4867f6747397ba7ee694e7f9f1da66d3733481e0a0fc1c01cd899",
+    "stream_benchmark_sha256": "16d53e5644ac1dc5136aaf61118fd9df532e3dc14a981c486b805c4f663668cd"
+  }
+}

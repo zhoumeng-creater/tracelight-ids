@@ -1,0 +1,79 @@
+{
+  "evidence": {
+    "round17_result_zip_sha256": "477724966f028e636d545e5c04f7dd0139d057b8b67d0c0d714758fdf1692b31",
+    "round18_projection_sha256": "bb0979458562c01a85166209b82897a7b14cc70fb935054733da0b732bd525e0",
+    "opened_development_E_member_verified_sha256": "20883897adfa29498765174666a88dc2cc206a2f30f659476b07e416ee81f408"
+  },
+  "opened_development_E": {
+    "evaluation_rows": 20000,
+    "normal_rows": 11830,
+    "full_kv_tp": 6711,
+    "full_kv_fp": 118,
+    "full_kv_empirical_fpr": 0.009974640743871513,
+    "max_fp_at_empirical_1pct": 118,
+    "extra_fp_headroom": 0,
+    "group_scanning": 217,
+    "group_normal": 33,
+    "full_kv_group_tp": 0,
+    "full_kv_group_fp": 0,
+    "alert_entire_group_with_other_decisions_fixed": {
+      "additional_tp": 217,
+      "additional_fp": 33,
+      "tp": 6928,
+      "fp": 151,
+      "fpr": 0.012764158918005072,
+      "other_fp_repairs_needed_if_entire_group_alerts_and_empirical_fpr_at_most_1pct": 33
+    },
+    "opposite_labels_identical_all_48_fields_within_group": {
+      "distinct_mixed_inputs": 0,
+      "scanning": 0,
+      "normal": 0,
+      "minimum_errors_for_a_deterministic_per_row_48_field_decision": 0
+    }
+  },
+  "previously_opened_round17_Eprime": {
+    "evaluation_rows": 50000,
+    "normal_rows": 29003,
+    "full_kv_tp": 16352,
+    "full_kv_fp": 274,
+    "full_kv_empirical_fpr": 0.009447298555321863,
+    "max_fp_at_empirical_1pct": 290,
+    "extra_fp_headroom": 16,
+    "group_scanning": 544,
+    "group_normal": 80,
+    "full_kv_group_tp": 0,
+    "full_kv_group_fp": 0,
+    "alert_entire_group_with_other_decisions_fixed": {
+      "additional_tp": 544,
+      "additional_fp": 80,
+      "tp": 16896,
+      "fp": 354,
+      "fpr": 0.012205633899941386,
+      "other_fp_repairs_needed_if_entire_group_alerts_and_empirical_fpr_at_most_1pct": 64
+    },
+    "opposite_labels_identical_all_48_fields_within_group": {
+      "distinct_mixed_inputs": 8,
+      "scanning": 9,
+      "normal": 8,
+      "minimum_errors_for_a_deterministic_per_row_48_field_decision": 8
+    }
+  },
+  "source_clock_evidence": {
+    "source_sha256": "53ec8f468a43ede9b1536fabc0390af2fa33ab4312b23ce4d864f186a4651f78",
+    "completed_source_records": 27520260,
+    "csv_read_to_end_and_crc_verified": true,
+    "present_in_observed_header": [
+      "FLOW_START_MILLISECONDS",
+      "FLOW_END_MILLISECONDS",
+      "IPV4_SRC_ADDR",
+      "IPV4_DST_ADDR"
+    ],
+    "limit": "The archived R17 header demonstrates field availability. It does not establish that every row has valid times, an export/arrival timestamp, sufficient history, or a feasible forward split. R19 checks the event times and cohort counts on the whole official file."
+  },
+  "interpretation": [
+    "Counterfactual changes only alarms inside the fixed R16 group, never the saved threshold or other rows.",
+    "One percent here is empirical FPR on E or E-prime. The original thresholds were registered on C or C-prime.",
+    "The paired-label bound applies solely to these identical 48-field inputs under a deterministic per-flow decision. It neither bounds all scan misses nor establishes that any available history separates those labels.",
+    "Both evaluations were already opened. These numbers are design constraints, never R19 temporal evidence."
+  ]
+}

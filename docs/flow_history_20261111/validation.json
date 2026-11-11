@@ -1,0 +1,62 @@
+{
+  "release": "flow-history-lab-v1",
+  "scope": "Local synthetic testing and archived-score arithmetic; no new scores, training or history measurements on actual IDS data.",
+  "python": "3.12.4",
+  "gpu": {
+    "cuda_runtime": "12.6",
+    "cuda_available": true,
+    "cudnn": 90501,
+    "gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+        "total_memory_bytes": 6438780928
+      }
+    ]
+  },
+  "ids_python_sources": {
+    "count": 95,
+    "sha256": "e6a57f378b6b949a7bdf63336f74b8a04ef89e18df3125e7e59b1685af5fd783",
+    "hash_encoding": "UTF8 source bytes with CRLF normalized to LF"
+  },
+  "round19_regression": {
+    "file": "synthetic-junit.xml",
+    "tests": 38,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "seconds": 28.748
+  },
+  "preceding_route_regression": {
+    "file": "route-regression-junit.xml",
+    "tests": 244,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "seconds": 142.108,
+    "optional_packages": {
+      "tabm": "0.0.3",
+      "rtdl_num_embeddings": "0.0.12"
+    },
+    "real_tabm_experiments": 0
+  },
+  "queue_check": {
+    "file": "queue_smoke.json",
+    "utf8_lf_sha256": "c9ae72da8020e3085d4d1edfa4a972bd37cae210f6718c7e1f21b75918be13a9",
+    "fit": 10,
+    "score": 10,
+    "reused_stages": 20,
+    "raw_row_stream_replay": true
+  },
+  "archived_baseline_recomputation": {
+    "file": "development_evidence.json",
+    "utf8_lf_sha256": "0ca8e7a354605b3a9ee071b119e82e112ca530a8ee4b7a4f3ee2ef4fbccb7179",
+    "recomputed_equal": true
+  },
+  "ruff": {
+    "version": "0.9.4",
+    "result": "passed",
+    "files": "all new package, tests and archived-evidence recomputation script"
+  },
+  "outstanding": "RTX 4090D laboratory run: eligibility and contents of the forward-time cohort, real utility at the registered working point, model and history state costs, resource usage."
+}
