@@ -7,6 +7,7 @@ import pytest
 
 from ids.common import read_json
 from ids.threshold_validation import experiment as ex
+from ids.threshold_validation.runner import parallel
 from ids.threshold_validation.rules import replay_thresholds
 from ids.threshold_validation.sources import resolve_log
 
@@ -34,8 +35,11 @@ def test_train_freeze_score_and_pair(tmp_path):
             frame[col] = rng.random(size)
         frame.to_parquet(ex.prepared(tmp_path, name), index=False)
     ex.draw_train(tmp_path, reg)
+    jobs = [
+        (tmp_path, "synthetic", arm + "-fit", ex.train_arm, (tmp_path, arm, 2, reg), 2) for arm in ex.ARMS
+    ]
+    parallel(jobs, 2)
     for arm in ex.ARMS:
-        ex.train_arm(tmp_path, arm, 2, reg)
         ex.score_arm(tmp_path, "future", arm, 2)
     artifacts = ex.judge(tmp_path, "future")
     assert len(artifacts) == 6

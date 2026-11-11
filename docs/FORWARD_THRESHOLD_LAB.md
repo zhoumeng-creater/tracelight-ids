@@ -39,7 +39,7 @@ CIC2018 在第二十轮最后一条已评分流后只延续 31.931 秒，有 100
 
 ~~~powershell
 Set-Location -LiteralPath 'D:\zhoumeng\Graduate'
-git clone --branch forward-threshold-lab-v1.1 --single-branch https://github.com/zhoumeng-creater/tracelight-ids.git tracelight-forward-threshold
+git clone --branch forward-threshold-lab-v1.2 --single-branch https://github.com/zhoumeng-creater/tracelight-ids.git tracelight-forward-threshold
 if ($LASTEXITCODE -ne 0) { throw 'Clone failed' }
 Set-Location -LiteralPath 'D:\zhoumeng\Graduate\tracelight-forward-threshold'
 Set-ExecutionPolicy -Scope Process Bypass
@@ -55,3 +55,5 @@ Set-ExecutionPolicy -Scope Process Bypass
 要检验原第二十轮冻结模型及原生 Bot，可使用同一版本的 ids.threshold_validation.frozen_nfv3。输入为另一段完整 NF-v3 原字段流和独立真值，含物理到达时刻且该时刻等于流结束时刻；观察区间须晚于第二十轮、至少留出 60 秒预热。先执行 score 封存预测，再用 evaluate 揭示真值。两个命令的输入要求见各自 --help。新源须独立核对扫描和 Bot 的定义及覆盖。已打开的第二十轮样本可用 ids.threshold_validation.cic_replay 单独复算。
 
 评分前登记的版本为 `forward-threshold-lab-v1`。执行版 `forward-threshold-lab-v1.1` 补充识别 34-1 作者日志中的详细标签列名 `det_label`。第一次运行在读取该表头时停止，尚未拟合模型。两版使用同一份登记文件。
+
+Windows 执行版 `forward-threshold-lab-v1.2` 将进程入口移入可导入的模块，保证 Python spawn 可在新进程中定位数据准备及拟合函数。修正前的运行都在打分前停止。
