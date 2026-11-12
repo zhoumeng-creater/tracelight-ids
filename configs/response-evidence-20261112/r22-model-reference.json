@@ -1,0 +1,68 @@
+{
+  "release": "contact-evidence-lab-v1",
+  "r22_return_sha256": "1e62b5aaf768b477fee27bfd776e4d444211b03bbea69209de38f5c23996ddb1",
+  "inputs": {
+    "CTU-IoT-Malware-Capture-1-1": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+    "CTU-IoT-Malware-Capture-8-1": "4877ca8f0f01902fbd18d28b7d06cb3d0be082355b7f2c8862c9deef1782eb8a",
+    "CTU-Honeypot-Capture-5-1": "f36db06e7d6ba7364e932a5b003f75835e004b320d70019e8a2f0ba8685d9262",
+    "CTU-Honeypot-Capture-4-1": "aebe40ea0e03b120265a5c7bc140dd9b0d3fe2fce65559e84776b7dd5360e71e"
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scipy": "1.14.0",
+      "scikit-learn": "1.5.1",
+      "pyarrow": "21.0.0",
+      "PyYAML": "6.0.2",
+      "joblib": "1.4.2",
+      "threadpoolctl": "3.5.0",
+      "psutil": "6.0.0",
+      "torch": "2.6.0+cu126"
+    }
+  },
+  "artifacts": {
+    "hgb-raw": {
+      "evidence/fits/hgb-raw.json": "64cf522f78515a48f0f11173558ce3e54c01d2ef8567a2977bb6e67d04b0f525",
+      "models/frozen/hgb-raw.joblib": "e2b3100860b2c05b0957865a7faf57f6d9e03a7fc15f5d4cf2f88c1977b8e0e8"
+    },
+    "hgb-contact": {
+      "evidence/fits/hgb-contact.json": "8d7254278a2b4221f3d26c142a53bbe17bd7acaf0b1f6d6632848dac5e28a69c",
+      "models/frozen/hgb-contact.joblib": "458638c2aa46f8935d85d8088032beea91a66df9ccc728c068a67ee085b90d3a"
+    },
+    "hgb_family-raw": {
+      "evidence/fits/hgb_family-raw.json": "f08636071c8a5c4e4bfdd2f8e2b0dc7c5f729cd6c07090ecf3f88bf06f0c8723",
+      "models/frozen/hgb_family-raw.joblib": "5cf887258c9bc5831f4954fa07af272fb21dc36ec1ccbe4ae7bfe4d2784eb0d0"
+    },
+    "hgb_family-contact": {
+      "evidence/fits/hgb_family-contact.json": "119963820238e76076c048cc3df39fd1685d0732722c15ac253690f86a1e9aa3",
+      "models/frozen/hgb_family-contact.joblib": "07f0cba756f5d302e0cfbc3418021c514d3c49453bcfdcecd0bbff1f9a5ecfc4"
+    },
+    "mlp17-raw": {
+      "evidence/fits/mlp17-raw.json": "1a0a37ca1fdc31487a482ba9b12a4319143c27bd5d95aaab31fda9824de14c10",
+      "models/frozen/mlp17-raw.pt": "13e1da820ec6cec9cd0f148bf9b785f15dbb984c4193e2ace80e295ab99c4d96"
+    },
+    "mlp17-contact": {
+      "evidence/fits/mlp17-contact.json": "9d583aea3feac54100474ce8fdd4399e2eb269dfda0ad2ea85a032e329888a9f",
+      "models/frozen/mlp17-contact.pt": "7082106c8ab748f43174b70356de1cbee4f366e20e27e022820eff65045d34f7"
+    },
+    "mlp29-raw": {
+      "evidence/fits/mlp29-raw.json": "0d12f72bf0b20cb47abdf3816dd569e59f68f92e50d1ca5411f0e4d45dc44b18",
+      "models/frozen/mlp29-raw.pt": "2b44b7a2c8dee9948dd73a0c34c8f2472ac611506113b9a4485fca9d67e26796"
+    },
+    "mlp29-contact": {
+      "evidence/fits/mlp29-contact.json": "7395475639517313ea8654e511918aaad04565e0ac341c782996df14fdc3a348",
+      "models/frozen/mlp29-contact.pt": "b1588042a86d6565112d4ad9961166f077a09d6d7d783fdebad3e28ff177b317"
+    },
+    "mlp43-raw": {
+      "evidence/fits/mlp43-raw.json": "d70a825997d8c9c2ebb13d0133d7f9bac8f0f091c35b8f90c4100119f26219f9",
+      "models/frozen/mlp43-raw.pt": "8b433af33b7a5d6691cc651ebdaf67ed5b8f2e14e3ecbc75211a869e0804f13a"
+    },
+    "mlp43-contact": {
+      "evidence/fits/mlp43-contact.json": "6bf9c655a67eccc072d76282e0511c208334e42e980a413bd119afa18f43f74e",
+      "models/frozen/mlp43-contact.pt": "e26eb3f270c6c079ba5a44f07ff84e1c176614e45d5873ba68dac0d8e89ed86c"
+    }
+  },
+  "calibration_reference_sha256": "f58a6db7f4d508ffed610fdc5c8bcae549c8ca51b91e41c8e0616cfbfbe349e5"
+}

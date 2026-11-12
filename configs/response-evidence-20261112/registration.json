@@ -1,0 +1,149 @@
+{
+  "study": "response-evidence-v1",
+  "latest_opened_flow_end_ms": 1569026415507,
+  "sources": [
+    {
+      "name": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-1-1/bro/conn.log.labeled",
+      "bytes": 148305428,
+      "sha256": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+      "rows": 1008748
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-8-1",
+      "role": "P",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-8-1/bro/conn.log.labeled",
+      "bytes": 1431000,
+      "sha256": "4877ca8f0f01902fbd18d28b7d06cb3d0be082355b7f2c8862c9deef1782eb8a",
+      "rows": 10403
+    },
+    {
+      "name": "CTU-Honeypot-Capture-5-1",
+      "role": "C",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-Honeypot-Capture-5-1/bro/conn.log.labeled",
+      "bytes": 182147,
+      "sha256": "f36db06e7d6ba7364e932a5b003f75835e004b320d70019e8a2f0ba8685d9262",
+      "rows": 1374
+    },
+    {
+      "name": "CTU-Honeypot-Capture-4-1",
+      "role": "C",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-Honeypot-Capture-4-1/bro/conn.log.labeled",
+      "bytes": 61653,
+      "sha256": "aebe40ea0e03b120265a5c7bc140dd9b0d3fe2fce65559e84776b7dd5360e71e",
+      "rows": 452
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-52-1",
+      "role": "R",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-52-1/bro/conn.log.labeled",
+      "bytes": 3070319722,
+      "sha256": "68796959779c4ec5b77bf0d40b220af2b4fa5550fc212725add1b48ae86f61a9",
+      "rows": 19781378,
+      "first_flow_end_ms": 1552047873706,
+      "last_flow_end_ms": 1552100931194
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-60-1",
+      "role": "R",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-60-1/bro/conn.log.labeled",
+      "bytes": 467559811,
+      "sha256": "4e15902f6c39b1fad60605e667761b10c0c9866beb514aa6320b7baf108ea7c0",
+      "rows": 3581028,
+      "first_flow_end_ms": 1568940058784,
+      "last_flow_end_ms": 1569026415507
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-35-1",
+      "role": "H",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-35-1/bro/conn.log.labeled",
+      "bytes": 1340179107,
+      "sha256": "dde3ac95a8dfe9c3308d92c9eb9ac75612e2ad1a34341f15351f525933f2df3a",
+      "rows": 10447787
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-42-1",
+      "role": "H",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-42-1/bro/conn.log.labeled",
+      "bytes": 585829,
+      "sha256": "269fa1b22d9a37e159cf41b81a213a0032d21306f5d39b4c20cb0d211b04e8aa",
+      "rows": 4426
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-44-1",
+      "role": "H",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-44-1/bro/conn.log.labeled",
+      "bytes": 31179,
+      "sha256": "12cd99bcda78140dd5f31cf3d786642f150e42e0ebc3599190f35314e406f71f",
+      "rows": 237
+    },
+    {
+      "name": "CTU-IoT-Malware-Capture-48-1",
+      "role": "H",
+      "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-48-1/bro/conn.log.labeled",
+      "bytes": 531738215,
+      "sha256": "9f69946243df93c199876c0783cb4b5fb188e6d2325c593858f2db8fb5fa847f",
+      "rows": 3394338
+    },
+    {
+      "name": "IoT-SFC-04-11_12",
+      "role": "E",
+      "format": "iot-sfc",
+      "sensor": "192.168.0.106",
+      "backup": "2025-04-11_12",
+      "filename": "IoT-SFC-04-11_12.conn.csv.gz",
+      "bytes": 41354928,
+      "sha256": "6a958525d8a526590d8c8054e3fc676a82958435f32c47907e06072ec5679778",
+      "uid_order_sha256": "abc7a903974e68e8f826af3a8ee46245623b6388af9252f04c3adeccf56fdaff",
+      "raw_member": "zeek_backups/192.168.0.106/2025-04-11_12/conn.log",
+      "raw_member_sha256": "30000fdcf2afae815cb2859e5623eda38cf61fcb4d4f587e2d11a8ec6d524392",
+      "rows": 307596,
+      "first_flow_end_ms": 1744289628956,
+      "last_flow_end_ms": 1744362001055,
+      "raw_member_offset": 18545201,
+      "raw_deflated_bytes": 8059520
+    },
+    {
+      "name": "IoT-SFC-04-18_00",
+      "role": "E",
+      "format": "iot-sfc",
+      "sensor": "192.168.0.106",
+      "backup": "2025-04-18_00",
+      "filename": "IoT-SFC-04-18_00.conn.csv.gz",
+      "bytes": 40655570,
+      "sha256": "cb84348dfd394a4e0f65f77aac58ff651fe17adfccc0ca5b852b5d0f9b2b03ac",
+      "uid_order_sha256": "e82cebcbf2ff7f83f21fbb93124d39da175f46de693748ca439d5092ba5fb924",
+      "raw_member": "zeek_backups/192.168.0.106/2025-04-18_00/conn.log",
+      "raw_member_sha256": "b8f8d4d34bf6d87c2c54130f58f70cfd4d895b9ac2f40a037d9e33f0d08d497c",
+      "rows": 310174,
+      "first_flow_end_ms": 1744665810455,
+      "last_flow_end_ms": 1744923586577,
+      "raw_member_offset": 258407301,
+      "raw_deflated_bytes": 8565045
+    }
+  ],
+  "previously_scored": [
+    "CTU-IoT-Malware-Capture-34-1",
+    "CTU-IoT-Malware-Capture-49-1",
+    "CTU-IoT-Malware-Capture-52-1",
+    "CTU-IoT-Malware-Capture-60-1"
+  ],
+  "sfc_archive": {
+    "filename": "iot_dataset_v7.zip",
+    "url": "https://zenodo.org/records/23371775/files/iot_dataset_v7.zip?download=1",
+    "bytes": 776500807,
+    "sha256": "070b1356e5bd296e584109fae79139cfe0f20ff4790f69e42994d67362cb9f62",
+    "publisher_md5": "6b858e337a8241b89f4d76f9a1454a60",
+    "raw_archive": "https://zenodo.org/records/22055639/files/zeek_backups.zip?download=1",
+    "csv_member": "iot_dataset_v7.csv",
+    "raw_archive_bytes": 972506125
+  },
+  "roles": {
+    "P": "training only",
+    "C": "pre-alert normal calibration only",
+    "R": "already scored in round 22; retrospective",
+    "H": "unscored whole IoT-23 scenario after C, before latest opened outcome",
+    "E": "previously unscored IoT-SFC snapshot after latest opened outcome"
+  }
+}

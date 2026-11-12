@@ -1,0 +1,76 @@
+{
+  "status": "measured",
+  "arms": {
+    "hgb-raw": {
+      "rows": 1826,
+      "max_abs_score_delta": 0.0,
+      "old_threshold": 0.969384090147706,
+      "new_threshold": 0.969384090147706,
+      "changed_alerts_own_cuts": 0
+    },
+    "hgb-contact": {
+      "rows": 1826,
+      "max_abs_score_delta": 0.0,
+      "old_threshold": 12.776692822735427,
+      "new_threshold": 12.776692822735427,
+      "changed_alerts_own_cuts": 0
+    },
+    "hgb_family-raw": {
+      "rows": 1826,
+      "max_abs_score_delta": 0.0,
+      "old_threshold": 2.260328933739326,
+      "new_threshold": 2.260328933739326,
+      "changed_alerts_own_cuts": 0
+    },
+    "hgb_family-contact": {
+      "rows": 1826,
+      "max_abs_score_delta": 0.0,
+      "old_threshold": 11.44036630764652,
+      "new_threshold": 11.44036630764652,
+      "changed_alerts_own_cuts": 0
+    },
+    "mlp17-raw": {
+      "rows": 1826,
+      "max_abs_score_delta": 1.1444091796875e-05,
+      "old_threshold": 27.758827209472656,
+      "new_threshold": 27.758827209472656,
+      "changed_alerts_own_cuts": 0
+    },
+    "mlp17-contact": {
+      "rows": 1826,
+      "max_abs_score_delta": 5.7220458984375e-06,
+      "old_threshold": 22.930282592773438,
+      "new_threshold": 22.930282592773438,
+      "changed_alerts_own_cuts": 0
+    },
+    "mlp29-raw": {
+      "rows": 1826,
+      "max_abs_score_delta": 7.62939453125e-06,
+      "old_threshold": 26.448381423950195,
+      "new_threshold": 26.448379516601562,
+      "changed_alerts_own_cuts": 0
+    },
+    "mlp29-contact": {
+      "rows": 1826,
+      "max_abs_score_delta": 9.5367431640625e-06,
+      "old_threshold": 26.294330596923828,
+      "new_threshold": 26.294328689575195,
+      "changed_alerts_own_cuts": 0
+    },
+    "mlp43-raw": {
+      "rows": 1826,
+      "max_abs_score_delta": 1.52587890625e-05,
+      "old_threshold": 24.632110595703125,
+      "new_threshold": 24.632112503051758,
+      "changed_alerts_own_cuts": 0
+    },
+    "mlp43-contact": {
+      "rows": 1826,
+      "max_abs_score_delta": 7.62939453125e-06,
+      "old_threshold": 29.315776824951172,
+      "new_threshold": 29.315773010253906,
+      "changed_alerts_own_cuts": 0
+    }
+  },
+  "scope": "On the registered two normal C captures only. All original R22 weights verified against the return manifest, no fitting and no evaluation scoring. Local CPU HGB and RTX 4050 Laptop GPU MLP."
+}

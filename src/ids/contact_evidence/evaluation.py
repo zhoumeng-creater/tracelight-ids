@@ -84,10 +84,10 @@ def criteria(groups):
 class _FlagStream:
     """Match sealed byte flags to truth rows even when Parquet row groups are cut differently."""
 
-    def __init__(self, parquet, expected):
+    def __init__(self, parquet, expected, column="flags"):
         if parquet.metadata.num_rows != expected:
             raise ValueError("Incomplete capture: sealed flag count differs from truth")
-        self.batches = parquet.iter_batches(batch_size=ROWS, columns=["flags"], use_threads=False)
+        self.batches = parquet.iter_batches(batch_size=ROWS, columns=[column], use_threads=False)
         self.pending = np.empty(0, dtype=np.uint8)
 
     def take(self, size):

@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十三轮实验室批次**　[固定版运行指南](docs/RESPONSE_OBSERVABILITY_LAB.md) · [原始抓包与零计数的核验](docs/response-evidence/OBSERVABILITY.md)。检验回包观测质量、多核历史构建，以及 1% 误报预算下的扫描、控制和下载检出。
+
 **第二十二轮实验室批次（2026-11-12）**　[固定版运行命令与判读标准](docs/CONTACT_EVIDENCE_LAB.md) · [数据与离线准备](docs/CONTACT_EVIDENCE_DATA.md) · [第二十、二十一轮离线回放](docs/flow_replay/index.html)。比较四种流历史输入、两种告警追加策略及独立的扫描和心跳场景。
 
 **第二十一轮前向阈值复验已完成**　[结果与逐行复算](docs/FORWARD_THRESHOLD_RESULTS.md) · [固定版本与复现命令](docs/FORWARD_THRESHOLD_LAB.md)。已定位 CIC2018 校准分数的主机集中现象。IoT-23 两段新评价均未取得符合预设误报预算的扫描和 C&C 联合收益。执行版为 `forward-threshold-lab-v1.2`。

@@ -5,6 +5,7 @@ from contextlib import ExitStack
 from functools import partial
 import gzip
 import shutil
+import ssl
 import time
 from pathlib import Path
 
@@ -18,6 +19,17 @@ from ids.threshold_validation.sources import verify_log
 BLOCK_BYTES = 4 << 20
 SOURCE_DIR = Path(__file__).resolve().parents[3] / "data/raw/iot23-contact-20261112"
 PREVIOUS_DIR = "iot23-forward-20261111"
+
+
+def ssl_context():
+    # Some Windows lab installs lack the publisher's CA in Python's OS certificate store.
+    context = ssl.create_default_context()
+    try:
+        import certifi
+    except ImportError:
+        return context
+    context.load_verify_locations(cafile=certifi.where())
+    return context
 
 
 def fetch_part(folder, spec, span):
@@ -35,7 +47,7 @@ def fetch_part(folder, spec, span):
     expected_range = f"bytes {start}-{end}/{spec['bytes']}"
     for attempt in range(4):
         try:
-            with urlopen(Request(spec["url"], headers=headers), timeout=120) as resp:
+            with urlopen(Request(spec["url"], headers=headers), timeout=120, context=ssl_context()) as resp:
                 single = start == 0 and expected == spec["bytes"]
                 if resp.status == 206 and resp.headers.get("Content-Range") != expected_range:
                     raise ValueError("Official server returned the wrong byte range")

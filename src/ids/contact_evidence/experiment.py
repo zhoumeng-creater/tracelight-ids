@@ -27,7 +27,7 @@ def enriched(root, name):
     return root / "features" / (name + ".parquet")
 
 
-def training(root, reg):
+def training(root, reg, *, features=ARMS["contact"]):
     pools = []
     for name in sources(reg, "P"):
         labels = pd.read_parquet(data.truth(root, name), columns=["row_id", "family"])
@@ -43,7 +43,7 @@ def training(root, reg):
     for name, group in picked.groupby("capture", sort=False):
         frame = pd.read_parquet(
             enriched(root, name),
-            columns=["row_id", *ARMS["contact"]],
+            columns=["row_id", *features],
             filters=[("row_id", "in", group.row_id.tolist())],
         ).sort_values("row_id")
         if not np.array_equal(group.row_id, frame.row_id):
@@ -84,9 +84,9 @@ def family_weights(family):
     return family.map(per_family).to_numpy(dtype=np.float64), per_family
 
 
-def fit(root, group, arm, threads):
+def fit(root, group, arm, threads, *, arms=ARMS):
     path = artifact(root, group, arm)
-    columns = ["label", *ARMS[arm]]
+    columns = ["label", *arms[arm]]
     if group == "hgb_family":
         columns.append("train_family")
     frame = pd.read_parquet(root / "features/train.parquet", columns=columns)
@@ -95,20 +95,20 @@ def fit(root, group, arm, threads):
     if group == "hgb_family":
         options["sample_weight"], mass = family_weights(frame.pop("train_family"))
     elif group in NEURAL_GROUPS:
-        options = {"device": "cuda:0", "seed": int(group[3:]), "base_width": len(ARMS["raw"])}
-    backend(group).fit_arm(frame, ARMS[arm], path, threads=threads, **options)
+        options = {"device": "cuda:0", "seed": int(group[3:]), "base_width": len(arms["raw"])}
+    backend(group).fit_arm(frame, arms[arm], path, threads=threads, **options)
     source = path.with_suffix(".fit.json")
     report = root / "evidence/fits" / (path.stem + ".json")
     write_json(report, read_json(source) | {"train_family_sample_weights": mass})
     return [path, report]
 
 
-def models(root, group, threads):
+def models(root, group, threads, *, arm_names=SINGLE):
     impl = backend(group)
     kwargs = {"threads": threads}
     if group in NEURAL_GROUPS:
         kwargs["device"] = "cuda:0"
-    return {arm: impl.load_arm(artifact(root, group, arm), **kwargs) for arm in SINGLE}
+    return {arm: impl.load_arm(artifact(root, group, arm), **kwargs) for arm in arm_names}
 
 
 def predict(group, fitted, frame):

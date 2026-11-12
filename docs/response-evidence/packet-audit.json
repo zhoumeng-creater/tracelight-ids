@@ -1,0 +1,456 @@
+{
+  "52-1": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-52-1/2019-03-08-13-24-30-192.168.1.197.pcap",
+    "pcap_total_bytes": 4904467819,
+    "range_start": 0,
+    "range_bytes": 4194304,
+    "range_sha256": "190afecf274c715526e39507cb621380cd873ee9527f3bf42c1f8cecc432676e",
+    "conn_log_uncompressed_sha256": "68796959779c4ec5b77bf0d40b220af2b4fa5550fc212725add1b48ae86f61a9",
+    "frozen_r22_package_sha256": "1e62b5aaf768b477fee27bfd776e4d444211b03bbea69209de38f5c23996ddb1",
+    "first_record_us": 1552047872736899,
+    "last_record_us": 1552047956540577,
+    "all_complete_frames": 29813,
+    "fully_captured_tcp_ipv4_frames": 29801,
+    "other_frames": {
+      "ethertype_0x0800_ipproto_17": 2,
+      "ethertype_0x0806_ipproto_None": 8,
+      "ethertype_0x0800_ipproto_1": 2
+    },
+    "adjacent_out_of_order_timestamps": 0,
+    "groups": {
+      "C&C-FileDownload": {
+        "log_starts_in_range": 12,
+        "R22_raw_alert": 0,
+        "R22_contact_add_alert": 0,
+        "R22_new_alert": 0,
+        "R22_lost_alert": 0,
+        "exact_start_log_originator": 12,
+        "all_matching_start_checksums_valid": 12,
+        "start_tcp_flags_SYN": 12,
+        "complete_next_second": 12,
+        "responder_frame_in_next_second": 9,
+        "no_responder_frame_in_next_second": 3,
+        "orig_checksum_uncounted": 0,
+        "resp_checksum_uncounted": 0,
+        "response_evidence_code_-1": 0,
+        "response_evidence_code_0": 0,
+        "response_evidence_code_1": 12
+      },
+      "C&C": {
+        "log_starts_in_range": 6,
+        "R22_raw_alert": 0,
+        "R22_contact_add_alert": 0,
+        "R22_new_alert": 0,
+        "R22_lost_alert": 0,
+        "exact_start_log_originator": 6,
+        "all_matching_start_checksums_valid": 6,
+        "start_tcp_flags_SYN": 6,
+        "complete_next_second": 6,
+        "no_responder_frame_in_next_second": 5,
+        "responder_frame_in_next_second": 1,
+        "orig_checksum_uncounted": 0,
+        "resp_checksum_uncounted": 0,
+        "response_evidence_code_-1": 0,
+        "response_evidence_code_0": 4,
+        "response_evidence_code_1": 2
+      },
+      "Scanning-S0-S": {
+        "log_starts_in_range": 12640,
+        "R22_raw_alert": 12640,
+        "R22_contact_add_alert": 12640,
+        "R22_new_alert": 0,
+        "R22_lost_alert": 0,
+        "exact_start_log_originator": 12640,
+        "all_matching_start_checksums_valid": 12640,
+        "start_tcp_flags_SYN": 12640,
+        "complete_next_second": 12288,
+        "no_responder_frame_in_next_second": 12288,
+        "orig_checksum_uncounted": 0,
+        "resp_checksum_uncounted": 0,
+        "response_evidence_code_-1": 0,
+        "response_evidence_code_0": 12640,
+        "response_evidence_code_1": 0
+      }
+    },
+    "first_two_examples": {
+      "C&C-FileDownload": [
+        {
+          "uid": "Ci1t6e4WID2QT41FV5",
+          "physical_log_row_zero_based": 0,
+          "start_us": 1552047872926803,
+          "logged_tuple": [
+            "192.168.1.197",
+            51654,
+            "185.244.25.108",
+            80
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 1144,
+          "tcp_flags": 2,
+          "valid_tcp_checksum": true,
+          "history": "ShADadcgttfF",
+          "orig_pkts": 78,
+          "resp_pkts": 78
+        },
+        {
+          "uid": "CU2NLs2supXiEWX8M2",
+          "physical_log_row_zero_based": 1,
+          "start_us": 1552047873858759,
+          "logged_tuple": [
+            "192.168.1.197",
+            51656,
+            "185.244.25.108",
+            80
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 124066,
+          "tcp_flags": 2,
+          "valid_tcp_checksum": true,
+          "history": "ShADadttfF",
+          "orig_pkts": 80,
+          "resp_pkts": 78
+        }
+      ],
+      "C&C": [
+        {
+          "uid": "CreujwHl5AO8RJahl",
+          "physical_log_row_zero_based": 2,
+          "start_us": 1552047875857616,
+          "logged_tuple": [
+            "192.168.1.197",
+            51658,
+            "185.244.25.108",
+            80
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 276292,
+          "tcp_flags": 2,
+          "valid_tcp_checksum": true,
+          "history": "S",
+          "orig_pkts": 6,
+          "resp_pkts": 0
+        },
+        {
+          "uid": "CeBJH825UMFsamRMf9",
+          "physical_log_row_zero_based": 5,
+          "start_us": 1552047885270751,
+          "logged_tuple": [
+            "192.168.1.197",
+            51662,
+            "185.244.25.108",
+            80
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 644082,
+          "tcp_flags": 2,
+          "valid_tcp_checksum": true,
+          "history": "S",
+          "orig_pkts": 6,
+          "resp_pkts": 0
+        }
+      ],
+      "Scanning-S0-S": [
+        {
+          "uid": "C6jVDN2xxDWsD9VHVh",
+          "physical_log_row_zero_based": 18,
+          "start_us": 1552047923908949,
+          "logged_tuple": [
+            "192.168.1.197",
+            63420,
+            "4.106.4.173",
+            2323
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 2226836,
+          "tcp_flags": 2,
+          "valid_tcp_checksum": true,
+          "history": "S",
+          "orig_pkts": 2,
+          "resp_pkts": 0
+        },
+        {
+          "uid": "CWvJcIXpBAQuglmNg",
+          "physical_log_row_zero_based": 19,
+          "start_us": 1552047923908953,
+          "logged_tuple": [
+            "192.168.1.197",
+            63420,
+            "140.1.74.173",
+            23
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 2226988,
+          "tcp_flags": 2,
+          "valid_tcp_checksum": true,
+          "history": "S",
+          "orig_pkts": 2,
+          "resp_pkts": 0
+        }
+      ]
+    }
+  },
+  "60-1": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-60-1/2019-09-20-02-40-32-192.168.1.195.pcap",
+    "pcap_total_bytes": 22028429274,
+    "range_start": 20623104324,
+    "range_bytes": 4194304,
+    "range_sha256": "0bbc786ef2c0e311e9edce85e9687959bde107a7f284c9da4532af7c5a508b90",
+    "conn_log_uncompressed_sha256": "4e15902f6c39b1fad60605e667761b10c0c9866beb514aa6320b7baf108ea7c0",
+    "frozen_r22_package_sha256": "1e62b5aaf768b477fee27bfd776e4d444211b03bbea69209de38f5c23996ddb1",
+    "first_record_us": 1569018198372420,
+    "last_record_us": 1569018208163669,
+    "all_complete_frames": 55188,
+    "fully_captured_tcp_ipv4_frames": 55188,
+    "other_frames": {},
+    "adjacent_out_of_order_timestamps": 0,
+    "groups": {
+      "DDoS-C": {
+        "log_starts_in_range": 55168,
+        "R22_raw_alert": 0,
+        "R22_contact_add_alert": 55168,
+        "R22_new_alert": 55168,
+        "R22_lost_alert": 0,
+        "exact_start_log_originator": 55168,
+        "all_matching_start_checksums_invalid": 55168,
+        "start_tcp_flags_all_eight_bits": 55168,
+        "both_counters_zero_despite_frame_at_start": 55168,
+        "complete_next_second": 49675,
+        "no_responder_frame_in_next_second": 49675,
+        "orig_checksum_uncounted": 55168,
+        "resp_checksum_uncounted": 0,
+        "response_evidence_code_-1": 55168,
+        "response_evidence_code_0": 0,
+        "response_evidence_code_1": 0
+      },
+      "Benign-^c": {
+        "log_starts_in_range": 20,
+        "R22_raw_alert": 4,
+        "R22_contact_add_alert": 4,
+        "R22_new_alert": 0,
+        "R22_lost_alert": 0,
+        "exact_start_log_responder": 20,
+        "all_matching_start_checksums_invalid": 20,
+        "start_tcp_flags_all_eight_bits": 20,
+        "logged_zero_responder_despite_responder_frame_at_start": 20,
+        "both_counters_zero_despite_frame_at_start": 20,
+        "complete_next_second": 18,
+        "responder_frame_in_next_second": 18,
+        "orig_checksum_uncounted": 0,
+        "resp_checksum_uncounted": 20,
+        "response_evidence_code_-1": 20,
+        "response_evidence_code_0": 0,
+        "response_evidence_code_1": 0
+      }
+    },
+    "first_two_examples": {
+      "DDoS-C": [
+        {
+          "uid": "Cmntd536heTLdt9Wg4",
+          "physical_log_row_zero_based": 765,
+          "start_us": 1569018198372664,
+          "logged_tuple": [
+            "192.168.1.195",
+            28667,
+            "162.248.88.215",
+            62336
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 20623104400,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "C",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        },
+        {
+          "uid": "CAGtOn3xKuVX0S9gvf",
+          "physical_log_row_zero_based": 766,
+          "start_us": 1569018198372668,
+          "logged_tuple": [
+            "192.168.1.195",
+            35537,
+            "162.248.88.215",
+            62336
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 20623104552,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "C",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        }
+      ],
+      "Benign-^c": [
+        {
+          "uid": "CN4fE94OKYSCZlOxse",
+          "physical_log_row_zero_based": 986,
+          "start_us": 1569018198446377,
+          "logged_tuple": [
+            "162.248.88.215",
+            62336,
+            "192.168.1.195",
+            6668
+          ],
+          "start_frame_direction": "log_responder",
+          "pcap_record_byte_offset": 20623137992,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "^c",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        },
+        {
+          "uid": "ClUmxK3TgnBEFjhnV6",
+          "physical_log_row_zero_based": 1906,
+          "start_us": 1569018198733231,
+          "logged_tuple": [
+            "162.248.88.215",
+            62336,
+            "192.168.1.195",
+            139
+          ],
+          "start_frame_direction": "log_responder",
+          "pcap_record_byte_offset": 20623273272,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "^c",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        }
+      ]
+    }
+  },
+  "60-1-added": {
+    "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-60-1/2019-09-20-02-40-32-192.168.1.195.pcap",
+    "pcap_total_bytes": 22028429274,
+    "range_start": 20775285438,
+    "range_bytes": 4194304,
+    "range_sha256": "f6843f594cd3a575dc2271f1f6dd4706a130d45223a24cd8585c42fe8e47a4f5",
+    "conn_log_uncompressed_sha256": "4e15902f6c39b1fad60605e667761b10c0c9866beb514aa6320b7baf108ea7c0",
+    "frozen_r22_package_sha256": "1e62b5aaf768b477fee27bfd776e4d444211b03bbea69209de38f5c23996ddb1",
+    "first_record_us": 1569018377322189,
+    "last_record_us": 1569018381825641,
+    "all_complete_frames": 55188,
+    "fully_captured_tcp_ipv4_frames": 55188,
+    "other_frames": {},
+    "adjacent_out_of_order_timestamps": 0,
+    "groups": {
+      "DDoS-C": {
+        "log_starts_in_range": 55144,
+        "R22_raw_alert": 0,
+        "R22_contact_add_alert": 55144,
+        "R22_new_alert": 55144,
+        "R22_lost_alert": 0,
+        "exact_start_log_originator": 55144,
+        "all_matching_start_checksums_invalid": 55144,
+        "start_tcp_flags_all_eight_bits": 55144,
+        "both_counters_zero_despite_frame_at_start": 55144,
+        "complete_next_second": 42948,
+        "no_responder_frame_in_next_second": 42948,
+        "orig_checksum_uncounted": 55144,
+        "resp_checksum_uncounted": 0,
+        "response_evidence_code_-1": 55144,
+        "response_evidence_code_0": 0,
+        "response_evidence_code_1": 0
+      },
+      "Benign-^c": {
+        "log_starts_in_range": 42,
+        "R22_raw_alert": 4,
+        "R22_contact_add_alert": 39,
+        "R22_new_alert": 35,
+        "R22_lost_alert": 0,
+        "exact_start_log_responder": 42,
+        "all_matching_start_checksums_invalid": 42,
+        "start_tcp_flags_all_eight_bits": 42,
+        "logged_zero_responder_despite_responder_frame_at_start": 42,
+        "both_counters_zero_despite_frame_at_start": 42,
+        "complete_next_second": 34,
+        "responder_frame_in_next_second": 34,
+        "orig_checksum_uncounted": 0,
+        "resp_checksum_uncounted": 42,
+        "response_evidence_code_-1": 42,
+        "response_evidence_code_0": 0,
+        "response_evidence_code_1": 0
+      }
+    },
+    "first_two_examples": {
+      "DDoS-C": [
+        {
+          "uid": "CHF40233IbmavzSqel",
+          "physical_log_row_zero_based": 1978689,
+          "start_us": 1569018377322189,
+          "logged_tuple": [
+            "192.168.1.195",
+            38497,
+            "162.248.88.215",
+            62336
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 20775285438,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "C",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        },
+        {
+          "uid": "CojqvW2D80iYlMc4I6",
+          "physical_log_row_zero_based": 1978692,
+          "start_us": 1569018377322439,
+          "logged_tuple": [
+            "192.168.1.195",
+            23260,
+            "162.248.88.215",
+            62336
+          ],
+          "start_frame_direction": "log_originator",
+          "pcap_record_byte_offset": 20775285590,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "C",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        }
+      ],
+      "Benign-^c": [
+        {
+          "uid": "CayoiQ1v3e1J1S405",
+          "physical_log_row_zero_based": 1979426,
+          "start_us": 1569018377381917,
+          "logged_tuple": [
+            "162.248.88.215",
+            62336,
+            "192.168.1.195",
+            995
+          ],
+          "start_frame_direction": "log_responder",
+          "pcap_record_byte_offset": 20775342590,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "^c",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        },
+        {
+          "uid": "CiMDC42S1fkBoA7MO4",
+          "physical_log_row_zero_based": 1983667,
+          "start_us": 1569018377724989,
+          "logged_tuple": [
+            "162.248.88.215",
+            62336,
+            "192.168.1.195",
+            6666
+          ],
+          "start_frame_direction": "log_responder",
+          "pcap_record_byte_offset": 20775660422,
+          "tcp_flags": 255,
+          "valid_tcp_checksum": false,
+          "history": "^c",
+          "orig_pkts": 0,
+          "resp_pkts": 0
+        }
+      ]
+    }
+  }
+}

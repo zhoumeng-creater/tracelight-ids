@@ -1,0 +1,36 @@
+{
+  "release": "https://zenodo.org/records/23905375",
+  "archives": {
+    "TQH-C2_labels_v110.zip": {
+      "bytes": 31023638,
+      "sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58"
+    },
+    "TQH-C2_labels_D.zip": {
+      "bytes": 2238688,
+      "sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2"
+    }
+  },
+  "verified_units": 48,
+  "rows": 152765,
+  "native_labels": {
+    "benign": 124295,
+    "benign_external": 460,
+    "malicious_c2": 27130,
+    "malicious_recon": 880
+  },
+  "physical_first_utc": "2026-06-29T06:09:02.326000+00:00",
+  "physical_last_utc": "2026-07-23T17:08:15.951000+00:00",
+  "rows_per_unit_min_max": [
+    207,
+    12710
+  ],
+  "verification": "Full SHA256, member bytes, unique one-to-one UID join of both directions, exact native physical order, observations and outcome files, cold 60s histories in each independent cell, row-by-row identity, zero initial history.",
+  "real_model_fits": 0,
+  "real_model_scores": 0,
+  "clock_vs_rounded_microsecond": {
+    "one_ms_later_rows": 67,
+    "affected_units": 30,
+    "total_rows": 152765,
+    "clock": "Ceil the original decimal start plus duration to milliseconds, then take the cumulative maximum in physical order."
+  }
+}

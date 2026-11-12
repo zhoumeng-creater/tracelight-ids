@@ -1,0 +1,122 @@
+{
+  "source": "R22 sealed selected training identities and registered normal calibration controls; no fitting or held-out labels.",
+  "groups": [
+    {
+      "capture": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "family": "Benign",
+      "code": -1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 162
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "family": "Benign",
+      "code": 0,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 3854
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "family": "Benign",
+      "code": 1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 59
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "family": "Scanning",
+      "code": 0,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 3953
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-1-1",
+      "role": "P",
+      "family": "Scanning",
+      "code": 1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 87
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-8-1",
+      "role": "P",
+      "family": "Benign",
+      "code": 0,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 1
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-8-1",
+      "role": "P",
+      "family": "Benign",
+      "code": 1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 20
+    },
+    {
+      "capture": "CTU-IoT-Malware-Capture-8-1",
+      "role": "P",
+      "family": "C&C",
+      "code": 0,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 56
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-5-1",
+      "role": "C",
+      "family": "Benign",
+      "code": -1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 128
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-5-1",
+      "role": "C",
+      "family": "Benign",
+      "code": 0,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 463
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-5-1",
+      "role": "C",
+      "family": "Benign",
+      "code": 1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 783
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-4-1",
+      "role": "C",
+      "family": "Benign",
+      "code": 0,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 14
+    },
+    {
+      "capture": "CTU-Honeypot-Capture-4-1",
+      "role": "C",
+      "family": "Benign",
+      "code": 1,
+      "orig_checksum_uncounted": 0,
+      "resp_checksum_uncounted": 0,
+      "rows": 438
+    }
+  ]
+}

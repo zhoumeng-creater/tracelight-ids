@@ -1,0 +1,82 @@
+{
+  "scope": "Windows PowerShell full entry point, synthetic network records only. No accuracy or lab throughput estimate.",
+  "sources": {
+    "P": 2,
+    "C": 2,
+    "R": 2,
+    "H": 1,
+    "E": 2,
+    "X": 1
+  },
+  "synthetic_rows": 24402,
+  "held_out_rows_across_all_roles": 15184,
+  "registered_training_rows": 8192,
+  "normal_only_calibration_rows": 1026,
+  "fit_arms": [
+    "raw",
+    "contact",
+    "zero",
+    "current",
+    "prior",
+    "quality"
+  ],
+  "decisions_in_bit_order": [
+    "raw",
+    "contact",
+    "zero",
+    "current",
+    "prior",
+    "quality",
+    "counter_masked"
+  ],
+  "groups": [
+    "hgb",
+    "hgb_family",
+    "mlp17",
+    "mlp29",
+    "mlp43"
+  ],
+  "cpu_tree_fits": 12,
+  "cuda_neural_fits": 18,
+  "cpu_tree_iterations_in_rehearsal": 6,
+  "neural_epochs_in_rehearsal": 2,
+  "cuda_device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "torch": "2.6.0+cu126",
+  "directional_counter_gap_seen_in_train_reference": false,
+  "r22_control_reuse_for_synthetic_sources": "different_source_identities",
+  "synthetic_tqh_labels_reverse_physical_order": true,
+  "external_c2_native_rows": 164,
+  "external_recon_native_rows": 164,
+  "threads_requested": 8,
+  "early_prepare_workers": 2,
+  "sealed_decision_words_verified": 75920,
+  "distinct_model_pair_native_label_cells_recomputed_from_every_row": 1800,
+  "exact_inference_cost_scopes": 4,
+  "benchmark_rows": 4787,
+  "exact_history_legacy_and_serial_columns_including_row_id": [
+    9,
+    15
+  ],
+  "fault": "One offline forward synthetic log deliberately withheld then restored. Earlier completed outputs retained by SHA-256.",
+  "archives_with_all_lengths_and_hashes_verified": [
+    {
+      "status": "failed",
+      "receipts": 77,
+      "members": 235
+    },
+    {
+      "status": "complete",
+      "receipts": 102,
+      "members": 307
+    },
+    {
+      "status": "complete",
+      "receipts": 102,
+      "members": 309
+    }
+  ],
+  "final_stage_hash_receipts": 102,
+  "already_complete_relaunch_reused": 102,
+  "junit_tests": 51,
+  "compare_scope": "Every sealed word: state against blind inputs and all registered decision pairs by original truth (rows, before, after, gained, lost); sampled scores against packed bits and calibration threshold."
+}
