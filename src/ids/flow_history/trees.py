@@ -41,7 +41,7 @@ def _matrix(frame, names):
     return values
 
 
-def fit_arm(p, features, path, *, threads):
+def fit_arm(p, features, path, *, threads, sample_weight=None):
     names = checked_features(features)
     threads = _threads(threads)
     labels = p["label"].to_numpy()
@@ -52,7 +52,7 @@ def fit_arm(p, features, path, *, threads):
     start = time.perf_counter()
     with threadpool_limits(limits=threads):
         pools = threadpool_info()
-        classifier.fit(values, labels)
+        classifier.fit(values, labels, sample_weight=sample_weight)
         train_seconds = time.perf_counter() - start
         probe = values[:512]
         start = time.perf_counter()

@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十二轮实验室批次（2026-11-12）**　[固定版运行命令与判读标准](docs/CONTACT_EVIDENCE_LAB.md) · [数据与离线准备](docs/CONTACT_EVIDENCE_DATA.md) · [第二十、二十一轮离线回放](docs/flow_replay/index.html)。比较四种流历史输入、两种告警追加策略及独立的扫描和心跳场景。
+
 **第二十一轮前向阈值复验已完成**　[结果与逐行复算](docs/FORWARD_THRESHOLD_RESULTS.md) · [固定版本与复现命令](docs/FORWARD_THRESHOLD_LAB.md)。已定位 CIC2018 校准分数的主机集中现象。IoT-23 两段新评价均未取得符合预设误报预算的扫描和 C&C 联合收益。执行版为 `forward-threshold-lab-v1.2`。
 
 **第二十轮实验室入口（2026-11-11）**　[CIC2018 独立采集复验](docs/INDEPENDENT_CAPTURE_LAB.md)。在同一批已核对标签的记录上比较原 48 字段 HGB 与加入四项 60 秒历史的 HGB，同时测扫描、未见 Bot、正常误报与逐流成本。固定标签为 `independent-capture-lab-v1`。

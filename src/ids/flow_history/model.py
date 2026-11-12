@@ -67,16 +67,16 @@ def _tensor(values, mean, scale, device):
     return torch.from_numpy(standardized).to(device)
 
 
-def _network(width):
+def _network(width, *, seed=SEED, base_width=len(FEATURES)):
     # Draw common layers once in the same order for every width. Historical
     # inputs start with zero coefficients, so every arm starts at the raw model.
     with torch.random.fork_rng(devices=[]):
-        torch.random.default_generator.manual_seed(SEED)
-        base = nn.Linear(len(FEATURES), HIDDEN[0])
+        torch.random.default_generator.manual_seed(seed)
+        base = nn.Linear(base_width, HIDDEN[0])
         hidden = nn.Linear(HIDDEN[0], HIDDEN[1])
         output = nn.Linear(HIDDEN[1], 1)
         first = nn.Linear(width, HIDDEN[0])
-        common = min(width, len(FEATURES))
+        common = min(width, base_width)
         with torch.no_grad():
             first.weight.zero_()
             first.weight[:, :common].copy_(base.weight[:, :common])
@@ -136,7 +136,7 @@ def _select_score_batch(network, x):
             "selection": "highest median throughput among numerically matched candidates; smaller size breaks ties"}
 
 
-def fit_arm(p, features, path, *, threads, device="cuda:0"):
+def fit_arm(p, features, path, *, threads, device="cuda:0", seed=SEED, base_width=len(FEATURES)):
     """Fit once on P. Persist portable weights, preprocessing and training evidence."""
     names = checked_features(features)
     actual = _device(device, threads)
@@ -150,7 +150,7 @@ def fit_arm(p, features, path, *, threads, device="cuda:0"):
         torch.cuda.reset_peak_memory_stats(actual)
     x = _tensor(values, mean, scale, actual)
     targets = torch.from_numpy(np.array(y, dtype=np.float32)).to(actual)
-    network = _network(len(names)).to(actual)
+    network = _network(len(names), seed=seed, base_width=base_width).to(actual)
     # Representative forward on the requested device, before committing to the full fit.
     probe = x[:TRAIN_BATCH]
     with torch.inference_mode():
@@ -163,7 +163,7 @@ def fit_arm(p, features, path, *, threads, device="cuda:0"):
     if prediction.device != actual or not torch.isfinite(prediction).all().item():
         raise RuntimeError("model-device probe failed")
     optimizer = torch.optim.AdamW(network.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
-    sampler = torch.Generator(device="cpu").manual_seed(SEED)
+    sampler = torch.Generator(device="cpu").manual_seed(seed)
     training_loss = []
     start = time.perf_counter()
     for _ in range(EPOCHS):
@@ -193,7 +193,7 @@ def fit_arm(p, features, path, *, threads, device="cuda:0"):
     tmp.replace(path)
     write_json(path.with_suffix(".fit.json"), {
         "format": FORMAT, "features": list(names), "rows": len(p), "positive_rows": int(np.sum(y)),
-        "seed": SEED, "epochs": EPOCHS, "training_batch_size": TRAIN_BATCH, "scoring_batch_size": batch_probe["selected"],
+        "seed": seed, "epochs": EPOCHS, "training_batch_size": TRAIN_BATCH, "scoring_batch_size": batch_probe["selected"],
         "score_batch_probe": batch_probe, "cpu_scoring_batch_size": SCORE_BATCH,
         "loss": "binary_cross_entropy_with_logits", "optimizer": "AdamW", "learning_rate": LR,
         "weight_decay": WEIGHT_DECAY, "hidden": list(HIDDEN), "training_loss_per_epoch": training_loss,

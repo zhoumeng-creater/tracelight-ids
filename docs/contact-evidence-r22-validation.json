@@ -1,0 +1,133 @@
+{
+  "synthetic_inputs_only": true,
+  "windows_powershell_script": "scripts/RUN_CONTACT_EVIDENCE.ps1",
+  "source_parameter_overrides": {
+    "HGB_max_iter_release_and_smoke": [
+      200,
+      6
+    ],
+    "MLP_epochs_release_and_smoke": [
+      80,
+      2
+    ]
+  },
+  "torch": "2.6.0+cu126",
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "cuda_model_fit_count": 12,
+  "cpu_model_fit_count": 8,
+  "group_names": [
+    "hgb",
+    "hgb_family",
+    "mlp17",
+    "mlp29",
+    "mlp43"
+  ],
+  "policies": [
+    "raw",
+    "history",
+    "service",
+    "contact",
+    "anchor",
+    "unrestricted_add",
+    "contact_add"
+  ],
+  "pytest": "31",
+  "independently_checked_training_allocation_comparison_records": 70,
+  "independently_checked_family_comparison_records": 490,
+  "independently_checked_blind_row_masks": 12790,
+  "online_decisions_and_scores_checked": 2048,
+  "r21_synthetic_control": {
+    "training_ids_match": true,
+    "calibration_ids_match": true,
+    "arms": {
+      "raw": {
+        "max_abs_score_delta": 0.0,
+        "changed_calibration_alerts": 0,
+        "r21_threshold": 0.5501312485961805,
+        "new_threshold": 0.5501312485961805
+      },
+      "history": {
+        "max_abs_score_delta": 0.0,
+        "changed_calibration_alerts": 0,
+        "r21_threshold": 0.5501312485961805,
+        "new_threshold": 0.5501312485961805
+      }
+    }
+  },
+  "packs": [
+    {
+      "bytes": 733778,
+      "manifest_members": 173,
+      "sha256": "0fb80d5f8b6b95b070b179371173a86a40116d2056e09e9d024aaa4d64dac310"
+    },
+    {
+      "bytes": 734612,
+      "manifest_members": 175,
+      "sha256": "803acc5c4e2516d16e7ccf148561f0e061bd8ff8858c10709dbd5a44ce8de533"
+    },
+    {
+      "bytes": 735380,
+      "manifest_members": 177,
+      "sha256": "a3fd2ddd9eeee89a2b4644231dd2bea4fc081cecd94a967719345fbf3b313b4b"
+    },
+    {
+      "bytes": 736188,
+      "manifest_members": 179,
+      "sha256": "7711a214923044fc9d1a0a0dfbb613a70f610b58bb8a8be28d1bd5a8d6f83684"
+    }
+  ],
+  "reruns": [
+    {
+      "executed": 59,
+      "reused": 0,
+      "condition": "new"
+    },
+    {
+      "executed": 0,
+      "reused": 59,
+      "condition": "complete"
+    },
+    {
+      "executed": 1,
+      "reused": 58,
+      "condition": "missing_last_cost_receipt"
+    },
+    {
+      "executed": 0,
+      "reused": 59,
+      "condition": "final_launcher_with_all_receipts"
+    }
+  ],
+  "source": {
+    "date": "2026-11-12",
+    "operating_system": "Windows",
+    "python": "3.12.4",
+    "release_modules_and_launcher_digest": "0152ab05c5065d0f25bedb9ea5f186ab94a7acab66b9bb30f03df3a8b8e36565",
+    "digest_encoding": "SHA-256 of compact sorted JSON of repo-relative contact_evidence/*.py and PowerShell launcher path -> SHA-256 (LF normalized)."
+  },
+  "fixture": {
+    "normal_and_attack_training_rows": {
+      "Benign": 4096,
+      "Scanning": 4040,
+      "C&C": 56
+    },
+    "control_inputs": [
+      510,
+      516
+    ],
+    "future_inputs": [
+      1341,
+      1217
+    ],
+    "calibration_ref_origin": "Independent sklearn HGB and earlier R21 vectorized history on synthetic data; own row IDs and score files.",
+    "observed_weighted_attack_mass_per_family": {
+      "Scanning": 2048,
+      "C&C": 2048
+    },
+    "workers": {
+      "cpu_threads": 6,
+      "data_workers": 2
+    },
+    "real_data_or_real_detector_performance_evaluated": false
+  }
+}

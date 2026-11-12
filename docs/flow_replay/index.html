@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>八分钟，88 条误报 · TraceLight</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="replay.css">
+  <script defer src="replay-data.js"></script>
+  <script defer src="replay.js"></script>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner"><a class="brand" href="#calibration">TraceLight</a>
+      <nav aria-label="页内导航"><a href="#calibration">校准回放</a><a href="#forward">前向对照</a><a href="#sources">证据</a></nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="calibration" aria-labelledby="title">
+      <div class="intro">
+        <p class="eyebrow">CIC2018 · 2018-02-28 · TCP/135</p>
+        <h1 id="title">八分钟，<em>88</em> 条误报</h1>
+        <p class="lead">同一台主机的一段通信占了校准期 95 条误报中的 88 条，决定阈值的 15 条同分记录也全部来自它。评价期这台主机只剩 3 条正常流，均未误报。</p>
+      </div>
+      <div class="analysis">
+        <div class="timeline-panel">
+          <div class="panel-head"><h2>正常流的告警时间线</h2><span class="annotation">流结束时间 · UTC</span></div>
+          <div class="control-row">
+            <div class="choice" role="group" aria-label="历史输入">
+              <button id="actual" aria-pressed="true">实际历史</button>
+              <button id="zero" aria-pressed="false">四项历史置零</button>
+            </div>
+            <span class="counts" id="alarmCount" aria-live="polite"></span>
+          </div>
+          <div id="plot" role="group" aria-label="每 30 秒的流量条数，选择时段查看真实记录"></div>
+          <div class="axis"><span id="start"></span><span id="end"></span></div>
+          <div class="plot-foot"><span><i class="dot alarm"></i>误报</span><span><i class="dot quiet"></i>未告警</span><span>每柱 30 秒，末柱截至最后一条流</span></div>
+          <p class="note" id="rangeNote"></p>
+        </div>
+        <div class="flow-panel">
+          <div class="panel-head"><h2>查看一条流</h2><span class="truth">原标正常</span></div>
+          <div class="flow-time" id="flowTime"></div><p class="flow-id" id="flowId"></p>
+          <div class="verdict" aria-live="polite"><strong id="verdict"></strong><span id="score"></span></div>
+          <dl class="features">
+            <div><dt>前 60 秒已完成流</dt><dd id="flows"></dd></div>
+            <div><dt>目的 IP 数</dt><dd id="ips"></dd></div>
+            <div><dt>目的端口数</dt><dd id="ports"></dd></div>
+            <div><dt>无应答流占比</dt><dd id="noReply"></dd></div>
+          </dl>
+          <div class="row-nav"><button id="prev" aria-label="上一条流">←</button><span id="position"></span><button id="play" type="button" aria-pressed="false">逐条播放</button><button id="next" aria-label="下一条流">→</button></div>
+        </div>
+      </div>
+      <details><summary>阈值、行号与置零判定依据</summary>
+        <p>原模型有 48 个流字段和 4 个同源历史字段。10,000 条正常校准流按分数升序排列，阈值取第 9,901 位，只有严格超过阈值才告警。流的行号是原始 UQ CSV 的一基数据行号，表头不计。该主机 135 条正常校准流的目的端口均为 TCP/135。</p>
+        <p>时间线从这台主机的第一条误报到最后一条误报。置零保留原始字段、模型和阈值，只改变四项历史输入。复核记录表明该主机全部 135 条流置零后均未告警。逐行面板据此显示判定，精确的置零分数未随复核汇总保存。</p>
+        <p><a href="../forward_threshold_20261111/cic-tail.json">校准复核 JSON</a> · <a href="build_evidence.py">逐行提取脚本</a></p>
+      </details>
+    </section>
+    <section id="forward" aria-labelledby="forwardTitle">
+      <p class="eyebrow">CIC2018 / IoT-23</p><h2 id="forwardTitle" class="section-title">换一个时段，还能检出多少？</h2>
+      <p class="lead">在同一批流上配对比较，分开看新增和丢失的告警。1% 的误报上限按各时段正常流数量计算。</p>
+      <div class="filters">
+        <label>评价场景<select id="scene"><option value="CIC2018">CIC2018 · 旧窗口回放</option><option value="34-1">IoT-23 · 34-1 前向场景</option><option value="49-1">IoT-23 · 49-1 前向场景</option></select></label>
+        <label>比较对象<select id="comparison"><option value="compare">同一阈值规则，给模型加历史</option><option value="update">同一历史模型，更新阈值</option></select></label>
+        <label>阈值规则<select id="policy"><option value="fixed">较早正常流的固定阈值</option><option value="unlabeled" selected>过去一小时，无标签更新</option><option value="recent_normal">延迟正常确认（条件对照）</option></select></label>
+      </div>
+      <div class="budget">
+        <div><span>比较后的正常误报率</span><strong id="fpr"></strong></div>
+        <div class="budget-summary"><b id="budgetFlag"></b><span id="budgetCounts"></span></div>
+      </div>
+      <div class="table-box" tabindex="0" aria-label="成对比较表，小屏可横向滚动">
+        <table><thead><tr><th scope="col">真实类别</th><th scope="col" id="baseName">原字段</th><th scope="col" id="candName">加入历史</th><th scope="col">新增告警</th><th scope="col">丢失告警</th><th scope="col">净变化</th></tr></thead><tbody id="pairs"></tbody></table>
+      </div>
+      <p class="note" id="selectionNote" aria-live="polite"></p><p class="note" id="ruleNote"></p>
+    </section>
+    <section id="sources" aria-labelledby="sourcesTitle">
+      <h2 id="sourcesTitle">核对来源</h2>
+      <p><a href="../FORWARD_THRESHOLD_RESULTS.md">第二十一轮完整分析</a> · <a href="../forward_threshold_20261111/cic-retrospective.json">旧窗口逐行配对汇总</a> · <a href="../forward_threshold_20261111/verified-results.json">两个新场景的独立复算</a></p>
+      <details><summary>封存文件 SHA-256</summary><dl id="hashes"></dl></details>
+    </section>
+  </main>
+  <noscript>需要启用 JavaScript 才能切换真实记录与场景。</noscript>
+</body>
+</html>
