@@ -1,0 +1,80 @@
+{
+  "IoT-SFC-04-11_12": {
+    "raw_bytes_sha256": "6a958525d8a526590d8c8054e3fc676a82958435f32c47907e06072ec5679778",
+    "verified_rows": 307596,
+    "utc_days": [
+      {
+        "window": "2025-04-10",
+        "normal": 38189,
+        "normal_tcp_80": 329,
+        "normal_tcp_80_with_at_least_64k": 8,
+        "baseline_fp": 3764,
+        "added_fp": 8,
+        "combined_fp": 3772,
+        "normal_budget": 381,
+        "combined_within_budget": false
+      },
+      {
+        "window": "2025-04-11",
+        "normal": 30811,
+        "normal_tcp_80": 253,
+        "normal_tcp_80_with_at_least_64k": 0,
+        "baseline_fp": 3061,
+        "added_fp": 0,
+        "combined_fp": 3061,
+        "normal_budget": 308,
+        "combined_within_budget": false
+      }
+    ]
+  },
+  "IoT-SFC-04-18_00": {
+    "raw_bytes_sha256": "cb84348dfd394a4e0f65f77aac58ff651fe17adfccc0ca5b852b5d0f9b2b03ac",
+    "verified_rows": 310174,
+    "utc_days": [
+      {
+        "window": "2025-04-14",
+        "normal": 4574,
+        "normal_tcp_80": 62,
+        "normal_tcp_80_with_at_least_64k": 0,
+        "baseline_fp": 0,
+        "added_fp": 0,
+        "combined_fp": 0,
+        "normal_budget": 45,
+        "combined_within_budget": true
+      },
+      {
+        "window": "2025-04-15",
+        "normal": 40898,
+        "normal_tcp_80": 590,
+        "normal_tcp_80_with_at_least_64k": 3,
+        "baseline_fp": 8,
+        "added_fp": 3,
+        "combined_fp": 11,
+        "normal_budget": 408,
+        "combined_within_budget": true
+      },
+      {
+        "window": "2025-04-16",
+        "normal": 40121,
+        "normal_tcp_80": 591,
+        "normal_tcp_80_with_at_least_64k": 1,
+        "baseline_fp": 8,
+        "added_fp": 1,
+        "combined_fp": 9,
+        "normal_budget": 401,
+        "combined_within_budget": true
+      },
+      {
+        "window": "2025-04-17",
+        "normal": 26002,
+        "normal_tcp_80": 380,
+        "normal_tcp_80_with_at_least_64k": 1,
+        "baseline_fp": 6,
+        "added_fp": 1,
+        "combined_fp": 7,
+        "normal_budget": 260,
+        "combined_within_budget": true
+      }
+    ]
+  }
+}
