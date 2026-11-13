@@ -1,0 +1,192 @@
+{
+  "official_data_record": "https://zenodo.org/records/17249078",
+  "archive_url": "https://zenodo.org/records/17249078/files/2024-06.zip",
+  "archive_total_bytes": 1747398591,
+  "publisher_monthly_md5": "4b1fd8bcf5ddd143f7b350aa7c0d4814",
+  "selection": "Earliest complete day in first published month; all rows of that Parquet member.",
+  "central_directory_tail_sha256": "8f039a5aa5e057af2c48d50695108f9fbb9a7c36e80fdaea614603cf318b73e3",
+  "members_in_month": 30,
+  "member": "20240601.parquet",
+  "compressed_bytes": 2236724,
+  "extracted_bytes": 2270380,
+  "data_byte_range_inclusive": [
+    74,
+    2236797
+  ],
+  "member_crc32": "80fe9d17",
+  "member_sha256": "0391bfbc2c489e944bb0f1093c483f9d6b4f92c16295f96fcd47991378c7e28a",
+  "sampling": "CESNET3, uniform 1:100; bidirectional UDP flows with QUIC metadata.",
+  "label_scope": "Passive application traffic, no author benign/malicious IDS truth. Source port omitted. Destination port 443 is sufficient for the either-end rule; non-443 destinations cannot be fully tested.",
+  "protocol_counts": {
+    "17": 14750
+  },
+  "all_rows": 14750,
+  "udp_destination_443": {
+    "support": 14746,
+    "at_least_10s": 6171,
+    "at_least_30s": 4452,
+    "at_least_60s": 3072,
+    "duration_quantiles_0_50_90_99_100": [
+      0.000668,
+      2.1492485,
+      145.33716049999998,
+      296.722238,
+      299.980716
+    ]
+  },
+  "udp_other_destination": {
+    "support": 4,
+    "at_least_10s": 2,
+    "at_least_30s": 2,
+    "at_least_60s": 0,
+    "duration_quantiles_0_50_90_99_100": [
+      0.091729,
+      19.657920999999998,
+      50.682859500000006,
+      55.64196705,
+      56.192979
+    ]
+  },
+  "hits_with_nonempty_sni": 4452,
+  "distinct_nonempty_sni_on_hits": 276,
+  "hits_by_dns_suffix": {
+    "googlevideo.com": {
+      "support": 12,
+      "at_least_10s": 2,
+      "at_least_30s": 1,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": [
+        0.0494,
+        0.289997,
+        14.042179600000003,
+        30.361551320000007,
+        32.320496
+      ]
+    },
+    "google.com": {
+      "support": 0,
+      "at_least_10s": 0,
+      "at_least_30s": 0,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": []
+    },
+    "youtube.com": {
+      "support": 0,
+      "at_least_10s": 0,
+      "at_least_30s": 0,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": []
+    },
+    "gstatic.com": {
+      "support": 0,
+      "at_least_10s": 0,
+      "at_least_30s": 0,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": []
+    },
+    "facebook.com": {
+      "support": 3212,
+      "at_least_10s": 1067,
+      "at_least_30s": 777,
+      "at_least_60s": 482,
+      "duration_quantiles_0_50_90_99_100": [
+        0.01456,
+        0.8818015,
+        62.57995860000005,
+        279.76441858,
+        299.508055
+      ]
+    },
+    "fbcdn.net": {
+      "support": 1080,
+      "at_least_10s": 392,
+      "at_least_30s": 290,
+      "at_least_60s": 224,
+      "duration_quantiles_0_50_90_99_100": [
+        0.00522,
+        0.7753680000000001,
+        205.5812817000001,
+        293.00618486,
+        299.343527
+      ]
+    },
+    "cloudflare.com": {
+      "support": 51,
+      "at_least_10s": 2,
+      "at_least_30s": 2,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": [
+        0.010994,
+        0.058744,
+        2.392989,
+        46.797677,
+        50.317437
+      ]
+    },
+    "apple.com": {
+      "support": 208,
+      "at_least_10s": 0,
+      "at_least_30s": 0,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": [
+        0.000682,
+        0.07049150000000001,
+        0.4736593000000003,
+        5.825155190000005,
+        8.014126
+      ]
+    },
+    "icloud.com": {
+      "support": 1763,
+      "at_least_10s": 777,
+      "at_least_30s": 362,
+      "at_least_60s": 287,
+      "duration_quantiles_0_50_90_99_100": [
+        0.005167,
+        0.755609,
+        60.347333400000004,
+        295.5010031999999,
+        299.793493
+      ]
+    },
+    "microsoft.com": {
+      "support": 6,
+      "at_least_10s": 0,
+      "at_least_30s": 0,
+      "at_least_60s": 0,
+      "duration_quantiles_0_50_90_99_100": [
+        0.102361,
+        0.34838349999999996,
+        3.0509085,
+        4.8403294500000005,
+        5.039154
+      ]
+    },
+    "instagram.com": {
+      "support": 1632,
+      "at_least_10s": 1012,
+      "at_least_30s": 792,
+      "at_least_60s": 598,
+      "duration_quantiles_0_50_90_99_100": [
+        0.001757,
+        27.631835,
+        278.7342644,
+        299.0483261,
+        299.880348
+      ]
+    },
+    "whatsapp.net": {
+      "support": 111,
+      "at_least_10s": 30,
+      "at_least_30s": 17,
+      "at_least_60s": 8,
+      "duration_quantiles_0_50_90_99_100": [
+        0.041532,
+        0.275152,
+        49.651947,
+        87.53129370000003,
+        183.944804
+      ]
+    }
+  }
+}

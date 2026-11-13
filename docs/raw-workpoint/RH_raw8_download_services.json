@@ -1,0 +1,148 @@
+[
+  {
+    "capture": "CTU-IoT-Malware-Capture-35-1",
+    "raw_missed_downloads": 11,
+    "normal": 8262389,
+    "same_tcp80_normal": 78,
+    "same_tcp80_and_both_packet_counts_normal": 0,
+    "native": {
+      "C&C-FileDownload": 11
+    },
+    "all_positive_responder_packets": true,
+    "field_ranges": {
+      "orig_pkts": [
+        55,
+        88
+      ],
+      "resp_pkts": [
+        53,
+        88
+      ],
+      "orig_ip_bytes": [
+        3596,
+        5761
+      ],
+      "resp_ip_bytes": [
+        77531,
+        128077
+      ]
+    }
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-42-1",
+    "raw_missed_downloads": 6,
+    "normal": 4420,
+    "same_tcp80_normal": 41,
+    "same_tcp80_and_both_packet_counts_normal": 0,
+    "native": {
+      "FileDownload": 3,
+      "C&C-FileDownload": 3
+    },
+    "all_positive_responder_packets": true,
+    "field_ranges": {
+      "orig_pkts": [
+        50,
+        59
+      ],
+      "resp_pkts": [
+        46,
+        57
+      ],
+      "orig_ip_bytes": [
+        2784,
+        3719
+      ],
+      "resp_ip_bytes": [
+        65035,
+        78523
+      ]
+    }
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-44-1",
+    "raw_missed_downloads": 11,
+    "normal": 211,
+    "same_tcp80_normal": 0,
+    "same_tcp80_and_both_packet_counts_normal": 0,
+    "native": {
+      "C&C-FileDownload": 11
+    },
+    "all_positive_responder_packets": true,
+    "field_ranges": {
+      "orig_pkts": [
+        83,
+        122
+      ],
+      "resp_pkts": [
+        90,
+        122
+      ],
+      "orig_ip_bytes": [
+        4696,
+        7741
+      ],
+      "resp_ip_bytes": [
+        130174,
+        178178
+      ]
+    }
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-48-1",
+    "raw_missed_downloads": 11,
+    "normal": 3734,
+    "same_tcp80_normal": 0,
+    "same_tcp80_and_both_packet_counts_normal": 0,
+    "native": {
+      "C&C-HeartBeat-FileDownload": 11
+    },
+    "all_positive_responder_packets": true,
+    "field_ranges": {
+      "orig_pkts": [
+        110,
+        174
+      ],
+      "resp_pkts": [
+        109,
+        172
+      ],
+      "orig_ip_bytes": [
+        6032,
+        11698
+      ],
+      "resp_ip_bytes": [
+        155216,
+        247844
+      ]
+    }
+  },
+  {
+    "capture": "CTU-IoT-Malware-Capture-52-1",
+    "raw_missed_downloads": 12,
+    "normal": 1794,
+    "same_tcp80_normal": 0,
+    "same_tcp80_and_both_packet_counts_normal": 0,
+    "native": {
+      "C&C-FileDownload": 12
+    },
+    "all_positive_responder_packets": true,
+    "field_ranges": {
+      "orig_pkts": [
+        56,
+        198
+      ],
+      "resp_pkts": [
+        54,
+        206
+      ],
+      "orig_ip_bytes": [
+        3596,
+        13284
+      ],
+      "resp_ip_bytes": [
+        71258,
+        298520
+      ]
+    }
+  }
+]

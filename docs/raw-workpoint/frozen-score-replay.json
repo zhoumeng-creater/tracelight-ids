@@ -1,0 +1,449 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "torch": "2.6.0+cu126",
+  "capture_rows": 1826,
+  "fp_cap": 18,
+  "scope": "Replay of earlier C normals only. The registered cuts and strict > apply on all hardware. HGB must reproduce every decision. GPU comparisons retain all observed flips. This is not a holdout evaluation.",
+  "production_replay_by_capture": {
+    "hgb": {
+      "device": "cpu",
+      "batch_rows": 131072,
+      "rows_per_capture": {
+        "CTU-Honeypot-Capture-5-1": 1374,
+        "CTU-Honeypot-Capture-4-1": 452
+      },
+      "maximum_absolute_score_delta": {
+        "raw": 0.0,
+        "contact": 0.0,
+        "quality": 0.0
+      },
+      "policies": {
+        "raw": {
+          "registered_fp": 7,
+          "actual_fp": 7,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "contact": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "quality": {
+          "registered_fp": 15,
+          "actual_fp": 15,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_contact": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_quality": {
+          "registered_fp": 15,
+          "actual_fp": 15,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_quic30": {
+          "registered_fp": 7,
+          "actual_fp": 7,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_web64k": {
+          "registered_fp": 8,
+          "actual_fp": 8,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        }
+      }
+    },
+    "hgb_family": {
+      "device": "cpu",
+      "batch_rows": 131072,
+      "rows_per_capture": {
+        "CTU-Honeypot-Capture-5-1": 1374,
+        "CTU-Honeypot-Capture-4-1": 452
+      },
+      "maximum_absolute_score_delta": {
+        "raw": 0.0,
+        "contact": 0.0,
+        "quality": 0.0
+      },
+      "policies": {
+        "raw": {
+          "registered_fp": 9,
+          "actual_fp": 9,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "contact": {
+          "registered_fp": 15,
+          "actual_fp": 15,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "quality": {
+          "registered_fp": 14,
+          "actual_fp": 14,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_contact": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_quality": {
+          "registered_fp": 18,
+          "actual_fp": 18,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_quic30": {
+          "registered_fp": 9,
+          "actual_fp": 9,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_web64k": {
+          "registered_fp": 10,
+          "actual_fp": 10,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        }
+      }
+    },
+    "mlp17": {
+      "device": "cuda:0",
+      "batch_rows": 131072,
+      "rows_per_capture": {
+        "CTU-Honeypot-Capture-5-1": 1374,
+        "CTU-Honeypot-Capture-4-1": 452
+      },
+      "maximum_absolute_score_delta": {
+        "raw": 1.1444091796875e-05,
+        "contact": 5.7220458984375e-06,
+        "quality": 1.52587890625e-05
+      },
+      "policies": {
+        "raw": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "contact": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "quality": {
+          "registered_fp": 17,
+          "actual_fp": 18,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_contact": {
+          "registered_fp": 18,
+          "actual_fp": 19,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": false
+        },
+        "add_quality": {
+          "registered_fp": 18,
+          "actual_fp": 18,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_quic30": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_web64k": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        }
+      }
+    },
+    "mlp29": {
+      "device": "cuda:0",
+      "batch_rows": 131072,
+      "rows_per_capture": {
+        "CTU-Honeypot-Capture-5-1": 1374,
+        "CTU-Honeypot-Capture-4-1": 452
+      },
+      "maximum_absolute_score_delta": {
+        "raw": 7.62939453125e-06,
+        "contact": 9.5367431640625e-06,
+        "quality": 9.5367431640625e-06
+      },
+      "policies": {
+        "raw": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "contact": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "quality": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_contact": {
+          "registered_fp": 18,
+          "actual_fp": 19,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": false
+        },
+        "add_quality": {
+          "registered_fp": 18,
+          "actual_fp": 18,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_quic30": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_web64k": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        }
+      }
+    },
+    "mlp43": {
+      "device": "cuda:0",
+      "batch_rows": 131072,
+      "rows_per_capture": {
+        "CTU-Honeypot-Capture-5-1": 1374,
+        "CTU-Honeypot-Capture-4-1": 452
+      },
+      "maximum_absolute_score_delta": {
+        "raw": 1.52587890625e-05,
+        "contact": 7.62939453125e-06,
+        "quality": 7.62939453125e-06
+      },
+      "policies": {
+        "raw": {
+          "registered_fp": 17,
+          "actual_fp": 18,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "contact": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "quality": {
+          "registered_fp": 17,
+          "actual_fp": 17,
+          "added": 0,
+          "lost": 0,
+          "changed_alerts": 0,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_contact": {
+          "registered_fp": 18,
+          "actual_fp": 19,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": false
+        },
+        "add_quality": {
+          "registered_fp": 18,
+          "actual_fp": 19,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": false
+        },
+        "add_quic30": {
+          "registered_fp": 17,
+          "actual_fp": 18,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": true
+        },
+        "add_web64k": {
+          "registered_fp": 17,
+          "actual_fp": 18,
+          "added": 1,
+          "lost": 0,
+          "changed_alerts": 1,
+          "fp_cap": 18,
+          "within_budget": true
+        }
+      }
+    }
+  },
+  "batch_shape_comparison": {
+    "scope": "The input captures were also concatenated into a single 1,826-row Parquet batch on the same GPU. This extra check is not the production calibration replay.",
+    "changed_decisions": {
+      "hgb": {
+        "raw": 0,
+        "contact": 0,
+        "quality": 0,
+        "add_contact": 0,
+        "add_quality": 0,
+        "add_quic30": 0,
+        "add_web64k": 0
+      },
+      "hgb_family": {
+        "raw": 0,
+        "contact": 0,
+        "quality": 0,
+        "add_contact": 0,
+        "add_quality": 0,
+        "add_quic30": 0,
+        "add_web64k": 0
+      },
+      "mlp17": {
+        "raw": 0,
+        "contact": 1,
+        "quality": 1,
+        "add_contact": 1,
+        "add_quality": 0,
+        "add_quic30": 0,
+        "add_web64k": 0
+      },
+      "mlp29": {
+        "raw": 0,
+        "contact": 0,
+        "quality": 0,
+        "add_contact": 0,
+        "add_quality": 1,
+        "add_quic30": 0,
+        "add_web64k": 0
+      },
+      "mlp43": {
+        "raw": 0,
+        "contact": 0,
+        "quality": 0,
+        "add_contact": 1,
+        "add_quality": 1,
+        "add_quic30": 0,
+        "add_web64k": 0
+      }
+    }
+  }
+}

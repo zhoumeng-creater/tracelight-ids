@@ -1,0 +1,1194 @@
+{
+  "source_sha256": "d69e49b2aae8c1bd33286936531658202dec47d989f0439bad3f8be180467a6e",
+  "utc_days": {
+    "2018-12-21": {
+      "rows": 4691,
+      "comparisons": {
+        "raw": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 18,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 18,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "contact": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 75,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 75,
+              "gained": 72,
+              "lost": 15,
+              "net": 57
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3377,
+              "gained": 3377,
+              "lost": 0,
+              "net": 3377
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 5,
+              "gained": 5,
+              "lost": 0,
+              "net": 5
+            }
+          }
+        },
+        "quality": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 130,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 130,
+              "gained": 127,
+              "lost": 15,
+              "net": 112
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3387,
+              "gained": 3387,
+              "lost": 0,
+              "net": 3387
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 69,
+              "gained": 69,
+              "lost": 0,
+              "net": 69
+            }
+          }
+        },
+        "add_contact": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 89,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 89,
+              "gained": 71,
+              "lost": 0,
+              "net": 71
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3377,
+              "gained": 3377,
+              "lost": 0,
+              "net": 3377
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 5,
+              "gained": 5,
+              "lost": 0,
+              "net": 5
+            }
+          }
+        },
+        "add_quality": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 144,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 144,
+              "gained": 126,
+              "lost": 0,
+              "net": 126
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3387,
+              "gained": 3387,
+              "lost": 0,
+              "net": 3387
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 69,
+              "gained": 69,
+              "lost": 0,
+              "net": 69
+            }
+          }
+        },
+        "add_quic30": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 18,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 18,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "add_web64k": {
+          "normal_rows": 1152,
+          "allowed_fp": 11,
+          "raw_fp": 18,
+          "candidate_fp": 27,
+          "raw_within_budget": false,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 1152,
+              "before": 18,
+              "after": 27,
+              "gained": 9,
+              "lost": 0,
+              "net": 9
+            },
+            "PureCC": {
+              "rows": 3418,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 121,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        }
+      },
+      "native": [
+        {
+          "family": "Benign",
+          "native_label": "Benign",
+          "native_detail": "-",
+          "endpoint": "Benign",
+          "paired": {
+            "raw": {
+              "rows": 1152,
+              "before": 18,
+              "after": 18,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 1152,
+              "before": 18,
+              "after": 75,
+              "gained": 72,
+              "lost": 15,
+              "net": 57
+            },
+            "quality": {
+              "rows": 1152,
+              "before": 18,
+              "after": 130,
+              "gained": 127,
+              "lost": 15,
+              "net": 112
+            },
+            "add_contact": {
+              "rows": 1152,
+              "before": 18,
+              "after": 89,
+              "gained": 71,
+              "lost": 0,
+              "net": 71
+            },
+            "add_quality": {
+              "rows": 1152,
+              "before": 18,
+              "after": 144,
+              "gained": 126,
+              "lost": 0,
+              "net": 126
+            },
+            "add_quic30": {
+              "rows": 1152,
+              "before": 18,
+              "after": 18,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 1152,
+              "before": 18,
+              "after": 27,
+              "gained": 9,
+              "lost": 0,
+              "net": 9
+            }
+          }
+        },
+        {
+          "family": "C&C",
+          "native_label": "Malicious",
+          "native_detail": "C&C",
+          "endpoint": "PureCC",
+          "paired": {
+            "raw": {
+              "rows": 3418,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3377,
+              "gained": 3377,
+              "lost": 0,
+              "net": 3377
+            },
+            "quality": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3387,
+              "gained": 3387,
+              "lost": 0,
+              "net": 3387
+            },
+            "add_contact": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3377,
+              "gained": 3377,
+              "lost": 0,
+              "net": 3377
+            },
+            "add_quality": {
+              "rows": 3418,
+              "before": 0,
+              "after": 3387,
+              "gained": 3387,
+              "lost": 0,
+              "net": 3387
+            },
+            "add_quic30": {
+              "rows": 3418,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 3418,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        {
+          "family": "Scanning",
+          "native_label": "Malicious",
+          "native_detail": "PartOfAHorizontalPortScan",
+          "endpoint": "Scanning",
+          "paired": {
+            "raw": {
+              "rows": 121,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 121,
+              "before": 0,
+              "after": 5,
+              "gained": 5,
+              "lost": 0,
+              "net": 5
+            },
+            "quality": {
+              "rows": 121,
+              "before": 0,
+              "after": 69,
+              "gained": 69,
+              "lost": 0,
+              "net": 69
+            },
+            "add_contact": {
+              "rows": 121,
+              "before": 0,
+              "after": 5,
+              "gained": 5,
+              "lost": 0,
+              "net": 5
+            },
+            "add_quality": {
+              "rows": 121,
+              "before": 0,
+              "after": 69,
+              "gained": 69,
+              "lost": 0,
+              "net": 69
+            },
+            "add_quic30": {
+              "rows": 121,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 121,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        }
+      ]
+    },
+    "2018-12-22": {
+      "rows": 18454,
+      "comparisons": {
+        "raw": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 4,
+          "raw_within_budget": true,
+          "candidate_within_budget": true,
+          "both_within_budget": true,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 4,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "contact": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 55,
+          "raw_within_budget": true,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 55,
+              "gained": 55,
+              "lost": 4,
+              "net": 51
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14354,
+              "gained": 14354,
+              "lost": 0,
+              "net": 14354
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "quality": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 62,
+          "raw_within_budget": true,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 62,
+              "gained": 62,
+              "lost": 4,
+              "net": 58
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14378,
+              "gained": 14378,
+              "lost": 0,
+              "net": 14378
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "add_contact": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 49,
+          "raw_within_budget": true,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 49,
+              "gained": 45,
+              "lost": 0,
+              "net": 45
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14350,
+              "gained": 14350,
+              "lost": 0,
+              "net": 14350
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "add_quality": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 66,
+          "raw_within_budget": true,
+          "candidate_within_budget": false,
+          "both_within_budget": false,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 66,
+              "gained": 62,
+              "lost": 0,
+              "net": 62
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14378,
+              "gained": 14378,
+              "lost": 0,
+              "net": 14378
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "add_quic30": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 4,
+          "raw_within_budget": true,
+          "candidate_within_budget": true,
+          "both_within_budget": true,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 4,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        "add_web64k": {
+          "normal_rows": 771,
+          "allowed_fp": 7,
+          "raw_fp": 4,
+          "candidate_fp": 4,
+          "raw_within_budget": true,
+          "candidate_within_budget": true,
+          "both_within_budget": true,
+          "endpoints": {
+            "Benign": {
+              "rows": 771,
+              "before": 4,
+              "after": 4,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "OtherAttack": {
+              "rows": 14394,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "PureCC": {
+              "rows": 3288,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "Scanning": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        }
+      },
+      "native": [
+        {
+          "family": "Benign",
+          "native_label": "Benign",
+          "native_detail": "-",
+          "endpoint": "Benign",
+          "paired": {
+            "raw": {
+              "rows": 771,
+              "before": 4,
+              "after": 4,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 771,
+              "before": 4,
+              "after": 55,
+              "gained": 55,
+              "lost": 4,
+              "net": 51
+            },
+            "quality": {
+              "rows": 771,
+              "before": 4,
+              "after": 62,
+              "gained": 62,
+              "lost": 4,
+              "net": 58
+            },
+            "add_contact": {
+              "rows": 771,
+              "before": 4,
+              "after": 49,
+              "gained": 45,
+              "lost": 0,
+              "net": 45
+            },
+            "add_quality": {
+              "rows": 771,
+              "before": 4,
+              "after": 66,
+              "gained": 62,
+              "lost": 0,
+              "net": 62
+            },
+            "add_quic30": {
+              "rows": 771,
+              "before": 4,
+              "after": 4,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 771,
+              "before": 4,
+              "after": 4,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        {
+          "family": "C&C",
+          "native_label": "Malicious",
+          "native_detail": "C&C",
+          "endpoint": "PureCC",
+          "paired": {
+            "raw": {
+              "rows": 3288,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "quality": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "add_contact": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "add_quality": {
+              "rows": 3288,
+              "before": 0,
+              "after": 2445,
+              "gained": 2445,
+              "lost": 0,
+              "net": 2445
+            },
+            "add_quic30": {
+              "rows": 3288,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 3288,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        {
+          "family": "OtherAttack",
+          "native_label": "Malicious",
+          "native_detail": "DDoS",
+          "endpoint": "OtherAttack",
+          "paired": {
+            "raw": {
+              "rows": 14394,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14354,
+              "gained": 14354,
+              "lost": 0,
+              "net": 14354
+            },
+            "quality": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14378,
+              "gained": 14378,
+              "lost": 0,
+              "net": 14378
+            },
+            "add_contact": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14350,
+              "gained": 14350,
+              "lost": 0,
+              "net": 14350
+            },
+            "add_quality": {
+              "rows": 14394,
+              "before": 0,
+              "after": 14378,
+              "gained": 14378,
+              "lost": 0,
+              "net": 14378
+            },
+            "add_quic30": {
+              "rows": 14394,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 14394,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        },
+        {
+          "family": "Scanning",
+          "native_label": "Malicious",
+          "native_detail": "PartOfAHorizontalPortScan",
+          "endpoint": "Scanning",
+          "paired": {
+            "raw": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "contact": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "quality": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_contact": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_quality": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_quic30": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            },
+            "add_web64k": {
+              "rows": 1,
+              "before": 0,
+              "after": 0,
+              "gained": 0,
+              "lost": 0,
+              "net": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ranking_ceilings": {
+    "2018-12-21": {
+      "raw": {
+        "feasible": true,
+        "allowed_fp_in_ranked_pool": 11,
+        "strict_cut": 1.094291141611461,
+        "rows_by_label": [
+          {
+            "family": "Benign",
+            "native_detail": "-",
+            "rows": 1152,
+            "before": 18,
+            "after": 1,
+            "gained": 0,
+            "lost": 17
+          },
+          {
+            "family": "C&C",
+            "native_detail": "C&C",
+            "rows": 3418,
+            "before": 0,
+            "after": 0,
+            "gained": 0,
+            "lost": 0
+          },
+          {
+            "family": "Scanning",
+            "native_detail": "PartOfAHorizontalPortScan",
+            "rows": 121,
+            "before": 0,
+            "after": 0,
+            "gained": 0,
+            "lost": 0
+          }
+        ]
+      },
+      "contact": {
+        "feasible": false,
+        "allowed_fp_in_ranked_pool": -7,
+        "strict_cut": null,
+        "rows_by_label": []
+      },
+      "quality": {
+        "feasible": false,
+        "allowed_fp_in_ranked_pool": -7,
+        "strict_cut": null,
+        "rows_by_label": []
+      }
+    },
+    "2018-12-22": {
+      "raw": {
+        "feasible": true,
+        "allowed_fp_in_ranked_pool": 7,
+        "strict_cut": -2.070130583638449,
+        "rows_by_label": [
+          {
+            "family": "Benign",
+            "native_detail": "-",
+            "rows": 771,
+            "before": 4,
+            "after": 6,
+            "gained": 2,
+            "lost": 0
+          },
+          {
+            "family": "C&C",
+            "native_detail": "C&C",
+            "rows": 3288,
+            "before": 0,
+            "after": 270,
+            "gained": 270,
+            "lost": 0
+          },
+          {
+            "family": "OtherAttack",
+            "native_detail": "DDoS",
+            "rows": 14394,
+            "before": 0,
+            "after": 3,
+            "gained": 3,
+            "lost": 0
+          },
+          {
+            "family": "Scanning",
+            "native_detail": "PartOfAHorizontalPortScan",
+            "rows": 1,
+            "before": 0,
+            "after": 0,
+            "gained": 0,
+            "lost": 0
+          }
+        ]
+      },
+      "contact": {
+        "feasible": true,
+        "allowed_fp_in_ranked_pool": 3,
+        "strict_cut": 16.243437472209724,
+        "rows_by_label": [
+          {
+            "family": "Benign",
+            "native_detail": "-",
+            "rows": 771,
+            "before": 4,
+            "after": 7,
+            "gained": 3,
+            "lost": 0
+          },
+          {
+            "family": "C&C",
+            "native_detail": "C&C",
+            "rows": 3288,
+            "before": 0,
+            "after": 284,
+            "gained": 284,
+            "lost": 0
+          },
+          {
+            "family": "OtherAttack",
+            "native_detail": "DDoS",
+            "rows": 14394,
+            "before": 0,
+            "after": 22,
+            "gained": 22,
+            "lost": 0
+          },
+          {
+            "family": "Scanning",
+            "native_detail": "PartOfAHorizontalPortScan",
+            "rows": 1,
+            "before": 0,
+            "after": 0,
+            "gained": 0,
+            "lost": 0
+          }
+        ]
+      },
+      "quality": {
+        "feasible": true,
+        "allowed_fp_in_ranked_pool": 3,
+        "strict_cut": 16.70569823395402,
+        "rows_by_label": [
+          {
+            "family": "Benign",
+            "native_detail": "-",
+            "rows": 771,
+            "before": 4,
+            "after": 7,
+            "gained": 3,
+            "lost": 0
+          },
+          {
+            "family": "C&C",
+            "native_detail": "C&C",
+            "rows": 3288,
+            "before": 0,
+            "after": 0,
+            "gained": 0,
+            "lost": 0
+          },
+          {
+            "family": "OtherAttack",
+            "native_detail": "DDoS",
+            "rows": 14394,
+            "before": 0,
+            "after": 11,
+            "gained": 11,
+            "lost": 0
+          },
+          {
+            "family": "Scanning",
+            "native_detail": "PartOfAHorizontalPortScan",
+            "rows": 1,
+            "before": 0,
+            "after": 0,
+            "gained": 0,
+            "lost": 0
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "round23_zip_sha256": "1fd561df5374546d2abef25ea162bfa072534d990d554bb537fd1de322dae9b3",
+  "bundle_sha256": "d789adbe131615010b204d9ef10962e4b82182f761d20f5d06bdcf46a7b9befa",
+  "members": {
+    "models/frozen/hgb-raw.joblib": "e2b3100860b2c05b0957865a7faf57f6d9e03a7fc15f5d4cf2f88c1977b8e0e8",
+    "models/frozen/hgb-contact.joblib": "458638c2aa46f8935d85d8088032beea91a66df9ccc728c068a67ee085b90d3a",
+    "models/frozen/hgb-quality.joblib": "a24e9ee92e1fbb3f9eb38bd9b16569f6c9bb4e90ad65a627870d4d764a86e752",
+    "evidence/calibration/hgb.json": "4f91b30807c94a7c2c0d4a3bae2a23da32a346be6731fdf20ea021555f328ffc",
+    "evidence/calibration/hgb.parquet": "13d785d7f6cf6f199c44bed5e113f1503db5010a62cb4b4b432c398cc2a75f61",
+    "models/frozen/hgb_family-raw.joblib": "5cf887258c9bc5831f4954fa07af272fb21dc36ec1ccbe4ae7bfe4d2784eb0d0",
+    "models/frozen/hgb_family-contact.joblib": "07f0cba756f5d302e0cfbc3418021c514d3c49453bcfdcecd0bbff1f9a5ecfc4",
+    "models/frozen/hgb_family-quality.joblib": "b8d1ebdaaa42b3c90f3e520609893b5705162fd6f3cbb3903108ad111380b051",
+    "evidence/calibration/hgb_family.json": "6beb0ba1c89f7a006195fb3157a476f58f5325bbd8896a793d7d719e4bf7b06a",
+    "evidence/calibration/hgb_family.parquet": "a028d73a3c5b7a1d7d1315a48cc176b51a0569b1186e0b6edc7c442711a8ed7e",
+    "models/frozen/mlp17-raw.pt": "13e1da820ec6cec9cd0f148bf9b785f15dbb984c4193e2ace80e295ab99c4d96",
+    "models/frozen/mlp17-contact.pt": "7082106c8ab748f43174b70356de1cbee4f366e20e27e022820eff65045d34f7",
+    "models/frozen/mlp17-quality.pt": "8b16548b4d4482bcd283a97844908aaeef8793d00ed0bbcedff49967ac815b6c",
+    "evidence/calibration/mlp17.json": "1f1f0067eeb1f78deeba61d6a667be0411cf5ca8607809ec014d8f519648674a",
+    "evidence/calibration/mlp17.parquet": "c8aefa064ec98b202f54e22afc7d6981ac9a13aa867e8d53e1c76549170bc184",
+    "models/frozen/mlp29-raw.pt": "2b44b7a2c8dee9948dd73a0c34c8f2472ac611506113b9a4485fca9d67e26796",
+    "models/frozen/mlp29-contact.pt": "b1588042a86d6565112d4ad9961166f077a09d6d7d783fdebad3e28ff177b317",
+    "models/frozen/mlp29-quality.pt": "b8eea7af41f660cb92286ff55f014508938180ac1d9c3fa3eaeb07f5bb0d921a",
+    "evidence/calibration/mlp29.json": "d7a76f8e48d3f062d554ab31656e41816027625f4e338e7b3200fe0e38ae36e3",
+    "evidence/calibration/mlp29.parquet": "2683bb5f94af3e5a4b48680b7d390c59d5c9cbe7f05650b30d146fb48da34e5b",
+    "models/frozen/mlp43-raw.pt": "8b433af33b7a5d6691cc651ebdaf67ed5b8f2e14e3ecbc75211a869e0804f13a",
+    "models/frozen/mlp43-contact.pt": "e26eb3f270c6c079ba5a44f07ff84e1c176614e45d5873ba68dac0d8e89ed86c",
+    "models/frozen/mlp43-quality.pt": "2d8c7d4f890e9e39dfcb8602fd731a63049cc262f97f061b856702e68f058444",
+    "evidence/calibration/mlp43.json": "cdaebd167fa5aa560d35bfd7922d6e8051b24f65e4d545a3332dbc2f08d58b27",
+    "evidence/calibration/mlp43.parquet": "b5bd1031bd2389f75f1593c50fac4dd916587af4405fe1c877de6144ae0e412d"
+  },
+  "calibration_features_sha256": "c89f1f66eaf59d5b4e5db1d2d705dfc70e1ace12cf5c9583573d11055b261766",
+  "last_calibration_ms": 1540548038807,
+  "training_and_calibration": {
+    "CTU-IoT-Malware-Capture-1-1": "953e8c27a9b2fcfc2776aa136baf9249e6dde4cf752b9192ac7ca0e63b86e232",
+    "CTU-IoT-Malware-Capture-8-1": "4877ca8f0f01902fbd18d28b7d06cb3d0be082355b7f2c8862c9deef1782eb8a",
+    "CTU-Honeypot-Capture-5-1": "f36db06e7d6ba7364e932a5b003f75835e004b320d70019e8a2f0ba8685d9262",
+    "CTU-Honeypot-Capture-4-1": "aebe40ea0e03b120265a5c7bc140dd9b0d3fe2fce65559e84776b7dd5360e71e"
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scipy": "1.14.0",
+      "scikit-learn": "1.5.1",
+      "pyarrow": "21.0.0",
+      "PyYAML": "6.0.2",
+      "joblib": "1.4.2",
+      "threadpoolctl": "3.5.0",
+      "psutil": "6.0.0",
+      "torch": "2.6.0+cu126"
+    }
+  }
+}

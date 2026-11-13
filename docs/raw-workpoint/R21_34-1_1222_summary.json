@@ -1,0 +1,394 @@
+{
+  "source_sha256": "d69e49b2aae8c1bd33286936531658202dec47d989f0439bad3f8be180467a6e",
+  "package_sha256": "9a6abd421aa0a08ca5ee02b0c86f5243fe34e057cf4b52fd3f5898e03eaabfe8",
+  "whole_capture_rows": 23145,
+  "all_native_support": {
+    "DDoS": 14394,
+    "C&C": 6706,
+    "-": 1923,
+    "PartOfAHorizontalPortScan": 122
+  },
+  "scope": "2018-12-22 UTC frozen R21 row order and thresholds, previously scored",
+  "by_day": {
+    "2018-12-21": {
+      "Benign": {
+        "rows": 1152,
+        "raw": 18,
+        "history": 1,
+        "gained": 0,
+        "lost": 17,
+        "raw_OR_history": 18
+      },
+      "C&C": {
+        "rows": 3418,
+        "raw": 0,
+        "history": 0,
+        "gained": 0,
+        "lost": 0,
+        "raw_OR_history": 0
+      },
+      "Scanning": {
+        "rows": 121,
+        "raw": 0,
+        "history": 0,
+        "gained": 0,
+        "lost": 0,
+        "raw_OR_history": 0
+      }
+    },
+    "2018-12-22": {
+      "Benign": {
+        "rows": 771,
+        "raw": 4,
+        "history": 2,
+        "gained": 1,
+        "lost": 3,
+        "raw_OR_history": 5
+      },
+      "C&C": {
+        "rows": 3288,
+        "raw": 0,
+        "history": 0,
+        "gained": 0,
+        "lost": 0,
+        "raw_OR_history": 0
+      },
+      "OtherAttack": {
+        "rows": 14394,
+        "raw": 0,
+        "history": 0,
+        "gained": 0,
+        "lost": 0,
+        "raw_OR_history": 0
+      },
+      "Scanning": {
+        "rows": 1,
+        "raw": 0,
+        "history": 0,
+        "gained": 0,
+        "lost": 0,
+        "raw_OR_history": 0
+      }
+    }
+  },
+  "missing_baseline": {
+    "Scanning": {
+      "same_day_normal": {
+        "exact_raw_8": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port_or_duration": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port_both_packet_counts": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "origin_destination_protocol_port": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        }
+      },
+      "same_capture_normal": {
+        "exact_raw_8": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port_or_duration": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port_both_packet_counts": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "origin_destination_protocol_port": {
+          "attack_rows": 1,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        }
+      },
+      "common_services": [
+        {
+          "ip_protocol": 17,
+          "resp_port": 256,
+          "rows": 1
+        }
+      ],
+      "common_directions": [
+        {
+          "orig_pkts": 719,
+          "resp_pkts": 0,
+          "orig_ip_bytes": 2965156,
+          "resp_ip_bytes": 0,
+          "rows": 1
+        }
+      ],
+      "common_source_destinations": [
+        {
+          "source": "192.168.1.195",
+          "destination": "1.1.1.1",
+          "rows": 1
+        }
+      ],
+      "history_rescued": 0,
+      "example": [
+        {
+          "row_id": 5079,
+          "source": "192.168.1.195",
+          "destination": "1.1.1.1",
+          "native_detail": "PartOfAHorizontalPortScan",
+          "history": "D",
+          "conn_state": "S0",
+          "ip_protocol": 17,
+          "orig_port": 36882,
+          "resp_port": 256,
+          "duration_seconds": 0.938716,
+          "orig_pkts": 719,
+          "resp_pkts": 0,
+          "orig_ip_bytes": 2965156,
+          "resp_ip_bytes": 0,
+          "hist_flows_60s": 0,
+          "hist_dst_ips_60s": 0,
+          "hist_dst_ports_60s": 0,
+          "hist_no_reply_fraction_60s": 0.0,
+          "raw_score": -16.667108137399747,
+          "history_score": -13.848627904775261,
+          "history_fixed": false
+        }
+      ]
+    },
+    "C&C": {
+      "same_day_normal": {
+        "exact_raw_8": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port_or_duration": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port_both_packet_counts": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "origin_destination_protocol_port": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        }
+      },
+      "same_capture_normal": {
+        "exact_raw_8": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "without_source_port_or_duration": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port_both_packet_counts": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "protocol_dest_port": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        },
+        "origin_destination_protocol_port": {
+          "attack_rows": 3288,
+          "matching_rows": 0,
+          "smallest_match_count": 0,
+          "largest_match_count": 0,
+          "distinct_normal_matches": 0
+        }
+      },
+      "common_services": [
+        {
+          "ip_protocol": 6,
+          "resp_port": 6667,
+          "rows": 3288
+        }
+      ],
+      "common_directions": [
+        {
+          "orig_pkts": 3,
+          "resp_pkts": 0,
+          "orig_ip_bytes": 180,
+          "resp_ip_bytes": 0,
+          "rows": 1389
+        },
+        {
+          "orig_pkts": 1,
+          "resp_pkts": 0,
+          "orig_ip_bytes": 60,
+          "resp_ip_bytes": 0,
+          "rows": 1276
+        },
+        {
+          "orig_pkts": 7,
+          "resp_pkts": 6,
+          "orig_ip_bytes": 434,
+          "resp_ip_bytes": 589,
+          "rows": 212
+        },
+        {
+          "orig_pkts": 9,
+          "resp_pkts": 6,
+          "orig_ip_bytes": 554,
+          "resp_ip_bytes": 589,
+          "rows": 132
+        },
+        {
+          "orig_pkts": 8,
+          "resp_pkts": 6,
+          "orig_ip_bytes": 494,
+          "resp_ip_bytes": 589,
+          "rows": 110
+        }
+      ],
+      "common_source_destinations": [
+        {
+          "source": "192.168.1.195",
+          "destination": "185.244.25.235",
+          "rows": 3288
+        }
+      ],
+      "history_rescued": 0,
+      "example": [
+        {
+          "row_id": 5036,
+          "source": "192.168.1.195",
+          "destination": "185.244.25.235",
+          "native_detail": "C&C",
+          "history": "S",
+          "conn_state": "S0",
+          "ip_protocol": 6,
+          "orig_port": 53328,
+          "resp_port": 6667,
+          "duration_seconds": 3.118749,
+          "orig_pkts": 3,
+          "resp_pkts": 0,
+          "orig_ip_bytes": 180,
+          "resp_ip_bytes": 0,
+          "hist_flows_60s": 0,
+          "hist_dst_ips_60s": 0,
+          "hist_dst_ports_60s": 0,
+          "hist_no_reply_fraction_60s": 0.0,
+          "raw_score": -3.175610077496706,
+          "history_score": -1.3396643136060202,
+          "history_fixed": false
+        }
+      ]
+    }
+  },
+  "R21_raw_model_sha256": "a5f873d2e0083a6b4d06a54a954030e4996d81e0222836bcaeeaa33732fa36df",
+  "R23_raw_model_sha256": "e2b3100860b2c05b0957865a7faf57f6d9e03a7fc15f5d4cf2f88c1977b8e0e8",
+  "R23_comparison_on_all_34_1": {
+    "rows": 23145,
+    "r23_cut": 0.969384090147706,
+    "max_abs_score_delta": 0.0,
+    "changed_alerts": 0
+  },
+  "cc_responder_packets": {
+    "zero": 2668,
+    "positive": 620
+  }
+}

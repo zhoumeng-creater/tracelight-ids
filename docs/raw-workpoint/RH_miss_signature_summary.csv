@@ -1,0 +1,11 @@
+capture,endpoint,native_detail,raw_missed,any_normal_all8,any_normal_except_source_port,any_normal_except_source_port_and_duration,any_normal_proto_dport_packets,contact_old_rescues,contact_new_rescues,quality_old_rescues,quality_new_rescues
+CTU-IoT-Malware-Capture-35-1,Download,C&C-FileDownload,11,0,0,0,0,1,1,1,1
+CTU-IoT-Malware-Capture-35-1,PureCC,C&C,69,0,51,68,68,5,5,5,5
+CTU-IoT-Malware-Capture-42-1,Download,C&C-FileDownload,3,0,0,0,0,1,1,1,1
+CTU-IoT-Malware-Capture-42-1,Download,FileDownload,3,0,0,0,0,2,2,2,2
+CTU-IoT-Malware-Capture-44-1,Download,C&C-FileDownload,11,0,0,0,0,7,7,7,7
+CTU-IoT-Malware-Capture-44-1,PureCC,C&C,13,0,0,0,0,9,9,9,9
+CTU-IoT-Malware-Capture-48-1,Download,C&C-HeartBeat-FileDownload,11,0,0,0,0,6,6,5,3
+CTU-IoT-Malware-Capture-52-1,Download,C&C-FileDownload,12,0,0,0,0,8,5,8,8
+CTU-IoT-Malware-Capture-52-1,PureCC,C&C,6,0,0,0,0,4,4,5,5
+CTU-IoT-Malware-Capture-60-1,Heartbeat,C&C-HeartBeat,95,0,0,0,0,0,0,0,0
