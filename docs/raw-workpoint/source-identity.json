@@ -1,0 +1,72 @@
+{
+  "rows": 67321809,
+  "first_flow_end_ms": 1547144578631,
+  "last_flow_end_ms": 1547148504181,
+  "native_label_detail_counts": [
+    {
+      "label": "Benign",
+      "detail": "-",
+      "rows": 20574934
+    },
+    {
+      "label": "Malicious",
+      "detail": "C&C",
+      "rows": 3498
+    },
+    {
+      "label": "Malicious",
+      "detail": "C&C-FileDownload",
+      "rows": 14
+    },
+    {
+      "label": "Malicious",
+      "detail": "DDoS",
+      "rows": 65803
+    },
+    {
+      "label": "Malicious",
+      "detail": "FileDownload",
+      "rows": 1
+    },
+    {
+      "label": "Malicious",
+      "detail": "Okiru",
+      "rows": 8765885
+    },
+    {
+      "label": "Malicious",
+      "detail": "PartOfAHorizontalPortScan",
+      "rows": 37911674
+    }
+  ],
+  "key": [
+    "ts_microseconds",
+    "id.orig_h",
+    "id.orig_p",
+    "id.resp_h",
+    "id.resp_p",
+    "proto"
+  ],
+  "overlap": [
+    {
+      "source": "CTU-IoT-Malware-Capture-42-1",
+      "old_rows": 4426,
+      "unique_old_keys": 4426,
+      "shared_unique_keys": 0,
+      "old_rows_sharing_key": 0,
+      "new_rows_sharing_key": 0
+    },
+    {
+      "source": "CTU-IoT-Malware-Capture-44-1",
+      "old_rows": 237,
+      "unique_old_keys": 237,
+      "shared_unique_keys": 0,
+      "old_rows_sharing_key": 0,
+      "new_rows_sharing_key": 0
+    }
+  ],
+  "sha256_uncompressed": "b2b485367edf1319a78914da346cc12fc54f4d178822efccd4e86b016599c5e7",
+  "bytes_uncompressed": 9363261631,
+  "first_flow_end_ms_utc": "2019-01-10T18:22:58.631+00:00",
+  "last_flow_end_ms_utc": "2019-01-10T19:28:24.181+00:00"
+}

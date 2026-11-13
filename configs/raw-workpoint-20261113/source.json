@@ -1,0 +1,29 @@
+{
+  "name": "CTU-IoT-Malware-Capture-43-1",
+  "role": "H",
+  "format": "iot23",
+  "url": "https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/IndividualScenarios/CTU-IoT-Malware-Capture-43-1/labeled/conn.log.labeled",
+  "publisher": "Stratosphere Laboratory, Czech Technical University",
+  "official_label_distribution_url": "https://www.stratosphereips.org/datasets-iot23",
+  "bytes": 9363261631,
+  "sha256": "b2b485367edf1319a78914da346cc12fc54f4d178822efccd4e86b016599c5e7",
+  "http_etag": "\"22e1808bf-59a7a5a67e840\"",
+  "http_last_modified": "Tue, 24 Dec 2019 22:06:17 GMT",
+  "http_accept_ranges": "bytes",
+  "integrity_scope": "SHA-256 of the complete uncompressed labeled Zeek log computed locally from the official HTTPS response. The official per-capture page lists label counts, without a SHA-256 for this text log.",
+  "inspection_status": "Previously unscored historical capture. Chosen from published label support for normal traffic, scanning, pure C&C, and FileDownload; January 2019 predates the September 2019 latest opened IoT-23 period.",
+  "published_label_counts": {
+    "Benign": 20574934,
+    "C&C": 3498,
+    "C&C-FileDownload": 14,
+    "DDoS": 65803,
+    "FileDownload": 1,
+    "Okiru": 8765885,
+    "PartOfAHorizontalPortScan": 37911674
+  },
+  "rows": 67321809,
+  "first_flow_end_ms": 1547144578631,
+  "last_flow_end_ms": 1547148504181,
+  "capture_utc_start": "2019-01-10T18:22:58.631+00:00",
+  "capture_utc_end": "2019-01-10T19:28:24.181+00:00"
+}
