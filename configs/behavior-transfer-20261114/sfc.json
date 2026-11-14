@@ -1,0 +1,795 @@
+{
+  "record": "https://zenodo.org/records/23371775",
+  "sensor": "192.168.0.106",
+  "raw_archive": {
+    "url": "https://zenodo.org/records/23371775/files/zeek_backups.zip?download=1",
+    "bytes": 998897164,
+    "publisher_md5": "91adaf008a86f2764f09823fc71010ab"
+  },
+  "members": [
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-02_15/conn.log",
+      "size": 28882,
+      "compressed": 7316,
+      "offset": 3571,
+      "crc32": 2667066352,
+      "method": 8,
+      "sha256": "e32465bcea9f08581ccf58dc6c7ecaba9460ab74e4dacb4b2221beb8378ab5c7"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-03_00/conn.log",
+      "size": 697,
+      "compressed": 382,
+      "offset": 159904,
+      "crc32": 3290581397,
+      "method": 8,
+      "sha256": "bc991dc48a62fc29d62c5191c8c93d665f7664c743ef937cbd717fb35eef7551"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-03_12/conn.log",
+      "size": 1311,
+      "compressed": 611,
+      "offset": 287181,
+      "crc32": 2116696244,
+      "method": 8,
+      "sha256": "383bec77f5dbc87dace1a017a3fa680696706c0174a07e6da877abad8b792558"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-04_00/conn.log",
+      "size": 1448,
+      "compressed": 636,
+      "offset": 412456,
+      "crc32": 3841185814,
+      "method": 8,
+      "sha256": "79820a352f661ef1bce0fd1bcccdc55c03dd2b66e0bda2e3cfc29f0c787b170d"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-04_12/conn.log",
+      "size": 934,
+      "compressed": 478,
+      "offset": 538907,
+      "crc32": 2085986979,
+      "method": 8,
+      "sha256": "1811a63fb6dfc0f8b33da9aafa8747859304768fdea4a63d5fc6612a57643a48"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-06_19/conn.log",
+      "size": 287932,
+      "compressed": 72877,
+      "offset": 544714,
+      "crc32": 4237683786,
+      "method": 8,
+      "sha256": "d4d68623b36635fe9a25ccc83bef38b7bfbf67fd22a8ef969834c91c8fc58ab9"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-08_00/conn.log",
+      "size": 5498244,
+      "compressed": 1320911,
+      "offset": 887295,
+      "crc32": 1594860811,
+      "method": 8,
+      "sha256": "2f59130b96fcacabdf2bcc3121f5ee80c53f4f752dc673e3a71f6e0baea3dfd2"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-08_05/conn.log",
+      "size": 8597759,
+      "compressed": 2067876,
+      "offset": 3775344,
+      "crc32": 532750591,
+      "method": 8,
+      "sha256": "9b481f38517db3189b22f0ff0907500042cac74915520e47db35a29593894fde"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-08_12/conn.log",
+      "size": 3178287,
+      "compressed": 763934,
+      "offset": 8482078,
+      "crc32": 722301311,
+      "method": 8,
+      "sha256": "627c75ae26a9ee746ec569ef144eca2d9cc363912427d71cb1f43a7fbfa52c90"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-10_15/conn.log",
+      "size": 698,
+      "compressed": 371,
+      "offset": 10291420,
+      "crc32": 2600521451,
+      "method": 8,
+      "sha256": "d361f534b8044be823e7a937007ec59a1016f0aa7a4966fd907bd093a679c753"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-11_00/conn.log",
+      "size": 29445900,
+      "compressed": 6697954,
+      "offset": 10300955,
+      "crc32": 112692442,
+      "method": 8,
+      "sha256": "bcbedfeb112dfd0c95c3dbb2547a6357c7d63518214234ab5c65f62056966e2b"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-11_12/conn.log",
+      "size": 34828724,
+      "compressed": 8059520,
+      "offset": 19083770,
+      "crc32": 888812793,
+      "method": 8,
+      "sha256": "30000fdcf2afae815cb2859e5623eda38cf61fcb4d4f587e2d11a8ec6d524392",
+      "previously_opened_raw_sha256": "30000fdcf2afae815cb2859e5623eda38cf61fcb4d4f587e2d11a8ec6d524392"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-12_00/conn.log",
+      "size": 13246225,
+      "compressed": 3009927,
+      "offset": 32030963,
+      "crc32": 1917804028,
+      "method": 8,
+      "sha256": "bdc0f67b292726d886be3a0e9dcd1f28115794b0371857d7327e2cc0ef804dab"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-12_12/conn.log",
+      "size": 15817425,
+      "compressed": 3662203,
+      "offset": 36768850,
+      "crc32": 2175914873,
+      "method": 8,
+      "sha256": "98c78aa841c157d6c44928b9fe280d701b02d76012170694263d9572e28403e1"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-13_00/conn.log",
+      "size": 20714739,
+      "compressed": 4859812,
+      "offset": 44222480,
+      "crc32": 403961555,
+      "method": 8,
+      "sha256": "9f1e31f93f45c2298c4275315aa148a026bcd26fee829cdee215ade089ba3cb3"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-13_12/conn.log",
+      "size": 31762682,
+      "compressed": 7440839,
+      "offset": 55351793,
+      "crc32": 3968592074,
+      "method": 8,
+      "sha256": "9309261ef080c9da0f2de2d7f2d9686719d2409d0d44b2f98ba74f7a792e5c09"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-14_00/conn.log",
+      "size": 53120322,
+      "compressed": 12263521,
+      "offset": 71842181,
+      "crc32": 25105011,
+      "method": 8,
+      "sha256": "3badbad82c3c93a192007d7d20c77c6f8e8166b6c704bc7e66e536dd0bb9af76"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-14_12/conn.log",
+      "size": 56089218,
+      "compressed": 13021231,
+      "offset": 95655644,
+      "crc32": 2395687084,
+      "method": 8,
+      "sha256": "2da2838da4bfc0573322f03bcf60a1b8c5db9d31f3ec3ee310dacce378d79c25"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-15_00/conn.log",
+      "size": 219378515,
+      "compressed": 50178596,
+      "offset": 122835690,
+      "crc32": 2888925017,
+      "method": 8,
+      "sha256": "f4630f67e0244dc80646ac139d8362d01e79bda27f3cbf2f9bac205a2d83c0ff"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-15_12/conn.log",
+      "size": 22364522,
+      "compressed": 5122126,
+      "offset": 190028610,
+      "crc32": 2755718695,
+      "method": 8,
+      "sha256": "fe36aa0db57354fb893771ef6ad21f0e82ff4ffe93b50d8f498dc39e8aa6b49b"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-16_00/conn.log",
+      "size": 25111661,
+      "compressed": 5822985,
+      "offset": 197503003,
+      "crc32": 2768964310,
+      "method": 8,
+      "sha256": "066e1b028d3571cecc04a6d7b1c41aa54ed0ffd8a893cd715ad28fac3328ea0a"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-16_12/conn.log",
+      "size": 27844415,
+      "compressed": 6518463,
+      "offset": 208161582,
+      "crc32": 2567110988,
+      "method": 8,
+      "sha256": "3f30be25f852d15be667ac779966a55d530cf17a00f0075b41e3af14f28dff94"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-17_00/conn.log",
+      "size": 30511490,
+      "compressed": 7196640,
+      "offset": 221914737,
+      "crc32": 1896720022,
+      "method": 8,
+      "sha256": "aadc588686ad32027510ea13981e384507203eff8cde9bd19b334a32244562ae"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-17_12/conn.log",
+      "size": 33187511,
+      "compressed": 7878753,
+      "offset": 238737398,
+      "crc32": 642743518,
+      "method": 8,
+      "sha256": "16e6b16c81d3a5ae05070b8595c34f33c6eb11af514a97c15929169e49c1a170"
+    },
+    {
+      "name": "zeek_backups/192.168.0.106/2025-04-18_00/conn.log",
+      "size": 35892153,
+      "compressed": 8565045,
+      "offset": 258945870,
+      "crc32": 562527367,
+      "method": 8,
+      "sha256": "b8f8d4d34bf6d87c2c54130f58f70cfd4d895b9ac2f40a037d9e33f0d08d497c",
+      "previously_opened_raw_sha256": "b8f8d4d34bf6d87c2c54130f58f70cfd4d895b9ac2f40a037d9e33f0d08d497c"
+    }
+  ],
+  "opened_members": [
+    "zeek_backups/192.168.0.106/2025-04-11_12/conn.log",
+    "zeek_backups/192.168.0.106/2025-04-18_00/conn.log"
+  ],
+  "labels_archive": {
+    "filename": "iot_dataset_v7.zip",
+    "url": "https://zenodo.org/records/23371775/files/iot_dataset_v7.zip?download=1",
+    "bytes": 776500807,
+    "sha256": "070b1356e5bd296e584109fae79139cfe0f20ff4790f69e42994d67362cb9f62",
+    "publisher_md5": "6b858e337a8241b89f4d76f9a1454a60",
+    "csv_member": "iot_dataset_v7.csv"
+  },
+  "events": {
+    "url": "https://zenodo.org/records/23371775/files/all_attacks_logs.json?download=1",
+    "bytes": 109378,
+    "sha256": "c9ebc4a4760a84bc9c744c25cdbd51f5ae9b9259b03a983b5a5e9dcce8f612d0",
+    "publisher_md5": "53d98e593afe9f2dd75d8f3ccecf81a7",
+    "scanning_events": [
+      0,
+      9,
+      21,
+      23,
+      36,
+      49,
+      62,
+      75,
+      90,
+      104,
+      118,
+      132,
+      146,
+      160,
+      173,
+      187
+    ],
+    "scanning_schedule": [
+      {
+        "event_id": "0",
+        "source": "192.168.0.2",
+        "destinations": null,
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-03 15:52:15+03:00",
+        "end_time_local": "2025-04-03 15:57:15+03:00",
+        "start_time_utc": "2025-04-03 12:52:15Z",
+        "end_time_utc": "2025-04-03 12:57:15Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "9",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-04 19:50:40+03:00",
+        "end_time_local": "2025-04-04 20:05:51+03:00",
+        "start_time_utc": "2025-04-04 16:50:40Z",
+        "end_time_utc": "2025-04-04 17:05:51Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "21",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-05 16:29:55+03:00",
+        "end_time_local": "2025-04-05 16:35:10+03:00",
+        "start_time_utc": "2025-04-05 13:29:55Z",
+        "end_time_utc": "2025-04-05 13:35:10Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "23",
+        "source": "192.168.0.2",
+        "destinations": null,
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-05 17:31:03+03:00",
+        "end_time_local": "2025-04-05 17:47:43+03:00",
+        "start_time_utc": "2025-04-05 14:31:03Z",
+        "end_time_utc": "2025-04-05 14:47:43Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "36",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-06 00:08:02+03:00",
+        "end_time_local": "2025-04-06 00:23:18+03:00",
+        "start_time_utc": "2025-04-05 21:08:02Z",
+        "end_time_utc": "2025-04-05 21:23:18Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "49",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-06 17:06:50+03:00",
+        "end_time_local": "2025-04-06 17:11:50+03:00",
+        "start_time_utc": "2025-04-06 14:06:50Z",
+        "end_time_utc": "2025-04-06 14:11:50Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "62",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-06 19:45:47+03:00",
+        "end_time_local": "2025-04-06 20:00:47+03:00",
+        "start_time_utc": "2025-04-06 16:45:47Z",
+        "end_time_utc": "2025-04-06 17:00:47Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "75",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-07 00:43:45+03:00",
+        "end_time_local": "2025-04-07 01:13:45+03:00",
+        "start_time_utc": "2025-04-06 21:43:45Z",
+        "end_time_utc": "2025-04-06 22:13:45Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "90",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-07 15:51:30+03:00",
+        "end_time_local": "2025-04-07 16:21:30+03:00",
+        "start_time_utc": "2025-04-07 12:51:30Z",
+        "end_time_utc": "2025-04-07 13:21:30Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "104",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-07 22:35:47+03:00",
+        "end_time_local": "2025-04-07 23:05:47+03:00",
+        "start_time_utc": "2025-04-07 19:35:47Z",
+        "end_time_utc": "2025-04-07 20:05:47Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "118",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-08 07:22:54+03:00",
+        "end_time_local": "2025-04-08 07:52:54+03:00",
+        "start_time_utc": "2025-04-08 04:22:54Z",
+        "end_time_utc": "2025-04-08 04:52:54Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "132",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-08 11:24:28+03:00",
+        "end_time_local": "2025-04-08 11:54:28+03:00",
+        "start_time_utc": "2025-04-08 08:24:28Z",
+        "end_time_utc": "2025-04-08 08:54:28Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "146",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-08 15:24:33+03:00",
+        "end_time_local": "2025-04-08 15:54:33+03:00",
+        "start_time_utc": "2025-04-08 12:24:33Z",
+        "end_time_utc": "2025-04-08 12:54:33Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "160",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-10 18:45:46+03:00",
+        "end_time_local": "2025-04-10 19:15:46+03:00",
+        "start_time_utc": "2025-04-10 15:45:46Z",
+        "end_time_utc": "2025-04-10 16:15:46Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "173",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-13 09:53:25+03:00",
+        "end_time_local": "2025-04-13 10:23:25+03:00",
+        "start_time_utc": "2025-04-13 06:53:25Z",
+        "end_time_utc": "2025-04-13 07:23:25Z",
+        "traffic_Type": "in"
+      },
+      {
+        "event_id": "187",
+        "source": "192.168.0.2",
+        "destinations": [
+          "192.168.101.106",
+          "192.168.0.209",
+          "192.168.0.186",
+          "192.168.0.143",
+          "192.168.0.106",
+          "10.42.0.69"
+        ],
+        "attack_type": "scanning",
+        "start_time_local": "2025-04-14 13:47:44+03:00",
+        "end_time_local": "2025-04-14 14:17:44+03:00",
+        "start_time_utc": "2025-04-14 10:47:44Z",
+        "end_time_utc": "2025-04-14 11:17:44Z",
+        "traffic_Type": "in"
+      }
+    ],
+    "total_events": 302
+  },
+  "identity_probe": {
+    "physical_rows": 5839132,
+    "unique_rows": 2644629,
+    "repeated_rows": 3194503,
+    "previously_opened_rows": 617770,
+    "deduplication": "exact UID and equality of all 15 native fields; earliest backup / physical row retained",
+    "first_start_ms": 1743595616431,
+    "last_end_ms": 1744923586577,
+    "clock_max_lag_ms": 3599150,
+    "end_time_inversions": 535429,
+    "uid_order_sha256": "d1bec2bb543a1305b93681701dcfd1d3e1d4382aac4e65de4bf3e0d3e45be5d9",
+    "days": [
+      {
+        "day": "2025-04-02",
+        "rows": 232,
+        "previously_opened": 0,
+        "first_clock_ms": 1743595618948,
+        "last_clock_ms": 1743627601937
+      },
+      {
+        "day": "2025-04-03",
+        "rows": 15,
+        "previously_opened": 0,
+        "first_clock_ms": 1743670790494,
+        "last_clock_ms": 1743714002312
+      },
+      {
+        "day": "2025-04-04",
+        "rows": 4,
+        "previously_opened": 0,
+        "first_clock_ms": 1743757201214,
+        "last_clock_ms": 1743757201607
+      },
+      {
+        "day": "2025-04-06",
+        "rows": 2376,
+        "previously_opened": 0,
+        "first_clock_ms": 1743955195125,
+        "last_clock_ms": 1743957262524
+      },
+      {
+        "day": "2025-04-07",
+        "rows": 63809,
+        "previously_opened": 0,
+        "first_clock_ms": 1744028481875,
+        "last_clock_ms": 1744070395104
+      },
+      {
+        "day": "2025-04-08",
+        "rows": 40916,
+        "previously_opened": 0,
+        "first_clock_ms": 1744070410105,
+        "last_clock_ms": 1744102790036
+      },
+      {
+        "day": "2025-04-10",
+        "rows": 274871,
+        "previously_opened": 274871,
+        "first_clock_ms": 1744289628956,
+        "last_clock_ms": 1744329599478
+      },
+      {
+        "day": "2025-04-11",
+        "rows": 156644,
+        "previously_opened": 32725,
+        "first_clock_ms": 1744329615580,
+        "last_clock_ms": 1744415999511
+      },
+      {
+        "day": "2025-04-12",
+        "rows": 67051,
+        "previously_opened": 0,
+        "first_clock_ms": 1744416001914,
+        "last_clock_ms": 1744502399421
+      },
+      {
+        "day": "2025-04-13",
+        "rows": 280912,
+        "previously_opened": 0,
+        "first_clock_ms": 1744502406727,
+        "last_clock_ms": 1744588796022
+      },
+      {
+        "day": "2025-04-14",
+        "rows": 1627982,
+        "previously_opened": 180357,
+        "first_clock_ms": 1744588801800,
+        "last_clock_ms": 1744675195780
+      },
+      {
+        "day": "2025-04-15",
+        "rows": 45702,
+        "previously_opened": 45702,
+        "first_clock_ms": 1744675203180,
+        "last_clock_ms": 1744761598421
+      },
+      {
+        "day": "2025-04-16",
+        "rows": 44866,
+        "previously_opened": 44866,
+        "first_clock_ms": 1744761600797,
+        "last_clock_ms": 1744847998508
+      },
+      {
+        "day": "2025-04-17",
+        "rows": 39249,
+        "previously_opened": 39249,
+        "first_clock_ms": 1744848005911,
+        "last_clock_ms": 1744923586577
+      }
+    ],
+    "schedule_time_intersection": [
+      {
+        "event_id": "0",
+        "start_time_utc": "2025-04-03 12:52:15Z",
+        "end_time_utc": "2025-04-03 12:57:15Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "9",
+        "start_time_utc": "2025-04-04 16:50:40Z",
+        "end_time_utc": "2025-04-04 17:05:51Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "21",
+        "start_time_utc": "2025-04-05 13:29:55Z",
+        "end_time_utc": "2025-04-05 13:35:10Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "23",
+        "start_time_utc": "2025-04-05 14:31:03Z",
+        "end_time_utc": "2025-04-05 14:47:43Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "36",
+        "start_time_utc": "2025-04-05 21:08:02Z",
+        "end_time_utc": "2025-04-05 21:23:18Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "49",
+        "start_time_utc": "2025-04-06 14:06:50Z",
+        "end_time_utc": "2025-04-06 14:11:50Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "62",
+        "start_time_utc": "2025-04-06 16:45:47Z",
+        "end_time_utc": "2025-04-06 17:00:47Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "75",
+        "start_time_utc": "2025-04-06 21:43:45Z",
+        "end_time_utc": "2025-04-06 22:13:45Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "90",
+        "start_time_utc": "2025-04-07 12:51:30Z",
+        "end_time_utc": "2025-04-07 13:21:30Z",
+        "raw_timestamp_rows": 7314,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "104",
+        "start_time_utc": "2025-04-07 19:35:47Z",
+        "end_time_utc": "2025-04-07 20:05:47Z",
+        "raw_timestamp_rows": 2508,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "118",
+        "start_time_utc": "2025-04-08 04:22:54Z",
+        "end_time_utc": "2025-04-08 04:52:54Z",
+        "raw_timestamp_rows": 2395,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "132",
+        "start_time_utc": "2025-04-08 08:24:28Z",
+        "end_time_utc": "2025-04-08 08:54:28Z",
+        "raw_timestamp_rows": 2886,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "146",
+        "start_time_utc": "2025-04-08 12:24:33Z",
+        "end_time_utc": "2025-04-08 12:54:33Z",
+        "raw_timestamp_rows": 0,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "160",
+        "start_time_utc": "2025-04-10 15:45:46Z",
+        "end_time_utc": "2025-04-10 16:15:46Z",
+        "raw_timestamp_rows": 85839,
+        "previously_opened_rows": 85839,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "173",
+        "start_time_utc": "2025-04-13 06:53:25Z",
+        "end_time_utc": "2025-04-13 07:23:25Z",
+        "raw_timestamp_rows": 34517,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      },
+      {
+        "event_id": "187",
+        "start_time_utc": "2025-04-14 10:47:44Z",
+        "end_time_utc": "2025-04-14 11:17:44Z",
+        "raw_timestamp_rows": 1057136,
+        "previously_opened_rows": 0,
+        "interpretation": "Timestamp intersection only; no flow attack labels or completeness claim"
+      }
+    ]
+  },
+  "hash_provenance": "Per-member SHA-256 independently computed from verified ZIP CRC32/raw size on 2026-11-14; publisher exposes only whole-ZIP MD5. No full new v7 label projection or model run locally.",
+  "opened_member_provenance": "R23 registration raw_member_sha256 exactly matches both latest-ZIP members. Row exposure is the union of those raw UIDs."
+}

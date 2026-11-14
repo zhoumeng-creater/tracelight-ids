@@ -1,0 +1,52 @@
+{
+  "source": "IoT-SFC-106-2025-04-10",
+  "rows": 274871,
+  "family_counts": {
+    "Benign": 38189,
+    "Unresolved": 9378,
+    "OtherAttack": 143368,
+    "Scanning": 83936
+  },
+  "native_fields_exact": true,
+  "uid_order_exact": true,
+  "registration_clock_exact": true,
+  "new_truth_opened": false,
+  "model_run": false,
+  "features_schema": "row_id: int64\nflow_end_ms: int64\nsource: string\ndestination: string\nnative_protocol: string\nip_protocol: int16\norig_port: int64\nresp_port: int64\nduration_seconds: double\norig_pkts: int64\nresp_pkts: int64\norig_ip_bytes: int64\nresp_ip_bytes: int64\nuid: string\nresponse_evidence_code: int8\nreply_unknown: int8\nreply_unanswered_observed: int8\nreply_counted: int8\norig_checksum_uncounted: int8\nresp_checksum_uncounted: int8",
+  "truth_schema": "row_id: int64\nuid: string\nwindow: string\nfamily: string\nnative_label: string\nnative_detail: string\nevent_id: string\nevidence_level: string\nlabel_source: string\nattacker_role: string\noriginal_start_ms: int64\noriginal_end_ms: int64\npreviously_opened: bool\nexposure: string\nsource_backup: string",
+  "features_sha256": "fd317fd8b32e09f8202a7d181f0e493fe228031ef643a663068ac3925b01a356",
+  "truth_sha256": "559619a137de6cc26f2927b767538e3399baf8cf86f4d658d119d5b42a701d38",
+  "source_registry_sha256": "c8d793c6c91fd34f385fbe18d03dbf0e784d997878877b07fd636c32551d4f7e",
+  "native_decoder_probe": {
+    "workers_requested": 4,
+    "worker_pids": {
+      "11708": {
+        "files": 8,
+        "rows": 1284293,
+        "cpu_seconds": 4.8125,
+        "wall_seconds": 4.848050200031139
+      },
+      "34268": {
+        "files": 7,
+        "rows": 1196350,
+        "cpu_seconds": 4.640625,
+        "wall_seconds": 4.581159699941054
+      },
+      "64964": {
+        "files": 5,
+        "rows": 2267203,
+        "cpu_seconds": 8.015625,
+        "wall_seconds": 8.070785599993542
+      },
+      "52148": {
+        "files": 5,
+        "rows": 1091286,
+        "cpu_seconds": 4.125,
+        "wall_seconds": 4.164587300037965
+      }
+    },
+    "physical_rows": 5839132,
+    "cpu_seconds_sum": 21.59375,
+    "scope": "Native raw decoding only, no models and no new labels. Per-file wall times overlap and are not elapsed batch time."
+  }
+}
