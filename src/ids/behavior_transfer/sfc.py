@@ -24,7 +24,7 @@ import pyarrow.compute as pc
 import pyarrow.csv as pacsv
 import pyarrow.parquet as pq
 
-from ids.common import read_json, sha256_file, write_json
+from ids.common import canonical_hash, read_json, sha256_file, write_json
 from ids.contact_evidence.data import BLIND
 from ids.contact_evidence.download import ssl_context
 from ids.response_evidence.data import _sfc_inputs
@@ -492,7 +492,7 @@ def prepare_sources(cache_dir, output_dir, workers=4):
     config = read_json(REGISTRY)
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
-    source_id = "IoT-SFC:23371775:sensor106:" + sha256_file(REGISTRY)
+    source_id = "IoT-SFC:23371775:sensor106:" + canonical_hash(config)
     receipt = output / "sources.json"
     if receipt.exists():
         prior = read_json(receipt)
@@ -603,7 +603,7 @@ def probe_opened_day(cache_dir, opened_csv, output_dir, workers=4):
         config["members"],
         day,
         output_dir,
-        "old-day-probe:" + sha256_file(REGISTRY),
+        "old-day-probe:" + canonical_hash(config),
     )
     spec = _prepare_day(args)
     if spec["status"] != "complete":
@@ -625,7 +625,7 @@ def probe_opened_day(cache_dir, opened_csv, output_dir, workers=4):
         truth_schema=str(truth.schema),
         features_sha256=sha256_file(spec["features"]),
         truth_sha256=sha256_file(spec["truth"]),
-        source_registry_sha256=sha256_file(REGISTRY),
+        source_registry_canonical_sha256=canonical_hash(config),
     )
 
 
