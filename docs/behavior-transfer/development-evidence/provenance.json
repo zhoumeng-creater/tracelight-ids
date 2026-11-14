@@ -1,0 +1,40 @@
+{
+  "scope": "Previously opened R23 SFC data, retrospective R24 failure review; original root artifacts retained",
+  "source_uncompressed_sha256": "6a958525d8a526590d8c8054e3fc676a82958435f32c47907e06072ec5679778",
+  "round23_package_sha256": "1fd561df5374546d2abef25ea162bfa072534d990d554bb537fd1de322dae9b3",
+  "entries": [
+    {
+      "archive_member": "训练与扫描日历史取值.csv",
+      "file": "training-and-sfc-history.csv",
+      "archive_bytes": 957,
+      "archive_sha256": "9d732104064f4367f27b034a60ab5e80d2bde836a57654281b0e65dd88afb372",
+      "git_lf_bytes": 944,
+      "git_lf_sha256": "01b13ad500f357134dc5651b101ed58a6c3b91e54f9c4ffb237ac999ff8d71ec"
+    },
+    {
+      "archive_member": "SFC首小时后按原生类别逐流得失.csv",
+      "file": "sfc-prefix-paired.csv",
+      "archive_bytes": 754,
+      "archive_sha256": "a7eb864126c7772178fbbba6a71662772e31ce9c11f848b30691c15b0c8a85ef",
+      "git_lf_bytes": 737,
+      "git_lf_sha256": "1034b3649be294c6f7e50aa64b8bebe3cdd556ca7a6217659a95b7438b34506b"
+    },
+    {
+      "archive_member": "MLP29_SFC扫描排序上界.csv",
+      "file": "sfc-score-ceilings.csv",
+      "archive_bytes": 1611,
+      "archive_sha256": "c4887a9ad55a907ee49708d335fd2369887fab39be4e6cbdad9be10a0a3b830a",
+      "git_lf_bytes": 1595,
+      "git_lf_sha256": "c701d92696d7edc47e2346f64df3c76503bcf0e88a8efb5b69138d2fd1d8d1b4"
+    },
+    {
+      "archive_member": "SFC首小时无标签阈值.json",
+      "file": "sfc-prefix-threshold.json",
+      "archive_bytes": 9943,
+      "archive_sha256": "6293462fda8f2af4184aaa0dce6783a2d3afa64e28a09d1dc811df629e4c0470",
+      "git_lf_bytes": 9532,
+      "git_lf_sha256": "73a2f30a71df089eeca354075ab1767c050b79ff37cb1cf9e847c52971cd547e"
+    }
+  ],
+  "repository_copy": "UTF-8 payload unchanged; CRLF converted to LF for Git. Source archive hashes retained separately."
+}

@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-11-14T03:10:38.372205+00:00",
+  "release": "behavior-transfer-lab-v1",
+  "new_suite": {
+    "passed": 37,
+    "seconds": 9.64,
+    "scope": "all test_behavior_*.py; includes actual decisions/evaluation/resume/pack with synthetic scorer/process substitutions"
+  },
+  "inherited_regressions": {
+    "passed": 57,
+    "seconds": 6.51,
+    "scope": "existing working-point/response history/scoring tests selected for affected path"
+  },
+  "ruff": "passed for new package, changed scorer and test_behavior files",
+  "entry_point": "PowerShell 5.1 PlanOnly and PowerShell CheckOnly executed",
+  "new_fits": 0,
+  "new_forward_model_evaluations": 0,
+  "real_source_preparation": {
+    "sfc": "SFC_SOURCE_PROBE.json: opened 2025-04-10 only; exact native values, UID order and clocks; genuine four-process source decoding",
+    "dedale": "dedale-D15-source-check.json: 789091 developer-day rows; one-to-one identity and event evidence"
+  },
+  "local_doc_links_missing": [],
+  "lab_work_remaining": [
+    "all frozen C model/device replays",
+    "CUDA batch throughput and equivalence selection",
+    "remaining label/data preparation",
+    "42 registered source blocks and five model groups",
+    "new forward scoring and strict daily gains/losses",
+    "resource and online counter cost measurement"
+  ],
+  "source_config_canonical_sha256": {
+    "dedale.json": "8fdd06c2c4919299a0f09f7317ed22aa68f7105e8d1e898439b9db6d5dffa1c0",
+    "sfc.json": "d3b63387143cb550ff034a0048cafea6c578a0775f3bf1b915107cfb1e54f6b2"
+  }
+}

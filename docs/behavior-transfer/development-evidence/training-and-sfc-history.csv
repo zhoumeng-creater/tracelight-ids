@@ -1,0 +1,13 @@
+stage,family,score,rows,minimum,q25,median,q75,maximum,over_two,over_four
+selected_training,Benign,hist_dst_ips_60s,4096,0,58.0,60.0,61.0,67,3915,3913
+selected_training,Benign,hist_dst_ports_60s,4096,0,58.0,59.0,60.0,64,3913,3905
+selected_training,C&C,hist_dst_ips_60s,56,2,2.0,2.0,2.0,2,0,0
+selected_training,C&C,hist_dst_ports_60s,56,1,1.0,1.0,1.0,1,0,0
+selected_training,Scanning,hist_dst_ips_60s,4040,14,33.0,37.0,39.0,48,4040,4040
+selected_training,Scanning,hist_dst_ports_60s,4040,3,5.0,6.0,8.0,13,4040,3778
+past_calibration,Benign,hist_dst_ips_60s,1826,0,0.0,0.0,1.0,6,157,14
+past_calibration,Benign,hist_dst_ports_60s,1826,0,0.0,0.0,1.0,4,4,0
+SFC_2025-04-10,Benign,hist_dst_ips_60s,38189,0,1.0,1.0,2.0,9,3086,409
+SFC_2025-04-10,Benign,hist_dst_ports_60s,38189,0,1.0,1.0,2.0,5,2801,64
+SFC_2025-04-10,Scanning,hist_dst_ips_60s,83936,0,2.0,2.0,2.0,2,0,0
+SFC_2025-04-10,Scanning,hist_dst_ports_60s,83936,0,419.0,630.0,770.0,921,83917,83908

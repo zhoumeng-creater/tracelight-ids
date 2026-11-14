@@ -1,0 +1,411 @@
+{
+  "source": "IoT-SFC-04-11_12",
+  "source_uncompressed_sha256": "6a958525d8a526590d8c8054e3fc676a82958435f32c47907e06072ec5679778",
+  "feature": "distinct destination ports in prior 60s, same source IP and protocol, physical completed-flow clock",
+  "development_status": "Previously scored capture; destination-port feature chosen after examining historical results. Threshold uses no labels.",
+  "prefix_start_utc": "2025-04-10T12:53:48.956+00:00",
+  "prefix_end_exclusive_utc": "2025-04-10T13:53:48.956+00:00",
+  "evaluation_end_exclusive_utc": "2025-04-11T00:00:00.000+00:00",
+  "prefix": {
+    "row_id_first": 1,
+    "row_id_last": 3755,
+    "observed_first_utc": "2025-04-10T12:53:48.956+00:00",
+    "observed_last_utc": "2025-04-10T13:53:48.823+00:00",
+    "rows": 3755,
+    "family_rows": {
+      "Benign": 3552,
+      "Unresolved": 203
+    },
+    "annotated_scan_event_ids": []
+  },
+  "suffix": {
+    "row_id_first": 3756,
+    "row_id_last": 274871,
+    "observed_first_utc": "2025-04-10T13:53:52.826+00:00",
+    "observed_last_utc": "2025-04-10T23:59:59.478+00:00",
+    "rows": 271116,
+    "family_rows": {
+      "OtherAttack": 143368,
+      "Scanning": 83936,
+      "Benign": 34637,
+      "Unresolved": 9175
+    },
+    "annotated_scan_event_ids": [
+      "160"
+    ]
+  },
+  "rank_1based": 3718,
+  "cut_rule": "all prefix rows, ascending ceil(0.99*n), alert only if strictly greater",
+  "policies": {
+    "exclude_this_whole_second": {
+      "threshold": 4,
+      "prefix_rows_above": 5,
+      "prefix_tied_at_cut": 105,
+      "suffix": {
+        "normal": 34637,
+        "fp": 69,
+        "fp_cap": 346,
+        "fpr": 0.0019920893841845425,
+        "scan": 83936,
+        "scan_hits": 83896,
+        "scan_recall": 0.9995234464353794,
+        "scan_misses": 40
+      },
+      "replace_sealed_mlp29_raw_by_family": {
+        "Benign": {
+          "rows": 34637,
+          "old": 10,
+          "new": 69,
+          "both": 0,
+          "gained": 69,
+          "lost": 10
+        },
+        "Unresolved": {
+          "rows": 9175,
+          "old": 0,
+          "new": 3164,
+          "both": 0,
+          "gained": 3164,
+          "lost": 0
+        },
+        "OtherAttack": {
+          "rows": 143368,
+          "old": 0,
+          "new": 1426,
+          "both": 0,
+          "gained": 1426,
+          "lost": 0
+        },
+        "Scanning": {
+          "rows": 83936,
+          "old": 0,
+          "new": 83896,
+          "both": 0,
+          "gained": 83896,
+          "lost": 0
+        }
+      },
+      "replace_sealed_mlp29_raw_by_other_attack_native": {
+        "HttpFlood": {
+          "rows": 11877,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "HydraBruteForce": {
+          "rows": 2263,
+          "old": 0,
+          "new": 1426,
+          "both": 0,
+          "gained": 1426,
+          "lost": 0
+        },
+        "cameraTapoC200Attack": {
+          "rows": 125715,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mitmArpSpoof": {
+          "rows": 1,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_brute_force": {
+          "rows": 5,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_dos": {
+          "rows": 863,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_malformed": {
+          "rows": 1,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_sniff": {
+          "rows": 867,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_spoof": {
+          "rows": 886,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "slowloris": {
+          "rows": 886,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "synFlood": {
+          "rows": 1,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "udpFlood": {
+          "rows": 3,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        }
+      },
+      "suffix_services": {
+        "22": {
+          "normal": 4,
+          "fp": 0,
+          "fp_cap": 0,
+          "fpr": 0.0,
+          "scan": 62,
+          "scan_hits": 62,
+          "scan_recall": 1.0,
+          "scan_misses": 0
+        },
+        "80": {
+          "normal": 301,
+          "fp": 5,
+          "fp_cap": 3,
+          "fpr": 0.016611295681063124,
+          "scan": 99,
+          "scan_hits": 97,
+          "scan_recall": 0.9797979797979798,
+          "scan_misses": 2
+        },
+        "443": {
+          "normal": 794,
+          "fp": 3,
+          "fp_cap": 7,
+          "fpr": 0.003778337531486146,
+          "scan": 176,
+          "scan_hits": 171,
+          "scan_recall": 0.9715909090909091,
+          "scan_misses": 5
+        }
+      },
+      "suffix_alerts_by_family": {
+        "Scanning": 83896,
+        "Unresolved": 3164,
+        "OtherAttack": 1426,
+        "Benign": 69
+      }
+    },
+    "registered_exclude_this_millisecond": {
+      "threshold": 4,
+      "prefix_rows_above": 5,
+      "prefix_tied_at_cut": 100,
+      "suffix": {
+        "normal": 34637,
+        "fp": 60,
+        "fp_cap": 346,
+        "fpr": 0.0017322516384213414,
+        "scan": 83936,
+        "scan_hits": 83908,
+        "scan_recall": 0.9996664125047655,
+        "scan_misses": 28
+      },
+      "replace_sealed_mlp29_raw_by_family": {
+        "Benign": {
+          "rows": 34637,
+          "old": 10,
+          "new": 60,
+          "both": 0,
+          "gained": 60,
+          "lost": 10
+        },
+        "Unresolved": {
+          "rows": 9175,
+          "old": 0,
+          "new": 3188,
+          "both": 0,
+          "gained": 3188,
+          "lost": 0
+        },
+        "OtherAttack": {
+          "rows": 143368,
+          "old": 0,
+          "new": 1425,
+          "both": 0,
+          "gained": 1425,
+          "lost": 0
+        },
+        "Scanning": {
+          "rows": 83936,
+          "old": 0,
+          "new": 83908,
+          "both": 0,
+          "gained": 83908,
+          "lost": 0
+        }
+      },
+      "replace_sealed_mlp29_raw_by_other_attack_native": {
+        "HttpFlood": {
+          "rows": 11877,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "HydraBruteForce": {
+          "rows": 2263,
+          "old": 0,
+          "new": 1425,
+          "both": 0,
+          "gained": 1425,
+          "lost": 0
+        },
+        "cameraTapoC200Attack": {
+          "rows": 125715,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mitmArpSpoof": {
+          "rows": 1,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_brute_force": {
+          "rows": 5,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_dos": {
+          "rows": 863,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_malformed": {
+          "rows": 1,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_sniff": {
+          "rows": 867,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "mqtt_spoof": {
+          "rows": 886,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "slowloris": {
+          "rows": 886,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "synFlood": {
+          "rows": 1,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        },
+        "udpFlood": {
+          "rows": 3,
+          "old": 0,
+          "new": 0,
+          "both": 0,
+          "gained": 0,
+          "lost": 0
+        }
+      },
+      "suffix_services": {
+        "22": {
+          "normal": 4,
+          "fp": 0,
+          "fp_cap": 0,
+          "fpr": 0.0,
+          "scan": 62,
+          "scan_hits": 62,
+          "scan_recall": 1.0,
+          "scan_misses": 0
+        },
+        "80": {
+          "normal": 301,
+          "fp": 5,
+          "fp_cap": 3,
+          "fpr": 0.016611295681063124,
+          "scan": 99,
+          "scan_hits": 98,
+          "scan_recall": 0.98989898989899,
+          "scan_misses": 1
+        },
+        "443": {
+          "normal": 794,
+          "fp": 3,
+          "fp_cap": 7,
+          "fpr": 0.003778337531486146,
+          "scan": 176,
+          "scan_hits": 174,
+          "scan_recall": 0.9886363636363636,
+          "scan_misses": 2
+        }
+      },
+      "suffix_alerts_by_family": {
+        "Scanning": 83908,
+        "Unresolved": 3188,
+        "OtherAttack": 1425,
+        "Benign": 60
+      }
+    }
+  }
+}

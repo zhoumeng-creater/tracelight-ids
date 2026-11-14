@@ -1,0 +1,75 @@
+{
+  "rows": 789091,
+  "first_flow_end_ms": 1736124254440,
+  "last_flow_end_ms": 1736204994792,
+  "min_original_start_ms": 1736124254439,
+  "max_original_start_ms": 1736204994791,
+  "min_original_end_ms": 1736124254440,
+  "max_original_end_ms": 1736204994792,
+  "adjacent_end_time_decreases": 201471,
+  "logical_time_ties": 632014,
+  "max_clock_lag_ms": 3598987,
+  "uid_order_sha256": "eabe80b304aa51c958b2c99a0f399ed62ea199fd442a5cc801881ee0633965a2",
+  "identity": "Same unique UID sets; timestamps/endpoints/protocol match; native physical row order",
+  "source_file_history_reset": true,
+  "registered_file_date": "2025-01-06",
+  "role": "development",
+  "source_id": "DEDALE-green-D15",
+  "registration_sha256": "8fdd06c2c4919299a0f09f7317ed22aa68f7105e8d1e898439b9db6d5dffa1c0",
+  "event_evidence": {
+    "uid_evidence": {
+      "CI7cJo10RfMA3xxRC5": "host_and_network_confirmed",
+      "CnOKRT2GLSyyTe1kRf": "host_correlated_tls",
+      "C83quq4MsJ2zNbCSq5": "author_action_rule_tls",
+      "C6YQ5KYHHprCyFZkg": "author_action_rule_tls",
+      "CVF4Qb1wXhZYjd591g": "author_action_rule_tls"
+    },
+    "host_event_counts": {
+      "download_command": 6,
+      "zip_created": 1,
+      "first_program_started": 1,
+      "second_program_created": 1
+    },
+    "http_uid": "CI7cJo10RfMA3xxRC5",
+    "http_file_uid": [
+      "F7QbbjrQy2jkZEEke"
+    ],
+    "http_complete_file_bytes": 1105,
+    "tls_note": "Handshake and host sequence corroborate a transfer; no byte-for-byte file hash join"
+  },
+  "member_sha256": {
+    "conn.log": "3f588fd7a05dd4e0c4dd62a337a2b1b08f920b757bae82fc28f85cd16b347033",
+    "conn_labeled.csv": "8fa4fcf520d93d10fd28f022cfecc03ea17be6a17263bb0d4fd0fe1dc5958f93",
+    "http.log": "fb29fb8197175d8e44b9762b7a3e21438409392a3ead31be137f1dfe35c4a628",
+    "files.log": "eb4321f40ea88cc7f99257bc160fd28b8301b59cc51c3dec1c1bae439f94ee0a",
+    "ssl.log": "3d1de0214ad84ea142ba10ce0ac82d5dd093399d7e93487c016c657480029688"
+  },
+  "outputs": {
+    "features": {
+      "sha256": "4c207b31aa5269a742f48d5fcc1706713631e49b8b86ae3f0f2b2e06692a891e",
+      "bytes": 27813583
+    },
+    "truth": {
+      "sha256": "cc5335fe90611d9a065386509e21d83f5cae5a6a04fe1a2e6c528a338e63df40",
+      "bytes": 14262071
+    }
+  },
+  "validation": "2026-11-14 full D15 preparation; no model prediction or threshold estimation",
+  "module_sha256": "64320d6fa24aef57e9a0f92cca5684985c61ebb53b7ec3932ee84b6873ba5887",
+  "synthetic_tests_passed": 12,
+  "native_counts": {
+    "0": 789063,
+    "1": 6,
+    "2": 22
+  },
+  "family_counts": {
+    "Benign": 789063,
+    "Unresolved": 22,
+    "Download": 2,
+    "ExternalC2": 3,
+    "OtherAttack": 1
+  },
+  "observed_utc_window_counts": {
+    "2025-01-06": 789091
+  }
+}

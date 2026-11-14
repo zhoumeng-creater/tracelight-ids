@@ -1,0 +1,916 @@
+{
+  "version": "dedale-green-28days-v1",
+  "registered_on": "2026-11-14",
+  "publisher": "INRIA / DEDALE",
+  "doi": "10.57745/Y5JLDG",
+  "dataset_version": "2.0",
+  "author_code": {
+    "url": "https://gitlab.inria.fr/api/v4/projects/mlanvin%2Fdedale_labeling/repository/blobs/64039c381706c806db840a83df75183d2cdff858/raw",
+    "git_blob": "64039c381706c806db840a83df75183d2cdff858"
+  },
+  "label_mapping": {
+    "0": "Benign",
+    "1": "Action-specific endpoint or OtherAttack",
+    "2": "Unresolved; attack-related"
+  },
+  "action_mapping": {
+    "the client opens the mail attachment which downloads a https reverse shell": {
+      "family": "Download",
+      "native_type": "download_reverse_shell"
+    },
+    "the reverse shell is used to upload the stealth communication executable on the infected machine": {
+      "family": "Download",
+      "native_type": "download_stealth_executable"
+    },
+    "the stealth communication executable is used to download the requirements for the lateral movement from the attacker machine": {
+      "family": "Download",
+      "native_type": "download_lateral_requirements"
+    },
+    "download of the malicious dll on the internal smb share during PrintNightmare exploitation": {
+      "family": "Download",
+      "native_type": "download_smb_dll"
+    },
+    "the reverse shell is beaconing on the attacker machine": {
+      "family": "ExternalC2",
+      "native_type": "c2_reverse_shell_beacon"
+    },
+    "the stealth communication executable checks regularly C2 commands on a web page": {
+      "family": "ExternalC2",
+      "native_type": "c2_web_poll"
+    }
+  },
+  "archives": {
+    "zeek_green_internal.zip": {
+      "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/717875",
+      "filename": "zeek_green_internal.zip",
+      "bytes": 3538305367,
+      "publisher_md5": "db1e4c7a80545e758edb766d920a0400",
+      "central_directory_start": 3538211181,
+      "central_directory_bytes": 94164,
+      "central_directory_sha256": "2a1ce70487c5b7f0f63eab377145dd9695d5d78ba87db7b5b96bc5b69573ca99"
+    },
+    "system_logs_labels.zip": {
+      "url": "https://entrepot.recherche.data.gouv.fr/api/access/datafile/717882",
+      "filename": "system_logs_labels.zip",
+      "bytes": 2669407,
+      "publisher_md5": "455d0a7042531eff74285006f97822e4",
+      "central_directory_start": 2668461,
+      "central_directory_bytes": 924,
+      "central_directory_sha256": "c1495ebde8b9568537fdd702f277dae647988566506515b44b20505a5b0455a9"
+    }
+  },
+  "host_evidence": {
+    "archive": "system_logs_labels.zip",
+    "path": "system_labels/clients_1_and_2/malicious_events_class_1.jsonl",
+    "offset": 1338523,
+    "compressed_bytes": 1039653,
+    "bytes": 20773464,
+    "crc32": "86f47528",
+    "method": 8,
+    "sha256": "5cf5bb782f2d6304752f6b03d19e8544e1e4b21ba91372c7e15067553f1e01a6"
+  },
+  "sources": [
+    {
+      "source_id": "DEDALE-green-D01",
+      "name": "DEDALE-green-D01",
+      "day": 1,
+      "date": "2024-12-23",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D1_2024-12-23_output_green_internal_Zeek/conn.log",
+          "offset": 3033564707,
+          "compressed_bytes": 32786528,
+          "bytes": 99267773,
+          "crc32": "2f074da5",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D1_2024-12-23_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 3140382043,
+          "compressed_bytes": 37654099,
+          "bytes": 133503866,
+          "crc32": "b8f272e3",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D02",
+      "name": "DEDALE-green-D02",
+      "day": 2,
+      "date": "2024-12-24",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D2_2024-12-24_output_green_internal_Zeek/conn.log",
+          "offset": 553930385,
+          "compressed_bytes": 34908708,
+          "bytes": 105758606,
+          "crc32": "23135acb",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D2_2024-12-24_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 669925180,
+          "compressed_bytes": 40079997,
+          "bytes": 142232159,
+          "crc32": "6710c534",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D03",
+      "name": "DEDALE-green-D03",
+      "day": 3,
+      "date": "2024-12-25",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D3_2024-12-25_output_green_internal_Zeek/conn.log",
+          "offset": 1612105168,
+          "compressed_bytes": 32390443,
+          "bytes": 98056794,
+          "crc32": "7058b968",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D3_2024-12-25_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1718683166,
+          "compressed_bytes": 37181094,
+          "bytes": 131900061,
+          "crc32": "71cf601e",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D04",
+      "name": "DEDALE-green-D04",
+      "day": 4,
+      "date": "2024-12-26",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D4_2024-12-26_output_green_internal_Zeek/conn.log",
+          "offset": 923391764,
+          "compressed_bytes": 32838030,
+          "bytes": 99248456,
+          "crc32": "26ce0c32",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D4_2024-12-26_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1029789663,
+          "compressed_bytes": 37689996,
+          "bytes": 133480518,
+          "crc32": "d43a7527",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D05",
+      "name": "DEDALE-green-D05",
+      "day": 5,
+      "date": "2024-12-27",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D5_2024-12-27_output_green_internal_Zeek/conn.log",
+          "offset": 211429788,
+          "compressed_bytes": 32620378,
+          "bytes": 98495144,
+          "crc32": "228af889",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D5_2024-12-27_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 316993627,
+          "compressed_bytes": 37432850,
+          "bytes": 132469129,
+          "crc32": "49bb3b01",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D06",
+      "name": "DEDALE-green-D06",
+      "day": 6,
+      "date": "2024-12-28",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D6_2024-12-28_output_green_internal_Zeek/conn.log",
+          "offset": 2108378541,
+          "compressed_bytes": 656763,
+          "bytes": 2052318,
+          "crc32": "9faa86ae",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D6_2024-12-28_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2110742022,
+          "compressed_bytes": 775770,
+          "bytes": 2762013,
+          "crc32": "3f1caff5",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D07",
+      "name": "DEDALE-green-D07",
+      "day": 7,
+      "date": "2024-12-29",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D7_2024-12-29_output_green_internal_Zeek/conn.log",
+          "offset": 182961163,
+          "compressed_bytes": 993894,
+          "bytes": 3064977,
+          "crc32": "d70dee1c",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D7_2024-12-29_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 186280610,
+          "compressed_bytes": 1165850,
+          "bytes": 4124705,
+          "crc32": "f5cee847",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D08",
+      "name": "DEDALE-green-D08",
+      "day": 8,
+      "date": "2024-12-30",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D8_2024-12-30_output_green_internal_Zeek/conn.log",
+          "offset": 2879922451,
+          "compressed_bytes": 32808233,
+          "bytes": 99082072,
+          "crc32": "90825232",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D8_2024-12-30_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2986608644,
+          "compressed_bytes": 37647243,
+          "bytes": 133256550,
+          "crc32": "44d40c65",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D09",
+      "name": "DEDALE-green-D09",
+      "day": 9,
+      "date": "2024-12-31",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D9_2024-12-31_output_green_internal_Zeek/conn.log",
+          "offset": 2701479436,
+          "compressed_bytes": 32529024,
+          "bytes": 98391145,
+          "crc32": "caac8ac3",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D9_2024-12-31_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2806113277,
+          "compressed_bytes": 37328411,
+          "bytes": 132342182,
+          "crc32": "7820ae22",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D10",
+      "name": "DEDALE-green-D10",
+      "day": 10,
+      "date": "2025-01-01",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D10_2025-01-01_output_green_internal_Zeek/conn.log",
+          "offset": 1791710285,
+          "compressed_bytes": 32018284,
+          "bytes": 96730000,
+          "crc32": "5e0d61eb",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D10_2025-01-01_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1894449329,
+          "compressed_bytes": 36742017,
+          "bytes": 130104930,
+          "crc32": "90d9e2f4",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D11",
+      "name": "DEDALE-green-D11",
+      "day": 11,
+      "date": "2025-01-02",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D11_2025-01-02_output_green_internal_Zeek/conn.log",
+          "offset": 3211487720,
+          "compressed_bytes": 35750951,
+          "bytes": 112050513,
+          "crc32": "3d1e9ed9",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D11_2025-01-02_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 3314290870,
+          "compressed_bytes": 41287312,
+          "bytes": 151745885,
+          "crc32": "88fd1bc5",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D12",
+      "name": "DEDALE-green-D12",
+      "day": 12,
+      "date": "2025-01-03",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D12_2025-01-03_output_green_internal_Zeek/conn.log",
+          "offset": 1290386262,
+          "compressed_bytes": 31374562,
+          "bytes": 96638271,
+          "crc32": "2769340b",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D12_2025-01-03_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1389760415,
+          "compressed_bytes": 36122628,
+          "bytes": 130379589,
+          "crc32": "74f31b5c",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D13",
+      "name": "DEDALE-green-D13",
+      "day": 13,
+      "date": "2025-01-04",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D13_2025-01-04_output_green_internal_Zeek/conn.log",
+          "offset": 2849357990,
+          "compressed_bytes": 1153295,
+          "bytes": 3593350,
+          "crc32": "981319a5",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D13_2025-01-04_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2853089498,
+          "compressed_bytes": 1354680,
+          "bytes": 4842768,
+          "crc32": "cd431a9c",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D14",
+      "name": "DEDALE-green-D14",
+      "day": 14,
+      "date": "2025-01-05",
+      "role": "prefix",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D14_2025-01-05_output_green_internal_Zeek/conn.log",
+          "offset": 3533104601,
+          "compressed_bytes": 1131556,
+          "bytes": 3531109,
+          "crc32": "8e013603",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D14_2025-01-05_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 3536880525,
+          "compressed_bytes": 1330090,
+          "bytes": 4756638,
+          "crc32": "4852ccca",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D15",
+      "name": "DEDALE-green-D15",
+      "day": 15,
+      "date": "2025-01-06",
+      "role": "development",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D15_2025-01-06_output_green_internal_Zeek/conn.log",
+          "offset": 1457475150,
+          "compressed_bytes": 33166647,
+          "bytes": 100042120,
+          "crc32": "fc7f0c69",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D15_2025-01-06_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1559278424,
+          "compressed_bytes": 38058940,
+          "bytes": 134563700,
+          "crc32": "d3719adb",
+          "method": 8
+        },
+        "http.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D15_2025-01-06_output_green_internal_Zeek/http.log",
+          "offset": 1543690340,
+          "compressed_bytes": 15411930,
+          "bytes": 72765149,
+          "crc32": "5e444cdd",
+          "method": 8
+        },
+        "files.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D15_2025-01-06_output_green_internal_Zeek/files.log",
+          "offset": 1525777876,
+          "compressed_bytes": 17710572,
+          "bytes": 96089726,
+          "crc32": "2fee7348",
+          "method": 8
+        },
+        "ssl.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D15_2025-01-06_output_green_internal_Zeek/ssl.log",
+          "offset": 1516385999,
+          "compressed_bytes": 9389867,
+          "bytes": 42022527,
+          "crc32": "f00f6653",
+          "method": 8
+        }
+      },
+      "inspection": "D15 fields and labels inspected without model scoring"
+    },
+    {
+      "source_id": "DEDALE-green-D16",
+      "name": "DEDALE-green-D16",
+      "day": 16,
+      "date": "2025-01-07",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D16_2025-01-07_output_green_internal_Zeek/conn.log",
+          "offset": 36202696,
+          "compressed_bytes": 34232934,
+          "bytes": 103338561,
+          "crc32": "0b20df03",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D16_2025-01-07_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 142829913,
+          "compressed_bytes": 39292917,
+          "bytes": 139036902,
+          "crc32": "74dbbe92",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D17",
+      "name": "DEDALE-green-D17",
+      "day": 17,
+      "date": "2025-01-08",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D17_2025-01-08_output_green_internal_Zeek/conn.log",
+          "offset": 2535547939,
+          "compressed_bytes": 33713074,
+          "bytes": 101661953,
+          "crc32": "90264355",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D17_2025-01-08_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2635293426,
+          "compressed_bytes": 38691841,
+          "bytes": 136796407,
+          "crc32": "24ffe50c",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D18",
+      "name": "DEDALE-green-D18",
+      "day": 18,
+      "date": "2025-01-09",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D18_2025-01-09_output_green_internal_Zeek/conn.log",
+          "offset": 1968908475,
+          "compressed_bytes": 33535231,
+          "bytes": 101202262,
+          "crc32": "578952c0",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D18_2025-01-09_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2068933927,
+          "compressed_bytes": 38490142,
+          "bytes": 136173977,
+          "crc32": "8bca2c6b",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D19",
+      "name": "DEDALE-green-D19",
+      "day": 19,
+      "date": "2025-01-10",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D19_2025-01-10_output_green_internal_Zeek/conn.log",
+          "offset": 395814690,
+          "compressed_bytes": 34518069,
+          "bytes": 104312676,
+          "crc32": "b63cdf6b",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D19_2025-01-10_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 504767160,
+          "compressed_bytes": 39618095,
+          "bytes": 140351752,
+          "crc32": "bd50e1c1",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D20",
+      "name": "DEDALE-green-D20",
+      "day": 20,
+      "date": "2025-01-11",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D20_2025-01-11_output_green_internal_Zeek/conn.log",
+          "offset": 3025576682,
+          "compressed_bytes": 877962,
+          "bytes": 2711366,
+          "crc32": "047e1f14",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D20_2025-01-11_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 3028192653,
+          "compressed_bytes": 1030450,
+          "bytes": 3651199,
+          "crc32": "a2250ff0",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D21",
+      "name": "DEDALE-green-D21",
+      "day": 21,
+      "date": "2025-01-12",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D21_2025-01-12_output_green_internal_Zeek/conn.log",
+          "offset": 898010275,
+          "compressed_bytes": 912345,
+          "bytes": 2836434,
+          "crc32": "a485bbec",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D21_2025-01-12_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 900756241,
+          "compressed_bytes": 1073124,
+          "bytes": 3820542,
+          "crc32": "7c6d236a",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D22",
+      "name": "DEDALE-green-D22",
+      "day": 22,
+      "date": "2025-01-13",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D22_2025-01-13_output_green_internal_Zeek/conn.log",
+          "offset": 3393526421,
+          "compressed_bytes": 31489042,
+          "bytes": 95080611,
+          "crc32": "77b38f98",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D22_2025-01-13_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 3495906996,
+          "compressed_bytes": 36155937,
+          "bytes": 127894739,
+          "crc32": "0575286e",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D23",
+      "name": "DEDALE-green-D23",
+      "day": 23,
+      "date": "2025-01-14",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D23_2025-01-14_output_green_internal_Zeek/conn.log",
+          "offset": 2152505272,
+          "compressed_bytes": 34888925,
+          "bytes": 105362720,
+          "crc32": "662f1f06",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D23_2025-01-14_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2256302582,
+          "compressed_bytes": 40016598,
+          "bytes": 141756382,
+          "crc32": "daffe8c3",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D24",
+      "name": "DEDALE-green-D24",
+      "day": 24,
+      "date": "2025-01-15",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D24_2025-01-15_output_green_internal_Zeek/conn.log",
+          "offset": 1106702100,
+          "compressed_bytes": 35165493,
+          "bytes": 106271301,
+          "crc32": "4bee7d3b",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D24_2025-01-15_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1216502975,
+          "compressed_bytes": 40344552,
+          "bytes": 142994371,
+          "crc32": "e8044710",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D25",
+      "name": "DEDALE-green-D25",
+      "day": 25,
+      "date": "2025-01-16",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D25_2025-01-16_output_green_internal_Zeek/conn.log",
+          "offset": 2339103002,
+          "compressed_bytes": 37055301,
+          "bytes": 111914634,
+          "crc32": "daba0be9",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D25_2025-01-16_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2455437144,
+          "compressed_bytes": 42493628,
+          "bytes": 150576814,
+          "crc32": "3b448616",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D26",
+      "name": "DEDALE-green-D26",
+      "day": 26,
+      "date": "2025-01-17",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D26_2025-01-17_output_green_internal_Zeek/conn.log",
+          "offset": 754864581,
+          "compressed_bytes": 33525824,
+          "bytes": 101331654,
+          "crc32": "fc967a36",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D26_2025-01-17_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 858163042,
+          "compressed_bytes": 38478491,
+          "bytes": 136356139,
+          "crc32": "97ed50f9",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D27",
+      "name": "DEDALE-green-D27",
+      "day": 27,
+      "date": "2025-01-18",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D27_2025-01-18_output_green_internal_Zeek/conn.log",
+          "offset": 1757348313,
+          "compressed_bytes": 1060685,
+          "bytes": 3279828,
+          "crc32": "12ce5d88",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D27_2025-01-18_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 1760792041,
+          "compressed_bytes": 1244720,
+          "bytes": 4417661,
+          "crc32": "9dcb367d",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    },
+    {
+      "source_id": "DEDALE-green-D28",
+      "name": "DEDALE-green-D28",
+      "day": 28,
+      "date": "2025-01-19",
+      "role": "forward_same_testbed",
+      "sensor": "green_internal",
+      "members": {
+        "conn.log": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D28_2025-01-19_output_green_internal_Zeek/conn.log",
+          "offset": 2844549833,
+          "compressed_bytes": 899494,
+          "bytes": 2819547,
+          "crc32": "ba5d849d",
+          "method": 8
+        },
+        "conn_labeled.csv": {
+          "archive": "zeek_green_internal.zip",
+          "path": "green_internal/D28_2025-01-19_output_green_internal_Zeek/conn_labeled.csv",
+          "offset": 2847555613,
+          "compressed_bytes": 1059336,
+          "bytes": 3801437,
+          "crc32": "37ccb06d",
+          "method": 8
+        }
+      },
+      "inspection": "Unscored; directory metadata and public action schedule known"
+    }
+  ],
+  "no_model_fit_or_scoring_at_registration": true,
+  "clock": "Native conn.log physical row order; daily cold start. Cumulative maximum of ceil((start + duration)*1000). Daily restart does not model continuous cross-day history.",
+  "truth_notes": "Network labels follow author timestamp/address/port action rules. Preserve all native 0/1/2 rows, give separate evidence levels, keep UID/address/URI/host logs out of predictor matrices."
+}

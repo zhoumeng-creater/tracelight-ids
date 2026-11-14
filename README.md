@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十五轮实验室入口**　[行为信息与本地阈值迁移指南](docs/BEHAVIOR_TRANSFER_LAB.md)，冻结版本为 `behavior-transfer-lab-v1`，入口为 `scripts/RUN_BEHAVIOR_TRANSFER.ps1`。覆盖两个来源的 42 个日期块，复用五组学习器与已有 CUDA 环境，比较 18 种固定判决，输出逐日误报、逐类新增和丢失、事件覆盖及实际资源利用。
+
 **第二十三轮实验室批次**　[固定版运行指南](docs/RESPONSE_OBSERVABILITY_LAB.md) · [原始抓包与零计数的核验](docs/response-evidence/OBSERVABILITY.md)。检验回包观测质量、多核历史构建，以及 1% 误报预算下的扫描、控制和下载检出。
 
 **第二十二轮实验室批次（2026-11-12）**　[固定版运行命令与判读标准](docs/CONTACT_EVIDENCE_LAB.md) · [数据与离线准备](docs/CONTACT_EVIDENCE_DATA.md) · [第二十、二十一轮离线回放](docs/flow_replay/index.html)。比较四种流历史输入、两种告警追加策略及独立的扫描和心跳场景。

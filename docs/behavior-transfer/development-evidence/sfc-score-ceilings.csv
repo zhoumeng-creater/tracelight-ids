@@ -1,0 +1,16 @@
+﻿scope,policy,normal,scan,cap,residual_cap,frozen_fp,frozen_scan,feasible,retrospective_cut,fp,scan_detected,normal_ties,scan_ties,fp_including_ties,at_day_cut_shared_fp,at_day_cut_shared_scan
+whole_day,raw,38189,83936,381,381,12,0,True,21.05999183654785,381.0,0.0,1.0,0.0,382.0,381.0,0.0
+whole_day,quality,38189,83936,381,381,152,8,True,28.20598602294922,381.0,10.0,1.0,0.0,382.0,157.0,0.0
+whole_day,raw_OR_quality,38189,83936,381,369,13,0,True,28.238752365112305,381.0,10.0,1.0,0.0,382.0,161.0,0.0
+pooled_shared_service,raw,1203,337,12,12,12,0,True,26.437490463256836,12.0,0.0,1.0,0.0,13.0,12.0,0.0
+pooled_shared_service,quality,1203,337,12,12,76,0,True,35.00706100463867,12.0,0.0,1.0,0.0,13.0,12.0,0.0
+pooled_shared_service,raw_OR_quality,1203,337,12,0,12,0,True,40.195430755615234,12.0,0.0,1.0,0.0,13.0,12.0,0.0
+shared_tcp_22,raw,8,62,0,0,0,0,True,-16.163053512573242,0.0,62.0,1.0,0.0,1.0,0.0,62.0
+shared_tcp_22,quality,8,62,0,0,0,0,True,-10.36670207977295,0.0,58.0,1.0,0.0,1.0,0.0,58.0
+shared_tcp_22,raw_OR_quality,8,62,0,0,0,0,True,-10.36670207977295,0.0,58.0,1.0,0.0,1.0,0.0,58.0
+shared_tcp_80,raw,329,99,3,3,8,0,True,36.16180419921875,2.0,0.0,2.0,0.0,4.0,2.0,0.0
+shared_tcp_80,quality,329,99,3,3,3,0,True,24.967500686645508,3.0,0.0,1.0,0.0,4.0,3.0,0.0
+shared_tcp_80,raw_OR_quality,329,99,3,-5,8,0,False,,,,,,,,
+shared_tcp_443,raw,866,176,8,8,4,0,True,25.33610725402832,8.0,0.0,1.0,0.0,9.0,8.0,0.0
+shared_tcp_443,quality,866,176,8,8,73,0,True,35.54013442993164,8.0,0.0,1.0,0.0,9.0,8.0,0.0
+shared_tcp_443,raw_OR_quality,866,176,8,4,4,0,True,35.80622100830078,8.0,0.0,1.0,0.0,9.0,8.0,0.0

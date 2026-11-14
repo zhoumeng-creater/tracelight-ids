@@ -92,6 +92,7 @@ def score_group(
     batch_rows: int,
     threads: int,
     device: str,
+    neural_batch_rows: int | None = None,
 ):
     """Write aligned decisions and continuous scores. Return a JSON-serializable audit record."""
     if group not in GROUPS or batch_rows < 1 or threads < 1:
@@ -104,6 +105,11 @@ def score_group(
     options = {"threads": threads} if cpu_tree else {"threads": threads, "device": device}
     suffix = ".joblib" if cpu_tree else ".pt"
     models = {k: impl.load_arm(Path(frozen_dir) / (group + "-" + k + suffix), **options) for k in VIEWS}
+    if neural_batch_rows is not None:
+        if cpu_tree or not isinstance(neural_batch_rows, int) or neural_batch_rows < 1:
+            raise ValueError("An explicit neural batch size requires a positive integer and a neural model")
+        for model in models.values():
+            model.score_batch = neural_batch_rows
     columns = ["row_id", *ARMS["quality"]]
     out = Path(out)
     out.parent.mkdir(parents=True, exist_ok=True)

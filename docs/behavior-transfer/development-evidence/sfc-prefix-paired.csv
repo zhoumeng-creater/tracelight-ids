@@ -1,0 +1,17 @@
+﻿family,native,rows,mlp,count,both,only_mlp,only_count,either
+Benign,normal,34637,11,60,0,11,60,71
+OtherAttack,HttpFlood,11877,0,0,0,0,0,0
+OtherAttack,HydraBruteForce,2263,0,1425,0,0,1425,1425
+OtherAttack,cameraTapoC200Attack,125715,5619,0,0,5619,0,5619
+OtherAttack,mitmArpSpoof,1,0,0,0,0,0,0
+OtherAttack,mqtt_brute_force,5,0,0,0,0,0,0
+OtherAttack,mqtt_dos,863,0,0,0,0,0,0
+OtherAttack,mqtt_malformed,1,0,0,0,0,0,0
+OtherAttack,mqtt_sniff,867,0,0,0,0,0,0
+OtherAttack,mqtt_spoof,886,0,0,0,0,0,0
+OtherAttack,slowloris,886,0,0,0,0,0,0
+OtherAttack,synFlood,1,0,0,0,0,0,0
+OtherAttack,udpFlood,3,0,0,0,0,0,0
+Scanning,scanning,83936,0,83908,0,0,83908,83908
+Unresolved,normal,6406,0,757,0,0,757,757
+Unresolved,scanning,2769,0,2431,0,0,2431,2431
