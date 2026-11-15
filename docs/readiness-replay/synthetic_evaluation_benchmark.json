@@ -1,0 +1,65 @@
+{
+  "scope": "Synthetic sealed-flag aggregation and file writing only; no models, fit, real source reads or GPU.",
+  "cases": [
+    {
+      "rows": 100000,
+      "case": "normal_heavy",
+      "policies": 18,
+      "context": {
+        "wall_seconds": 0.05789469997398555,
+        "cpu_seconds": 0.046875
+      },
+      "groups": [
+        {
+          "group": "synthetic1",
+          "wall_seconds": 0.20922300009988248,
+          "cpu_seconds": 0.21875,
+          "output_bytes": 153847
+        },
+        {
+          "group": "synthetic2",
+          "wall_seconds": 0.19488830002956092,
+          "cpu_seconds": 0.1875,
+          "output_bytes": 153844
+        }
+      ],
+      "peak_process_rss_bytes": 173944832,
+      "rare_rows": 61,
+      "aggregation_groups": {
+        "family": 6,
+        "service": 35,
+        "event": 2
+      }
+    },
+    {
+      "rows": 500000,
+      "case": "scan_heavy",
+      "policies": 18,
+      "context": {
+        "wall_seconds": 0.4209986999630928,
+        "cpu_seconds": 0.421875
+      },
+      "groups": [
+        {
+          "group": "synthetic1",
+          "wall_seconds": 0.910296400077641,
+          "cpu_seconds": 0.890625,
+          "output_bytes": 166378
+        },
+        {
+          "group": "synthetic2",
+          "wall_seconds": 1.2068743999116123,
+          "cpu_seconds": 1.15625,
+          "output_bytes": 166378
+        }
+      ],
+      "peak_process_rss_bytes": 518729728,
+      "rare_rows": 61,
+      "aggregation_groups": {
+        "family": 6,
+        "service": 36,
+        "event": 2
+      }
+    }
+  ]
+}

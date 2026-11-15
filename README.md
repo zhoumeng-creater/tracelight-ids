@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十五轮修复补算入口**　[就绪修复、逐类得失与排序上界指南](docs/READINESS_REPLAY_LAB.md)，固定版本为 `readiness-replay-lab-v1`，入口为 `scripts/RUN_READINESS_REPLAY.ps1`。只读复用第二十五轮完整缓存，42 个来源、五组学习器；修复 399 条与一小时共同就绪条件，多核评价并一次输出控制、下载的正常排名。新增拟合、模型前向、历史构建与下载均为 0。
+
 **第二十五轮实验室入口**　[行为信息与本地阈值迁移指南](docs/BEHAVIOR_TRANSFER_LAB.md)，冻结版本为 `behavior-transfer-lab-v1`，入口为 `scripts/RUN_BEHAVIOR_TRANSFER.ps1`。覆盖两个来源的 42 个日期块，复用五组学习器与已有 CUDA 环境，比较 18 种固定判决，输出逐日误报、逐类新增和丢失、事件覆盖及实际资源利用。
 
 **第二十三轮实验室批次**　[固定版运行指南](docs/RESPONSE_OBSERVABILITY_LAB.md) · [原始抓包与零计数的核验](docs/response-evidence/OBSERVABILITY.md)。检验回包观测质量、多核历史构建，以及 1% 误报预算下的扫描、控制和下载检出。

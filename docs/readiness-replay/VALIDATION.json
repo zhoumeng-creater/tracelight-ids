@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-15",
+  "release": "readiness-replay-lab-v1",
+  "base_commit": "7a5a469bc6ae4fc8a465834722b7c2570fffdd41",
+  "validation_scope": "Local synthetic fixtures and frozen R25 source metadata only; no real cached replay, training, model forward, history construction, or data download.",
+  "tests": {
+    "new_readiness_suite": {
+      "passed": 65,
+      "seconds": 42.55,
+      "entry": "Windows PowerShell 5.1 -> scripts/RUN_READINESS_REPLAY.ps1 -CheckOnly -> pytest",
+      "modules": {
+        "policy": 16,
+        "ranking": 27,
+        "evaluation": 12,
+        "input_review": 6,
+        "runner": 4
+      }
+    },
+    "legacy_behavior_suite": {
+      "passed": 37,
+      "seconds": 17.86
+    },
+    "total_passed": 102,
+    "ruff": "passed",
+    "git_diff_check": "passed"
+  },
+  "verified_behaviors": [
+    "Two real spawned workers finish ten synthetic source/learner groups using cached scores only.",
+    "Old budget rows match the original evaluator exactly; all original fixture files keep their SHA-256.",
+    "Sparse one-hour prefix waits for at least 399 strictly earlier rows; the entire switch-clock group is excluded.",
+    "Ready original-hour prefixes retain the original cutoff; insufficient blocks use old registered rules and report not_ready.",
+    "Exhaustive small-score examples validate strict-threshold oracle, integer normal budgets, ties, zero-normal unsupported cases and per-day scopes.",
+    "All rare target rows retain identities and available numeric features; original and repaired phases, service backgrounds and first-event time are checked.",
+    "Completed groups are excluded before creating a pool; repeated completed invocation creates no worker.",
+    "Missing one source score produces an incomplete package while the other source completes five groups.",
+    "Restoring the missing score under the same binding runs only five missing groups; earlier receipt digests and modification times are unchanged.",
+    "Worker count obeys available-memory and CPU limits; old cache relocation uses relative receipt members."
+  ],
+  "performance_evidence": {
+    "artifact": "synthetic_evaluation_benchmark.json",
+    "scope": "Synthetic evaluation only; not full replay throughput or laboratory speedup."
+  },
+  "real_experiments": {
+    "fits": 0,
+    "model_forward_calls": 0,
+    "history_builds": 0,
+    "downloads": 0,
+    "repaired_lab_sources_evaluated": 0
+  },
+  "pending_lab_evidence": [
+    "42-source cached repair and all 210 source/learner evaluations",
+    "Per-day FPR and paired scanning/control/download gains and losses",
+    "Fixed-score oracle ranks against normal traffic",
+    "Observed process-tree CPU, memory, source sharing and stage timing"
+  ]
+}
