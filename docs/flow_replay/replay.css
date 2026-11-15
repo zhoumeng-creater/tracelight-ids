@@ -30,6 +30,8 @@ nav a { color: var(--muted); font-size: .88rem; text-decoration: none; }
 h1,h2,p { margin: 0; }
 h1 { font-size: clamp(2.1rem,6vw,4.7rem); line-height: 1.15; letter-spacing: -.055em; font-weight: 680; }
 h1 em { color: var(--amber); font: 600 1.13em/.8 var(--mono); letter-spacing: -.1em; }
+.legacy-title { font-size: clamp(2.1rem,6vw,4.7rem); line-height: 1.15; letter-spacing: -.055em; }
+.legacy-title em { color: var(--amber); font: 600 1.13em/.8 var(--mono); letter-spacing: -.1em; }
 .lead { max-width: 52rem; margin-top: 1rem; color: var(--muted); font-size: 1.02rem; line-height: 1.8; }
 .analysis { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(280px,1fr); border: 1px solid var(--line); background: var(--surface); }
 .timeline-panel,.flow-panel { padding: clamp(1rem,2.5vw,1.7rem); min-width: 0; }
@@ -108,3 +110,20 @@ tbody th small { display: block; color: var(--muted); font-weight: normal; }
   #plot { height: 125px; }
 }
 .row-nav #play { font-size: .8rem; }
+#calibration { margin-top: 2.5rem; border-top: 1px solid var(--line); }
+.r25-filters { grid-template-columns: .8fr 1fr 1.3fr 1.2fr; }
+.day-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0 1.2rem; }
+.day { padding: .35rem .65rem; border: 1px solid var(--line); background: transparent; color: var(--muted); font: .8rem var(--mono); border-radius: 3px; }
+.day.pass { border-bottom: 3px solid var(--mint); }
+.day.fail { border-bottom: 3px solid var(--amber); }
+.day[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.readiness-line { display: flex; flex-wrap: wrap; gap: .3rem 1rem; padding: .75rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: .85rem; }
+.readiness-line span { color: var(--muted); }
+#r25-budget-flag { color: var(--mint); }
+#r25-budget-flag.over { color: var(--amber); }
+#r25-budget-flag.unverified { color: var(--muted); }
+#r25-budget-counts,#r25-base-budget { font-size: .8rem; }
+.hashes dt { font-size: .8rem; overflow-wrap: anywhere; }
+.hashes dd { margin: 0 0 .5rem; font: .78rem var(--mono); overflow-wrap: anywhere; }
+@media (max-width:760px) { .r25-filters { grid-template-columns: 1fr 1fr; } }
+@media (max-width:460px) { .r25-filters { grid-template-columns: 1fr; } nav { flex-wrap: wrap; justify-content: flex-end; } }

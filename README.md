@@ -1,5 +1,9 @@
 # TraceLight IDS
 
+**第二十六轮开发诊断**　[历史监督、源数据增量与端口依赖](docs/SUPPORT_DIAGNOSTIC_LAB.md)，版本`support-diagnostic-lab-v1`，入口`scripts/RUN_SUPPORT_DIAGNOSTIC.ps1`。TQH-B完整单元按时间分配，D只作冻结外评；20次新拟合、4份旧权重复用，保留同标签target-only、端口置零和已知强规则对照。全部材料已开，不称新算法或盲测。旧TabM等完成项不重跑。
+
+**已有结果展示**　[逐日误报、攻击得失与就绪状态](docs/flow_replay/index.html)已接入第二十五轮修复结果，保留此前真实逐行回放；明确区分全日和原未开攻击子集。
+
 **第二十五轮修复补算入口**　[就绪修复、逐类得失与排序上界指南](docs/READINESS_REPLAY_LAB.md)，固定版本为 `readiness-replay-lab-v1`，入口为 `scripts/RUN_READINESS_REPLAY.ps1`。只读复用第二十五轮完整缓存，42 个来源、五组学习器；修复 399 条与一小时共同就绪条件，多核评价并一次输出控制、下载的正常排名。新增拟合、模型前向、历史构建与下载均为 0。
 
 **第二十五轮实验室入口**　[行为信息与本地阈值迁移指南](docs/BEHAVIOR_TRANSFER_LAB.md)，冻结版本为 `behavior-transfer-lab-v1`，入口为 `scripts/RUN_BEHAVIOR_TRANSFER.ps1`。覆盖两个来源的 42 个日期块，复用五组学习器与已有 CUDA 环境，比较 18 种固定判决，输出逐日误报、逐类新增和丢失、事件覆盖及实际资源利用。

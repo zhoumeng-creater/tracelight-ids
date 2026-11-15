@@ -1,0 +1,18 @@
+{
+  "threshold": 0.969384090147706,
+  "rule": {
+    "alpha": 0.01,
+    "n_normal": 1826,
+    "rank": 1809,
+    "threshold": 0.969384090147706,
+    "comparison": ">",
+    "comparison_dtype": "float64",
+    "calibration_fp": 7,
+    "scope": "development_normal_calibration"
+  },
+  "origin_sha256": "4f91b30807c94a7c2c0d4a3bae2a23da32a346be6731fdf20ea021555f328ffc",
+  "origin_member": "evidence/calibration/hgb.json",
+  "archive_sha256": "1fd561df5374546d2abef25ea162bfa072534d990d554bb537fd1de322dae9b3",
+  "origin": "frozen R23 original normal calibration; do not re-register using B",
+  "model_sha256": "e2b3100860b2c05b0957865a7faf57f6d9e03a7fc15f5d4cf2f88c1977b8e0e8"
+}

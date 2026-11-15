@@ -1,0 +1,85 @@
+{
+  "version": "support-diagnostic-r26-v1",
+  "registered_on": "2026-11-15",
+  "status": "already_opened_development_diagnostic",
+  "label_availability": "offline_retrospective_assumption: historical B labels and normal confirmation are available by the end of the calibration cells; actual historical availability unknown",
+  "roles": {
+    "target_train": [
+      "TQH-B_i30_j0",
+      "TQH-B_i30_j30",
+      "TQH-B_i30_j70",
+      "TQH-B_i300_j0",
+      "TQH-B_i300_j30",
+      "TQH-B_i300_j70"
+    ],
+    "normal_calibration": [
+      "TQH-B_i1800_j0",
+      "TQH-B_i1800_j30",
+      "TQH-B_i1800_j70"
+    ],
+    "forward_development": [
+      "TQH-B_i3600_j0",
+      "TQH-B_i3600_j30",
+      "TQH-B_i3600_j70"
+    ],
+    "transport_external": [
+      "TQH-D_i30_j0",
+      "TQH-D_i30_j30",
+      "TQH-D_i30_j70",
+      "TQH-D_i300_j0",
+      "TQH-D_i300_j30",
+      "TQH-D_i300_j70",
+      "TQH-D_i1800_j0",
+      "TQH-D_i1800_j30",
+      "TQH-D_i1800_j70",
+      "TQH-D_i3600_j0",
+      "TQH-D_i3600_j30",
+      "TQH-D_i3600_j70"
+    ]
+  },
+  "source_train": [
+    "CTU-IoT-Malware-Capture-1-1",
+    "CTU-IoT-Malware-Capture-8-1"
+  ],
+  "groups": [
+    "hgb",
+    "mlp17",
+    "mlp29",
+    "mlp43"
+  ],
+  "supports": [
+    "source",
+    "target",
+    "mixed"
+  ],
+  "views": [
+    "raw8",
+    "ports_zero8"
+  ],
+  "alpha": 0.01,
+  "normal_calibration_rule": "same B calibration identities for every arm, strict score > quantile",
+  "weighting": {
+    "source": "original balanced 4096+4096, uniform",
+    "target": "equal total mass by binary class",
+    "mixed": "equal total mass per domain and binary class; same target identities as target-only"
+  },
+  "new_fits": 20,
+  "reused_models": 4,
+  "evaluation_cells": 15,
+  "fixed_baselines": {
+    "udp443_duration30": "ip_protocol == 17 and (orig_port == 443 or resp_port == 443) and duration_seconds >= 30",
+    "hgb_source_raw_or_rule": "source/raw8/hgb with frozen B calibration OR udp443_duration30",
+    "original_hgb": "source/raw8/hgb with original frozen R23 calibration threshold",
+    "original_hgb_or_rule": "original_hgb OR udp443_duration30",
+    "origin": "already-opened R23 raw-workpoint diagnosis; no threshold search in this batch",
+    "primary_reference": "original_hgb_or_rule"
+  },
+  "not_claimed": [
+    "new_attack_implementation",
+    "new_blind_confirmation",
+    "scanning_improvement",
+    "malicious_download_improvement",
+    "original_algorithm",
+    "online_label_availability"
+  ]
+}

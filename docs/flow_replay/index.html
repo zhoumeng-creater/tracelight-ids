@@ -4,23 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>八分钟，88 条误报 · TraceLight</title>
+  <title>低误报检测证据 · TraceLight</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="replay.css">
   <script defer src="replay-data.js"></script>
   <script defer src="replay.js"></script>
+  <script defer src="r25-data.js"></script>
+  <script defer src="r25.js"></script>
 </head>
 <body>
   <header class="mast">
     <div class="wrap mast-inner"><a class="brand" href="#calibration">TraceLight</a>
-      <nav aria-label="页内导航"><a href="#calibration">校准回放</a><a href="#forward">前向对照</a><a href="#sources">证据</a></nav>
+      <nav aria-label="页内导航"><a href="#latest">最新结果</a><a href="#calibration">校准回放</a><a href="#forward">前向对照</a><a href="#sources">证据</a></nav>
     </div>
   </header>
   <main class="wrap">
+    <section id="latest" aria-labelledby="latestTitle">
+      <div class="intro">
+        <p class="eyebrow">R25 · 就绪修复后的封存结果</p>
+        <h1 id="latestTitle">误报守住了吗？</h1>
+        <p class="lead">先看每个日期的 1% 误报预算，再看扫描、控制和下载各检出了多少、又丢了多少。这里回放已完成的结果，不执行实时检测。</p>
+      </div>
+      <div class="filters r25-filters">
+        <label>来源<select id="r25-provider"><option value="SFC">IoT-SFC</option><option value="DEDALE">DEDALE · green</option></select></label>
+        <label>冻结学习器<select id="r25-group"><option value="hgb">HGB</option><option value="hgb_family">HGB · 家族加权</option><option value="mlp17">MLP · seed 17</option><option value="mlp29">MLP · seed 29</option><option value="mlp43">MLP · seed 43</option></select></label>
+        <label>检测策略<select id="r25-policy"><option value="quality_counts_local">质量与计数 · 本地阈值</option><option value="ports_local">端口计数 · 本地阈值</option><option value="raw_old">旧八字段模型</option><option value="add_quality_old">旧质量追加</option></select></label>
+        <label>比较基线<select id="r25-comparison"><option value="raw_old">旧八字段模型</option><option value="add_quality_old">旧质量追加</option><option value="same_policy">修复前的同策略</option></select></label>
+      </div>
+      <p class="note">选择日期查看同一模型、策略的结果。绿色为当日误报达标，橙色为超标，灰色表示没有可核算的正常标签；颜色不代表攻击检测成功。</p>
+      <div id="r25-days" class="day-list" role="group" aria-label="按日期选择来源"></div>
+      <div class="budget" aria-live="polite">
+        <div><span id="r25-date"></span><strong id="r25-fpr"></strong></div>
+        <div class="budget-summary"><b id="r25-budget-flag"></b><span id="r25-budget-counts"></span><span id="r25-base-budget"></span></div>
+      </div>
+      <div class="readiness-line"><strong id="r25-ready"></strong><span id="r25-ready-detail"></span></div>
+      <p class="note" id="r25-phases"></p>
+      <div class="control-row"><div class="choice" role="group" aria-label="攻击记录范围"><button id="r25-all-attacks" aria-pressed="true">本日全部攻击</button><button id="r25-unopened-attacks" aria-pressed="false">仅原未开攻击</button></div><span class="annotation">误报资格始终按本日全部正常流量核算</span></div>
+      <div class="table-box" tabindex="0" aria-label="本日各类新增、丢失和剩余漏检，小屏可横向滚动">
+        <table><thead><tr><th scope="col">真实类别</th><th scope="col">总记录</th><th scope="col">基线检出</th><th scope="col">当前检出</th><th scope="col">新增</th><th scope="col">丢失</th><th scope="col">剩余漏检</th><th scope="col">作者事件 ID</th></tr></thead><tbody id="r25-pairs"></tbody></table>
+      </div>
+      <p class="note" id="r25-evidence-note"></p>
+      <p class="note" id="r25-unknown"></p>
+      <details><summary>本批实际资源与数据依据</summary>
+        <p id="r25-resources"></p>
+        <p>42 个来源、210 个来源与模型组合均已完成。全日指该 UTC 日全部已观测记录，不代表完整 24 小时采集。原前向确认结果保留；本次就绪修复属于已打开材料上的回放。事件数按当前来源的作者事件 ID 去重，不能把重复流量或不同模型的结果相加当作独立事件。</p>
+        <p><a href="r25-sources.md">来源、导出范围与复核方法</a> · <a href="build_r25_evidence.py">汇总导出脚本</a> · <a href="r25-data.js">脱敏展示数据</a></p>
+        <dl id="r25-hashes" class="hashes"></dl>
+      </details>
+    </section>
     <section id="calibration" aria-labelledby="title">
       <div class="intro">
         <p class="eyebrow">CIC2018 · 2018-02-28 · TCP/135</p>
-        <h1 id="title">八分钟，<em>88</em> 条误报</h1>
+        <h2 id="title" class="legacy-title">八分钟，<em>88</em> 条误报</h2>
         <p class="lead">同一台主机的一段通信占了校准期 95 条误报中的 88 条，决定阈值的 15 条同分记录也全部来自它。评价期这台主机只剩 3 条正常流，均未误报。</p>
       </div>
       <div class="analysis">
