@@ -1,0 +1,84 @@
+{
+  "status": "metadata_and_small_normal_sample_only_no_model_score",
+  "firstweek_rows": 49893,
+  "features_present": true,
+  "label_binary_counts": {
+    "False": 49893
+  },
+  "datetime_min": "2025-05-23 00:00:00.895212",
+  "datetime_max": "2025-05-24 23:59:56.272250",
+  "firstweek_service_counts": [
+    {
+      "proto": "icmp",
+      "dest_port": 1,
+      "rows": 138
+    },
+    {
+      "proto": "tcp",
+      "dest_port": 443,
+      "rows": 1
+    },
+    {
+      "proto": "udp",
+      "dest_port": 53,
+      "rows": 48907
+    },
+    {
+      "proto": "udp",
+      "dest_port": 67,
+      "rows": 86
+    },
+    {
+      "proto": "udp",
+      "dest_port": 123,
+      "rows": 6
+    },
+    {
+      "proto": "udp",
+      "dest_port": 137,
+      "rows": 252
+    },
+    {
+      "proto": "udp",
+      "dest_port": 138,
+      "rows": 412
+    },
+    {
+      "proto": "udp",
+      "dest_port": 5353,
+      "rows": 63
+    },
+    {
+      "proto": "udp",
+      "dest_port": 5355,
+      "rows": 28
+    }
+  ],
+  "files": {
+    "sum25-1-tactics.csv": {
+      "url": "https://datasets.uwf.edu/data/UWF-ZeekDataSum25-1/parquet/_parquet_tactic_metrics_/part-00000-93eb1079-8b63-4fe1-b459-a7236ffefe10-c000.csv",
+      "bytes": 1605,
+      "sha256": "91270cb1b41d5ae05d01bae6fc3edd28bdf1e2075ead85428d6d641606bbfe9b"
+    },
+    "sum25-1-techniques.csv": {
+      "url": "https://datasets.uwf.edu/data/UWF-ZeekDataSum25-1/parquet/_parquet_technique_metrics_/part-00000-60b00fec-58a1-4673-8240-a174cea16d50-c000.csv",
+      "bytes": 1578,
+      "sha256": "42cfe212515f935aca2ed18950ce222e22b9ed03fd850ca0187295614649ba33"
+    },
+    "sum25-1-firstweek.parquet": {
+      "url": "https://datasets.uwf.edu/data/UWF-ZeekDataSum25-1/parquet/2025-05-18%20-%202025-05-25/part-00000-e1c83503-04fd-4fe4-bd2d-faeaad297203-c000.snappy.parquet",
+      "bytes": 3705225,
+      "sha256": "938e5fc4027b8957d27e961bace00a2a1630f46824bc033ee20daec49fe4f688"
+    },
+    "sum25-2-tactics.csv": {
+      "url": "https://datasets.uwf.edu/data/UWF-ZeekDataSum25-2/parquet/_parquet_tactic_metrics_/part-00000-8b2cdc97-66f1-45cd-bc10-9e4c73f9fcec-c000.csv",
+      "bytes": 717,
+      "sha256": "3c44e3b60d280c09013eabf95a6e2f6a7a80c26fc05b60a5caae25fda71a9db4"
+    },
+    "sum25-2-techniques.csv": {
+      "url": "https://datasets.uwf.edu/data/UWF-ZeekDataSum25-2/parquet/_parquet_technique_metrics_/part-00000-399da0d0-b5a9-4063-bcaf-acca9e0a5044-c000.csv",
+      "bytes": 707,
+      "sha256": "fb6958fb03b14e9570f1a4b2536531a18d33290ba62812e04f75b68b88588ace"
+    }
+  }
+}

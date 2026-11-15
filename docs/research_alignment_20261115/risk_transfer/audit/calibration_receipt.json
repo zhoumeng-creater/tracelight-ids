@@ -1,0 +1,120 @@
+{
+  "registration": {
+    "version": "r26-frozen-risk-development-audit-v1",
+    "status": "already_opened_development_audit",
+    "candidate": "mixed-raw8-hgb",
+    "baseline": "reference-hgb-original-C-or-udp443-30s",
+    "alpha": 0.01,
+    "delta": 0.05,
+    "calibration_normal_rows": 5511,
+    "calibration_identity_sha256": "116fc32bc1f1b4b9ba02fc3dbf63f68fd73221d172dcd8b91fb6b877deb6f5fc",
+    "rules": [
+      "old_strong",
+      "mixed_original",
+      "old_or_mixed_original",
+      "old_or_mixed_empirical",
+      "mixed_np95",
+      "old_or_mixed_np95"
+    ],
+    "calibration_source": "R26 historical B confirmed-normal scores only",
+    "label_availability": "R26 retrospective assumption retained; actual original annotation arrival time unknown",
+    "np_formula": "smallest k with binom.sf(k-1,n,1-alpha)<=delta; strict score > Z_(k)",
+    "preservation": "For OR rules, old alerts are immutable. Calibration scores for old alerts are +infinity; infinite order statistic is infeasible, never zero-alert success.",
+    "guarantee_scope": "Fixed scores and independent identically distributed normal calibration/deployment draws. Does not guarantee every finite future cell or distribution-shifted data.",
+    "coverage_claim_this_audit": false,
+    "coverage_reason": "Candidate chosen after already-opened R26 results; no post-selection 95% certificate is claimed. This is a fixed-rule development audit.",
+    "selection": "No alpha, delta, model, seed, or threshold search on B/D evaluation labels",
+    "new_fits": 0,
+    "new_model_forward_calls": 0,
+    "new_blind_confirmations": 0
+  },
+  "registration_sha256": "8d0928c0525d3f09587756201a4e8774959a048f853f4dfec04192e880b2564e",
+  "inputs": {
+    "evidence/replay/calibration.parquet": "db9bee9f246306f9f3cd85b12aba72de0bb2368c2cfce8f00bc2d88b0d072b5c",
+    "protocol.json": "0804e735c850b6a9eda899d7d84673478686df147826811d81fe19230bee3907",
+    "evidence/calibration/mixed-raw8-hgb.json": "ff1ea84f85408dc5943f11ede19deaf4b945826b8c5bffcab876802e8d7a1d08",
+    "evidence/replay/TQH-B_i3600_j0.parquet": "4bfaeb117c7b49cd7a3d1822309dd1d3605307328fca8d92ba8f7afb08781caf",
+    "evidence/replay/TQH-B_i3600_j30.parquet": "566afabbd8f476186dff62d0522491ea8ed1ecbe81ce663235ddea6a8e594f12",
+    "evidence/replay/TQH-B_i3600_j70.parquet": "df9516848afad66239ead95e2fbf0d3a405d2589186ad6a277de8174ff141747",
+    "evidence/replay/TQH-D_i30_j0.parquet": "7c2032e48358722a5bc945621343ab12f1990488a92661004d66782f5921a22a",
+    "evidence/replay/TQH-D_i30_j30.parquet": "aa41d8e8c2b864ead9f9a7851f87b96335a685a7b14e45f8bed28d2546539357",
+    "evidence/replay/TQH-D_i30_j70.parquet": "7c223627ed16cadbc11f1537d638a2d622502242d550d4ca551b53faf3ee0a02",
+    "evidence/replay/TQH-D_i300_j0.parquet": "b088b5c5080e68229a045286b0c34acd1c17c55e56a53b5423b8ca4cf19f473a",
+    "evidence/replay/TQH-D_i300_j30.parquet": "dd1082e11e5a2557eb36496f12e6beeac5628f37c71b7d5643ba1c3babe6ea46",
+    "evidence/replay/TQH-D_i300_j70.parquet": "f65b8e0f64d460342dcbde08b5b5dc9ff420e839a292f1e67efcab76df008217",
+    "evidence/replay/TQH-D_i1800_j0.parquet": "ad97036e36272e1f07bd190be1dd11c0c87414a55814acfbdafeab74a0e90bdb",
+    "evidence/replay/TQH-D_i1800_j30.parquet": "c25eccc36545907c1cb20b7bb1427e3da0b86fc642319e624ab9510acc017f80",
+    "evidence/replay/TQH-D_i1800_j70.parquet": "d37a6edf7e6b31a99d2d58d0b99dabdcd7213923a0ce607e22cc7de425c01fea",
+    "evidence/replay/TQH-D_i3600_j0.parquet": "2952215e5652688666efb54723e9e366b624e18a95d60e5b99a0cf359062806f",
+    "evidence/replay/TQH-D_i3600_j30.parquet": "fd747e91c8667decbffe8a4596170074d95505e480874e2d90418094aa94c75d",
+    "evidence/replay/TQH-D_i3600_j70.parquet": "0ecea09abd9548984e8d4ebec088e2bffd7a444fe19c37188b4b722f74882dc6"
+  },
+  "source_sha256": "61760a77a951c2a459df17836c946a7d4f7b7ec644171e556bbc50e85ef77421",
+  "rules": {
+    "old_strong": {
+      "ready": true,
+      "baseline_only": true,
+      "preserve_old": true
+    },
+    "mixed_original": {
+      "ready": true,
+      "threshold": -11.977516710705531,
+      "preserve_old": false
+    },
+    "old_or_mixed_original": {
+      "ready": true,
+      "threshold": -11.977516710705531,
+      "preserve_old": true
+    },
+    "old_or_mixed_empirical": {
+      "n_normal": 5511,
+      "alpha": 0.01,
+      "delta": null,
+      "rank": 5457,
+      "threshold": -11.977516710705531,
+      "ready": true,
+      "status": "ready",
+      "binomial_tail": null,
+      "calibration_fp": 54,
+      "preserved_calibration_fp": 0,
+      "comparison": ">",
+      "preserve_old": true
+    },
+    "mixed_np95": {
+      "n_normal": 5511,
+      "alpha": 0.01,
+      "delta": 0.05,
+      "rank": 5469,
+      "threshold": -11.881920089722698,
+      "ready": true,
+      "status": "ready",
+      "binomial_tail": 0.03958062748674295,
+      "calibration_fp": 41,
+      "preserved_calibration_fp": 0,
+      "comparison": ">",
+      "preserve_old": false
+    },
+    "old_or_mixed_np95": {
+      "n_normal": 5511,
+      "alpha": 0.01,
+      "delta": 0.05,
+      "rank": 5469,
+      "threshold": -11.881920089722698,
+      "ready": true,
+      "status": "ready",
+      "binomial_tail": 0.03958062748674295,
+      "calibration_fp": 41,
+      "preserved_calibration_fp": 0,
+      "comparison": ">",
+      "preserve_old": true
+    }
+  },
+  "calibration_decisions": {
+    "old_strong": 0,
+    "mixed_original": 54,
+    "old_or_mixed_original": 54,
+    "old_or_mixed_empirical": 54,
+    "mixed_np95": 41,
+    "old_or_mixed_np95": 41
+  }
+}

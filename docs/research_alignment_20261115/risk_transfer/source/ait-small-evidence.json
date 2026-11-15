@@ -1,0 +1,1974 @@
+{
+  "schema_version": 1,
+  "scope": "小日志及 ZIP 目录；HTTP 请求计数不等于 TCP 流计数；本脚本不读取 PCAP。",
+  "source_record": "https://zenodo.org/records/19483937",
+  "simulation_start": "2022-01-21T00:00:00",
+  "simulation_end_exclusive": "2022-01-25T00:00:00",
+  "checked_small_member_count": 18,
+  "checked_small_bytes": 16386926,
+  "apache": {
+    "parsed_request_count": 11184,
+    "excluded_out_of_interval_request_count": 0,
+    "groups": {
+      "attacker_http|dirb|foothold": 4462,
+      "attacker_http|foothold|service_scan": 8,
+      "attacker_http|foothold|webshell_cmd": 28,
+      "attacker_http|foothold|webshell_upload": 3,
+      "attacker_http|foothold|wpscan": 3186,
+      "escalate|webshell_cmd": 4,
+      "foothold|service_scan": 4,
+      "normal_by_author_unlabeled_rule": 3489
+    },
+    "normal_by_day": {
+      "2022-01-21": {
+        "http_intranet_referer": 151,
+        "https_intranet_referer": 700,
+        "other_referer": 220
+      },
+      "2022-01-22": {
+        "http_intranet_referer": 110,
+        "https_intranet_referer": 679,
+        "other_referer": 193
+      },
+      "2022-01-23": {
+        "http_intranet_referer": 134,
+        "https_intranet_referer": 531,
+        "other_referer": 166
+      },
+      "2022-01-24": {
+        "http_intranet_referer": 122,
+        "https_intranet_referer": 352,
+        "other_referer": 131
+      }
+    },
+    "normal_client_addresses": {
+      "10.143.2.25": 698,
+      "10.143.2.4": 70,
+      "10.143.2.91": 521,
+      "10.143.3.65": 593,
+      "172.19.131.174": 1483,
+      "::1": 124
+    },
+    "webshell_command_request_count": 32,
+    "command_http_status": {
+      "200": 32
+    },
+    "command_client_addresses": {
+      "172.19.131.174": 32
+    },
+    "commands": [
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8498,
+        "time": "2022-01-24T03:58:23+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8499,
+        "time": "2022-01-24T03:58:25+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8500,
+        "time": "2022-01-24T03:58:27+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8501,
+        "time": "2022-01-24T03:58:28+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8502,
+        "time": "2022-01-24T03:58:30+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8503,
+        "time": "2022-01-24T03:58:33+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8504,
+        "time": "2022-01-24T03:58:36+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8505,
+        "time": "2022-01-24T03:58:39+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8506,
+        "time": "2022-01-24T03:58:40+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8507,
+        "time": "2022-01-24T03:58:42+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8508,
+        "time": "2022-01-24T03:58:43+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8509,
+        "time": "2022-01-24T03:58:44+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8510,
+        "time": "2022-01-24T03:58:48+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8511,
+        "time": "2022-01-24T03:58:49+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8512,
+        "time": "2022-01-24T03:58:51+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8513,
+        "time": "2022-01-24T03:58:54+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8514,
+        "time": "2022-01-24T03:58:55+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8515,
+        "time": "2022-01-24T03:58:57+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8516,
+        "time": "2022-01-24T03:59:00+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8517,
+        "time": "2022-01-24T03:59:02+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8518,
+        "time": "2022-01-24T03:59:03+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8519,
+        "time": "2022-01-24T03:59:05+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8520,
+        "time": "2022-01-24T03:59:09+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8521,
+        "time": "2022-01-24T03:59:13+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8522,
+        "time": "2022-01-24T03:59:14+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8523,
+        "time": "2022-01-24T03:59:16+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8524,
+        "time": "2022-01-24T03:59:18+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8525,
+        "time": "2022-01-24T03:59:19+00:00",
+        "status": 200,
+        "labels": [
+          "attacker_http",
+          "foothold",
+          "webshell_cmd"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8526,
+        "time": "2022-01-24T03:59:22+00:00",
+        "status": 200,
+        "labels": [
+          "webshell_cmd",
+          "escalate"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8527,
+        "time": "2022-01-24T03:59:40+00:00",
+        "status": 200,
+        "labels": [
+          "webshell_cmd",
+          "escalate"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8528,
+        "time": "2022-01-24T03:59:43+00:00",
+        "status": 200,
+        "labels": [
+          "webshell_cmd",
+          "escalate"
+        ]
+      },
+      {
+        "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+        "line": 8529,
+        "time": "2022-01-24T03:59:48+00:00",
+        "status": 200,
+        "labels": [
+          "webshell_cmd",
+          "escalate"
+        ]
+      }
+    ]
+  },
+  "controlled_normal_business": [
+    {
+      "role": "internal_employee_1",
+      "member": "gather/internal_employee_1/logs/sm.log",
+      "host_ip_from_servers_yaml": "10.143.2.91",
+      "apache_observed_ip": "10.143.2.91",
+      "in_interval_log_rows": 7493,
+      "excluded_out_of_interval_log_rows": 2113,
+      "https_post_open_intents": 35,
+      "https_post_open_success_pairs": 35,
+      "successful_actions_with_apache_match": 35,
+      "download_named_messages": {},
+      "actions": [
+        {
+          "transition_id": "1645ff58-95ee-4b48-a9bd-4cd1eb7003bf",
+          "intent_line": 2135,
+          "success_line": 2136,
+          "intent_timestamp": 1642758631.5444038,
+          "success_timestamp": 1642758632.8180172,
+          "intent_utc": "2022-01-21T09:50:31.544404+00:00",
+          "success_utc": "2022-01-21T09:50:32.818017+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 246,
+              "timestamp": 1642758631.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "6ec6f713-6bc0-4a07-b662-64c6e48d1c9a",
+          "intent_line": 3211,
+          "success_line": 3212,
+          "intent_timestamp": 1642774990.0344713,
+          "success_timestamp": 1642774991.6213794,
+          "intent_utc": "2022-01-21T14:23:10.034471+00:00",
+          "success_utc": "2022-01-21T14:23:11.621379+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 610,
+              "timestamp": 1642774990.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "ef4586f1-b6af-4f69-8e2e-eef492fad1fa",
+          "intent_line": 3219,
+          "success_line": 3220,
+          "intent_timestamp": 1642775422.378297,
+          "success_timestamp": 1642775423.276184,
+          "intent_utc": "2022-01-21T14:30:22.378297+00:00",
+          "success_utc": "2022-01-21T14:30:23.276184+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 632,
+              "timestamp": 1642775422.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "124338e9-b4a2-412a-a977-3c09baab408d",
+          "intent_line": 3412,
+          "success_line": 3413,
+          "intent_timestamp": 1642781810.857499,
+          "success_timestamp": 1642781812.2556572,
+          "intent_utc": "2022-01-21T16:16:50.857499+00:00",
+          "success_utc": "2022-01-21T16:16:52.255657+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 787,
+              "timestamp": 1642781810.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "4eebaab3-6256-4996-b068-5b904a5bc172",
+          "intent_line": 3981,
+          "success_line": 3982,
+          "intent_timestamp": 1642788711.3906872,
+          "success_timestamp": 1642788712.9820108,
+          "intent_utc": "2022-01-21T18:11:51.390687+00:00",
+          "success_utc": "2022-01-21T18:11:52.982011+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 825,
+              "timestamp": 1642788711.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "14c58c11-aae0-4759-b543-6b39362e8353",
+          "intent_line": 3997,
+          "success_line": 3998,
+          "intent_timestamp": 1642789075.325925,
+          "success_timestamp": 1642789076.730835,
+          "intent_utc": "2022-01-21T18:17:55.325925+00:00",
+          "success_utc": "2022-01-21T18:17:56.730835+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 843,
+              "timestamp": 1642789075.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "920a5842-1cd1-408c-a13f-3940f31cab68",
+          "intent_line": 4013,
+          "success_line": 4014,
+          "intent_timestamp": 1642789628.9544244,
+          "success_timestamp": 1642789630.5821967,
+          "intent_utc": "2022-01-21T18:27:08.954424+00:00",
+          "success_utc": "2022-01-21T18:27:10.582197+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 855,
+              "timestamp": 1642789628.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "b108ffe9-519e-4e1e-bf66-01487ad758c1",
+          "intent_line": 4302,
+          "success_line": 4303,
+          "intent_timestamp": 1642840399.0405717,
+          "success_timestamp": 1642840401.093862,
+          "intent_utc": "2022-01-22T08:33:19.040572+00:00",
+          "success_utc": "2022-01-22T08:33:21.093862+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 103,
+              "timestamp": 1642840399.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "e7929593-eb89-440c-bc74-5e8bbe00468b",
+          "intent_line": 4314,
+          "success_line": 4315,
+          "intent_timestamp": 1642840920.9536011,
+          "success_timestamp": 1642840922.672257,
+          "intent_utc": "2022-01-22T08:42:00.953601+00:00",
+          "success_utc": "2022-01-22T08:42:02.672257+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 126,
+              "timestamp": 1642840921.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "175e2223-2521-4dcc-8356-41f5a309b4d1",
+          "intent_line": 4330,
+          "success_line": 4331,
+          "intent_timestamp": 1642841403.254801,
+          "success_timestamp": 1642841404.7955248,
+          "intent_utc": "2022-01-22T08:50:03.254801+00:00",
+          "success_utc": "2022-01-22T08:50:04.795525+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 131,
+              "timestamp": 1642841403.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "80cabd99-1613-4ea4-8570-e1bd2bb96ef0",
+          "intent_line": 4598,
+          "success_line": 4599,
+          "intent_timestamp": 1642845397.8443036,
+          "success_timestamp": 1642845399.8036199,
+          "intent_utc": "2022-01-22T09:56:37.844304+00:00",
+          "success_utc": "2022-01-22T09:56:39.803620+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 229,
+              "timestamp": 1642845397.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "5eed8c38-f7d3-4211-afbc-3107620af862",
+          "intent_line": 4606,
+          "success_line": 4607,
+          "intent_timestamp": 1642845707.4468787,
+          "success_timestamp": 1642845708.4902306,
+          "intent_utc": "2022-01-22T10:01:47.446879+00:00",
+          "success_utc": "2022-01-22T10:01:48.490231+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 250,
+              "timestamp": 1642845707.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "d0df2bfd-9a7d-4593-a591-749a1961bb86",
+          "intent_line": 4630,
+          "success_line": 4631,
+          "intent_timestamp": 1642846470.4299965,
+          "success_timestamp": 1642846472.0229216,
+          "intent_utc": "2022-01-22T10:14:30.429996+00:00",
+          "success_utc": "2022-01-22T10:14:32.022922+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 253,
+              "timestamp": 1642846470.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "99753767-4c90-467c-a1ea-92485761a1f6",
+          "intent_line": 4799,
+          "success_line": 4800,
+          "intent_timestamp": 1642848722.317614,
+          "success_timestamp": 1642848724.0960042,
+          "intent_utc": "2022-01-22T10:52:02.317614+00:00",
+          "success_utc": "2022-01-22T10:52:04.096004+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 334,
+              "timestamp": 1642848722.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "8af98c73-011e-4e95-93fc-f45cecee3052",
+          "intent_line": 4815,
+          "success_line": 4816,
+          "intent_timestamp": 1642849295.595887,
+          "success_timestamp": 1642849297.356515,
+          "intent_utc": "2022-01-22T11:01:35.595887+00:00",
+          "success_utc": "2022-01-22T11:01:37.356515+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 340,
+              "timestamp": 1642849295.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "b2d4cad2-a2c1-40e2-8627-bdffe0c4cc6d",
+          "intent_line": 5824,
+          "success_line": 5825,
+          "intent_timestamp": 1642861439.1922011,
+          "success_timestamp": 1642861441.0890164,
+          "intent_utc": "2022-01-22T14:23:59.192201+00:00",
+          "success_utc": "2022-01-22T14:24:01.089016+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 457,
+              "timestamp": 1642861439.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "f8994942-cfed-4656-a89a-79615467df65",
+          "intent_line": 5832,
+          "success_line": 5833,
+          "intent_timestamp": 1642861790.2547612,
+          "success_timestamp": 1642861791.3171213,
+          "intent_utc": "2022-01-22T14:29:50.254761+00:00",
+          "success_utc": "2022-01-22T14:29:51.317121+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 479,
+              "timestamp": 1642861790.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "28600766-7007-4633-9a25-6e112c316bfd",
+          "intent_line": 6607,
+          "success_line": 6608,
+          "intent_timestamp": 1642933013.881022,
+          "success_timestamp": 1642933015.9782405,
+          "intent_utc": "2022-01-23T10:16:53.881022+00:00",
+          "success_utc": "2022-01-23T10:16:55.978240+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 125,
+              "timestamp": 1642933013.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "bc2ec6ae-ca2a-446b-8c59-a987a54f7306",
+          "intent_line": 6635,
+          "success_line": 6636,
+          "intent_timestamp": 1642933575.4157658,
+          "success_timestamp": 1642933577.0538359,
+          "intent_utc": "2022-01-23T10:26:15.415766+00:00",
+          "success_utc": "2022-01-23T10:26:17.053836+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 173,
+              "timestamp": 1642933575.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "f8a553c4-d66d-4a45-87e2-d5cbca66aa26",
+          "intent_line": 6670,
+          "success_line": 6671,
+          "intent_timestamp": 1642935564.8312624,
+          "success_timestamp": 1642935566.941672,
+          "intent_utc": "2022-01-23T10:59:24.831262+00:00",
+          "success_utc": "2022-01-23T10:59:26.941672+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 211,
+              "timestamp": 1642935564.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "fdcaa892-5ecb-40f2-b4a9-faea7a50ba83",
+          "intent_line": 6694,
+          "success_line": 6695,
+          "intent_timestamp": 1642935850.2005725,
+          "success_timestamp": 1642935852.1304643,
+          "intent_utc": "2022-01-23T11:04:10.200572+00:00",
+          "success_utc": "2022-01-23T11:04:12.130464+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 227,
+              "timestamp": 1642935850.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "c0911871-10ac-485c-96f0-5d2eb231705c",
+          "intent_line": 6876,
+          "success_line": 6877,
+          "intent_timestamp": 1642938672.4787319,
+          "success_timestamp": 1642938674.5228684,
+          "intent_utc": "2022-01-23T11:51:12.478732+00:00",
+          "success_utc": "2022-01-23T11:51:14.522868+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 263,
+              "timestamp": 1642938672.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "7e8271ab-31f2-42db-8b86-0a42f4ef1775",
+          "intent_line": 7191,
+          "success_line": 7192,
+          "intent_timestamp": 1642942222.193885,
+          "success_timestamp": 1642942224.303155,
+          "intent_utc": "2022-01-23T12:50:22.193885+00:00",
+          "success_utc": "2022-01-23T12:50:24.303155+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 342,
+              "timestamp": 1642942222.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "a446e0ea-8b19-4d3c-9b75-44c9c1692647",
+          "intent_line": 7210,
+          "success_line": 7211,
+          "intent_timestamp": 1642944940.9233105,
+          "success_timestamp": 1642944942.7850926,
+          "intent_utc": "2022-01-23T13:35:40.923311+00:00",
+          "success_utc": "2022-01-23T13:35:42.785093+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 409,
+              "timestamp": 1642944940.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "8c8668c9-163e-4eaa-b73e-17a9814c71d6",
+          "intent_line": 7226,
+          "success_line": 7227,
+          "intent_timestamp": 1642945585.7929049,
+          "success_timestamp": 1642945587.404602,
+          "intent_utc": "2022-01-23T13:46:25.792905+00:00",
+          "success_utc": "2022-01-23T13:46:27.404602+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 441,
+              "timestamp": 1642945585.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "ae7cfd2e-37d0-42e9-849c-a8c002f90d5a",
+          "intent_line": 7553,
+          "success_line": 7554,
+          "intent_timestamp": 1643009895.7193038,
+          "success_timestamp": 1643009897.799804,
+          "intent_utc": "2022-01-24T07:38:15.719304+00:00",
+          "success_utc": "2022-01-24T07:38:17.799804+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 10,
+              "timestamp": 1643009895.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "011daeed-13f8-4873-90d8-1e2050a7105b",
+          "intent_line": 7623,
+          "success_line": 7624,
+          "intent_timestamp": 1643013630.608091,
+          "success_timestamp": 1643013632.4623678,
+          "intent_utc": "2022-01-24T08:40:30.608091+00:00",
+          "success_utc": "2022-01-24T08:40:32.462368+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 50,
+              "timestamp": 1643013630.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "368fe65d-125c-46c5-bee3-af073bcba4c4",
+          "intent_line": 7639,
+          "success_line": 7640,
+          "intent_timestamp": 1643014015.3688316,
+          "success_timestamp": 1643014017.2486453,
+          "intent_utc": "2022-01-24T08:46:55.368832+00:00",
+          "success_utc": "2022-01-24T08:46:57.248645+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 74,
+              "timestamp": 1643014015.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "5952a6fd-a497-4def-9ca1-6ef7b12a1cec",
+          "intent_line": 7659,
+          "success_line": 7660,
+          "intent_timestamp": 1643014680.313282,
+          "success_timestamp": 1643014682.221822,
+          "intent_utc": "2022-01-24T08:58:00.313282+00:00",
+          "success_utc": "2022-01-24T08:58:02.221822+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 80,
+              "timestamp": 1643014680.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "ce952a31-614e-45f6-9ebb-6c2683e5c6d6",
+          "intent_line": 7667,
+          "success_line": 7668,
+          "intent_timestamp": 1643015350.1262145,
+          "success_timestamp": 1643015351.6339903,
+          "intent_utc": "2022-01-24T09:09:10.126215+00:00",
+          "success_utc": "2022-01-24T09:09:11.633990+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 83,
+              "timestamp": 1643015350.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "1edd78f4-051a-4930-bc15-465f081b17d4",
+          "intent_line": 8554,
+          "success_line": 8555,
+          "intent_timestamp": 1643030256.418581,
+          "success_timestamp": 1643030258.3265696,
+          "intent_utc": "2022-01-24T13:17:36.418581+00:00",
+          "success_utc": "2022-01-24T13:17:38.326570+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 296,
+              "timestamp": 1643030256.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "1b39ba63-5019-4e84-ab04-08a2f27e167a",
+          "intent_line": 8898,
+          "success_line": 8899,
+          "intent_timestamp": 1643037403.2238472,
+          "success_timestamp": 1643037405.067313,
+          "intent_utc": "2022-01-24T15:16:43.223847+00:00",
+          "success_utc": "2022-01-24T15:16:45.067313+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 404,
+              "timestamp": 1643037403.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "7f6fc95c-a0c7-4d3b-8e41-413f6aaf8428",
+          "intent_line": 8906,
+          "success_line": 8907,
+          "intent_timestamp": 1643037861.41995,
+          "success_timestamp": 1643037862.7118816,
+          "intent_utc": "2022-01-24T15:24:21.419950+00:00",
+          "success_utc": "2022-01-24T15:24:22.711882+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 407,
+              "timestamp": 1643037861.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "766e1fae-6f68-4df5-9d42-16f44d93e515",
+          "intent_line": 8929,
+          "success_line": 8930,
+          "intent_timestamp": 1643038514.0688264,
+          "success_timestamp": 1643038515.8293064,
+          "intent_utc": "2022-01-24T15:35:14.068826+00:00",
+          "success_utc": "2022-01-24T15:35:15.829306+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 412,
+              "timestamp": 1643038514.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "695f1d38-2c41-4e70-850c-5b3a1d2f70c2",
+          "intent_line": 8949,
+          "success_line": 8950,
+          "intent_timestamp": 1643038986.7447777,
+          "success_timestamp": 1643038988.5445468,
+          "intent_utc": "2022-01-24T15:43:06.744778+00:00",
+          "success_utc": "2022-01-24T15:43:08.544547+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 417,
+              "timestamp": 1643038986.0,
+              "client": "10.143.2.91",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        }
+      ],
+      "availability": "意图和成功日志在动作时生成；尚未证明检测系统当时获得正常确认的通道或延迟。VPN匹配只确定观测IP/时间/URI，不能靠VPN地址唯一标识远程员工。"
+    },
+    {
+      "role": "remote_employee_1",
+      "member": "gather/remote_employee_1/logs/sm.log",
+      "host_ip_from_servers_yaml": "192.168.230.95",
+      "apache_observed_ip": "172.19.131.174",
+      "in_interval_log_rows": 8756,
+      "excluded_out_of_interval_log_rows": 967,
+      "https_post_open_intents": 33,
+      "https_post_open_success_pairs": 33,
+      "successful_actions_with_apache_match": 33,
+      "download_named_messages": {},
+      "actions": [
+        {
+          "transition_id": "e049f328-75f8-4a45-8afe-f411ce55cc3d",
+          "intent_line": 1277,
+          "success_line": 1278,
+          "intent_timestamp": 1642750241.1385052,
+          "success_timestamp": 1642750243.177379,
+          "intent_utc": "2022-01-21T07:30:41.138505+00:00",
+          "success_utc": "2022-01-21T07:30:43.177379+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 58,
+              "timestamp": 1642750241.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "7b2a30c0-ea2c-43ab-98a6-8cbef8b7eec7",
+          "intent_line": 1317,
+          "success_line": 1318,
+          "intent_timestamp": 1642751610.496967,
+          "success_timestamp": 1642751611.7902956,
+          "intent_utc": "2022-01-21T07:53:30.496967+00:00",
+          "success_utc": "2022-01-21T07:53:31.790296+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 83,
+              "timestamp": 1642751610.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "4fd7fe4c-e440-4f2e-9b17-0fb7313938ad",
+          "intent_line": 1518,
+          "success_line": 1519,
+          "intent_timestamp": 1642755220.383845,
+          "success_timestamp": 1642755221.8034198,
+          "intent_utc": "2022-01-21T08:53:40.383845+00:00",
+          "success_utc": "2022-01-21T08:53:41.803420+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 164,
+              "timestamp": 1642755220.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "f97e657a-70bb-4e5f-bf3b-4126791fa976",
+          "intent_line": 1538,
+          "success_line": 1539,
+          "intent_timestamp": 1642755569.1156733,
+          "success_timestamp": 1642755570.3562462,
+          "intent_utc": "2022-01-21T08:59:29.115673+00:00",
+          "success_utc": "2022-01-21T08:59:30.356246+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 188,
+              "timestamp": 1642755569.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "d871ebde-209b-4afc-adce-f686fccbf2de",
+          "intent_line": 1558,
+          "success_line": 1559,
+          "intent_timestamp": 1642755990.6205106,
+          "success_timestamp": 1642755992.086998,
+          "intent_utc": "2022-01-21T09:06:30.620511+00:00",
+          "success_utc": "2022-01-21T09:06:32.086998+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 212,
+              "timestamp": 1642755990.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "6c2a6a0e-61c5-4e39-80ab-706aeee8c516",
+          "intent_line": 2142,
+          "success_line": 2143,
+          "intent_timestamp": 1642767353.3761075,
+          "success_timestamp": 1642767355.3303964,
+          "intent_utc": "2022-01-21T12:15:53.376107+00:00",
+          "success_utc": "2022-01-21T12:15:55.330396+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 427,
+              "timestamp": 1642767353.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "dde43007-2f58-4b99-b79f-1600cf44e592",
+          "intent_line": 2679,
+          "success_line": 2680,
+          "intent_timestamp": 1642789658.767285,
+          "success_timestamp": 1642789660.5873563,
+          "intent_utc": "2022-01-21T18:27:38.767285+00:00",
+          "success_utc": "2022-01-21T18:27:40.587356+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+              "line": 856,
+              "timestamp": 1642789658.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "e5bd56dd-dda6-48f9-8d20-73548c10f1fa",
+          "intent_line": 4071,
+          "success_line": 4072,
+          "intent_timestamp": 1642847208.9940636,
+          "success_timestamp": 1642847211.3690126,
+          "intent_utc": "2022-01-22T10:26:48.994064+00:00",
+          "success_utc": "2022-01-22T10:26:51.369013+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 265,
+              "timestamp": 1642847209.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "7c59a4c1-0160-49cc-91e2-897d5e8022d7",
+          "intent_line": 4099,
+          "success_line": 4100,
+          "intent_timestamp": 1642847743.8296638,
+          "success_timestamp": 1642847746.0750446,
+          "intent_utc": "2022-01-22T10:35:43.829664+00:00",
+          "success_utc": "2022-01-22T10:35:46.075045+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 292,
+              "timestamp": 1642847743.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "2a2b45fc-703c-4b73-bb03-6d3c2e914d23",
+          "intent_line": 4145,
+          "success_line": 4146,
+          "intent_timestamp": 1642851344.9035513,
+          "success_timestamp": 1642851347.230965,
+          "intent_utc": "2022-01-22T11:35:44.903551+00:00",
+          "success_utc": "2022-01-22T11:35:47.230965+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 354,
+              "timestamp": 1642851344.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "2cc7436c-c626-467d-85a1-1906cc5f3c87",
+          "intent_line": 4161,
+          "success_line": 4162,
+          "intent_timestamp": 1642851822.0855355,
+          "success_timestamp": 1642851824.1978052,
+          "intent_utc": "2022-01-22T11:43:42.085536+00:00",
+          "success_utc": "2022-01-22T11:43:44.197805+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 379,
+              "timestamp": 1642851822.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "21898b4c-3a6d-4998-ac59-6267df5e0c59",
+          "intent_line": 4374,
+          "success_line": 4375,
+          "intent_timestamp": 1642862513.6487625,
+          "success_timestamp": 1642862515.458107,
+          "intent_utc": "2022-01-22T14:41:53.648762+00:00",
+          "success_utc": "2022-01-22T14:41:55.458107+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 482,
+              "timestamp": 1642862513.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "18bd0634-528b-4181-8191-fa6172144e37",
+          "intent_line": 4386,
+          "success_line": 4387,
+          "intent_timestamp": 1642862875.8771265,
+          "success_timestamp": 1642862877.8260634,
+          "intent_utc": "2022-01-22T14:47:55.877126+00:00",
+          "success_utc": "2022-01-22T14:47:57.826063+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 504,
+              "timestamp": 1642862875.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "3e8640ef-e27a-4df0-ad53-14faff82fb3e",
+          "intent_line": 5073,
+          "success_line": 5074,
+          "intent_timestamp": 1642873149.4443684,
+          "success_timestamp": 1642873151.5307171,
+          "intent_utc": "2022-01-22T17:39:09.444368+00:00",
+          "success_utc": "2022-01-22T17:39:11.530717+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 681,
+              "timestamp": 1642873149.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "2b0fc324-bada-47af-8024-5db615699cf0",
+          "intent_line": 5149,
+          "success_line": 5150,
+          "intent_timestamp": 1642878510.31674,
+          "success_timestamp": 1642878512.6126714,
+          "intent_utc": "2022-01-22T19:08:30.316740+00:00",
+          "success_utc": "2022-01-22T19:08:32.612671+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 762,
+              "timestamp": 1642878510.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "b1cc8a4a-5ae6-4305-a1d7-b7a603c63ea0",
+          "intent_line": 5157,
+          "success_line": 5158,
+          "intent_timestamp": 1642878933.1087513,
+          "success_timestamp": 1642878935.5481684,
+          "intent_utc": "2022-01-22T19:15:33.108751+00:00",
+          "success_utc": "2022-01-22T19:15:35.548168+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 782,
+              "timestamp": 1642878933.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "7e189828-02ce-4514-8458-56eb438f80fe",
+          "intent_line": 5189,
+          "success_line": 5190,
+          "intent_timestamp": 1642879475.4627085,
+          "success_timestamp": 1642879477.6637568,
+          "intent_utc": "2022-01-22T19:24:35.462708+00:00",
+          "success_utc": "2022-01-22T19:24:37.663757+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 809,
+              "timestamp": 1642879475.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "e53de814-360c-437f-b35c-9f882b16589c",
+          "intent_line": 5227,
+          "success_line": 5228,
+          "intent_timestamp": 1642880401.3295424,
+          "success_timestamp": 1642880403.8194082,
+          "intent_utc": "2022-01-22T19:40:01.329542+00:00",
+          "success_utc": "2022-01-22T19:40:03.819408+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 834,
+              "timestamp": 1642880401.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "c1111f26-fe22-4b1e-b005-511eb8323b28",
+          "intent_line": 5239,
+          "success_line": 5240,
+          "intent_timestamp": 1642881026.145555,
+          "success_timestamp": 1642881028.242646,
+          "intent_utc": "2022-01-22T19:50:26.145555+00:00",
+          "success_utc": "2022-01-22T19:50:28.242646+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 856,
+              "timestamp": 1642881026.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "6e74889b-ef7f-410e-ae08-b6584c6b05ea",
+          "intent_line": 5263,
+          "success_line": 5264,
+          "intent_timestamp": 1642881691.917057,
+          "success_timestamp": 1642881694.3377934,
+          "intent_utc": "2022-01-22T20:01:31.917057+00:00",
+          "success_utc": "2022-01-22T20:01:34.337793+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 881,
+              "timestamp": 1642881691.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "e50acc52-edeb-446e-81b6-8ed9a49e20a4",
+          "intent_line": 5303,
+          "success_line": 5304,
+          "intent_timestamp": 1642882112.6308935,
+          "success_timestamp": 1642882114.7495983,
+          "intent_utc": "2022-01-22T20:08:32.630893+00:00",
+          "success_utc": "2022-01-22T20:08:34.749598+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+              "line": 910,
+              "timestamp": 1642882112.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "eb1bef6d-f5aa-439f-8470-5977e89b4573",
+          "intent_line": 5788,
+          "success_line": 5789,
+          "intent_timestamp": 1642924767.4639087,
+          "success_timestamp": 1642924770.2669568,
+          "intent_utc": "2022-01-23T07:59:27.463909+00:00",
+          "success_utc": "2022-01-23T07:59:30.266957+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 21,
+              "timestamp": 1642924767.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "f38b302e-25a3-46db-b30e-34903305deb9",
+          "intent_line": 6084,
+          "success_line": 6085,
+          "intent_timestamp": 1642931507.0380106,
+          "success_timestamp": 1642931509.3148973,
+          "intent_utc": "2022-01-23T09:51:47.038011+00:00",
+          "success_utc": "2022-01-23T09:51:49.314897+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 60,
+              "timestamp": 1642931507.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "2b7ec90e-cbd3-4578-9bcf-7aab48f1f411",
+          "intent_line": 6122,
+          "success_line": 6123,
+          "intent_timestamp": 1642933539.2648516,
+          "success_timestamp": 1642933541.956248,
+          "intent_utc": "2022-01-23T10:25:39.264852+00:00",
+          "success_utc": "2022-01-23T10:25:41.956248+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 154,
+              "timestamp": 1642933539.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "120a2ecb-f6c8-4f5a-810e-e29dbecd9e52",
+          "intent_line": 6385,
+          "success_line": 6386,
+          "intent_timestamp": 1642935859.6972952,
+          "success_timestamp": 1642935862.0546427,
+          "intent_utc": "2022-01-23T11:04:19.697295+00:00",
+          "success_utc": "2022-01-23T11:04:22.054643+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 229,
+              "timestamp": 1642935859.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "9ac89b9f-54e1-434f-aa00-55c192ce6e35",
+          "intent_line": 6981,
+          "success_line": 6982,
+          "intent_timestamp": 1642945104.3385832,
+          "success_timestamp": 1642945106.7677794,
+          "intent_utc": "2022-01-23T13:38:24.338583+00:00",
+          "success_utc": "2022-01-23T13:38:26.767779+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 412,
+              "timestamp": 1642945104.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "862dec70-2086-4610-81dc-4bcec68f886f",
+          "intent_line": 7303,
+          "success_line": 7304,
+          "intent_timestamp": 1642957345.6243453,
+          "success_timestamp": 1642957347.9975789,
+          "intent_utc": "2022-01-23T17:02:25.624345+00:00",
+          "success_utc": "2022-01-23T17:02:27.997579+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 587,
+              "timestamp": 1642957345.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "5cfc0bb4-1c4f-4499-99e2-bc14462a699e",
+          "intent_line": 7339,
+          "success_line": 7340,
+          "intent_timestamp": 1642957932.819111,
+          "success_timestamp": 1642957935.1169248,
+          "intent_utc": "2022-01-23T17:12:12.819111+00:00",
+          "success_utc": "2022-01-23T17:12:15.116925+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 615,
+              "timestamp": 1642957932.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "28d325e9-7371-46fd-9914-c9dcc93068ec",
+          "intent_line": 7877,
+          "success_line": 7878,
+          "intent_timestamp": 1642968227.8455458,
+          "success_timestamp": 1642968230.3656125,
+          "intent_utc": "2022-01-23T20:03:47.845546+00:00",
+          "success_utc": "2022-01-23T20:03:50.365613+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+              "line": 780,
+              "timestamp": 1642968227.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "cb06c252-d7fb-4b4c-bbb6-9f9a672ad3a6",
+          "intent_line": 8327,
+          "success_line": 8328,
+          "intent_timestamp": 1643016601.1394286,
+          "success_timestamp": 1643016603.7701244,
+          "intent_utc": "2022-01-24T09:30:01.139429+00:00",
+          "success_utc": "2022-01-24T09:30:03.770124+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 133,
+              "timestamp": 1643016601.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "a9180460-23b2-4fa8-baaf-424d156afef7",
+          "intent_line": 8937,
+          "success_line": 8938,
+          "intent_timestamp": 1643029467.2055368,
+          "success_timestamp": 1643029469.743389,
+          "intent_utc": "2022-01-24T13:04:27.205537+00:00",
+          "success_utc": "2022-01-24T13:04:29.743389+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 259,
+              "timestamp": 1643029467.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "7ac33e70-96c9-470f-af3e-3abd87d5dc16",
+          "intent_line": 9637,
+          "success_line": 9638,
+          "intent_timestamp": 1643042462.3474824,
+          "success_timestamp": 1643042470.0408194,
+          "intent_utc": "2022-01-24T16:41:02.347482+00:00",
+          "success_utc": "2022-01-24T16:41:10.040819+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 468,
+              "timestamp": 1643042467.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        },
+        {
+          "transition_id": "a4ebe6fb-c0e8-42d8-94c8-39e6961bfdeb",
+          "intent_line": 9665,
+          "success_line": 9666,
+          "intent_timestamp": 1643043187.2513707,
+          "success_timestamp": 1643043189.9442494,
+          "intent_utc": "2022-01-24T16:53:07.251371+00:00",
+          "success_utc": "2022-01-24T16:53:09.944249+00:00",
+          "target_url": "https://intranet.smith.russellmitchell.com/?p=5",
+          "apache_matches": [
+            {
+              "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+              "line": 506,
+              "timestamp": 1643043187.0,
+              "client": "172.19.131.174",
+              "request": "GET /?p=5 HTTP/1.1",
+              "status": 200,
+              "labels": []
+            }
+          ]
+        }
+      ],
+      "availability": "意图和成功日志在动作时生成；尚未证明检测系统当时获得正常确认的通道或延迟。VPN匹配只确定观测IP/时间/URI，不能靠VPN地址唯一标识远程员工。"
+    }
+  ],
+  "actor_evidence": {
+    "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+    "actions": [
+      {
+        "line": 400,
+        "message": "Downloading WPHashCrack",
+        "timestamp": 1642996762.1827977,
+        "utc": "2022-01-24T03:59:22.182798+00:00"
+      },
+      {
+        "line": 403,
+        "message": "Downloaded WPHashCrack",
+        "timestamp": 1642996779.5675864,
+        "utc": "2022-01-24T03:59:39.567586+00:00"
+      },
+      {
+        "line": 408,
+        "message": "Unarchived WPHashCrack",
+        "timestamp": 1642996781.6924922,
+        "utc": "2022-01-24T03:59:41.692492+00:00"
+      },
+      {
+        "line": 410,
+        "message": "Downloading password list",
+        "timestamp": 1642996783.556796,
+        "utc": "2022-01-24T03:59:43.556796+00:00"
+      },
+      {
+        "line": 413,
+        "message": "Downloaded password list",
+        "timestamp": 1642996786.2159774,
+        "utc": "2022-01-24T03:59:46.215977+00:00"
+      },
+      {
+        "line": 418,
+        "message": "Finished WPHashCrack",
+        "timestamp": 1642999017.884247,
+        "utc": "2022-01-24T04:36:57.884247+00:00"
+      }
+    ],
+    "whoami_www_data": [
+      {
+        "line": 258,
+        "utc": "2022-01-24T03:58:23.526915+00:00",
+        "output": [
+          "www-data"
+        ]
+      }
+    ],
+    "unarchive_responses": [
+      {
+        "line": 409,
+        "utc": "2022-01-24T03:59:41.692780+00:00",
+        "archive_entry_count": 53
+      }
+    ],
+    "crack_response_summary": [
+      {
+        "line": 419,
+        "utc": "2022-01-24T04:36:57.884574+00:00",
+        "loaded_one_hash": true,
+        "output_line_count": 3
+      }
+    ]
+  },
+  "dns_exfiltration": {
+    "events": {
+      "DNS server listening": 1,
+      "On the victim machine, use any of the following commands:": 1,
+      "Remember to set filename for individual file transfer.": 1,
+      "Copy individual file (ZIP enabled)": 1,
+      "Copy entire folder (ZIP enabled)": 1,
+      "Once files have sent, use Ctrl+C to exit and save.": 1,
+      "Received data": 19954,
+      "Received file end marker": 31,
+      "Saving received bytes to file": 31,
+      "Saved file": 31,
+      "Saving unfinished files": 1
+    },
+    "first_received_data": "2022-01-20T12:48:27.531129+00:00",
+    "first_simulation_day_received_data_events": 4956,
+    "first_simulation_day_first_received": "2022-01-21T00:00:09.631596+00:00"
+  },
+  "pcap_directory_entry_only": {
+    "path": "gather/intranet_server/logs/suricata/log.pcap.1642684613",
+    "bytes": 343232723,
+    "compressed": 291883232,
+    "CRC": 55161529,
+    "offset": 6820279205
+  },
+  "native_conn_log_members": [],
+  "label_join_rule": "Apache 标签按同成员名和一基 line 连接；没有标签行只按作者规则记 normal，不能据此宣称告警前已知正常。",
+  "pending": [
+    "HTTP 请求到单一网络视角 TCP 流的映射及八字段提取",
+    "同服务正常流是否能在告警前确认及确认延迟",
+    "下载流与正常下载业务的同协议同服务对照",
+    "独立事件划分，不能把多个命令请求当独立攻击链"
+  ],
+  "reviewed_author_source": {
+    "repository": "https://github.com/ait-aecid/kyoushi-statemachines",
+    "commit": "13fdbac51c63e40718588f469b7844a712ce2eaf",
+    "file": "src/cr_kyoushi/statemachines/aecid_attacker/actions.py",
+    "saved_sha256": "7853f5486e6b3f200ff82cea78441a2d03193d84630786d7180af43c25f57d9d"
+  }
+}

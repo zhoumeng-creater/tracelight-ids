@@ -1,0 +1,164 @@
+[
+  {
+    "member": "dataset.yaml",
+    "bytes": 97,
+    "crc32": "d660d92e",
+    "sha256": "fba756deba1ccc5db4cb3e7674026c9d6aa8ba07ba5e601396abc0f81fb1a5e5",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 73,
+    "local_header_offset": 0
+  },
+  {
+    "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+    "bytes": 1945655,
+    "crc32": "7171a432",
+    "sha256": "6026edd1b36b4710770018b13315b143b2e6c5b683b8bb539348f605c1800b94",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 112733,
+    "local_header_offset": 418925780
+  },
+  {
+    "member": "gather/attacker_0/logs/attacks.log",
+    "bytes": 2576,
+    "crc32": "28a112a1",
+    "sha256": "eb7e96b8ad1270ab96c43de8575631aafb48a0a865e97c1c5c9f8cc117289f06",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 833,
+    "local_header_offset": 418871901
+  },
+  {
+    "member": "gather/attacker_0/logs/dnsteal.log",
+    "bytes": 2603032,
+    "crc32": "e5fbdaa3",
+    "sha256": "6fd21efa7227e0648a6ce4f9df9a77360d5249021feffc4bbae931c64d93cfda",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 173420,
+    "local_header_offset": 418698389
+  },
+  {
+    "member": "gather/internal_employee_1/logs/sm.log",
+    "bytes": 3986702,
+    "crc32": "953a4f07",
+    "sha256": "d6b677affd2d97f79b8f84c2cb7dbebab636554fa85e92a2bba537481583f15b",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 351896,
+    "local_header_offset": 119288461
+  },
+  {
+    "member": "gather/intranet_server/configs/apache2/sites-available/intranet.smith.russellmitchell.com.conf",
+    "bytes": 1088,
+    "crc32": "0fb9f760",
+    "sha256": "9613740b1538aa9a4311fe4b2342e592516584dceabcb6145e7ad19d21edcfe6",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 338,
+    "local_header_offset": 164940425
+  },
+  {
+    "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+    "bytes": 149432,
+    "crc32": "b14eba69",
+    "sha256": "d43f56bbe787107208221453a42b1c3eb0619795071d4ef76183da34d3275e99",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 5428,
+    "local_header_offset": 155527948
+  },
+  {
+    "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+    "bytes": 1565078,
+    "crc32": "b3ae7079",
+    "sha256": "4d3d700f50c6dde5295ebc57a00701b7c3049812c6f6709b3f809e36be362153",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 49076,
+    "local_header_offset": 155560531
+  },
+  {
+    "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+    "bytes": 256115,
+    "crc32": "b666f818",
+    "sha256": "7e3144f380a12db73cd4c9f53f3cbb48b33a8757485533508b955d1a6a2203b3",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 7679,
+    "local_header_offset": 155609748
+  },
+  {
+    "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+    "bytes": 289482,
+    "crc32": "95ed5562",
+    "sha256": "9efe17b91cd03b1a5a0032611eeda6be8a4ea8ceb71b77a58abd61e209492352",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 9404,
+    "local_header_offset": 155617685
+  },
+  {
+    "member": "gather/remote_employee_1/logs/sm.log",
+    "bytes": 3896504,
+    "crc32": "3e600247",
+    "sha256": "ad151fb6027d2b1209deab2006426c8a44f4cebd00f1dd0d5b37777fe54c3186",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 347707,
+    "local_header_offset": 278348305
+  },
+  {
+    "member": "labels/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+    "bytes": 1637968,
+    "crc32": "354c9bce",
+    "sha256": "ab6a834e2f9b8321cb7045cd78e0d88eea851a0f4b5231827f16e87ca7286154",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 24568,
+    "local_header_offset": 518444180
+  },
+  {
+    "member": "processing/config/attacker.yaml",
+    "bytes": 498,
+    "crc32": "017b8c1f",
+    "sha256": "dc15f571ace9231d63c45ff6a479e34cdada960351b5d05d76c53a5569b6fe5b",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 267,
+    "local_header_offset": 519847463
+  },
+  {
+    "member": "processing/config/attacker/attacker.yaml",
+    "bytes": 762,
+    "crc32": "718be2e2",
+    "sha256": "28551d413f6c6c9845966babb55e2893373df6b44ec32aa6939d61b5a0a20ce3",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 305,
+    "local_header_offset": 519845822
+  },
+  {
+    "member": "processing/config/attacker/escalate.yaml",
+    "bytes": 2434,
+    "crc32": "d3ec7ecb",
+    "sha256": "261fee8542d6f7ea92c9c37d19cd6d63554cfbbd6896070240e860b1449a0b8a",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 863,
+    "local_header_offset": 519842876
+  },
+  {
+    "member": "processing/config/attacker/foothold.yaml",
+    "bytes": 8606,
+    "crc32": "5c9e4efd",
+    "sha256": "b23af2bf9220128e36d6dac14de6f8d36752dc11efbdba0670f47aff0d541b46",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 1887,
+    "local_header_offset": 519843837
+  },
+  {
+    "member": "processing/config/servers.yaml",
+    "bytes": 14835,
+    "crc32": "78534ad9",
+    "sha256": "992bb3533597cb597023697c6172a92f267605ff1a6c55321934a162c8a808e2",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 1719,
+    "local_header_offset": 519839722
+  },
+  {
+    "member": "rules/apache.yaml",
+    "bytes": 26062,
+    "crc32": "80054c8d",
+    "sha256": "b48be2f52951c47d2f14c518faae4a5a2dfa83c252c59017d6d11b15acce4868",
+    "source_zip": "russellmitchell_no-pcaps.zip",
+    "compressed_bytes": 5033,
+    "local_header_offset": 519848688
+  }
+]

@@ -1,0 +1,13 @@
+rule,profile,cells,qualified_cells,fp,normal_n,tp,attack_n,gained,lost
+mixed_np95,B,3,2,53,5459,72,72,6,0
+mixed_np95,D,12,4,105,9564,1951,1964,268,11
+mixed_original,B,3,1,68,5459,72,72,6,0
+mixed_original,D,12,2,136,9564,1952,1964,269,11
+old_or_mixed_empirical,B,3,0,73,5459,72,72,6,0
+old_or_mixed_empirical,D,12,2,142,9564,1963,1964,269,0
+old_or_mixed_np95,B,3,1,64,5459,72,72,6,0
+old_or_mixed_np95,D,12,2,117,9564,1962,1964,268,0
+old_or_mixed_original,B,3,0,73,5459,72,72,6,0
+old_or_mixed_original,D,12,2,142,9564,1963,1964,269,0
+old_strong,B,3,3,12,5459,66,72,0,0
+old_strong,D,12,12,15,9564,1694,1964,0,0

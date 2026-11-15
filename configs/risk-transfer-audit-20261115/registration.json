@@ -1,0 +1,22 @@
+{
+  "version": "r26-frozen-risk-development-audit-v1",
+  "status": "already_opened_development_audit",
+  "candidate": "mixed-raw8-hgb",
+  "baseline": "reference-hgb-original-C-or-udp443-30s",
+  "alpha": 0.01,
+  "delta": 0.05,
+  "calibration_normal_rows": 5511,
+  "calibration_identity_sha256": "116fc32bc1f1b4b9ba02fc3dbf63f68fd73221d172dcd8b91fb6b877deb6f5fc",
+  "rules": ["old_strong", "mixed_original", "old_or_mixed_original", "old_or_mixed_empirical", "mixed_np95", "old_or_mixed_np95"],
+  "calibration_source": "R26 historical B confirmed-normal scores only",
+  "label_availability": "R26 retrospective assumption retained; actual original annotation arrival time unknown",
+  "np_formula": "smallest k with binom.sf(k-1,n,1-alpha)<=delta; strict score > Z_(k)",
+  "preservation": "For OR rules, old alerts are immutable. Calibration scores for old alerts are +infinity; infinite order statistic is infeasible, never zero-alert success.",
+  "guarantee_scope": "Fixed scores and independent identically distributed normal calibration/deployment draws. Does not guarantee every finite future cell or distribution-shifted data.",
+  "coverage_claim_this_audit": false,
+  "coverage_reason": "Candidate chosen after already-opened R26 results; no post-selection 95% certificate is claimed. This is a fixed-rule development audit.",
+  "selection": "No alpha, delta, model, seed, or threshold search on B/D evaluation labels",
+  "new_fits": 0,
+  "new_model_forward_calls": 0,
+  "new_blind_confirmations": 0
+}

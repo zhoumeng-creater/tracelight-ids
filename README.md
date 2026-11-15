@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**第二十六轮后的风险与来源审计**　[保旧风险审计与独立来源准入](docs/R26_RISK_AUDIT_20261115.md)：已复用回传分数完成六项固定规则对照，现成NP校准加保旧OR仍未全时段达标。[本次实验室取证](docs/AIT_PACKET_EVIDENCE_LAB.md)固定版本 `risk-audit-evidence-v1`，入口 `scripts/RUN_AIT_PACKET_EVIDENCE.ps1`；一次核对 AIT 背景连接、正常业务、控制和受害下载，不启动新训练或独立盲评。已有分数审计无需实验室重跑。
+
 **第二十六轮开发诊断**　[历史监督、源数据增量与端口依赖](docs/SUPPORT_DIAGNOSTIC_LAB.md)，版本`support-diagnostic-lab-v1`，入口`scripts/RUN_SUPPORT_DIAGNOSTIC.ps1`。TQH-B完整单元按时间分配，D只作冻结外评；20次新拟合、4份旧权重复用，保留同标签target-only、端口置零和已知强规则对照。全部材料已开，不称新算法或盲测。旧TabM等完成项不重跑。
 
 **已有结果展示**　[逐日误报、攻击得失与就绪状态](docs/flow_replay/index.html)已接入第二十五轮修复结果，保留此前真实逐行回放；明确区分全日和原未开攻击子集。

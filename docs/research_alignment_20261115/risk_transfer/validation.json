@@ -1,0 +1,35 @@
+{
+  "checked_at_utc": "2026-11-15T13:36:27.818843+00:00",
+  "tests": {
+    "risk_transfer": 16,
+    "packet_evidence": 12,
+    "total_passed": 28,
+    "command": "python -m pytest -q -p no:cacheprovider tests/test_risk_transfer_audit.py tests/test_ait_packet_evidence.py",
+    "wall_output": "28 passed in 1.62s"
+  },
+  "powershell_5_wrapper_check": {
+    "passed": 12,
+    "option": "-CheckOnly",
+    "wall_output": "12 passed in 0.17s"
+  },
+  "ruff": "passed",
+  "git_diff_check": "passed",
+  "local_doc_links_checked": 11,
+  "audit_matches_current_source_and_registration": true,
+  "actual_r26_fixed_score_audit": "complete, via AUDIT_R26_RISK.ps1",
+  "actual_small_source_members_verified": 18,
+  "actual_packet_member_complete": false,
+  "actual_packet_actions_mapped": false,
+  "new_fits": 0,
+  "new_model_forward_calls": 0,
+  "gpu_jobs": 0,
+  "sha256": {
+    "scripts/prepare_ait_packet_evidence.py": "916f18134279993b67a15e0524730945dfcee99868cc6d663bb6f84953953417",
+    "scripts/RUN_AIT_PACKET_EVIDENCE.ps1": "ec0b4b78355d2d86697f9826183539fad8f7ec7bc2988be75e1465815b968535",
+    "scripts/AUDIT_R26_RISK.ps1": "df92158926e62795c62877458fd20392ce81a714f098becc63984f8de34f59ae",
+    "src/ids/risk_transfer/audit.py": "61760a77a951c2a459df17836c946a7d4f7b7ec644171e556bbc50e85ef77421",
+    "configs/risk-transfer-audit-20261115/registration.json": "8d0928c0525d3f09587756201a4e8774959a048f853f4dfec04192e880b2564e",
+    "tests/test_ait_packet_evidence.py": "0847e7e44cdbf291fcc8880fe113f13fb6b238c982672737474db007370b98cf",
+    "tests/test_risk_transfer_audit.py": "02eaf9f5cc4e8f407868c52f7fdfd751e658dae8804d830c4edb958a0811ed6d"
+  }
+}
