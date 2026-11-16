@@ -1,0 +1,18 @@
+{
+  "synthetic_checks": {
+    "passed": 63,
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/RUN_TRAINING_DIAGNOSIS.ps1 -Python D:\\python\\python.exe -CheckOnly"
+  },
+  "plan_only_without_python_or_r26": "passed",
+  "ruff": "passed",
+  "diff_check": "passed",
+  "relative_doc_links_checked": 8,
+  "recovered_training_rows": 18874,
+  "final_training_normalization_exact_match_models": 6,
+  "new_real_model_forward_calls": 0,
+  "new_fits": 0,
+  "lab_training_scoring": "prepared_not_executed",
+  "planned_models": 8,
+  "planned_scored_rows": 150992,
+  "new_BD_forward_calls": 0
+}

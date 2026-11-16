@@ -1,0 +1,4573 @@
+{
+  "audit_date": "2026-11-16",
+  "operation": "exact_input_group_counts_only",
+  "model_loaded": false,
+  "model_forward_executed": false,
+  "training_executed": false,
+  "matching_columns": [
+    "ip_protocol",
+    "duration_seconds",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes"
+  ],
+  "definitions": {
+    "equality": "原始数值完全相同；只移除两端口，不做容差匹配、近邻或聚类。",
+    "infimum": "当前有限训练样本和登记权重下，无约束确定性评分函数的经验BCE下界；不是网络最优值或泛化下界。",
+    "origin_counts": "同组可以同时有采集内冲突与跨采集异标签；来源计数项不保证互斥。",
+    "floor_fraction": "某精确输入组占全部精确冲突BCE下界的份额；不表示训练失败或外域漏检的因果解释比例。",
+    "raw8": "完整保留两端口的八字段对照；原始输入无精确冲突不保证模型分箱或泛化后仍可分。",
+    "evaluation_match": "只检查既有B/D回放输入是否精确落入训练冲突组；无命中不排除参数共享带来的间接影响。"
+  },
+  "inputs": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\训练诊断推进_20261116\\recovered-training.parquet",
+      "sha256": "8289c4163d839d8431d3d4e76c6bc3d316e08c042107d5c8c7aca5766e9db88c"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\训练诊断推进_20261116\\input-audit\\evidence\\input_conflicts.json",
+      "sha256": "da8db7f4005ebd5d1dd47b8d3f60df11095369bab913d71a94caefce5960a34e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-B_i3600_j0.parquet",
+      "sha256": "4bfaeb117c7b49cd7a3d1822309dd1d3605307328fca8d92ba8f7afb08781caf"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-B_i3600_j30.parquet",
+      "sha256": "566afabbd8f476186dff62d0522491ea8ed1ecbe81ce663235ddea6a8e594f12"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-B_i3600_j70.parquet",
+      "sha256": "df9516848afad66239ead95e2fbf0d3a405d2589186ad6a277de8174ff141747"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i1800_j0.parquet",
+      "sha256": "ad97036e36272e1f07bd190be1dd11c0c87414a55814acfbdafeab74a0e90bdb"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i1800_j30.parquet",
+      "sha256": "c25eccc36545907c1cb20b7bb1427e3da0b86fc642319e624ab9510acc017f80"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i1800_j70.parquet",
+      "sha256": "d37a6edf7e6b31a99d2d58d0b99dabdcd7213923a0ce607e22cc7de425c01fea"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i300_j0.parquet",
+      "sha256": "b088b5c5080e68229a045286b0c34acd1c17c55e56a53b5423b8ca4cf19f473a"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i300_j30.parquet",
+      "sha256": "dd1082e11e5a2557eb36496f12e6beeac5628f37c71b7d5643ba1c3babe6ea46"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i300_j70.parquet",
+      "sha256": "f65b8e0f64d460342dcbde08b5b5dc9ff420e839a292f1e67efcab76df008217"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i30_j0.parquet",
+      "sha256": "7c2032e48358722a5bc945621343ab12f1990488a92661004d66782f5921a22a"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i30_j30.parquet",
+      "sha256": "aa41d8e8c2b864ead9f9a7851f87b96335a685a7b14e45f8bed28d2546539357"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i30_j70.parquet",
+      "sha256": "7c223627ed16cadbc11f1537d638a2d622502242d550d4ca551b53faf3ee0a02"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i3600_j0.parquet",
+      "sha256": "2952215e5652688666efb54723e9e366b624e18a95d60e5b99a0cf359062806f"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i3600_j30.parquet",
+      "sha256": "fd747e91c8667decbffe8a4596170074d95505e480874e2d90418094aa94c75d"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i3600_j70.parquet",
+      "sha256": "0ecea09abd9548984e8d4ebec088e2bffd7a444fe19c37188b4b722f74882dc6"
+    }
+  ],
+  "checks": {
+    "reproduced_existing_mixed_exact_conflict_counts_and_floor": true,
+    "unique_training_identities": true,
+    "finite_raw_inputs": true,
+    "reconstructed_mixed_weights_match": true
+  },
+  "view_and_support_summaries": [
+    {
+      "support": "source",
+      "view": "raw8",
+      "rows": 8192,
+      "unique_inputs": 7895,
+      "conflicting_inputs": 0,
+      "rows_in_conflicting_inputs": 0,
+      "weighted_bce_infimum": 0,
+      "weighted_error_infimum": 0,
+      "conflict_groups_by_origin": {
+        "source_internal": 0,
+        "target_internal": 0,
+        "cross_source_target": 0,
+        "within_at_least_one_capture": 0,
+        "between_source_captures_opposite_labels": 0
+      },
+      "family_counts_in_conflicts": [],
+      "source_control_rows": 56,
+      "source_control_rows_in_conflicts": 0,
+      "source_control_identities_in_conflicts": []
+    },
+    {
+      "support": "source",
+      "view": "ports_zero8",
+      "rows": 8192,
+      "unique_inputs": 500,
+      "conflicting_inputs": 63,
+      "rows_in_conflicting_inputs": 3657,
+      "weighted_bce_infimum": 0.13891600661128642,
+      "weighted_error_infimum": 0.0433349609375,
+      "conflict_groups_by_origin": {
+        "source_internal": 63,
+        "target_internal": 0,
+        "cross_source_target": 0,
+        "within_at_least_one_capture": 63,
+        "between_source_captures_opposite_labels": 1
+      },
+      "family_counts_in_conflicts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 355
+        },
+        {
+          "domain": "source",
+          "family": "C&C",
+          "label": 1,
+          "rows": 40
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3262
+        }
+      ],
+      "source_control_rows": 56,
+      "source_control_rows_in_conflicts": 40,
+      "source_control_identities_in_conflicts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 362
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 438
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 551
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 783
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 849
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1057
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1224
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1690
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1748
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 2181
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 2774
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 2795
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 3020
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 3398
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 4336
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 4388
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5312
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5343
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5357
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5806
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6292
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6308
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6605
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6672
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7601
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7618
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7882
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7984
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8146
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8165
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8459
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8905
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 9490
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 9496
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 9925
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10053
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10206
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10254
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10264
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10353
+        }
+      ]
+    },
+    {
+      "support": "target",
+      "view": "raw8",
+      "rows": 10682,
+      "unique_inputs": 10408,
+      "conflicting_inputs": 0,
+      "rows_in_conflicting_inputs": 0,
+      "weighted_bce_infimum": 0,
+      "weighted_error_infimum": 0,
+      "conflict_groups_by_origin": {
+        "source_internal": 0,
+        "target_internal": 0,
+        "cross_source_target": 0,
+        "within_at_least_one_capture": 0,
+        "between_source_captures_opposite_labels": 0
+      },
+      "family_counts_in_conflicts": [],
+      "source_control_rows": 0,
+      "source_control_rows_in_conflicts": 0,
+      "source_control_identities_in_conflicts": []
+    },
+    {
+      "support": "target",
+      "view": "ports_zero8",
+      "rows": 10682,
+      "unique_inputs": 10405,
+      "conflicting_inputs": 0,
+      "rows_in_conflicting_inputs": 0,
+      "weighted_bce_infimum": 0,
+      "weighted_error_infimum": 0,
+      "conflict_groups_by_origin": {
+        "source_internal": 0,
+        "target_internal": 0,
+        "cross_source_target": 0,
+        "within_at_least_one_capture": 0,
+        "between_source_captures_opposite_labels": 0
+      },
+      "family_counts_in_conflicts": [],
+      "source_control_rows": 0,
+      "source_control_rows_in_conflicts": 0,
+      "source_control_identities_in_conflicts": []
+    },
+    {
+      "support": "mixed",
+      "view": "raw8",
+      "rows": 18874,
+      "unique_inputs": 18303,
+      "conflicting_inputs": 0,
+      "rows_in_conflicting_inputs": 0,
+      "weighted_bce_infimum": 0,
+      "weighted_error_infimum": 0,
+      "conflict_groups_by_origin": {
+        "source_internal": 0,
+        "target_internal": 0,
+        "cross_source_target": 0,
+        "within_at_least_one_capture": 0,
+        "between_source_captures_opposite_labels": 0
+      },
+      "family_counts_in_conflicts": [],
+      "source_control_rows": 56,
+      "source_control_rows_in_conflicts": 0,
+      "source_control_identities_in_conflicts": []
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "rows": 18874,
+      "unique_inputs": 10905,
+      "conflicting_inputs": 63,
+      "rows_in_conflicting_inputs": 3657,
+      "weighted_bce_infimum": 0.06945800330564321,
+      "weighted_error_infimum": 0.02166748046875,
+      "conflict_groups_by_origin": {
+        "source_internal": 63,
+        "target_internal": 0,
+        "cross_source_target": 0,
+        "within_at_least_one_capture": 63,
+        "between_source_captures_opposite_labels": 1
+      },
+      "family_counts_in_conflicts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 355
+        },
+        {
+          "domain": "source",
+          "family": "C&C",
+          "label": 1,
+          "rows": 40
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3262
+        }
+      ],
+      "source_control_rows": 56,
+      "source_control_rows_in_conflicts": 40,
+      "source_control_identities_in_conflicts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 362
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 438
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 551
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 783
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 849
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1057
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1224
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1690
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 1748
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 2181
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 2774
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 2795
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 3020
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 3398
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 4336
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 4388
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5312
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5343
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5357
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 5806
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6292
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6308
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6605
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 6672
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7601
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7618
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7882
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 7984
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8146
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8165
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8459
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 8905
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 9490
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 9496
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 9925
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10053
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10206
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10254
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10264
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "row_id": 10353
+        }
+      ]
+    }
+  ],
+  "mixed_ports_zero8_groups_sorted_by_floor_contribution": [
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": -1.0,
+        "orig_pkts": 1,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 60,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2939,
+      "negative_rows": 261,
+      "positive_rows": 2678,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": true,
+      "negative_weight": 300.6661376953125,
+      "positive_weight": 3084.995849609375,
+      "unrestricted_bce_optimal_positive_probability": 0.9111942837699898,
+      "bce_floor_contribution": 0.053772711730559176,
+      "weighted_error_floor_contribution": 0.01593017578125,
+      "raw8_unique_inputs_inside_group": 2887,
+      "distinct_port_pairs": 2887,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 261
+        },
+        {
+          "domain": "source",
+          "family": "C&C",
+          "label": 1,
+          "rows": 40
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 2638
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 261
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 2638
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-8-1",
+          "family": "C&C",
+          "label": 1,
+          "rows": 40
+        }
+      ],
+      "group_id": "C001",
+      "fraction_of_exact_conflict_floor": 0.7741758929340018
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998795,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 27,
+      "negative_rows": 4,
+      "positive_rows": 23,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 4.60791015625,
+      "positive_weight": 26.4954833984375,
+      "unrestricted_bce_optimal_positive_probability": 0.8518518518518519,
+      "bce_floor_contribution": 0.0006912872907267383,
+      "weighted_error_floor_contribution": 0.000244140625,
+      "raw8_unique_inputs_inside_group": 27,
+      "distinct_port_pairs": 27,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 4
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 23
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 4
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 23
+        }
+      ],
+      "group_id": "C002",
+      "fraction_of_exact_conflict_floor": 0.009952593766405804
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.99879,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 28,
+      "negative_rows": 3,
+      "positive_rows": 25,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 28.7994384765625,
+      "unrestricted_bce_optimal_positive_probability": 0.8928571428571429,
+      "bce_floor_contribution": 0.0005819088010984107,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 28,
+      "distinct_port_pairs": 28,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 25
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 25
+        }
+      ],
+      "group_id": "C003",
+      "fraction_of_exact_conflict_floor": 0.008377850980509437
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998793,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 27,
+      "negative_rows": 3,
+      "positive_rows": 24,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 27.6474609375,
+      "unrestricted_bce_optimal_positive_probability": 0.8888888888888888,
+      "bce_floor_contribution": 0.0005748575798194496,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 27,
+      "distinct_port_pairs": 27,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 24
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 24
+        }
+      ],
+      "group_id": "C004",
+      "fraction_of_exact_conflict_floor": 0.008276333215192562
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998545,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 16,
+      "negative_rows": 4,
+      "positive_rows": 12,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 4.60791015625,
+      "positive_weight": 13.82373046875,
+      "unrestricted_bce_optimal_positive_probability": 0.75,
+      "bce_floor_contribution": 0.000549155414666805,
+      "weighted_error_floor_contribution": 0.000244140625,
+      "raw8_unique_inputs_inside_group": 16,
+      "distinct_port_pairs": 16,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 4
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 12
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 4
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 12
+        }
+      ],
+      "group_id": "C005",
+      "fraction_of_exact_conflict_floor": 0.007906294286207736
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998542,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 22,
+      "negative_rows": 3,
+      "positive_rows": 19,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 21.8875732421875,
+      "unrestricted_bce_optimal_positive_probability": 0.8636363636363636,
+      "bce_floor_contribution": 0.000534836212385025,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 22,
+      "distinct_port_pairs": 22,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 19
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 19
+        }
+      ],
+      "group_id": "C006",
+      "fraction_of_exact_conflict_floor": 0.007700138024865618
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999045,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 13,
+      "negative_rows": 4,
+      "positive_rows": 9,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 4.60791015625,
+      "positive_weight": 10.3677978515625,
+      "unrestricted_bce_optimal_positive_probability": 0.6923076923076923,
+      "bce_floor_contribution": 0.000489754822173733,
+      "weighted_error_floor_contribution": 0.000244140625,
+      "raw8_unique_inputs_inside_group": 13,
+      "distinct_port_pairs": 13,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 4
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 4
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "group_id": "C007",
+      "fraction_of_exact_conflict_floor": 0.007051092730359874
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998787,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 16,
+      "negative_rows": 3,
+      "positive_rows": 13,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 14.9757080078125,
+      "unrestricted_bce_optimal_positive_probability": 0.8125,
+      "bce_floor_contribution": 0.00047126715349317584,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 16,
+      "distinct_port_pairs": 16,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 13
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 13
+        }
+      ],
+      "group_id": "C008",
+      "fraction_of_exact_conflict_floor": 0.006784922270503666
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998792,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 32,
+      "negative_rows": 2,
+      "positive_rows": 30,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 34.559326171875,
+      "unrestricted_bce_optimal_positive_probability": 0.9375,
+      "bce_floor_contribution": 0.00045662433341105325,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 32,
+      "distinct_port_pairs": 32,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "group_id": "C009",
+      "fraction_of_exact_conflict_floor": 0.006574106822531626
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998543,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 14,
+      "negative_rows": 3,
+      "positive_rows": 11,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 12.6717529296875,
+      "unrestricted_bce_optimal_positive_probability": 0.7857142857142857,
+      "bce_floor_contribution": 0.00044397691331953226,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 14,
+      "distinct_port_pairs": 14,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 11
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 11
+        }
+      ],
+      "group_id": "C010",
+      "fraction_of_exact_conflict_floor": 0.006392019525321724
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998788,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 26,
+      "negative_rows": 2,
+      "positive_rows": 24,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 27.6474609375,
+      "unrestricted_bce_optimal_positive_probability": 0.9230769230769231,
+      "bce_floor_contribution": 0.0004303542296806608,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 26,
+      "distinct_port_pairs": 26,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 24
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 24
+        }
+      ],
+      "group_id": "C011",
+      "fraction_of_exact_conflict_floor": 0.00619589117451201
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998796,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 13,
+      "negative_rows": 3,
+      "positive_rows": 10,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 11.519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.7692307692307693,
+      "bce_floor_contribution": 0.0004286287750888178,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 13,
+      "distinct_port_pairs": 13,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "group_id": "C012",
+      "fraction_of_exact_conflict_floor": 0.006171049478670996
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998794,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 22,
+      "negative_rows": 2,
+      "positive_rows": 20,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 23.03955078125,
+      "unrestricted_bce_optimal_positive_probability": 0.9090909090909091,
+      "bce_floor_contribution": 0.0004090572596242211,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 22,
+      "distinct_port_pairs": 22,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 20
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 20
+        }
+      ],
+      "group_id": "C013",
+      "fraction_of_exact_conflict_floor": 0.005889274671835933
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.99854,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 17,
+      "negative_rows": 2,
+      "positive_rows": 15,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 17.2796630859375,
+      "unrestricted_bce_optimal_positive_probability": 0.8823529411764706,
+      "bce_floor_contribution": 0.0003758288251527485,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 17,
+      "distinct_port_pairs": 17,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 15
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 15
+        }
+      ],
+      "group_id": "C014",
+      "fraction_of_exact_conflict_floor": 0.005410878621128082
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998555,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 10,
+      "negative_rows": 3,
+      "positive_rows": 7,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 3.4559326171875,
+      "positive_weight": 8.0638427734375,
+      "unrestricted_bce_optimal_positive_probability": 0.7,
+      "bce_floor_contribution": 0.00037284198123467625,
+      "weighted_error_floor_contribution": 0.00018310546875,
+      "raw8_unique_inputs_inside_group": 10,
+      "distinct_port_pairs": 10,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 3
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "group_id": "C015",
+      "fraction_of_exact_conflict_floor": 0.0053678764647757185
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998536,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 10,
+      "negative_rows": 2,
+      "positive_rows": 8,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 9.2158203125,
+      "unrestricted_bce_optimal_positive_probability": 0.8,
+      "bce_floor_contribution": 0.00030542140108531974,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 10,
+      "distinct_port_pairs": 10,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 8
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 8
+        }
+      ],
+      "group_id": "C016",
+      "fraction_of_exact_conflict_floor": 0.004397209630995905
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999054,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 9,
+      "negative_rows": 2,
+      "positive_rows": 7,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 8.0638427734375,
+      "unrestricted_bce_optimal_positive_probability": 0.7777777777777778,
+      "bce_floor_contribution": 0.0002909763056346979,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 9,
+      "distinct_port_pairs": 9,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "group_id": "C017",
+      "fraction_of_exact_conflict_floor": 0.004189240861910253
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.99929,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 9,
+      "negative_rows": 2,
+      "positive_rows": 7,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 8.0638427734375,
+      "unrestricted_bce_optimal_positive_probability": 0.7777777777777778,
+      "bce_floor_contribution": 0.0002909763056346979,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 9,
+      "distinct_port_pairs": 9,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "group_id": "C018",
+      "fraction_of_exact_conflict_floor": 0.004189240861910253
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998556,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 8,
+      "negative_rows": 2,
+      "positive_rows": 6,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 6.911865234375,
+      "unrestricted_bce_optimal_positive_probability": 0.75,
+      "bce_floor_contribution": 0.0002745777073334025,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 8,
+      "distinct_port_pairs": 8,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 6
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 6
+        }
+      ],
+      "group_id": "C019",
+      "fraction_of_exact_conflict_floor": 0.003953147143103868
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998789,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 32,
+      "negative_rows": 1,
+      "positive_rows": 31,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 35.7113037109375,
+      "unrestricted_bce_optimal_positive_probability": 0.96875,
+      "bce_floor_contribution": 0.0002716031219819163,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 32,
+      "distinct_port_pairs": 32,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 31
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 31
+        }
+      ],
+      "group_id": "C020",
+      "fraction_of_exact_conflict_floor": 0.00391032147565131
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998541,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 26,
+      "negative_rows": 1,
+      "positive_rows": 25,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 28.7994384765625,
+      "unrestricted_bce_optimal_positive_probability": 0.9615384615384616,
+      "bce_floor_contribution": 0.00025870449016439904,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 26,
+      "distinct_port_pairs": 26,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 25
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 25
+        }
+      ],
+      "group_id": "C021",
+      "fraction_of_exact_conflict_floor": 0.003724617435747397
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999052,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 7,
+      "negative_rows": 2,
+      "positive_rows": 5,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 2.303955078125,
+      "positive_weight": 5.7598876953125,
+      "unrestricted_bce_optimal_positive_probability": 0.7142857142857143,
+      "bce_floor_contribution": 0.00025560834473247076,
+      "weighted_error_floor_contribution": 0.0001220703125,
+      "raw8_unique_inputs_inside_group": 7,
+      "distinct_port_pairs": 7,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 2
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "group_id": "C022",
+      "fraction_of_exact_conflict_floor": 0.003680041644843878
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999042,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 21,
+      "negative_rows": 1,
+      "positive_rows": 20,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 23.03955078125,
+      "unrestricted_bce_optimal_positive_probability": 0.9523809523809523,
+      "bce_floor_contribution": 0.00024538120856396875,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 21,
+      "distinct_port_pairs": 21,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 20
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 20
+        }
+      ],
+      "group_id": "C023",
+      "fraction_of_exact_conflict_floor": 0.003532799632667132
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999041,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 20,
+      "negative_rows": 1,
+      "positive_rows": 19,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 21.8875732421875,
+      "unrestricted_bce_optimal_positive_probability": 0.95,
+      "bce_floor_contribution": 0.00024232817791244214,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 20,
+      "distinct_port_pairs": 20,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 19
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 19
+        }
+      ],
+      "group_id": "C024",
+      "fraction_of_exact_conflict_floor": 0.0034888445734050327
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999039,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 16,
+      "negative_rows": 1,
+      "positive_rows": 15,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 17.2796630859375,
+      "unrestricted_bce_optimal_positive_probability": 0.9375,
+      "bce_floor_contribution": 0.00022831216670552663,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 16,
+      "distinct_port_pairs": 16,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 15
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 15
+        }
+      ],
+      "group_id": "C025",
+      "fraction_of_exact_conflict_floor": 0.003287053411265813
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998786,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 15,
+      "negative_rows": 1,
+      "positive_rows": 14,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 16.127685546875,
+      "unrestricted_bce_optimal_positive_probability": 0.9333333333333333,
+      "bce_floor_contribution": 0.00022424013683590882,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 15,
+      "distinct_port_pairs": 15,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 14
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 14
+        }
+      ],
+      "group_id": "C026",
+      "fraction_of_exact_conflict_floor": 0.0032284276276869327
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999038,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 14,
+      "negative_rows": 1,
+      "positive_rows": 13,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 14.9757080078125,
+      "unrestricted_bce_optimal_positive_probability": 0.9285714285714286,
+      "bce_floor_contribution": 0.00021987676804282488,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 14,
+      "distinct_port_pairs": 14,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 13
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 13
+        }
+      ],
+      "group_id": "C027",
+      "fraction_of_exact_conflict_floor": 0.0031656073825686937
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999047,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 14,
+      "negative_rows": 1,
+      "positive_rows": 13,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 14.9757080078125,
+      "unrestricted_bce_optimal_positive_probability": 0.9285714285714286,
+      "bce_floor_contribution": 0.00021987676804282488,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 14,
+      "distinct_port_pairs": 14,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 13
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 13
+        }
+      ],
+      "group_id": "C028",
+      "fraction_of_exact_conflict_floor": 0.0031656073825686937
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998538,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 13,
+      "negative_rows": 1,
+      "positive_rows": 12,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 13.82373046875,
+      "unrestricted_bce_optimal_positive_probability": 0.9230769230769231,
+      "bce_floor_contribution": 0.0002151771148403304,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 13,
+      "distinct_port_pairs": 13,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 12
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 12
+        }
+      ],
+      "group_id": "C029",
+      "fraction_of_exact_conflict_floor": 0.003097945587256005
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998805,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 13,
+      "negative_rows": 1,
+      "positive_rows": 12,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 13.82373046875,
+      "unrestricted_bce_optimal_positive_probability": 0.9230769230769231,
+      "bce_floor_contribution": 0.0002151771148403304,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 13,
+      "distinct_port_pairs": 13,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 12
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 12
+        }
+      ],
+      "group_id": "C030",
+      "fraction_of_exact_conflict_floor": 0.003097945587256005
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998797,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 12,
+      "negative_rows": 1,
+      "positive_rows": 11,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 12.6717529296875,
+      "unrestricted_bce_optimal_positive_probability": 0.9166666666666666,
+      "bce_floor_contribution": 0.00021008494852746144,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 12,
+      "distinct_port_pairs": 12,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 11
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 11
+        }
+      ],
+      "group_id": "C031",
+      "fraction_of_exact_conflict_floor": 0.0030246327065147987
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999043,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 12,
+      "negative_rows": 1,
+      "positive_rows": 11,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 12.6717529296875,
+      "unrestricted_bce_optimal_positive_probability": 0.9166666666666666,
+      "bce_floor_contribution": 0.00021008494852746144,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 12,
+      "distinct_port_pairs": 12,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 11
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 11
+        }
+      ],
+      "group_id": "C032",
+      "fraction_of_exact_conflict_floor": 0.0030246327065147987
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999044,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 11,
+      "negative_rows": 1,
+      "positive_rows": 10,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 11.519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.9090909090909091,
+      "bce_floor_contribution": 0.00020452862981211055,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 11,
+      "distinct_port_pairs": 11,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "group_id": "C033",
+      "fraction_of_exact_conflict_floor": 0.0029446373359179666
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999058,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 11,
+      "negative_rows": 1,
+      "positive_rows": 10,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 11.519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.9090909090909091,
+      "bce_floor_contribution": 0.00020452862981211055,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 11,
+      "distinct_port_pairs": 11,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "group_id": "C034",
+      "fraction_of_exact_conflict_floor": 0.0029446373359179666
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999291,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 11,
+      "negative_rows": 1,
+      "positive_rows": 10,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 11.519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.9090909090909091,
+      "bce_floor_contribution": 0.00020452862981211055,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 11,
+      "distinct_port_pairs": 11,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 10
+        }
+      ],
+      "group_id": "C035",
+      "fraction_of_exact_conflict_floor": 0.0029446373359179666
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998801,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 10,
+      "negative_rows": 1,
+      "positive_rows": 9,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 10.3677978515625,
+      "unrestricted_bce_optimal_positive_probability": 0.9,
+      "bce_floor_contribution": 0.0001984149007516163,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 10,
+      "distinct_port_pairs": 10,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "group_id": "C036",
+      "fraction_of_exact_conflict_floor": 0.0028566168232408116
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998803,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 10,
+      "negative_rows": 1,
+      "positive_rows": 9,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 10.3677978515625,
+      "unrestricted_bce_optimal_positive_probability": 0.9,
+      "bce_floor_contribution": 0.0001984149007516163,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 10,
+      "distinct_port_pairs": 10,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "group_id": "C037",
+      "fraction_of_exact_conflict_floor": 0.0028566168232408116
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999035,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 10,
+      "negative_rows": 1,
+      "positive_rows": 9,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 10.3677978515625,
+      "unrestricted_bce_optimal_positive_probability": 0.9,
+      "bce_floor_contribution": 0.0001984149007516163,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 10,
+      "distinct_port_pairs": 10,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "group_id": "C038",
+      "fraction_of_exact_conflict_floor": 0.0028566168232408116
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999036,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 10,
+      "negative_rows": 1,
+      "positive_rows": 9,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 10.3677978515625,
+      "unrestricted_bce_optimal_positive_probability": 0.9,
+      "bce_floor_contribution": 0.0001984149007516163,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 10,
+      "distinct_port_pairs": 10,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 9
+        }
+      ],
+      "group_id": "C039",
+      "fraction_of_exact_conflict_floor": 0.0028566168232408116
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998811,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 9,
+      "negative_rows": 1,
+      "positive_rows": 8,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 9.2158203125,
+      "unrestricted_bce_optimal_positive_probability": 0.8888888888888888,
+      "bce_floor_contribution": 0.00019161919327314987,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 9,
+      "distinct_port_pairs": 9,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 8
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 8
+        }
+      ],
+      "group_id": "C040",
+      "fraction_of_exact_conflict_floor": 0.0027587777383975202
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998547,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 8,
+      "negative_rows": 1,
+      "positive_rows": 7,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 8.0638427734375,
+      "unrestricted_bce_optimal_positive_probability": 0.875,
+      "bce_floor_contribution": 0.0001839698053009945,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 8,
+      "distinct_port_pairs": 8,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "group_id": "C041",
+      "fraction_of_exact_conflict_floor": 0.0026486480541551595
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999062,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 8,
+      "negative_rows": 1,
+      "positive_rows": 7,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 8.0638427734375,
+      "unrestricted_bce_optimal_positive_probability": 0.875,
+      "bce_floor_contribution": 0.0001839698053009945,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 8,
+      "distinct_port_pairs": 8,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 7
+        }
+      ],
+      "group_id": "C042",
+      "fraction_of_exact_conflict_floor": 0.0026486480541551595
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998537,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 7,
+      "negative_rows": 1,
+      "positive_rows": 6,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 6.911865234375,
+      "unrestricted_bce_optimal_positive_probability": 0.8571428571428571,
+      "bce_floor_contribution": 0.00017522059497185446,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 7,
+      "distinct_port_pairs": 7,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 6
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 6
+        }
+      ],
+      "group_id": "C043",
+      "fraction_of_exact_conflict_floor": 0.0025226840195911367
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998812,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 7,
+      "negative_rows": 1,
+      "positive_rows": 6,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 6.911865234375,
+      "unrestricted_bce_optimal_positive_probability": 0.8571428571428571,
+      "bce_floor_contribution": 0.00017522059497185446,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 7,
+      "distinct_port_pairs": 7,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 6
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 6
+        }
+      ],
+      "group_id": "C044",
+      "fraction_of_exact_conflict_floor": 0.0025226840195911367
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998565,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 6,
+      "negative_rows": 1,
+      "positive_rows": 5,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 5.7598876953125,
+      "unrestricted_bce_optimal_positive_probability": 0.8333333333333334,
+      "bce_floor_contribution": 0.00016500044270006275,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 6,
+      "distinct_port_pairs": 6,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "group_id": "C045",
+      "fraction_of_exact_conflict_floor": 0.002375542555895169
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999048,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 6,
+      "negative_rows": 1,
+      "positive_rows": 5,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 5.7598876953125,
+      "unrestricted_bce_optimal_positive_probability": 0.8333333333333334,
+      "bce_floor_contribution": 0.00016500044270006275,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 6,
+      "distinct_port_pairs": 6,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "group_id": "C046",
+      "fraction_of_exact_conflict_floor": 0.002375542555895169
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999292,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 6,
+      "negative_rows": 1,
+      "positive_rows": 5,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 5.7598876953125,
+      "unrestricted_bce_optimal_positive_probability": 0.8333333333333334,
+      "bce_floor_contribution": 0.00016500044270006275,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 6,
+      "distinct_port_pairs": 6,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 5
+        }
+      ],
+      "group_id": "C047",
+      "fraction_of_exact_conflict_floor": 0.002375542555895169
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998535,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 5,
+      "negative_rows": 1,
+      "positive_rows": 4,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 4.60791015625,
+      "unrestricted_bce_optimal_positive_probability": 0.8,
+      "bce_floor_contribution": 0.00015271070054265987,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 5,
+      "distinct_port_pairs": 5,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "group_id": "C048",
+      "fraction_of_exact_conflict_floor": 0.0021986048154979524
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998554,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 5,
+      "negative_rows": 1,
+      "positive_rows": 4,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 4.60791015625,
+      "unrestricted_bce_optimal_positive_probability": 0.8,
+      "bce_floor_contribution": 0.00015271070054265987,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 5,
+      "distinct_port_pairs": 5,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "group_id": "C049",
+      "fraction_of_exact_conflict_floor": 0.0021986048154979524
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999029,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 5,
+      "negative_rows": 1,
+      "positive_rows": 4,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 4.60791015625,
+      "unrestricted_bce_optimal_positive_probability": 0.8,
+      "bce_floor_contribution": 0.00015271070054265987,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 5,
+      "distinct_port_pairs": 5,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "group_id": "C050",
+      "fraction_of_exact_conflict_floor": 0.0021986048154979524
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999289,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 5,
+      "negative_rows": 1,
+      "positive_rows": 4,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 4.60791015625,
+      "unrestricted_bce_optimal_positive_probability": 0.8,
+      "bce_floor_contribution": 0.00015271070054265987,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 5,
+      "distinct_port_pairs": 5,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "group_id": "C051",
+      "fraction_of_exact_conflict_floor": 0.0021986048154979524
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999294,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 5,
+      "negative_rows": 1,
+      "positive_rows": 4,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 4.60791015625,
+      "unrestricted_bce_optimal_positive_probability": 0.8,
+      "bce_floor_contribution": 0.00015271070054265987,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 5,
+      "distinct_port_pairs": 5,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 4
+        }
+      ],
+      "group_id": "C052",
+      "fraction_of_exact_conflict_floor": 0.0021986048154979524
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999022,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 4,
+      "negative_rows": 1,
+      "positive_rows": 3,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 3.4559326171875,
+      "unrestricted_bce_optimal_positive_probability": 0.75,
+      "bce_floor_contribution": 0.00013728885366670124,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 4,
+      "distinct_port_pairs": 4,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3
+        }
+      ],
+      "group_id": "C053",
+      "fraction_of_exact_conflict_floor": 0.001976573571551934
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999059,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 4,
+      "negative_rows": 1,
+      "positive_rows": 3,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 3.4559326171875,
+      "unrestricted_bce_optimal_positive_probability": 0.75,
+      "bce_floor_contribution": 0.00013728885366670124,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 4,
+      "distinct_port_pairs": 4,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3
+        }
+      ],
+      "group_id": "C054",
+      "fraction_of_exact_conflict_floor": 0.001976573571551934
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999307,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 4,
+      "negative_rows": 1,
+      "positive_rows": 3,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 3.4559326171875,
+      "unrestricted_bce_optimal_positive_probability": 0.75,
+      "bce_floor_contribution": 0.00013728885366670124,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 4,
+      "distinct_port_pairs": 4,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 3
+        }
+      ],
+      "group_id": "C055",
+      "fraction_of_exact_conflict_floor": 0.001976573571551934
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999308,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 3,
+      "negative_rows": 1,
+      "positive_rows": 2,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 2.303955078125,
+      "unrestricted_bce_optimal_positive_probability": 0.6666666666666666,
+      "bce_floor_contribution": 0.0001165492251516381,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 3,
+      "distinct_port_pairs": 3,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 2
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 2
+        }
+      ],
+      "group_id": "C056",
+      "fraction_of_exact_conflict_floor": 0.0016779812203753471
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998306,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C057",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998524,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C058",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998527,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C059",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998772,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C060",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.998821,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C061",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.999296,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C062",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    },
+    {
+      "support": "mixed",
+      "view": "ports_zero8",
+      "input": {
+        "ip_protocol": 6,
+        "duration_seconds": 2.99931,
+        "orig_pkts": 3,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 180,
+        "resp_ip_bytes": 0
+      },
+      "rows": 2,
+      "negative_rows": 1,
+      "positive_rows": 1,
+      "domains": [
+        "source"
+      ],
+      "source_internal_conflict": true,
+      "target_internal_conflict": false,
+      "cross_source_target_conflict": false,
+      "within_at_least_one_capture_conflict": true,
+      "between_source_captures_opposite_labels": false,
+      "negative_weight": 1.1519775390625,
+      "positive_weight": 1.1519775390625,
+      "unrestricted_bce_optimal_positive_probability": 0.5,
+      "bce_floor_contribution": 8.461269293944645e-05,
+      "weighted_error_floor_contribution": 6.103515625e-05,
+      "raw8_unique_inputs_inside_group": 2,
+      "distinct_port_pairs": 2,
+      "family_counts": [
+        {
+          "domain": "source",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "domain": "source",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "capture_family_counts": [
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Benign",
+          "label": 0,
+          "rows": 1
+        },
+        {
+          "source_id": "CTU-IoT-Malware-Capture-1-1",
+          "family": "Scanning",
+          "label": 1,
+          "rows": 1
+        }
+      ],
+      "group_id": "C063",
+      "fraction_of_exact_conflict_floor": 0.001218184930642427
+    }
+  ],
+  "exact_B_D_matches_by_profile": [
+    {
+      "profile": "B",
+      "cells": 3,
+      "rows": 5531,
+      "normal_rows": 5459,
+      "attack_rows": 72,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0
+    },
+    {
+      "profile": "D",
+      "cells": 12,
+      "rows": 11528,
+      "normal_rows": 9564,
+      "attack_rows": 1964,
+      "exact_match_rows": 1,
+      "exact_match_normal_rows": 1,
+      "exact_match_attack_rows": 0
+    }
+  ],
+  "exact_B_D_matches_by_cell": [
+    {
+      "source_id": "TQH-B_i3600_j0",
+      "rows": 1829,
+      "normal_rows": 1805,
+      "attack_rows": 24,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-B_i3600_j30",
+      "rows": 1863,
+      "normal_rows": 1839,
+      "attack_rows": 24,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-B_i3600_j70",
+      "rows": 1839,
+      "normal_rows": 1815,
+      "attack_rows": 24,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i1800_j0",
+      "rows": 847,
+      "normal_rows": 811,
+      "attack_rows": 36,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i1800_j30",
+      "rows": 835,
+      "normal_rows": 800,
+      "attack_rows": 35,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i1800_j70",
+      "rows": 826,
+      "normal_rows": 799,
+      "attack_rows": 27,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i300_j0",
+      "rows": 684,
+      "normal_rows": 550,
+      "attack_rows": 134,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i300_j30",
+      "rows": 662,
+      "normal_rows": 547,
+      "attack_rows": 115,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i300_j70",
+      "rows": 663,
+      "normal_rows": 564,
+      "attack_rows": 99,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i30_j0",
+      "rows": 1230,
+      "normal_rows": 676,
+      "attack_rows": 554,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i30_j30",
+      "rows": 1169,
+      "normal_rows": 687,
+      "attack_rows": 482,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i30_j70",
+      "rows": 1067,
+      "normal_rows": 656,
+      "attack_rows": 411,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i3600_j0",
+      "rows": 1175,
+      "normal_rows": 1151,
+      "attack_rows": 24,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    },
+    {
+      "source_id": "TQH-D_i3600_j30",
+      "rows": 1176,
+      "normal_rows": 1152,
+      "attack_rows": 24,
+      "exact_match_rows": 1,
+      "exact_match_normal_rows": 1,
+      "exact_match_attack_rows": 0,
+      "matched_groups": [
+        "C001"
+      ]
+    },
+    {
+      "source_id": "TQH-D_i3600_j70",
+      "rows": 1194,
+      "normal_rows": 1171,
+      "attack_rows": 23,
+      "exact_match_rows": 0,
+      "exact_match_normal_rows": 0,
+      "exact_match_attack_rows": 0,
+      "matched_groups": []
+    }
+  ],
+  "exact_B_D_matching_row_identities_and_inputs": [
+    {
+      "source_id": "TQH-D_i3600_j30",
+      "row_id": 1172,
+      "family": "Benign",
+      "ip_protocol": 6,
+      "orig_port": 53104,
+      "resp_port": 443,
+      "duration_seconds": -1.0,
+      "orig_pkts": 1,
+      "resp_pkts": 0,
+      "orig_ip_bytes": 60,
+      "resp_ip_bytes": 0,
+      "conflict_group": "C001"
+    }
+  ]
+}
