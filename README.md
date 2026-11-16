@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**2026-11-16模型与训练实现**　[实验室运行指南](docs/MODEL_TRAINING_LAB.md)：`model-training-r29-v1` 已接通语义输入、HGB/官方 TabM/去 PLE 消融、V 选轮、P 重训、全模型冻结、C 校准、逐单元比较与独立成本测量。最多 14 次拟合，三种子全部报告。[104项合成检查和真实输入入口校验通过](docs/model_training_implementation_20261116/validation.json)，真实训练尚未执行；下方设计阶段记录保留。
+
 **2026-11-16模型与训练设计重审**　[完整决定](docs/MODEL_TRAINING_DESIGN_REVIEW_20261116.md)：对照官方模型，固定输入语义、训练/选轮/校准角色及结果分支。未来仅新增官方TabM和去数值嵌入消融，与HGB比较，最多14次拟合；本轮为设计审查，没有开始训练。旧权重补算只解释R26。
 
 **2026-11-16训练诊断推进**　[新证据与路线决定](docs/TRAINING_DIAGNOSIS_DECISION_20261116.md)：端口置零造成63组旧来源内部异标签输入，涉及3657条记录；这些组未精确覆盖B/D攻击。已准备[8份冻结权重的训练支持诊断](docs/TRAINING_DIAGNOSIS_LAB.md)，0拟合，B/D分数复用；真实训练支持评分等待实验室执行。
