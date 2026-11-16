@@ -1,0 +1,72 @@
+{
+  "schema": "tracelight-model-design-review-v1",
+  "date": "2026-11-16",
+  "status": "design_only",
+  "base_commit": "5a09d55941cfdca23ed12b4aea6c72ebfeda2254",
+  "new_training_executed": false,
+  "new_model_forward_executed": false,
+  "question": "Does an author-based TabM pipeline improve compliant development detection or cost beyond current strong baselines under the same target-label budget?",
+  "task": "historically supervised C2 detection after complete Zeek flow availability",
+  "input": {
+    "continuous": ["duration_seconds", "orig_pkts", "resp_pkts", "orig_ip_bytes", "resp_ip_bytes"],
+    "categorical": ["ip_protocol"],
+    "ports": "audit only; excluded from target C2 learned candidates, not a universal policy",
+    "missing": "restore -1, fit-only median imputation, separate binary mask per continuous field",
+    "all_missing_fill": 0,
+    "zero_variance_scale": 1,
+    "constant_standardized_PLE_edges": [-1.0, 1.0],
+    "protocol_categories": [1, 6, 17, 58, 132, "UNKNOWN"],
+    "missing_indicator_categories": [0, 1],
+    "missing_masks_enter_PLE": false,
+    "transform": "nonnegative log1p followed by fit-only StandardScaler; no quantile clipping",
+    "identity_features": false
+  },
+  "roles": {
+    "F": {"cells": ["TQH-B_i30_j0", "TQH-B_i30_j30", "TQH-B_i30_j70"], "normal": 5848, "attack": 90},
+    "V": {"cells": ["TQH-B_i300_j0", "TQH-B_i300_j30", "TQH-B_i300_j70"], "normal": 4654, "attack": 90},
+    "P": {"union": ["F", "V"], "normal": 10502, "attack": 180},
+    "C": {"cells": ["TQH-B_i1800_j0", "TQH-B_i1800_j30", "TQH-B_i1800_j70"], "normal": 5511, "use_attack": false},
+    "E": {"cells": ["TQH-B_i3600_j0", "TQH-B_i3600_j30", "TQH-B_i3600_j70"], "normal": 5459, "attack": 72, "already_opened": true},
+    "D": {"cells": "all 12 registered TQH-D cells", "normal": 9564, "attack": 1964, "already_opened": true}
+  },
+  "training": {
+    "source_mixing": false,
+    "row_weight": 1.0,
+    "normal_subsampling": false,
+    "neural_seeds": [17, 29, 43],
+    "selection": {"partition": "V", "primary": "pooled standardized roc_auc_score(max_fpr=0.01)", "tie_break": ["lower natural-weight NLL", "earlier stage"], "macro_primary": false},
+    "tabm": {"package": "0.0.3", "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4", "numeric_embeddings_package": "0.0.12", "architecture": "tabm", "n_blocks": 2, "d_block": 512, "k": 32, "dropout": 0.1, "embedding": "piecewise_linear_B", "max_bins": 48, "embedding_dim": 16, "embedding_activation": false, "optimizer": "AdamW", "lr": 0.002, "weight_decay": 0.0003, "batch": 256, "gradient_clip_norm": 1.0, "max_epochs": 200, "patience": 16, "train_loss": "mean per-member BCE", "inference": "mean member probability"},
+    "hgb": {"max_iter": 200, "max_leaf_nodes": 31, "learning_rate": 0.1, "random_state": 20261111, "early_stopping": false, "selection": "staged predict_proba on V", "sklearn": "1.5.1"},
+    "ablation": {"name": "TabM_without_PLE", "change": "remove continuous numerical embeddings only", "n_blocks": 2, "same_preprocessing_objective_selection": true},
+    "final_refit": "fit P once from scratch at V-selected epoch or stage; refit preprocessing on P; no second selection on V",
+    "development_trajectories": 7,
+    "final_refits": 7,
+    "max_fits": 14,
+    "hyperparameter_grid": false
+  },
+  "calibration": {"partition": "C normal only", "budget": 0.01, "shared_threshold_across_cells_per_model": true, "decision": "strictly greater than threshold", "evaluation_recalibration": false},
+  "historical_references": ["old HGB with original threshold", "fixed UDP/443 duration >=30s rule", "old HGB union fixed rule", "R26 target ports_zero8 HGB and all MLP seeds"],
+  "primary_detection_reference": "new HGB under identical P/C information and row weights",
+  "legacy_capability_reference": "old HGB with original threshold union fixed UDP443 duration30s rule",
+  "development_candidate_requirement": {
+    "qualification": "FP <= floor(0.01 * normal_rows) in every B and D cell; B TP total = 72",
+    "comparison": "For each reference, TP must not decrease in any reference-qualified cell. At least one D cell must strictly improve qualified TP or repair reference FPR failure.",
+    "required_references": ["primary_detection_reference", "legacy_capability_reference"],
+    "seeds": "each of 17, 29, 43 must satisfy all conditions",
+    "over_budget_reference": "report raw TPs; they are not an obligatory qualified-TP bound",
+    "identity_losses": "report all added and lost TP identities even when per-cell counts do not decrease",
+    "cost_tradeoff": "report; no automatic adoption based on undefined similar-detection tolerance"
+  },
+  "PLE_detection_benefit": "Same-seed full vs no-PLE at final fixed C thresholds: full is qualified in every B/D cell, no TP drop in any ablation-qualified cell, and at least one D cell improves qualification or qualified TP, consistently for all three seeds. V pAUC alone is insufficient.",
+  "not_added": ["TabICL new run", "TabPFN variants", "CatBoost new run", "source weighting sweep", "KD", "new loss", "additional seeds", "capacity grid"],
+  "outcomes": {
+    "all_seed_real_gain": "development candidate only; report each cell and added/lost old TPs; independent confirmation separate",
+    "pauc_only_or_fpr_failure": "no deployment-gain claim; no E/D threshold search",
+    "one_seed_gain": "report instability; no extra seeds",
+    "ple_no_gain": "retain negative ablation; no bin or embedding-size sweep",
+    "hgb_wins_or_tabm_fails": "retain HGB as reference; close this neural branch; if HGB violates budgets, no newly qualified deployment model exists",
+    "detection_cost_tradeoff": "report all detection and cost outcomes including preprocessing and memory; no automatic adoption rule",
+    "missing_matched_normal_business": "limit claims to observed business; no general C2/download claim"
+  },
+  "execution_scope": "Future implementation binds raw identities, hashes and artifacts before laboratory execution. This JSON is not an executable lab registration."
+}

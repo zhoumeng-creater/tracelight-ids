@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "design role counts match recomputed archive evidence",
+    "7 trajectories plus 7 refits equals 14",
+    "local document links resolve",
+    "audit script executed on archived data",
+    "ruff check passed",
+    "git diff --check passed"
+  ],
+  "model_loads": 0,
+  "model_forward_calls": 0,
+  "new_fits": 0
+}

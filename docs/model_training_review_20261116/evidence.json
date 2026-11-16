@@ -1,0 +1,763 @@
+{
+  "status": "recomputed",
+  "model_loads": 0,
+  "model_forward_calls": 0,
+  "new_fits": 0,
+  "downloads": 0,
+  "provenance": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\protocol.json",
+      "bytes": 49057,
+      "sha256": "0804e735c850b6a9eda899d7d84673478686df147826811d81fe19230bee3907"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\training-identities.parquet",
+      "bytes": 77685,
+      "sha256": "717cf68138abf0425d1922137e17c504a18b49efa02fa255d4c26e0fed5b588f"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\训练诊断推进_20261116\\recovered-training.parquet",
+      "bytes": 275009,
+      "sha256": "8289c4163d839d8431d3d4e76c6bc3d316e08c042107d5c8c7aca5766e9db88c"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\训练诊断推进_20261116\\conflict_localization.json",
+      "bytes": 133242,
+      "sha256": "ac08dbd8351e135d1682f16ea0a630a8f84b60c7a88c677934a971aa22f53f7e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-B_i3600_j0.parquet",
+      "bytes": 253938,
+      "sha256": "4bfaeb117c7b49cd7a3d1822309dd1d3605307328fca8d92ba8f7afb08781caf"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-B_i3600_j30.parquet",
+      "bytes": 255160,
+      "sha256": "566afabbd8f476186dff62d0522491ea8ed1ecbe81ce663235ddea6a8e594f12"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-B_i3600_j70.parquet",
+      "bytes": 253893,
+      "sha256": "df9516848afad66239ead95e2fbf0d3a405d2589186ad6a277de8174ff141747"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i30_j0.parquet",
+      "bytes": 187175,
+      "sha256": "7c2032e48358722a5bc945621343ab12f1990488a92661004d66782f5921a22a"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i30_j30.parquet",
+      "bytes": 180389,
+      "sha256": "aa41d8e8c2b864ead9f9a7851f87b96335a685a7b14e45f8bed28d2546539357"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i30_j70.parquet",
+      "bytes": 167040,
+      "sha256": "7c223627ed16cadbc11f1537d638a2d622502242d550d4ca551b53faf3ee0a02"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i300_j0.parquet",
+      "bytes": 118566,
+      "sha256": "b088b5c5080e68229a045286b0c34acd1c17c55e56a53b5423b8ca4cf19f473a"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i300_j30.parquet",
+      "bytes": 114200,
+      "sha256": "dd1082e11e5a2557eb36496f12e6beeac5628f37c71b7d5643ba1c3babe6ea46"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i300_j70.parquet",
+      "bytes": 114450,
+      "sha256": "f65b8e0f64d460342dcbde08b5b5dc9ff420e839a292f1e67efcab76df008217"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i1800_j0.parquet",
+      "bytes": 134109,
+      "sha256": "ad97036e36272e1f07bd190be1dd11c0c87414a55814acfbdafeab74a0e90bdb"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i1800_j30.parquet",
+      "bytes": 133262,
+      "sha256": "c25eccc36545907c1cb20b7bb1427e3da0b86fc642319e624ab9510acc017f80"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i1800_j70.parquet",
+      "bytes": 132236,
+      "sha256": "d37a6edf7e6b31a99d2d58d0b99dabdcd7213923a0ce607e22cc7de425c01fea"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i3600_j0.parquet",
+      "bytes": 175966,
+      "sha256": "2952215e5652688666efb54723e9e366b624e18a95d60e5b99a0cf359062806f"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i3600_j30.parquet",
+      "bytes": 174069,
+      "sha256": "fd747e91c8667decbffe8a4596170074d95505e480874e2d90418094aa94c75d"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\TQH-D_i3600_j70.parquet",
+      "bytes": 176505,
+      "sha256": "0ecea09abd9548984e8d4ebec088e2bffd7a444fe19c37188b4b722f74882dc6"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261115_第二十六轮历史监督\\回传\\evidence\\replay\\calibration.parquet",
+      "bytes": 717932,
+      "sha256": "db9bee9f246306f9f3cd85b12aba72de0bb2368c2cfce8f00bc2d88b0d072b5c"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\response-evidence-20261112\\TQH-C2_labels_v110.zip",
+      "bytes": 31023638,
+      "sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58"
+    }
+  ],
+  "splits": {
+    "F_i30": {
+      "rows": 5938,
+      "normal": 5848,
+      "families": {
+        "Benign": 5848,
+        "ExternalC2": 90
+      },
+      "C2": 90,
+      "normal_UDP443": 604,
+      "normal_TCP8443": 0,
+      "cells": [
+        {
+          "source_id": "TQH-B_i30_j0",
+          "rows": 1965,
+          "normal": 1935,
+          "families": {
+            "Benign": 1935,
+            "ExternalC2": 30
+          },
+          "C2": 30,
+          "normal_UDP443": 196,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1965,
+          "first_flow_end_ms": 1784538920198,
+          "last_flow_end_ms": 1784541903269,
+          "manifest_start_utc": "2026-07-20T09:13:56.917195Z",
+          "manifest_end_utc": "2026-07-20T10:05:15.108734Z"
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "rows": 2009,
+          "normal": 1979,
+          "families": {
+            "Benign": 1979,
+            "ExternalC2": 30
+          },
+          "C2": 30,
+          "normal_UDP443": 207,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 2009,
+          "first_flow_end_ms": 1784541998270,
+          "last_flow_end_ms": 1784544985504,
+          "manifest_start_utc": "2026-07-20T10:05:15.681386Z",
+          "manifest_end_utc": "2026-07-20T10:56:37.688302Z"
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "rows": 1964,
+          "normal": 1934,
+          "families": {
+            "Benign": 1934,
+            "ExternalC2": 30
+          },
+          "C2": 30,
+          "normal_UDP443": 201,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1964,
+          "first_flow_end_ms": 1784545089125,
+          "last_flow_end_ms": 1784548067741,
+          "manifest_start_utc": "2026-07-20T10:56:38.236983Z",
+          "manifest_end_utc": "2026-07-20T11:48:00.069549Z"
+        }
+      ]
+    },
+    "V_i300": {
+      "rows": 4744,
+      "normal": 4654,
+      "families": {
+        "Benign": 4654,
+        "ExternalC2": 90
+      },
+      "C2": 90,
+      "normal_UDP443": 477,
+      "normal_TCP8443": 0,
+      "cells": [
+        {
+          "source_id": "TQH-B_i300_j0",
+          "rows": 1599,
+          "normal": 1569,
+          "families": {
+            "Benign": 1569,
+            "ExternalC2": 30
+          },
+          "C2": 30,
+          "normal_UDP443": 163,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1599,
+          "first_flow_end_ms": 1784548178514,
+          "last_flow_end_ms": 1784555170578,
+          "manifest_start_utc": "2026-07-20T11:48:00.613767Z",
+          "manifest_end_utc": "2026-07-20T13:46:21.913327Z"
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "rows": 1572,
+          "normal": 1542,
+          "families": {
+            "Benign": 1542,
+            "ExternalC2": 30
+          },
+          "C2": 30,
+          "normal_UDP443": 158,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1572,
+          "first_flow_end_ms": 1784555295043,
+          "last_flow_end_ms": 1784562272395,
+          "manifest_start_utc": "2026-07-20T13:46:22.408022Z",
+          "manifest_end_utc": "2026-07-20T15:44:43.809856Z"
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "rows": 1573,
+          "normal": 1543,
+          "families": {
+            "Benign": 1543,
+            "ExternalC2": 30
+          },
+          "C2": 30,
+          "normal_UDP443": 156,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1573,
+          "first_flow_end_ms": 1784562383814,
+          "last_flow_end_ms": 1784569371897,
+          "manifest_start_utc": "2026-07-20T15:44:44.288424Z",
+          "manifest_end_utc": "2026-07-20T17:43:05.645151Z"
+        }
+      ]
+    },
+    "C_i1800": {
+      "rows": 5511,
+      "normal": 5511,
+      "families": {
+        "Benign": 5511
+      },
+      "C2": 0,
+      "normal_UDP443": 662,
+      "normal_TCP8443": 0,
+      "cells": [
+        {
+          "source_id": "TQH-B_i1800_j0",
+          "rows": 1834,
+          "normal": 1834,
+          "families": {
+            "Benign": 1834
+          },
+          "C2": 0,
+          "normal_UDP443": 223,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1858,
+          "first_flow_end_ms": 1784569501350,
+          "last_flow_end_ms": 1784579203175,
+          "manifest_start_utc": "2026-07-20T17:43:06.110974Z",
+          "manifest_end_utc": "2026-07-20T20:26:55.931530Z"
+        },
+        {
+          "source_id": "TQH-B_i1800_j30",
+          "rows": 1829,
+          "normal": 1829,
+          "families": {
+            "Benign": 1829
+          },
+          "C2": 0,
+          "normal_UDP443": 218,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1853,
+          "first_flow_end_ms": 1784579342222,
+          "last_flow_end_ms": 1784589031717,
+          "manifest_start_utc": "2026-07-20T20:26:56.460952Z",
+          "manifest_end_utc": "2026-07-20T23:10:45.487467Z"
+        },
+        {
+          "source_id": "TQH-B_i1800_j70",
+          "rows": 1848,
+          "normal": 1848,
+          "families": {
+            "Benign": 1848
+          },
+          "C2": 0,
+          "normal_UDP443": 221,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1872,
+          "first_flow_end_ms": 1784589172148,
+          "last_flow_end_ms": 1784598863066,
+          "manifest_start_utc": "2026-07-20T23:10:46.035500Z",
+          "manifest_end_utc": "2026-07-21T01:54:35.322944Z"
+        }
+      ],
+      "excluded_source_rows": 72,
+      "C2_used_for_calibration": 0,
+      "excluded_labels_verified": true,
+      "full_source_author_labels": {
+        "TQH-B_i1800_j0": {
+          "benign": 1834,
+          "malicious_c2": 24
+        },
+        "TQH-B_i1800_j30": {
+          "benign": 1829,
+          "malicious_c2": 24
+        },
+        "TQH-B_i1800_j70": {
+          "benign": 1848,
+          "malicious_c2": 24
+        }
+      },
+      "full_source_C2": 72
+    },
+    "E_i3600": {
+      "rows": 5531,
+      "normal": 5459,
+      "families": {
+        "Benign": 5459,
+        "ExternalC2": 72
+      },
+      "C2": 72,
+      "normal_UDP443": 651,
+      "normal_TCP8443": 0,
+      "cells": [
+        {
+          "source_id": "TQH-B_i3600_j0",
+          "rows": 1829,
+          "normal": 1805,
+          "families": {
+            "Benign": 1805,
+            "ExternalC2": 24
+          },
+          "C2": 24,
+          "normal_UDP443": 216,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1829,
+          "first_flow_end_ms": 1784598963391,
+          "last_flow_end_ms": 1784608693458,
+          "manifest_start_utc": "2026-07-21T01:54:35.884409Z",
+          "manifest_end_utc": "2026-07-21T04:38:24.963715Z"
+        },
+        {
+          "source_id": "TQH-B_i3600_j30",
+          "rows": 1863,
+          "normal": 1839,
+          "families": {
+            "Benign": 1839,
+            "ExternalC2": 24
+          },
+          "C2": 24,
+          "normal_UDP443": 224,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1863,
+          "first_flow_end_ms": 1784608797801,
+          "last_flow_end_ms": 1784618521616,
+          "manifest_start_utc": "2026-07-21T04:38:25.495221Z",
+          "manifest_end_utc": "2026-07-21T07:22:14.534498Z"
+        },
+        {
+          "source_id": "TQH-B_i3600_j70",
+          "rows": 1839,
+          "normal": 1815,
+          "families": {
+            "Benign": 1815,
+            "ExternalC2": 24
+          },
+          "C2": 24,
+          "normal_UDP443": 211,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1839,
+          "first_flow_end_ms": 1784618627332,
+          "last_flow_end_ms": 1784628352628,
+          "manifest_start_utc": "2026-07-21T07:22:15.056076Z",
+          "manifest_end_utc": "2026-07-21T10:06:03.835084Z"
+        }
+      ]
+    },
+    "D_transport": {
+      "rows": 11528,
+      "normal": 9564,
+      "families": {
+        "Benign": 9564,
+        "ExternalC2": 1964
+      },
+      "C2": 1964,
+      "normal_UDP443": 1082,
+      "normal_TCP8443": 0,
+      "cells": [
+        {
+          "source_id": "TQH-D_i30_j0",
+          "rows": 1230,
+          "normal": 676,
+          "families": {
+            "Benign": 676,
+            "ExternalC2": 554
+          },
+          "C2": 554,
+          "normal_UDP443": 70,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1230,
+          "first_flow_end_ms": 1784783177218,
+          "last_flow_end_ms": 1784784242911,
+          "manifest_start_utc": "2026-07-23T05:04:56.372086Z",
+          "manifest_end_utc": "2026-07-23T05:24:12.599174Z"
+        },
+        {
+          "source_id": "TQH-D_i30_j30",
+          "rows": 1169,
+          "normal": 687,
+          "families": {
+            "Benign": 687,
+            "ExternalC2": 482
+          },
+          "C2": 482,
+          "normal_UDP443": 70,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1169,
+          "first_flow_end_ms": 1784784338196,
+          "last_flow_end_ms": 1784785402978,
+          "manifest_start_utc": "2026-07-23T05:24:12.998345Z",
+          "manifest_end_utc": "2026-07-23T05:43:32.113276Z"
+        },
+        {
+          "source_id": "TQH-D_i30_j70",
+          "rows": 1067,
+          "normal": 656,
+          "families": {
+            "Benign": 656,
+            "ExternalC2": 411
+          },
+          "C2": 411,
+          "normal_UDP443": 70,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1067,
+          "first_flow_end_ms": 1784785497920,
+          "last_flow_end_ms": 1784786562276,
+          "manifest_start_utc": "2026-07-23T05:43:32.499332Z",
+          "manifest_end_utc": "2026-07-23T06:02:51.719203Z"
+        },
+        {
+          "source_id": "TQH-D_i300_j0",
+          "rows": 684,
+          "normal": 550,
+          "families": {
+            "Benign": 550,
+            "ExternalC2": 134
+          },
+          "C2": 134,
+          "normal_UDP443": 53,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 684,
+          "first_flow_end_ms": 1784786706971,
+          "last_flow_end_ms": 1784789218191,
+          "manifest_start_utc": "2026-07-23T06:02:52.096664Z",
+          "manifest_end_utc": "2026-07-23T06:47:11.014216Z"
+        },
+        {
+          "source_id": "TQH-D_i300_j30",
+          "rows": 662,
+          "normal": 547,
+          "families": {
+            "Benign": 547,
+            "ExternalC2": 115
+          },
+          "C2": 115,
+          "normal_UDP443": 57,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 662,
+          "first_flow_end_ms": 1784789355291,
+          "last_flow_end_ms": 1784791873108,
+          "manifest_start_utc": "2026-07-23T06:47:11.360455Z",
+          "manifest_end_utc": "2026-07-23T07:31:29.595469Z"
+        },
+        {
+          "source_id": "TQH-D_i300_j70",
+          "rows": 663,
+          "normal": 564,
+          "families": {
+            "Benign": 564,
+            "ExternalC2": 99
+          },
+          "C2": 99,
+          "normal_UDP443": 57,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 663,
+          "first_flow_end_ms": 1784792012313,
+          "last_flow_end_ms": 1784794537669,
+          "manifest_start_utc": "2026-07-23T07:31:29.936343Z",
+          "manifest_end_utc": "2026-07-23T08:15:48.205486Z"
+        },
+        {
+          "source_id": "TQH-D_i1800_j0",
+          "rows": 847,
+          "normal": 811,
+          "families": {
+            "Benign": 811,
+            "ExternalC2": 36
+          },
+          "C2": 36,
+          "normal_UDP443": 99,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 847,
+          "first_flow_end_ms": 1784794657988,
+          "last_flow_end_ms": 1784798962052,
+          "manifest_start_utc": "2026-07-23T08:15:48.565147Z",
+          "manifest_end_utc": "2026-07-23T09:29:35.096728Z"
+        },
+        {
+          "source_id": "TQH-D_i1800_j30",
+          "rows": 835,
+          "normal": 800,
+          "families": {
+            "Benign": 800,
+            "ExternalC2": 35
+          },
+          "C2": 35,
+          "normal_UDP443": 96,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 835,
+          "first_flow_end_ms": 1784799091712,
+          "last_flow_end_ms": 1784803388639,
+          "manifest_start_utc": "2026-07-23T09:29:35.463371Z",
+          "manifest_end_utc": "2026-07-23T10:43:21.300109Z"
+        },
+        {
+          "source_id": "TQH-D_i1800_j70",
+          "rows": 826,
+          "normal": 799,
+          "families": {
+            "Benign": 799,
+            "ExternalC2": 27
+          },
+          "C2": 27,
+          "normal_UDP443": 95,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 826,
+          "first_flow_end_ms": 1784803521132,
+          "last_flow_end_ms": 1784807817331,
+          "manifest_start_utc": "2026-07-23T10:43:21.683829Z",
+          "manifest_end_utc": "2026-07-23T11:57:07.375510Z"
+        },
+        {
+          "source_id": "TQH-D_i3600_j0",
+          "rows": 1175,
+          "normal": 1151,
+          "families": {
+            "Benign": 1151,
+            "ExternalC2": 24
+          },
+          "C2": 24,
+          "normal_UDP443": 140,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1175,
+          "first_flow_end_ms": 1784807955681,
+          "last_flow_end_ms": 1784814041436,
+          "manifest_start_utc": "2026-07-23T11:57:07.764496Z",
+          "manifest_end_utc": "2026-07-23T13:40:54.483000Z"
+        },
+        {
+          "source_id": "TQH-D_i3600_j30",
+          "rows": 1176,
+          "normal": 1152,
+          "families": {
+            "Benign": 1152,
+            "ExternalC2": 24
+          },
+          "C2": 24,
+          "normal_UDP443": 137,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1176,
+          "first_flow_end_ms": 1784814171628,
+          "last_flow_end_ms": 1784820271594,
+          "manifest_start_utc": "2026-07-23T13:40:54.914903Z",
+          "manifest_end_utc": "2026-07-23T15:24:41.486191Z"
+        },
+        {
+          "source_id": "TQH-D_i3600_j70",
+          "rows": 1194,
+          "normal": 1171,
+          "families": {
+            "Benign": 1171,
+            "ExternalC2": 23
+          },
+          "C2": 23,
+          "normal_UDP443": 138,
+          "normal_TCP8443": 0,
+          "registered_source_rows": 1194,
+          "first_flow_end_ms": 1784820382898,
+          "last_flow_end_ms": 1784826495951,
+          "manifest_start_utc": "2026-07-23T15:24:41.913961Z",
+          "manifest_end_utc": "2026-07-23T17:08:28.685089Z"
+        }
+      ]
+    }
+  },
+  "target_protocol_by_label": [
+    {
+      "label": 0,
+      "ip_protocol": 1,
+      "rows": 417
+    },
+    {
+      "label": 0,
+      "ip_protocol": 6,
+      "rows": 9004
+    },
+    {
+      "label": 0,
+      "ip_protocol": 17,
+      "rows": 1081
+    },
+    {
+      "label": 1,
+      "ip_protocol": 17,
+      "rows": 180
+    }
+  ],
+  "strict_role_chronology": true,
+  "split_interpretation": "Already-opened development roles; time and beacon-interval changes are coupled. The split does not create a new blind or independent-implementation validation.",
+  "B_flow_observation_spans": {
+    "all_C2": {
+      "rows": 72,
+      "min_seconds": 0.02568197250366211,
+      "median_seconds": 4852.036764025688,
+      "max_seconds": 9706.06308221817,
+      "over_seconds": {
+        "30": 66,
+        "60": 57,
+        "300": 36,
+        "1800": 36,
+        "3600": 36
+      }
+    },
+    "lower_half": {
+      "rows": 36,
+      "min_seconds": 0.02568197250366211,
+      "median_seconds": 60.17893600463867,
+      "max_seconds": 120.34698510169983,
+      "over_seconds": {
+        "30": 30,
+        "60": 21,
+        "300": 0,
+        "1800": 0,
+        "3600": 0
+      }
+    },
+    "upper_half": {
+      "rows": 36,
+      "min_seconds": 9583.726542949677,
+      "median_seconds": 9643.993663430214,
+      "max_seconds": 9706.06308221817,
+      "over_seconds": {
+        "30": 36,
+        "60": 36,
+        "300": 36,
+        "1800": 36,
+        "3600": 36
+      }
+    },
+    "same_service_normal": {
+      "rows": 651,
+      "min_seconds": 0.022454023361206055,
+      "median_seconds": 0.28043198585510254,
+      "max_seconds": 1.203455924987793,
+      "over_seconds": {
+        "30": 0,
+        "60": 0,
+        "300": 0,
+        "1800": 0,
+        "3600": 0
+      }
+    },
+    "representative_rows": [
+      {
+        "source_id": "TQH-B_i3600_j0",
+        "row_id": 4,
+        "duration_seconds": 0.02568197250366211,
+        "flow_end_ms": 1784598999810
+      },
+      {
+        "source_id": "TQH-B_i3600_j30",
+        "row_id": 38,
+        "duration_seconds": 120.34698510169983,
+        "flow_end_ms": 1784608963389
+      },
+      {
+        "source_id": "TQH-B_i3600_j30",
+        "row_id": 1852,
+        "duration_seconds": 9583.726542949677,
+        "flow_end_ms": 1784618519820
+      },
+      {
+        "source_id": "TQH-B_i3600_j30",
+        "row_id": 1855,
+        "duration_seconds": 9706.06308221817,
+        "flow_end_ms": 1784618521017
+      }
+    ],
+    "exact_target_training_input_matches": {
+      "raw8": 0,
+      "ports_zero6": 0
+    },
+    "meaning": "Published full-flow observation span, not measured log emission, ingestion or alert delay. The large median lies between two separated clusters. flow_end_ms is the replay's logical clock."
+  },
+  "D_C2_duration": {
+    "rows": 1964,
+    "min_seconds": 0.0006749629974365234,
+    "median_seconds": 31.023756504058838,
+    "max_seconds": 33.33657717704773,
+    "over_seconds": {
+      "30": 1833,
+      "60": 0,
+      "300": 0,
+      "1800": 0,
+      "3600": 0
+    }
+  },
+  "source_control_bound": {
+    "group_id": "C001",
+    "input": {
+      "ip_protocol": 6,
+      "duration_seconds": -1.0,
+      "orig_pkts": 1,
+      "resp_pkts": 0,
+      "orig_ip_bytes": 60,
+      "resp_ip_bytes": 0
+    },
+    "source_normal": 4096,
+    "pooled_source_fp_budget_at_1percent": 40,
+    "group_normal": 261,
+    "group_C2": 40,
+    "source_C2": 56,
+    "C2_detected_at_most": 16,
+    "C2_recall_at_most": 0.2857142857142857,
+    "FPR_if_this_group_alerts": 0.063720703125,
+    "group_composition": [
+      {
+        "source_id": "CTU-IoT-Malware-Capture-1-1",
+        "family": "Benign",
+        "rows": 261
+      },
+      {
+        "source_id": "CTU-IoT-Malware-Capture-1-1",
+        "family": "Scanning",
+        "rows": 2638
+      },
+      {
+        "source_id": "CTU-IoT-Malware-Capture-8-1",
+        "family": "C&C",
+        "rows": 40
+      }
+    ],
+    "conditions": "Deterministic per-flow scoring from the same six non-port inputs, one common threshold, and a 1% budget on the pooled 4096 source-normal training rows. Does not cover capture-specific thresholds, identity routing, stochastic decisions or additional observations.",
+    "interpretation": "Upper bound only; attainability for the remaining controls is not established. This is not a D-transfer bound and does not assert the old model detected these controls."
+  }
+}

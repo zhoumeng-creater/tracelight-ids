@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**2026-11-16模型与训练设计重审**　[完整决定](docs/MODEL_TRAINING_DESIGN_REVIEW_20261116.md)：对照官方模型，固定输入语义、训练/选轮/校准角色及结果分支。未来仅新增官方TabM和去数值嵌入消融，与HGB比较，最多14次拟合；本轮为设计审查，没有开始训练。旧权重补算只解释R26。
+
 **2026-11-16训练诊断推进**　[新证据与路线决定](docs/TRAINING_DIAGNOSIS_DECISION_20261116.md)：端口置零造成63组旧来源内部异标签输入，涉及3657条记录；这些组未精确覆盖B/D攻击。已准备[8份冻结权重的训练支持诊断](docs/TRAINING_DIAGNOSIS_LAB.md)，0拟合，B/D分数复用；真实训练支持评分等待实验室执行。
 
 **第二十六轮开发诊断**　[历史监督、源数据增量与端口依赖](docs/SUPPORT_DIAGNOSTIC_LAB.md)，版本`support-diagnostic-lab-v1`，入口`scripts/RUN_SUPPORT_DIAGNOSTIC.ps1`。TQH-B完整单元按时间分配，D只作冻结外评；20次新拟合、4份旧权重复用，保留同标签target-only、端口置零和已知强规则对照。全部材料已开，不称新算法或盲测。旧TabM等完成项不重跑。
