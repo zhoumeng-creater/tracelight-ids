@@ -1,0 +1,95 @@
+{
+  "schema": "model-training-redesign-input-bindings-v1",
+  "required_r29_artifacts": {
+    "protocol.json": "451208a9390266b8092f466f9f4e1115619eba19fce5d527f455c7e7dd940dd3",
+    "freeze.json": "adce2f99f3450c07d94ce2a43ddcd52094eaf918b614edbb636b558e8273b6d5",
+    "inputs/F.parquet": "6e07b5cb0f98333492d3d1bf4c094e141f599c624d3b9245a9aecab2b42f6556",
+    "inputs/V.parquet": "13a094a7e33432d7af04fc723811df9c72c55a7e1d0f9677d2639361a32aba20",
+    "inputs/P.parquet": "6fb0360b56a2d4f2134a00c0c0c68e86aedf18a2542fd88b1dffedb39f697f52",
+    "inputs/C.parquet": "129a537d837cb5a75e38aedbf2a0642cccb5972705dd8c253422f2bfd9a4843c",
+    "inputs/E.parquet": "daf2a75a2b6dfcc04e0ccb46b43c660c8cbe3abc10e0aeaf8ed9fd9f5e2370df",
+    "inputs/D.parquet": "3d42504aaf01768c104afa1ab5385af9dffe0b5108697a70e78990940fd1aa75",
+    "inputs/ED.parquet": "51853e4c1e8d3461357984cd7d7dbf1dcfc60fc921eedceb3e6ed7b94ab02eb0",
+    "inputs/references.json": "4013fcc5bf10520e9437bdc2bbe09749a2f1adb5168ba16e8f37560c730d3358",
+    "reports/legacy_hgb_or_rule-decisions.parquet": "8c2e71c2abd1b2863b5df82dea02699a4086496af67d558a7d6c75d6c54a9076",
+    "reports/r26_target_mlp17-decisions.parquet": "b26148308d4b4ac7bf723eacf66aa97c09c589681f566b95d05c57214850fff0",
+    "reports/r26_target_mlp29-decisions.parquet": "785c99bcb5c0858d91a7d7b82fd2ab47c6d36e425ba32b69d5d319e4e1f6cdf5",
+    "reports/r26_target_mlp43-decisions.parquet": "12c2a1f81ffdd9ede2d94665aa6bf334ff649f50b6b871635bd030e154dcd8a8",
+    "reports/tabm_ple_s17-decisions.parquet": "7beafb99e09706a90d068694b73e7cb51299ba1ccab572bf74288fe4aa7834d3",
+    "reports/tabm_ple_s29-decisions.parquet": "af98cc3f6e086f21de047a2b8de541c283060f949147e453cf12d7ad5fff59b2",
+    "reports/tabm_ple_s43-decisions.parquet": "5d9c0541d81a056e294c3e75c62484019af6392613dd42d08f75ce47166a082e"
+  },
+  "required_r26_artifacts": {
+    "protocol.json": "0804e735c850b6a9eda899d7d84673478686df147826811d81fe19230bee3907",
+    "evidence/calibration/target-ports_zero8-hgb.json": "f46cc13dcb969dff8c2f3dcbadebf3b1c4fde5d67f21298d18cfc19f243f7fa0",
+    "evidence/calibration/target-ports_zero8-mlp17.json": "a7a9b583fdf434b466d0caa1b21e061c8eaccb8430cbb4b8ef49ae93f8a820e9",
+    "evidence/calibration/target-ports_zero8-mlp29.json": "ba50ed3830c8460136514e9d1c75e719e08833ac97ca6c3662fc3262c76ee731",
+    "evidence/calibration/target-ports_zero8-mlp43.json": "d8c1b54c34715523935a9aa9cf57a211d0f8e859f8afff3d8ab40db1a43fd0d6"
+  },
+  "r26_required": false,
+  "reference_decision_files": {
+    "legacy_hgb_or_rule": "reports/legacy_hgb_or_rule-decisions.parquet",
+    "r26_target_mlp17": "reports/r26_target_mlp17-decisions.parquet",
+    "r26_target_mlp29": "reports/r26_target_mlp29-decisions.parquet",
+    "r26_target_mlp43": "reports/r26_target_mlp43-decisions.parquet",
+    "r29_tabm_ple_s17": "reports/tabm_ple_s17-decisions.parquet",
+    "r29_tabm_ple_s29": "reports/tabm_ple_s29-decisions.parquet",
+    "r29_tabm_ple_s43": "reports/tabm_ple_s43-decisions.parquet"
+  },
+  "protocol_label_counts": {
+    "F": [
+      {
+        "ip_protocol": 1,
+        "label": 0,
+        "rows": 352
+      },
+      {
+        "ip_protocol": 6,
+        "label": 0,
+        "rows": 13705
+      },
+      {
+        "ip_protocol": 6,
+        "label": 1,
+        "rows": 5123
+      },
+      {
+        "ip_protocol": 17,
+        "label": 0,
+        "rows": 634
+      },
+      {
+        "ip_protocol": 17,
+        "label": 1,
+        "rows": 90
+      }
+    ],
+    "V": [
+      {
+        "ip_protocol": 1,
+        "label": 0,
+        "rows": 782
+      },
+      {
+        "ip_protocol": 6,
+        "label": 0,
+        "rows": 17291
+      },
+      {
+        "ip_protocol": 6,
+        "label": 1,
+        "rows": 2715
+      },
+      {
+        "ip_protocol": 17,
+        "label": 0,
+        "rows": 572
+      },
+      {
+        "ip_protocol": 17,
+        "label": 1,
+        "rows": 90
+      }
+    ]
+  }
+}

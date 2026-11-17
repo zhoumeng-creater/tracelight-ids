@@ -1,0 +1,38 @@
+{
+  "version": "model-training-redesign-r30-v1",
+  "execution_enabled": true,
+  "design_file": "configs/model-training-redesign-20261117/design.json",
+  "design_sha256": "afe0f2b7b9bd57c83724e94e144d1571d5e0767a4a5ecfa1eb8d7f15e9187654",
+  "input_bindings_file": "configs/model-training-redesign-20261117/input-bindings.json",
+  "input_bindings_sha256": "a012903f05208a30cea68120ebb24112533df32407fc9647fc7111a96f048e1b",
+  "runtime_packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.14.0",
+    "scikit-learn": "1.5.1",
+    "pyarrow": "21.0.0",
+    "torch": "2.6.0+cu126",
+    "tabm": "0.0.3",
+    "rtdl_num_embeddings": "0.0.12"
+  },
+  "benchmark": {
+    "single_rows": 64,
+    "repeats": 3,
+    "warmup": 8,
+    "batch_size": 128
+  },
+  "gpu_benchmark": {
+    "batch_size": 512,
+    "repeats": 3,
+    "warmup": 8
+  },
+  "max_fits": 6,
+  "final_refits": 0,
+  "max_optimizer_steps_per_fit": 15600,
+  "max_total_optimizer_steps": 93600,
+  "new_blind_confirmation": false,
+  "formal_training_device": "laboratory RTX 4090D CUDA",
+  "formal_scoring": "CPU one thread batch256",
+  "source_policy": "snapshot all ids Python, this directory JSON, wrapper, pyproject with CRLF normalized to LF",
+  "automatic_incomplete_fit_retry": false
+}

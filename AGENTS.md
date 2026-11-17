@@ -1,5 +1,13 @@
 # 本项目的持续研究要求
 
+## 2026-11-17 模型与训练实现已完成（当前执行依据）
+
+用户已授权按固定设计实现、核验并推送代码及实验室说明。独立包`src/ids/model_training_redesign`、入口`scripts/RUN_MODEL_TRAINING_REDESIGN.ps1`及正式注册已完成，执行版本`model-training-redesign-r30-v1`。以[实验室运行说明](docs/MODEL_TRAINING_REDESIGN_LAB.md)与[逐项实现核验](docs/MODEL_TRAINING_REDESIGN_IMPLEMENTATION_20261117.md)为准。上一轮设计JSON保持原值，执行许可由独立registration表达。
+
+当前完成96项合成测试（含微型官方TabM CPU训练/冷载）、Ruff、真实档案InputsOnly及210文件离线核验；真实数据拟合、模型前向、新评分和新判决均0。输入为保留的R29回传加TQH两份原始ZIP，旧七份参照判决直接复用；无需重跑R26。实际效果与CUDA设备成本等待实验室六轨迹，不能把合成验收称D提升。
+
+六次F/V轨迹、0次P重训；两臂共享初始化和采样/dropout随机流，四组各64且不叠权；纯排序选择、严格完整分离锁最早、选中工件原样交付。全部六工件及配对合同冻结前不得评分C/E。完整阶段按收据复用，非空未完成拟合拒绝自动重试。完成状态与adoption_pass分别解释，负结果不追加seed、阈值、模型拼接或其他训练分支。R29旧代码与注册不修改。
+
 ## 2026-11-17 回到模型与训练设计（当前决定，优先于下方全部历史安排）
 
 用户明确停止阈值与模型拼接方向，要求先审清模型设计和训练。[D检出不足：模型与训练重审](docs/MODEL_TRAINING_REDESIGN_20261117.md)及[静态规格](configs/model-training-redesign-20261117/design.json)为当前唯一后续设计，状态`design_specified_implementation_pending`。本轮0训练、0模型加载/前向、0新分数/判决、0阈值搜索。

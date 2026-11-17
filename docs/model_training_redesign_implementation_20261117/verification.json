@@ -1,0 +1,185 @@
+{
+  "version": "model-training-redesign-r30-v1",
+  "date": "2026-11-17",
+  "design_commit": "578597292b14dafb6a9b9e0537edfcd1e57f9cf9",
+  "design_sha256": "afe0f2b7b9bd57c83724e94e144d1571d5e0767a4a5ecfa1eb8d7f15e9187654",
+  "tests": {
+    "entry": "scripts/RUN_MODEL_TRAINING_REDESIGN.ps1 -CheckOnly",
+    "passed": 96,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 63.294,
+    "by_module": {
+      "test_model_training_redesign_costs": 3,
+      "test_model_training_redesign_data": 13,
+      "test_model_training_redesign_evaluation": 23,
+      "test_model_training_redesign_powershell": 38,
+      "test_model_training_redesign_runner": 6,
+      "test_model_training_redesign_training": 13
+    },
+    "official_micro_model_fits": 3,
+    "model_device": "CPU",
+    "synthetic_only": true
+  },
+  "lint": "ruff: all checks passed",
+  "runtime": {
+    "python": "3.12.4",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.2",
+      "scipy": "1.14.0",
+      "scikit-learn": "1.5.1",
+      "pyarrow": "21.0.0",
+      "torch": "2.6.0+cu126",
+      "tabm": "0.0.3",
+      "rtdl_num_embeddings": "0.0.12"
+    }
+  },
+  "real_input_preflight": {
+    "entry": "scripts/RUN_MODEL_TRAINING_REDESIGN.ps1 -InputsOnly",
+    "status": {
+      "status": "inputs_ready",
+      "fits": 0,
+      "model_forwards": 0
+    },
+    "verified_files": 210,
+    "roles": {
+      "F": {
+        "rows": 19904,
+        "normal": 14691,
+        "attack": 5213,
+        "cells": [
+          "TQH-A_i30_j0",
+          "TQH-A_i30_j30",
+          "TQH-A_i30_j70",
+          "TQH-B_i30_j0",
+          "TQH-B_i30_j30",
+          "TQH-B_i30_j70"
+        ]
+      },
+      "V": {
+        "rows": 21450,
+        "normal": 18645,
+        "attack": 2805,
+        "cells": [
+          "TQH-A_i300_j0",
+          "TQH-A_i300_j30",
+          "TQH-A_i300_j70",
+          "TQH-B_i300_j0",
+          "TQH-B_i300_j30",
+          "TQH-B_i300_j70"
+        ]
+      },
+      "C": {
+        "rows": 5511,
+        "normal": 5511,
+        "attack": 0,
+        "cells": [
+          "TQH-B_i1800_j0",
+          "TQH-B_i1800_j30",
+          "TQH-B_i1800_j70"
+        ]
+      },
+      "E_B": {
+        "rows": 5531,
+        "normal": 5459,
+        "attack": 72,
+        "cells": [
+          "TQH-B_i3600_j0",
+          "TQH-B_i3600_j30",
+          "TQH-B_i3600_j70"
+        ]
+      },
+      "E_D": {
+        "rows": 11528,
+        "normal": 9564,
+        "attack": 1964,
+        "cells": [
+          "TQH-D_i1800_j0",
+          "TQH-D_i1800_j30",
+          "TQH-D_i1800_j70",
+          "TQH-D_i300_j0",
+          "TQH-D_i300_j30",
+          "TQH-D_i300_j70",
+          "TQH-D_i30_j0",
+          "TQH-D_i30_j30",
+          "TQH-D_i30_j70",
+          "TQH-D_i3600_j0",
+          "TQH-D_i3600_j30",
+          "TQH-D_i3600_j70"
+        ]
+      },
+      "ED": {
+        "rows": 17059,
+        "normal": 15023,
+        "attack": 2036,
+        "cells": [
+          "TQH-B_i3600_j0",
+          "TQH-B_i3600_j30",
+          "TQH-B_i3600_j70",
+          "TQH-D_i1800_j0",
+          "TQH-D_i1800_j30",
+          "TQH-D_i1800_j70",
+          "TQH-D_i300_j0",
+          "TQH-D_i300_j30",
+          "TQH-D_i300_j70",
+          "TQH-D_i30_j0",
+          "TQH-D_i30_j30",
+          "TQH-D_i30_j70",
+          "TQH-D_i3600_j0",
+          "TQH-D_i3600_j30",
+          "TQH-D_i3600_j70"
+        ]
+      }
+    },
+    "source_cells": 30,
+    "r29_bound_artifacts": 17,
+    "uid_mapping_rows": 63996,
+    "historical_decision_rows": 119413,
+    "protocol_sha256": "d7322a16abb52c38a5ddc79d7c660eeede7fb80623fed9cdd5409e08c362cbb6",
+    "source_snapshot_matches_live_code": true,
+    "output_relative": "local/model-training-redesign-validation/preflight-final"
+  },
+  "executed_real_data": {
+    "fits": 0,
+    "model_loads": 0,
+    "model_forwards": 0,
+    "new_scores": 0,
+    "new_decisions": 0,
+    "new_thresholds": 0
+  },
+  "formal_CUDA_training_checked": false,
+  "offline_verify_passed": true,
+  "historical_code_registration_design_unchanged": true,
+  "review_fixes": [
+    "paired hash field schema aligned",
+    "first strict separation checkpoint locked despite ranking metric tie",
+    "actual selected and last Torch RNG states persisted",
+    "deployment scoring does not hash training RNG",
+    "freeze checks final_refits zero"
+  ],
+  "git_lf_sha256": {
+    "configs/model-training-redesign-20261117/input-bindings.json": "67753480ba7258c73c04c2d3c4e5facc121ec790c70f78649a1cb1581ac81568",
+    "configs/model-training-redesign-20261117/registration.json": "c43b7eb77ec8e1a5bfa82f235fcb68075b772ccc3ac4e891c755272e265d82a1",
+    "scripts/RUN_MODEL_TRAINING_REDESIGN.ps1": "8dad59a9a61f42605a2d86f842b10ee4a63cbd60ff53c207905359f47eb89c02",
+    "src/ids/model_training_redesign/__init__.py": "3c46d5bb807e1b5026ac71f845530d6332647b5f7590380b15bd265154c65de1",
+    "src/ids/model_training_redesign/__main__.py": "3a93488b43d21856ef3bf765cee2a1ce89446d092cc6b784ba0bdfdb011d246b",
+    "src/ids/model_training_redesign/costs.py": "69dd2fd2ceec0e83510bf2f544e285022cd35ff4d24bc3a5af1b7b6b35d601bc",
+    "src/ids/model_training_redesign/data.py": "ca7a3177b17a0f9a067fc18d0592ecf8cb27838c3006eb87bf58552ba2753e16",
+    "src/ids/model_training_redesign/evaluation.py": "184c0a3f2e6754c15ec52b8f8d31506332e0211e54cec257d0694e54efd28366",
+    "src/ids/model_training_redesign/preprocessing.py": "e32daee9ffdf060defd451cd96e1b633f42e0b6269b0adedfb6a5f2d6fccc69e",
+    "src/ids/model_training_redesign/protocol.py": "6f92f29d05c702c0ee1d8cc0c0b6b64e62a4e28fd56dbcc0142ce583be7c8c2f",
+    "src/ids/model_training_redesign/runner.py": "9fbcce5984afe263f1b3d55a12b88d63850dfbcd0092d8574cf812a17ca5768d",
+    "src/ids/model_training_redesign/sampling.py": "7fe30e6575a8915c57b6ccba66a54e29c075c458e2f61d9281f5c81fcbdfac1e",
+    "src/ids/model_training_redesign/selection.py": "93b040452cd6ff1a4292b93b8858957a43c3752cc2cf1a1e3d45bd4c1a079f4f",
+    "src/ids/model_training_redesign/training.py": "88a8d48b86b1ad1a7873088e546bad02629bc2548d37ac14a09504fcd688fb63",
+    "tests/test_model_training_redesign_costs.py": "468dc8566c88458a0be96a1f1daa9d4b71e2cdaf6e33129828c50e29855f3db1",
+    "tests/test_model_training_redesign_data.py": "7a920d411d4dbf7b0265658898084248a17f1edc6142faf0988a5e75389048f9",
+    "tests/test_model_training_redesign_evaluation.py": "de9d88e1be96ac7ceb454b680094b38cfe9fd3aa3ca347c56a61d2ee3ba44197",
+    "tests/test_model_training_redesign_powershell.py": "0e094ae9eca1278e79fca1b5190b72b744541a089b46f843dc89f3eaea6cd6b1",
+    "tests/test_model_training_redesign_runner.py": "bd6041371c2c9490601e9f253162a693f03dbd84ad37c640698df813a1b57d91",
+    "tests/test_model_training_redesign_training.py": "6d0075d292c4dbc039af4cec02b6ed0b19ce49fefb5edc724ca9f66418920f1c"
+  },
+  "post_test_changes": "Removed trailing blank lines at EOF in preprocessing.py and sampling.py only; no executable changes."
+}
