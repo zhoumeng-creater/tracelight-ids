@@ -1,0 +1,1664 @@
+{
+  "scope": "Pure original-input and existing-training-history descriptions; no model imports/forward/new scores/decisions/thresholds",
+  "roles": {
+    "F": {
+      "rows": 5938,
+      "normal": 5848,
+      "positive": 90,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 216
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 5028
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 604
+        },
+        {
+          "protocol": 17,
+          "label": 1,
+          "rows": 90
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 67
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1672
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 196
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 77
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1695
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 207
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 72
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1661
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 201
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 137,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.025445938110351562,
+        "0.25": 73.03979820013046,
+        "0.5": 1476.6902445554733,
+        "0.75": 2875.1198742985725,
+        "1.0": 2960.0912442207336
+      }
+    },
+    "V": {
+      "rows": 4744,
+      "normal": 4654,
+      "positive": 90,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 201
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 3976
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 477
+        },
+        {
+          "protocol": 17,
+          "label": 1,
+          "rows": 90
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 65
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1341
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 163
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 65
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1319
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 158
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 71
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1316
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 156
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 140,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.025804996490478516,
+        "0.25": 75.21043753623962,
+        "0.5": 3486.721966981888,
+        "0.75": 6900.028394818306,
+        "1.0": 6975.997372865677
+      }
+    },
+    "P": {
+      "rows": 10682,
+      "normal": 10502,
+      "positive": 180,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 417
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 9004
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 1081
+        },
+        {
+          "protocol": 17,
+          "label": 1,
+          "rows": 180
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 65
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1341
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 163
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 65
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1319
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 158
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 71
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1316
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 156
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 67
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1672
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 196
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 77
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1695
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 207
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 72
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1661
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 201
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 277,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.025445938110351562,
+        "0.25": 74.808334171772,
+        "0.5": 1476.8038280010223,
+        "0.75": 3925.829127430916,
+        "1.0": 6975.997372865677
+      }
+    },
+    "D": {
+      "rows": 11528,
+      "normal": 9564,
+      "positive": 1964,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 474
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 8008
+        },
+        {
+          "protocol": 6,
+          "label": 1,
+          "rows": 1964
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 1082
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-D_i1800_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 49
+        },
+        {
+          "source_id": "TQH-D_i1800_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 663
+        },
+        {
+          "source_id": "TQH-D_i1800_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 36
+        },
+        {
+          "source_id": "TQH-D_i1800_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 99
+        },
+        {
+          "source_id": "TQH-D_i1800_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 41
+        },
+        {
+          "source_id": "TQH-D_i1800_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 663
+        },
+        {
+          "source_id": "TQH-D_i1800_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 35
+        },
+        {
+          "source_id": "TQH-D_i1800_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 96
+        },
+        {
+          "source_id": "TQH-D_i1800_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 40
+        },
+        {
+          "source_id": "TQH-D_i1800_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 664
+        },
+        {
+          "source_id": "TQH-D_i1800_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 27
+        },
+        {
+          "source_id": "TQH-D_i1800_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 95
+        },
+        {
+          "source_id": "TQH-D_i300_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 19
+        },
+        {
+          "source_id": "TQH-D_i300_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 478
+        },
+        {
+          "source_id": "TQH-D_i300_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 134
+        },
+        {
+          "source_id": "TQH-D_i300_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 53
+        },
+        {
+          "source_id": "TQH-D_i300_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 23
+        },
+        {
+          "source_id": "TQH-D_i300_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 467
+        },
+        {
+          "source_id": "TQH-D_i300_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 115
+        },
+        {
+          "source_id": "TQH-D_i300_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 57
+        },
+        {
+          "source_id": "TQH-D_i300_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 28
+        },
+        {
+          "source_id": "TQH-D_i300_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 479
+        },
+        {
+          "source_id": "TQH-D_i300_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 99
+        },
+        {
+          "source_id": "TQH-D_i300_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 57
+        },
+        {
+          "source_id": "TQH-D_i30_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 25
+        },
+        {
+          "source_id": "TQH-D_i30_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 581
+        },
+        {
+          "source_id": "TQH-D_i30_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 554
+        },
+        {
+          "source_id": "TQH-D_i30_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 70
+        },
+        {
+          "source_id": "TQH-D_i30_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-D_i30_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 587
+        },
+        {
+          "source_id": "TQH-D_i30_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 482
+        },
+        {
+          "source_id": "TQH-D_i30_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 70
+        },
+        {
+          "source_id": "TQH-D_i30_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 25
+        },
+        {
+          "source_id": "TQH-D_i30_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 561
+        },
+        {
+          "source_id": "TQH-D_i30_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 411
+        },
+        {
+          "source_id": "TQH-D_i30_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 70
+        },
+        {
+          "source_id": "TQH-D_i3600_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 53
+        },
+        {
+          "source_id": "TQH-D_i3600_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 958
+        },
+        {
+          "source_id": "TQH-D_i3600_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 24
+        },
+        {
+          "source_id": "TQH-D_i3600_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 140
+        },
+        {
+          "source_id": "TQH-D_i3600_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 66
+        },
+        {
+          "source_id": "TQH-D_i3600_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 949
+        },
+        {
+          "source_id": "TQH-D_i3600_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 24
+        },
+        {
+          "source_id": "TQH-D_i3600_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 137
+        },
+        {
+          "source_id": "TQH-D_i3600_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 75
+        },
+        {
+          "source_id": "TQH-D_i3600_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 958
+        },
+        {
+          "source_id": "TQH-D_i3600_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 23
+        },
+        {
+          "source_id": "TQH-D_i3600_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 138
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 308,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.0006749629974365234,
+        "0.25": 31.022587776184082,
+        "0.5": 31.023756504058838,
+        "0.75": 31.027183294296265,
+        "1.0": 33.33657717704773
+      }
+    },
+    "F_A": {
+      "rows": 13966,
+      "normal": 8843,
+      "positive": 5123,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 136
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 8677
+        },
+        {
+          "protocol": 6,
+          "label": 1,
+          "rows": 5123
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 30
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 45
+        },
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 2925
+        },
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 2404
+        },
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 8
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 46
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 2851
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 1601
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 7
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 45
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 2901
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 1118
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 15
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 2,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.00012993812561035156,
+        "0.25": 1.0110114812850952,
+        "0.5": 1.012261152267456,
+        "0.75": 1.013453483581543,
+        "1.0": 1.1804368495941162
+      }
+    },
+    "V_A": {
+      "rows": 16706,
+      "normal": 13991,
+      "positive": 2715,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 581
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 13315
+        },
+        {
+          "protocol": 6,
+          "label": 1,
+          "rows": 2715
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 95
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 194
+        },
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 4463
+        },
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 960
+        },
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 32
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 191
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 4436
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 907
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 32
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 196
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 4416
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 848
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 31
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 12,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.05911588668823242,
+        "0.25": 1.0120974779129028,
+        "0.5": 1.013235092163086,
+        "0.75": 1.0144805908203125,
+        "1.0": 1.113961935043335
+      }
+    },
+    "F_AB": {
+      "rows": 19904,
+      "normal": 14691,
+      "positive": 5213,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 352
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 13705
+        },
+        {
+          "protocol": 6,
+          "label": 1,
+          "rows": 5123
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 634
+        },
+        {
+          "protocol": 17,
+          "label": 1,
+          "rows": 90
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 45
+        },
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 2925
+        },
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 2404
+        },
+        {
+          "source_id": "TQH-A_i30_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 8
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 46
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 2851
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 1601
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 7
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 45
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 2901
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 1118
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 15
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 67
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1672
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 196
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 77
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1695
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 207
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 72
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1661
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 201
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 139,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.00012993812561035156,
+        "0.25": 1.0110280513763428,
+        "0.5": 1.0123012065887451,
+        "0.75": 1.0135259628295898,
+        "1.0": 2960.0912442207336
+      }
+    },
+    "V_AB": {
+      "rows": 21450,
+      "normal": 18645,
+      "positive": 2805,
+      "protocol_label_counts": [
+        {
+          "protocol": 1,
+          "label": 0,
+          "rows": 782
+        },
+        {
+          "protocol": 6,
+          "label": 0,
+          "rows": 17291
+        },
+        {
+          "protocol": 6,
+          "label": 1,
+          "rows": 2715
+        },
+        {
+          "protocol": 17,
+          "label": 0,
+          "rows": 572
+        },
+        {
+          "protocol": 17,
+          "label": 1,
+          "rows": 90
+        }
+      ],
+      "cell_protocol_label_counts": [
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 194
+        },
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 4463
+        },
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 6,
+          "label": 1,
+          "rows": 960
+        },
+        {
+          "source_id": "TQH-A_i300_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 32
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 191
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 4436
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 6,
+          "label": 1,
+          "rows": 907
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 32
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 196
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 4416
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 6,
+          "label": 1,
+          "rows": 848
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 31
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 1,
+          "label": 0,
+          "rows": 65
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1341
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 17,
+          "label": 0,
+          "rows": 163
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 1,
+          "label": 0,
+          "rows": 65
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1319
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 17,
+          "label": 0,
+          "rows": 158
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 1,
+          "label": 0,
+          "rows": 71
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 6,
+          "label": 0,
+          "rows": 1316
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 17,
+          "label": 0,
+          "rows": 156
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "protocol": 17,
+          "label": 1,
+          "rows": 30
+        }
+      ],
+      "missing_by_feature": {
+        "duration_seconds": 152,
+        "orig_pkts": 0,
+        "resp_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_ip_bytes": 0
+      },
+      "positive_duration_quantiles": {
+        "0.0": 0.025804996490478516,
+        "0.25": 1.0121369361877441,
+        "0.5": 1.013300895690918,
+        "0.75": 1.0146138668060303,
+        "1.0": 6975.997372865677
+      }
+    }
+  },
+  "exact_input_conflicts": {
+    "F": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "V": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "P": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "D": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "F_A": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "V_A": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "F_AB": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    },
+    "V_AB": {
+      "numeric_and_missing_only": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      },
+      "with_protocol": {
+        "distinct_conflicting_inputs": 0,
+        "normal_rows_in_conflicts": 0,
+        "positive_rows_in_conflicts": 0
+      }
+    }
+  },
+  "training_history": {
+    "tabm_ple_s17": {
+      "trajectory": {
+        "epochs": 200,
+        "first": {
+          "stage": 1,
+          "updates": 24,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 0.19031563828081022,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 0.058708169437008864,
+          "train_ensemble_bce": 0.04993085766266779,
+          "fit_seconds": 0.2950162999914028,
+          "validation_pauc": 0.7487437185929648,
+          "validation_ensemble_bce": 0.0661160206148683,
+          "validation_head_bce": 0.07798254595438103
+        },
+        "last": {
+          "stage": 200,
+          "updates": 4800,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 1.1407820879114551e-07,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 3.197090530469194e-08,
+          "train_ensemble_bce": 3.4706971602987484e-08,
+          "fit_seconds": 0.09614619999774732,
+          "validation_pauc": 1.0,
+          "validation_ensemble_bce": 2.3216209301056303e-05,
+          "validation_head_bce": 2.809467120309962e-05
+        },
+        "first_epoch_pauc_equal_1": 6
+      },
+      "final": {
+        "epochs": 194,
+        "first": {
+          "stage": 1,
+          "updates": 42,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 0.13051914875746956,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 0.027785269303940985,
+          "train_ensemble_bce": 0.019407559314472887,
+          "fit_seconds": 0.17110249999677762
+        },
+        "last": {
+          "stage": 194,
+          "updates": 8148,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 1.376630247840216e-07,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 3.097238927814616e-08,
+          "train_ensemble_bce": 3.193396626662308e-08,
+          "fit_seconds": 0.16886969999177381
+        }
+      }
+    },
+    "tabm_ple_s29": {
+      "trajectory": {
+        "epochs": 43,
+        "first": {
+          "stage": 1,
+          "updates": 24,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 0.19527285814450904,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 0.05918552663519793,
+          "train_ensemble_bce": 0.047581413558734714,
+          "fit_seconds": 0.2889936999999918,
+          "validation_pauc": 0.905210529561334,
+          "validation_ensemble_bce": 0.06053166501951162,
+          "validation_head_bce": 0.07690834019075558
+        },
+        "last": {
+          "stage": 43,
+          "updates": 1032,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 3.6990823714295795e-06,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 1.6997017341670927e-06,
+          "train_ensemble_bce": 1.7076476292435925e-06,
+          "fit_seconds": 0.09607689999393187,
+          "validation_pauc": 1.0,
+          "validation_ensemble_bce": 9.501501054332519e-05,
+          "validation_head_bce": 0.00016097520116440962
+        },
+        "first_epoch_pauc_equal_1": 5
+      },
+      "final": {
+        "epochs": 27,
+        "first": {
+          "stage": 1,
+          "updates": 42,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 0.1300577475948992,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 0.025050982888010283,
+          "train_ensemble_bce": 0.01582835069510097,
+          "fit_seconds": 0.16901319999305997
+        },
+        "last": {
+          "stage": 27,
+          "updates": 1134,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 3.6933149249469233e-06,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 1.370344917770495e-06,
+          "train_ensemble_bce": 1.3772900084068874e-06,
+          "fit_seconds": 0.16456689999904484
+        }
+      }
+    },
+    "tabm_ple_s43": {
+      "trajectory": {
+        "epochs": 48,
+        "first": {
+          "stage": 1,
+          "updates": 24,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 0.17717037332624086,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 0.05385240010036367,
+          "train_ensemble_bce": 0.04339928664888799,
+          "fit_seconds": 0.29030160000547767,
+          "validation_pauc": 0.9278395510954957,
+          "validation_ensemble_bce": 0.05509507052852215,
+          "validation_head_bce": 0.07366622190350827
+        },
+        "last": {
+          "stage": 48,
+          "updates": 1152,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 3.7313781303473128e-06,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 1.3111195760038871e-06,
+          "train_ensemble_bce": 1.320547656178952e-06,
+          "fit_seconds": 0.10212650000175927,
+          "validation_pauc": 1.0,
+          "validation_ensemble_bce": 1.0277624388341176e-05,
+          "validation_head_bce": 1.0788400591200745e-05
+        },
+        "first_epoch_pauc_equal_1": 6
+      },
+      "final": {
+        "epochs": 32,
+        "first": {
+          "stage": 1,
+          "updates": 42,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 0.12586419175326144,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 0.029179109782510607,
+          "train_ensemble_bce": 0.018823097611170403,
+          "fit_seconds": 0.17036169998755213
+        },
+        "last": {
+          "stage": 32,
+          "updates": 1344,
+          "update_unit": "optimizer_step",
+          "path_mean_head_bce": 2.8634132383215993e-06,
+          "path_loss_applicable": true,
+          "path_loss_is_endpoint_loss": false,
+          "train_head_bce": 1.027236258786774e-06,
+          "train_ensemble_bce": 1.0335741283532092e-06,
+          "fit_seconds": 0.16566479999164585
+        }
+      }
+    }
+  },
+  "files_sha256": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s17\\trajectory\\history.json": "bd029aba798ef660ea872c15a5ef35a96545d11a03aac85f65837ffab1029b35",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s17\\final\\history.json": "18adb003ca042538234eda449a83bcedd09e02825d4d213ded084a7f48a5b848",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s29\\trajectory\\history.json": "789716469be450c5489af6e7c6eee3ff3572395e878d4f76cd77ee4b95e1b77c",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s29\\final\\history.json": "cbd30bafd39830a55614ef0eaa6a76a4253df79282645bbecff600f15cae831a",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s43\\trajectory\\history.json": "1b10bfa15c444b58516fb344c0f9f02bd3de76338b97c4ec176152fdae3131bf",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s43\\final\\history.json": "50ccbb8e94700bcffcb6ad05401a02843cb4641be5cd2663c8c34f2d5fa92a2d",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\F.parquet": "6e07b5cb0f98333492d3d1bf4c094e141f599c624d3b9245a9aecab2b42f6556",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\V.parquet": "13a094a7e33432d7af04fc723811df9c72c55a7e1d0f9677d2639361a32aba20",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\P.parquet": "6fb0360b56a2d4f2134a00c0c0c68e86aedf18a2542fd88b1dffedb39f697f52",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\D.parquet": "3d42504aaf01768c104afa1ab5385af9dffe0b5108697a70e78990940fd1aa75",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\response-evidence-20261112\\TQH-C2_labels_v110.zip": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58"
+  },
+  "F_AB_profile_class_counts": {
+    "A0": 8843,
+    "A1": 5123,
+    "B0": 5848,
+    "B1": 90
+  },
+  "F_AB_positive_fraction_from_A": 0.9827354690197583
+}

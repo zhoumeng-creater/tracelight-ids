@@ -1,0 +1,134 @@
+{
+  "scope": "Static consistency and existing source hashes only; no model experiment or runtime contract tests",
+  "checks": [
+    {
+      "check": "design only; runtime disabled",
+      "passed": true
+    },
+    {
+      "check": "zero new experimental execution",
+      "passed": true
+    },
+    {
+      "check": "two arms by three paired seeds = six trajectories",
+      "passed": true
+    },
+    {
+      "check": "zero P refit",
+      "passed": true
+    },
+    {
+      "check": "F group counts",
+      "passed": true
+    },
+    {
+      "check": "F source-cell count sums",
+      "passed": true
+    },
+    {
+      "check": "V source-cell count sums",
+      "passed": true
+    },
+    {
+      "check": "C source-cell count sums",
+      "passed": true
+    },
+    {
+      "check": "E_B source-cell count sums",
+      "passed": true
+    },
+    {
+      "check": "E_D source-cell count sums",
+      "passed": true
+    },
+    {
+      "check": "F/V source cell identity sets disjoint",
+      "passed": true
+    },
+    {
+      "check": "complete E unchanged",
+      "passed": true
+    },
+    {
+      "check": "retained exact role source hash",
+      "passed": true
+    },
+    {
+      "check": "96 dimensional paired shape",
+      "passed": true
+    },
+    {
+      "check": "group batch sizes and no double weighting",
+      "passed": true
+    },
+    {
+      "check": "explicit optimizer budget",
+      "passed": true
+    },
+    {
+      "check": "validation schedule unique and ends at cap",
+      "passed": true
+    },
+    {
+      "check": "NLL removed from selection",
+      "passed": true
+    },
+    {
+      "check": "V challenge denominators",
+      "passed": true
+    },
+    {
+      "check": "all source code and old registrations unchanged",
+      "passed": true
+    },
+    {
+      "check": "audit copies identical",
+      "passed": true
+    }
+  ],
+  "checked_files": {
+    "docs/MODEL_TRAINING_REDESIGN_20261117.md": {
+      "bytes": 18227,
+      "sha256": "ecd248fc1032328f43d8a18b5c3ce4645d1334cab09a56656388d485ef63f6e0",
+      "git_lf_sha256": "ecd248fc1032328f43d8a18b5c3ce4645d1334cab09a56656388d485ef63f6e0"
+    },
+    "configs/model-training-redesign-20261117/design.json": {
+      "bytes": 45460,
+      "sha256": "8347b3147cbcf7a3ac8054635c9f0beefd29517b02b3dc75ad47170d3c03984a",
+      "git_lf_sha256": "8347b3147cbcf7a3ac8054635c9f0beefd29517b02b3dc75ad47170d3c03984a"
+    },
+    "docs/model_training_redesign_20261117/architecture_author_audit.md": {
+      "bytes": 18442,
+      "sha256": "741ecd2e0d1e63940155b88eaad78ce9a557c2052570b91a634c3769c8891787",
+      "git_lf_sha256": "741ecd2e0d1e63940155b88eaad78ce9a557c2052570b91a634c3769c8891787"
+    },
+    "docs/model_training_redesign_20261117/supervision_identifiability.json": {
+      "bytes": 43210,
+      "sha256": "05f0836174f98a45be3ffce85f71c57d6633aa7eb52807342024f3276f9372fa",
+      "git_lf_sha256": "10e469573e01f6421e939bf5bd795d4da75832da46fb99d88404bdbb64af3b29"
+    },
+    "docs/model_training_redesign_20261117/supervision_identifiability.md": {
+      "bytes": 12270,
+      "sha256": "e98d2bb023063588072d75f7733b3df819229d2be3fad22772351759bd62c917",
+      "git_lf_sha256": "e98d2bb023063588072d75f7733b3df819229d2be3fad22772351759bd62c917"
+    },
+    "docs/model_training_redesign_20261117/training_author_audit.md": {
+      "bytes": 20072,
+      "sha256": "fe426fd6c92d28593350e173ffce893af04fcaf8774c4e4cef1d002892069e7b",
+      "git_lf_sha256": "fe426fd6c92d28593350e173ffce893af04fcaf8774c4e4cef1d002892069e7b"
+    }
+  },
+  "all_passed": true,
+  "independent_review_corrections": [
+    "causal gaps not unique performance cause",
+    "pooled A+B support not complete family-protocol crossing",
+    "field-specific PLE shared across members",
+    "mechanism is ranking improvement with nonregressed detection",
+    "F-fit vs validation-generalization distinguished",
+    "adoption boolean explicit"
+  ],
+  "post_review_updates": [
+    "sampler identity aligned to existing (source_id,row_id), with original UID mapping retained"
+  ],
+  "hash_policy": "sha256 records local bytes; git_lf_sha256 also provided for repository checkout reproducibility"
+}
