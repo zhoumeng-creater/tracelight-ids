@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**2026-11-17 完整模型与训练设计 V2已定稿，尚未实现或实验**　[完整设计与逐项修改/验收表](docs/MODEL_AND_TRAINING_DESIGN_V2_20261117.md) · [静态设计规格](configs/model-design-20261117/design.json)。A/B历史监督、共同工作点选轮、直接保留最佳checkpoint；TabM+PLE／同PLE普通MLP／HGB共7条轨迹，0次P重训；完整D继续只作评价。当前不运行新实验，旧R29脚本不能代替V2入口。下方为历史记录。
+
 **2026-11-17 R29已完成，当前先修订设计**　14次拟合执行与结果复核通过，但七个新模型均未达到采用条件。见[问题定义与设计修订](docs/R29_PROBLEM_DEFINITION_AND_DESIGN_REVISION_20261117.md)：区分已证问题与原因假设，列明R26/R29多项同时变化，保留强参照和PLE消融。当前不启动新的训练、模型前向或阈值搜索；下方“尚未执行”为历史交付记录。
 
 **2026-11-16模型与训练实现**　[实验室运行指南](docs/MODEL_TRAINING_LAB.md)：`model-training-r29-v1` 已接通语义输入、HGB/官方 TabM/去 PLE 消融、V 选轮、P 重训、全模型冻结、C 校准、逐单元比较与独立成本测量。最多 14 次拟合，三种子全部报告。[104项合成检查和真实输入入口校验通过](docs/model_training_implementation_20261116/validation.json)，真实训练尚未执行；下方设计阶段记录保留。

@@ -1,0 +1,57 @@
+{
+  "scope": "design JSON and existing metadata arithmetic/hash/Git consistency only",
+  "model_tests_executed": false,
+  "new_fits": 0,
+  "new_forwards": 0,
+  "checks": {
+    "role_counts": true,
+    "role_cells_disjoint": true,
+    "profile_A_F_before_V": true,
+    "profile_B_F_before_V": true,
+    "all_FV_before_C": true,
+    "C_before_all_E": true,
+    "does_not_claim_global_F_before_V": true,
+    "full_legacy_evaluation_unchanged": true,
+    "calibration_only_normal": true,
+    "calibration_rank": true,
+    "V_integer_budget_conflict_identified": true,
+    "V_closed_form_ranks_valid": true,
+    "V_all_cells_have_two_labels": true,
+    "four_group_masses_equal": true,
+    "weighted_loss_not_double_weighted": true,
+    "no_P_refit": true,
+    "seven_trajectory_budget": true,
+    "neural_update_budget": true,
+    "model_dim": true,
+    "binary_head": true,
+    "no_models_executed": true,
+    "design_not_executable": true,
+    "runtime_unchanged": true,
+    "cost_parameters_match_old": true,
+    "source_metadata_hash": true,
+    "R29_source_and_registration_unchanged": true
+  },
+  "all_checks_passed": true,
+  "check_count": 26,
+  "source_changes": [],
+  "review_resolutions": [
+    "common V pooled 185 FP versus per-cell budget sum 183 replaced by minimum feasible shared validation threshold",
+    "TabM d_out=1 explicit",
+    "HGB full fitted state preserved when truncating predictors; no refit",
+    "neural patience separated from HGB 200-stage actual fit cost",
+    "original full D12 retained; A/B historical supervision stated",
+    "V threshold construction and independent C calibration separated"
+  ],
+  "review_files": [
+    "工作/完整模型训练设计_20261117/architecture_review.md",
+    "工作/完整模型训练设计_20261117/training_protocol_review.md",
+    "工作/完整模型训练设计_20261117/data_and_acceptance_review.md"
+  ],
+  "design_sha256": "c071ed3f96c4b448404f9a913e243cca999cfe67a29fde5138be772dc3d44715",
+  "document_sha256": "589ad1e4fb3376b2de47a86673b3cf82fce6482de69606379cc48fadf44d93b6",
+  "local_document_links": {
+    "checked": 3,
+    "missing": []
+  },
+  "repository_text_hash_normalization": "CRLF converted to LF"
+}

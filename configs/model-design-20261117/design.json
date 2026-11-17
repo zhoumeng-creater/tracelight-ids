@@ -1,0 +1,1204 @@
+{
+  "schema": "tracelight-model-training-design-v2",
+  "date": "2026-11-17",
+  "status": "design_complete_not_implemented",
+  "executable_registration": false,
+  "execution_enabled": false,
+  "base_commit": "fd59cc68297e9294530dc6a8c9df9ef7794eb4ca",
+  "executed_this_design_task": {
+    "new_fits": 0,
+    "model_forwards": 0,
+    "score_recalculations": 0,
+    "threshold_searches": 0,
+    "new_data_downloads": 0
+  },
+  "question": "Does author TabM ensembling improve compliant C2 development detection over same-PLE plain MLP and same-information HGB with historical A/TCP and B/UDP supervision?",
+  "task_scope": {
+    "already_opened": true,
+    "independent_blind_confirmation": false,
+    "supervision": "topology-defined malicious_c2 in historical A and B",
+    "evaluation": "all old B-last3 and D12 identities unchanged",
+    "not_claimed": [
+      "unknown-TCP transfer",
+      "real-time early warning",
+      "general C2/download detection",
+      "novel algorithm already established"
+    ]
+  },
+  "source_metadata": {
+    "path": "configs/response-evidence-20261112/tqh.json",
+    "sha256": "88e2a5f8c504ba41fc62f974dd7f6b755046444414625a59626a73bd70d019e4",
+    "label_count_audit": "工作/学习任务重设_20261115/TQH完整单元时间分配核验.json",
+    "label_count_audit_sha256": "f389cc6383ae9df079c088a6175b4ff419923a3af9fe77e47c92d805f945b07c",
+    "label_normal": [
+      "benign",
+      "benign_external"
+    ],
+    "label_positive": [
+      "malicious_c2"
+    ],
+    "unknown_or_recon": "reject; do not map to normal",
+    "repository_text_hash_normalization": "CRLF converted to LF"
+  },
+  "input": {
+    "continuous": [
+      "duration_seconds",
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes"
+    ],
+    "categorical": [
+      "ip_protocol"
+    ],
+    "ports": "audit only; excluded from target C2 learned candidates, not a universal policy",
+    "missing": "restore -1, fit-only median imputation, separate binary mask per continuous field",
+    "all_missing_fill": 0,
+    "zero_variance_scale": 1,
+    "constant_standardized_PLE_edges": [
+      -1.0,
+      1.0
+    ],
+    "protocol_categories": [
+      1,
+      6,
+      17,
+      58,
+      132,
+      "UNKNOWN"
+    ],
+    "missing_indicator_categories": [
+      0,
+      1
+    ],
+    "missing_masks_enter_PLE": false,
+    "transform": "nonnegative log1p followed by fit-only StandardScaler; no quantile clipping",
+    "identity_features": false
+  },
+  "roles": {
+    "F": {
+      "cells": [
+        {
+          "source_id": "TQH-A_i30_j0",
+          "profile": "A",
+          "normal": 2978,
+          "attack": 2404,
+          "excluded_attack": 0,
+          "normal_budget": 29,
+          "manifest_start_utc": "2026-06-30T00:40:51.777850Z",
+          "manifest_end_utc": "2026-06-30T01:20:15.100419Z",
+          "first_flow_end_ms": 1782780606027,
+          "last_flow_end_ms": 1782782405666,
+          "author_label_counts": {
+            "benign": 2977,
+            "malicious_c2": 2404,
+            "benign_external": 1
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "939d16b69b64581f94c0b8c3d9e02ce1487d511d016221836870809372488a9d",
+            "bytes": 2739395,
+            "labels_sha256": "f4109bc330a3da12fbfd5180f9e679e648f76c40eb0931061b203bf4a28bbb9a",
+            "uid_order_sha256": "b8f0ca295676bac63436c56c0ac2f52b73dc703134a6f2a41a18e034aad1d970"
+          }
+        },
+        {
+          "source_id": "TQH-A_i30_j30",
+          "profile": "A",
+          "normal": 2904,
+          "attack": 1601,
+          "excluded_attack": 0,
+          "normal_budget": 29,
+          "manifest_start_utc": "2026-06-30T01:20:16.519241Z",
+          "manifest_end_utc": "2026-06-30T01:59:49.244518Z",
+          "first_flow_end_ms": 1782782980314,
+          "last_flow_end_ms": 1782784780417,
+          "author_label_counts": {
+            "malicious_c2": 1601,
+            "benign": 2904
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "c04556eb7d834c05be5a203b12880d8dedaaa5d145c394340f57ef21283e3671",
+            "bytes": 2295462,
+            "labels_sha256": "28656ce5d37cdfe28df82edc4fcf46b4428225e68b3f0d36a0894642f452c0b8",
+            "uid_order_sha256": "0e3b04781a8488127b1f02396eb5007ceffd2e583496b15650836f17864e0b88"
+          }
+        },
+        {
+          "source_id": "TQH-A_i30_j70",
+          "profile": "A",
+          "normal": 2961,
+          "attack": 1118,
+          "excluded_attack": 0,
+          "normal_budget": 29,
+          "manifest_start_utc": "2026-06-30T01:59:50.673256Z",
+          "manifest_end_utc": "2026-06-30T02:39:14.582560Z",
+          "first_flow_end_ms": 1782785346957,
+          "last_flow_end_ms": 1782787145819,
+          "author_label_counts": {
+            "malicious_c2": 1118,
+            "benign": 2960,
+            "benign_external": 1
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "5c50196d732bf52aa41b99de75ee59adb8ebd05b153c9fa3b0655ca362797e18",
+            "bytes": 2079398,
+            "labels_sha256": "35d1a5f6870782d55c707d9e0782b16f760172434847e26db84fc5018468eb14",
+            "uid_order_sha256": "11872c4ab51443a77a4f94d7a55656146668160a1cd22cc961ebb26fd8c58e0f"
+          }
+        },
+        {
+          "source_id": "TQH-B_i30_j0",
+          "profile": "B",
+          "normal": 1935,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 19,
+          "manifest_start_utc": "2026-07-20T09:13:56.917195Z",
+          "manifest_end_utc": "2026-07-20T10:05:15.108734Z",
+          "first_flow_end_ms": 1784538920198,
+          "last_flow_end_ms": 1784541903269,
+          "author_label_counts": {
+            "benign": 1935,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "8a19d446e6810447eeef2c28ff531517baadadd6513f92fdda322aa0db8e4de3",
+            "bytes": 1012897,
+            "labels_sha256": "8d93b216872bde1246f258c29330f0b12e95f166df11d7b098b55d8e91beefee",
+            "uid_order_sha256": "0dda71aee7aee37d9b82f3bf60d044ad2c731b668f64a751c67018fb0129b0eb"
+          }
+        },
+        {
+          "source_id": "TQH-B_i30_j30",
+          "profile": "B",
+          "normal": 1979,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 19,
+          "manifest_start_utc": "2026-07-20T10:05:15.681386Z",
+          "manifest_end_utc": "2026-07-20T10:56:37.688302Z",
+          "first_flow_end_ms": 1784541998270,
+          "last_flow_end_ms": 1784544985504,
+          "author_label_counts": {
+            "benign": 1979,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "3ff1057968ac90b33f8245f7fc187e8f080b0ddf7c58822b98fa9744807575fb",
+            "bytes": 1033800,
+            "labels_sha256": "24e23b10e4ca782dd3562f007e4a1209fbfbe6ef88a11b39c4e6bf3322b6bb1a",
+            "uid_order_sha256": "2f2446aee5e6b28f0d1c5a1e689f303b9660650f60f644c86aca7880c3d888f7"
+          }
+        },
+        {
+          "source_id": "TQH-B_i30_j70",
+          "profile": "B",
+          "normal": 1934,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 19,
+          "manifest_start_utc": "2026-07-20T10:56:38.236983Z",
+          "manifest_end_utc": "2026-07-20T11:48:00.069549Z",
+          "first_flow_end_ms": 1784545089125,
+          "last_flow_end_ms": 1784548067741,
+          "author_label_counts": {
+            "benign": 1934,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "0900078a7ed1dc864ac29c30da0d7be11842fb72e59d20f681d082d33784cbea",
+            "bytes": 1011198,
+            "labels_sha256": "96fa2eb1dbc6e79818ca88ffc76348c835dc9d7322ef5b03c6cfb7d49e007b7b",
+            "uid_order_sha256": "665b90d90d07d1066be96d90a21ee8eae4cbfa75424f2c98da62414a4fef4140"
+          }
+        }
+      ],
+      "normal": 14691,
+      "attack": 5213,
+      "first_flow_end_ms": 1782780606027,
+      "last_flow_end_ms": 1784548067741,
+      "rows": 19904
+    },
+    "V": {
+      "cells": [
+        {
+          "source_id": "TQH-A_i300_j0",
+          "profile": "A",
+          "normal": 4689,
+          "attack": 960,
+          "excluded_attack": 0,
+          "normal_budget": 46,
+          "manifest_start_utc": "2026-06-30T02:39:16.000262Z",
+          "manifest_end_utc": "2026-06-30T04:48:44.647201Z",
+          "first_flow_end_ms": 1782787749159,
+          "last_flow_end_ms": 1782794913552,
+          "author_label_counts": {
+            "benign": 4685,
+            "malicious_c2": 960,
+            "benign_external": 4
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "ad4bb95eac8e18a96b68c8f307b437b447ede0a513ee2921dea544e15f30c3cf",
+            "bytes": 2868479,
+            "labels_sha256": "04881fb8045b6bcc913b1c63b8044f88b7e21f0bea39e254ab46f190090a605b",
+            "uid_order_sha256": "95164a8a824a6938a8fb8d07f4c4de60cd9439b1ac3b29bfca3636b2827dc1f2"
+          }
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "profile": "A",
+          "normal": 4659,
+          "attack": 907,
+          "excluded_attack": 0,
+          "normal_budget": 46,
+          "manifest_start_utc": "2026-06-30T04:48:46.071912Z",
+          "manifest_end_utc": "2026-06-30T06:58:14.821630Z",
+          "first_flow_end_ms": 1782795510464,
+          "last_flow_end_ms": 1782802683402,
+          "author_label_counts": {
+            "benign": 4655,
+            "malicious_c2": 907,
+            "benign_external": 4
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "edd8e8193fc109d631d356511000995ba6944f88de2e24e47c98974a3e3b63db",
+            "bytes": 2826004,
+            "labels_sha256": "c20182775cf4aca643862e9e870af54b90d2ffb4edcdb84c4402e79e4cdbc626",
+            "uid_order_sha256": "de2ab3ae3bb35f70eb46fd5f6669af8238f35157c43c3e4db38b77b85650dcf2"
+          }
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "profile": "A",
+          "normal": 4643,
+          "attack": 848,
+          "excluded_attack": 0,
+          "normal_budget": 46,
+          "manifest_start_utc": "2026-06-30T06:58:16.271280Z",
+          "manifest_end_utc": "2026-06-30T09:07:43.834716Z",
+          "first_flow_end_ms": 1782803284096,
+          "last_flow_end_ms": 1782810449649,
+          "author_label_counts": {
+            "benign": 4639,
+            "malicious_c2": 848,
+            "benign_external": 4
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "708afeb715cc6b64f24a91473f6954b91934398f6a1c8003684b244d84c6f9f0",
+            "bytes": 2786087,
+            "labels_sha256": "bde24bb9a6ae45466af1140173746f129effaabdc80f3a3a3ba2a44f263fe570",
+            "uid_order_sha256": "a61b56fe7e40c3b7bd98f0a23b312a62231197e6508ca0f073aa80d58700f292"
+          }
+        },
+        {
+          "source_id": "TQH-B_i300_j0",
+          "profile": "B",
+          "normal": 1569,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 15,
+          "manifest_start_utc": "2026-07-20T11:48:00.613767Z",
+          "manifest_end_utc": "2026-07-20T13:46:21.913327Z",
+          "first_flow_end_ms": 1784548178514,
+          "last_flow_end_ms": 1784555170578,
+          "author_label_counts": {
+            "benign": 1569,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "49ef7d99e8dd447ac0053a82e7aa0d7512df48ff36ab4d6a38709cc9041f812a",
+            "bytes": 821275,
+            "labels_sha256": "9343fe52ced5271f99f4b9cf76abf41f1b110b1df8e796f16944ca5da7dadf6e",
+            "uid_order_sha256": "01df599173745d80a32ded1667b1be48ddca3cc2c06fe73d9cf5e254f256f30f"
+          }
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "profile": "B",
+          "normal": 1542,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 15,
+          "manifest_start_utc": "2026-07-20T13:46:22.408022Z",
+          "manifest_end_utc": "2026-07-20T15:44:43.809856Z",
+          "first_flow_end_ms": 1784555295043,
+          "last_flow_end_ms": 1784562272395,
+          "author_label_counts": {
+            "benign": 1542,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "1633ccb5f2df229d32f3d0f3fe505002b66736dd0e2ac032a85be02a511432bd",
+            "bytes": 807503,
+            "labels_sha256": "bc0a9ef3e704b99c92cc9becb80cdc3442b12fa5daecab3ae95507d0ba15976c",
+            "uid_order_sha256": "da67acc7e933b70a8963cd8ee9027825692029a8a26f6a13863edbf42a38b755"
+          }
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "profile": "B",
+          "normal": 1543,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 15,
+          "manifest_start_utc": "2026-07-20T15:44:44.288424Z",
+          "manifest_end_utc": "2026-07-20T17:43:05.645151Z",
+          "first_flow_end_ms": 1784562383814,
+          "last_flow_end_ms": 1784569371897,
+          "author_label_counts": {
+            "benign": 1543,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "eb85e52a85ee4905a9999630a8628a7c3a07b77236408a3cf20afd6c998a59ea",
+            "bytes": 807179,
+            "labels_sha256": "e22b5d5e3b9235956f4420f713bdc490fcda67d747450e316f5bd8f719bf5ca9",
+            "uid_order_sha256": "3c031fe5b45ee6e781a7f7a97eafc5783858facd985754eaa61c4bd18d58eff6"
+          }
+        }
+      ],
+      "normal": 18645,
+      "attack": 2805,
+      "first_flow_end_ms": 1782787749159,
+      "last_flow_end_ms": 1784569371897,
+      "rows": 21450
+    },
+    "C": {
+      "cells": [
+        {
+          "source_id": "TQH-B_i1800_j0",
+          "profile": "B",
+          "normal": 1834,
+          "attack": 0,
+          "excluded_attack": 24,
+          "normal_budget": 18,
+          "manifest_start_utc": "2026-07-20T17:43:06.110974Z",
+          "manifest_end_utc": "2026-07-20T20:26:55.931530Z",
+          "first_flow_end_ms": 1784569501350,
+          "last_flow_end_ms": 1784579203175,
+          "author_label_counts": {
+            "benign": 1834,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "4137a75a78b65359f0a4e758a5dcf2712783351e6fcfd166daa054b03d5d9c03",
+            "bytes": 949537,
+            "labels_sha256": "e7c0860682555bcc755b34f19108a90e6e6208638deb44cb0452d0f23faef770",
+            "uid_order_sha256": "02d9f3008f251332be40342ff1f415b9440e5b91fb73d107315bfb937075ecea"
+          }
+        },
+        {
+          "source_id": "TQH-B_i1800_j30",
+          "profile": "B",
+          "normal": 1829,
+          "attack": 0,
+          "excluded_attack": 24,
+          "normal_budget": 18,
+          "manifest_start_utc": "2026-07-20T20:26:56.460952Z",
+          "manifest_end_utc": "2026-07-20T23:10:45.487467Z",
+          "first_flow_end_ms": 1784579342222,
+          "last_flow_end_ms": 1784589031717,
+          "author_label_counts": {
+            "benign": 1829,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "97763b284809d6d44c277dd003fa9a6a158dc904f8db36e974973df690b5cfd6",
+            "bytes": 946725,
+            "labels_sha256": "69f209aa4b723a9979821dc6d42ebbb8ced04cc6f5b66bea84f3da4d31a25b35",
+            "uid_order_sha256": "7c892c14b6ad0d6422cd67427f129d57779941d401b800f6eb2aa85ec035a1cd"
+          }
+        },
+        {
+          "source_id": "TQH-B_i1800_j70",
+          "profile": "B",
+          "normal": 1848,
+          "attack": 0,
+          "excluded_attack": 24,
+          "normal_budget": 18,
+          "manifest_start_utc": "2026-07-20T23:10:46.035500Z",
+          "manifest_end_utc": "2026-07-21T01:54:35.322944Z",
+          "first_flow_end_ms": 1784589172148,
+          "last_flow_end_ms": 1784598863066,
+          "author_label_counts": {
+            "benign": 1848,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "478008b178dc3d2832c8bfd888d6d855f7159a0140e8e11dcec8f1fddd8a004f",
+            "bytes": 955124,
+            "labels_sha256": "75469174eceb04597460bcf325b01c4c49641c2cd4e083c1f1fa6dc8c31bdca5",
+            "uid_order_sha256": "09c986fcebca08baec95eaf7cac1ef90d68a7c038ddf348f2dad5699e2503af4"
+          }
+        }
+      ],
+      "normal": 5511,
+      "attack": 0,
+      "first_flow_end_ms": 1784569501350,
+      "last_flow_end_ms": 1784598863066,
+      "rows": 5511
+    },
+    "E_B": {
+      "cells": [
+        {
+          "source_id": "TQH-B_i3600_j0",
+          "profile": "B",
+          "normal": 1805,
+          "attack": 24,
+          "excluded_attack": 0,
+          "normal_budget": 18,
+          "manifest_start_utc": "2026-07-21T01:54:35.884409Z",
+          "manifest_end_utc": "2026-07-21T04:38:24.963715Z",
+          "first_flow_end_ms": 1784598963391,
+          "last_flow_end_ms": 1784608693458,
+          "author_label_counts": {
+            "benign": 1805,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "3a312c69cb8a9841e8f1393bd87d9b113898c4f0c58532a2ecb601ee6a405ae1",
+            "bytes": 937608,
+            "labels_sha256": "47e2054ccf8ed74b13f4276fb1be1867c3c3f527369bf01f684fa96d0b9a662c",
+            "uid_order_sha256": "5e04aa35dc36c1faab79e2c73dddc7d8ccabe44a6f6fa9f3e47de547911f0d06"
+          }
+        },
+        {
+          "source_id": "TQH-B_i3600_j30",
+          "profile": "B",
+          "normal": 1839,
+          "attack": 24,
+          "excluded_attack": 0,
+          "normal_budget": 18,
+          "manifest_start_utc": "2026-07-21T04:38:25.495221Z",
+          "manifest_end_utc": "2026-07-21T07:22:14.534498Z",
+          "first_flow_end_ms": 1784608797801,
+          "last_flow_end_ms": 1784618521616,
+          "author_label_counts": {
+            "benign": 1839,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "14e0b9ca7a1a83c7bfed3cde95cb8be96431bead28b8d00e6982a1edb0d94ba5",
+            "bytes": 950815,
+            "labels_sha256": "167da9551cc53816955ba820186301a7b7017ed30479e91f04c6e502c47fa91f",
+            "uid_order_sha256": "3fec404a39de9f4fda4e89138917d219a15ff1a8099d01716f2adeb76891ad25"
+          }
+        },
+        {
+          "source_id": "TQH-B_i3600_j70",
+          "profile": "B",
+          "normal": 1815,
+          "attack": 24,
+          "excluded_attack": 0,
+          "normal_budget": 18,
+          "manifest_start_utc": "2026-07-21T07:22:15.056076Z",
+          "manifest_end_utc": "2026-07-21T10:06:03.835084Z",
+          "first_flow_end_ms": 1784618627332,
+          "last_flow_end_ms": 1784628352628,
+          "author_label_counts": {
+            "benign": 1815,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "1e3903bbdc1c459287a3564848a36e12667e9bbc5794aeaf4395116ba11cc336",
+            "bytes": 943393,
+            "labels_sha256": "c78bceecd0644d0359d14f90acf60fd78c3c44b65f393ef4630dec378da6de4b",
+            "uid_order_sha256": "f3145b365bf16293812002fe1f5698ae056f8f04d51197807573c147d35d8be1"
+          }
+        }
+      ],
+      "normal": 5459,
+      "attack": 72,
+      "first_flow_end_ms": 1784598963391,
+      "last_flow_end_ms": 1784628352628,
+      "rows": 5531
+    },
+    "E_D": {
+      "cells": [
+        {
+          "source_id": "TQH-D_i30_j0",
+          "profile": "D",
+          "normal": 676,
+          "attack": 554,
+          "excluded_attack": 0,
+          "normal_budget": 6,
+          "manifest_start_utc": "2026-07-23T05:04:56.372086Z",
+          "manifest_end_utc": "2026-07-23T05:24:12.599174Z",
+          "first_flow_end_ms": 1784783177218,
+          "last_flow_end_ms": 1784784242911,
+          "author_label_counts": {
+            "malicious_c2": 554,
+            "benign": 676
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "7afb5bd7dd371553b72fa8e18ae998d3cfab96903fbf38dc992fc593474b4c7f",
+            "bytes": 634227,
+            "labels_sha256": "f323081cf612b417009506803bddaa8cbc2e584b2926efbd20ab4518e0b2058f",
+            "uid_order_sha256": "91a398b2edd1cffc0825ec6b7885230a41eb0303183bac65299c378d0d51e04f"
+          }
+        },
+        {
+          "source_id": "TQH-D_i30_j30",
+          "profile": "D",
+          "normal": 687,
+          "attack": 482,
+          "excluded_attack": 0,
+          "normal_budget": 6,
+          "manifest_start_utc": "2026-07-23T05:24:12.998345Z",
+          "manifest_end_utc": "2026-07-23T05:43:32.113276Z",
+          "first_flow_end_ms": 1784784338196,
+          "last_flow_end_ms": 1784785402978,
+          "author_label_counts": {
+            "malicious_c2": 482,
+            "benign": 687
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "fa87def8988e9094eb8ebb75e3bbcf2572467d9e7979264e5218318b740882b1",
+            "bytes": 602026,
+            "labels_sha256": "918e592ba99d848455dbfe0434ae82532ecc74703b528f60378bfc1477c40066",
+            "uid_order_sha256": "02634a4baa27dcf29ec772134c353b15284362e8ea6c92deeb0dcd73d036ff2e"
+          }
+        },
+        {
+          "source_id": "TQH-D_i30_j70",
+          "profile": "D",
+          "normal": 656,
+          "attack": 411,
+          "excluded_attack": 0,
+          "normal_budget": 6,
+          "manifest_start_utc": "2026-07-23T05:43:32.499332Z",
+          "manifest_end_utc": "2026-07-23T06:02:51.719203Z",
+          "first_flow_end_ms": 1784785497920,
+          "last_flow_end_ms": 1784786562276,
+          "author_label_counts": {
+            "malicious_c2": 411,
+            "benign": 656
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "7cdfe9f1edf1b155ff35dd381f4ed5c17028eebc9b0d8168a16f80459960a13e",
+            "bytes": 549368,
+            "labels_sha256": "8617fb9e1c1835842f2052ede2b38f107c1ab21e37008d71b77e76a236e87953",
+            "uid_order_sha256": "7e0ceda648c89d5e3900e425e94b989cff8da5f3ab252993715ac7b1b5e14977"
+          }
+        },
+        {
+          "source_id": "TQH-D_i300_j0",
+          "profile": "D",
+          "normal": 550,
+          "attack": 134,
+          "excluded_attack": 0,
+          "normal_budget": 5,
+          "manifest_start_utc": "2026-07-23T06:02:52.096664Z",
+          "manifest_end_utc": "2026-07-23T06:47:11.014216Z",
+          "first_flow_end_ms": 1784786706971,
+          "last_flow_end_ms": 1784789218191,
+          "author_label_counts": {
+            "benign": 550,
+            "malicious_c2": 134
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "04b64d3ed7940c3524e41f7fd45a2d01a8022096b002131200b00593d4238f0b",
+            "bytes": 353498,
+            "labels_sha256": "e457e2ec7833084bb5b72b9882402894ceb0ca699aa75c599622e41f5df7b546",
+            "uid_order_sha256": "89bd0a32df8ec409c6f11814e078753a99b93e1ca5737058d3091d61de7a7634"
+          }
+        },
+        {
+          "source_id": "TQH-D_i300_j30",
+          "profile": "D",
+          "normal": 547,
+          "attack": 115,
+          "excluded_attack": 0,
+          "normal_budget": 5,
+          "manifest_start_utc": "2026-07-23T06:47:11.360455Z",
+          "manifest_end_utc": "2026-07-23T07:31:29.595469Z",
+          "first_flow_end_ms": 1784789355291,
+          "last_flow_end_ms": 1784791873108,
+          "author_label_counts": {
+            "benign": 547,
+            "malicious_c2": 115
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "25d6ae307c7f465413decc7763e1ced30350ae1b0bce0fe8e6803a66cbd4fd77",
+            "bytes": 341274,
+            "labels_sha256": "3262de231a5d1df204081b344c60c3cc83d7e4058a27562ccbda836b9e833cb0",
+            "uid_order_sha256": "04af0f99f0afbe3af445d04e18175c8d2c977e64537ff78a3014974f561b0927"
+          }
+        },
+        {
+          "source_id": "TQH-D_i300_j70",
+          "profile": "D",
+          "normal": 564,
+          "attack": 99,
+          "excluded_attack": 0,
+          "normal_budget": 5,
+          "manifest_start_utc": "2026-07-23T07:31:29.936343Z",
+          "manifest_end_utc": "2026-07-23T08:15:48.205486Z",
+          "first_flow_end_ms": 1784792012313,
+          "last_flow_end_ms": 1784794537669,
+          "author_label_counts": {
+            "benign": 564,
+            "malicious_c2": 99
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "75d5cd7fcfd3c20fc70a88281a9f266a099e1bf1e8faa479831f9919a30985db",
+            "bytes": 341626,
+            "labels_sha256": "7e856a0f26edd041db35383258410e51bb2f79823be1ff6b66aa1ae5921c65cb",
+            "uid_order_sha256": "b9899cef0b044b72909b067ea6732fe1355db0304f2d855c018c5f060a917699"
+          }
+        },
+        {
+          "source_id": "TQH-D_i1800_j0",
+          "profile": "D",
+          "normal": 811,
+          "attack": 36,
+          "excluded_attack": 0,
+          "normal_budget": 8,
+          "manifest_start_utc": "2026-07-23T08:15:48.565147Z",
+          "manifest_end_utc": "2026-07-23T09:29:35.096728Z",
+          "first_flow_end_ms": 1784794657988,
+          "last_flow_end_ms": 1784798962052,
+          "author_label_counts": {
+            "benign": 811,
+            "malicious_c2": 36
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "fe5c042fc0cb3605fe11e83d519ad23d11b556454390cddbae6b8eeb3fb4b36e",
+            "bytes": 433137,
+            "labels_sha256": "ba8b1403d3617d5f56a70fe0c72e69c06857deb870c1414929850b773df18e13",
+            "uid_order_sha256": "de5c7f2c1cab55ced253473357f2b96771dd2291efe30f254f07bd52644b4c7a"
+          }
+        },
+        {
+          "source_id": "TQH-D_i1800_j30",
+          "profile": "D",
+          "normal": 800,
+          "attack": 35,
+          "excluded_attack": 0,
+          "normal_budget": 8,
+          "manifest_start_utc": "2026-07-23T09:29:35.463371Z",
+          "manifest_end_utc": "2026-07-23T10:43:21.300109Z",
+          "first_flow_end_ms": 1784799091712,
+          "last_flow_end_ms": 1784803388639,
+          "author_label_counts": {
+            "benign": 800,
+            "malicious_c2": 35
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "ada89febc38bcfe66e482b5e61b120b40207998ae45358d6499338be9d155206",
+            "bytes": 428267,
+            "labels_sha256": "4bf358d3c4edcf9f7b7b722864e73b33cb2d3a5bf48c1fe101f143d375ff8179",
+            "uid_order_sha256": "a1be0f76b3df2159707ffec7f4897c548772cff4c339621d7444923aabc1591f"
+          }
+        },
+        {
+          "source_id": "TQH-D_i1800_j70",
+          "profile": "D",
+          "normal": 799,
+          "attack": 27,
+          "excluded_attack": 0,
+          "normal_budget": 7,
+          "manifest_start_utc": "2026-07-23T10:43:21.683829Z",
+          "manifest_end_utc": "2026-07-23T11:57:07.375510Z",
+          "first_flow_end_ms": 1784803521132,
+          "last_flow_end_ms": 1784807817331,
+          "author_label_counts": {
+            "benign": 799,
+            "malicious_c2": 27
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "bad506c7b971bb36b5b96979ecc15d4b02004ff299e4d2e2dcbb315ff2f0fac5",
+            "bytes": 424137,
+            "labels_sha256": "5b63a72b52814ee50e6beef264079d939244865dc12628d46a6148e8986195e0",
+            "uid_order_sha256": "6b72f86259bf5832b6ee5b6498f68d9fcce5f6ca8c5c8eb6d10d9214d6b794d7"
+          }
+        },
+        {
+          "source_id": "TQH-D_i3600_j0",
+          "profile": "D",
+          "normal": 1151,
+          "attack": 24,
+          "excluded_attack": 0,
+          "normal_budget": 11,
+          "manifest_start_utc": "2026-07-23T11:57:07.764496Z",
+          "manifest_end_utc": "2026-07-23T13:40:54.483000Z",
+          "first_flow_end_ms": 1784807955681,
+          "last_flow_end_ms": 1784814041436,
+          "author_label_counts": {
+            "benign": 1151,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "1a8dbb6e9e67115769adb13bb9973f4558dcb149416894ab34696055617f4136",
+            "bytes": 603627,
+            "labels_sha256": "e41225ddcfe7b3367556abb4023819c0ce1289d1d2e7c99349efe0999a1ca223",
+            "uid_order_sha256": "188833330947486a98a439d20fd7b79c8d8394ef828bc8952036d20fc9dfd3e7"
+          }
+        },
+        {
+          "source_id": "TQH-D_i3600_j30",
+          "profile": "D",
+          "normal": 1152,
+          "attack": 24,
+          "excluded_attack": 0,
+          "normal_budget": 11,
+          "manifest_start_utc": "2026-07-23T13:40:54.914903Z",
+          "manifest_end_utc": "2026-07-23T15:24:41.486191Z",
+          "first_flow_end_ms": 1784814171628,
+          "last_flow_end_ms": 1784820271594,
+          "author_label_counts": {
+            "benign": 1152,
+            "malicious_c2": 24
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "ef4eb163c99cfbaaf1bf07fb7ed21103ee9a749495c5bb3c77c6f51c633ea3c2",
+            "bytes": 601781,
+            "labels_sha256": "36d3b3c9b163c217e18d0d25b2c361ac0ff7bced3981655e6b55748f91eb765e",
+            "uid_order_sha256": "f6b3d016d1cb0c77783e2fd809370668d29bdd93050ff0b85489f333e030462b"
+          }
+        },
+        {
+          "source_id": "TQH-D_i3600_j70",
+          "profile": "D",
+          "normal": 1171,
+          "attack": 23,
+          "excluded_attack": 0,
+          "normal_budget": 11,
+          "manifest_start_utc": "2026-07-23T15:24:41.913961Z",
+          "manifest_end_utc": "2026-07-23T17:08:28.685089Z",
+          "first_flow_end_ms": 1784820382898,
+          "last_flow_end_ms": 1784826495951,
+          "author_label_counts": {
+            "benign": 1171,
+            "malicious_c2": 23
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_D.zip",
+            "archive_sha256": "10d8e4ef6edd5416ae2d866d93e6165d174049c85a1ffa6861958784cabc2dc2",
+            "archive_bytes": 2238688,
+            "sha256": "74a4536db678544d42cd14919f787a8f7455fdd3d172fd9ea45254ff423b5fac",
+            "bytes": 609706,
+            "labels_sha256": "340079eecb6f301e438f7bfbc6352e991914ad2393a9cc424fbd6b90788e68cf",
+            "uid_order_sha256": "864998ada02a029f5e4cc50ffac43ab5d8e5932c8c7f6cd56b615ebc1f116c28"
+          }
+        }
+      ],
+      "normal": 9564,
+      "attack": 1964,
+      "first_flow_end_ms": 1784783177218,
+      "last_flow_end_ms": 1784826495951,
+      "rows": 11528
+    }
+  },
+  "chronology": {
+    "clock": "registered source-order cumulative maximum of ceil((ts+duration)*1000); not measured log delivery",
+    "within_profile_F_before_V": [
+      "A",
+      "B"
+    ],
+    "global_F_before_V": false,
+    "all_FV_before_C": true,
+    "C_before_all_E": true,
+    "online_label_availability_assumed": false,
+    "historical_labels_available_offline": true
+  },
+  "excluded": [
+    "all profile C",
+    "A_i1800 and A_i3600",
+    "B_i1800 attack rows",
+    "old source rows",
+    "AIT",
+    "DEDALE",
+    "IoT-23"
+  ],
+  "author_versions": {
+    "tabm": {
+      "package": "0.0.3",
+      "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4"
+    },
+    "rtdl_num_embeddings": {
+      "package": "0.0.12",
+      "commit": "7381c5a4ed01253fbef9ea8cfed137f907265552"
+    }
+  },
+  "runtime_packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.14.0",
+    "scikit-learn": "1.5.1",
+    "pyarrow": "21.0.0",
+    "torch": "2.6.0+cu126",
+    "tabm": "0.0.3",
+    "rtdl_num_embeddings": "0.0.12"
+  },
+  "models": {
+    "primary": {
+      "name": "tabm_ple",
+      "numeric_input_dim": 5,
+      "categorical_cardinalities": [
+        6,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "embedded_input_dim": 96,
+      "num_embeddings_argument": "official PiecewiseLinearEmbeddings module inside TabM.make",
+      "architecture": "tabm",
+      "n_blocks": 2,
+      "d_block": 512,
+      "k": 32,
+      "d_out": 1,
+      "activation": "ReLU",
+      "dropout": 0.1,
+      "dropout_after_each_hidden_block": true,
+      "start_scaling_init": "normal",
+      "shared_embedding_across_members": true,
+      "independent_output_heads": true
+    },
+    "ablation": {
+      "name": "plain_mlp_ple",
+      "backbone": "tabm.MLPBackbone",
+      "d_in": 96,
+      "n_blocks": 2,
+      "d_block": 512,
+      "activation": "ReLU",
+      "dropout": 0.1,
+      "head": "torch.nn.Linear(512,1)",
+      "k": 1,
+      "is_TabM_k1": false,
+      "same_seed_PLE_initial_state": true,
+      "mutable_modules_shared_between_candidates": false
+    },
+    "embedding": {
+      "type": "PiecewiseLinearEmbeddings",
+      "version": "B",
+      "max_bins": 48,
+      "d_embedding": 16,
+      "activation": false,
+      "fit_partition": "F",
+      "quantile_weights": "unweighted original F rows",
+      "duplicate_edges": "author deduplication",
+      "constant_edges": [
+        -1,
+        1
+      ]
+    },
+    "hgb": {
+      "max_iter": 200,
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "max_bins": 255,
+      "l2_regularization": 0,
+      "early_stopping": false,
+      "random_state": 20261111,
+      "input_dim": 21,
+      "input_precision": "float64",
+      "sample_weight": "same fixed F group weights",
+      "score": "decision_function",
+      "deployment": "deepcopy full fitted estimator, replace only _predictors with selected prefix; preserve _baseline_prediction, classes, validation state and bin mapper; n_iter_ is derived; no refit"
+    },
+    "score_contract": {
+      "neural": "FP32 member logits; FP64 stable log-odds of mean sigmoid probabilities; no clipping",
+      "hgb": "selected-stage decision_function float64",
+      "production_batch": 256,
+      "deployment": "CPU single thread"
+    }
+  },
+  "training": {
+    "fit_partition": "F",
+    "validation_partition": "V",
+    "final_fit_role": "F",
+    "final_refits": 0,
+    "optimizer": "AdamW",
+    "lr": 0.002,
+    "weight_decay": 0.0003,
+    "weight_decay_scope": "all trainable parameters",
+    "batch_size": 256,
+    "drop_last": false,
+    "precision": "FP32",
+    "gradient_clip_norm": 1.0,
+    "max_epochs": 200,
+    "patience": 16,
+    "patience_applies_to": "neural trajectories; HGB single full 200-stage fit scanned with same selection key",
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "batch_per_epoch": 78,
+    "max_updates_per_neural_trajectory": 15600,
+    "shuffle": "full permutation without replacement; paired architecture order; RNG separate from initialization",
+    "weighting": {
+      "definition": "N_F/(4*n_profile_label)",
+      "groups": [
+        {
+          "profile": "A",
+          "label": 0,
+          "rows": 8843,
+          "weight_numerator": 19904,
+          "weight_denominator": 35372,
+          "weight": 0.5627049643786045,
+          "total_weight": 4976.0
+        },
+        {
+          "profile": "A",
+          "label": 1,
+          "rows": 5123,
+          "weight_numerator": 19904,
+          "weight_denominator": 20492,
+          "weight": 0.9713058754635956,
+          "total_weight": 4976.0
+        },
+        {
+          "profile": "B",
+          "label": 0,
+          "rows": 5848,
+          "weight_numerator": 19904,
+          "weight_denominator": 23392,
+          "weight": 0.8508891928864569,
+          "total_weight": 4976.0
+        },
+        {
+          "profile": "B",
+          "label": 1,
+          "rows": 90,
+          "weight_numerator": 19904,
+          "weight_denominator": 360,
+          "weight": 55.28888888888889,
+          "total_weight": 4976.0
+        }
+      ],
+      "batch_loss": "mean(row_weight * mean_member_BCEWithLogits)",
+      "batch_weight_renormalization": false,
+      "weighted_sampler": false,
+      "pos_weight": false
+    },
+    "selection": {
+      "threshold_partition": "V normal",
+      "threshold": "max over six cells of ascending normal score at 1-based rank n0-floor(n0/100)",
+      "single_threshold_for_all_V_rows": true,
+      "decision": "score > threshold",
+      "threshold_reason": "minimum shared threshold satisfying all six empirical integer FP budgets",
+      "normal_budget_sum": 183,
+      "ordinary_key": [
+        "minimum_cell_recall",
+        "mean_cell_recall",
+        "pooled_standardized_pAUC_max_fpr_0.01",
+        "negative_four_profile_label_group_mean_NLL",
+        "negative_stage"
+      ],
+      "fully_saturated": "all six cells TP equals positive count at shared V threshold",
+      "saturation_action": "first saturated checkpoint wins permanently; no NLL replacement",
+      "validation_FP_compliance_is_constructed": true,
+      "deployment_threshold_reuses_V": false
+    },
+    "determinism": {
+      "torch_use_deterministic_algorithms": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "record_runtime_and_device": true
+    }
+  },
+  "budget": {
+    "neural_trajectories": 6,
+    "hgb_fits": 1,
+    "training_starts": 7,
+    "max_fits": 7,
+    "final_refits": 0,
+    "hyperparameter_grid": false,
+    "additional_seeds": false,
+    "max_neural_optimizer_updates": 93600
+  },
+  "calibration": {
+    "partition": "C",
+    "normal_rows": 5511,
+    "rule": "ceil((n+1)*0.99) ascending normal score; 1-based",
+    "rank": 5457,
+    "decision": "strictly greater",
+    "one_threshold_per_model_across_all_E_cells": true,
+    "after_all_seven_frozen": true,
+    "evaluation_recalibration": false,
+    "excluded_attack_rows": 72
+  },
+  "acceptance": {
+    "all_seeds_required": [
+      17,
+      29,
+      43
+    ],
+    "all_15_E_cells_FP": "<= floor(normal_count/100)",
+    "E_B_TP": 72,
+    "per_B_cell_TP": 24,
+    "required_improvement_references": [
+      "new same-information HGB",
+      "paired-seed plain MLP+PLE",
+      "legacy HGB union fixed UDP443 duration>=30 rule"
+    ],
+    "reference_qualified_cells": "candidate TP must not decrease in any qualified reference cell",
+    "strict_D_gain_for_each_reference": "at least one D cell gains TP while qualified, or repairs reference FP failure with TP >= reference raw TP",
+    "historical_capability_guard": [
+      "R26 target-ports_zero8-mlp17",
+      "R26 target-ports_zero8-mlp29",
+      "R26 target-ports_zero8-mlp43"
+    ],
+    "historical_guard_rule": "no per-cell TP decrease wherever that reference qualifies; no strict improvement required",
+    "identity_report": "all added and lost TP identities; counts nondecreasing does not imply zero lost identities",
+    "UTC_day_and_same_service": "report, not new post-hoc adoption gates",
+    "cost": "report tradeoff; no invented memory cap or relaxed detection tolerance"
+  },
+  "stopping": {
+    "main_candidate_fails": "not adopted; no threshold/weight/capacity/seed adjustment",
+    "plain_not_worse": "no demonstrated necessity of ensemble; do not promote post hoc",
+    "HGB_perfect_qualified": "end detection-gain branch; no complex-model search",
+    "all_fail": "retain named cell and row failures; no universal impossibility claim"
+  },
+  "cost": {
+    "cpu": {
+      "single_rows": 64,
+      "repeats": 3,
+      "warmup": 8,
+      "batch_size": 128
+    },
+    "gpu": {
+      "batch_size": 512,
+      "repeats": 3,
+      "warmup": 8
+    },
+    "thread_limits": "once per worker; not inside hot score",
+    "CPU_cold_replay": "full E batch256 exact frozen scores/decisions",
+    "GPU_scope": "fixed 512 row subset descriptive throughput; not whole-E equivalence",
+    "batch_tail": "three repeats are descriptive",
+    "memory": "whole-process RSS, not model-exclusive",
+    "timings": [
+      "cold_load",
+      "end_to_end",
+      "preprocessing_only",
+      "model_only_on_pretransformed_input"
+    ]
+  },
+  "implementation": {
+    "status": "not implemented",
+    "entry_point_planned": "ids.model_training_v2",
+    "preserve_existing": "ids.model_training and R29 registration",
+    "change_ids": [
+      "D01",
+      "D02",
+      "D03",
+      "M01",
+      "T01",
+      "T02",
+      "T03",
+      "M02",
+      "P01",
+      "E01",
+      "E02",
+      "C01",
+      "R01"
+    ],
+    "formal_lab_registration_required_before_execution": true
+  },
+  "independent_confirmation": {
+    "ready": false,
+    "required": [
+      "same Zeek feature semantics",
+      "complete normal denominator",
+      "event-to-flow truth mapping",
+      "unresolved/mixed rules",
+      "matched benign long connections/downloads",
+      "availability clock",
+      "frozen model and threshold or separately registered prior normal calibration"
+    ],
+    "R27_status": "external mechanism case; not ready confirmation"
+  }
+}
