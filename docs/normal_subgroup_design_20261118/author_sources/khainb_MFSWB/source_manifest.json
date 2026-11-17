@@ -1,0 +1,33 @@
+{
+  "repository": "khainb/MFSWB",
+  "commit": "fb5c3630841c0a02405a26233d92c5cd49f21668",
+  "license": "MIT",
+  "retrieved_on": "2026-11-18",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1418,
+      "git_blob_sha1": "2e6f0dc371187b0ac8269002ecbbf36817cb551a",
+      "sha256": "3651687549d4ab3581a06637689857f38bf43a6a3e2321b011d3767f65c30c81"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1068,
+      "git_blob_sha1": "29890ad5d5641ae2ebf0693293d2e9ed512709fe",
+      "sha256": "696cbca26e09c8d35d020016334bac3429b4e29c87cce72d40349b3c0fb47841"
+    },
+    {
+      "path": "SWAE/metrics/wasserstein.py",
+      "bytes": 13254,
+      "git_blob_sha1": "02981ac0d7f126a1586f8bd0141409a88992d201",
+      "sha256": "eceefd0f9cdca4a902d2d02d38299715798a5dd0376afb606054da9bd77c18b0"
+    },
+    {
+      "path": "SWAE/swae/trainer.py",
+      "bytes": 5197,
+      "git_blob_sha1": "44c7dc0e7d6c444dbbdbefc4a6f36d9b8422c7fb",
+      "sha256": "a88484df21e56745ae0fd5ed0f95101091bee39f4cee9fdd2ee9dfd888b1d0e0"
+    }
+  ],
+  "verification": "each original byte sequence matched Git blob SHA-1 returned by GitHub"
+}

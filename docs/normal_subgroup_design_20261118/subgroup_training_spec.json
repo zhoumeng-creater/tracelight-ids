@@ -1,0 +1,193 @@
+{
+  "schema": "normal-subgroup-training-spec-v1",
+  "date": "2026-11-18",
+  "status": "design_only_no_fit",
+  "execution_enabled": false,
+  "groups": {
+    "construction_role": "F_normal_only",
+    "root_fields": [
+      "profile"
+    ],
+    "roots": [
+      "A",
+      "B"
+    ],
+    "ordered_fields": [
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes"
+    ],
+    "excluded": [
+      "source_id",
+      "duration_seconds",
+      "ip_protocol",
+      "model_scores",
+      "V_distribution",
+      "C",
+      "E",
+      "D_error_patterns"
+    ],
+    "missing": "NaN_and_minus_one_to_minus_one; reject_other_negative_or_nonfinite",
+    "max_depth": 4,
+    "min_F_leaf_n": 256,
+    "split": "depth_mod_4_cyclic_field_priority; first_field_with_legal_split; min_abs_2left_minus_total; ties_lower_left_boundary; x_le_cut_left",
+    "same_value_split": false,
+    "unsplittable": "keep_parent_leaf",
+    "small_root": "preflight_failure",
+    "max_leaves": 32,
+    "max_nodes": 62,
+    "actual_leaves": 32,
+    "F_normal_exact_raw_input_keys_with_multiple_profiles": 1,
+    "target_input_consistency": "after_group_midrank_target_construction_take_min_target_within_identical_actual_FP32_numeric_missing_UNKNOWN_input_equivalence_class; keep_groups_unchanged",
+    "actual_target_conflict_evaluated": false,
+    "F_normal_n": 14691,
+    "V_normal_n": 18645,
+    "F_leaf_min_max": [
+      349,
+      701
+    ],
+    "V_leaf_min_max": [
+      217,
+      1193
+    ],
+    "support_file": "f_group_counts.json",
+    "support_script": "count_f_groups.py",
+    "V_refit": false,
+    "V_empty_leaf": "selection_failure_no_group_dropped",
+    "V_unknown_profile": "UNSEEN_PROFILE_selection_failure",
+    "V_unseen_missing_pattern_by_profile": "route_minus_one_record_UNSUPPORTED_MISSING_selection_failure",
+    "unseen_numeric_range": "edge_leaf_by_fixed_comparisons",
+    "group_at_inference": false,
+    "per_group_q99_precision_claim": false
+  },
+  "training": {
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "initialization": "corresponding_R30_blind_best_artifact",
+    "arms": [
+      "transport_target",
+      "identity_target"
+    ],
+    "only_paired_difference": "normal_target_values",
+    "continue_BCE": true,
+    "continue_positive_anchor_both_arms": true,
+    "k": 32,
+    "shared_batch_all_members": true,
+    "sampling": "original_four_independent_cyclic_shuffle_queues",
+    "batch_groups": [
+      "A0",
+      "A1",
+      "B0",
+      "B1"
+    ],
+    "per_group_batch": 64,
+    "batch_size": 256,
+    "extra_subgroup_sampler": false,
+    "normal_aux_row_weight": "N_profile_normal/(64*G*n_group)",
+    "normal_aux_reduce": "sum_over_128_normal_rows",
+    "positive_aux_reduce": "0.5*(mean_A1_64+mean_B1_64)",
+    "BCE_aux_weighted": false,
+    "forward_modes": [
+      "train_BCE_backward",
+      "eval_auxiliary_with_autograd_backward"
+    ],
+    "updates_per_batch": 1,
+    "clip_global_grad_norm": 1.0,
+    "optimizer": "AdamW_new_state",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0003,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "network_precision": "float32_no_AMP",
+    "auxiliary_score_math": "stable_log_mean_probability_float64",
+    "scheduler": null,
+    "max_steps_per_arm_seed": 2224,
+    "validation_every_steps": 139,
+    "validation_events": 16,
+    "performance_early_stop": false,
+    "total_trajectories": 6,
+    "total_optimizer_steps_cap": 13344,
+    "per_original_group_draws": 142336,
+    "P_refits": 0,
+    "auto_resume_failed_fit": false,
+    "backward": "BCE_backward_then_aux_backward_accumulate; one_global_clip_and_optimizer_step"
+  },
+  "retention": {
+    "F_positive_n": 5213,
+    "F_per_identity_score_no_decrease": true,
+    "reference_score_path": "same_deterministic_CPU_path_as_checkpoints",
+    "old_GPU_cache_for_hard_constraint": false,
+    "V_per_positive_normal_exceedance_no_increase": true,
+    "fallback": "original_step0_mark_candidate_failed",
+    "B_original_TP_to_retain": 72,
+    "D_original_TP_to_retain": 1964,
+    "every_seed_required": true,
+    "per_cell_FP_budget": "floor(original_normal_n/100)",
+    "cells": 15,
+    "threshold_procedure": "original_C_once_after_six_artifacts_frozen",
+    "no_threshold_tuning_or_model_stitching": true
+  },
+  "compact_state_bounds": {
+    "F_rows": 19904,
+    "F_bytes_per_row": 29,
+    "F_aux_bytes": 577216,
+    "V_reference_bytes": 204270,
+    "total_aux_reference_bytes": 781486,
+    "excludes": [
+      "original_features",
+      "identity_strings",
+      "Python_containers",
+      "sort_temporaries",
+      "network_and_GPU_activations"
+    ],
+    "per_member_target_copy": false,
+    "one_batch_logits_float32_bytes": 32768
+  },
+  "synthetic_checks_required": [
+    "partition_order_invariant_tie_lower_boundary_missing_sparse_unseen",
+    "complete_F_identity_coverage_and_V_fixed_mapping",
+    "sample_weight_expectation_matches_full_group_objective",
+    "32_member_BCE_and_probability_average_semantics",
+    "aux_eval_has_grad_and_preserves_dropout_RNG",
+    "single_optimizer_update_and_global_clip",
+    "warmstart_step0_identical_function",
+    "no_CE_access_before_artifact_freeze"
+  ],
+  "author_references": [
+    {
+      "method": "TabM",
+      "venue_year": "ICLR_2025",
+      "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4",
+      "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/example.ipynb",
+      "supports": [
+        "independent_member_supervised_loss",
+        "probability_space_average",
+        "shared_batch_allowed"
+      ],
+      "does_not_validate": [
+        "count_partition",
+        "normal_auxiliary",
+        "warmstart_budget",
+        "15cell_FPR"
+      ]
+    },
+    {
+      "method": "TabReD",
+      "venue_year": "ICLR_2025",
+      "commit": "b5ef15b3749f30da7a1eb8fba21a5b54d706bf32",
+      "url": "https://github.com/yandex-research/tabred/blob/b5ef15b3749f30da7a1eb8fba21a5b54d706bf32/paper/bin/nn_baselines.py",
+      "supports": [
+        "validation_checkpoint_selection",
+        "reload_selected_artifact"
+      ]
+    }
+  ],
+  "canonical_design": "configs/normal-subgroup-training-20261118/design.json"
+}

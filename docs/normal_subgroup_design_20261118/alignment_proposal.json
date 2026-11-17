@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "status": "design_only",
+  "candidate_id": "frozen_one_sided_normal_quantile_targets_v1",
+  "executed": {
+    "model_loads": 0,
+    "forward_passes": 0,
+    "new_scores": 0,
+    "new_targets": 0,
+    "fits": 0,
+    "threshold_searches": 0
+  },
+  "parents": {
+    "model": "R30 blind TabM+PLE",
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "original_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8"
+  },
+  "data_access": {
+    "fit_groups": "F normal inputs only",
+    "fit_targets": "F normal groups and same-seed frozen F scores",
+    "positive_anchors": "F positives",
+    "selection": "V only",
+    "calibration_evaluation": "C/E only after all six trajectories/checkpoints frozen"
+  },
+  "grouping": {
+    "roots": [
+      "A_normal",
+      "B_normal"
+    ],
+    "feature_priority": [
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes"
+    ],
+    "max_depth": 4,
+    "min_child": 256,
+    "max_total_groups": 32,
+    "split": "cycle feature priority by depth, legal boundary nearest half; equal-distance smaller boundary",
+    "equal_values": "never split",
+    "excluded": [
+      "duration",
+      "protocol",
+      "model_scores",
+      "D_error_patterns"
+    ],
+    "manifest": "F-only group contract in consolidated design",
+    "sparse": "unsplittable parent remains leaf; no pooled fallback",
+    "unknown_profile": "F/V non-A/B reject contract; D has no forced group and is evaluated by original cells"
+  },
+  "model": {
+    "feature_contract": "unchanged",
+    "main_arm": "blind",
+    "K": 32,
+    "parameters": 416704,
+    "dropout": 0.1,
+    "new_parameters": 0,
+    "deployment_group_input": false,
+    "deployment_teacher": false
+  },
+  "targets": {
+    "score": "logsumexp(logsigmoid(z_k))-logsumexp(logsigmoid(-z_k)); FP64 operations preserve autograd",
+    "quantile": "left inverse empirical CDF; ascending x[max(1,ceil(N*u))]",
+    "rank": "average ascending rank for ties, one-based",
+    "u": "(average_rank-0.5)/n_group",
+    "provisional": "min(original_score, pooled_F_normal_quantile(u))",
+    "consistency": "merge identical frozen FP32 model-input normal equivalence classes using minimum provisional target",
+    "final": "minimum provisional target among identical network inputs; never exceeds own original_score",
+    "delta": "max(Q_Fnormal0(0.75)-Q_Fnormal0(0.25),1)",
+    "immutable": true,
+    "interpretation": "fixed discrete quantile midpoint target plus input-consistency adjustment, not online or exact continuous optimal transport",
+    "tie_note": "provisional within-group targets preserve score order; final equivalence-class min can change local order"
+  },
+  "objective": {
+    "total": "member_BCE + A + P",
+    "coefficients": {
+      "member_BCE": 1,
+      "A": 1,
+      "P": 1
+    },
+    "A_population": "(1/G) sum_g (1/n_g) sum_i_in_g ((s_theta(x_i)-target_i)/delta)^2",
+    "A_batch": "sum_i_in_normal_batch N_source_normal/(64*G*n_group_i) * ((s_theta(x_i)-target_i)/delta)^2; no extra batch division",
+    "P_population": "0.5 mean_A1 relu((s0-s_theta)/delta)^2 + 0.5 mean_B1 same",
+    "P_batch": "(1/128) sum_i_in_positive_batch relu((s0-s_theta)/delta)^2",
+    "BCE": "existing four-group mean member-wise BCE",
+    "normal_anchor": "all normal target errors are two-sided squared errors, including rows with unchanged target",
+    "positive_anchor": "one-sided ensemble-score non-decrease soft penalty; hard protection enforced by evaluation contract",
+    "gradient_mode": "one train-mode BCE forward plus one eval-mode auxiliary forward on same batch, eval-mode keeps autograd; one joint backward/clip/step",
+    "no_additions": [
+      "pair loss",
+      "temperature",
+      "group threshold",
+      "gradient through frozen target",
+      "per-step all-F sort",
+      "per-step teacher forward"
+    ]
+  },
+  "training": {
+    "arms": [
+      "transport_target",
+      "identity_target"
+    ],
+    "control": "all normal targets original same-seed F score; all else identical, including protection",
+    "trajectories": 6,
+    "init": "same-seed R30 selected checkpoint",
+    "reset_optimizer": true,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0003,
+    "gradient_norm_clip": 1,
+    "precision": "FP32 network, existing FP64 stable_scores scalar path, no AMP",
+    "sampler": "four independently shuffled cyclic queues A0/A1/B0/B1, 64 each",
+    "batch_size": 256,
+    "steps": 2224,
+    "eval_interval": 139,
+    "checkpoint_steps": [
+      0,
+      139,
+      278,
+      417,
+      556,
+      695,
+      834,
+      973,
+      1112,
+      1251,
+      1390,
+      1529,
+      1668,
+      1807,
+      1946,
+      2085,
+      2224
+    ],
+    "early_stop": false,
+    "scheduler": null,
+    "matched_rng": [
+      "sampler",
+      "BCE_dropout",
+      "initialization"
+    ],
+    "target_cache": "future registered preflight: same deterministic CPU scoring path regenerates frozen F/V reference from original same-seed checkpoint; archived GPU F scores remain historical evidence",
+    "backward": "BCE_backward_then_aux_backward_accumulate; one_global_clip_and_optimizer_step"
+  },
+  "selection": {
+    "contract": "consolidated evaluation contract defines exact hard gates and rank-tail scalar",
+    "per_arm": "minimum_H_among_safe_checkpoints_strictly_better_than_step0; exact_tie_earliest; step0_fallback_not_pass",
+    "mechanism": "V normal rank-tail group enrichment at pooled top 10%,5%,1%, fractional boundary ties",
+    "forbidden_success": [
+      "training loss decrease alone",
+      "common monotonic score rescaling",
+      "normal score collapse",
+      "only pooled AUC increase"
+    ],
+    "require_compare": [
+      "same-seed R30",
+      "matched transport_off"
+    ],
+    "ce_targets": {
+      "B_TP": 72,
+      "D_TP": 1964,
+      "TP_identities_lost": 0,
+      "cells": 15,
+      "FP_budget": "floor(normal_n/100) per cell; each seed separately"
+    },
+    "tie_break": "minimum H among safe checkpoints; earliest step for exact H ties; pAUC is protection gate only",
+    "per_q_guard": "each_H_q_not_worse_than_step0; transport_each_H_q_not_worse_than_control_for_mechanism"
+  },
+  "implementation_files": [
+    "normal_subgroup_training/groups.py",
+    "normal_subgroup_training/targets.py",
+    "normal_subgroup_training/losses.py",
+    "normal_subgroup_training/training.py",
+    "normal_subgroup_training/selection.py",
+    "normal_subgroup_training/evaluation.py"
+  ],
+  "source": {
+    "principle": {
+      "title": "Auditing and Enforcing Conditional Fairness via Optimal Transport",
+      "venue": "AAAI",
+      "year": 2025,
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33847",
+      "author_code": "not located; no reproduction claim"
+    },
+    "implementation": {
+      "title": "Towards Marginal Fairness Sliced Wasserstein Barycenter",
+      "venue": "ICLR",
+      "year": 2025,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/8711bd7223057ce98a6030a687609b87-Abstract-Conference.html",
+      "repository": "khainb/MFSWB",
+      "commit": "fb5c3630841c0a02405a26233d92c5cd49f21668",
+      "license": "MIT",
+      "snapshot": "author_sources/khainb_MFSWB/source_manifest.json",
+      "used": [
+        "empirical inverse quantile implementation",
+        "sorted 1D distribution distances",
+        "groupwise distribution term with base loss"
+      ],
+      "not_used": [
+        "autoencoder",
+        "random projections",
+        "barycenter estimation",
+        "original fairness benchmark success claim"
+      ]
+    }
+  },
+  "exit": [
+    "source/cache/input mismatch",
+    "constant target or no possible rank-tail mechanism change",
+    "undefined or unsupported group coverage",
+    "nonfinite optimization",
+    "no safe checkpoint",
+    "on fails to beat matched off",
+    "any original TP identity lost",
+    "any seed/cell fails fixed FP budget"
+  ],
+  "additional_experiments_allowed": false,
+  "canonical_design": "configs/normal-subgroup-training-20261118/design.json"
+}

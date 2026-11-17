@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": [
+    "nonexecuting_spec_and_fixed_budget",
+    "frozen_group_coverage_and_min_support",
+    "hand_computed_one_sided_midrank_targets",
+    "group_ties_and_identical_input_minimum_resolution",
+    "group_weight_expectation_no_extra_batch_division",
+    "tail_metric_strict_monotone_invariance",
+    "constant_score_false_improvement_rejected_by_tie_guard",
+    "wide_tail_gain_cannot_hide_one_percent_tail_loss",
+    "one_positive_score_drop_cannot_be_averaged_away",
+    "licensed_MFSWB_author_files_original_bytes"
+  ],
+  "checks_passed": 10,
+  "scope": "hand_arrays_and_frozen_metadata_only",
+  "new_fits": 0,
+  "model_loads": 0,
+  "network_forwards": 0,
+  "new_scores": 0,
+  "candidate_targets_on_real_data": 0,
+  "threshold_searches": 0,
+  "not_training_implementation_or_effect_validation": true
+}

@@ -1,0 +1,312 @@
+{
+  "version": "normal-subgroup-design-20261118-v1",
+  "status": "candidate_specified_implementation_pending",
+  "execution_enabled": false,
+  "not_training_registration": true,
+  "training_entry_ready": false,
+  "current_real_compute_budget": 0,
+  "report": "docs/NORMAL_SUBGROUP_TRAINING_DESIGN_20261118.md",
+  "baseline_version": "model-training-redesign-r30-v1",
+  "baseline_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8",
+  "baseline_analysis_commit": "e73d43bb04d6d41a9323156c564bc0f8c642a004",
+  "input_bindings": "configs/normal-subgroup-training-20261118/input-bindings.json",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "arms": [
+    "transport_target",
+    "identity_target"
+  ],
+  "model": {
+    "architecture": "unchanged_R30_protocol_blind_TabM_PLE",
+    "k": 32,
+    "n_blocks": 2,
+    "d_block": 512,
+    "dropout": 0.1,
+    "protocol": "fixed_UNKNOWN_slot_5",
+    "numeric_fields": [
+      "duration_seconds",
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes"
+    ],
+    "input_missing_flags": 5,
+    "preprocessor_and_bins": "load_exact_baseline_artifact_without_refit",
+    "ple": {
+      "version": "B",
+      "activation": false,
+      "embedding_dim": 16,
+      "max_bins": 48
+    },
+    "trainable": "all_original_parameters",
+    "deployment": "one_TabM_mean_member_probability_stable_log_odds_and_one_C_threshold",
+    "new_inference_features_or_parameters": 0
+  },
+  "roles": {
+    "F": {
+      "rows": 19904,
+      "normal": 14691,
+      "positive": 5213,
+      "use": [
+        "group_fit",
+        "reference_scores",
+        "targets",
+        "gradient",
+        "positive_guard"
+      ]
+    },
+    "V": {
+      "rows": 21450,
+      "normal": 18645,
+      "positive": 2805,
+      "use": [
+        "frozen_group_mapping",
+        "selection"
+      ]
+    },
+    "C": {
+      "rows": 5511,
+      "normal": 5511,
+      "use": [
+        "one_calibration_after_all_artifacts_frozen"
+      ]
+    },
+    "E_B": {
+      "rows": 5531,
+      "normal": 5459,
+      "positive": 72,
+      "cells": 3,
+      "use": [
+        "opened_development_regression"
+      ]
+    },
+    "E_D": {
+      "rows": 11528,
+      "normal": 9564,
+      "positive": 1964,
+      "cells": 12,
+      "use": [
+        "opened_development_regression"
+      ]
+    }
+  },
+  "groups": {
+    "fit_role": "F_normal_only",
+    "roots": [
+      "A",
+      "B"
+    ],
+    "fields": [
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes"
+    ],
+    "algorithm": "balanced_binary_count_bins",
+    "max_depth": 4,
+    "min_child_rows": 256,
+    "max_groups": 32,
+    "field_priority_at_depth_d": "(d+offset)%4 for offset=0,1,2,3; choose first field with a legal cut",
+    "cut": "observed_value_with_both_child_counts_at_least_256_minimizing_abs(2*n_left-n_node); tie_lower_value",
+    "equality": "left_if_value_le_cut; never_split_equal_values",
+    "missing": "NaN_and_minus1_canonical_minus1_before_binning; other_negative_or_nonfinite_rejected",
+    "unsplittable": "retain_parent_leaf",
+    "unseen_numeric": "frozen_tree_routes_to_boundary_leaf",
+    "unknown_profile": "reject_F_V_contract; deployment_does_not_use_groups",
+    "not_used": [
+      "duration",
+      "ip_protocol",
+      "source_id",
+      "scores",
+      "V_distribution_to_fit",
+      "C",
+      "D_error_patterns"
+    ],
+    "support_record": "docs/normal_subgroup_design_20261118/f_group_counts.json",
+    "observed_groups": 32,
+    "observed_F_group_range": {
+      "A": [
+        430,
+        701
+      ],
+      "B": [
+        349,
+        385
+      ]
+    },
+    "observed_V_group_range": {
+      "A": [
+        523,
+        1193
+      ],
+      "B": [
+        217,
+        375
+      ]
+    },
+    "unseen_V_missing_pattern": "reject_selection_contract_before_training; current_F_and_V_have_no_missing_count_values",
+    "observed_F_raw_normal_input_keys_shared_between_profiles": 1,
+    "observed_target_conflict": "not_evaluated_no_real_targets_generated"
+  },
+  "reference": {
+    "when": "future_implementation_preflight_before_updates",
+    "score_path": "same_deterministic_CPU_eval_FP64_stable_ensemble_as_selection",
+    "baseline_outputs": [
+      "F",
+      "V"
+    ],
+    "frozen_scale": "max(inverse_ECDF_F0(0.75)-inverse_ECDF_F0(0.25),1.0)",
+    "cold_replay_and_identity_check": true,
+    "C_or_E_access": false
+  },
+  "targets": {
+    "rank": "one_based_with_average_rank_for_exact_ties",
+    "u": "(group_midrank(s0)-0.5)/group_n",
+    "inverse_ecdf": "sorted_all_F_normal_s0[ceil(N0*u)-1], bounded_index_0_to_N0-1",
+    "transport_provisional": "min(s0_i,inverse_ecdf(u_i))",
+    "transport_final": "minimum_provisional_target_within_identical_frozen_FP32_numeric_missing_UNKNOWN_model_input_class",
+    "identity_target": "s0_i",
+    "same_input_same_target": true,
+    "opposite_label_input_collision": "reject_before_training",
+    "normal_target_constant": "reject_before_training",
+    "recompute_during_training": false,
+    "online_wasserstein_claim": false
+  },
+  "loss": {
+    "member_bce": "four_equal_A0_A1_B0_B1_means_of_independent_32_member_BCE",
+    "normal": "mean_g mean_i_in_g ((ensemble_score_i-target_i)/Delta)^2",
+    "positive": "0.5*(mean_A1(relu((s0-s)/Delta)^2)+mean_B1(relu((s0-s)/Delta)^2))",
+    "normal_weight": 1.0,
+    "positive_weight": 1.0,
+    "ensemble_score": "log_mean_sigmoid(z)-log_mean_sigmoid(-z); stable_FP64_logsumexp",
+    "normal_sampling_correction": "sum_normal_batch N_profile_normal/(64*G*n_g) * squared_error",
+    "positive_batch": "mean_of_A1_B1_batch_means",
+    "bce_receives_auxiliary_weights": false,
+    "normal_penalty": "two_sided_MSE_to_one_sided_generated_target",
+    "member_coupling": "auxiliary_ensemble_gradient_explicit_project_adaptation",
+    "hard_preservation_guaranteed_by_loss": false
+  },
+  "training": {
+    "initialization": "paired_same_seed_R30_blind_best_state",
+    "sampler": {
+      "groups": {
+        "A0": 8843,
+        "A1": 5123,
+        "B0": 5848,
+        "B1": 90
+      },
+      "draws_per_group": 64,
+      "batch_size": 256,
+      "kind": "four_independent_cyclic_shuffled_queues"
+    },
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0002,
+      "weight_decay": 0.0003,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "state": "reset_same_for_pair"
+    },
+    "gradient_clip_global_norm": 1.0,
+    "network_precision": "FP32",
+    "amp": false,
+    "bce_forward": "train_mode_dropout_enabled",
+    "auxiliary_forward": "same_batch_eval_mode_dropout_disabled_with_autograd_enabled",
+    "updates_per_batch": 1,
+    "auxiliary_forward_consumes_training_rng": false,
+    "scheduler": null,
+    "validation_every_steps": 139,
+    "optimizer_steps_per_trajectory": 2224,
+    "validation_events": 16,
+    "performance_early_stop": false,
+    "planned_future_fit_calls": 6,
+    "planned_future_max_optimizer_steps": 13344,
+    "final_refits": 0,
+    "automatic_incomplete_fit_retry": false,
+    "paired_same_batch_and_dropout_stream": true,
+    "failure": "stop_on_nonfinite_or_contract_violation_and_archive_failure",
+    "backward": "BCE_backward_then_auxiliary_backward_accumulating_gradients; one_clip_and_one_step"
+  },
+  "selection": {
+    "baseline": "step0_R30_fallback_not_candidate_pass",
+    "F_guard": "each_positive_current_score_ge_same_path_baseline_score; zero_downward_tolerance",
+    "V_positive_guard": "each_positive_count_of_all_V_normal_scores_ge_positive_score_not_increased",
+    "V_panel_guard": "A_TCP_and_B_UDP_strict_separation_preserved; panel_and_pooled_pAUC_not_decreased",
+    "V_tie_guard": "max_normal_equal_score_block_and_number_of_tied_normal_pairs_not_increased",
+    "normal_metric": "H=max_g,q max(T_g(q)-(1-q),0)",
+    "q": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "tail_mass": "N_normal*(1-q); equal_fraction_for_boundary_tie_block",
+    "group_support": "require_all_32_frozen_groups_have_V_support_as_verified; unknown_profile_or_unseen_missing_pattern_reject_contract; no_V_min_n_cutoff",
+    "comparison_arithmetic": "exact_rational_or_cross_multiply_integer_counts",
+    "select": "minimum_H_among_guard_passing_checkpoints_strictly_better_than_step0; tie_earliest_step",
+    "if_none": "fallback_step0_and_candidate_improved_false",
+    "NLL_in_key": false,
+    "full_separation_early_stop": false,
+    "V_tail_guard": "each_H_q_not_above_same_seed_step0_H_q; q=0.90,0.95,0.99"
+  },
+  "mechanism_pass": {
+    "per_seed": "nonfallback_transport_selected_and_all_guards_and_H_transport_lt_H_R30_and_H_transport_lt_H_control_and_each_H_q_transport_le_H_q_control",
+    "aggregate": "all_three_seeds_pass; no_seed_selection_or_mean_masking"
+  },
+  "calibration": {
+    "role": "C",
+    "normal_rows": 5511,
+    "alpha": 0.01,
+    "one_based_sorted_rank": 5457,
+    "decision": "strict_greater",
+    "times_per_model": 1,
+    "reuse_old_numeric_threshold": false,
+    "after_all_six_selected_artifacts_frozen": true
+  },
+  "adoption": {
+    "each_seed_B_TP": 72,
+    "each_seed_D_TP": 1964,
+    "lost_R30_positive_identities": 0,
+    "cell_count": 15,
+    "each_cell_FP_budget": "floor(normal_n/100)",
+    "excess_X": "sum_cells max(FP-floor(normal_n/100),0)",
+    "transport_vs_control": "X_transport_strictly_lt_X_control; both_zero_does_not_justify_added_transport",
+    "requires_all_three_mechanism_pass": true,
+    "identity_gain_loss_tables": true,
+    "all_original_denominators_and_historical_references_retained": true,
+    "new_blind_confirmation": false,
+    "control_if_both_X_zero": "retain_control_as_valid_development_result_only_if_it_also_preserves_B72_D1964_all_TP_identities_all_15_budgets_and_artifact_contracts; otherwise_R30_fallback"
+  },
+  "exit": {
+    "implementation_failure": "fix_contract_before_any_real_fit",
+    "execution_failure": "archive_not_algorithmic_negative; no_auto_retry",
+    "no_guarded_improvement": "reject_candidate_and_retain_R30",
+    "no_increment_over_control": "reject_added_transport",
+    "any_lost_TP_or_cell_over_budget": "adoption_fail_without_threshold_rescue",
+    "forbidden_automatic_followups": [
+      "longer_training",
+      "coefficient_grid",
+      "more_seeds",
+      "group_refinement",
+      "threshold_search",
+      "model_stitching",
+      "new_architecture_matrix"
+    ]
+  },
+  "implementation_package": "src/ids/normal_subgroup_training",
+  "current_scope": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "network_forwards": 0,
+    "new_scores": 0,
+    "threshold_searches": 0,
+    "candidate_decisions": 0,
+    "static_F_groups_and_V_mapping_counts": true
+  },
+  "next": "implement_and_validate_synthetic_contracts_then_freeze_separate_registration_and_lab_guide"
+}

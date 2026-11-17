@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-18",
+  "status": "design_only_no_experiment",
+  "new_fits": 0,
+  "new_model_forwards": 0,
+  "new_threshold_searches": 0,
+  "candidate": "r30_blind_fixed_one_sided_normal_transport_targets",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "arms": [
+    "transport_target",
+    "identity_target"
+  ],
+  "new_trajectories": 6,
+  "cached_reference": "same_seed_selected_R30_blind",
+  "warm_start": true,
+  "optimizer_state": "reset_identically_in_both_arms",
+  "max_updates_per_trajectory": 2224,
+  "validation_interval_updates": 139,
+  "validation_events": 16,
+  "effect_early_stopping": false,
+  "extend_on_failure": false,
+  "normal_target": {
+    "group_source": "frozen_F_only_A_B_roots_balanced_4count_tree_min_leaf256_depth4_manifest",
+    "within_group_rank": "one_based_tie_midrank",
+    "u": "(midrank-0.5)/group_n",
+    "pooled_inverse_ecdf": "ceil(n*u)_th_ascending_baseline_F_normal_score",
+    "provisional_transport": "min(baseline_score,pooled_inverse_ecdf(u))",
+    "transport": "minimum_provisional_target_within_exact_actual_network_input_equivalence_class_in_F",
+    "control": "baseline_score",
+    "scale": "max(baseline_F_normal_IQR,1)",
+    "dynamic_recompute": false
+  },
+  "loss": {
+    "member_bce_coefficient": 1,
+    "normal_target_mse_coefficient": 1,
+    "normal_group_reduction": "equal_group_then_equal_original_row",
+    "positive_one_sided_anchor_coefficient": 1,
+    "positive_reduction": "half_A1_mean_plus_half_B1_mean",
+    "anchor_score": "deployed_mean_probability_log_odds"
+  },
+  "evaluation_score_endpoint": "same_eval_CPU_FP64_ensemble_path_for_baseline_and_candidate",
+  "normal_tail": {
+    "quantile_grid": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "reference": "current_checkpoint_all_V_normal",
+    "tail_ties": "fractional_equal_weight_for_entire_boundary_tie_block",
+    "group_excess": "max(group_tail_fraction-(1-q),0)",
+    "H": "maximum_across_all_observed_frozen_groups_and_quantiles",
+    "H_q": "maximum_group_excess_at_each_fixed_quantile",
+    "empty_V_group": "report_and_stop_checkpoint_selection",
+    "out_of_range_numeric": "fixed_tree_edge_leaf",
+    "unknown_profile": "UNSEEN_reject_checkpoint_selection",
+    "F_unseen_missing_pattern": "UNSUPPORTED_MISSING_reject_checkpoint_selection",
+    "drop_sparse_groups_after_V": false,
+    "claim_conditional_1pct_guarantee": false,
+    "tie_max_block_must_not_increase": true,
+    "tie_pair_count_must_not_increase": true
+  },
+  "checkpoint_feasibility": {
+    "all_F_positive_scores_not_below_own_baseline": true,
+    "F_positive_numeric_relaxation": 0,
+    "all_V_positive_normal_ge_count_not_increased": true,
+    "retain_strict_V_A_TCP_separation": true,
+    "retain_strict_V_B_UDP_separation": true,
+    "pooled_and_two_panel_pAUC_001_each_not_below_baseline": true,
+    "normal_tie_guards_pass": true,
+    "each_H_q_not_above_own_step0": true,
+    "finite_scores_complete_identity": true
+  },
+  "selection": {
+    "order": [
+      "feasible",
+      "minimum_H",
+      "earliest_step"
+    ],
+    "new_candidate_requires_strict_H_improvement_vs_step0": true,
+    "H_comparison": "canonical_rational_or_exact_cross_multiplication",
+    "fallback": "step0_R30",
+    "fallback_counts_as_candidate_success": false,
+    "nll_used": false,
+    "train_loss_used": false
+  },
+  "mechanism_pass_each_seed": [
+    "selected_transport_is_not_step0",
+    "all_checkpoint_feasibility_guards",
+    "each_H_q_transport_not_above_paired_control_H_q",
+    "H_transport_strictly_less_than_H_R30",
+    "H_transport_strictly_less_than_H_control"
+  ],
+  "calibration": {
+    "after_all_six_artifacts_frozen": true,
+    "runs_per_artifact": 1,
+    "normal_rows": 5511,
+    "ascending_one_based_rank": 5457,
+    "decision": "strict_greater_than",
+    "reuse_old_numeric_threshold": false,
+    "new_threshold_search": false
+  },
+  "deployment_pass_each_seed": {
+    "B_TP": 72,
+    "D_TP": 1964,
+    "lost_R30_positive_identities": 0,
+    "cells": 15,
+    "FP_budget_each_cell": "floor(normal_n/100)",
+    "allow_cross_cell_compensation": false
+  },
+  "paired_budget_gain": {
+    "X": "sum_over_15_cells_max(FP-floor(normal_n/100),0)",
+    "transport_X": 0,
+    "each_seed_requires_transport_X_strictly_less_than_control_X": true,
+    "control_also_X_zero": "reject_transport_necessity_do_not_pick_posthoc_metric"
+  },
+  "overall_pass": "all_three_seeds_mechanism_and_deployment_and_paired_budget_gain_pass",
+  "C_E_role": "already_open_development_regression",
+  "failure_action": "record_complete_outcome_and_exit_no_automatic_retry_or_redesign",
+  "forbidden": [
+    "D_posthoc_five_pattern_training_groups",
+    "V_gradient_or_target_refit",
+    "seed_selection",
+    "threshold_sweep",
+    "model_ensemble_or_OR_addition",
+    "P_refit",
+    "post_result_loss_or_group_changes"
+  ],
+  "canonical_design": "configs/normal-subgroup-training-20261118/design.json"
+}

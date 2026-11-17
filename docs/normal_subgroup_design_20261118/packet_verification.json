@@ -1,0 +1,14 @@
+{
+  "json_files_parsed": 9,
+  "local_markdown_links": "passed",
+  "vendor_original_bytes": true,
+  "published_files": 23,
+  "current_compute": {
+    "fits": 0,
+    "model_loads": 0,
+    "forwards": 0,
+    "scores": 0,
+    "real_candidate_targets": 0,
+    "threshold_searches": 0
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-18",
+  "status": "complete_design_not_training_registration",
+  "canonical_design": "configs/normal-subgroup-training-20261118/design.json",
+  "files": {
+    "configs/normal-subgroup-training-20261118/design.json": {
+      "bytes": 10661,
+      "sha256": "5b20557b8c4f4947f501e87fa03d04582f166a7dea5ca829269fa3ae80f5a2e2"
+    },
+    "configs/normal-subgroup-training-20261118/input-bindings.json": {
+      "bytes": 2813,
+      "sha256": "69a4c19fee4f035d57c0f148cf7dea298aa949ed9a130e3c1bffa4e1d8d9c839"
+    },
+    "docs/normal_subgroup_design_20261118/.gitattributes": {
+      "bytes": 38,
+      "sha256": "1300b24ff90168511bf6553fd9a30a7249c1219151e611a7fbd6d7740f2ce418"
+    },
+    "docs/normal_subgroup_design_20261118/alignment_proposal.json": {
+      "bytes": 8059,
+      "sha256": "ef81796a35dafbc87b2818ae13246544640cae251075742ef71d1efc269fec9a"
+    },
+    "docs/normal_subgroup_design_20261118/alignment_proposal.md": {
+      "bytes": 15447,
+      "sha256": "bfd991c90aa9349d0410a92c0e2e3d92b9418c93a7fc12ea2f95586e57ff231d"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/FG_CCDB/dfr_bias_emerging_reweight_final.py": {
+      "bytes": 20611,
+      "sha256": "6d94d01df2faf40710880d81a41bc9081a4b13c2b5d9d3bd8f2cab0cafbd2431"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/FG_CCDB/LICENSE": {
+      "bytes": 1069,
+      "sha256": "b1275919cfe0cfb2a935633fb6db2d4078ff6478451938e34970918528711440"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/FG_CCDB/show_tsne.py": {
+      "bytes": 61189,
+      "sha256": "fb48e07d8d31db9226998b209e1fae9d5e2c781876d1e76d2b449b5c0adf9c94"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/FG_CCDB/source_manifest.json": {
+      "bytes": 1115,
+      "sha256": "c49197aa7cf7914042e361a8ac1e2fe93ad9320f3ff7efe80b91bda95375599e"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/LICENSE": {
+      "bytes": 1068,
+      "sha256": "696cbca26e09c8d35d020016334bac3429b4e29c87cce72d40349b3c0fb47841"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/README.md": {
+      "bytes": 1418,
+      "sha256": "3651687549d4ab3581a06637689857f38bf43a6a3e2321b011d3767f65c30c81"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/source_manifest.json": {
+      "bytes": 1156,
+      "sha256": "cf0e31cb57b5ebc58e82e26c2ef7862ec0f67a33758a92f321686e35ca41069f"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/SWAE/metrics/wasserstein.py": {
+      "bytes": 13254,
+      "sha256": "eceefd0f9cdca4a902d2d02d38299715798a5dd0376afb606054da9bd77c18b0"
+    },
+    "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/SWAE/swae/trainer.py": {
+      "bytes": 5197,
+      "sha256": "a88484df21e56745ae0fd5ed0f95101091bee39f4cee9fdd2ee9dfd888b1d0e0"
+    },
+    "docs/normal_subgroup_design_20261118/count_f_groups.py": {
+      "bytes": 4621,
+      "sha256": "dd1bd36ee3e8df1521f27d34dd83e7dfe3a099e74d74a651072f52f9ea86c932"
+    },
+    "docs/normal_subgroup_design_20261118/evaluation_and_redteam.json": {
+      "bytes": 4879,
+      "sha256": "db8517bed34cb8d33ce4c7cf2e86b58071a8555265093ae967ab27275b5b345a"
+    },
+    "docs/normal_subgroup_design_20261118/evaluation_and_redteam.md": {
+      "bytes": 10950,
+      "sha256": "72c9f0d3862b279fc815046b53c63f3b6bb103af6016f30b22b7ac59f4a11376"
+    },
+    "docs/normal_subgroup_design_20261118/f_group_counts.json": {
+      "bytes": 19352,
+      "sha256": "96ba7b3251dacc63ea55edfa6ac510f5ac62c4c9186e9ea5098886f015b1aa9b"
+    },
+    "docs/normal_subgroup_design_20261118/fg_ccdb_comparison.md": {
+      "bytes": 2038,
+      "sha256": "e80479f9ce8bff7b950c2bdaab0173487336e38752d9eeb0c5faef496f8431b4"
+    },
+    "docs/normal_subgroup_design_20261118/packet_verification.json": {
+      "bytes": 285,
+      "sha256": "1268259f5e050d9088bbcc2f41904a78202680b6acb74a9b94a93cf0675e228a"
+    },
+    "docs/normal_subgroup_design_20261118/static_contract_checks.py": {
+      "bytes": 6438,
+      "sha256": "06c94ab54308f384edb09739a922060230cc5fd9a997fa3070febe7c33bbda54"
+    },
+    "docs/normal_subgroup_design_20261118/static_verification.json": {
+      "bytes": 840,
+      "sha256": "2ccafe2158b442080470f5d53d72ccaf5f78916a6c4e7e6929aed66af4ec3a25"
+    },
+    "docs/normal_subgroup_design_20261118/subgroup_training_spec.json": {
+      "bytes": 6180,
+      "sha256": "4b6c0e9c7b23b700c03232c3d60db9f9c6632e10ae1f52f27d3734299522e95c"
+    },
+    "docs/normal_subgroup_design_20261118/subgroup_training_spec.md": {
+      "bytes": 12928,
+      "sha256": "943a07c890f7955b942bc8ef248e061629ea411890b41357e0213be1c455af58"
+    },
+    "docs/NORMAL_SUBGROUP_TRAINING_DESIGN_20261118.md": {
+      "bytes": 19145,
+      "sha256": "85b6b61bff59da7881d13024d27544e2aad6d1cf2b463e2c43796f3d128e77d7"
+    }
+  }
+}
