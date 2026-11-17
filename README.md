@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**2026-11-17 R30结果已复核：D检出改善，采用条件未通过**　[完整分析与处置](docs/MODEL_TRAINING_REDESIGN_RESULTS_20261117.md)。6次拟合、0次重训执行有效；三个主模型均B72/72、D1964/1964，但误报合规分别只有8/15、5/15、4/15单元，`adoption_pass=false`。协议对照已检出D1962，不能把共同训练修改带来的数百条增益单独归于协议屏蔽。当前不追加训练、调阈值或模型拼接；原运行标签及注册保持冻结，下方为历史交付记录。
+
 **2026-11-17 模型与训练修改已实现并核验**　[实验室运行说明](docs/MODEL_TRAINING_REDESIGN_LAB.md) · [逐项实现与核验](docs/MODEL_TRAINING_REDESIGN_IMPLEMENTATION_20261117.md)。版本`model-training-redesign-r30-v1`，独立入口`RUN_MODEL_TRAINING_REDESIGN.ps1`：A+B四组分层批、协议输入唯一配对、纯排序选轮、F选中checkpoint直接交付，6次拟合、0次重训。96项合成检查和真实档案零模型预检通过；真实训练尚未执行。旧R29与下方设计记录保留，当前按本段实验室说明执行。
 
 **2026-11-17 模型与训练设计已重审，尚未实现或开训**　[完整设计、修改位置和验证标准](docs/MODEL_TRAINING_REDESIGN_20261117.md) · [静态规格](configs/model-training-redesign-20261117/design.json)。保留作者TabM+PLE，改为A+B合并监督、四组分层批、纯排序选轮和F选中工件直接交付；主候选固定协议槽，只与保留协议的同合同版本作三seed配对。已确认原F/V无TCP正例、NLL驱动饱和后选轮、P重训增加75%更新并替换函数；这些缺口尚不能作为唯一因果归因。下一步是实现与合同核验；本轮没有训练、前向、新评分或阈值搜索。下方均为历史安排，不再推进阈值或模型拼接候选。

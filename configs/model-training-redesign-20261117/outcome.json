@@ -1,0 +1,19 @@
+{
+  "version": "model-training-redesign-r30-v1",
+  "executed_source_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8",
+  "status": "completed_valid_mechanism_pass_adoption_failed_fpr",
+  "fits": 6,
+  "final_refits": 0,
+  "implementation_contract_pass": true,
+  "all_seed_mechanism_pass": true,
+  "all_seed_effect_pass": false,
+  "adoption_pass": false,
+  "new_blind_confirmation": false,
+  "failed_effect_condition": "all_15_cells_qualified",
+  "main_qualified_cells_by_seed": {"17": 8, "29": 5, "43": 4},
+  "automatic_additional_fits": false,
+  "automatic_threshold_revision": false,
+  "automatic_model_combination": false,
+  "result_document": "docs/MODEL_TRAINING_REDESIGN_RESULTS_20261117.md",
+  "original_design_and_registration_unchanged": true
+}
