@@ -1,0 +1,25 @@
+{
+  "version": "retained-increment-cached-audit-v1",
+  "scope": "cached_decisions_only",
+  "design_commit": "a6fe8f135eb47cb7419204b408a11a5cac650847",
+  "created_utc": "2026-11-17T10:40:03.113692+00:00",
+  "design": {
+    "path": "configs/retained-increment-design-20261117/design.json",
+    "sha256_lf": "e3b0bce5274c1fb06a253817761d5e586a9c70093bae6bafce535ce86d40da91"
+  },
+  "design_document": {
+    "path": "docs/RETAINED_INCREMENT_DESIGN_20261117.md",
+    "sha256_lf": "56facc8aea289dc775bd236e81dd57efece68fe408a268eaa1e25a60887bd6e5"
+  },
+  "script": "scripts/audit_retained_increment.py",
+  "script_sha256_lf": "79d35db9411106f730c7284ac477eb94e88176a0d83ba8016d099f7ff63f5e23",
+  "new_fits": 0,
+  "model_loads": 0,
+  "model_forwards": 0,
+  "new_model_scores": 0,
+  "recalibrations": 0,
+  "threshold_searches": 0,
+  "fixed_cached_policy_evaluations": 3,
+  "C_role": "old threshold verification and fixed-policy descriptive counts only",
+  "tests": "8 synthetic contract tests passed; Ruff passed"
+}
