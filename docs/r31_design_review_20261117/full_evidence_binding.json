@@ -1,0 +1,7 @@
+{
+  "path_relative_to_project": "工作/第三十一轮设计审查_20261117/input_mechanism.json",
+  "bytes": 2907145,
+  "sha256": "74fc6d2041a554da880213812e7e90be0eb252ac9480a92ee6a270c2daff9231",
+  "reproducible_with": "input_mechanism.py --project PROJECT --output-dir OUTPUT",
+  "publication": "Compact JSON and original group-rate CSV are committed. Full per-identity details remain in work and archive."
+}

@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "six_frozen_models": true,
+    "no_global_PLE_extrapolation_in_D_TCP_FP": true,
+    "no_F_preprocessing_conflicts": true,
+    "three_blind_full_F_strictly_separated": true,
+    "original_rate_decomposition_equal": true,
+    "absolute_neighbor_gaps_present": true,
+    "design_input_bindings_match": true,
+    "author_F_binding_matches": true,
+    "fixed_author_source_hashes_match": true
+  },
+  "all_passed": true,
+  "scope": {
+    "model_loads": 0,
+    "network_forwards": 0,
+    "new_scores": 0,
+    "fits": 0,
+    "threshold_searches": 0,
+    "new_decisions": 0,
+    "representation": "Pure NumPy non-trainable preprocessing and PLE-basis arithmetic only; no learned embedding or network"
+  },
+  "peer_review_corrections": [
+    "log1p-neighbor definition",
+    "absolute rather than signed score-gap interpretation",
+    "top147 not exact fractional CVaR",
+    "no causal attribution from the accounting identity"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "status": "design_review_complete_model_intervention_not_selected",
+  "reviewed_model_version": "model-training-redesign-r30-v1",
+  "reviewed_model_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8",
+  "reviewed_analysis_commit": "f5d2438fff7c4f47934aa14c7069c0398e1d306f",
+  "not_training_registration": true,
+  "execution_enabled": false,
+  "training_entry_ready": false,
+  "new_fit_budget": 0,
+  "reason": "Known normal subgroups already occupy the original calibration tail; no specific model or training intervention yet has a supported mechanism for changing their relative ranking while preserving all R30 true positives.",
+  "scope": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "network_forwards": 0,
+    "new_scores": 0,
+    "threshold_searches": 0,
+    "new_candidate_decisions": 0,
+    "original_C_decision_replay": true,
+    "parameter_free_representation_arithmetic": true
+  },
+  "preserved": [
+    "R30 TabM and PLE implementation",
+    "original numeric and missing-value semantics",
+    "frozen F V C E identities and denominators",
+    "selected F artifact delivered without P refitting",
+    "original C calibration procedure",
+    "all seeds and original negative results"
+  ],
+  "unsupported_current_prescriptions": [
+    "more PLE bins to fix out-of-range false positives",
+    "duration clipping or local smoothing without an identified defect",
+    "more duplicate normal support as an assumed cure",
+    "tail loss substitution based only on its name",
+    "more epochs or capacity",
+    "D-derived error patterns used as training rules",
+    "global score rescaling as a decision repair",
+    "threshold alpha search or model combination"
+  ],
+  "next_candidate_required_effect": {
+    "seeds": [17, 29, 43],
+    "each_seed_B_TP": 72,
+    "each_seed_D_TP": 1964,
+    "lost_R30_positive_identities": 0,
+    "all_15_cells_each_seed": "FP <= floor(normal_n/100)",
+    "unchanged_labels_and_denominators": true,
+    "strict_TP_gain_over_full_recall_baseline": false,
+    "per_cell_added_and_removed_FP_identities_required": true
+  },
+  "next_candidate_required_mechanism": [
+    "F-defined effect target, without hardcoding post-hoc D patterns",
+    "one necessary intervention with exact objective and implementation location",
+    "fixed author implementation and applicable assumptions",
+    "directional prediction for normal subgroup relative ranking, beyond loss reduction",
+    "explicit falsification and exit conditions",
+    "one specified comparison estimand, no automatic training matrix"
+  ],
+  "comparison_policy": "Same adaptive algorithm estimates total algorithm effect; report actual selected and completed steps. Do not call it a fixed-update direct architectural effect.",
+  "existing_material_role": "opened development regression, not independent confirmation",
+  "independent_confirmation_contract": [
+    "new capture/device/time units not used for design",
+    "event-to-flow and feature/missingness semantics",
+    "label evidence and complete normal denominators",
+    "repeated-template and correlation groups",
+    "model and decision policy frozen before outcomes"
+  ],
+  "report": "docs/R30_NORMAL_TAIL_DESIGN_REVIEW_20261117.md",
+  "evidence": "docs/r31_design_review_20261117",
+  "original_R30_registration_and_source_unchanged": true
+}

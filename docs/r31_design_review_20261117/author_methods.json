@@ -1,0 +1,135 @@
+{
+  "scope": {
+    "model_loads": 0,
+    "forwards": 0,
+    "fits": 0,
+    "new_thresholds": 0,
+    "static_source_inspection": true
+  },
+  "sources_manifest": "docs/r31_design_review_20261117/author_sources/sources.json",
+  "source_files": 10,
+  "source_hash_checks_pass": true,
+  "local_source_sha256": {
+    "src/ids/model_training_redesign/training.py": "88a8d48b86b1ad1a7873088e546bad02629bc2548d37ac14a09504fcd688fb63",
+    "src/ids/model_training_redesign/selection.py": "93b040452cd6ff1a4292b93b8858957a43c3752cc2cf1a1e3d45bd4c1a079f4f",
+    "src/ids/model_training_redesign/sampling.py": "7fe30e6575a8915c57b6ccba66a54e29c075c458e2f61d9281f5c81fcbdfac1e",
+    "src/ids/route_batch/tabm_training.py": "946d7085c340fddbe691426eca7b2168886ef45c8f99c3a92c30269151ec2aa0",
+    "src/ids/recent_baselines.py": "bedec25677916ba61a475f53b4295862757af830039a3652730259d359560079",
+    "docs/MODEL_TRAINING_REDESIGN_RESULTS_20261117.md": "67827b878df695c7a1617dd3e4c52dfa01c87a760bb840e8b46092721ea065cb"
+  },
+  "methods": [
+    {
+      "name": "TabM",
+      "year": 2025,
+      "venue": "ICLR",
+      "commit": "28e47ae301c92ec37787dde1ce923a0793f405b4",
+      "paper": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/c1ba41c694834aeef91ae161711d4939-Abstract-Conference.html",
+      "decision": "retain_backbone_and_legal_training_semantics",
+      "verified": [
+        "separate_member_cross_entropy_then_average",
+        "classification_average_probabilities",
+        "example_AdamW_all_parameters_lr_0.002_wd_0.0003",
+        "shared_member_batches_supported",
+        "best_checkpoint_loaded"
+      ],
+      "project_adaptations": [
+        "single_logit_binary_BCE",
+        "four_profile_class_equal_groups",
+        "pAUC_selection_with_early_strict_separation"
+      ],
+      "generic_implementation_bug_found": false
+    },
+    {
+      "name": "TabReD",
+      "year": 2025,
+      "venue": "ICLR",
+      "commit": "b5ef15b3749f30da7a1eb8fba21a5b54d706bf32",
+      "paper": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/571799482291411607c54984153190b0-Abstract-Conference.html",
+      "decision": "retain_time_role_splits_and_best_checkpoint_identity",
+      "not_supported": [
+        "automatic_transfer_to_15_cell_FPR_guarantee",
+        "add_complex_model_from_benchmark_ranking"
+      ]
+    },
+    {
+      "name": "STACO",
+      "year": 2025,
+      "venue": "TMLR September 2025",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "paper": "https://arxiv.org/abs/2505.21944",
+      "decision": "do_not_adopt_in_current_design",
+      "implementation_observations": [
+        "paper_requires_two_independent_negative_batches",
+        "current_loss_forward_uses_one_prediction_batch_for_dual_and_surrogate",
+        "plain_tensor_auxiliary_state_without_buffer_registration_in_this_loss_class",
+        "positive_only_index_branch_ids_p_not_assigned",
+        "optimizer_elementwise_clip_and_coupled_L2_differs_from_project_global_norm_AdamW",
+        "TabM_member_loss_adaptation_not_defined"
+      ],
+      "reason": "No established local error relation repaired by this objective; not a drop-in objective-only contrast."
+    },
+    {
+      "name": "tapAUC",
+      "year": 2025,
+      "version": "arxiv v2",
+      "paper": "https://arxiv.org/abs/2502.11570v2",
+      "repo": "ArnaudBougaham/tapAUC",
+      "commit": "24c2dde9248348e73094a156a64b323a6b41203d",
+      "notebook_blob": "52f4fc351f9a6848f22f41dba2f291010b85769e",
+      "verification": "Root task live-read pinned notebook and blob in this turn",
+      "flattened_cell0_python_lines": {
+        "descending_sort": 161,
+        "take_bottom_five_percent": 169,
+        "min_positive_zero_FN_threshold": 112
+      },
+      "reported_TPR_percent": 92.52,
+      "reported_FPR_percent": 20.43,
+      "decision": "do_not_adopt_objective_and_working_point_mismatch",
+      "notebook_copied": false,
+      "reason_not_copied": "No explicit license located; preserve pointer and review only."
+    }
+  ],
+  "design_requirements": [
+    "Pooled_F_separation_independently_verified_complete; retain this check as a requirement for future designs",
+    "Do_not_train_on_V_to_fix_V_overlap",
+    "Tie_new_objective_to_observed_support_relation_or_justified_invariance",
+    "Fix_member_loss_sampling_state_update_and_budget_before_training",
+    "Preserve_original_15_cells_all_seeds_and_TP_identity_acceptance"
+  ],
+  "new_experiment_recommended": false,
+  "pooled_F_verification": {
+    "status": "complete",
+    "source": "input_mechanism_summary.json",
+    "source_sha256": "bab03750a137ceae9d7f5f12a22b1d1aecf52017566c3d40e65ae9a4ab9484a8",
+    "models": {
+      "protocol_blind_s17": {
+        "min_positive_minus_max_normal": 2.5373967456063853,
+        "top_one_percent_pair_abs_score_derivative_mean": 2.1786294376611094e-07,
+        "top_one_percent_normal_profiles": {
+          "A": 130,
+          "B": 17
+        },
+        "F_B_separation_margin": 16.145848098009022
+      },
+      "protocol_blind_s29": {
+        "min_positive_minus_max_normal": 3.5587395235727515,
+        "top_one_percent_pair_abs_score_derivative_mean": 2.731149043451086e-07,
+        "top_one_percent_normal_profiles": {
+          "A": 137,
+          "B": 10
+        },
+        "F_B_separation_margin": 10.034810515939817
+      },
+      "protocol_blind_s43": {
+        "min_positive_minus_max_normal": 8.951393284419959,
+        "top_one_percent_pair_abs_score_derivative_mean": 1.1257350711684104e-09,
+        "top_one_percent_normal_profiles": {
+          "A": 87,
+          "B": 60
+        },
+        "F_B_separation_margin": 11.2188682619418
+      }
+    },
+    "interpretation": "All blind pooled F strictly separated. Pair score derivatives are not parameter gradients. This check is complete, not an outstanding task."
+  }
+}

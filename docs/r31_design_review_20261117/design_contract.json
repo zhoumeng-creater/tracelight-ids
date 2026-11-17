@@ -1,0 +1,138 @@
+{
+  "status": "design_contract_reviewed_mechanism_entry_not_met",
+  "not_training_registration": true,
+  "execution_enabled": false,
+  "training_entry_ready": false,
+  "scope": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "forwards": 0,
+    "new_scores": 0,
+    "new_thresholds": 0,
+    "new_candidate_decisions": 0
+  },
+  "reviewed_commit": "f5d2438fff7c4f47934aa14c7069c0398e1d306f",
+  "source_sha256": {
+    "docs/MODEL_TRAINING_REDESIGN_20261117.md": "ecd248fc1032328f43d8a18b5c3ce4645d1334cab09a56656388d485ef63f6e0",
+    "docs/MODEL_TRAINING_REDESIGN_RESULTS_20261117.md": "67827b878df695c7a1617dd3e4c52dfa01c87a760bb840e8b46092721ea065cb",
+    "configs/model-training-redesign-20261117/registration.json": "18601676add9ffa0778b44aee89dfd6bd2f5289514fa5788ad81c9753e628052",
+    "src/ids/model_training_redesign/selection.py": "93b040452cd6ff1a4292b93b8858957a43c3752cc2cf1a1e3d45bd4c1a079f4f",
+    "src/ids/model_training_redesign/training.py": "88a8d48b86b1ad1a7873088e546bad02629bc2548d37ac14a09504fcd688fb63",
+    "src/ids/model_training_redesign/evaluation.py": "184c0a3f2e6754c15ec52b8f8d31506332e0211e54cec257d0694e54efd28366",
+    "src/ids/model_training/evaluation.py": "2ffadca35c8ace39f814dc8febe1c0315375878972123fcef8ea239f062fef46",
+    "src/ids/route_batch/metrics.py": "3062752b9cef45493f943fdcc857e79e7f13ceb3528da81f1fd5c4de6df37458"
+  },
+  "decision": "Preserve R30; original-score mixture audit is complete and confirms known normal shapes already occupy the C tail. No loss/encoding intervention currently has a demonstrated mechanism. Do not register a new fit.",
+  "next_development_endpoint": {
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "each_seed_B_TP": 72,
+    "each_seed_D_TP": 1964,
+    "lost_R30_positive_identities": 0,
+    "all_15_cells_each_seed": "FP <= floor(normal_n/100)",
+    "original_threshold_procedure_unchanged": true,
+    "strict_D_gain_over_R30_full_recall_baseline": "forbidden_impossible_endpoint",
+    "mechanism_endpoint": "must_be_redefined_for_candidate_not_copy_protocol_input_pAUC_endpoint",
+    "report_fp_changes": "per-cell added and removed identities plus totals"
+  },
+  "calibration_contract": {
+    "C_normal_n": 5511,
+    "one_based_rank": 5457,
+    "strict_comparison": ">",
+    "observed_C_FP_each_model": 54,
+    "ideal_independent_exchangeable_no_ties_new_row_probability": 0.00997822931785196,
+    "not_guaranteed": [
+      "conditional_population_FPR_for_this_C",
+      "all_15_finite_cells_empirical_FPR_le_1pct",
+      "unknown_shifted_normal_distribution"
+    ],
+    "current_independence_established": false,
+    "global_strict_monotone_transform_with_same_order_statistic_changes_decisions": false,
+    "new_alpha_or_threshold_search_allowed": false
+  },
+  "comparison_estimand": {
+    "preferred": "single-factor change under same adaptive training and selection algorithm; total algorithm effect",
+    "fixed_step_direct_mechanistic_claim": false,
+    "required_records": [
+      "initialization",
+      "sampling_and_dropout_streams",
+      "actual_optimizer_steps",
+      "selected_step",
+      "unique_rows",
+      "draws_and_cycles",
+      "frozen_artifact_hashes"
+    ],
+    "baseline_reuse": "reuse audited R30 when all nonintervened contracts and prefix pairing remain equal; otherwise redesign comparison before fitting",
+    "automatic_second_fixed_step_branch": false,
+    "new_fit_budget_registered": false
+  },
+  "entry_gates": [
+    "specific frozen error or score relation identified",
+    "one necessary intervention and exact code location",
+    "verified 2025/2026 author mechanism and matching assumptions",
+    "falsifiable directional prediction and protected TP set",
+    "implementation, mechanism, development and independent-confirmation endpoints separated"
+  ],
+  "current_model_free_next_work": [
+    "decide a falsifiable normal-tail mechanism against verified author implementations",
+    "retain no-fit status if no intervention changes normal-group relative ranking while protecting TP"
+  ],
+  "do_not_do": [
+    "threshold or alpha scan",
+    "promote winning seed",
+    "promote aware control post hoc",
+    "add loss/capacity/encoding matrix without mechanism",
+    "claim C/E are independent because scored last",
+    "add D false positives to F and reuse D as independent test"
+  ],
+  "independent_confirmation_fields": [
+    "target population",
+    "event-to-flow contract",
+    "field/missing semantics",
+    "label evidence",
+    "normal denominator",
+    "capture/device/time groups",
+    "repeated-template grouping",
+    "model and policy freeze before outcome access"
+  ],
+  "official_definition_sources": [
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html",
+      "use": "binomial sampling expression only; no new method or threshold recommendation"
+    },
+    {
+      "url": "https://scikit-learn.org/1.5/modules/generated/sklearn.metrics.roc_auc_score.html",
+      "use": "standardized partial AUC definition; distinguish raw partial area divided by alpha"
+    }
+  ],
+  "input_audit_bindings": {
+    "input_mechanism.md": "f9d40f396169ee44f0e32b47aa711a65b49ab8b4e8cf51dba5606d35417e28f7",
+    "input_mechanism_summary.json": "bab03750a137ceae9d7f5f12a22b1d1aecf52017566c3d40e65ae9a4ab9484a8",
+    "input_mechanism_original_group_rates.csv": "a1756a7f9ca2a929eeb70bea80666361030956945fcaf9575ba7db477d64ebdf"
+  },
+  "completed_model_free_evidence": [
+    "PLE bounds/conflicts excluded for observed false positives",
+    "nearby F/C normal shape support and cached-score continuity documented",
+    "fixed-partition C/D original false-positive mixture decomposition complete"
+  ],
+  "observed_seed43_group3": {
+    "four_counts": [
+      11,
+      8,
+      1285,
+      4725
+    ],
+    "C_group_n": 23,
+    "C_normal_n": 5511,
+    "C_original_FP": 23,
+    "D_group_n": 84,
+    "D_normal_n": 9564,
+    "D_original_FP": 84,
+    "D_i1800_j30_group_n": 14,
+    "D_i1800_j30_normal_n": 800,
+    "D_i1800_j30_budget": 8
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-11-17T15:49:30.076557+00:00",
+  "model_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8",
+  "report_sha256": "9530fa032cad034a69fd947e826712ecd8e78fb8e8e080839dcfb8444edbfbc0",
+  "decision_sha256": "4ce523b1f2e51032b28a5e2d7c40be2eb33c60768f1f3cc5f6c03b9bf6df65f3",
+  "files": {
+    "author_methods.json": {
+      "bytes": 5819,
+      "sha256": "c2fc5cceb8dff5b9e089442fb325ffe7ff866902a969964382c804bdd3f92848"
+    },
+    "author_methods.md": {
+      "bytes": 12752,
+      "sha256": "db5bc8073225f428ee441c46f7c34b7c1e77afb77c52b831b21d054615d62175"
+    },
+    "author_sources/libauc_auc.py": {
+      "bytes": 60161,
+      "sha256": "5040227229fdd2d05ccfb035482a79c8e449bb76736de36df4b4512ef3a429de"
+    },
+    "author_sources/libauc_LICENSE": {
+      "bytes": 1063,
+      "sha256": "efb8aef9961930702e18e29c2c370ca757b483cd909b9de7f606d0a58612173f"
+    },
+    "author_sources/libauc_README.md": {
+      "bytes": 8250,
+      "sha256": "9059bc397906b019828d8d6a18320a9c82122e698fad45d41d1e7f008d36c14f"
+    },
+    "author_sources/libauc_staco.py": {
+      "bytes": 12838,
+      "sha256": "8c6c93dce9625c0f772150532ea01a1111857fafdf76fcbdd42d2122a1ab4679"
+    },
+    "author_sources/sources.json": {
+      "bytes": 3772,
+      "sha256": "ed19ceb98029c73b34f9424768829773bdb39f92c1c2d6b1df088efd2bb9a4dc"
+    },
+    "author_sources/tabm_example.ipynb": {
+      "bytes": 22477,
+      "sha256": "be6dcd68bb8b21fed858d0e57d3a4bf3e54c875b522776e06d7796b0c5b28d67"
+    },
+    "author_sources/tabm_LICENSE": {
+      "bytes": 11340,
+      "sha256": "24330ebf083bc17c1db833b0109ef6ffc9019449330e9e4ec9797c061185c7a6"
+    },
+    "author_sources/tabm_paper_model.py": {
+      "bytes": 29596,
+      "sha256": "81144b9f520d3e57d9c5b3a8b0dfb1f800191d57dee229148fe88211df15dd19"
+    },
+    "author_sources/tabm_README.md": {
+      "bytes": 30478,
+      "sha256": "302b2d36c3bf226cc98121923ea1881617287a161e25cf9a765b82b26b9d4969"
+    },
+    "author_sources/tabred_LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "author_sources/tabred_nn_baselines.py": {
+      "bytes": 17533,
+      "sha256": "c9aca5e57df70a3cc4154cdcb35eb343ba47db863063b11b687d864e6089b3c2"
+    },
+    "design_contract.json": {
+      "bytes": 6007,
+      "sha256": "3448a7d9c479608c33c1ae90a012137980294125bf03fa3614caff49c146b5d3"
+    },
+    "design_contract.md": {
+      "bytes": 13206,
+      "sha256": "73b9789d23aa213ffea18cc97e365ae1b897072382fb7f6e7d756700b37b67fe"
+    },
+    "full_evidence_binding.json": {
+      "bytes": 414,
+      "sha256": "f13ffb55611460828ac64cbef50568bc4368404c61f4dccbdb74f974159fc71a"
+    },
+    "input_mechanism.md": {
+      "bytes": 9388,
+      "sha256": "f9d40f396169ee44f0e32b47aa711a65b49ab8b4e8cf51dba5606d35417e28f7"
+    },
+    "input_mechanism.py": {
+      "bytes": 15685,
+      "sha256": "3888116de4e3b0c48bc95287a09861be1d2a7218eadd4ce80ccf46ce12cd0dbc"
+    },
+    "input_mechanism_original_group_rates.csv": {
+      "bytes": 61974,
+      "sha256": "a1756a7f9ca2a929eeb70bea80666361030956945fcaf9575ba7db477d64ebdf"
+    },
+    "input_mechanism_summary.json": {
+      "bytes": 108526,
+      "sha256": "bab03750a137ceae9d7f5f12a22b1d1aecf52017566c3d40e65ae9a4ab9484a8"
+    },
+    "README.md": {
+      "bytes": 1772,
+      "sha256": "b4c2b88124de0a9b2ccef992870b6c94504efc275156719b56bbb58edeb8ac38"
+    },
+    "verification.json": {
+      "bytes": 944,
+      "sha256": "7792d9f3ce46e19a10b3a763f1fdd8ffaf9a22aafa1b4270e501b5465f55e209"
+    }
+  }
+}

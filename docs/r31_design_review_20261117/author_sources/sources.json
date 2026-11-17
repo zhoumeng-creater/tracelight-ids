@@ -1,0 +1,95 @@
+{
+  "scope": "Static source inspection only; never imported or executed. Saved text snapshots use LF and one final newline.",
+  "sources": [
+    {
+      "filename": "tabm_example.ipynb",
+      "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/example.ipynb",
+      "modified": "2025-11-10T07:17:57Z",
+      "characters": 22477,
+      "sha256": "be6dcd68bb8b21fed858d0e57d3a4bf3e54c875b522776e06d7796b0c5b28d67",
+      "bytes": 22477,
+      "lines": 650
+    },
+    {
+      "filename": "tabm_README.md",
+      "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/README.md",
+      "modified": "2025-06-27T14:57:27Z",
+      "characters": 30478,
+      "sha256": "302b2d36c3bf226cc98121923ea1881617287a161e25cf9a765b82b26b9d4969",
+      "bytes": 30478,
+      "lines": 756
+    },
+    {
+      "filename": "tabm_paper_model.py",
+      "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/paper/bin/model.py",
+      "modified": "2025-06-27T14:57:27Z",
+      "characters": 29592,
+      "sha256": "81144b9f520d3e57d9c5b3a8b0dfb1f800191d57dee229148fe88211df15dd19",
+      "bytes": 29596,
+      "lines": 798
+    },
+    {
+      "filename": "tabred_nn_baselines.py",
+      "url": "https://github.com/yandex-research/tabred/blob/b5ef15b3749f30da7a1eb8fba21a5b54d706bf32/paper/bin/nn_baselines.py",
+      "modified": "2026-07-10T14:16:50Z",
+      "characters": 17529,
+      "sha256": "c9aca5e57df70a3cc4154cdcb35eb343ba47db863063b11b687d864e6089b3c2",
+      "bytes": 17533,
+      "lines": 514
+    },
+    {
+      "filename": "libauc_staco.py",
+      "url": "https://github.com/Optimization-AI/LibAUC/blob/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/optimizers/staco.py",
+      "modified": "2026-05-22T02:39:21Z",
+      "characters": 12837,
+      "sha256": "8c6c93dce9625c0f772150532ea01a1111857fafdf76fcbdd42d2122a1ab4679",
+      "bytes": 12838,
+      "lines": 248
+    },
+    {
+      "filename": "libauc_auc.py",
+      "url": "https://github.com/Optimization-AI/LibAUC/blob/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/losses/auc.py",
+      "modified": "2026-08-19T03:37:42Z",
+      "characters": 60159,
+      "sha256": "5040227229fdd2d05ccfb035482a79c8e449bb76736de36df4b4512ef3a429de",
+      "bytes": 60161,
+      "lines": 1136
+    },
+    {
+      "filename": "libauc_README.md",
+      "url": "https://github.com/Optimization-AI/LibAUC/blob/3c02aa9877e0091114a00f94a8c6367698eb5637/README.md",
+      "modified": "2026-05-29T19:51:55Z",
+      "characters": 8247,
+      "sha256": "9059bc397906b019828d8d6a18320a9c82122e698fad45d41d1e7f008d36c14f",
+      "bytes": 8250,
+      "lines": 156
+    },
+    {
+      "filename": "tabm_LICENSE",
+      "url": "https://github.com/yandex-research/tabm/blob/28e47ae301c92ec37787dde1ce923a0793f405b4/LICENSE",
+      "modified": "2024-11-01T00:00:15Z",
+      "characters": 11340,
+      "sha256": "24330ebf083bc17c1db833b0109ef6ffc9019449330e9e4ec9797c061185c7a6",
+      "bytes": 11340,
+      "lines": 201
+    },
+    {
+      "filename": "tabred_LICENSE",
+      "url": "https://github.com/yandex-research/tabred/blob/b5ef15b3749f30da7a1eb8fba21a5b54d706bf32/LICENSE",
+      "modified": "2024-06-26T08:45:42Z",
+      "characters": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "lines": 201
+    },
+    {
+      "filename": "libauc_LICENSE",
+      "url": "https://github.com/Optimization-AI/LibAUC/blob/3c02aa9877e0091114a00f94a8c6367698eb5637/LICENSE",
+      "modified": "2023-12-22T21:28:38Z",
+      "characters": 1063,
+      "sha256": "efb8aef9961930702e18e29c2c370ca757b483cd909b9de7f606d0a58612173f",
+      "bytes": 1063,
+      "lines": 21
+    }
+  ]
+}
