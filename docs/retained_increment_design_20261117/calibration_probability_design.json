@@ -1,0 +1,824 @@
+{
+  "scope": "analytic probability and sample-size/index design only",
+  "not_executed": [
+    "model load",
+    "training",
+    "forward",
+    "scoring",
+    "threshold computation",
+    "threshold search",
+    "simulation"
+  ],
+  "joint_failure_budget_is_proposed_design_choice_not_user_requirement": 0.05,
+  "delta_calibration": 0.025,
+  "delta_finite_evaluation_sampling": 0.025,
+  "main_scope": "three predeclared primary seeds and all fifteen fixed-size cells",
+  "independence_not_needed": [
+    "between cells",
+    "between seeds",
+    "between calibration failure events"
+  ],
+  "necessary_unverified_conditions": [
+    "each score fixed independently of calibration values",
+    "calibration normal rows iid from a stated reference population",
+    "every target-cell normal tail risk bounded by that reference risk, or separately calibrated",
+    "conditional on frozen model and threshold, normal indicators within each evaluated cell independent with risk at most cap",
+    "future evaluated data not reused to adapt model or risk protocol"
+  ],
+  "old_R29_thresholds_and_acceptance_unchanged": true,
+  "denominator_source_sha256": "6d02138d7c0c6e0ceef4fbcab63c5c9838a8a8f58126648e42eba410faa321fe",
+  "results": {
+    "1": {
+      "guarantee_scope_models": 1,
+      "cells_per_model": 15,
+      "calibration_failure_per_model": 0.025,
+      "risk_allocation": "delta_cal/M per score; delta_eval divided across model-cell events by the fixed binomial tails at common p*",
+      "equal_cell_allocation_reference": {
+        "evaluation_failure_per_model_cell": 0.0016666666666666668,
+        "cellwise_risk_caps": [
+          {
+            "cell": "TQH-B_i3600_j0",
+            "normal_n": 1805,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004829213621123618
+          },
+          {
+            "cell": "TQH-B_i3600_j30",
+            "normal_n": 1839,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004739702335495215
+          },
+          {
+            "cell": "TQH-B_i3600_j70",
+            "normal_n": 1815,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004802537749180865
+          },
+          {
+            "cell": "TQH-D_i1800_j0",
+            "normal_n": 811,
+            "budget": 8,
+            "max_true_risk_for_cell": 0.003271739011456296
+          },
+          {
+            "cell": "TQH-D_i1800_j30",
+            "normal_n": 800,
+            "budget": 8,
+            "max_true_risk_for_cell": 0.0033168770170864162
+          },
+          {
+            "cell": "TQH-D_i1800_j70",
+            "normal_n": 799,
+            "budget": 7,
+            "max_true_risk_for_cell": 0.002685809977859676
+          },
+          {
+            "cell": "TQH-D_i300_j0",
+            "normal_n": 550,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.002236036994971904
+          },
+          {
+            "cell": "TQH-D_i300_j30",
+            "normal_n": 547,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.0022483430400099384
+          },
+          {
+            "cell": "TQH-D_i300_j70",
+            "normal_n": 564,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.002180345615221601
+          },
+          {
+            "cell": "TQH-D_i30_j0",
+            "normal_n": 676,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0024700625414279015
+          },
+          {
+            "cell": "TQH-D_i30_j30",
+            "normal_n": 687,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0024303872111751928
+          },
+          {
+            "cell": "TQH-D_i30_j70",
+            "normal_n": 656,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0025456197705520005
+          },
+          {
+            "cell": "TQH-D_i3600_j0",
+            "normal_n": 1151,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.0037469654031292905
+          },
+          {
+            "cell": "TQH-D_i3600_j30",
+            "normal_n": 1152,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.0037437033115387203
+          },
+          {
+            "cell": "TQH-D_i3600_j70",
+            "normal_n": 1171,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.003682785201425702
+          }
+        ],
+        "uniform_risk_cap": 0.002180345615221601
+      },
+      "risk_cap_before_downward_decimal_rounding": 0.002724116703701148,
+      "uniform_true_risk_cap": 0.002724116703,
+      "cell_allocations": [
+        {
+          "cell": "TQH-B_i3600_j0",
+          "normal_n": 1805,
+          "budget": 18,
+          "failure_allowance_per_model": 1.045996836923635e-06
+        },
+        {
+          "cell": "TQH-B_i3600_j30",
+          "normal_n": 1839,
+          "budget": 18,
+          "failure_allowance_per_model": 1.3695511347222578e-06
+        },
+        {
+          "cell": "TQH-B_i3600_j70",
+          "normal_n": 1815,
+          "budget": 18,
+          "failure_allowance_per_model": 1.1330704480227993e-06
+        },
+        {
+          "cell": "TQH-D_i1800_j0",
+          "normal_n": 811,
+          "budget": 8,
+          "failure_allowance_per_model": 0.00047155715829139133
+        },
+        {
+          "cell": "TQH-D_i1800_j30",
+          "normal_n": 800,
+          "budget": 8,
+          "failure_allowance_per_model": 0.0004279043434627372
+        },
+        {
+          "cell": "TQH-D_i1800_j70",
+          "normal_n": 799,
+          "budget": 7,
+          "failure_allowance_per_model": 0.001818251074247046
+        },
+        {
+          "cell": "TQH-D_i300_j0",
+          "normal_n": 550,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0043646199475826375
+        },
+        {
+          "cell": "TQH-D_i300_j30",
+          "normal_n": 547,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0042519077868284905
+        },
+        {
+          "cell": "TQH-D_i300_j70",
+          "normal_n": 564,
+          "budget": 5,
+          "failure_allowance_per_model": 0.004919924378041229
+        },
+        {
+          "cell": "TQH-D_i30_j0",
+          "normal_n": 676,
+          "budget": 6,
+          "failure_allowance_per_model": 0.0028610767021964856
+        },
+        {
+          "cell": "TQH-D_i30_j30",
+          "normal_n": 687,
+          "budget": 6,
+          "failure_allowance_per_model": 0.003124299047111867
+        },
+        {
+          "cell": "TQH-D_i30_j70",
+          "normal_n": 656,
+          "budget": 6,
+          "failure_allowance_per_model": 0.0024263249021673206
+        },
+        {
+          "cell": "TQH-D_i3600_j0",
+          "normal_n": 1151,
+          "budget": 11,
+          "failure_allowance_per_model": 0.00010396847906035678
+        },
+        {
+          "cell": "TQH-D_i3600_j30",
+          "normal_n": 1152,
+          "budget": 11,
+          "failure_allowance_per_model": 0.0001048041331772609
+        },
+        {
+          "cell": "TQH-D_i3600_j70",
+          "normal_n": 1171,
+          "budget": 11,
+          "failure_allowance_per_model": 0.00012181339573480443
+        }
+      ],
+      "evaluation_union_bound_at_cap": 0.024999999966321296,
+      "allocated_overall_bound": 0.05,
+      "calibration_sample_feasibility": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.002724116703,
+          "failure_allowance": 0.025,
+          "minimum_n_for_any_finite_order_statistic": 1353,
+          "failure_bound_at_sample_maximum": 0.013843058988308548,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 0,
+          "ascending_one_based_index": 1569,
+          "achieved_failure_bound": 0.013843058988308548,
+          "next_less_conservative_failure_bound": 0.07317183728677432
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.002724116703,
+          "failure_allowance": 0.025,
+          "minimum_n_for_any_finite_order_statistic": 1353,
+          "failure_bound_at_sample_maximum": 2.9594494147331213e-07,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 7,
+          "ascending_one_based_index": 5504,
+          "achieved_failure_bound": 0.017759587581231587,
+          "next_less_conservative_failure_bound": 0.03701750331074181
+        }
+      },
+      "same_Q_used_to_certify_up_to_200_checkpoints": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.002724116703,
+          "failure_allowance": 0.000125,
+          "minimum_n_for_any_finite_order_statistic": 3295,
+          "failure_bound_at_sample_maximum": 0.013843058988308548,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.002724116703,
+          "failure_allowance": 0.000125,
+          "minimum_n_for_any_finite_order_statistic": 3295,
+          "failure_bound_at_sample_maximum": 2.9594494147331213e-07,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 2,
+          "ascending_one_based_index": 5509,
+          "achieved_failure_bound": 3.82771389259079e-05,
+          "next_less_conservative_failure_bound": 0.00020644601816451703
+        }
+      },
+      "separate_calibration_for_all_15_normal_populations": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.002724116703,
+          "failure_allowance": 0.0016666666666666668,
+          "minimum_n_for_any_finite_order_statistic": 2346,
+          "failure_bound_at_sample_maximum": 0.013843058988308548,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.002724116703,
+          "failure_allowance": 0.0016666666666666668,
+          "minimum_n_for_any_finite_order_statistic": 2346,
+          "failure_bound_at_sample_maximum": 2.9594494147331213e-07,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 4,
+          "ascending_one_based_index": 5507,
+          "achieved_failure_bound": 0.0008389888847391256,
+          "next_less_conservative_failure_bound": 0.0027420179739100414
+        }
+      }
+    },
+    "3": {
+      "guarantee_scope_models": 3,
+      "cells_per_model": 15,
+      "calibration_failure_per_model": 0.008333333333333333,
+      "risk_allocation": "delta_cal/M per score; delta_eval divided across model-cell events by the fixed binomial tails at common p*",
+      "equal_cell_allocation_reference": {
+        "evaluation_failure_per_model_cell": 0.0005555555555555556,
+        "cellwise_risk_caps": [
+          {
+            "cell": "TQH-B_i3600_j0",
+            "normal_n": 1805,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004384930923285906
+          },
+          {
+            "cell": "TQH-B_i3600_j30",
+            "normal_n": 1839,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.0043036367962474035
+          },
+          {
+            "cell": "TQH-B_i3600_j70",
+            "normal_n": 1815,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004360703832770925
+          },
+          {
+            "cell": "TQH-D_i1800_j0",
+            "normal_n": 811,
+            "budget": 8,
+            "max_true_risk_for_cell": 0.0027881764618695464
+          },
+          {
+            "cell": "TQH-D_i1800_j30",
+            "normal_n": 800,
+            "budget": 8,
+            "max_true_risk_for_cell": 0.0028266525246722347
+          },
+          {
+            "cell": "TQH-D_i1800_j70",
+            "normal_n": 799,
+            "budget": 7,
+            "max_true_risk_for_cell": 0.0022564347592054427
+          },
+          {
+            "cell": "TQH-D_i300_j0",
+            "normal_n": 550,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.001801251364328642
+          },
+          {
+            "cell": "TQH-D_i300_j30",
+            "normal_n": 547,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.0018111667326127258
+          },
+          {
+            "cell": "TQH-D_i300_j70",
+            "normal_n": 564,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.0017563793615753903
+          },
+          {
+            "cell": "TQH-D_i30_j0",
+            "normal_n": 676,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.002037952611103361
+          },
+          {
+            "cell": "TQH-D_i30_j30",
+            "normal_n": 687,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0020052110704043558
+          },
+          {
+            "cell": "TQH-D_i30_j70",
+            "normal_n": 656,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0021003058427782506
+          },
+          {
+            "cell": "TQH-D_i3600_j0",
+            "normal_n": 1151,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.0032875989774495905
+          },
+          {
+            "cell": "TQH-D_i3600_j30",
+            "normal_n": 1152,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.003284736149701958
+          },
+          {
+            "cell": "TQH-D_i3600_j70",
+            "normal_n": 1171,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.003231274325295185
+          }
+        ],
+        "uniform_risk_cap": 0.0017563793615753903
+      },
+      "risk_cap_before_downward_decimal_rounding": 0.0022155848178750407,
+      "uniform_true_risk_cap": 0.002215584817,
+      "cell_allocations": [
+        {
+          "cell": "TQH-B_i3600_j0",
+          "normal_n": 1805,
+          "budget": 18,
+          "failure_allowance_per_model": 4.845150858301395e-08
+        },
+        {
+          "cell": "TQH-B_i3600_j30",
+          "normal_n": 1839,
+          "budget": 18,
+          "failure_allowance_per_model": 6.446147704508576e-08
+        },
+        {
+          "cell": "TQH-B_i3600_j70",
+          "normal_n": 1815,
+          "budget": 18,
+          "failure_allowance_per_model": 5.2732340383165877e-08
+        },
+        {
+          "cell": "TQH-D_i1800_j0",
+          "normal_n": 811,
+          "budget": 8,
+          "failure_allowance_per_model": 0.00010528200822879086
+        },
+        {
+          "cell": "TQH-D_i1800_j30",
+          "normal_n": 800,
+          "budget": 8,
+          "failure_allowance_per_model": 9.50761800276867e-05
+        },
+        {
+          "cell": "TQH-D_i1800_j70",
+          "normal_n": 799,
+          "budget": 7,
+          "failure_allowance_per_model": 0.0004937087970436904
+        },
+        {
+          "cell": "TQH-D_i300_j0",
+          "normal_n": 550,
+          "budget": 5,
+          "failure_allowance_per_model": 0.001592046151012605
+        },
+        {
+          "cell": "TQH-D_i300_j30",
+          "normal_n": 547,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0015490165147636903
+        },
+        {
+          "cell": "TQH-D_i300_j70",
+          "normal_n": 564,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0018049740093672995
+        },
+        {
+          "cell": "TQH-D_i30_j0",
+          "normal_n": 676,
+          "budget": 6,
+          "failure_allowance_per_model": 0.0009006246608375124
+        },
+        {
+          "cell": "TQH-D_i30_j30",
+          "normal_n": 687,
+          "budget": 6,
+          "failure_allowance_per_model": 0.0009880465451015397
+        },
+        {
+          "cell": "TQH-D_i30_j70",
+          "normal_n": 656,
+          "budget": 6,
+          "failure_allowance_per_model": 0.0007573592328804502
+        },
+        {
+          "cell": "TQH-D_i3600_j0",
+          "normal_n": 1151,
+          "budget": 11,
+          "failure_allowance_per_model": 1.474056426309378e-05
+        },
+        {
+          "cell": "TQH-D_i3600_j30",
+          "normal_n": 1152,
+          "budget": 11,
+          "failure_allowance_per_model": 1.4865755505799605e-05
+        },
+        {
+          "cell": "TQH-D_i3600_j70",
+          "normal_n": 1171,
+          "budget": 11,
+          "failure_allowance_per_model": 1.7427251216339812e-05
+        }
+      ],
+      "evaluation_union_bound_at_cap": 0.024999999946723528,
+      "allocated_overall_bound": 0.05,
+      "calibration_sample_feasibility": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.002215584817,
+          "failure_allowance": 0.008333333333333333,
+          "minimum_n_for_any_finite_order_statistic": 2159,
+          "failure_bound_at_sample_maximum": 0.030804045764084652,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.002215584817,
+          "failure_allowance": 0.008333333333333333,
+          "minimum_n_for_any_finite_order_statistic": 2159,
+          "failure_bound_at_sample_maximum": 4.912958845423111e-06,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 4,
+          "ascending_one_based_index": 5507,
+          "achieved_failure_bound": 0.00651801901029158,
+          "next_less_conservative_failure_bound": 0.017732624256429543
+        }
+      },
+      "same_Q_used_to_certify_up_to_200_checkpoints": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.002215584817,
+          "failure_allowance": 4.1666666666666665e-05,
+          "minimum_n_for_any_finite_order_statistic": 4548,
+          "failure_bound_at_sample_maximum": 0.030804045764084652,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.002215584817,
+          "failure_allowance": 4.1666666666666665e-05,
+          "minimum_n_for_any_finite_order_statistic": 4548,
+          "failure_bound_at_sample_maximum": 4.912958845423111e-06,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 0,
+          "ascending_one_based_index": 5511,
+          "achieved_failure_bound": 4.912958845423111e-06,
+          "next_less_conservative_failure_bound": 6.503382119706258e-05
+        }
+      },
+      "separate_calibration_for_all_15_normal_populations": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.002215584817,
+          "failure_allowance": 0.0005555555555555556,
+          "minimum_n_for_any_finite_order_statistic": 3380,
+          "failure_bound_at_sample_maximum": 0.030804045764084652,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.002215584817,
+          "failure_allowance": 0.0005555555555555556,
+          "minimum_n_for_any_finite_order_statistic": 3380,
+          "failure_bound_at_sample_maximum": 4.912958845423111e-06,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 2,
+          "ascending_one_based_index": 5509,
+          "achieved_failure_bound": 0.00043282259474957286,
+          "next_less_conservative_failure_bound": 0.0019325131293301463
+        }
+      }
+    },
+    "7": {
+      "guarantee_scope_models": 7,
+      "cells_per_model": 15,
+      "calibration_failure_per_model": 0.0035714285714285718,
+      "risk_allocation": "delta_cal/M per score; delta_eval divided across model-cell events by the fixed binomial tails at common p*",
+      "equal_cell_allocation_reference": {
+        "evaluation_failure_per_model_cell": 0.0002380952380952381,
+        "cellwise_risk_caps": [
+          {
+            "cell": "TQH-B_i3600_j0",
+            "normal_n": 1805,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004085380025124984
+          },
+          {
+            "cell": "TQH-B_i3600_j30",
+            "normal_n": 1839,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.0040096282304347705
+          },
+          {
+            "cell": "TQH-B_i3600_j70",
+            "normal_n": 1815,
+            "budget": 18,
+            "max_true_risk_for_cell": 0.004062804603690852
+          },
+          {
+            "cell": "TQH-D_i1800_j0",
+            "normal_n": 811,
+            "budget": 8,
+            "max_true_risk_for_cell": 0.002476192436983843
+          },
+          {
+            "cell": "TQH-D_i1800_j30",
+            "normal_n": 800,
+            "budget": 8,
+            "max_true_risk_for_cell": 0.0025103686187205785
+          },
+          {
+            "cell": "TQH-D_i1800_j70",
+            "normal_n": 799,
+            "budget": 7,
+            "max_true_risk_for_cell": 0.001982267320257349
+          },
+          {
+            "cell": "TQH-D_i300_j0",
+            "normal_n": 550,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.0015321767286254984
+          },
+          {
+            "cell": "TQH-D_i300_j30",
+            "normal_n": 547,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.0015406120603090369
+          },
+          {
+            "cell": "TQH-D_i300_j70",
+            "normal_n": 564,
+            "budget": 5,
+            "max_true_risk_for_cell": 0.0014940027883017138
+          },
+          {
+            "cell": "TQH-D_i30_j0",
+            "normal_n": 676,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.001765691293493954
+          },
+          {
+            "cell": "TQH-D_i30_j30",
+            "normal_n": 687,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0017373200729268684
+          },
+          {
+            "cell": "TQH-D_i30_j70",
+            "normal_n": 656,
+            "budget": 6,
+            "max_true_risk_for_cell": 0.0018197219987112893
+          },
+          {
+            "cell": "TQH-D_i3600_j0",
+            "normal_n": 1151,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.002985044215988079
+          },
+          {
+            "cell": "TQH-D_i3600_j30",
+            "normal_n": 1152,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.002982444457965409
+          },
+          {
+            "cell": "TQH-D_i3600_j70",
+            "normal_n": 1171,
+            "budget": 11,
+            "max_true_risk_for_cell": 0.002933895450458462
+          }
+        ],
+        "uniform_risk_cap": 0.0014940027883017138
+      },
+      "risk_cap_before_downward_decimal_rounding": 0.0018964113115576616,
+      "uniform_true_risk_cap": 0.001896411311,
+      "cell_allocations": [
+        {
+          "cell": "TQH-B_i3600_j0",
+          "normal_n": 1805,
+          "budget": 18,
+          "failure_allowance_per_model": 4.314881008049554e-09
+        },
+        {
+          "cell": "TQH-B_i3600_j30",
+          "normal_n": 1839,
+          "budget": 18,
+          "failure_allowance_per_model": 5.798909463727853e-09
+        },
+        {
+          "cell": "TQH-B_i3600_j70",
+          "normal_n": 1815,
+          "budget": 18,
+          "failure_allowance_per_model": 4.7100813249656426e-09
+        },
+        {
+          "cell": "TQH-D_i1800_j0",
+          "normal_n": 811,
+          "budget": 8,
+          "failure_allowance_per_model": 3.2576355189717354e-05
+        },
+        {
+          "cell": "TQH-D_i1800_j30",
+          "normal_n": 800,
+          "budget": 8,
+          "failure_allowance_per_model": 2.932876917238758e-05
+        },
+        {
+          "cell": "TQH-D_i1800_j70",
+          "normal_n": 799,
+          "budget": 7,
+          "failure_allowance_per_model": 0.00017728578917575177
+        },
+        {
+          "cell": "TQH-D_i300_j0",
+          "normal_n": 550,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0007243558889916679
+        },
+        {
+          "cell": "TQH-D_i300_j30",
+          "normal_n": 547,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0007042253016508182
+        },
+        {
+          "cell": "TQH-D_i300_j70",
+          "normal_n": 564,
+          "budget": 5,
+          "failure_allowance_per_model": 0.0008242447271086251
+        },
+        {
+          "cell": "TQH-D_i30_j0",
+          "normal_n": 676,
+          "budget": 6,
+          "failure_allowance_per_model": 0.00036409288764638337
+        },
+        {
+          "cell": "TQH-D_i30_j30",
+          "normal_n": 687,
+          "budget": 6,
+          "failure_allowance_per_model": 0.00040061002895663833
+        },
+        {
+          "cell": "TQH-D_i30_j70",
+          "normal_n": 656,
+          "budget": 6,
+          "failure_allowance_per_model": 0.00030454204648433514
+        },
+        {
+          "cell": "TQH-D_i3600_j0",
+          "normal_n": 1151,
+          "budget": 11,
+          "failure_allowance_per_model": 3.1746454980385863e-06
+        },
+        {
+          "cell": "TQH-D_i3600_j30",
+          "normal_n": 1152,
+          "budget": 11,
+          "failure_allowance_per_model": 3.2025228057230848e-06
+        },
+        {
+          "cell": "TQH-D_i3600_j70",
+          "normal_n": 1171,
+          "budget": 11,
+          "failure_allowance_per_model": 3.774779102294623e-06
+        }
+      ],
+      "evaluation_union_bound_at_cap": 0.024999999959579244,
+      "allocated_overall_bound": 0.05,
+      "calibration_sample_feasibility": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.001896411311,
+          "failure_allowance": 0.0035714285714285718,
+          "minimum_n_for_any_finite_order_statistic": 2969,
+          "failure_bound_at_sample_maximum": 0.05087954635996014,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.001896411311,
+          "failure_allowance": 0.0035714285714285718,
+          "minimum_n_for_any_finite_order_statistic": 2969,
+          "failure_bound_at_sample_maximum": 2.863029614112003e-05,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 2,
+          "ascending_one_based_index": 5509,
+          "achieved_failure_bound": 0.001897665953774376,
+          "next_less_conservative_failure_bound": 0.007372867767212382
+        }
+      },
+      "same_Q_used_to_certify_up_to_200_checkpoints": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.001896411311,
+          "failure_allowance": 1.785714285714286e-05,
+          "minimum_n_for_any_finite_order_statistic": 5760,
+          "failure_bound_at_sample_maximum": 0.05087954635996014,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.001896411311,
+          "failure_allowance": 1.785714285714286e-05,
+          "minimum_n_for_any_finite_order_statistic": 5760,
+          "failure_bound_at_sample_maximum": 2.863029614112003e-05,
+          "finite_order_statistic_feasible": false
+        }
+      },
+      "separate_calibration_for_all_15_normal_populations": {
+        "1569": {
+          "calibration_normal_n": 1569,
+          "risk_cap": 0.001896411311,
+          "failure_allowance": 0.00023809523809523812,
+          "minimum_n_for_any_finite_order_statistic": 4396,
+          "failure_bound_at_sample_maximum": 0.05087954635996014,
+          "finite_order_statistic_feasible": false
+        },
+        "5511": {
+          "calibration_normal_n": 5511,
+          "risk_cap": 0.001896411311,
+          "failure_allowance": 0.00023809523809523812,
+          "minimum_n_for_any_finite_order_statistic": 4396,
+          "failure_bound_at_sample_maximum": 2.863029614112003e-05,
+          "finite_order_statistic_feasible": true,
+          "calibration_above_order_index_max": 0,
+          "ascending_one_based_index": 5511,
+          "achieved_failure_bound": 2.863029614112003e-05,
+          "next_less_conservative_failure_bound": 0.00032841755499768985
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "scope": "static specification, original artifact byte hashes and file consistency only; no candidate performance validation",
+  "checks": {
+    "tabm_ple_s17_model_matches_original_freeze": true,
+    "tabm_ple_s17_old_C_threshold_negative": true,
+    "tabm_ple_s29_model_matches_original_freeze": true,
+    "tabm_ple_s29_old_C_threshold_negative": true,
+    "tabm_ple_s43_model_matches_original_freeze": true,
+    "tabm_ple_s43_old_C_threshold_negative": true,
+    "author_objective_review.md_copy_exact": true,
+    "information_and_architecture_review.md_copy_exact": true,
+    "information_and_architecture_review.json_copy_exact": true,
+    "calibration_design_review.md_copy_exact": true,
+    "calibration_probability_design.json_copy_exact": true,
+    "calibration_probability_design.py_copy_exact": true,
+    "only_three_frozen_PLEs": true,
+    "no_new_model_execution": true,
+    "all_15_original_cells": true,
+    "role_count_conservation": true,
+    "formal_execution_off": true,
+    "complete_old_strong_references": true,
+    "schema_and_document_status_agree": true,
+    "legacy_model_hash_bound": true,
+    "cached_files_all_present": true
+  },
+  "all_passed": true,
+  "repository_text_hash_normalization": "UTF-8 without BOM, CRLF normalized to LF; artifact bindings remain raw bytes",
+  "design_sha256": "e3b0bce5274c1fb06a253817761d5e586a9c70093bae6bafce535ce86d40da91",
+  "document_sha256": "56facc8aea289dc775bd236e81dd57efece68fe408a268eaa1e25a60887bd6e5",
+  "required_artifact_count": 30,
+  "new_candidate_decisions_computed": false
+}

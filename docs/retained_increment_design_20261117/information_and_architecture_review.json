@@ -1,0 +1,212 @@
+{
+  "scope": "Existing raw features, cached scores and decisions only. No fitting/model load/forward, no threshold search. New native-zero-floor candidate decisions NOT computed.",
+  "preferred_next_design": "frozen legacy HGB union fixed rule, plus R29 PLE incremental alerts with threshold max(0, original C threshold); all three seeds separately",
+  "new_candidate_decisions_computed": false,
+  "derived_inputs": {
+    "all_are_deterministic_functions_of_existing_five_continuous_fields": true,
+    "mean_packet_formula": "IP_bytes/packets; undefined if packets<=0",
+    "D_attack_n": 1964,
+    "D_rows_inside_A_F_positive_marginal_ranges": {
+      "duration_seconds": 65,
+      "orig_pkts": 1802,
+      "resp_pkts": 1802,
+      "orig_ip_bytes": 591,
+      "resp_ip_bytes": 45,
+      "orig_mean_ip_packet_bytes": 204,
+      "resp_mean_ip_packet_bytes": 40,
+      "orig_resp_packet_ratio": 1964,
+      "orig_resp_byte_ratio": 1318
+    },
+    "D_rows_inside_all_four_A_positive_packet_byte_ranges": 45,
+    "A_positive_medians": {
+      "duration_seconds": 1.012261152267456,
+      "orig_mean_ip_packet_bytes": 163.0,
+      "resp_mean_ip_packet_bytes": 204.4375
+    },
+    "D_positive_medians": {
+      "duration_seconds": 31.023756504058838,
+      "orig_mean_ip_packet_bytes": 334.46078431372547,
+      "resp_mean_ip_packet_bytes": 446.43529411764706
+    },
+    "normal_B_F_UDP_rows": 604,
+    "positive_B_F_UDP_rows": 90
+  },
+  "existing_P_pairwise_saturation": {
+    "definition": "minimum saved P positive score minus maximum saved P UDP-normal score; final P checkpoint cached scores, no fit",
+    "tabm_ple_s17": {
+      "minimum_gap": 22.436064906987355,
+      "maximum_softplus_negative_gap": 1.8036024444173636e-10
+    },
+    "tabm_ple_s29": {
+      "minimum_gap": 14.047970129395724,
+      "maximum_softplus_negative_gap": 7.925814775535747e-07
+    },
+    "tabm_ple_s43": {
+      "minimum_gap": 14.834890797527397,
+      "maximum_softplus_negative_gap": 3.608184268228673e-07
+    }
+  },
+  "base_original_decisions": {
+    "C_normal_n": 5511,
+    "C_FP": 0,
+    "B_TP": 66,
+    "B_FP": 12,
+    "B_qualified_cells": 3,
+    "D_TP": 1694,
+    "D_FP": 15,
+    "D_qualified_cells": 12,
+    "D_per_cell_remaining_FP_budget": [
+      7,
+      7,
+      4,
+      5,
+      4,
+      4,
+      5,
+      5,
+      3,
+      11,
+      9,
+      10
+    ]
+  },
+  "existing_direct_OR_set_arithmetic": {
+    "scope": "union of two already archived decisions at their ORIGINAL thresholds; NOT the new max(0,t_C) candidate",
+    "tabm_ple_s17": {
+      "B_TP": 72,
+      "B_FP": 55,
+      "B_qualified": 1,
+      "D_TP": 1883,
+      "D_FP": 103,
+      "D_qualified": 4
+    },
+    "tabm_ple_s29": {
+      "B_TP": 72,
+      "B_FP": 53,
+      "B_qualified": 2,
+      "D_TP": 1876,
+      "D_FP": 99,
+      "D_qualified": 5
+    },
+    "tabm_ple_s43": {
+      "B_TP": 72,
+      "B_FP": 55,
+      "B_qualified": 2,
+      "D_TP": 1894,
+      "D_FP": 98,
+      "D_qualified": 4
+    },
+    "r26_target_mlp29": {
+      "B_TP": 72,
+      "B_FP": 36,
+      "B_qualified": 3,
+      "D_TP": 1903,
+      "D_FP": 81,
+      "D_qualified": 9
+    }
+  },
+  "historical_cache_search": {
+    "bounded_locations": [
+      "R26回传索引",
+      "R23 response-results ZIP成员和protocol",
+      "R24 workpoint-results ZIP成员"
+    ],
+    "found": true,
+    "archive": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261113_第二十三轮回包状态\\response-results-20261112T231143142282Z.zip",
+    "archive_sha256": "1fd561df5374546d2abef25ea162bfa072534d990d554bb537fd1de322dae9b3",
+    "members": "evidence/blind/TQH-{A,B}_i{30,300}_j{0,30,70}/hgb.parquet",
+    "representation": "flags bit0, protocol.bit_order[0]=raw",
+    "model_member": "models/frozen/hgb-raw.joblib",
+    "model_sha256": "e2b3100860b2c05b0957865a7faf57f6d9e03a7fc15f5d4cf2f88c1977b8e0e8",
+    "calibration_member": "evidence/calibration/hgb.json",
+    "calibration_sha256": "4f91b30807c94a7c2c0d4a3bae2a23da32a346be6731fdf20ea021555f328ffc",
+    "model_and_calibration_match_R29_legacy_reference": true,
+    "A_B_raw_label_UID_order_hashes_match": true,
+    "R23_raw_flags_vs_R29_legacy_hgb_on_all_17059_ED_rows_differences": 0,
+    "HGB_only_A_F": {
+      "normal": 8843,
+      "positive": 5123,
+      "FP": 11,
+      "TP": 4243,
+      "missed_positive": 880
+    },
+    "HGB_only_A_V": {
+      "normal": 13991,
+      "positive": 2715,
+      "FP": 25,
+      "TP": 2244,
+      "missed_positive": 471
+    },
+    "HGB_only_B_F": {
+      "normal": 5848,
+      "positive": 90,
+      "FP": 9,
+      "TP": 0,
+      "missed_positive": 90
+    },
+    "HGB_only_B_V": {
+      "normal": 4654,
+      "positive": 90,
+      "FP": 7,
+      "TP": 0,
+      "missed_positive": 90
+    },
+    "UDP443_rule_new_decisions_computed": false
+  },
+  "future_zero_fit_candidate_required_existing_inputs": [
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\C.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\ED.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\reports\\legacy_hgb_or_rule-decisions.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\references.json",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\protocol.json",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\freeze.json",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\reports\\units.json",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s17\\C-scores.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s17\\ED-scores.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s17\\calibration.json",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s29\\C-scores.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s29\\ED-scores.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s29\\calibration.json",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s43\\C-scores.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s43\\ED-scores.parquet",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\evidence\\tabm_ple_s43\\calibration.json"
+  ],
+  "guarantees_of_proposed_formula": [
+    "legacy alert identities retained",
+    "incremental alert set is subset of direct original-threshold candidate alert set",
+    "relative to direct OR, FP cannot increase and TP may decrease"
+  ],
+  "not_guaranteed": [
+    "new FP zero",
+    "B72",
+    "all-cell 1percent",
+    "R26 extra TP retention",
+    "three-seed success",
+    "independent generalization"
+  ],
+  "no_actions": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "model_forwards": 0,
+    "new_model_scores": 0,
+    "threshold_searches": 0,
+    "new_floor_candidate_decisions": 0
+  },
+  "source_sha256": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\C.parquet": "129a537d837cb5a75e38aedbf2a0642cccb5972705dd8c253422f2bfd9a4843c",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\ED.parquet": "51853e4c1e8d3461357984cd7d7dbf1dcfc60fc921eedceb3e6ed7b94ab02eb0",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\reports\\legacy_hgb_or_rule-decisions.parquet": "8c2e71c2abd1b2863b5df82dea02699a4086496af67d558a7d6c75d6c54a9076",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\inputs\\references.json": "4013fcc5bf10520e9437bdc2bbe09749a2f1adb5168ba16e8f37560c730d3358",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\protocol.json": "451208a9390266b8092f466f9f4e1115619eba19fce5d527f455c7e7dd940dd3",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s17\\final\\train_scores.npz": "b2a24847334ae1b9340cd4f17b2a2a1600afa6d9b3b998bc3d84759b47603371",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s29\\final\\train_scores.npz": "f60b2c1152619f0e444d68efeeaca176e73ade022514a7be068f348849624f44",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261117_第二十九轮模型训练\\回传\\models\\tabm_ple_s43\\final\\train_scores.npz": "75637b85d9b8b7823e2c7b731c4a764d5709a3143d7fef51b8f43983911c90d6"
+  },
+  "checks": {
+    "all_16_future_identity_score_protocol_inputs_exist": true,
+    "future_input_count": 16,
+    "historical_model_and_calibration_hash_match": true,
+    "historical_ED_identity_paired_decision_difference_count": 0,
+    "new_zero_floor_candidate_decisions_not_computed": true
+  }
+}

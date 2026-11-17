@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+**2026-11-17 后续设计已收敛，新增训练为0**　[完整模型、判决、验收与退出设计](docs/RETAINED_INCREMENT_DESIGN_20261117.md) · [静态规格与工件绑定](configs/retained-increment-design-20261117/design.json)。冻结旧HGB∪规则保留通道，复用R29三份PLE，仅在原生零分界以上追加告警，原C阈值只可收紧；不重训、不扫描下限。尚未计算该候选的新判决，状态`zero_fit_candidate_specified_not_evaluated`。下一步限定为已有缓存的一次固定公式核查；V2七轨迹不再是默认下一步。下方为历史设计及结果记录。
+
 **2026-11-17 失败机制核查完成，V2尚不具备开训依据**　[具体错误、阈值反证和设计处置](docs/R29_FAILURE_MECHANISM_RESOLUTION_20261117.md)：已定位短UDP正常尾部与约31秒TCP控制损失；新增A未补充UDP/443正常，四组权重尚无针对性修复证据。开发规则改为Q_dev正常校准→V_eval实测，保留原正式C/E及验收；名义1%不代表所有有限单元同时≤1%。候选规格状态为`candidate_mechanism_not_ready`，不启动模型实现或实验；下方定稿表述是被本次核查修订的历史记录。
 
 **2026-11-17 完整模型与训练设计 V2已定稿，尚未实现或实验**　[完整设计与逐项修改/验收表](docs/MODEL_AND_TRAINING_DESIGN_V2_20261117.md) · [静态设计规格](configs/model-design-20261117/design.json)。A/B历史监督、共同工作点选轮、直接保留最佳checkpoint；TabM+PLE／同PLE普通MLP／HGB共7条轨迹，0次P重训；完整D继续只作评价。当前不运行新实验，旧R29脚本不能代替V2入口。下方为历史记录。

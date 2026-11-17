@@ -1,0 +1,310 @@
+{
+  "schema": "tracelight-retained-increment-design-v1",
+  "date": "2026-11-17",
+  "status": "zero_fit_candidate_specified_not_evaluated",
+  "base_commit": "512490ad52eed48dd5152c0f724f30970424c405",
+  "executable_registration": false,
+  "execution_enabled": false,
+  "ready_for_new_training": false,
+  "ready_for_deployment": false,
+  "next_scope": "implement and verify exactly one fixed cached-decision design, not model training",
+  "model_design_doc": "docs/RETAINED_INCREMENT_DESIGN_20261117.md",
+  "research_question": "Can the frozen legacy alerts plus native-boundary PLE increments satisfy all existing cell budgets and preserve strong reference capability without new fitting?",
+  "base_channel": {
+    "id": "legacy_hgb_or_rule",
+    "frozen_hgb": {
+      "threshold": 0.969384090147706,
+      "rule": {
+        "alpha": 0.01,
+        "n_normal": 1826,
+        "rank": 1809,
+        "threshold": 0.969384090147706,
+        "comparison": ">",
+        "comparison_dtype": "float64",
+        "calibration_fp": 7,
+        "scope": "development_normal_calibration"
+      },
+      "origin_sha256": "4f91b30807c94a7c2c0d4a3bae2a23da32a346be6731fdf20ea021555f328ffc",
+      "origin_member": "evidence/calibration/hgb.json",
+      "archive_sha256": "1fd561df5374546d2abef25ea162bfa072534d990d554bb537fd1de322dae9b3",
+      "origin": "frozen R23 original normal calibration; do not re-register using B",
+      "model_sha256": "e2b3100860b2c05b0957865a7faf57f6d9e03a7fc15f5d4cf2f88c1977b8e0e8"
+    },
+    "rule": "ip_protocol == 17 and (orig_port == 443 or resp_port == 443) and duration_seconds >= 30",
+    "uses_source_training_and_ports": true,
+    "new_rule_or_threshold": false
+  },
+  "increment_models": {
+    "tabm_ple_s17": {
+      "seed": 17,
+      "frozen_artifact": {
+        "path": "models/tabm_ple_s17/final/model.pt",
+        "sha256": "2e31171cd17982909b9c6d0093fc7e409dd19313fb29bcc9993637c39028d20d",
+        "selected_stage": 194
+      },
+      "original_C_threshold": -15.029755070856966,
+      "increment_floor": 0.0,
+      "final_fit_role": "R29_P",
+      "new_fits": 0,
+      "new_checkpoint_selection": false
+    },
+    "tabm_ple_s29": {
+      "seed": 29,
+      "frozen_artifact": {
+        "path": "models/tabm_ple_s29/final/model.pt",
+        "sha256": "934e3f35d8fd650dc0ac35d33ef276db9c69fbdc32db867ed3b96aa0174e0e86",
+        "selected_stage": 27
+      },
+      "original_C_threshold": -10.643443729727716,
+      "increment_floor": 0.0,
+      "final_fit_role": "R29_P",
+      "new_fits": 0,
+      "new_checkpoint_selection": false
+    },
+    "tabm_ple_s43": {
+      "seed": 43,
+      "frozen_artifact": {
+        "path": "models/tabm_ple_s43/final/model.pt",
+        "sha256": "a8506c47948f60bd46896fad90b0a191f94c88f77fb1f1f0834e041483988727",
+        "selected_stage": 32
+      },
+      "original_C_threshold": -10.90311970257591,
+      "increment_floor": 0.0,
+      "final_fit_role": "R29_P",
+      "new_fits": 0,
+      "new_checkpoint_selection": false
+    }
+  },
+  "score_semantics": "FP64 log odds of mean member sigmoid probabilities; reuse frozen CPU batch256 scores",
+  "decision": {
+    "formula": "base OR ((NOT base) AND score > max(0, original_C_threshold))",
+    "strict_comparison": ">",
+    "origin": "native mean-probability decision boundary p>0.5",
+    "floor_search": false,
+    "recalibration": false,
+    "temperature_or_shift": false,
+    "per_cell_or_protocol_thresholds": false,
+    "seed_selection_or_combination": false,
+    "nonfinite_or_missing": "artifact failure, never silently produce no alerts"
+  },
+  "training": {
+    "new_fits": 0,
+    "optimizer_steps": 0,
+    "new_preprocessing_fits": 0,
+    "new_PLE_bins": 0,
+    "new_checkpoints": 0,
+    "AB_supervision": false,
+    "R29_final_models_reused_unchanged": true,
+    "V2_seven_trajectories_enabled": false
+  },
+  "roles": {
+    "C": {
+      "normal": 5511,
+      "purpose": "historical values only, no new calibration"
+    },
+    "ED": {
+      "normal": 15023,
+      "positive": 2036,
+      "rows": 17059,
+      "cells": [
+        "TQH-B_i3600_j0",
+        "TQH-B_i3600_j30",
+        "TQH-B_i3600_j70",
+        "TQH-D_i30_j0",
+        "TQH-D_i30_j30",
+        "TQH-D_i30_j70",
+        "TQH-D_i300_j0",
+        "TQH-D_i300_j30",
+        "TQH-D_i300_j70",
+        "TQH-D_i1800_j0",
+        "TQH-D_i1800_j30",
+        "TQH-D_i1800_j70",
+        "TQH-D_i3600_j0",
+        "TQH-D_i3600_j30",
+        "TQH-D_i3600_j70"
+      ],
+      "already_opened_development": true,
+      "independent_confirmation": false
+    }
+  },
+  "acceptance": {
+    "all_three_seeds_must_pass": true,
+    "normal_FP_budget_each_cell": "floor(normal_count/100)",
+    "all_15_cells": true,
+    "B_TP_required": 72,
+    "base_TP_identity_loss_required": 0,
+    "qualified_reference_cell_TP_count_decrease_allowed": false,
+    "references": [
+      "legacy_hgb_or_rule",
+      "r26_target_hgb",
+      "r26_target_mlp17",
+      "r26_target_mlp29",
+      "r26_target_mlp43",
+      "hgb"
+    ],
+    "also_compare_same_seed_original_PLE": true,
+    "same_seed_original_PLE_qualified_cell_TP_count_decrease_allowed": false,
+    "D_TP_must_strictly_exceed_base_1694": true,
+    "full_added_lost_identity_reports": true,
+    "new_MLP_V2_comparator": false
+  },
+  "risk": {
+    "empirical_acceptance_unchanged": true,
+    "system_decomposition": "P(base|normal)+P(not_base AND increment|normal)",
+    "C_base_zero_FP_means_zero_true_risk": false,
+    "current_95_percent_joint_guarantee": false,
+    "future_probability_design_is_not_applied": true,
+    "future_risk_arithmetic": "docs/retained_increment_design_20261117/calibration_probability_design.json",
+    "do_not_apply_single_score_order_index_to_combined_system": true
+  },
+  "exit_rules": {
+    "some_seeds_fail": "close fixed three-seed candidate; do not select champion",
+    "TP_failure": "close candidate; do not scan lower floors",
+    "FP_failure": "close candidate; no cell deletion or recalibration",
+    "artifact_failure": "repair provenance/join, rerun same fixed formula only",
+    "all_pass": "eligible for combined artifact equivalence and laboratory cost verification; no training"
+  },
+  "not_claimed": [
+    "new neural algorithm",
+    "pure TabM architecture effect",
+    "port-free system",
+    "source-free information-matched comparison",
+    "independent confirmation",
+    "calibrated attack probability",
+    "lower cost before measurement"
+  ],
+  "artifact_root_relative_to_project": "实验归档/20261117_第二十九轮模型训练/回传",
+  "required_artifacts": {
+    "inputs/C.parquet": {
+      "sha256": "129a537d837cb5a75e38aedbf2a0642cccb5972705dd8c253422f2bfd9a4843c",
+      "bytes": 942110
+    },
+    "inputs/ED.parquet": {
+      "sha256": "51853e4c1e8d3461357984cd7d7dbf1dcfc60fc921eedceb3e6ed7b94ab02eb0",
+      "bytes": 2932519
+    },
+    "inputs/references.json": {
+      "sha256": "4013fcc5bf10520e9437bdc2bbe09749a2f1adb5168ba16e8f37560c730d3358",
+      "bytes": 3637
+    },
+    "protocol.json": {
+      "sha256": "451208a9390266b8092f466f9f4e1115619eba19fce5d527f455c7e7dd940dd3",
+      "bytes": 35928
+    },
+    "freeze.json": {
+      "sha256": "adce2f99f3450c07d94ce2a43ddcd52094eaf918b614edbb636b558e8273b6d5",
+      "bytes": 1668
+    },
+    "reports/units.json": {
+      "sha256": "6d02138d7c0c6e0ceef4fbcab63c5c9838a8a8f58126648e42eba410faa321fe",
+      "bytes": 996764
+    },
+    "reports/legacy_hgb_or_rule-decisions.parquet": {
+      "sha256": "8c2e71c2abd1b2863b5df82dea02699a4086496af67d558a7d6c75d6c54a9076",
+      "bytes": 2936148
+    },
+    "reports/r26_target_hgb-decisions.parquet": {
+      "sha256": "5db9ef1dbed7c9342fa7885e995f3cfd841495a34310219d694b881c56037115",
+      "bytes": 2962173
+    },
+    "reports/r26_target_mlp17-decisions.parquet": {
+      "sha256": "b26148308d4b4ac7bf723eacf66aa97c09c589681f566b95d05c57214850fff0",
+      "bytes": 3064295
+    },
+    "reports/r26_target_mlp29-decisions.parquet": {
+      "sha256": "785c99bcb5c0858d91a7d7b82fd2ab47c6d36e425ba32b69d5d319e4e1f6cdf5",
+      "bytes": 3063289
+    },
+    "reports/r26_target_mlp43-decisions.parquet": {
+      "sha256": "12c2a1f81ffdd9ede2d94665aa6bf334ff649f50b6b871635bd030e154dcd8a8",
+      "bytes": 3060914
+    },
+    "reports/hgb-decisions.parquet": {
+      "sha256": "54355675878e4b9a01f740d60699da8361ae43756c85c0617a288c01ceba76bf",
+      "bytes": 2957969
+    },
+    "models/tabm_ple_s17/final/model.pt": {
+      "sha256": "2e31171cd17982909b9c6d0093fc7e409dd19313fb29bcc9993637c39028d20d",
+      "bytes": 1676606
+    },
+    "models/tabm_ple_s17/final/preprocessing.json": {
+      "sha256": "0bc5f1b203904496e6d54ed4e995acb2af98bb4da083da582b61d86887d8d446",
+      "bytes": 1105
+    },
+    "evidence/tabm_ple_s17/C-scores.parquet": {
+      "sha256": "18b8c6181378f9109ed555b6dd785304bceecba63f75c9f9908edc40fb5ca1ae",
+      "bytes": 68653
+    },
+    "evidence/tabm_ple_s17/ED-scores.parquet": {
+      "sha256": "8c535cd155262768bd95cec972cda60911b6791e14e82dce82fb3b9cb155f5c6",
+      "bytes": 196860
+    },
+    "evidence/tabm_ple_s17/calibration.json": {
+      "sha256": "0a0dd6796c7d50aa25bf3dde87ff1c1701030415d4cfd6f7136c35ad0bffe25a",
+      "bytes": 275
+    },
+    "reports/tabm_ple_s17-decisions.parquet": {
+      "sha256": "7beafb99e09706a90d068694b73e7cb51299ba1ccab572bf74288fe4aa7834d3",
+      "bytes": 3101207
+    },
+    "models/tabm_ple_s29/final/model.pt": {
+      "sha256": "934e3f35d8fd650dc0ac35d33ef276db9c69fbdc32db867ed3b96aa0174e0e86",
+      "bytes": 1676606
+    },
+    "models/tabm_ple_s29/final/preprocessing.json": {
+      "sha256": "0bc5f1b203904496e6d54ed4e995acb2af98bb4da083da582b61d86887d8d446",
+      "bytes": 1105
+    },
+    "evidence/tabm_ple_s29/C-scores.parquet": {
+      "sha256": "7fc93dcc37ae60f3e6cbf869a3e5f97dfeffb9dbb210bd9db3b2da32a54e3fc5",
+      "bytes": 68653
+    },
+    "evidence/tabm_ple_s29/ED-scores.parquet": {
+      "sha256": "d3ba1149c15f677a5c82a563851f81afe44194b9a53a5b19d8d25f68df41a549",
+      "bytes": 196860
+    },
+    "evidence/tabm_ple_s29/calibration.json": {
+      "sha256": "a2ac3c22ddd129495b7e3798aafbe55d050907ef236e757041ea11fda3fba7ee",
+      "bytes": 275
+    },
+    "reports/tabm_ple_s29-decisions.parquet": {
+      "sha256": "af98cc3f6e086f21de047a2b8de541c283060f949147e453cf12d7ad5fff59b2",
+      "bytes": 3101179
+    },
+    "models/tabm_ple_s43/final/model.pt": {
+      "sha256": "a8506c47948f60bd46896fad90b0a191f94c88f77fb1f1f0834e041483988727",
+      "bytes": 1676606
+    },
+    "models/tabm_ple_s43/final/preprocessing.json": {
+      "sha256": "0bc5f1b203904496e6d54ed4e995acb2af98bb4da083da582b61d86887d8d446",
+      "bytes": 1105
+    },
+    "evidence/tabm_ple_s43/C-scores.parquet": {
+      "sha256": "7afad757c1e4889ca27727b3372e20ff9e6c06200955f9db6474c43328baec30",
+      "bytes": 68653
+    },
+    "evidence/tabm_ple_s43/ED-scores.parquet": {
+      "sha256": "68e62aadb118653b1150410c01836106d9c337f4aad38ea0fbd280ea7e47e4f3",
+      "bytes": 196860
+    },
+    "evidence/tabm_ple_s43/calibration.json": {
+      "sha256": "7e6228bf9fd285023127145822ace5a5dd6dcb02bc3960fd5349722195ddc7aa",
+      "bytes": 274
+    },
+    "reports/tabm_ple_s43-decisions.parquet": {
+      "sha256": "5d9c0541d81a056e294c3e75c62484019af6392613dd42d08f75ce47166a082e",
+      "bytes": 3101227
+    }
+  },
+  "executed_this_design_task": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "model_forwards": 0,
+    "new_model_scores": 0,
+    "new_candidate_decisions": 0,
+    "threshold_searches": 0,
+    "new_data_downloads": 0,
+    "descriptive_existing_score_and_decision_analysis": true,
+    "analytic_probability_arithmetic": true
+  }
+}

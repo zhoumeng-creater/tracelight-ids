@@ -2,6 +2,8 @@
   "schema": "tracelight-model-training-design-v2",
   "date": "2026-11-17",
   "status": "candidate_mechanism_not_ready",
+  "active_next_candidate": false,
+  "superseded_next_action_by": "configs/retained-increment-design-20261117/design.json",
   "executable_registration": false,
   "execution_enabled": false,
   "base_commit": "fd59cc68297e9294530dc6a8c9df9ef7794eb4ca",
