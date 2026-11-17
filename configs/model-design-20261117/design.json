@@ -1,7 +1,7 @@
 {
   "schema": "tracelight-model-training-design-v2",
   "date": "2026-11-17",
-  "status": "design_complete_not_implemented",
+  "status": "candidate_mechanism_not_ready",
   "executable_registration": false,
   "execution_enabled": false,
   "base_commit": "fd59cc68297e9294530dc6a8c9df9ef7794eb4ca",
@@ -397,7 +397,8 @@
       "attack": 2805,
       "first_flow_end_ms": 1782787749159,
       "last_flow_end_ms": 1784569371897,
-      "rows": 21450
+      "rows": 21450,
+      "role_kind": "development container; not a single evaluation or gradient partition"
     },
     "C": {
       "cells": [
@@ -996,7 +997,7 @@
   },
   "training": {
     "fit_partition": "F",
-    "validation_partition": "V",
+    "validation_partition": "V_eval",
     "final_fit_role": "F",
     "final_refits": 0,
     "optimizer": "AdamW",
@@ -1064,23 +1065,29 @@
       "pos_weight": false
     },
     "selection": {
-      "threshold_partition": "V normal",
-      "threshold": "max over six cells of ascending normal score at 1-based rank n0-floor(n0/100)",
-      "single_threshold_for_all_V_rows": true,
-      "decision": "score > threshold",
-      "threshold_reason": "minimum shared threshold satisfying all six empirical integer FP budgets",
-      "normal_budget_sum": 183,
+      "threshold_partition": "Q_dev normal only",
+      "threshold": "ascending score at ceil((n+1)*0.99), 1-based",
+      "normal_rows": 1569,
+      "rank": 1555,
+      "single_threshold_for_all_validation_rows": true,
+      "decision": "strict score > threshold",
+      "evaluation_partition": "V_eval",
+      "V_eval_used_to_construct_threshold": false,
       "ordinary_key": [
+        "negative_max_positive_cell_budget_excess_rate",
         "minimum_cell_recall",
-        "mean_cell_recall",
+        "half_mean_A_cell_recall_plus_half_mean_B_cell_recall",
         "pooled_standardized_pAUC_max_fpr_0.01",
         "negative_four_profile_label_group_mean_NLL",
         "negative_stage"
       ],
-      "fully_saturated": "all six cells TP equals positive count at shared V threshold",
-      "saturation_action": "first saturated checkpoint wins permanently; no NLL replacement",
-      "validation_FP_compliance_is_constructed": true,
-      "deployment_threshold_reuses_V": false
+      "excess_rate": "max_g(max(0,FP_g-floor(normal_g/100))/normal_g)",
+      "fully_saturated": "all five validation cells qualified and TP equals positive count",
+      "saturation_action": "first saturated checkpoint wins permanently",
+      "no_feasible_stage": "retain best diagnostic checkpoint, mark validation_budget_infeasible, not eligible for adoption",
+      "validation_FP_compliance_is_constructed": false,
+      "deployment_threshold_reuses_development": false,
+      "retired_rule": "max of V cell normal-budget order statistics; mathematically valid but no longer main selector"
     },
     "determinism": {
       "torch_use_deterministic_algorithms": true,
@@ -1088,7 +1095,8 @@
       "cudnn_deterministic": true,
       "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
       "record_runtime_and_device": true
-    }
+    },
+    "development_calibration_partition": "Q_dev"
   },
   "budget": {
     "neural_trajectories": 6,
@@ -1109,7 +1117,8 @@
     "one_threshold_per_model_across_all_E_cells": true,
     "after_all_seven_frozen": true,
     "evaluation_recalibration": false,
-    "excluded_attack_rows": 72
+    "excluded_attack_rows": 72,
+    "statistical_status": "nominal 1% working point; no high-probability guarantee that all finite evaluation cells meet 1% empirical budgets; risk margin unresolved; original alpha unchanged"
   },
   "acceptance": {
     "all_seeds_required": [
@@ -1135,7 +1144,8 @@
     "historical_guard_rule": "no per-cell TP decrease wherever that reference qualifies; no strict improvement required",
     "identity_report": "all added and lost TP identities; counts nondecreasing does not imply zero lost identities",
     "UTC_day_and_same_service": "report, not new post-hoc adoption gates",
-    "cost": "report tradeoff; no invented memory cap or relaxed detection tolerance"
+    "cost": "report tradeoff; no invented memory cap or relaxed detection tolerance",
+    "validation_requirement": "selected checkpoint meets every V_eval cell budget at unchanged Q_dev temporary threshold"
   },
   "stopping": {
     "main_candidate_fails": "not adopted; no threshold/weight/capacity/seed adjustment",
@@ -1168,7 +1178,7 @@
     ]
   },
   "implementation": {
-    "status": "not implemented",
+    "status": "not started; mechanism and calibration-risk design unresolved",
     "entry_point_planned": "ids.model_training_v2",
     "preserve_existing": "ids.model_training and R29 registration",
     "change_ids": [
@@ -1186,7 +1196,12 @@
       "C01",
       "R01"
     ],
-    "formal_lab_registration_required_before_execution": true
+    "formal_lab_registration_required_before_execution": true,
+    "blocked_by_design": [
+      "no established link from A supervision/group weighting to the observed UDP normal tail and lost 31-second TCP control ranking",
+      "nominal calibration level, empirical cell budgets and joint statistical assurance not reconciled",
+      "A/B validation does not independently test the held-out Merlin/TCP combination"
+    ]
   },
   "independent_confirmation": {
     "ready": false,
@@ -1200,5 +1215,191 @@
       "frozen model and threshold or separately registered prior normal calibration"
     ],
     "R27_status": "external mechanism case; not ready confirmation"
+  },
+  "ready_for_implementation": false,
+  "ready_for_laboratory": false,
+  "development_roles": {
+    "Q_dev": {
+      "cells": [
+        {
+          "source_id": "TQH-B_i300_j0",
+          "profile": "B",
+          "normal": 1569,
+          "attack": 0,
+          "excluded_attack": 30,
+          "normal_budget": 15,
+          "manifest_start_utc": "2026-07-20T11:48:00.613767Z",
+          "manifest_end_utc": "2026-07-20T13:46:21.913327Z",
+          "first_flow_end_ms": 1784548178514,
+          "last_flow_end_ms": 1784555170578,
+          "author_label_counts": {
+            "benign": 1569,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "49ef7d99e8dd447ac0053a82e7aa0d7512df48ff36ab4d6a38709cc9041f812a",
+            "bytes": 821275,
+            "labels_sha256": "9343fe52ced5271f99f4b9cf76abf41f1b110b1df8e796f16944ca5da7dadf6e",
+            "uid_order_sha256": "01df599173745d80a32ded1667b1be48ddca3cc2c06fe73d9cf5e254f256f30f"
+          }
+        }
+      ],
+      "normal": 1569,
+      "attack": 0,
+      "rows": 1569,
+      "use": "normal-only temporary calibration for checkpoint selection"
+    },
+    "excluded_control": {
+      "source_id": "TQH-B_i300_j0",
+      "attack": 30,
+      "used_for_fit_calibration_or_selection": false
+    },
+    "V_eval": {
+      "cells": [
+        {
+          "source_id": "TQH-A_i300_j0",
+          "profile": "A",
+          "normal": 4689,
+          "attack": 960,
+          "excluded_attack": 0,
+          "normal_budget": 46,
+          "manifest_start_utc": "2026-06-30T02:39:16.000262Z",
+          "manifest_end_utc": "2026-06-30T04:48:44.647201Z",
+          "first_flow_end_ms": 1782787749159,
+          "last_flow_end_ms": 1782794913552,
+          "author_label_counts": {
+            "benign": 4685,
+            "malicious_c2": 960,
+            "benign_external": 4
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "ad4bb95eac8e18a96b68c8f307b437b447ede0a513ee2921dea544e15f30c3cf",
+            "bytes": 2868479,
+            "labels_sha256": "04881fb8045b6bcc913b1c63b8044f88b7e21f0bea39e254ab46f190090a605b",
+            "uid_order_sha256": "95164a8a824a6938a8fb8d07f4c4de60cd9439b1ac3b29bfca3636b2827dc1f2"
+          }
+        },
+        {
+          "source_id": "TQH-A_i300_j30",
+          "profile": "A",
+          "normal": 4659,
+          "attack": 907,
+          "excluded_attack": 0,
+          "normal_budget": 46,
+          "manifest_start_utc": "2026-06-30T04:48:46.071912Z",
+          "manifest_end_utc": "2026-06-30T06:58:14.821630Z",
+          "first_flow_end_ms": 1782795510464,
+          "last_flow_end_ms": 1782802683402,
+          "author_label_counts": {
+            "benign": 4655,
+            "malicious_c2": 907,
+            "benign_external": 4
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "edd8e8193fc109d631d356511000995ba6944f88de2e24e47c98974a3e3b63db",
+            "bytes": 2826004,
+            "labels_sha256": "c20182775cf4aca643862e9e870af54b90d2ffb4edcdb84c4402e79e4cdbc626",
+            "uid_order_sha256": "de2ab3ae3bb35f70eb46fd5f6669af8238f35157c43c3e4db38b77b85650dcf2"
+          }
+        },
+        {
+          "source_id": "TQH-A_i300_j70",
+          "profile": "A",
+          "normal": 4643,
+          "attack": 848,
+          "excluded_attack": 0,
+          "normal_budget": 46,
+          "manifest_start_utc": "2026-06-30T06:58:16.271280Z",
+          "manifest_end_utc": "2026-06-30T09:07:43.834716Z",
+          "first_flow_end_ms": 1782803284096,
+          "last_flow_end_ms": 1782810449649,
+          "author_label_counts": {
+            "benign": 4639,
+            "malicious_c2": 848,
+            "benign_external": 4
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "708afeb715cc6b64f24a91473f6954b91934398f6a1c8003684b244d84c6f9f0",
+            "bytes": 2786087,
+            "labels_sha256": "bde24bb9a6ae45466af1140173746f129effaabdc80f3a3a3ba2a44f263fe570",
+            "uid_order_sha256": "a61b56fe7e40c3b7bd98f0a23b312a62231197e6508ca0f073aa80d58700f292"
+          }
+        },
+        {
+          "source_id": "TQH-B_i300_j30",
+          "profile": "B",
+          "normal": 1542,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 15,
+          "manifest_start_utc": "2026-07-20T13:46:22.408022Z",
+          "manifest_end_utc": "2026-07-20T15:44:43.809856Z",
+          "first_flow_end_ms": 1784555295043,
+          "last_flow_end_ms": 1784562272395,
+          "author_label_counts": {
+            "benign": 1542,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "1633ccb5f2df229d32f3d0f3fe505002b66736dd0e2ac032a85be02a511432bd",
+            "bytes": 807503,
+            "labels_sha256": "bc0a9ef3e704b99c92cc9becb80cdc3442b12fa5daecab3ae95507d0ba15976c",
+            "uid_order_sha256": "da67acc7e933b70a8963cd8ee9027825692029a8a26f6a13863edbf42a38b755"
+          }
+        },
+        {
+          "source_id": "TQH-B_i300_j70",
+          "profile": "B",
+          "normal": 1543,
+          "attack": 30,
+          "excluded_attack": 0,
+          "normal_budget": 15,
+          "manifest_start_utc": "2026-07-20T15:44:44.288424Z",
+          "manifest_end_utc": "2026-07-20T17:43:05.645151Z",
+          "first_flow_end_ms": 1784562383814,
+          "last_flow_end_ms": 1784569371897,
+          "author_label_counts": {
+            "benign": 1543,
+            "malicious_c2": 30
+          },
+          "source_binding": {
+            "archive": "TQH-C2_labels_v110.zip",
+            "archive_sha256": "9a76cf80d1e9b920b3758df8e8c117da0ee0df6fa5dd81a8c7bb53c9d388ef58",
+            "archive_bytes": 31023638,
+            "sha256": "eb85e52a85ee4905a9999630a8628a7c3a07b77236408a3cf20afd6c998a59ea",
+            "bytes": 807179,
+            "labels_sha256": "e22b5d5e3b9235956f4420f713bdc490fcda67d747450e316f5bd8f719bf5ca9",
+            "uid_order_sha256": "3c031fe5b45ee6e781a7f7a97eafc5783858facd985754eaa61c4bd18d58eff6"
+          }
+        }
+      ],
+      "normal": 17076,
+      "attack": 2775,
+      "rows": 19851
+    }
+  },
+  "mechanism_review": {
+    "document": "docs/R29_FAILURE_MECHANISM_RESOLUTION_20261117.md",
+    "decision": "retain candidate specifications; withdraw repair-ready status; replace construction-qualified V selector with separate development calibration/evaluation",
+    "author_model_correctness_is_performance_evidence": false,
+    "A_supervision_is_proven_error_repair": false,
+    "group_weighting_is_proven_error_repair": false,
+    "fixed_R29_threshold_change_alone_can_meet_joint_requirements": false,
+    "historical_results_and_thresholds_unchanged": true
   }
 }
