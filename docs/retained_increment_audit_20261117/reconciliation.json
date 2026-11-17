@@ -1,0 +1,206 @@
+{
+  "schema": "independent-retained-increment-reconciliation-v1",
+  "created_utc": "2026-11-17T10:43:55.275290+00:00",
+  "independent_json_sha256": "c73d838f65cd414b3556404c33779ddc737f70577ea375b94dd3e660520bcaca",
+  "registration_sha256_lf": "63cfc4eb0c323947203eb17102fd2db3f77bfacca8a389138eb39698bc82cd67",
+  "primary_candidate_status": "rejected_fixed_candidate",
+  "models": {
+    "tabm_ple_s17": {
+      "rows": 17059,
+      "candidate_alerts": 1796,
+      "candidate_alert_identity_difference_count": 0,
+      "increment_alerts": 9,
+      "direct_OR_removed_TP": 189,
+      "direct_OR_removed_FP": 128,
+      "direct_OR_removed_identity_difference_count": 0,
+      "reference_regression_entries": 20,
+      "reference_identity_difference_count": 0,
+      "passed": false
+    },
+    "tabm_ple_s29": {
+      "rows": 17059,
+      "candidate_alerts": 1796,
+      "candidate_alert_identity_difference_count": 0,
+      "increment_alerts": 9,
+      "direct_OR_removed_TP": 182,
+      "direct_OR_removed_FP": 122,
+      "direct_OR_removed_identity_difference_count": 0,
+      "reference_regression_entries": 19,
+      "reference_identity_difference_count": 0,
+      "passed": false
+    },
+    "tabm_ple_s43": {
+      "rows": 17059,
+      "candidate_alerts": 1796,
+      "candidate_alert_identity_difference_count": 0,
+      "increment_alerts": 9,
+      "direct_OR_removed_TP": 200,
+      "direct_OR_removed_FP": 123,
+      "direct_OR_removed_identity_difference_count": 0,
+      "reference_regression_entries": 23,
+      "reference_identity_difference_count": 0,
+      "passed": false
+    }
+  },
+  "all_checks_passed": true,
+  "checked_model_cells": 45,
+  "checked_reference_model_cells": 315,
+  "all_three_full_candidate_decisions_identical": true,
+  "all_three_increment_identities_identical": true,
+  "increment_identities": [
+    {
+      "source_id": "TQH-B_i3600_j0",
+      "row_id": 4,
+      "label": 1,
+      "ip_protocol": 17,
+      "orig_port": 56938,
+      "resp_port": 443,
+      "duration_seconds": 0.02568197250366211
+    },
+    {
+      "source_id": "TQH-B_i3600_j0",
+      "row_id": 8,
+      "label": 1,
+      "ip_protocol": 17,
+      "orig_port": 45586,
+      "resp_port": 443,
+      "duration_seconds": 15.06164288520813
+    },
+    {
+      "source_id": "TQH-B_i3600_j30",
+      "row_id": 5,
+      "label": 1,
+      "ip_protocol": 17,
+      "orig_port": 35855,
+      "resp_port": 443,
+      "duration_seconds": 0.025877952575683594
+    },
+    {
+      "source_id": "TQH-B_i3600_j30",
+      "row_id": 8,
+      "label": 1,
+      "ip_protocol": 17,
+      "orig_port": 37714,
+      "resp_port": 443,
+      "duration_seconds": 15.065737962722778
+    },
+    {
+      "source_id": "TQH-B_i3600_j70",
+      "row_id": 3,
+      "label": 1,
+      "ip_protocol": 17,
+      "orig_port": 34881,
+      "resp_port": 443,
+      "duration_seconds": 0.02575993537902832
+    },
+    {
+      "source_id": "TQH-B_i3600_j70",
+      "row_id": 6,
+      "label": 1,
+      "ip_protocol": 17,
+      "orig_port": 38308,
+      "resp_port": 443,
+      "duration_seconds": 15.065375089645386
+    },
+    {
+      "source_id": "TQH-D_i1800_j0",
+      "row_id": 166,
+      "label": 0,
+      "ip_protocol": 17,
+      "orig_port": 56918,
+      "resp_port": 443,
+      "duration_seconds": 7.999227046966553
+    },
+    {
+      "source_id": "TQH-D_i30_j0",
+      "row_id": 1130,
+      "label": 0,
+      "ip_protocol": 17,
+      "orig_port": 53256,
+      "resp_port": 443,
+      "duration_seconds": 7.999646186828613
+    },
+    {
+      "source_id": "TQH-D_i30_j30",
+      "row_id": 1158,
+      "label": 0,
+      "ip_protocol": 17,
+      "orig_port": 45548,
+      "resp_port": 443,
+      "duration_seconds": 5.129191875457764
+    }
+  ],
+  "r26_mlp29_qualified_cell_TP_regressions_each_seed": [
+    {
+      "source_id": "TQH-D_i30_j30",
+      "reference_TP": 421,
+      "candidate_TP": 411,
+      "TP_delta": -10
+    },
+    {
+      "source_id": "TQH-D_i30_j70",
+      "reference_TP": 365,
+      "candidate_TP": 349,
+      "TP_delta": -16
+    },
+    {
+      "source_id": "TQH-D_i300_j0",
+      "reference_TP": 125,
+      "candidate_TP": 121,
+      "TP_delta": -4
+    },
+    {
+      "source_id": "TQH-D_i300_j30",
+      "reference_TP": 109,
+      "candidate_TP": 105,
+      "TP_delta": -4
+    },
+    {
+      "source_id": "TQH-D_i300_j70",
+      "reference_TP": 95,
+      "candidate_TP": 84,
+      "TP_delta": -11
+    },
+    {
+      "source_id": "TQH-D_i1800_j30",
+      "reference_TP": 34,
+      "candidate_TP": 30,
+      "TP_delta": -4
+    },
+    {
+      "source_id": "TQH-D_i1800_j70",
+      "reference_TP": 27,
+      "candidate_TP": 25,
+      "TP_delta": -2
+    },
+    {
+      "source_id": "TQH-D_i3600_j0",
+      "reference_TP": 24,
+      "candidate_TP": 23,
+      "TP_delta": -1
+    },
+    {
+      "source_id": "TQH-D_i3600_j30",
+      "reference_TP": 24,
+      "candidate_TP": 21,
+      "TP_delta": -3
+    },
+    {
+      "source_id": "TQH-D_i3600_j70",
+      "reference_TP": 23,
+      "candidate_TP": 20,
+      "TP_delta": -3
+    }
+  ],
+  "r26_mlp29_TP_regression_sum_across_these_10_cells": -58,
+  "independent_json_unchanged": true,
+  "primary_file_sha256": {
+    "summary.json": "4f565e7b64fabed670bcce99a78112f8e671f778c5f037e07b7754c9a70f9cb2",
+    "cells.csv": "909d743b73573e11cff3029b48d81b2fbff94c38d4057a5364fc2f3b385c3d3e",
+    "reference_comparisons.csv": "8d32c96c2e1c203e10aa53486900facaea07b660a20c15d0ead917175d4a08a7",
+    "identity_changes.parquet": "f43b6f20806034a120e3a86058774490d8522a90e8b9958b8634eaf71bb7d6d0",
+    "tabm_ple_s17-decisions.parquet": "946ead2c1461d68cc22d18165308592fedbf7af26ed8977a1d19ddbd545e4def",
+    "tabm_ple_s29-decisions.parquet": "4c09c57a9b90205b29d3ab9a7d36f06d9875bf0c6757a87104fa69d2545ee91c",
+    "tabm_ple_s43-decisions.parquet": "503d862c256ee67b02e30c32d88ac6628fa3b92a021e100914a770fab25d4c21"
+  }
+}

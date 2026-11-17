@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "original_artifacts_unchanged": true,
+  "files": {
+    "cells.csv": {
+      "sha256": "909d743b73573e11cff3029b48d81b2fbff94c38d4057a5364fc2f3b385c3d3e",
+      "bytes": 3056
+    },
+    "identity_changes.parquet": {
+      "sha256": "f43b6f20806034a120e3a86058774490d8522a90e8b9958b8634eaf71bb7d6d0",
+      "bytes": 221149
+    },
+    "input_verification.json": {
+      "sha256": "89ee4fecf0c9070e68a470db635016948c6de858bf7239123659f6e3f41ca8e9",
+      "bytes": 3568
+    },
+    "reference_comparisons.csv": {
+      "sha256": "8d32c96c2e1c203e10aa53486900facaea07b660a20c15d0ead917175d4a08a7",
+      "bytes": 20155
+    },
+    "registration.json": {
+      "sha256": "63cfc4eb0c323947203eb17102fd2db3f77bfacca8a389138eb39698bc82cd67",
+      "bytes": 1009
+    },
+    "summary.json": {
+      "sha256": "4f565e7b64fabed670bcce99a78112f8e671f778c5f037e07b7754c9a70f9cb2",
+      "bytes": 28001
+    },
+    "tabm_ple_s17-decisions.parquet": {
+      "sha256": "946ead2c1461d68cc22d18165308592fedbf7af26ed8977a1d19ddbd545e4def",
+      "bytes": 647690
+    },
+    "tabm_ple_s29-decisions.parquet": {
+      "sha256": "4c09c57a9b90205b29d3ab9a7d36f06d9875bf0c6757a87104fa69d2545ee91c",
+      "bytes": 647641
+    },
+    "tabm_ple_s43-decisions.parquet": {
+      "sha256": "503d862c256ee67b02e30c32d88ac6628fa3b92a021e100914a770fab25d4c21",
+      "bytes": 647704
+    }
+  }
+}

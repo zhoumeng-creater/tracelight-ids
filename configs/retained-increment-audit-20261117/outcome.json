@@ -1,0 +1,23 @@
+{
+  "version": "retained-increment-cached-audit-v1",
+  "status": "rejected_fixed_candidate",
+  "pre_evaluation_implementation_commit": "0e0c68a",
+  "design_commit": "a6fe8f1",
+  "all_three_passed": false,
+  "independent_reconciliation_passed": true,
+  "failure_gates": [
+    "strict_D_gain_over_base",
+    "all_qualified_reference_cells_TP_protected"
+  ],
+  "passed_gates": [
+    "all_15_cells_qualified",
+    "B_72",
+    "base_TP_identities_retained"
+  ],
+  "action": "close fixed candidate; no floor search, new seeds, V2 training, model execution or cost stage",
+  "result_document": "docs/RETAINED_INCREMENT_RESULTS_20261117.md",
+  "summary_path": "docs/retained_increment_audit_20261117/summary.json",
+  "summary_sha256": "4f565e7b64fabed670bcce99a78112f8e671f778c5f037e07b7754c9a70f9cb2",
+  "reconciliation_sha256": "5315f266f05ff65e70ee41d6caae148a04b832a0a181583f06abf4e55cb1d543",
+  "original_registration_and_design_unchanged": true
+}

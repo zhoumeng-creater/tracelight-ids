@@ -1,5 +1,13 @@
 # 本项目的持续研究要求
 
+## 2026-11-17 固定缓存验证完成（当前决定，优先于下文）
+
+[保留增量验证结果](docs/RETAINED_INCREMENT_RESULTS_20261117.md)：预先提交`0e0c68a`的唯一固定公式已执行。三seed完整17059行最终判决完全相同：B72TP/12FP，D1694TP/18FP，15/15cell误报合规；仅增量为B6TP/0FP、D0TP/3FP。旧通道全部告警身份保留，但D没有严格增益，R26 MLP29的10个合规cell还净少58TP。因此状态`rejected_fixed_candidate`，关闭该候选，不进入组合加载/成本阶段，不扫floor、不挑seed、不增加训练，也不自动返回V2七轨迹。
+
+30份原工件SHA、原PLE逐行判决和原参照单元计数全部复现。独立实现与主实现的45cell、315参照比较和全部候选/增失身份差异为0。新增模型加载/前向/拟合/评分/重校准/阈值搜索均0；做了三个既定缓存策略的判决核查。R29原结果与原数据不改。
+
+冻结设计与注册仍保留验证前原文和哈希，不更新其状态字段冒充预先知道结果；当前处置见结果文档及`configs/retained-increment-audit-20261117/outcome.json`。后续设计必须有新的判别信息或训练作用依据，不能把这份有效负结果变成继续调参的理由。缓存复现入口不是新的实验室训练入口。
+
 ## 2026-11-17 设计继续推进（当前决定，优先于下文）
 
 当前唯一后续候选为[保留既有检出与限制增量告警](docs/RETAINED_INCREMENT_DESIGN_20261117.md)，[静态规格](configs/retained-increment-design-20261117/design.json)状态`zero_fit_candidate_specified_not_evaluated`。冻结旧source-raw8-HGB∪原UDP443规则，复用R29三份PLE final分数，仅在`score > max(0, 原C阈值)`时增加告警；三seed分别报告，不平均/投票/挑冠军。0对应原mean-probability log-odds的0.5判界，不是风险保证。尚未算新候选判决。

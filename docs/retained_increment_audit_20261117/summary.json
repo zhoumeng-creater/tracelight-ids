@@ -1,0 +1,972 @@
+{
+  "schema": "retained-increment-audit-result-v1",
+  "status": "complete",
+  "candidate_status": "rejected_fixed_candidate",
+  "all_three_passed": false,
+  "models": {
+    "tabm_ple_s17": {
+      "gates": {
+        "all_15_cells_qualified": true,
+        "B_72": true,
+        "base_TP_identities_retained": true,
+        "all_qualified_reference_cells_TP_protected": false,
+        "strict_D_gain_over_base": false
+      },
+      "passed": false,
+      "regions": {
+        "B": {
+          "base": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 12,
+            "tp": 66,
+            "fn": 6,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "increment": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 0,
+            "tp": 6,
+            "fn": 66,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "candidate": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 12,
+            "tp": 72,
+            "fn": 0,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "direct": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 55,
+            "tp": 72,
+            "fn": 0,
+            "fp_budget": 54,
+            "qualified": false
+          },
+          "qualified_cells": 3
+        },
+        "D": {
+          "base": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 15,
+            "tp": 1694,
+            "fn": 270,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "increment": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 3,
+            "tp": 0,
+            "fn": 1964,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "candidate": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 18,
+            "tp": 1694,
+            "fn": 270,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "direct": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 103,
+            "tp": 1883,
+            "fn": 81,
+            "fp_budget": 95,
+            "qualified": false
+          },
+          "qualified_cells": 12
+        }
+      },
+      "reference_regressions": [
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i30_j30",
+          "reference_qualified": true,
+          "reference_tp": 421,
+          "candidate_tp": 411,
+          "tp_difference": -10,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i30_j70",
+          "reference_qualified": true,
+          "reference_tp": 365,
+          "candidate_tp": 349,
+          "tp_difference": -16,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j0",
+          "reference_qualified": true,
+          "reference_tp": 125,
+          "candidate_tp": 121,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j30",
+          "reference_qualified": true,
+          "reference_tp": 109,
+          "candidate_tp": 105,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j70",
+          "reference_qualified": true,
+          "reference_tp": 95,
+          "candidate_tp": 84,
+          "tp_difference": -11,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 33,
+          "candidate_tp": 30,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 34,
+          "candidate_tp": 30,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 34,
+          "candidate_tp": 30,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i1800_j70",
+          "reference_qualified": true,
+          "reference_tp": 27,
+          "candidate_tp": 25,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 21,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "tabm_ple_s17",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 21,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s17",
+          "reference": "tabm_ple_s17",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 22,
+          "candidate_tp": 20,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        }
+      ],
+      "base_TP_identities_lost": 0,
+      "base_alerts_lost": 0,
+      "floor_removed_from_direct_OR": {
+        "TP": 189,
+        "FP": 128
+      },
+      "D_UDP_FP_original_PLE": 65,
+      "D_UDP_FP_candidate": 3
+    },
+    "tabm_ple_s29": {
+      "gates": {
+        "all_15_cells_qualified": true,
+        "B_72": true,
+        "base_TP_identities_retained": true,
+        "all_qualified_reference_cells_TP_protected": false,
+        "strict_D_gain_over_base": false
+      },
+      "passed": false,
+      "regions": {
+        "B": {
+          "base": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 12,
+            "tp": 66,
+            "fn": 6,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "increment": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 0,
+            "tp": 6,
+            "fn": 66,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "candidate": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 12,
+            "tp": 72,
+            "fn": 0,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "direct": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 53,
+            "tp": 72,
+            "fn": 0,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "qualified_cells": 3
+        },
+        "D": {
+          "base": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 15,
+            "tp": 1694,
+            "fn": 270,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "increment": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 3,
+            "tp": 0,
+            "fn": 1964,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "candidate": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 18,
+            "tp": 1694,
+            "fn": 270,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "direct": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 99,
+            "tp": 1876,
+            "fn": 88,
+            "fp_budget": 95,
+            "qualified": false
+          },
+          "qualified_cells": 12
+        }
+      },
+      "reference_regressions": [
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i30_j30",
+          "reference_qualified": true,
+          "reference_tp": 421,
+          "candidate_tp": 411,
+          "tp_difference": -10,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i30_j70",
+          "reference_qualified": true,
+          "reference_tp": 365,
+          "candidate_tp": 349,
+          "tp_difference": -16,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j0",
+          "reference_qualified": true,
+          "reference_tp": 125,
+          "candidate_tp": 121,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j30",
+          "reference_qualified": true,
+          "reference_tp": 109,
+          "candidate_tp": 105,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j70",
+          "reference_qualified": true,
+          "reference_tp": 95,
+          "candidate_tp": 84,
+          "tp_difference": -11,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 33,
+          "candidate_tp": 30,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 34,
+          "candidate_tp": 30,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 34,
+          "candidate_tp": 30,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i1800_j70",
+          "reference_qualified": true,
+          "reference_tp": 27,
+          "candidate_tp": 25,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 21,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "tabm_ple_s29",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 21,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s29",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        }
+      ],
+      "base_TP_identities_lost": 0,
+      "base_alerts_lost": 0,
+      "floor_removed_from_direct_OR": {
+        "TP": 182,
+        "FP": 122
+      },
+      "D_UDP_FP_original_PLE": 74,
+      "D_UDP_FP_candidate": 3
+    },
+    "tabm_ple_s43": {
+      "gates": {
+        "all_15_cells_qualified": true,
+        "B_72": true,
+        "base_TP_identities_retained": true,
+        "all_qualified_reference_cells_TP_protected": false,
+        "strict_D_gain_over_base": false
+      },
+      "passed": false,
+      "regions": {
+        "B": {
+          "base": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 12,
+            "tp": 66,
+            "fn": 6,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "increment": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 0,
+            "tp": 6,
+            "fn": 66,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "candidate": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 12,
+            "tp": 72,
+            "fn": 0,
+            "fp_budget": 54,
+            "qualified": true
+          },
+          "direct": {
+            "normal": 5459,
+            "positive": 72,
+            "fp": 55,
+            "tp": 72,
+            "fn": 0,
+            "fp_budget": 54,
+            "qualified": false
+          },
+          "qualified_cells": 3
+        },
+        "D": {
+          "base": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 15,
+            "tp": 1694,
+            "fn": 270,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "increment": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 3,
+            "tp": 0,
+            "fn": 1964,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "candidate": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 18,
+            "tp": 1694,
+            "fn": 270,
+            "fp_budget": 95,
+            "qualified": true
+          },
+          "direct": {
+            "normal": 9564,
+            "positive": 1964,
+            "fp": 98,
+            "tp": 1894,
+            "fn": 70,
+            "fp_budget": 95,
+            "qualified": false
+          },
+          "qualified_cells": 12
+        }
+      },
+      "reference_regressions": [
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i30_j30",
+          "reference_qualified": true,
+          "reference_tp": 421,
+          "candidate_tp": 411,
+          "tp_difference": -10,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i30_j70",
+          "reference_qualified": true,
+          "reference_tp": 365,
+          "candidate_tp": 349,
+          "tp_difference": -16,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j0",
+          "reference_qualified": true,
+          "reference_tp": 125,
+          "candidate_tp": 121,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j30",
+          "reference_qualified": true,
+          "reference_tp": 109,
+          "candidate_tp": 105,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i300_j70",
+          "reference_qualified": true,
+          "reference_tp": 95,
+          "candidate_tp": 84,
+          "tp_difference": -11,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "tabm_ple_s43",
+          "source_id": "TQH-D_i300_j70",
+          "reference_qualified": true,
+          "reference_tp": 89,
+          "candidate_tp": 84,
+          "tp_difference": -5,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 33,
+          "candidate_tp": 30,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 34,
+          "candidate_tp": 30,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i1800_j30",
+          "reference_qualified": true,
+          "reference_tp": 34,
+          "candidate_tp": 30,
+          "tp_difference": -4,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i1800_j70",
+          "reference_qualified": true,
+          "reference_tp": 27,
+          "candidate_tp": 25,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "tabm_ple_s43",
+          "source_id": "TQH-D_i1800_j70",
+          "reference_qualified": true,
+          "reference_tp": 26,
+          "candidate_tp": 25,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "tabm_ple_s43",
+          "source_id": "TQH-D_i3600_j0",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 23,
+          "tp_difference": -1,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 21,
+          "tp_difference": -2,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "tabm_ple_s43",
+          "source_id": "TQH-D_i3600_j30",
+          "reference_qualified": true,
+          "reference_tp": 24,
+          "candidate_tp": 21,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp17",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp29",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "r26_target_mlp43",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        },
+        {
+          "model": "tabm_ple_s43",
+          "reference": "tabm_ple_s43",
+          "source_id": "TQH-D_i3600_j70",
+          "reference_qualified": true,
+          "reference_tp": 23,
+          "candidate_tp": 20,
+          "tp_difference": -3,
+          "protected_TP_regression": true
+        }
+      ],
+      "base_TP_identities_lost": 0,
+      "base_alerts_lost": 0,
+      "floor_removed_from_direct_OR": {
+        "TP": 200,
+        "FP": 123
+      },
+      "D_UDP_FP_original_PLE": 63,
+      "D_UDP_FP_candidate": 3
+    }
+  },
+  "C_descriptive_only": {
+    "tabm_ple_s17": {
+      "normal": 5511,
+      "base_fp": 0,
+      "original_PLE_fp": 54,
+      "increment_fp": 0,
+      "combined_fp": 0,
+      "recalibration": false
+    },
+    "tabm_ple_s29": {
+      "normal": 5511,
+      "base_fp": 0,
+      "original_PLE_fp": 54,
+      "increment_fp": 0,
+      "combined_fp": 0,
+      "recalibration": false
+    },
+    "tabm_ple_s43": {
+      "normal": 5511,
+      "base_fp": 0,
+      "original_PLE_fp": 54,
+      "increment_fp": 0,
+      "combined_fp": 0,
+      "recalibration": false
+    }
+  },
+  "registered_version": "retained-increment-cached-audit-v1",
+  "registration_sha256_lf": "63cfc4eb0c323947203eb17102fd2db3f77bfacca8a389138eb39698bc82cd67",
+  "execution": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "model_forwards": 0,
+    "new_model_scores": 0,
+    "threshold_searches": 0,
+    "recalibrations": 0,
+    "new_cached_policy_evaluations": 3
+  },
+  "scope": "already-opened development caches; not independent confirmation",
+  "runtime": {
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2"
+  },
+  "created_utc": "2026-11-17T10:40:28.049357+00:00"
+}
