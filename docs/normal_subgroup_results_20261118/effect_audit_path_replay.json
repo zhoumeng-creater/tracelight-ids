@@ -1,0 +1,18 @@
+{
+  "status": "path_arguments_replayed_on_original_inputs",
+  "thesis_root": "E:\\OneDrive - Coventry University\\中传\\毕业论文",
+  "output": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\正常子群结果分析_20261118",
+  "scientific_json_unchanged": true,
+  "json_only_change": "audit_script_sha256",
+  "previous_script_sha256": "a31109ef96204c08293e989dfe0d273421982cfb6a1f5dee571fe4f46e3ed71b",
+  "current_script_sha256": "0724ffcb8dba523b9689f27ee6f15072418c452ecd94c0bfb588d1b97d4e29a3",
+  "csv_bytes_unchanged": {
+    "effect_audit.csv": true,
+    "effect_audit_protocol_family.csv": true,
+    "effect_audit_fp_identities.csv": true,
+    "effect_audit_cross_seed_fp.csv": true
+  },
+  "new_model_loads": 0,
+  "new_model_forwards": 0,
+  "new_fits": 0
+}

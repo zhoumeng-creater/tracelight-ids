@@ -1,0 +1,35 @@
+{
+  "outer_zip": "TraceLight-ALL-2026-11-18b.zip",
+  "outer_sha256": "362465c947d46d0b327f3b52222f71dd031f6008b697fde3fdc4f4a418ee2b3c",
+  "selected_members": {
+    "NORMAL-SUBGROUP-PREFLIGHT-2026-11-18.md": {
+      "bytes": 6869,
+      "sha256": "5a77361fb1196f64d498f4a3ab42975997c2fbfdf1fd1fff88737ceb747be185"
+    },
+    "normal-subgroup-r31-v1-results.zip": {
+      "bytes": 76726244,
+      "sha256": "8c90b6dd8f5eba4585fa8bdec15b7da95a05cfba959e5d93926389a805d4a70c",
+      "sidecar_sha256": "8c90b6dd8f5eba4585fa8bdec15b7da95a05cfba959e5d93926389a805d4a70c",
+      "sidecar_match": true
+    },
+    "normal-subgroup-r31-v1-results.zip.sha256": {
+      "bytes": 102,
+      "sha256": "aef5cf9fe560be3c3bb16398a4bad814f9b68c639fdc50e69fe8a5fac3cffc1d"
+    },
+    "NORMAL-SUBGROUP-RESULTS-2026-11-18.md": {
+      "bytes": 7842,
+      "sha256": "b2c50fcd3402be01750c78d3c1898351328f1e8790aabf044bb479f6c46a21a4"
+    },
+    "normal-subgroup-zero-update-r31-results.zip": {
+      "bytes": 2987559,
+      "sha256": "8e2b3fc63041ef9906ff0fe1f868db54f9e14eedf6d599ac90c0c6887c82d2eb",
+      "sidecar_sha256": "8e2b3fc63041ef9906ff0fe1f868db54f9e14eedf6d599ac90c0c6887c82d2eb",
+      "sidecar_match": true
+    },
+    "normal-subgroup-zero-update-r31-results.zip.sha256": {
+      "bytes": 111,
+      "sha256": "4b60ae04c28f660fe73f6f7d0bd496da279449001a691ba0a8c9ed756ffe59ed"
+    }
+  },
+  "sidecar_formats": "Both hash-first and filename-first SHA files parsed; both inner archives match"
+}

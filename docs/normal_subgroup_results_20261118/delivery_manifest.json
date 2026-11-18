@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-18",
+  "kind": "offline_R31_results_review",
+  "hash_scope": "exact_file_bytes_Git_text_conversion_disabled_for_evidence_directory",
+  "files": {
+    "docs/normal_subgroup_results_20261118/.gitattributes": {
+      "bytes": 146,
+      "sha256": "ff1fa246ae57233eceb420b40c4d1cc12f94b86ffd6321573daa8f42ce973a88"
+    },
+    "docs/normal_subgroup_results_20261118/audit_design_interpretation.py": {
+      "bytes": 11511,
+      "sha256": "789094549c6f898169282d5be990d4b117e6a34e3d984e1a90c1b79a1741a390"
+    },
+    "docs/normal_subgroup_results_20261118/design_interpretation.json": {
+      "bytes": 330969,
+      "sha256": "b97ded20254b5044f2d07a2a4aedb999d3d20ed09b8a56fd108e4a9070283f19"
+    },
+    "docs/normal_subgroup_results_20261118/design_interpretation.md": {
+      "bytes": 13170,
+      "sha256": "c0a82c1accf6e62b8cdbb6346865c7a8a4e48fe65fa9a87387891de7bff7c1dc"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit.csv": {
+      "bytes": 7818,
+      "sha256": "f49615121360081a8c3fae6fdbf16e1f6504d52010d37988fd60310fc7301095"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit.json": {
+      "bytes": 58219,
+      "sha256": "da746b9a6c7927c859262f2137f8f378efa0b740f40f1344c048a233ff51db07"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit.md": {
+      "bytes": 6354,
+      "sha256": "14c5647cc4d7acf057c806c8b4292ddfbfb629c11b4ea63d0cbc0a468caf3ab9"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit.py": {
+      "bytes": 21635,
+      "sha256": "0724ffcb8dba523b9689f27ee6f15072418c452ecd94c0bfb588d1b97d4e29a3"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit_cross_seed_fp.csv": {
+      "bytes": 30126,
+      "sha256": "1abedf4797941becbfb8f8eb0d37089b3bee9dbb666a10f4dbe6fc058bebf552"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit_fp_identities.csv": {
+      "bytes": 160204,
+      "sha256": "3f5d2bb13c44e627cbc517a4f41e844c3181c366e70c1aa8fa8955c20dac9e34"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit_path_replay.json": {
+      "bytes": 807,
+      "sha256": "e40657db90d547356968c21c6b7887f832336c7302b8b3fa0ed7faaea36b6fb7"
+    },
+    "docs/normal_subgroup_results_20261118/effect_audit_protocol_family.csv": {
+      "bytes": 8607,
+      "sha256": "1cd90aa3dbd5d15abe62405e060c61b05ec9d45642ae91acad7363d70d96a4ea"
+    },
+    "docs/normal_subgroup_results_20261118/integrity_cost_audit.json": {
+      "bytes": 7444,
+      "sha256": "5fca8241da274e2481282f67d2dd300eaefb0402291e192323e68e110562a7d8"
+    },
+    "docs/normal_subgroup_results_20261118/plot_trajectory_summary.py": {
+      "bytes": 4966,
+      "sha256": "c508cf8be1aa243c28ae8b1daf8717410311bfa334ab55777caa1b754cfeb578"
+    },
+    "docs/normal_subgroup_results_20261118/README.md": {
+      "bytes": 2644,
+      "sha256": "a04a1da03aa36c46a91990da40dbffad2ec97f0187a526472021d01446cdf47b"
+    },
+    "docs/normal_subgroup_results_20261118/source_receipt.json": {
+      "bytes": 1521,
+      "sha256": "6727ecfcd19d3e7d03f01b423c7c5da323f00ee916985ac566c6de9d6f04ce72"
+    },
+    "docs/normal_subgroup_results_20261118/training_audit.json": {
+      "bytes": 1270467,
+      "sha256": "1e65aef51d9fe105743a7abf3411dd83b0d14eeb9202f62a792e594cf581833c"
+    },
+    "docs/normal_subgroup_results_20261118/training_audit.md": {
+      "bytes": 14281,
+      "sha256": "08bf118484f7f1fd0fd41af3537ad322fa4934331d66f1703ff65779fb3b1bfe"
+    },
+    "docs/normal_subgroup_results_20261118/training_audit.py": {
+      "bytes": 25906,
+      "sha256": "dcfd8fd0f7b33bef1a9221e9a7fd83465d14c29f588efde0901dbde02e2abcff"
+    },
+    "docs/normal_subgroup_results_20261118/trajectory_summary.png": {
+      "bytes": 326114,
+      "sha256": "bac365260e45b923280a714c4aad7222f83e32782bc3c25f5e7fd44b54e7b1e4"
+    },
+    "docs/NORMAL_SUBGROUP_RESULTS_20261118.md": {
+      "bytes": 13400,
+      "sha256": "cf6c05be3da0dc7438b42f29700081541cbe39e2978c71cc030818d456124aa3"
+    },
+    "configs/normal-subgroup-results-20261118/outcome.json": {
+      "bytes": 2405,
+      "sha256": "245c80a52f84c90902e08845d56379745a06ef59f488575f8c67d5834e25be69"
+    }
+  },
+  "checks": {
+    "report_relative_links": true,
+    "json_parsing": true,
+    "ruff": true,
+    "independent_report_review": true,
+    "analysis_new_model_forwards": 0,
+    "analysis_new_fits": 0
+  }
+}

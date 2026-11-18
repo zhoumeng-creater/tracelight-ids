@@ -1,0 +1,1621 @@
+{
+  "status": "cached_effect_independently_verified",
+  "new_model_loads": 0,
+  "new_model_forwards": 0,
+  "new_fits": 0,
+  "new_threshold_searches": 0,
+  "fixed_calibration_recomputation_only": true,
+  "new_E_metadata_equals_original_E": true,
+  "models": {
+    "transport_target_s17": {
+      "model_bytes_equal_R30": true,
+      "model_sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f",
+      "selected_step": 0,
+      "C_score_comparison_R30": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_score_comparison_R30": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_decision_mismatch_R30": 0,
+      "calibration": {
+        "normal_n": 5511,
+        "rank": 5457,
+        "threshold": -14.374647069217621,
+        "R30_threshold": -14.374647069217621,
+        "C_FP": 54,
+        "strict_decision_mismatch_n": 0
+      },
+      "total": {
+        "normal_n": 15023,
+        "attack_n": 2036,
+        "fp": 154,
+        "tp": 2036,
+        "fn": 0,
+        "pooled_floor_diagnostic_not_adoption_budget": 150,
+        "cell_budget_sum": 143
+      },
+      "roles": {
+        "E_B": {
+          "normal_n": 5459,
+          "attack_n": 72,
+          "fp": 55,
+          "tp": 72,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 54,
+          "cell_budget_sum": 54
+        },
+        "E_D": {
+          "normal_n": 9564,
+          "attack_n": 1964,
+          "fp": 99,
+          "tp": 1964,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 95,
+          "cell_budget_sum": 89
+        }
+      },
+      "qualified_cells": 8,
+      "excess_X": 25,
+      "R30_TP_lost": 0,
+      "R30_TP_added": 0,
+      "R30_FP_added": 0,
+      "R30_FP_removed": 0,
+      "selected_FV_reference_bitdiff": {
+        "F": {
+          "rows": 19904,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        },
+        "V": {
+          "rows": 21450,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        }
+      },
+      "selected_equals_baseline_metrics": true,
+      "recomputed_V_tails": {
+        "pooled": {
+          "H": {
+            "numerator": 3464,
+            "denominator": 5435,
+            "value": 0.6373505059797608
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 3464,
+              "denominator": 5435,
+              "value": 0.6373505059797608
+            },
+            "0.95": {
+              "numerator": 12773,
+              "denominator": 21740,
+              "value": 0.5875344986200552
+            },
+            "0.99": {
+              "numerator": 8379,
+              "denominator": 54350,
+              "value": 0.15416743330266788
+            }
+          }
+        },
+        "A": {
+          "H": {
+            "numerator": 3617,
+            "denominator": 5435,
+            "value": 0.6655013799448022
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 3617,
+              "denominator": 5435,
+              "value": 0.6655013799448022
+            },
+            "0.95": {
+              "numerator": 3186,
+              "denominator": 5435,
+              "value": 0.5862005519779209
+            },
+            "0.99": {
+              "numerator": 3226,
+              "denominator": 27175,
+              "value": 0.11871205151793929
+            }
+          }
+        },
+        "B": {
+          "H": {
+            "numerator": 919,
+            "denominator": 3110,
+            "value": 0.2954983922829582
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 919,
+              "denominator": 3110,
+              "value": 0.2954983922829582
+            },
+            "0.95": {
+              "numerator": 1609,
+              "denominator": 6220,
+              "value": 0.25868167202572345
+            },
+            "0.99": {
+              "numerator": 3743,
+              "denominator": 31100,
+              "value": 0.12035369774919615
+            }
+          }
+        }
+      },
+      "inversions": {
+        "F_positive_inversion_increased_n": 0,
+        "F_positive_inversion_total": 0,
+        "V_positive_inversion_increased_n": 0,
+        "V_positive_inversion_total": 201
+      },
+      "panels": {
+        "A_TCP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "B_UDP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "pooled": {
+          "pauc": 0.9998068708950743,
+          "reference_pauc": 0.9998068708950743,
+          "strict_separation": false
+        }
+      },
+      "recomputed_guard_checks": {
+        "F_each_positive_inversions_not_increased": true,
+        "V_each_positive_inversions_not_increased": true,
+        "V_panel_strict_separation": true,
+        "V_pooled_pauc_not_lower": true,
+        "V_panel_pauc_not_lower": true,
+        "normal_max_tie_block_not_increased": true,
+        "normal_tied_pairs_not_increased": true,
+        "each_H_q_not_increased": true,
+        "each_source_H_q_not_increased": true
+      }
+    },
+    "identity_target_s17": {
+      "model_bytes_equal_R30": true,
+      "model_sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f",
+      "selected_step": 0,
+      "C_score_comparison_R30": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_score_comparison_R30": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_decision_mismatch_R30": 0,
+      "calibration": {
+        "normal_n": 5511,
+        "rank": 5457,
+        "threshold": -14.374647069217621,
+        "R30_threshold": -14.374647069217621,
+        "C_FP": 54,
+        "strict_decision_mismatch_n": 0
+      },
+      "total": {
+        "normal_n": 15023,
+        "attack_n": 2036,
+        "fp": 154,
+        "tp": 2036,
+        "fn": 0,
+        "pooled_floor_diagnostic_not_adoption_budget": 150,
+        "cell_budget_sum": 143
+      },
+      "roles": {
+        "E_B": {
+          "normal_n": 5459,
+          "attack_n": 72,
+          "fp": 55,
+          "tp": 72,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 54,
+          "cell_budget_sum": 54
+        },
+        "E_D": {
+          "normal_n": 9564,
+          "attack_n": 1964,
+          "fp": 99,
+          "tp": 1964,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 95,
+          "cell_budget_sum": 89
+        }
+      },
+      "qualified_cells": 8,
+      "excess_X": 25,
+      "R30_TP_lost": 0,
+      "R30_TP_added": 0,
+      "R30_FP_added": 0,
+      "R30_FP_removed": 0,
+      "selected_FV_reference_bitdiff": {
+        "F": {
+          "rows": 19904,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        },
+        "V": {
+          "rows": 21450,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        }
+      },
+      "selected_equals_baseline_metrics": true,
+      "recomputed_V_tails": {
+        "pooled": {
+          "H": {
+            "numerator": 3464,
+            "denominator": 5435,
+            "value": 0.6373505059797608
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 3464,
+              "denominator": 5435,
+              "value": 0.6373505059797608
+            },
+            "0.95": {
+              "numerator": 12773,
+              "denominator": 21740,
+              "value": 0.5875344986200552
+            },
+            "0.99": {
+              "numerator": 8379,
+              "denominator": 54350,
+              "value": 0.15416743330266788
+            }
+          }
+        },
+        "A": {
+          "H": {
+            "numerator": 3617,
+            "denominator": 5435,
+            "value": 0.6655013799448022
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 3617,
+              "denominator": 5435,
+              "value": 0.6655013799448022
+            },
+            "0.95": {
+              "numerator": 3186,
+              "denominator": 5435,
+              "value": 0.5862005519779209
+            },
+            "0.99": {
+              "numerator": 3226,
+              "denominator": 27175,
+              "value": 0.11871205151793929
+            }
+          }
+        },
+        "B": {
+          "H": {
+            "numerator": 919,
+            "denominator": 3110,
+            "value": 0.2954983922829582
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 919,
+              "denominator": 3110,
+              "value": 0.2954983922829582
+            },
+            "0.95": {
+              "numerator": 1609,
+              "denominator": 6220,
+              "value": 0.25868167202572345
+            },
+            "0.99": {
+              "numerator": 3743,
+              "denominator": 31100,
+              "value": 0.12035369774919615
+            }
+          }
+        }
+      },
+      "inversions": {
+        "F_positive_inversion_increased_n": 0,
+        "F_positive_inversion_total": 0,
+        "V_positive_inversion_increased_n": 0,
+        "V_positive_inversion_total": 201
+      },
+      "panels": {
+        "A_TCP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "B_UDP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "pooled": {
+          "pauc": 0.9998068708950743,
+          "reference_pauc": 0.9998068708950743,
+          "strict_separation": false
+        }
+      },
+      "recomputed_guard_checks": {
+        "F_each_positive_inversions_not_increased": true,
+        "V_each_positive_inversions_not_increased": true,
+        "V_panel_strict_separation": true,
+        "V_pooled_pauc_not_lower": true,
+        "V_panel_pauc_not_lower": true,
+        "normal_max_tie_block_not_increased": true,
+        "normal_tied_pairs_not_increased": true,
+        "each_H_q_not_increased": true,
+        "each_source_H_q_not_increased": true
+      }
+    },
+    "transport_target_s29": {
+      "model_bytes_equal_R30": true,
+      "model_sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5",
+      "selected_step": 0,
+      "C_score_comparison_R30": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_score_comparison_R30": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_decision_mismatch_R30": 0,
+      "calibration": {
+        "normal_n": 5511,
+        "rank": 5457,
+        "threshold": -12.541033514868264,
+        "R30_threshold": -12.541033514868264,
+        "C_FP": 54,
+        "strict_decision_mismatch_n": 0
+      },
+      "total": {
+        "normal_n": 15023,
+        "attack_n": 2036,
+        "fp": 175,
+        "tp": 2036,
+        "fn": 0,
+        "pooled_floor_diagnostic_not_adoption_budget": 150,
+        "cell_budget_sum": 143
+      },
+      "roles": {
+        "E_B": {
+          "normal_n": 5459,
+          "attack_n": 72,
+          "fp": 65,
+          "tp": 72,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 54,
+          "cell_budget_sum": 54
+        },
+        "E_D": {
+          "normal_n": 9564,
+          "attack_n": 1964,
+          "fp": 110,
+          "tp": 1964,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 95,
+          "cell_budget_sum": 89
+        }
+      },
+      "qualified_cells": 5,
+      "excess_X": 37,
+      "R30_TP_lost": 0,
+      "R30_TP_added": 0,
+      "R30_FP_added": 0,
+      "R30_FP_removed": 0,
+      "selected_FV_reference_bitdiff": {
+        "F": {
+          "rows": 19904,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        },
+        "V": {
+          "rows": 21450,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        }
+      },
+      "selected_equals_baseline_metrics": true,
+      "recomputed_V_tails": {
+        "pooled": {
+          "H": {
+            "numerator": 7703,
+            "denominator": 10870,
+            "value": 0.7086476540938362
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 7703,
+              "denominator": 10870,
+              "value": 0.7086476540938362
+            },
+            "0.95": {
+              "numerator": 12793,
+              "denominator": 21740,
+              "value": 0.5884544618215272
+            },
+            "0.99": {
+              "numerator": 8529,
+              "denominator": 54350,
+              "value": 0.15692732290708372
+            }
+          }
+        },
+        "A": {
+          "H": {
+            "numerator": 7723,
+            "denominator": 10870,
+            "value": 0.7104875804967802
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 7723,
+              "denominator": 10870,
+              "value": 0.7104875804967802
+            },
+            "0.95": {
+              "numerator": 12333,
+              "denominator": 21740,
+              "value": 0.5672953081876725
+            },
+            "0.99": {
+              "numerator": 3176,
+              "denominator": 27175,
+              "value": 0.1168721251149954
+            }
+          }
+        },
+        "B": {
+          "H": {
+            "numerator": 1309,
+            "denominator": 3110,
+            "value": 0.42090032154340834
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 1309,
+              "denominator": 3110,
+              "value": 0.42090032154340834
+            },
+            "0.95": {
+              "numerator": 2403,
+              "denominator": 6220,
+              "value": 0.3863344051446945
+            },
+            "0.99": {
+              "numerator": 3043,
+              "denominator": 31100,
+              "value": 0.09784565916398714
+            }
+          }
+        }
+      },
+      "inversions": {
+        "F_positive_inversion_increased_n": 0,
+        "F_positive_inversion_total": 0,
+        "V_positive_inversion_increased_n": 0,
+        "V_positive_inversion_total": 472
+      },
+      "panels": {
+        "A_TCP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "B_UDP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "pooled": {
+          "pauc": 0.9995464828978857,
+          "reference_pauc": 0.9995464828978857,
+          "strict_separation": false
+        }
+      },
+      "recomputed_guard_checks": {
+        "F_each_positive_inversions_not_increased": true,
+        "V_each_positive_inversions_not_increased": true,
+        "V_panel_strict_separation": true,
+        "V_pooled_pauc_not_lower": true,
+        "V_panel_pauc_not_lower": true,
+        "normal_max_tie_block_not_increased": true,
+        "normal_tied_pairs_not_increased": true,
+        "each_H_q_not_increased": true,
+        "each_source_H_q_not_increased": true
+      }
+    },
+    "identity_target_s29": {
+      "model_bytes_equal_R30": true,
+      "model_sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5",
+      "selected_step": 0,
+      "C_score_comparison_R30": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_score_comparison_R30": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_decision_mismatch_R30": 0,
+      "calibration": {
+        "normal_n": 5511,
+        "rank": 5457,
+        "threshold": -12.541033514868264,
+        "R30_threshold": -12.541033514868264,
+        "C_FP": 54,
+        "strict_decision_mismatch_n": 0
+      },
+      "total": {
+        "normal_n": 15023,
+        "attack_n": 2036,
+        "fp": 175,
+        "tp": 2036,
+        "fn": 0,
+        "pooled_floor_diagnostic_not_adoption_budget": 150,
+        "cell_budget_sum": 143
+      },
+      "roles": {
+        "E_B": {
+          "normal_n": 5459,
+          "attack_n": 72,
+          "fp": 65,
+          "tp": 72,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 54,
+          "cell_budget_sum": 54
+        },
+        "E_D": {
+          "normal_n": 9564,
+          "attack_n": 1964,
+          "fp": 110,
+          "tp": 1964,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 95,
+          "cell_budget_sum": 89
+        }
+      },
+      "qualified_cells": 5,
+      "excess_X": 37,
+      "R30_TP_lost": 0,
+      "R30_TP_added": 0,
+      "R30_FP_added": 0,
+      "R30_FP_removed": 0,
+      "selected_FV_reference_bitdiff": {
+        "F": {
+          "rows": 19904,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        },
+        "V": {
+          "rows": 21450,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        }
+      },
+      "selected_equals_baseline_metrics": true,
+      "recomputed_V_tails": {
+        "pooled": {
+          "H": {
+            "numerator": 7703,
+            "denominator": 10870,
+            "value": 0.7086476540938362
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 7703,
+              "denominator": 10870,
+              "value": 0.7086476540938362
+            },
+            "0.95": {
+              "numerator": 12793,
+              "denominator": 21740,
+              "value": 0.5884544618215272
+            },
+            "0.99": {
+              "numerator": 8529,
+              "denominator": 54350,
+              "value": 0.15692732290708372
+            }
+          }
+        },
+        "A": {
+          "H": {
+            "numerator": 7723,
+            "denominator": 10870,
+            "value": 0.7104875804967802
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 7723,
+              "denominator": 10870,
+              "value": 0.7104875804967802
+            },
+            "0.95": {
+              "numerator": 12333,
+              "denominator": 21740,
+              "value": 0.5672953081876725
+            },
+            "0.99": {
+              "numerator": 3176,
+              "denominator": 27175,
+              "value": 0.1168721251149954
+            }
+          }
+        },
+        "B": {
+          "H": {
+            "numerator": 1309,
+            "denominator": 3110,
+            "value": 0.42090032154340834
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 1309,
+              "denominator": 3110,
+              "value": 0.42090032154340834
+            },
+            "0.95": {
+              "numerator": 2403,
+              "denominator": 6220,
+              "value": 0.3863344051446945
+            },
+            "0.99": {
+              "numerator": 3043,
+              "denominator": 31100,
+              "value": 0.09784565916398714
+            }
+          }
+        }
+      },
+      "inversions": {
+        "F_positive_inversion_increased_n": 0,
+        "F_positive_inversion_total": 0,
+        "V_positive_inversion_increased_n": 0,
+        "V_positive_inversion_total": 472
+      },
+      "panels": {
+        "A_TCP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "B_UDP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "pooled": {
+          "pauc": 0.9995464828978857,
+          "reference_pauc": 0.9995464828978857,
+          "strict_separation": false
+        }
+      },
+      "recomputed_guard_checks": {
+        "F_each_positive_inversions_not_increased": true,
+        "V_each_positive_inversions_not_increased": true,
+        "V_panel_strict_separation": true,
+        "V_pooled_pauc_not_lower": true,
+        "V_panel_pauc_not_lower": true,
+        "normal_max_tie_block_not_increased": true,
+        "normal_tied_pairs_not_increased": true,
+        "each_H_q_not_increased": true,
+        "each_source_H_q_not_increased": true
+      }
+    },
+    "transport_target_s43": {
+      "model_bytes_equal_R30": true,
+      "model_sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3",
+      "selected_step": 0,
+      "C_score_comparison_R30": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_score_comparison_R30": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_decision_mismatch_R30": 0,
+      "calibration": {
+        "normal_n": 5511,
+        "rank": 5457,
+        "threshold": -12.252098655671222,
+        "R30_threshold": -12.252098655671222,
+        "C_FP": 54,
+        "strict_decision_mismatch_n": 0
+      },
+      "total": {
+        "normal_n": 15023,
+        "attack_n": 2036,
+        "fp": 202,
+        "tp": 2036,
+        "fn": 0,
+        "pooled_floor_diagnostic_not_adoption_budget": 150,
+        "cell_budget_sum": 143
+      },
+      "roles": {
+        "E_B": {
+          "normal_n": 5459,
+          "attack_n": 72,
+          "fp": 65,
+          "tp": 72,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 54,
+          "cell_budget_sum": 54
+        },
+        "E_D": {
+          "normal_n": 9564,
+          "attack_n": 1964,
+          "fp": 137,
+          "tp": 1964,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 95,
+          "cell_budget_sum": 89
+        }
+      },
+      "qualified_cells": 4,
+      "excess_X": 66,
+      "R30_TP_lost": 0,
+      "R30_TP_added": 0,
+      "R30_FP_added": 0,
+      "R30_FP_removed": 0,
+      "selected_FV_reference_bitdiff": {
+        "F": {
+          "rows": 19904,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        },
+        "V": {
+          "rows": 21450,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        }
+      },
+      "selected_equals_baseline_metrics": true,
+      "recomputed_V_tails": {
+        "pooled": {
+          "H": {
+            "numerator": 497,
+            "denominator": 750,
+            "value": 0.6626666666666666
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 497,
+              "denominator": 750,
+              "value": 0.6626666666666666
+            },
+            "0.95": {
+              "numerator": 10653,
+              "denominator": 21740,
+              "value": 0.49001839926402946
+            },
+            "0.99": {
+              "numerator": 5879,
+              "denominator": 54350,
+              "value": 0.10816927322907084
+            }
+          }
+        },
+        "A": {
+          "H": {
+            "numerator": 5933,
+            "denominator": 10870,
+            "value": 0.5458141674333027
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 5933,
+              "denominator": 10870,
+              "value": 0.5458141674333027
+            },
+            "0.95": {
+              "numerator": 10653,
+              "denominator": 21740,
+              "value": 0.49001839926402946
+            },
+            "0.99": {
+              "numerator": 2901,
+              "denominator": 27175,
+              "value": 0.10675252989880404
+            }
+          }
+        },
+        "B": {
+          "H": {
+            "numerator": 2249,
+            "denominator": 3750,
+            "value": 0.5997333333333333
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 2249,
+              "denominator": 3750,
+              "value": 0.5997333333333333
+            },
+            "0.95": {
+              "numerator": 1979,
+              "denominator": 7500,
+              "value": 0.2638666666666667
+            },
+            "0.99": {
+              "numerator": 2789,
+              "denominator": 31100,
+              "value": 0.08967845659163987
+            }
+          }
+        }
+      },
+      "inversions": {
+        "F_positive_inversion_increased_n": 0,
+        "F_positive_inversion_total": 0,
+        "V_positive_inversion_increased_n": 0,
+        "V_positive_inversion_total": 259
+      },
+      "panels": {
+        "A_TCP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "B_UDP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "pooled": {
+          "pauc": 0.999751142098628,
+          "reference_pauc": 0.999751142098628,
+          "strict_separation": false
+        }
+      },
+      "recomputed_guard_checks": {
+        "F_each_positive_inversions_not_increased": true,
+        "V_each_positive_inversions_not_increased": true,
+        "V_panel_strict_separation": true,
+        "V_pooled_pauc_not_lower": true,
+        "V_panel_pauc_not_lower": true,
+        "normal_max_tie_block_not_increased": true,
+        "normal_tied_pairs_not_increased": true,
+        "each_H_q_not_increased": true,
+        "each_source_H_q_not_increased": true
+      }
+    },
+    "identity_target_s43": {
+      "model_bytes_equal_R30": true,
+      "model_sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3",
+      "selected_step": 0,
+      "C_score_comparison_R30": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_score_comparison_R30": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "E_decision_mismatch_R30": 0,
+      "calibration": {
+        "normal_n": 5511,
+        "rank": 5457,
+        "threshold": -12.252098655671222,
+        "R30_threshold": -12.252098655671222,
+        "C_FP": 54,
+        "strict_decision_mismatch_n": 0
+      },
+      "total": {
+        "normal_n": 15023,
+        "attack_n": 2036,
+        "fp": 202,
+        "tp": 2036,
+        "fn": 0,
+        "pooled_floor_diagnostic_not_adoption_budget": 150,
+        "cell_budget_sum": 143
+      },
+      "roles": {
+        "E_B": {
+          "normal_n": 5459,
+          "attack_n": 72,
+          "fp": 65,
+          "tp": 72,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 54,
+          "cell_budget_sum": 54
+        },
+        "E_D": {
+          "normal_n": 9564,
+          "attack_n": 1964,
+          "fp": 137,
+          "tp": 1964,
+          "fn": 0,
+          "pooled_floor_diagnostic_not_adoption_budget": 95,
+          "cell_budget_sum": 89
+        }
+      },
+      "qualified_cells": 4,
+      "excess_X": 66,
+      "R30_TP_lost": 0,
+      "R30_TP_added": 0,
+      "R30_FP_added": 0,
+      "R30_FP_removed": 0,
+      "selected_FV_reference_bitdiff": {
+        "F": {
+          "rows": 19904,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        },
+        "V": {
+          "rows": 21450,
+          "bitwise_mismatch_n": 0,
+          "numeric_mismatch_n": 0,
+          "max_absolute_difference": 0.0,
+          "median_absolute_difference": 0.0
+        }
+      },
+      "selected_equals_baseline_metrics": true,
+      "recomputed_V_tails": {
+        "pooled": {
+          "H": {
+            "numerator": 497,
+            "denominator": 750,
+            "value": 0.6626666666666666
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 497,
+              "denominator": 750,
+              "value": 0.6626666666666666
+            },
+            "0.95": {
+              "numerator": 10653,
+              "denominator": 21740,
+              "value": 0.49001839926402946
+            },
+            "0.99": {
+              "numerator": 5879,
+              "denominator": 54350,
+              "value": 0.10816927322907084
+            }
+          }
+        },
+        "A": {
+          "H": {
+            "numerator": 5933,
+            "denominator": 10870,
+            "value": 0.5458141674333027
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 5933,
+              "denominator": 10870,
+              "value": 0.5458141674333027
+            },
+            "0.95": {
+              "numerator": 10653,
+              "denominator": 21740,
+              "value": 0.49001839926402946
+            },
+            "0.99": {
+              "numerator": 2901,
+              "denominator": 27175,
+              "value": 0.10675252989880404
+            }
+          }
+        },
+        "B": {
+          "H": {
+            "numerator": 2249,
+            "denominator": 3750,
+            "value": 0.5997333333333333
+          },
+          "H_q": {
+            "0.90": {
+              "numerator": 2249,
+              "denominator": 3750,
+              "value": 0.5997333333333333
+            },
+            "0.95": {
+              "numerator": 1979,
+              "denominator": 7500,
+              "value": 0.2638666666666667
+            },
+            "0.99": {
+              "numerator": 2789,
+              "denominator": 31100,
+              "value": 0.08967845659163987
+            }
+          }
+        }
+      },
+      "inversions": {
+        "F_positive_inversion_increased_n": 0,
+        "F_positive_inversion_total": 0,
+        "V_positive_inversion_increased_n": 0,
+        "V_positive_inversion_total": 259
+      },
+      "panels": {
+        "A_TCP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "B_UDP": {
+          "pauc": 1.0,
+          "reference_pauc": 1.0,
+          "strict_separation": true
+        },
+        "pooled": {
+          "pauc": 0.999751142098628,
+          "reference_pauc": 0.999751142098628,
+          "strict_separation": false
+        }
+      },
+      "recomputed_guard_checks": {
+        "F_each_positive_inversions_not_increased": true,
+        "V_each_positive_inversions_not_increased": true,
+        "V_panel_strict_separation": true,
+        "V_pooled_pauc_not_lower": true,
+        "V_panel_pauc_not_lower": true,
+        "normal_max_tie_block_not_increased": true,
+        "normal_tied_pairs_not_increased": true,
+        "each_H_q_not_increased": true,
+        "each_source_H_q_not_increased": true
+      }
+    }
+  },
+  "seeds": {
+    "17": {
+      "checks": {
+        "nonfallback_transport": false,
+        "transport_guards_pass": true,
+        "control_guards_pass": true,
+        "H_strictly_below_R30": false,
+        "H_strictly_below_control": false,
+        "each_H_q_not_above_control": true,
+        "each_source_H_q_not_above_control": true
+      },
+      "mechanism_pass": false,
+      "X_transport": 25,
+      "X_control": 25,
+      "strict_excess_advantage": false,
+      "adoption_pass": false,
+      "identity_control_valid_development_result": false,
+      "transport_control_alert_mismatch_n": 0,
+      "transport_control_C_score_diff": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "transport_control_E_score_diff": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      }
+    },
+    "29": {
+      "checks": {
+        "nonfallback_transport": false,
+        "transport_guards_pass": true,
+        "control_guards_pass": true,
+        "H_strictly_below_R30": false,
+        "H_strictly_below_control": false,
+        "each_H_q_not_above_control": true,
+        "each_source_H_q_not_above_control": true
+      },
+      "mechanism_pass": false,
+      "X_transport": 37,
+      "X_control": 37,
+      "strict_excess_advantage": false,
+      "adoption_pass": false,
+      "identity_control_valid_development_result": false,
+      "transport_control_alert_mismatch_n": 0,
+      "transport_control_C_score_diff": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "transport_control_E_score_diff": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      }
+    },
+    "43": {
+      "checks": {
+        "nonfallback_transport": false,
+        "transport_guards_pass": true,
+        "control_guards_pass": true,
+        "H_strictly_below_R30": false,
+        "H_strictly_below_control": false,
+        "each_H_q_not_above_control": true,
+        "each_source_H_q_not_above_control": true
+      },
+      "mechanism_pass": false,
+      "X_transport": 66,
+      "X_control": 66,
+      "strict_excess_advantage": false,
+      "adoption_pass": false,
+      "identity_control_valid_development_result": false,
+      "transport_control_alert_mismatch_n": 0,
+      "transport_control_C_score_diff": {
+        "rows": 5511,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      },
+      "transport_control_E_score_diff": {
+        "rows": 17059,
+        "bitwise_mismatch_n": 0,
+        "numeric_mismatch_n": 0,
+        "max_absolute_difference": 0.0,
+        "median_absolute_difference": 0.0
+      }
+    }
+  },
+  "cross_seed_inherited_false_positives": {
+    "common_all_three": 40,
+    "union": 333,
+    "unique_by_seed": {
+      "17": 52,
+      "29": 18,
+      "43": 105
+    },
+    "pairwise_intersection": {
+      "17_29": 101,
+      "17_43": 41,
+      "29_43": 96
+    }
+  },
+  "comparison_outcome_recomputed_match": true,
+  "adoption_pass": false,
+  "retained_development_arm": "R30",
+  "control_final_output_increment": false,
+  "original_package_claim_errors_found": [],
+  "actual_adoption_cell_budget_sum": {
+    "E_B": 54,
+    "E_D": 89,
+    "all_15_cells": 143
+  },
+  "audit_script_sha256": "0724ffcb8dba523b9689f27ee6f15072418c452ecd94c0bfb588d1b97d4e29a3",
+  "interpretation": "All six final artifacts are byte-identical R30 fallbacks. Final TP/FP are inherited capability and errors, not newly learned improvements.",
+  "input_ledger": {
+    "实验归档\\20261118_正常子群训练结果\\回传\\freeze.json": {
+      "bytes": 6689,
+      "sha256": "d94175760574ffda8ab0cbf39a7932fb2c77fca43e1ca121d20181677bdb736e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\comparison.json": {
+      "bytes": 18131607,
+      "sha256": "c17997d6b05921cb6f8523e492a1549c3c0aa986548f98996a19d547df5a1b97"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\outcome.json": {
+      "bytes": 19791261,
+      "sha256": "242465ab141f6f0f293d250ca9aa8960af7ffbcdbe9612503663ae818e6324b0"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\protocol.json": {
+      "bytes": 120368,
+      "sha256": "37dbe58b033533067d6b0c0ad043a67aeded43225d2c1d19bf19a2f5055f1c04"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\freeze.json": {
+      "bytes": 2483,
+      "sha256": "df8beea04bffdbab305684f558695474c7aa5922c83d31ed52b2d7c6e6f60e30"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\E.parquet": {
+      "bytes": 2932404,
+      "sha256": "2f2539e4321835511a8f1b3c3de60bc9a1cb9f6d550dbf362de4c91c5b59b944"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\inputs\\C.parquet": {
+      "bytes": 718982,
+      "sha256": "115d176e75946a02dd0d7342a8dd29ed560041727681613c28e23a5d1a34aa04"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\inputs\\E_B.parquet": {
+      "bytes": 728025,
+      "sha256": "3fb95e282ee3eb62c0f95659de17ce0ed915e6e6c4e0f841c4f02ca297a5a025"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\inputs\\E_D.parquet": {
+      "bytes": 1528167,
+      "sha256": "75285607869bb1b72c7a6fca248280690537f02614e33d9f730aa3165122b2eb"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\inputs\\F.parquet": {
+      "bytes": 522281,
+      "sha256": "e2d0a372bf699af02ed12770ce02201c964071d26fe75dab0ed98fffb3128fae"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\inputs\\V.parquet": {
+      "bytes": 575643,
+      "sha256": "1b4d29b4691a6fef2db38f17cb18f2e12a3b93af0616e0330552fd40df0d6301"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\models\\protocol_blind_s17\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s17\\C-scores.parquet": {
+      "bytes": 67642,
+      "sha256": "6473047d6cfaf5754cb53cae1a7ceef2a3f535add3bd8207c68e03f7c110a790"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s17\\ED-scores.parquet": {
+      "bytes": 195547,
+      "sha256": "fc594813f95fab8568b8967a52f3b93dc8da9d09b788d39f138cb862d8754038"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\reports\\protocol_blind_s17-decisions.parquet": {
+      "bytes": 3100505,
+      "sha256": "aaaead238fefa27ea7cc656581d36451d033faeb79a86c73a3953bb8cfd688af"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s17\\calibration.json": {
+      "bytes": 275,
+      "sha256": "aec8a1702003dcc11212d09a4893d7e3db70ba7f177069df085ea2d21e228a8b"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\preflight\\protocol_blind_s17\\reference_scores.npz": {
+      "bytes": 308332,
+      "sha256": "38266967b49eedcbbcea1c061af64bbcc53d35e0bc35ef804494ae8acbd888da"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s17\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s17\\trajectory\\score_identities.json": {
+      "bytes": 1937238,
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s17\\trajectory\\selected_scores.npz": {
+      "bytes": 562930,
+      "sha256": "08e7d51fc59581315739a5bbdaeba556a0f450d2f9b274322362bb093e8d9c04"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s17\\trajectory\\selected_metrics.json": {
+      "bytes": 4340798,
+      "sha256": "c2dd16c1689d0974f2e2ad7a04c94cd9a8b266d667887745137118c5f4b6e03d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s17\\trajectory\\baseline_metrics.json": {
+      "bytes": 4340798,
+      "sha256": "c2dd16c1689d0974f2e2ad7a04c94cd9a8b266d667887745137118c5f4b6e03d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s17\\C-scores.parquet": {
+      "bytes": 67642,
+      "sha256": "6473047d6cfaf5754cb53cae1a7ceef2a3f535add3bd8207c68e03f7c110a790"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s17\\E-scores.parquet": {
+      "bytes": 195101,
+      "sha256": "b0710503d0f4ee1007ea0b7dca5407b1d90d5b8eca3e2c1fcdfa2bed3af88e91"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s17\\decisions.parquet": {
+      "bytes": 3100195,
+      "sha256": "9d8f4ed7f73d67bb77ccc6d53b3244ce177fb1855f4d17f2a361533454fa580b"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s17\\calibration.json": {
+      "bytes": 263,
+      "sha256": "548d066b34eeffc9c90d51ec4de156af20271b16d1ba06df38ac554450f937b4"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s17\\report.json": {
+      "bytes": 2607191,
+      "sha256": "3a32a6ecca3616a89d6a132fdd3779841daef71761bceeb75ec2c931c76c267e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s17\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s17\\trajectory\\score_identities.json": {
+      "bytes": 1937238,
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s17\\trajectory\\selected_scores.npz": {
+      "bytes": 562930,
+      "sha256": "08e7d51fc59581315739a5bbdaeba556a0f450d2f9b274322362bb093e8d9c04"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s17\\trajectory\\selected_metrics.json": {
+      "bytes": 4340798,
+      "sha256": "c2dd16c1689d0974f2e2ad7a04c94cd9a8b266d667887745137118c5f4b6e03d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s17\\trajectory\\baseline_metrics.json": {
+      "bytes": 4340798,
+      "sha256": "c2dd16c1689d0974f2e2ad7a04c94cd9a8b266d667887745137118c5f4b6e03d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s17\\C-scores.parquet": {
+      "bytes": 67642,
+      "sha256": "6473047d6cfaf5754cb53cae1a7ceef2a3f535add3bd8207c68e03f7c110a790"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s17\\E-scores.parquet": {
+      "bytes": 195101,
+      "sha256": "b0710503d0f4ee1007ea0b7dca5407b1d90d5b8eca3e2c1fcdfa2bed3af88e91"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s17\\decisions.parquet": {
+      "bytes": 3100190,
+      "sha256": "81adc12c1a5d6665a1b7e34d6181f6f0e429e38a346c7ed610fd1632048612ff"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s17\\calibration.json": {
+      "bytes": 263,
+      "sha256": "548d066b34eeffc9c90d51ec4de156af20271b16d1ba06df38ac554450f937b4"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s17\\report.json": {
+      "bytes": 2607160,
+      "sha256": "f584168abe187d2aeb20b421666876f6100d4330d280e1ea516c37fd9816ec34"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\models\\protocol_blind_s29\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s29\\C-scores.parquet": {
+      "bytes": 68653,
+      "sha256": "633c3c70c207f76f1b5bb78b5afb348d8f25a9183af8bf1330be131edc53aa2c"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s29\\ED-scores.parquet": {
+      "bytes": 196860,
+      "sha256": "187f93699124b7baaa51cf5d5a29304ae65834332135df0d4869d4de9cdb36ec"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\reports\\protocol_blind_s29-decisions.parquet": {
+      "bytes": 3101805,
+      "sha256": "fadc59bc54cf79915356c66ea35a801477e8b480ee659dac5e11a1c2c984d394"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s29\\calibration.json": {
+      "bytes": 275,
+      "sha256": "8ca3acf8201565a2b7153e02d02fa4e39155823d75b3647885006c29d623bafa"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\preflight\\protocol_blind_s29\\reference_scores.npz": {
+      "bytes": 337998,
+      "sha256": "e57075e5d521d648dde76e277026a7b26bc0e034669613d5df40974d0a428230"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s29\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s29\\trajectory\\score_identities.json": {
+      "bytes": 1937238,
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s29\\trajectory\\selected_scores.npz": {
+      "bytes": 622262,
+      "sha256": "cbe0dbc6fd2765b23514fc57644d7f3ff1aedf7ddbec79d104264381ec00c54e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s29\\trajectory\\selected_metrics.json": {
+      "bytes": 4340924,
+      "sha256": "329614d6d54c9b0c7563df883590d9b5b48b6926c3ecfe37fd847256eedce14d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s29\\trajectory\\baseline_metrics.json": {
+      "bytes": 4340924,
+      "sha256": "329614d6d54c9b0c7563df883590d9b5b48b6926c3ecfe37fd847256eedce14d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s29\\C-scores.parquet": {
+      "bytes": 68653,
+      "sha256": "633c3c70c207f76f1b5bb78b5afb348d8f25a9183af8bf1330be131edc53aa2c"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s29\\E-scores.parquet": {
+      "bytes": 196082,
+      "sha256": "aea97c39484f231e3811c6d1d9b7d18c0d2b003507b25368b30a416f7b5b5509"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s29\\decisions.parquet": {
+      "bytes": 3101200,
+      "sha256": "a4c68c822c10c4defc1a970fcab67ef69ebf742bfe4b304fa91f66534f93b3a6"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s29\\calibration.json": {
+      "bytes": 263,
+      "sha256": "59d8668b20a377e222a1e24ff20d8dfd2862193a8b23f4ad78f7b425fa3fa19e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s29\\report.json": {
+      "bytes": 2606022,
+      "sha256": "102a3f0176715ec975cbb298f7fb25f153119cb9687acdb8bb193a452407c79f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s29\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s29\\trajectory\\score_identities.json": {
+      "bytes": 1937238,
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s29\\trajectory\\selected_scores.npz": {
+      "bytes": 622262,
+      "sha256": "cbe0dbc6fd2765b23514fc57644d7f3ff1aedf7ddbec79d104264381ec00c54e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s29\\trajectory\\selected_metrics.json": {
+      "bytes": 4340924,
+      "sha256": "329614d6d54c9b0c7563df883590d9b5b48b6926c3ecfe37fd847256eedce14d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s29\\trajectory\\baseline_metrics.json": {
+      "bytes": 4340924,
+      "sha256": "329614d6d54c9b0c7563df883590d9b5b48b6926c3ecfe37fd847256eedce14d"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s29\\C-scores.parquet": {
+      "bytes": 68653,
+      "sha256": "633c3c70c207f76f1b5bb78b5afb348d8f25a9183af8bf1330be131edc53aa2c"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s29\\E-scores.parquet": {
+      "bytes": 196082,
+      "sha256": "aea97c39484f231e3811c6d1d9b7d18c0d2b003507b25368b30a416f7b5b5509"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s29\\decisions.parquet": {
+      "bytes": 3101195,
+      "sha256": "69c0707e1bffb12759e8a353998461f4f705423ec4e5205d847c1ca33870e11e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s29\\calibration.json": {
+      "bytes": 263,
+      "sha256": "59d8668b20a377e222a1e24ff20d8dfd2862193a8b23f4ad78f7b425fa3fa19e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s29\\report.json": {
+      "bytes": 2605991,
+      "sha256": "be4487646c9f2ace7fbc795f2713eef47c9a80731be7f936d94a827e512575fc"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\models\\protocol_blind_s43\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s43\\C-scores.parquet": {
+      "bytes": 68653,
+      "sha256": "1ff48f26d3b3587d78a63d873366c3ff723c66f0270466a1d7654b024fe65185"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s43\\ED-scores.parquet": {
+      "bytes": 196860,
+      "sha256": "5490b180e6a216d5be2f331d6d4c888c2745df5f4c2965121d916ae42819d50b"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\reports\\protocol_blind_s43-decisions.parquet": {
+      "bytes": 3101816,
+      "sha256": "5374d68ab26c387396dccb0f7b906ad94a62eed8435daefa69b83c76ca3dc4ea"
+    },
+    "实验归档\\20261117_第三十轮模型训练重设计\\回传\\evidence\\protocol_blind_s43\\calibration.json": {
+      "bytes": 275,
+      "sha256": "047f0832bdb232acb5e8b6eaf243bbc607dfa5f3a67bdcc9c4b737e0d847a4cb"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\preflight\\protocol_blind_s43\\reference_scores.npz": {
+      "bytes": 334730,
+      "sha256": "618514a1c567a25ff4481232da24153f22e752f9dbf0b502ba7ac091c120c7c5"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s43\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s43\\trajectory\\score_identities.json": {
+      "bytes": 1937238,
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s43\\trajectory\\selected_scores.npz": {
+      "bytes": 615726,
+      "sha256": "144c272bc7de0d67974bc77ff37ddcef42e039b5617ee4fda03e98167bea2f99"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s43\\trajectory\\selected_metrics.json": {
+      "bytes": 4339382,
+      "sha256": "2da7f22099c7f01046a006fb9172a5f2efb01830af8ed5b2ec5d322240ac38d3"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\transport_target_s43\\trajectory\\baseline_metrics.json": {
+      "bytes": 4339382,
+      "sha256": "2da7f22099c7f01046a006fb9172a5f2efb01830af8ed5b2ec5d322240ac38d3"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s43\\C-scores.parquet": {
+      "bytes": 68653,
+      "sha256": "1ff48f26d3b3587d78a63d873366c3ff723c66f0270466a1d7654b024fe65185"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s43\\E-scores.parquet": {
+      "bytes": 196082,
+      "sha256": "fa54a6307f262c0ff88737d15a850c8f16c68f17f6875e82a788c83e23e5ac8e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s43\\decisions.parquet": {
+      "bytes": 3101227,
+      "sha256": "7bf71fc161234af2c179452b59a7f7678f79a803d415e2367619dd394192174b"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s43\\calibration.json": {
+      "bytes": 263,
+      "sha256": "cbc59f9807eb51c138f7a13cadaff95d0b34ecce9ade908c42fb2284b5250be5"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\transport_target_s43\\report.json": {
+      "bytes": 2742188,
+      "sha256": "608ac504ef679b0366884c000986d368c4704e5e457596feefcd2155002b351e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s43\\trajectory\\model.pt": {
+      "bytes": 1742942,
+      "sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s43\\trajectory\\score_identities.json": {
+      "bytes": 1937238,
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s43\\trajectory\\selected_scores.npz": {
+      "bytes": 615726,
+      "sha256": "144c272bc7de0d67974bc77ff37ddcef42e039b5617ee4fda03e98167bea2f99"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s43\\trajectory\\selected_metrics.json": {
+      "bytes": 4339382,
+      "sha256": "2da7f22099c7f01046a006fb9172a5f2efb01830af8ed5b2ec5d322240ac38d3"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\models\\identity_target_s43\\trajectory\\baseline_metrics.json": {
+      "bytes": 4339382,
+      "sha256": "2da7f22099c7f01046a006fb9172a5f2efb01830af8ed5b2ec5d322240ac38d3"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s43\\C-scores.parquet": {
+      "bytes": 68653,
+      "sha256": "1ff48f26d3b3587d78a63d873366c3ff723c66f0270466a1d7654b024fe65185"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s43\\E-scores.parquet": {
+      "bytes": 196082,
+      "sha256": "fa54a6307f262c0ff88737d15a850c8f16c68f17f6875e82a788c83e23e5ac8e"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s43\\decisions.parquet": {
+      "bytes": 3101222,
+      "sha256": "7591eae9fc4155cd6691002cc75e0029eab2b25ba1396e6e18d0cf7c50ce7b3c"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s43\\calibration.json": {
+      "bytes": 263,
+      "sha256": "cbc59f9807eb51c138f7a13cadaff95d0b34ecce9ade908c42fb2284b5250be5"
+    },
+    "实验归档\\20261118_正常子群训练结果\\回传\\evaluation\\identity_target_s43\\report.json": {
+      "bytes": 2742157,
+      "sha256": "672cb55c6a4c540d4d6c81e5c9997248b576c095edead609af6c640c5647091b"
+    }
+  }
+}
