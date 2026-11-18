@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "real_zeek_executed": true,
+  "source": "synthetic-only",
+  "version": "8.0.11",
+  "strict_connections": 3,
+  "ignore_connections": 3,
+  "clock_eof_and_byte_semantics_checked": true,
+  "http_and_file_sha_checked": true,
+  "bad_checksum_zero_count_record_checked": true,
+  "checks": {
+    "pytest_passed": 6,
+    "ruff": "passed",
+    "real_zeek_synthetic_test": "passed"
+  },
+  "artifacts": {
+    "self_test_relative": "local/ait-zeek-selftest-final/self-test.json",
+    "source_pcap_sha256": "bc483a4e6db326db9bbcd2175f7e27d975f592afc32835b70324be8f3e00531a"
+  },
+  "runtime_package_total_bytes": 12182010,
+  "process_resources": {
+    "strict": {
+      "measured": true,
+      "source": "/usr/bin/time -v for this Zeek process",
+      "user_cpu_seconds": 0.4,
+      "system_cpu_seconds": 0.36,
+      "max_rss_kib": 115016,
+      "exit_status": 0
+    },
+    "ignore_checksums": {
+      "measured": true,
+      "source": "/usr/bin/time -v for this Zeek process",
+      "user_cpu_seconds": 0.38,
+      "system_cpu_seconds": 0.4,
+      "max_rss_kib": 115168,
+      "exit_status": 0
+    }
+  },
+  "tested_file_sha256": {
+    "scripts/ait_contract/zeek_runtime.py": "761b34c154e193122e0ae74a148e38ab5acf46492784ac3efa30106169e1cf71",
+    "scripts/ait_contract/export.zeek": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+    "scripts/ait_contract/runtime-packages.json": "f3d63869456ff741590c5fb536c350c4d41014d0dff1cebab3e6d5c7834b9e50",
+    "tests/test_ait_zeek_runtime.py": "be7d15573f83d21fca31eb02ccd2870bf9b2505e62e46e324f9c3d87e621a2f8"
+  },
+  "real_ait_pcap_processed": false,
+  "new_models_or_scores": 0
+}

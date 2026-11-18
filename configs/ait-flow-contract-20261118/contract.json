@@ -1,0 +1,53 @@
+{
+  "version": "ait-flow-contract-v1",
+  "registered_on": "2026-11-18",
+  "purpose": "Existing PCAP data semantics and event evidence; no detection-effect experiment",
+  "source_role": "external_historical_mechanism_case",
+  "pcap": {
+    "member": "gather/intranet_server/logs/suricata/log.pcap.1642684613",
+    "bytes": 343232723,
+    "crc32": 55161529,
+    "sha256": "12c798074e27969ea40719700ecc8cb07ecda76e4f0751d746e02e2398067790",
+    "sha256_provenance": "R27 lab full-member receipt; not an independently published official PCAP SHA",
+    "download_enabled": false
+  },
+  "interval": {
+    "start_utc": "2022-01-21T00:00:00Z",
+    "end_exclusive_utc": "2022-01-25T00:00:00Z",
+    "extraction": "Whole PCAP, preserving pre-window connection state and post-window completion",
+    "cohort": "Report crossing-boundary and EOF cases; do not silently cut connections to the four-day window"
+  },
+  "variants": ["strict", "ignore_checksums"],
+  "variant_policy": "Paired extraction sensitivity, no arm selected by association count or later model score",
+  "raw8": ["ip_protocol", "orig_port", "resp_port", "duration_seconds", "orig_pkts", "resp_pkts", "orig_ip_bytes", "resp_ip_bytes"],
+  "missing_value": -1,
+  "not_equivalent": ["TCP captured payload bytes are not IP bytes", "last observed packet is not actual detector receipt", "R27 candidate ID is not Zeek UID"],
+  "time_contract": {
+    "zeek_reported_end": "Zeek ts plus available duration; may exclude trailing non-productive TCP packets/final ACK and is not the captured last-packet time; missing remains unknown",
+    "replay_export_time": "Instrumented Zeek network clock when the connection log is emitted; historical replay time only",
+    "detector_received_time": null,
+    "feedback_available_time": null,
+    "feedback_scenarios": "None executed in this batch; any later assumption must be registered before score/threshold evaluation",
+    "evaluation_truth": "May be adjudicated retrospectively, never silently reused as earlier training/calibration feedback",
+    "eof_policy": "Keep end-of-trace flushing and uncertain termination separate; no claim of genuine online receipt"
+  },
+  "evidence_contract": {
+    "control_requests": 32,
+    "normal_actions": 68,
+    "normal_remote_vpn_actions": 33,
+    "download_actions": 2,
+    "independent_attack_chains": 1,
+    "normal_multi_connection_actions": "Retain all candidate connections; never restrict the cohort to single matches",
+    "background_label": "unknown",
+    "association_not_truth": true,
+    "size_must_not_assign_truth": true,
+    "tls_sni_not_file_proof": true,
+    "normal_download_requirement": "Positive business provenance required, not just a filename extension, service port, large size, or lack of attack label"
+  },
+  "resources": {"independent_zeek_jobs": 2, "packet_diagnostic_jobs": 1, "max_parallel_jobs": 3, "split_pcap": false, "gpu_jobs": 0},
+  "new_fits": 0,
+  "model_forward_calls": 0,
+  "threshold_searches": 0,
+  "effect_execution_enabled": false,
+  "next_decision": "Assess usable fields, trace integrity, event support, normal coverage and time assumptions together; no automatic model experiment"
+}

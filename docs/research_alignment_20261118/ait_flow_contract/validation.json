@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-11-18T14:07:43.622338+00:00",
+  "unit_checks_passed": 30,
+  "powershell5_check_only": "30 passed in 0.50s",
+  "ruff": "passed",
+  "git_diff_check": "passed",
+  "real_zeek_version": "8.0.11",
+  "real_zeek_synthetic_integration": {
+    "first_run_exit": 0,
+    "resume_run_exit": 0,
+    "strict_connections": 3,
+    "ignore_checksum_connections": 3,
+    "same_exact_key_unchanged": 2,
+    "same_exact_key_changed": 1,
+    "completed_stages": [
+      "runtime-self-test",
+      "packet-diagnostics",
+      "zeek-strict",
+      "zeek-ignore_checksums",
+      "analysis-strict",
+      "analysis-ignore_checksums",
+      "paired-export-comparison"
+    ],
+    "successful_stage_reuse_observed": true,
+    "return_archive_created": true
+  },
+  "real_ait_pcap_processed_locally": false,
+  "real_models_loaded": 0,
+  "new_fits": 0,
+  "model_forward_calls": 0,
+  "effect_results": false,
+  "runtime_requirement": "existing Ubuntu24.04 amd64 WSL or exact-version native Zeek",
+  "runtime_package_bytes": 12182010,
+  "sha256": {
+    "scripts/ait_contract/analyze.py": "564df5a3e581013876327c511dcbce8e0406c8df5ace18281403fe927a46c6a0",
+    "scripts/ait_contract/compare_exports.py": "4707790d9378c3b0e9c7bedea77558315db98b4009a3c1a3b8921a301dc0c2f2",
+    "scripts/ait_contract/packet_diagnostics.py": "f2117f2d6a01ba1c31b170b6bf47c6442151b4524fd1f1421a0febd66e3b420d",
+    "scripts/ait_contract/run.py": "95021e34485d82c14405e32333728ac4b29429b054d49ce33199a572a6e7db13",
+    "scripts/ait_contract/zeek_runtime.py": "761b34c154e193122e0ae74a148e38ab5acf46492784ac3efa30106169e1cf71",
+    "scripts/ait_contract/export.zeek": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+    "scripts/ait_contract/runtime-packages.json": "61c1d186b4891d2307449cf64ed4df769c00da3e56dbeb17b854f4dfa658556b",
+    "configs/ait-flow-contract-20261118/contract.json": "4791629f4ca7869ae5442823926cbab8f43170b3b30cd17b27bf9368ecfa47cc",
+    "configs/ait-flow-contract-20261118/anchors.json": "d49de86ec71b3644814caf10160da1a272a438f31935380b01798f709b593261",
+    "scripts/RUN_AIT_FLOW_CONTRACT.ps1": "90c042e206fc775d68dd3c405adc64ca5941b77761abb6440a928f57d715f32a"
+  }
+}

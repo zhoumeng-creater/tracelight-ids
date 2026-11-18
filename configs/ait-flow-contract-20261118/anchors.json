@@ -1,0 +1,108 @@
+{
+  "version": "ait-flow-contract-v1",
+  "source_role": "external_historical_mechanism_case",
+  "server_ip": "10.143.2.4",
+  "monitoring_ip": "10.143.0.35",
+  "monitoring_port": 5044,
+  "independent_attack_chain_id": "russellmitchell-webshell-20220124",
+  "control_disambiguation": {
+    "apache_line": 8498,
+    "coarse_time_candidates": [
+      3544,
+      3545
+    ],
+    "preceding_upload_interval": {
+      "start": "2022-01-24T03:58:20.824Z",
+      "stop": "2022-01-24T03:58:23.345Z"
+    },
+    "whoami_interval_from_author_config": {
+      "id": "check_whoami",
+      "start": "2022-01-24T03:58:23.349Z",
+      "stop": "2022-01-24T03:58:23.514Z",
+      "cmd": [
+        "whoami"
+      ]
+    },
+    "candidate_3544": {
+      "connection_id": 3544,
+      "protocol": "tcp",
+      "first": 1642996700.042424,
+      "last": 1642996703.349607,
+      "syn_seen": true,
+      "syn_sequence": 2275535559.0,
+      "direction_basis": "initial_syn",
+      "origin_packets": 410,
+      "responder_packets": 234,
+      "origin_captured_tcp_payload_bytes": 496245,
+      "responder_captured_tcp_payload_bytes": 39954,
+      "fin_packets": 2,
+      "rst_packets": 2,
+      "origin_ip": "172.19.131.174",
+      "origin_port": 36240,
+      "responder_ip": "10.143.2.4",
+      "responder_port": 443
+    },
+    "candidate_3545": {
+      "connection_id": 3545,
+      "protocol": "tcp",
+      "first": 1642996703.354771,
+      "last": 1642996703.516429,
+      "syn_seen": true,
+      "syn_sequence": 1399917968.0,
+      "direction_basis": "initial_syn",
+      "origin_packets": 167,
+      "responder_packets": 426,
+      "origin_captured_tcp_payload_bytes": 870,
+      "responder_captured_tcp_payload_bytes": 506777,
+      "fin_packets": 2,
+      "rst_packets": 2,
+      "origin_ip": "172.19.131.174",
+      "origin_port": 36242,
+      "responder_ip": "10.143.2.4",
+      "responder_port": 443
+    },
+    "interpretation": "3544 spans the prior upload; 3545 starts inside whoami and has the matching large response. Strong association evidence, not a decrypted HTTP stream join."
+  },
+  "downloads": [
+    {
+      "name": "WPHashCrack",
+      "start": 1642996762.1827977,
+      "end": 1642996779.5675864,
+      "url": "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz",
+      "historical_candidate_ips": [
+        "140.82.121.3",
+        "140.82.121.9"
+      ],
+      "historical_candidate_ids": [
+        3574,
+        3575
+      ],
+      "evidence_status": "action_success_and_tls_candidates",
+      "apache_line": 8526
+    },
+    {
+      "name": "password list",
+      "start": 1642996783.556796,
+      "end": 1642996786.2159774,
+      "url": "http://192.168.230.122/rockyou.txt",
+      "target_ip": "192.168.230.122",
+      "port": 80,
+      "historical_candidate_ids": [
+        3578
+      ],
+      "evidence_status": "explicit_command_endpoint_and_transfer_association",
+      "apache_line": 8528
+    }
+  ],
+  "normal_confirmation_available_time": null,
+  "normal_label_policy": "Keep all 68 action groups including 33 VPN actions; flow associations are not automatically pure benign labels.",
+  "byte_size_must_not_assign_truth": true,
+  "r27_original_input_sha256": {
+    "action-connection-candidates.csv": "f953963d6175af94eae533843a0cf84c7cec4bd2818d9325f38c6ea0500a3d4a",
+    "tcp-connection-candidates.csv": "e1a0ab26668f921b87be217697362b0c34c9866821c0eddeb580259bb24eb425"
+  },
+  "repository_lf_input_sha256": {
+    "action-connection-candidates.csv": "14567848b2accf3bdc548e44352e2c49c8bdea23bddd53e3d1a7b4d0a6712371",
+    "tcp-connection-candidates.csv": "728ff93779b1a746fdc94ea7fbabd8bbdf5b44fe8e84eb94ff5cdc98491504ce"
+  }
+}
