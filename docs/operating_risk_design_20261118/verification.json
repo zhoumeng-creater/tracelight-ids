@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-18",
+  "kind": "synthetic_tensor_and_static_input_verification_only",
+  "checks": [
+    {
+      "name": "synthetic_tests",
+      "command": [
+        "D:\\python\\python.exe",
+        "-m",
+        "pytest",
+        "tests\\test_operating_risk_evaluation.py",
+        "tests\\test_operating_risk_losses.py",
+        "tests\\test_operating_risk_point.py",
+        "tests\\test_operating_risk_selection.py",
+        "tests\\test_operating_risk_step.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 57%]\n.....................................................                    [100%]\n125 passed in 3.50s\n",
+      "stderr": ""
+    },
+    {
+      "name": "ruff",
+      "command": [
+        "D:\\python\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "src/ids/operating_risk_training",
+        "tests\\test_operating_risk_evaluation.py",
+        "tests\\test_operating_risk_losses.py",
+        "tests\\test_operating_risk_point.py",
+        "tests\\test_operating_risk_selection.py",
+        "tests\\test_operating_risk_step.py"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    }
+  ],
+  "file_bindings": [
+    {
+      "path": "src/ids/operating_risk_training/__init__.py",
+      "bytes": 85,
+      "sha256": "ac52ec952b0a9c50af95731fccf3f3c84756d00f0507ce6c6c2415f52c3786ea"
+    },
+    {
+      "path": "src/ids/operating_risk_training/constrained_step.py",
+      "bytes": 3831,
+      "sha256": "d130fd391fe23089b620aa6f6162b6075948acf597f05849b51abbfc2a390519"
+    },
+    {
+      "path": "src/ids/operating_risk_training/evaluation.py",
+      "bytes": 10130,
+      "sha256": "49b3b73f417429f525443401ae89108177caa28f48d4ea3e54cd492415b379c9"
+    },
+    {
+      "path": "src/ids/operating_risk_training/operating_point.py",
+      "bytes": 4697,
+      "sha256": "db2d065c6f731d407e5f9a295ec927e204229d91f85dd1036e26076535f39b61"
+    },
+    {
+      "path": "src/ids/operating_risk_training/risk_losses.py",
+      "bytes": 6463,
+      "sha256": "2a1f3ec7beea953d49e94ae88223ac2e562057f19f19a1a3b04c6c2246d04087"
+    },
+    {
+      "path": "src/ids/operating_risk_training/selection.py",
+      "bytes": 2596,
+      "sha256": "3b6d1d74bb0d04497c2b5359671b253b6dadac27016df9267d767c5ce68151e6"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/data_contract_review.json",
+      "bytes": 5257397,
+      "sha256": "10d1e81d6b2414003a58b51e371a96263a989d7892e6bfc330a4c38836a46aac"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/data_contract_review.md",
+      "bytes": 8091,
+      "sha256": "b56f3be8094ec17a61e37832c59c34a307eeb3008c0c2df6a0a4f5b3d2281f1b"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/data_contract_review.py",
+      "bytes": 28849,
+      "sha256": "307b3ad1c9baa595daa8d792245f0703a1dfe8e3557f0efabe5c27c8c04ae7dc"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/independent_review.md",
+      "bytes": 7730,
+      "sha256": "6115fef1b2c88771020fed7106f7286708b063c409bce492bd983d3e31a70672"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/math_contract_review.json",
+      "bytes": 5077,
+      "sha256": "30129ccbc72e165ca2546b15f4aec422a7cff98d3c31e90b17f2be48b796d91c"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/math_contract_review.md",
+      "bytes": 10806,
+      "sha256": "708a145205616759865502a6a3ec80a31b8ab38048032d44727ecaef15ac3588"
+    },
+    {
+      "path": "configs/operating-risk-design-20261118/design.json",
+      "bytes": 2608,
+      "sha256": "cabd01a8de352e1bbb827126980af2f2b9e63571a06fd55e3c5dc6bece72af88"
+    },
+    {
+      "path": "tests/test_operating_risk_evaluation.py",
+      "bytes": 10537,
+      "sha256": "9e0c17df93e4facea6ad78e2aec05170e8edafe391f804fc72d38209e6d96719"
+    },
+    {
+      "path": "tests/test_operating_risk_losses.py",
+      "bytes": 13322,
+      "sha256": "9065243d6fdfad13846d9fdf5c3bc09c6d1ca3872669f3cdd18ab438b4aa4487"
+    },
+    {
+      "path": "tests/test_operating_risk_point.py",
+      "bytes": 7558,
+      "sha256": "1306211bf7409b85db72b2afeb220842d7bf05984ccba0d69239e77bc039a2dd"
+    },
+    {
+      "path": "tests/test_operating_risk_selection.py",
+      "bytes": 4477,
+      "sha256": "da8327b032ecf6532594e61e3557edc7b3a5352674a20039360b1bb7f7e60e06"
+    },
+    {
+      "path": "tests/test_operating_risk_step.py",
+      "bytes": 2961,
+      "sha256": "33c3b245fdc49db65871391a5e143fca1e9bfce787b995ae21318a2319607883"
+    },
+    {
+      "path": "docs/OPERATING_RISK_CORRECTION_20261118.md",
+      "bytes": 7659,
+      "sha256": "182a921baa36ae8853ea259a6b6a09d615ebb68038daf6ac3ff9057fe9fd4203"
+    },
+    {
+      "path": "docs/operating_risk_design_20261118/.gitattributes",
+      "bytes": 72,
+      "sha256": "308a40fa1d89ae5ea4390b4c9b46a0108b09f171f07898f25d451fa0c69c4e9f"
+    }
+  ],
+  "real_model_loads": 0,
+  "real_model_forwards": 0,
+  "fits": 0,
+  "new_real_scores": 0,
+  "real_recalibrations": 0,
+  "threshold_searches": 0,
+  "training_registered": false
+}

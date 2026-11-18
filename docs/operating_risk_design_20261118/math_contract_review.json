@@ -1,0 +1,122 @@
+{
+  "status": "implemented_score_space_kernel_risk_family_not_approved",
+  "real_model_loads": 0,
+  "real_forwards": 0,
+  "real_fits": 0,
+  "calibration_or_evaluation_searches": 0,
+  "module": "src/ids/operating_risk_training/risk_losses.py",
+  "test_module": "tests/test_operating_risk_losses.py",
+  "score_contract": "FP32 logits(rows,32,1); original stable_scores; FP64 mean-sigmoid log odds",
+  "threshold": {
+    "rank": "ceil(99*(n_Q+1)/100) exact integer arithmetic",
+    "decision": "score > threshold",
+    "ties_backward": "equal derivative on full threshold tie block",
+    "graph_binding": "validate supplied point values and identities, recalibrate on supplied current reference_scores graph"
+  },
+  "identity_contract": {
+    "reference_normal_positive_pairwise_disjoint": true,
+    "within_role_unique": true,
+    "full_original_order": true,
+    "same_features_distinct_identities_retained": true,
+    "normal_groups": "exhaustive nonempty partition; original full denominators",
+    "scale_population": "full identity union Q+N, each identity once",
+    "positive_population": "full frozen P, no sampled multiplier update"
+  },
+  "scale": {
+    "formula": "std(cat(reference_scores, normal_scores), correction=0)",
+    "differentiable": true,
+    "floor": null,
+    "positive_score_dependence": false,
+    "zero": "DegenerateNormalScale; true evaluation may identify feasible zero-risk endpoint"
+  },
+  "normal_objective": "max_g mean_i_in_g relu(1+(score_i-threshold)/scale)",
+  "positive_constraint": {
+    "continuous_margin": "r=(positive_score-threshold)/normal_scale",
+    "proxy_violation": "-r; differentiable",
+    "true_violation": "1[original_FP64_positive_score<=threshold]-detach(r)",
+    "feasible": "true_violation<=0 iff score>threshold",
+    "violated_signal": ">=1 for every FN and threshold tie",
+    "safe_signal": "strictly negative; permits multiplier decrease",
+    "backward": "continuous margin, current-reference threshold and normal-only scale graph",
+    "numerical_sign_loss": "error without tolerance; safe r underflow to zero explicitly rejected",
+    "nextafter": "detached diagnostic only, never used in updates",
+    "positive_affine_claim": "normal proxy and continuous normalized margins; not exact floating-point equivariance",
+    "limitation": "project-defined proxy/true split, not one smooth Lagrangian; no per-update feasibility or nonconvex convergence guarantee"
+  },
+  "primal_dual": {
+    "primal": "normal_objective + sum(detach(lambda)*proxy_violation)",
+    "dual": "sum(lambda*detach(true_violation)), true_violation=1[score<=threshold]-r",
+    "projected_update": "max(0, lambda+explicit_step_size*true_violation)",
+    "optimizer_registered": false,
+    "learning_rate_registered": false,
+    "weight_decay_registered": false
+  },
+  "discarded_design": {
+    "scale": "std(Q+N+P)",
+    "reason": "normal loss directly rewards reducing positive margin when active normal mean<threshold",
+    "counterexample": "Q=linspace(0,1,99), N=[.8,.85,.9,1.01], P=[2] -> [1.0001], Q/N unchanged"
+  },
+  "remaining_proxy_counterexample": {
+    "Q": "linspace(0,1,99)",
+    "N": [
+      0.0,
+      0.5,
+      0.9,
+      1.01,
+      1.2
+    ],
+    "P": [
+      2.0
+    ],
+    "transform": "log1p all scores",
+    "normal_proxy_before": 0.6725370824239728,
+    "normal_proxy_after": 0.6475162409390531,
+    "normal_alarms_both": [
+      false,
+      false,
+      false,
+      true,
+      true
+    ],
+    "positive_alarms_both": [
+      true
+    ],
+    "selection": "reject unchanged true operating risk"
+  },
+  "author_reference": {
+    "name": "Cooper",
+    "paper": "https://arxiv.org/abs/2504.01212",
+    "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+    "commit_date": "2025-06-09",
+    "constraint_state_sha256": "ab438ea23a53c6408075d94855953b0e4bf9aa1b90deba288d7417e8eebf5cc4",
+    "formulation_utils_sha256": "622b60ffe24ad22d68e5ef25715fbe238764ed434fd70daaf7c7ef9771ac991f",
+    "reuse": "separate primal/dual graphs and signed residual mechanism",
+    "project_specific": [
+      "calibration threshold",
+      "normal-only dynamic scale",
+      "normal hinge",
+      "unit-indicator signed true-positive residual",
+      "identity manifest",
+      "true-risk checkpoint selection"
+    ]
+  },
+  "validation": {
+    "synthetic_loss_tests_passed": 28,
+    "combined_four_modules_tests_passed": 117,
+    "ruff": "passed"
+  },
+  "training_ready": false,
+  "remaining_registration": [
+    "supported risk family",
+    "Q/N/P roles",
+    "comparison baseline",
+    "optimization budget",
+    "precision and checkpoint contract",
+    "baseline true protection state at new operating point"
+  ],
+  "discarded_ulp_constraint": {
+    "formula": "(nextafter(threshold,+inf)-positive_score)/normal_scale",
+    "reason": "threshold ties yield ULP-scale dual restoration, not an adequate recovery mechanism",
+    "replacement": "unit strict-FN indicator minus continuous normalized margin"
+  }
+}
