@@ -1,0 +1,84 @@
+{
+  "spec_sha256": "0c38a8585c6846010ad6e0cfbcc76674331b116f6d07b3cf3b528eeb92e8bb2d",
+  "phase": "C_only_before_ED_read",
+  "models": {
+    "protocol_blind_s17": {
+      "C_sha256": "6473047d6cfaf5754cb53cae1a7ceef2a3f535add3bd8207c68e03f7c110a790",
+      "old_calibration_sha256": "aec8a1702003dcc11212d09a4893d7e3db70ba7f177069df085ea2d21e228a8b",
+      "rules": {
+        "original_order_statistic": {
+          "rank": 5457,
+          "n": 5511,
+          "threshold": -14.374647069217621,
+          "binomial_tail": null,
+          "calibration_fp": 54,
+          "alpha": 0.01,
+          "delta": null,
+          "comparison": ">"
+        },
+        "fixed_np_reference": {
+          "rank": 5469,
+          "n": 5511,
+          "threshold": -14.213802692051216,
+          "binomial_tail": 0.03958062748674295,
+          "calibration_fp": 42,
+          "alpha": 0.01,
+          "delta": 0.05,
+          "comparison": ">"
+        }
+      }
+    },
+    "protocol_blind_s29": {
+      "C_sha256": "633c3c70c207f76f1b5bb78b5afb348d8f25a9183af8bf1330be131edc53aa2c",
+      "old_calibration_sha256": "8ca3acf8201565a2b7153e02d02fa4e39155823d75b3647885006c29d623bafa",
+      "rules": {
+        "original_order_statistic": {
+          "rank": 5457,
+          "n": 5511,
+          "threshold": -12.541033514868264,
+          "binomial_tail": null,
+          "calibration_fp": 54,
+          "alpha": 0.01,
+          "delta": null,
+          "comparison": ">"
+        },
+        "fixed_np_reference": {
+          "rank": 5469,
+          "n": 5511,
+          "threshold": -12.274003130523925,
+          "binomial_tail": 0.03958062748674295,
+          "calibration_fp": 42,
+          "alpha": 0.01,
+          "delta": 0.05,
+          "comparison": ">"
+        }
+      }
+    },
+    "protocol_blind_s43": {
+      "C_sha256": "1ff48f26d3b3587d78a63d873366c3ff723c66f0270466a1d7654b024fe65185",
+      "old_calibration_sha256": "047f0832bdb232acb5e8b6eaf243bbc607dfa5f3a67bdcc9c4b737e0d847a4cb",
+      "rules": {
+        "original_order_statistic": {
+          "rank": 5457,
+          "n": 5511,
+          "threshold": -12.252098655671222,
+          "binomial_tail": null,
+          "calibration_fp": 54,
+          "alpha": 0.01,
+          "delta": null,
+          "comparison": ">"
+        },
+        "fixed_np_reference": {
+          "rank": 5469,
+          "n": 5511,
+          "threshold": -11.855892381279814,
+          "binomial_tail": 0.03958062748674295,
+          "calibration_fp": 42,
+          "alpha": 0.01,
+          "delta": 0.05,
+          "comparison": ">"
+        }
+      }
+    }
+  }
+}

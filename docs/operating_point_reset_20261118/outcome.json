@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-18",
+  "status": "bounded_comparison_completed_no_deployment_candidate",
+  "registration_commit": "d899b37ee091ba666d58cd3a4ab2c138b5ce1039",
+  "user_approved_prospective_criteria": true,
+  "historical_R30_R31_outcomes_changed": false,
+  "R30_frozen_reference": true,
+  "R31_and_followon_subgroup_training_default_route": "closed",
+  "fixed_np_reference": {
+    "alpha": 0.01,
+    "delta": 0.05,
+    "rank": 5469,
+    "seed_order": [
+      17,
+      29,
+      43
+    ],
+    "tp": [
+      2036,
+      2036,
+      2036
+    ],
+    "fp": [
+      120,
+      130,
+      153
+    ],
+    "fp_removed": [
+      34,
+      45,
+      49
+    ],
+    "old_tp_lost": [
+      0,
+      0,
+      0
+    ],
+    "compliant_units": [
+      13,
+      11,
+      6
+    ],
+    "units_per_model": 15,
+    "all_models_all_units_compliant": false,
+    "comparison_closed": true,
+    "automatic_followup_search": false
+  },
+  "independent_confirmation": {
+    "candidate": "IoT-23 CTU-IoT-Malware-Capture-39-1",
+    "status": "rejected_for_core_malicious_control_confirmation",
+    "reason": "Official C&C rule is destination port 6667, without same-port benign counterexamples under that native rule; TQH 2026 to capture 2019 is not forward chronological validation.",
+    "auxiliary_role": "Unscored historical rule-label transfer case only; no execution authorized by this report.",
+    "ready_core_source_exists": false
+  },
+  "deployment_adoption": false,
+  "new_algorithm_contribution_established": false,
+  "model_loads": 0,
+  "model_forward_passes": 0,
+  "optimizer_updates": 0,
+  "new_lab_command_required": false,
+  "next_allowed_work": [
+    "Use completed frozen results in thesis and demonstration with original scopes and true costs.",
+    "Complete the already-published AIT historical evidence task within its existing exit conditions.",
+    "Reconsider a new method only when a new evidenced mechanism and a usable independent confirmation contract exist; do not reopen this calibration comparison by changing its parameters."
+  ],
+  "frozen_R30_artifacts_verified": {
+    "protocol_blind_s17": {
+      "path_in_original_return": "models/protocol_blind_s17/trajectory/model.pt",
+      "sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f",
+      "selected_step": 7645
+    },
+    "protocol_blind_s29": {
+      "path_in_original_return": "models/protocol_blind_s29/trajectory/model.pt",
+      "sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5",
+      "selected_step": 4170
+    },
+    "protocol_blind_s43": {
+      "path_in_original_return": "models/protocol_blind_s43/trajectory/model.pt",
+      "sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3",
+      "selected_step": 6533
+    }
+  },
+  "original_freeze_sha256": "df8beea04bffdbab305684f558695474c7aa5922c83d31ed52b2d7c6e6f60e30"
+}

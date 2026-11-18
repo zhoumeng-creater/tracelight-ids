@@ -101,7 +101,7 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
     thresholds_path = output_dir / "calibration_only.json"
     write_json(thresholds_path, thresholds)
 
-    summaries, cells, changes, families = [], [], [], []
+    summaries, cells, changes, families, cost_context = [], [], [], [], []
     input_files = {}
     common_identities = None
     for model_id in spec["models"]:
@@ -123,6 +123,14 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
         original = d.alert.to_numpy(dtype=bool)
         assert int((original & d.label.eq(1).to_numpy()).sum()) == 2036
         input_files[model_id] = {"decisions_sha256": sha(p), "ED_scores_sha256": sha(ed_path)}
+        cost_path = return_dir / "cost" / f"{model_id}.json"
+        cost = read_json(cost_path)
+        cost_context.append({"model_id": model_id, "original_cost_sha256": sha(cost_path),
+                             "scope": cost["timing"]["scope"],
+                             "model_artifact_bytes": cost["model_artifact_bytes"],
+                             "single_cpu_p50_ms": cost["timing"]["single"]["p50_ms"],
+                             "single_cpu_p95_ms": cost["timing"]["single"]["p95_ms"],
+                             "status": "original_R30_cost_reused_no_new_measurement"})
         rules = thresholds["models"][model_id]["rules"]
         for method_id, rule in rules.items():
             alerts = d.score.to_numpy() > rule["threshold"]
@@ -137,6 +145,10 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
                 per_cell.append(row)
                 cells.append(row)
             base = metrics(d, alerts)
+            # Only per-unit compliance is an acceptance endpoint. Pooled fields
+            # remain descriptive and are named explicitly to avoid confusion.
+            for key in ("budget", "within_budget", "fp_excess"):
+                base["pooled_" + key] = base.pop(key)
             lost_tp = (~alerts & original & d.label.eq(1).to_numpy())
             removed_fp = (~alerts & original & d.label.eq(0).to_numpy())
             summaries.append({"model_id": model_id, "method": method_id, **base,
@@ -162,7 +174,7 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
               "model_loads": 0, "forward_passes": 0, "optimizer_updates": 0,
               "new_calibration_rules": 1, "parameter_grid_searches": 0,
               "independent_confirmation": False, "deployment_adoption": False,
-              "summaries": summaries, "families": families}
+              "summaries": summaries, "families": families, "original_cost_context": cost_context}
     write_json(output_dir / "comparison.json", result)
     pd.DataFrame(cells).to_csv(output_dir / "comparison_cells.csv", index=False, encoding="utf-8")
     pd.DataFrame(changes, columns=["model_id", "method", "source_id", "row_id", "family", "score", "change"]).to_csv(
@@ -177,6 +189,12 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
                      f"{s['tp']} | {s['fp']} | {s['units_within_budget']} | {s['old_tp_lost']} | {s['fp_removed']} |")
     lines += ["", "逐单元计数见 `comparison_cells.csv`，全部新增／丢失身份见 `comparison_changes.csv`。"
               "NP阈值提高，故没有新增TP或FP；不能将移除FP与丢失TP合并成一个净收益。", "",
+              "| seed | 原工件字节数 | 原CPU单条p50/ms | 原CPU单条p95/ms |",
+              "|---|---:|---:|---:|"]
+    for c in cost_context:
+        lines.append(f"| {c['model_id'].split('_s')[-1]} | {c['model_artifact_bytes']} | "
+                     f"{c['single_cpu_p50_ms']:.6f} | {c['single_cpu_p95_ms']:.6f} |")
+    lines += ["",
               "本批是已开数据上的事后开发比较。参数固定于新参照计算前，但此前已观察原ED及可行区间。"
               "C被多轮研究利用且存在来源变化，二项尾概率不构成本项目的部署风险保证。", "",
               "模型、输入和前向路径未改，原模型成本仅可复用为上下文；本次缓存分析耗时不是模型推理成本。"
