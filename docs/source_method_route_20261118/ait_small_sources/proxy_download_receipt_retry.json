@@ -1,0 +1,11 @@
+{
+  "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.4",
+  "bytes": 1789416,
+  "compressed": 72459,
+  "CRC": 2218251589,
+  "offset": 99420118,
+  "sha256": "34fa3568b528da7b8387c48b3fcfadddb38b2c1b6ea2505e18a6b9f92208fef9",
+  "source_url": "https://zenodo.org/api/records/19483937/files/russellmitchell_no-pcaps.zip/content?slice=99420118",
+  "http_range": "bytes=99420118-99493089",
+  "http_content_range": "bytes 99420118-99493089/522084364"
+}

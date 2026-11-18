@@ -1,0 +1,17 @@
+[
+  {
+    "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.4",
+    "error": "HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=30)"
+  },
+  {
+    "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.1",
+    "bytes": 1281400,
+    "compressed": 59631,
+    "CRC": 1479037390,
+    "offset": 99993022,
+    "sha256": "b87709fc6b7385ae12324688892f5a7ded0f9967951e4297862c9b8b0d008294",
+    "source_url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&slice=99993022",
+    "http_range": "bytes=99993022-100053165",
+    "http_content_range": "bytes 99993022-100053165/522084364"
+  }
+]

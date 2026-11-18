@@ -1,0 +1,846 @@
+{
+  "schema_version": "optc_event_slice_v1",
+  "generated_utc": "2026-11-18T15:18:42.249472+00:00",
+  "script_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\scripts\\assemble_optc_event_slice.py",
+  "script_sha256": "26a08fb8f11246c7991b6dd7a3cc46de351fca6bebb30e88820ceffa3891d848",
+  "status": "linked_multiple_downloads_one_reported_second_match",
+  "scope": "One red-team download action; full scans of explicitly listed originals; no model scoring or residual-normal labeling.",
+  "action": {
+    "event_id": "optc_20190924_sysclient0501_fileTransfer1000",
+    "reported_local_time": "2019-09-24 13:26:57",
+    "assumed_offset_for_comparison": "-04:00 (consistent with eCAR timestamps; PDF clock must be corroborated by event match)",
+    "expected_utc_under_assumption": "2019-09-24T17:26:57+00:00",
+    "host": "Sysclient0501",
+    "ip": "142.20.57.246",
+    "description": "Chrome download of fileTransfer1000.exe (nc.exe) from news.com:8080, documented after RDP access.",
+    "ground_truth_excerpt": [
+      {
+        "page_one_based": 5,
+        "text": "account.  \n09/24/19 13:25:46 -- Agent DS8V3RNH lost contact.  \n09/24/19 13:26:57 -- On Sysclient0501 via RDP session, downloaded fileTransfer1000.exe \n(nc.exe) from news.com:8080 via chrome.  \n09/24/19 13:31:29 -- On Sysclient0501 via RDP session, compressed documents in C:\\documents for \nexfiltration.  "
+      },
+      {
+        "page_one_based": 5,
+        "text": "exfiltration.  \n09/24/19 13:44:34 -- On Sysclient0501 via RDP session, exfiltrated export.zip to port 9999 using \nfileTransfer1000.exe (nc.exe) news.com  \n09/24/19 13:45:12 -- On Sysclient0501 via RDP session, cleaned up fileTransfer1000.exe and export.zip  \n09/24/19 13:46:58 -- On Sysclient0501 via RDP session, RDPed to Sysclient0974  "
+      },
+      {
+        "page_one_based": 5,
+        "text": "09/24/19 13:44:34 -- On Sysclient0501 via RDP session, exfiltrated export.zip to port 9999 using \nfileTransfer1000.exe (nc.exe) news.com  \n09/24/19 13:45:12 -- On Sysclient0501 via RDP session, cleaned up fileTransfer1000.exe and export.zip  \n09/24/19 13:46:58 -- On Sysclient0501 via RDP session, RDPed to Sysclient0974  "
+      }
+    ]
+  },
+  "source_manifest": {
+    "ecarbro": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_AIA-501-525_ecarbro.json.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1-45syji9pX-_QMxR1E_xIfjxcZ2eAPLB&export=download&confirm=t",
+      "bytes": 19992689,
+      "sha256": "a019f38d4b8189ef26f0969a001c7d47de30bf47ba77fde2edacfa6c75c5f90d",
+      "view_url": "https://drive.google.com/file/d/1-45syji9pX-_QMxR1E_xIfjxcZ2eAPLB/view"
+    },
+    "http": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_http_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=14zNUSYWap4CiCKdTv4HZ9v56P6bFIPiQ&export=download&confirm=t",
+      "bytes": 17159303,
+      "sha256": "c5c499ee5ec28c5c3aae492939d3e5e151fa6cde3099255487dd8bcff678df2c",
+      "view_url": "https://drive.google.com/file/d/14zNUSYWap4CiCKdTv4HZ9v56P6bFIPiQ/view"
+    },
+    "files": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_files_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1AkEqZRG7Ox-PwsnywhG3vxY_iDnDoz1e&export=download&confirm=t",
+      "bytes": 12607089,
+      "sha256": "8aafb130db317a8377df6a6bddba675187edc0298a7b8f9e573c00b99dd56b18",
+      "view_url": "https://drive.google.com/file/d/1AkEqZRG7Ox-PwsnywhG3vxY_iDnDoz1e/view"
+    },
+    "ground_truth": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\OpTCRedTeamGroundTruth.pdf",
+      "url": "https://raw.githubusercontent.com/FiveDirections/OpTC-data/master/OpTCRedTeamGroundTruth.pdf",
+      "bytes": 453244,
+      "sha256": "5986d23b81169221a491f7a8302fce140b12638ef4cf9b3a894ed3cb2fad9567",
+      "view_url": "https://raw.githubusercontent.com/FiveDirections/OpTC-data/master/OpTCRedTeamGroundTruth.pdf"
+    },
+    "conn": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1EYNYdkVSIDw78XfDcUGD9cRFHzjsSmMH&export=download&confirm=t",
+      "bytes": 58407076,
+      "sha256": "429a509bfb01972c69950f18c72ad6571859021cc145105e1a92d0eb274b92f3",
+      "view_url": "https://drive.google.com/file/d/1EYNYdkVSIDw78XfDcUGD9cRFHzjsSmMH/view"
+    }
+  },
+  "full_scan_counts_and_schema": {
+    "http": {
+      "data_rows": 381579,
+      "fields": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "trans_depth",
+        "method",
+        "host",
+        "uri",
+        "referrer",
+        "version",
+        "user_agent",
+        "request_body_len",
+        "response_body_len",
+        "status_code",
+        "status_msg",
+        "info_code",
+        "info_msg",
+        "tags",
+        "username",
+        "password",
+        "proxied",
+        "orig_fuids",
+        "orig_filenames",
+        "orig_mime_types",
+        "resp_fuids",
+        "resp_filenames",
+        "resp_mime_types"
+      ],
+      "first_ts": 1569344399.431977,
+      "last_ts": 1569347999.811316
+    },
+    "files": {
+      "data_rows": 397496,
+      "fields": [
+        "ts",
+        "fuid",
+        "tx_hosts",
+        "rx_hosts",
+        "conn_uids",
+        "source",
+        "depth",
+        "analyzers",
+        "mime_type",
+        "filename",
+        "duration",
+        "local_orig",
+        "is_orig",
+        "seen_bytes",
+        "total_bytes",
+        "missing_bytes",
+        "overflow_bytes",
+        "timedout",
+        "parent_fuid",
+        "md5",
+        "sha1",
+        "sha256",
+        "extracted",
+        "extracted_cutoff",
+        "extracted_size"
+      ],
+      "first_ts": 1569344399.440974,
+      "last_ts": 1569347999.811278
+    },
+    "ecarbro": {
+      "data_rows": 261326,
+      "target_hostname_rows": 1323,
+      "first_timestamp": "2019-09-24T10:10:37.454-04:00",
+      "last_timestamp": "2019-09-24T16:41:36.693-04:00"
+    },
+    "conn": {
+      "data_rows": 1553112,
+      "fields": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents"
+      ],
+      "first_ts": 1569344105.778803,
+      "last_ts": 1569347994.805782
+    }
+  },
+  "selection_rules": {
+    "http_filename": "case-insensitive filetransfer1000.exe substring in URL-decoded uri, any host, all records in supplied hour",
+    "http_target_host_port": "id.orig_h=142.20.57.246 AND id.resp_p=8080, all records in supplied hour",
+    "ecarbro_target_host_port": "hostname=sysclient0501.systemia.com case-insensitive AND dest_port=8080, all records in supplied 25-host file",
+    "join": "ecarbro.properties.bro_uid=HTTP.uid=conn.uid; HTTP resp/orig_fuids=files.fuid or HTTP.uid in files.conn_uids",
+    "uniqueness": "based on full selected-file scans only; repeated requests/sessions remain explicit"
+  },
+  "candidates": {
+    "http_filename_all": [
+      {
+        "ts": "1569346017.933649",
+        "uid": "CSHrim2uG4Jj6MUi31",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54680",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "trans_depth": "1",
+        "method": "GET",
+        "host": "news.com",
+        "uri": "/fileTransfer1000.exe",
+        "referrer": "http://news.com:8080/",
+        "version": "1.0",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36",
+        "request_body_len": "0",
+        "response_body_len": "59392",
+        "status_code": "200",
+        "status_msg": "OK",
+        "info_code": "-",
+        "info_msg": "-",
+        "tags": "(empty)",
+        "username": "-",
+        "password": "-",
+        "proxied": "-",
+        "orig_fuids": "-",
+        "orig_filenames": "-",
+        "orig_mime_types": "-",
+        "resp_fuids": "FTVFKD2UNsfYwY0R91",
+        "resp_filenames": "-",
+        "resp_mime_types": "application/x-dosexec",
+        "_source_line": 167233,
+        "_timestamp_utc": "2019-09-24T17:26:57.933649+00:00",
+        "_seconds_from_action_assuming_minus04": 0.9336490631103516
+      },
+      {
+        "ts": "1569346978.458456",
+        "uid": "CJ2kfq1Fa0PZCafIMe",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54733",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "trans_depth": "1",
+        "method": "GET",
+        "host": "news.com",
+        "uri": "/fileTransfer1000.exe",
+        "referrer": "http://news.com:8080/",
+        "version": "1.0",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36",
+        "request_body_len": "0",
+        "response_body_len": "59392",
+        "status_code": "200",
+        "status_msg": "OK",
+        "info_code": "-",
+        "info_msg": "-",
+        "tags": "(empty)",
+        "username": "-",
+        "password": "-",
+        "proxied": "-",
+        "orig_fuids": "-",
+        "orig_filenames": "-",
+        "orig_mime_types": "-",
+        "resp_fuids": "FOmuiq0NlwMwx2Dqe",
+        "resp_filenames": "-",
+        "resp_mime_types": "application/x-dosexec",
+        "_source_line": 274473,
+        "_timestamp_utc": "2019-09-24T17:42:58.458456+00:00",
+        "_seconds_from_action_assuming_minus04": 961.4584560394287
+      }
+    ],
+    "http_target_host_port_all": [
+      {
+        "ts": "1569346010.370524",
+        "uid": "C9ZmGM1zU9wRARlKGi",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54678",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "trans_depth": "1",
+        "method": "GET",
+        "host": "news.com",
+        "uri": "/",
+        "referrer": "-",
+        "version": "1.0",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36",
+        "request_body_len": "0",
+        "response_body_len": "238",
+        "status_code": "200",
+        "status_msg": "OK",
+        "info_code": "-",
+        "info_msg": "-",
+        "tags": "(empty)",
+        "username": "-",
+        "password": "-",
+        "proxied": "-",
+        "orig_fuids": "-",
+        "orig_filenames": "-",
+        "orig_mime_types": "-",
+        "resp_fuids": "FBovUM3AOm7jLwmPJ7",
+        "resp_filenames": "-",
+        "resp_mime_types": "text/html",
+        "_source_line": 167150,
+        "_timestamp_utc": "2019-09-24T17:26:50.370524+00:00",
+        "_seconds_from_action_assuming_minus04": -6.629476070404053
+      },
+      {
+        "ts": "1569346015.026584",
+        "uid": "CzaMrB33RmJ7Z8NAdh",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54679",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "trans_depth": "1",
+        "method": "GET",
+        "host": "news.com",
+        "uri": "/favicon.ico",
+        "referrer": "http://news.com:8080/",
+        "version": "1.0",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36",
+        "request_body_len": "0",
+        "response_body_len": "195",
+        "status_code": "404",
+        "status_msg": "File not found",
+        "info_code": "-",
+        "info_msg": "-",
+        "tags": "(empty)",
+        "username": "-",
+        "password": "-",
+        "proxied": "-",
+        "orig_fuids": "-",
+        "orig_filenames": "-",
+        "orig_mime_types": "-",
+        "resp_fuids": "Fp6Vlg3AlWzzEbEduf",
+        "resp_filenames": "-",
+        "resp_mime_types": "text/html",
+        "_source_line": 167154,
+        "_timestamp_utc": "2019-09-24T17:26:55.026584+00:00",
+        "_seconds_from_action_assuming_minus04": -1.9734160900115967
+      },
+      {
+        "ts": "1569346017.933649",
+        "uid": "CSHrim2uG4Jj6MUi31",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54680",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "trans_depth": "1",
+        "method": "GET",
+        "host": "news.com",
+        "uri": "/fileTransfer1000.exe",
+        "referrer": "http://news.com:8080/",
+        "version": "1.0",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36",
+        "request_body_len": "0",
+        "response_body_len": "59392",
+        "status_code": "200",
+        "status_msg": "OK",
+        "info_code": "-",
+        "info_msg": "-",
+        "tags": "(empty)",
+        "username": "-",
+        "password": "-",
+        "proxied": "-",
+        "orig_fuids": "-",
+        "orig_filenames": "-",
+        "orig_mime_types": "-",
+        "resp_fuids": "FTVFKD2UNsfYwY0R91",
+        "resp_filenames": "-",
+        "resp_mime_types": "application/x-dosexec",
+        "_source_line": 167233,
+        "_timestamp_utc": "2019-09-24T17:26:57.933649+00:00",
+        "_seconds_from_action_assuming_minus04": 0.9336490631103516
+      },
+      {
+        "ts": "1569346978.458456",
+        "uid": "CJ2kfq1Fa0PZCafIMe",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54733",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "trans_depth": "1",
+        "method": "GET",
+        "host": "news.com",
+        "uri": "/fileTransfer1000.exe",
+        "referrer": "http://news.com:8080/",
+        "version": "1.0",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36",
+        "request_body_len": "0",
+        "response_body_len": "59392",
+        "status_code": "200",
+        "status_msg": "OK",
+        "info_code": "-",
+        "info_msg": "-",
+        "tags": "(empty)",
+        "username": "-",
+        "password": "-",
+        "proxied": "-",
+        "orig_fuids": "-",
+        "orig_filenames": "-",
+        "orig_mime_types": "-",
+        "resp_fuids": "FOmuiq0NlwMwx2Dqe",
+        "resp_filenames": "-",
+        "resp_mime_types": "application/x-dosexec",
+        "_source_line": 274473,
+        "_timestamp_utc": "2019-09-24T17:42:58.458456+00:00",
+        "_seconds_from_action_assuming_minus04": 961.4584560394287
+      }
+    ],
+    "ecarbro_uid_matches_all": [
+      {
+        "timestamp": "2019-09-24T13:26:13.836-04:00",
+        "id": "d5d3a77b-56af-4a29-8a2f-f9e4333aa346",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "a584bb82-0183-4a10-a4b9-73e9ae1f8507",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "CSHrim2uG4Jj6MUi31",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54680"
+        },
+        "_source_line": 101236
+      },
+      {
+        "timestamp": "2019-09-24T13:42:14.322-04:00",
+        "id": "278a1d45-1680-43de-9baa-31f0917291c6",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "5dc15774-8761-4812-95ee-bf338cf84d68",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "CJ2kfq1Fa0PZCafIMe",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54733"
+        },
+        "_source_line": 109397
+      }
+    ],
+    "ecarbro_target_host_port_all": [
+      {
+        "timestamp": "2019-09-24T13:26:00.769-04:00",
+        "id": "9d870957-b743-4a56-ae1c-c5dbc23cc400",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "9d406356-16fe-47bb-98a3-5f6593fcf65b",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "CCk5LY2bZwCCOvlVql",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54677"
+        },
+        "_source_line": 101173
+      },
+      {
+        "timestamp": "2019-09-24T13:26:00.769-04:00",
+        "id": "ea36470e-e5df-4e7f-acd4-0fbc8b2a536d",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "6eeaf463-f6fb-4258-8212-21576273936f",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "C9ZmGM1zU9wRARlKGi",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54678"
+        },
+        "_source_line": 101174
+      },
+      {
+        "timestamp": "2019-09-24T13:26:10.927-04:00",
+        "id": "494d4bad-5f0a-4fa9-bf8d-719ff08a782d",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "445f115d-51ec-4303-86a2-49d7c423d6b6",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "CzaMrB33RmJ7Z8NAdh",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54679"
+        },
+        "_source_line": 101223
+      },
+      {
+        "timestamp": "2019-09-24T13:26:13.836-04:00",
+        "id": "d5d3a77b-56af-4a29-8a2f-f9e4333aa346",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "a584bb82-0183-4a10-a4b9-73e9ae1f8507",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "CSHrim2uG4Jj6MUi31",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54680"
+        },
+        "_source_line": 101236
+      },
+      {
+        "timestamp": "2019-09-24T13:42:14.322-04:00",
+        "id": "278a1d45-1680-43de-9baa-31f0917291c6",
+        "hostname": "SysClient0501.systemia.com",
+        "objectID": "5dc15774-8761-4812-95ee-bf338cf84d68",
+        "object": "FLOW",
+        "action": "INFO",
+        "actorID": "43c082b6-5f8d-4dda-8310-ffb806b7213f",
+        "pid": 2340,
+        "ppid": -1,
+        "tid": -1,
+        "principal": "",
+        "properties": {
+          "acuity_level": "1",
+          "bro_uid": "CJ2kfq1Fa0PZCafIMe",
+          "dest_ip": "132.197.158.98",
+          "dest_port": "8080",
+          "direction": "outbound",
+          "image_path": "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "l4protocol": "6",
+          "src_ip": "142.20.57.246",
+          "src_port": "54733"
+        },
+        "_source_line": 109397
+      }
+    ],
+    "files_fuid_or_uid_matches_all": [
+      {
+        "ts": "1569346017.933649",
+        "fuid": "FTVFKD2UNsfYwY0R91",
+        "tx_hosts": "132.197.158.98",
+        "rx_hosts": "142.20.57.246",
+        "conn_uids": "CSHrim2uG4Jj6MUi31",
+        "source": "HTTP",
+        "depth": "0",
+        "analyzers": "SFAEXTRACT",
+        "mime_type": "application/x-dosexec",
+        "filename": "-",
+        "duration": "0.000000",
+        "local_orig": "F",
+        "is_orig": "F",
+        "seen_bytes": "59392",
+        "total_bytes": "59392",
+        "missing_bytes": "0",
+        "overflow_bytes": "0",
+        "timedout": "F",
+        "parent_fuid": "-",
+        "md5": "-",
+        "sha1": "-",
+        "sha256": "-",
+        "extracted": "-",
+        "extracted_cutoff": "-",
+        "extracted_size": "-",
+        "_source_line": 174771,
+        "_timestamp_utc": "2019-09-24T17:26:57.933649+00:00",
+        "_seconds_from_action_assuming_minus04": 0.9336490631103516
+      },
+      {
+        "ts": "1569346978.458456",
+        "fuid": "FOmuiq0NlwMwx2Dqe",
+        "tx_hosts": "132.197.158.98",
+        "rx_hosts": "142.20.57.246",
+        "conn_uids": "CJ2kfq1Fa0PZCafIMe",
+        "source": "HTTP",
+        "depth": "0",
+        "analyzers": "SFAEXTRACT",
+        "mime_type": "application/x-dosexec",
+        "filename": "-",
+        "duration": "0.000000",
+        "local_orig": "F",
+        "is_orig": "F",
+        "seen_bytes": "59392",
+        "total_bytes": "59392",
+        "missing_bytes": "0",
+        "overflow_bytes": "0",
+        "timedout": "F",
+        "parent_fuid": "-",
+        "md5": "-",
+        "sha1": "-",
+        "sha256": "-",
+        "extracted": "-",
+        "extracted_cutoff": "-",
+        "extracted_size": "-",
+        "_source_line": 286143,
+        "_timestamp_utc": "2019-09-24T17:42:58.458456+00:00",
+        "_seconds_from_action_assuming_minus04": 961.4584560394287
+      }
+    ],
+    "conn_uid_matches_all": [
+      {
+        "ts": "1569346017.924356",
+        "uid": "CSHrim2uG4Jj6MUi31",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54680",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "proto": "tcp",
+        "service": "http",
+        "duration": "0.012191",
+        "orig_bytes": "393",
+        "resp_bytes": "59598",
+        "conn_state": "SF",
+        "local_orig": "F",
+        "local_resp": "F",
+        "missed_bytes": "0",
+        "history": "ShADadfF",
+        "orig_pkts": "8",
+        "orig_ip_bytes": "725",
+        "resp_pkts": "52",
+        "resp_ip_bytes": "61690",
+        "tunnel_parents": "(empty)",
+        "_source_line": 719449,
+        "_timestamp_utc": "2019-09-24T17:26:57.924356+00:00",
+        "_seconds_from_action_assuming_minus04": 0.9243559837341309
+      },
+      {
+        "ts": "1569346978.449929",
+        "uid": "CJ2kfq1Fa0PZCafIMe",
+        "id.orig_h": "142.20.57.246",
+        "id.orig_p": "54733",
+        "id.resp_h": "132.197.158.98",
+        "id.resp_p": "8080",
+        "proto": "tcp",
+        "service": "http",
+        "duration": "0.013539",
+        "orig_bytes": "393",
+        "resp_bytes": "59598",
+        "conn_state": "SF",
+        "local_orig": "F",
+        "local_resp": "F",
+        "missed_bytes": "0",
+        "history": "ShADadfF",
+        "orig_pkts": "7",
+        "orig_ip_bytes": "685",
+        "resp_pkts": "52",
+        "resp_ip_bytes": "61690",
+        "tunnel_parents": "(empty)",
+        "_source_line": 1123824,
+        "_timestamp_utc": "2019-09-24T17:42:58.449929+00:00",
+        "_seconds_from_action_assuming_minus04": 961.4499289989471
+      }
+    ]
+  },
+  "joined_event": {
+    "primary_http_rows": 2,
+    "primary_unique_uids": [
+      "CJ2kfq1Fa0PZCafIMe",
+      "CSHrim2uG4Jj6MUi31"
+    ],
+    "primary_files_rows": 2,
+    "primary_ecarbro_rows": 2,
+    "primary_conn_rows": 2,
+    "conn_raw_numeric_fields": [
+      {
+        "uid": "CSHrim2uG4Jj6MUi31",
+        "duration": 0.012191,
+        "orig_bytes": 393,
+        "resp_bytes": 59598,
+        "orig_pkts": 8,
+        "resp_pkts": 52,
+        "orig_ip_bytes": 725,
+        "resp_ip_bytes": 61690,
+        "missed_bytes": 0
+      },
+      {
+        "uid": "CJ2kfq1Fa0PZCafIMe",
+        "duration": 0.013539,
+        "orig_bytes": 393,
+        "resp_bytes": 59598,
+        "orig_pkts": 7,
+        "resp_pkts": 52,
+        "orig_ip_bytes": 685,
+        "resp_ip_bytes": 61690,
+        "missed_bytes": 0
+      }
+    ],
+    "feature_contract": "Raw conn numeric values only. Not yet a declared model feature vector.",
+    "same_reported_second_candidate_uids": [
+      "CSHrim2uG4Jj6MUi31"
+    ],
+    "sessions": [
+      {
+        "uid": "CJ2kfq1Fa0PZCafIMe",
+        "http_source_lines": [
+          274473
+        ],
+        "ecar_source_lines": [
+          109397
+        ],
+        "files_source_lines": [
+          286143
+        ],
+        "conn_source_lines": [
+          1123824
+        ],
+        "http_request_utc": [
+          "2019-09-24T17:42:58.458456+00:00"
+        ],
+        "request_matches_reported_second_under_minus04": false,
+        "ecar_http_tuple_checks": [
+          {
+            "ecar_line": 109397,
+            "http_line": 274473,
+            "src_ip": true,
+            "src_port": true,
+            "dest_ip": true,
+            "dest_port": true,
+            "protocol_tcp": true,
+            "http_minus_ecar_seconds": 44.13645601272583
+          }
+        ],
+        "http_response_status_codes": [
+          "200"
+        ],
+        "http_response_bytes": [
+          59392
+        ],
+        "file_completeness": [
+          {
+            "fuid": "FOmuiq0NlwMwx2Dqe",
+            "seen_bytes": 59392,
+            "total_bytes": 59392,
+            "missing_bytes": 0,
+            "overflow_bytes": 0,
+            "timedout": "F"
+          }
+        ],
+        "flow_observed_end_utc": [
+          "2019-09-24T17:42:58.463468+00:00"
+        ],
+        "file_observed_end_utc": [
+          "2019-09-24T17:42:58.458456+00:00"
+        ],
+        "http_response_completion_timestamp_utc": null,
+        "http_completion_evidence": "HTTP contains completed response length/status, and files contains seen/total bytes; http.log has no separate completion timestamp.",
+        "available_at_lower_bound_utc": "2019-09-24T17:42:58.463468+00:00",
+        "available_at_actual_utc": null,
+        "availability_semantics": "Lower bound is max(conn ts+duration, files ts+duration, matched eCAR timestamp). Actual Bro output/timeout/ingestion time is not recorded here. Do not substitute action_start or request_start.",
+        "file_content_hash": null,
+        "file_identity_limit": "Author-described nc.exe identified by URI, response size/type and process context; file SHA fields are unset, so exact executable bytes are not hashed here."
+      },
+      {
+        "uid": "CSHrim2uG4Jj6MUi31",
+        "http_source_lines": [
+          167233
+        ],
+        "ecar_source_lines": [
+          101236
+        ],
+        "files_source_lines": [
+          174771
+        ],
+        "conn_source_lines": [
+          719449
+        ],
+        "http_request_utc": [
+          "2019-09-24T17:26:57.933649+00:00"
+        ],
+        "request_matches_reported_second_under_minus04": true,
+        "ecar_http_tuple_checks": [
+          {
+            "ecar_line": 101236,
+            "http_line": 167233,
+            "src_ip": true,
+            "src_port": true,
+            "dest_ip": true,
+            "dest_port": true,
+            "protocol_tcp": true,
+            "http_minus_ecar_seconds": 44.09764909744263
+          }
+        ],
+        "http_response_status_codes": [
+          "200"
+        ],
+        "http_response_bytes": [
+          59392
+        ],
+        "file_completeness": [
+          {
+            "fuid": "FTVFKD2UNsfYwY0R91",
+            "seen_bytes": 59392,
+            "total_bytes": 59392,
+            "missing_bytes": 0,
+            "overflow_bytes": 0,
+            "timedout": "F"
+          }
+        ],
+        "flow_observed_end_utc": [
+          "2019-09-24T17:26:57.936547+00:00"
+        ],
+        "file_observed_end_utc": [
+          "2019-09-24T17:26:57.933649+00:00"
+        ],
+        "http_response_completion_timestamp_utc": null,
+        "http_completion_evidence": "HTTP contains completed response length/status, and files contains seen/total bytes; http.log has no separate completion timestamp.",
+        "available_at_lower_bound_utc": "2019-09-24T17:26:57.936547+00:00",
+        "available_at_actual_utc": null,
+        "availability_semantics": "Lower bound is max(conn ts+duration, files ts+duration, matched eCAR timestamp). Actual Bro output/timeout/ingestion time is not recorded here. Do not substitute action_start or request_start.",
+        "file_content_hash": null,
+        "file_identity_limit": "Author-described nc.exe identified by URI, response size/type and process context; file SHA fields are unset, so exact executable bytes are not hashed here."
+      }
+    ],
+    "action_assignment": "All matching downloads are retained. A same-second request is separately identified as strongest support for the documented action; other requests are repeated-download candidates, not new independent attack chains."
+  },
+  "normal_background_status": "unknown; no residual records labeled normal"
+}

@@ -1,0 +1,5 @@
+*.gz
+*.partial
+*.part
+*.pdf
+__pycache__/

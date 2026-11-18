@@ -1,0 +1,243 @@
+{
+  "source": "https://zenodo.org/api/records/19483937/files/russellmitchell_no-pcaps.zip/content",
+  "results": [
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+      "bytes": 1514577,
+      "compressed_bytes": 63947,
+      "sha256": "dd84f0feb1700360023d7d821aa5b2dd2602b0890f18b536ea80f9e3a414b134",
+      "offset": 192205050,
+      "crc32": 2109735952,
+      "in_period_requests": 5546,
+      "http_status_counts": {
+        "302": 37,
+        "200": 5391,
+        "303": 35,
+        "207": 82,
+        "201": 1
+      },
+      "top_routes": [
+        {
+          "method": "GET",
+          "path": "/ocs/v2.php/apps/notifications/api/v1/notifications",
+          "status": "200",
+          "n": 829
+        },
+        {
+          "method": "GET",
+          "path": "/index.php/apps/files/ajax/getstoragestats.php",
+          "status": "200",
+          "n": 91
+        },
+        {
+          "method": "GET",
+          "path": "/index.php/core/js/oc.js",
+          "status": "200",
+          "n": 72
+        },
+        {
+          "method": "OPTIONS",
+          "path": "*",
+          "status": "200",
+          "n": 68
+        },
+        {
+          "method": "GET",
+          "path": "/index.php/login",
+          "status": "200",
+          "n": 60
+        },
+        {
+          "method": "GET",
+          "path": "/core/vendor/browser-update/browser-update.js",
+          "status": "200",
+          "n": 60
+        },
+        {
+          "method": "GET",
+          "path": "/core/vendor/select2/select2.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/apps.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/global.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/fixes.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/multiselect.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/mobile.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/vendor/jquery-ui/themes/base/jquery-ui.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/fonts.css",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/jquery-ui-fixes.css",
+          "status": "200",
+          "n": 43
+        }
+      ]
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+      "error": "500 Server Error: INTERNAL SERVER ERROR for url: https://zenodo.org/api/records/19483937/files/russellmitchell_no-pcaps.zip/content?offset=192122536"
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+      "error": "HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=30)"
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+      "bytes": 2094454,
+      "compressed_bytes": 77296,
+      "sha256": "0c140f45b8367d20f876ed853252fa41e8908f8c8505b7339c1b2ee5e8d9b987",
+      "offset": 192045125,
+      "crc32": 4216665876,
+      "in_period_requests": 7409,
+      "http_status_counts": {
+        "302": 30,
+        "200": 7225,
+        "303": 28,
+        "207": 121,
+        "201": 5
+      },
+      "top_routes": [
+        {
+          "method": "GET",
+          "path": "/ocs/v2.php/apps/notifications/api/v1/notifications",
+          "status": "200",
+          "n": 2981
+        },
+        {
+          "method": "GET",
+          "path": "/index.php/apps/files/ajax/getstoragestats.php",
+          "status": "200",
+          "n": 314
+        },
+        {
+          "method": "OPTIONS",
+          "path": "*",
+          "status": "200",
+          "n": 74
+        },
+        {
+          "method": "GET",
+          "path": "/index.php/core/js/oc.js",
+          "status": "200",
+          "n": 58
+        },
+        {
+          "method": "GET",
+          "path": "/index.php/login",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/vendor/browser-update/browser-update.js",
+          "status": "200",
+          "n": 43
+        },
+        {
+          "method": "GET",
+          "path": "/core/vendor/select2/select2.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/styles.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/inputs.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/fixes.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/multiselect.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/mobile.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/global.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/vendor/jquery-ui/themes/base/jquery-ui.css",
+          "status": "200",
+          "n": 37
+        },
+        {
+          "method": "GET",
+          "path": "/core/css/jquery-ui-fixes.css",
+          "status": "200",
+          "n": 37
+        }
+      ]
+    },
+    {
+      "member": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 490480,
+      "compressed_bytes": 39789,
+      "sha256": "957ca78f4a3c91c9746c88c95ab198d2c55b56a32aaeb83a9be508a26110ee44",
+      "offset": 389825000,
+      "crc32": 3173540868,
+      "messages": {},
+      "downloaded_file_records": []
+    },
+    {
+      "member": "gather/remote_employee_2/logs/sm.log",
+      "error": "HTTPSConnectionPool(host='zenodo.org', port=443): Read timed out. (read timeout=30)"
+    }
+  ]
+}

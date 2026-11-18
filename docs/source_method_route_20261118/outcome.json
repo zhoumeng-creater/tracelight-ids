@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "status": "action_evidence_assembled_research_question_narrowed",
+  "current_document": "docs/SOURCE_METHOD_ROUTE_20261118.md",
+  "previous_frozen_reference": "operating-point-reset-v1.1",
+  "new_model_loads": 0,
+  "new_model_forwards": 0,
+  "new_training_runs": 0,
+  "new_threshold_choices": 0,
+  "model_execution_enabled": false,
+  "optc": {
+    "control_channel_sessions": 24,
+    "control_independent_chains": 1,
+    "same_filename_download_sessions": 2,
+    "reported_second_download_matches": 1,
+    "raw_conn_rows_scanned": 1553112,
+    "pre_evaluation_PE_candidates": 6,
+    "pre_evaluation_PE_normal_labels_assigned": 0,
+    "normal_denominator_ready": false,
+    "role": "opened_qualification_slice_historical_external_source"
+  },
+  "ait": {
+    "confirmed_normal_action_server_proxy_events": 31,
+    "additional_unresolved_proxy_events": 5,
+    "packet_associated_normal_events": 0,
+    "role": "previously_opened_scenario_development_evidence"
+  },
+  "independent_confirmation_set_ready": false,
+  "algorithm_contribution_established": false,
+  "research_question": "Whether selecting and compressing causally available finite network history adds low-FPR detection or cost gains beyond a same-information simple context baseline under independently grounded action labels.",
+  "relation_supervision": {
+    "adopted": false,
+    "reason": "Action/process/session associations do not establish predecessor-causes-action labels; same PID is not sufficient."
+  },
+  "next_data_product": "Common event table binding action truth, network records, business comparability, information availability and complete-chain allocation.",
+  "evidence_files": {
+    "evidence/optc/optc_event_slice.json": {
+      "sha256": "2d2a3176d03f34d3d939d3ec0ea4e8c3df242d11e99cd43dad9d282df37ce708",
+      "bytes": 31495
+    },
+    "evidence/optc/optc_control_channel_slice.json": {
+      "sha256": "5bba740808e813386ef0cfc12cc5a0815fec48e217209ba1fbdc977cd843a5f5",
+      "bytes": 365584
+    },
+    "evidence/optc/benign_file_business.json": {
+      "sha256": "e71f5b0557dd84ab1fce153c224440dc7bd93f730d5186f42e772ae682ce7e78",
+      "bytes": 11957
+    },
+    "normal_event_manifest.json": {
+      "sha256": "d8da09bb47cac297827447949e58a709e337c9bad944c24f83a0f8a78c18bc6d",
+      "bytes": 212287
+    },
+    "scripts/assemble_optc_event_slice.py": {
+      "sha256": "26a08fb8f11246c7991b6dd7a3cc46de351fca6bebb30e88820ceffa3891d848",
+      "bytes": 16074
+    },
+    "scripts/assemble_optc_control_channel_slice.py": {
+      "sha256": "6e3e8a82e0cd9dfe323f1ae71aa455770860c87c6d187f834d68824275c55bc1",
+      "bytes": 11849
+    },
+    "scripts/inspect_optc_benign.py": {
+      "sha256": "93081a375c46581a7ba5cc110a5be832442b09ee0c9cec88b0a1987e9c2dc578",
+      "bytes": 4093
+    },
+    "assemble_ait_normal_manifest.py": {
+      "sha256": "ede7c2d6c12314b7756a02c6c79050744b1fcdf23713cba88d59232ebb454085",
+      "bytes": 12169
+    }
+  }
+}

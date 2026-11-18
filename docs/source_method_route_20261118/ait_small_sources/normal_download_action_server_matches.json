@@ -1,0 +1,2521 @@
+{
+  "actions": [
+    {
+      "host": "internal_employee_2",
+      "transition_id": "3ee2bc18-1e39-4127-a0d3-6b189753a348",
+      "start_line": 673,
+      "success_line": 677,
+      "start": 1642761714.9208977,
+      "success": 1642761729.4832995,
+      "file": {
+        "etag": "2f1c1149ae4e255fec14843d64868878",
+        "fid": "72",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Portugal.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 243733
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "e7a6a4d0-d92c-4b8a-abd1-3425349cb1f1",
+      "start_line": 1677,
+      "success_line": 1681,
+      "start": 1642786584.007743,
+      "success": 1642786598.5954766,
+      "file": {
+        "etag": "2f1c1149ae4e255fec14843d64868878",
+        "fid": "72",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Portugal.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 243733
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "7f097c06-7b75-4469-a96a-f074e21ac312",
+      "start_line": 1684,
+      "success_line": 1688,
+      "start": 1642786626.1115317,
+      "success": 1642786640.6492698,
+      "file": {
+        "etag": "35c962c2035851be35f850ef31143f90",
+        "fid": "70",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "9e20e2ea-dbf9-4c28-a9b0-da80814c64cc",
+      "start_line": 1695,
+      "success_line": 1699,
+      "start": 1642786698.2633376,
+      "success": 1642786712.9842498,
+      "file": {
+        "etag": "61e9767a73e4e",
+        "fid": "67",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642690170000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 36227
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "be0e62fd-6db3-4773-b0d5-0da1df1eec83",
+      "start_line": 1707,
+      "success_line": 1711,
+      "start": 1642787168.8577352,
+      "success": 1642787183.4655664,
+      "file": {
+        "etag": "61e9767a73e4e",
+        "fid": "67",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642690170000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 36227
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "fd447bec-b6cb-4d5d-8f92-0131c9987a31",
+      "start_line": 2157,
+      "success_line": 2161,
+      "start": 1642796243.9890451,
+      "success": 1642796258.634411,
+      "file": {
+        "etag": "35c962c2035851be35f850ef31143f90",
+        "fid": "70",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "9a86e814-1226-4120-a0b3-101ce89d9e87",
+      "start_line": 3822,
+      "success_line": 3826,
+      "start": 1642877232.6119037,
+      "success": 1642877247.1591911,
+      "file": {
+        "etag": "35c962c2035851be35f850ef31143f90",
+        "fid": "70",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "6d8a73e3-f1b4-4ccf-a57c-d9aaf51cf859",
+      "start_line": 5024,
+      "success_line": 5028,
+      "start": 1642938952.2456133,
+      "success": 1642938966.7813208,
+      "file": {
+        "etag": "8e4a56d36dab434efacfaa24d2720d6c",
+        "fid": "71",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Teotihuacan.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 228789
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "c6e72c10-93b6-4173-b2d9-cfb9d7678add",
+      "start_line": 6548,
+      "success_line": 6552,
+      "start": 1642964094.2967439,
+      "success": 1642964108.917825,
+      "file": {
+        "etag": "61ed98723be61",
+        "fid": "67",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642961010000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 0
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "4d73b635-bf21-4670-b672-9a1a84af6a65",
+      "start_line": 7059,
+      "success_line": 7063,
+      "start": 1643016205.3420815,
+      "success": 1643016220.0218325,
+      "file": {
+        "etag": "ed4b60fa7e646e180c38b839e16094a8",
+        "fid": "66",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642690170000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "d06d71b1-84e9-469d-976a-149d57b9baa0",
+      "start_line": 7484,
+      "success_line": 7488,
+      "start": 1643028510.9714785,
+      "success": 1643028525.4937649,
+      "file": {
+        "etag": "ed4b60fa7e646e180c38b839e16094a8",
+        "fid": "66",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642690170000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "8384f106-a261-49e8-88f8-64d90fb54ba7",
+      "start_line": 7491,
+      "success_line": 7495,
+      "start": 1643028551.8062797,
+      "success": 1643028566.429642,
+      "file": {
+        "etag": "61e9767a92669",
+        "fid": "69",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642690170000,
+        "name": "Photos",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 1011464
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "093063cf-6b96-463a-a7a8-08bd0a730b59",
+      "start_line": 7503,
+      "success_line": 7507,
+      "start": 1643028917.0917795,
+      "success": 1643028931.8142602,
+      "file": {
+        "etag": "ed4b60fa7e646e180c38b839e16094a8",
+        "fid": "66",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642690170000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "f63be472-554d-4e4b-be2c-4474bdc38545",
+      "start_line": 7542,
+      "success_line": 7546,
+      "start": 1643029293.3783221,
+      "success": 1643029307.9630094,
+      "file": {
+        "etag": "61e9767a92669",
+        "fid": "69",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642690170000,
+        "name": "Photos",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 1011464
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "a1aa0ec3-3eb3-4636-9e66-ed23731508ff",
+      "start_line": 7567,
+      "success_line": 7571,
+      "start": 1643029973.2704048,
+      "success": 1643029987.8774571,
+      "file": {
+        "etag": "61ee603434b83",
+        "fid": "67",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1643012148000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 7917
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "db642ef4-d8ff-441b-9897-7d2aab019ed4",
+      "start_line": 7596,
+      "success_line": 7600,
+      "start": 1643030103.5311875,
+      "success": 1643030118.040329,
+      "file": {
+        "etag": "2f1c1149ae4e255fec14843d64868878",
+        "fid": "72",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642690170000,
+        "name": "Portugal.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 243733
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "06e17e8a-a9ca-4b68-9290-46e4b2327f6c",
+      "start_line": 7603,
+      "success_line": 7607,
+      "start": 1643030136.369924,
+      "success": 1643030151.0837035,
+      "file": {
+        "etag": "61ee603434b83",
+        "fid": "67",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1643012148000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 7917
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "296adb28-a53c-4b61-b2a7-f63e51c41bf8",
+      "start_line": 7610,
+      "success_line": 7614,
+      "start": 1643030173.0245204,
+      "success": 1643030187.564885,
+      "file": {
+        "etag": "ed4b60fa7e646e180c38b839e16094a8",
+        "fid": "66",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642690170000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_2",
+      "transition_id": "e16396f0-14e5-40d0-91fe-eec9c7bfe87e",
+      "start_line": 8036,
+      "success_line": 8040,
+      "start": 1643037225.4441717,
+      "success": 1643037239.9479742,
+      "file": {
+        "etag": "c69739518e6c978f534f2c929be484bc",
+        "fid": "180",
+        "file_type": "file",
+        "mime": "text/plain",
+        "mtime": 1642683334000,
+        "name": "world.txt",
+        "path": "/Documents",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 7917
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "a94a114e-b721-47e7-8ca5-2f8878759b08",
+      "start_line": 1424,
+      "success_line": 1428,
+      "start": 1642746801.467912,
+      "success": 1642746821.3076112,
+      "file": {
+        "etag": null,
+        "fid": "80",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642714862000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 31,
+        "share_permissions": 19,
+        "size": null
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "e176cc5d-70ef-45e1-b85d-2a7197dee842",
+      "start_line": 1669,
+      "success_line": 1673,
+      "start": 1642750178.131234,
+      "success": 1642750197.9675522,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "c58b6a05-3f66-44d6-ab40-197372d5a5a4",
+      "start_line": 3480,
+      "success_line": 3484,
+      "start": 1642798386.2624662,
+      "success": 1642798406.2373652,
+      "file": {
+        "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+        "fid": "80",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "773cd509-7d6a-4de2-afa8-f55ccb112b33",
+      "start_line": 3487,
+      "success_line": 3491,
+      "start": 1642798445.3601506,
+      "success": 1642798465.1435173,
+      "file": {
+        "etag": "1914e1111f0eb734a75f6a5e9baea2be",
+        "fid": "82",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Portugal.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 243733
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "7d0c6b42-753e-4746-a0af-cdaacb9199c2",
+      "start_line": 3535,
+      "success_line": 3539,
+      "start": 1642800080.8723087,
+      "success": 1642800100.6912692,
+      "file": {
+        "etag": "1914e1111f0eb734a75f6a5e9baea2be",
+        "fid": "82",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Portugal.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 243733
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "a261e808-11c3-401b-aff8-73d9a7e00bc8",
+      "start_line": 3542,
+      "success_line": 3546,
+      "start": 1642800136.8634517,
+      "success": 1642800156.624583,
+      "file": {
+        "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+        "fid": "80",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "c3c0a4f5-c1c3-4e9b-b904-cb799450f1a5",
+      "start_line": 3720,
+      "success_line": 3724,
+      "start": 1642833082.6683187,
+      "success": 1642833102.379248,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "86a2ccc3-c702-4833-bfb8-0056550c6010",
+      "start_line": 3733,
+      "success_line": 3737,
+      "start": 1642833516.344164,
+      "success": 1642833536.038652,
+      "file": {
+        "etag": "61eb2460084bf",
+        "fid": "77",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642786692000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 121220
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "31883a0e-6f60-45a1-9f9e-9c1616e60a68",
+      "start_line": 4473,
+      "success_line": 4477,
+      "start": 1642851430.2593112,
+      "success": 1642851450.0386777,
+      "file": {
+        "etag": "61e97c948888f",
+        "fid": "79",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642691732000,
+        "name": "Photos",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 1011464
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "b2c8827b-01a2-4961-851b-71613bf4890c",
+      "start_line": 5327,
+      "success_line": 5331,
+      "start": 1642875085.5242774,
+      "success": 1642875105.2927718,
+      "file": {
+        "etag": "1914e1111f0eb734a75f6a5e9baea2be",
+        "fid": "82",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Portugal.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 243733
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "3467199b-8f46-4600-ae45-2ccb2256a809",
+      "start_line": 6816,
+      "success_line": 6820,
+      "start": 1642952270.584258,
+      "success": 1642952290.350718,
+      "file": {
+        "etag": "7fbb1ab6e1e3f42d71ae825bc31bb767",
+        "fid": "78",
+        "file_type": "file",
+        "mime": "application/vnd.oasis.opendocument.text",
+        "mtime": 1642691732000,
+        "name": "Example.odt",
+        "path": "/Documents",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 36227
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "b3221798-a006-467c-bcaf-c8048cf4ff39",
+      "start_line": 6841,
+      "success_line": 6845,
+      "start": 1642952423.8774087,
+      "success": 1642952443.6199658,
+      "file": {
+        "etag": "7fbb1ab6e1e3f42d71ae825bc31bb767",
+        "fid": "78",
+        "file_type": "file",
+        "mime": "application/vnd.oasis.opendocument.text",
+        "mtime": 1642691732000,
+        "name": "Example.odt",
+        "path": "/Documents",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 36227
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "c4300cff-d951-488e-9717-0e663800c014",
+      "start_line": 6853,
+      "success_line": 6857,
+      "start": 1642952846.3289893,
+      "success": 1642952866.130863,
+      "file": {
+        "etag": "7715df51d9f71fa099cd4fd39c5c1ee5",
+        "fid": "129",
+        "file_type": "file",
+        "mime": "image/png",
+        "mtime": 1642683311000,
+        "name": "movie.png",
+        "path": "/Documents",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 855
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "c1ed81d7-ff72-4675-aaee-989e724956d6",
+      "start_line": 6910,
+      "success_line": 6914,
+      "start": 1642955149.402613,
+      "success": 1642955169.3176825,
+      "file": {
+        "etag": "61ed78d4c5f40",
+        "fid": "77",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642952916000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 145602
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "15425629-32e1-4b4a-a4de-dc897cc3e2cf",
+      "start_line": 6923,
+      "success_line": 6927,
+      "start": 1642955209.7250059,
+      "success": 1642955229.4337811,
+      "file": {
+        "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+        "fid": "80",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "ea2c9884-4145-4c41-91de-6eb68d57dd59",
+      "start_line": 6964,
+      "success_line": 6968,
+      "start": 1642956203.7019384,
+      "success": 1642956223.423665,
+      "file": {
+        "etag": "61ed822aea7a4",
+        "fid": "77",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642955306000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 145602
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "25325903-1803-4c52-bd45-015f768b0e46",
+      "start_line": 6994,
+      "success_line": 6998,
+      "start": 1642957062.3668191,
+      "success": 1642957082.1321564,
+      "file": {
+        "etag": "61ed822aea7a4",
+        "fid": "77",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642955306000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 145602
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "a0d6818c-f4a5-4591-9e15-dd38334ad433",
+      "start_line": 7001,
+      "success_line": 7005,
+      "start": 1642957120.0757139,
+      "success": 1642957139.8048224,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "ff96c694-760b-43d8-a5c7-ef537dbab95e",
+      "start_line": 7094,
+      "success_line": 7098,
+      "start": 1642961090.0865395,
+      "success": 1642961109.8265386,
+      "file": {
+        "etag": "61ed822aea7a4",
+        "fid": "77",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642955306000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 145602
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "50d94c59-3dde-453d-b226-61eff0c7b584",
+      "start_line": 7259,
+      "success_line": 7263,
+      "start": 1643017477.9098926,
+      "success": 1643017497.7178237,
+      "file": {
+        "etag": "61e9594f73fa6",
+        "fid": "35",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642682703000,
+        "name": "Marketing",
+        "path": "/",
+        "permissions": 7,
+        "share_permissions": 15,
+        "size": 7582876
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "812886d5-eb9f-4fe6-9179-ae210cf04e19",
+      "start_line": 7284,
+      "success_line": 7288,
+      "start": 1643017593.8778856,
+      "success": 1643017613.6025038,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "83bcf0cf-77a9-4c1d-93e2-b5ddcaa66ad8",
+      "start_line": 7291,
+      "success_line": 7295,
+      "start": 1643017632.315195,
+      "success": 1643017652.00261,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "29aa5f4b-a6d4-483d-be0e-0a4f66665ba9",
+      "start_line": 7298,
+      "success_line": 7302,
+      "start": 1643017697.9381676,
+      "success": 1643017717.652561,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "0183cf32-674d-4623-a7f4-51647e711b25",
+      "start_line": 7792,
+      "success_line": 7796,
+      "start": 1643025000.69706,
+      "success": 1643025020.5080674,
+      "file": {
+        "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+        "fid": "80",
+        "file_type": "file",
+        "mime": "image/jpeg",
+        "mtime": 1642691732000,
+        "name": "Lake-Constance.jpg",
+        "path": "/Photos",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 538942
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "4015c771-f4a1-42f7-850c-353f2b7a4c39",
+      "start_line": 7886,
+      "success_line": 7890,
+      "start": 1643032079.1497326,
+      "success": 1643032098.9340649,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "d29c3e1c-b225-4766-a98b-adfcf57f98db",
+      "start_line": 7899,
+      "success_line": 7903,
+      "start": 1643032135.4431758,
+      "success": 1643032155.159908,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "63e1f149-4be6-409e-9b91-e93747344445",
+      "start_line": 8275,
+      "success_line": 8279,
+      "start": 1643038699.200211,
+      "success": 1643038718.9449039,
+      "file": {
+        "etag": "78b525544abf1df2589065e4b4013749",
+        "fid": "76",
+        "file_type": "file",
+        "mime": "application/pdf",
+        "mtime": 1642691732000,
+        "name": "ownCloud Manual.pdf",
+        "path": "/",
+        "permissions": 27,
+        "share_permissions": 19,
+        "size": 6110772
+      },
+      "menu_action": "Download"
+    },
+    {
+      "host": "internal_employee_3",
+      "transition_id": "1f96c4f2-b719-4869-9462-898416e7ade4",
+      "start_line": 8909,
+      "success_line": 8913,
+      "start": 1643058387.5148478,
+      "success": 1643058407.3026423,
+      "file": {
+        "etag": "61ed822aea7a4",
+        "fid": "77",
+        "file_type": "dir",
+        "mime": "httpd/unix-directory",
+        "mtime": 1642955306000,
+        "name": "Documents",
+        "path": "/",
+        "permissions": 31,
+        "share_permissions": 31,
+        "size": 145602
+      },
+      "menu_action": "Download"
+    }
+  ],
+  "matches": [
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 673,
+        "ts": 1643016205.0,
+        "time": "24/Jan/2022:09:23:25 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "hew9rtqqq6p"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6128196,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "4d73b635-bf21-4670-b672-9a1a84af6a65",
+          "start_line": 7059,
+          "success_line": 7063,
+          "start": 1643016205.3420815,
+          "success": 1643016220.0218325,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 1057,
+        "ts": 1643017478.0,
+        "time": "24/Jan/2022:09:44:38 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Marketing"
+          ],
+          "downloadStartSecret": [
+            "yf144ftlmuq"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 7656444,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "50d94c59-3dde-453d-b226-61eff0c7b584",
+          "start_line": 7259,
+          "success_line": 7263,
+          "start": 1643017477.9098926,
+          "success": 1643017497.7178237,
+          "file": {
+            "etag": "61e9594f73fa6",
+            "fid": "35",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642682703000,
+            "name": "Marketing",
+            "path": "/",
+            "permissions": 7,
+            "share_permissions": 15,
+            "size": 7582876
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 1068,
+        "ts": 1643017594.0,
+        "time": "24/Jan/2022:09:46:34 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "86p1c1gqrqc"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131204,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "812886d5-eb9f-4fe6-9179-ae210cf04e19",
+          "start_line": 7284,
+          "success_line": 7288,
+          "start": 1643017593.8778856,
+          "success": 1643017613.6025038,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 1070,
+        "ts": 1643017632.0,
+        "time": "24/Jan/2022:09:47:12 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "a7hscqdscyh"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131204,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "83bcf0cf-77a9-4c1d-93e2-b5ddcaa66ad8",
+          "start_line": 7291,
+          "success_line": 7295,
+          "start": 1643017632.315195,
+          "success": 1643017652.00261,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 1074,
+        "ts": 1643017698.0,
+        "time": "24/Jan/2022:09:48:18 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "76wykg33x1k"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131204,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "29aa5f4b-a6d4-483d-be0e-0a4f66665ba9",
+          "start_line": 7298,
+          "success_line": 7302,
+          "start": 1643017697.9381676,
+          "success": 1643017717.652561,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 1663,
+        "ts": 1643025001.0,
+        "time": "24/Jan/2022:11:50:01 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Lake-Constance.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "ddtgrbmezxe"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 544402,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "0183cf32-674d-4623-a7f4-51647e711b25",
+          "start_line": 7792,
+          "success_line": 7796,
+          "start": 1643025000.69706,
+          "success": 1643025020.5080674,
+          "file": {
+            "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2152,
+        "ts": 1643028511.0,
+        "time": "24/Jan/2022:12:48:31 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "v8hc5h3vxq"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6128195,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "d06d71b1-84e9-469d-976a-149d57b9baa0",
+          "start_line": 7484,
+          "success_line": 7488,
+          "start": 1643028510.9714785,
+          "success": 1643028525.4937649,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2154,
+        "ts": 1643028552.0,
+        "time": "24/Jan/2022:12:49:12 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Photos"
+          ],
+          "downloadStartSecret": [
+            "y4m6mkz3fq8"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 1025468,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "8384f106-a261-49e8-88f8-64d90fb54ba7",
+          "start_line": 7491,
+          "success_line": 7495,
+          "start": 1643028551.8062797,
+          "success": 1643028566.429642,
+          "file": {
+            "etag": "61e9767a92669",
+            "fid": "69",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642690170000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2168,
+        "ts": 1643028917.0,
+        "time": "24/Jan/2022:12:55:17 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "lwtadheaxy"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131203,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "093063cf-6b96-463a-a7a8-08bd0a730b59",
+          "start_line": 7503,
+          "success_line": 7507,
+          "start": 1643028917.0917795,
+          "success": 1643028931.8142602,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2187,
+        "ts": 1643029293.0,
+        "time": "24/Jan/2022:13:01:33 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Photos"
+          ],
+          "downloadStartSecret": [
+            "pvxllhs4nba"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 1022460,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "f63be472-554d-4e4b-be2c-4474bdc38545",
+          "start_line": 7542,
+          "success_line": 7546,
+          "start": 1643029293.3783221,
+          "success": 1643029307.9630094,
+          "file": {
+            "etag": "61e9767a92669",
+            "fid": "69",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642690170000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2313,
+        "ts": 1643029973.0,
+        "time": "24/Jan/2022:13:12:53 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Documents"
+          ],
+          "downloadStartSecret": [
+            "tlib2mjrk6"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 12865,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "a1aa0ec3-3eb3-4636-9e66-ed23731508ff",
+          "start_line": 7567,
+          "success_line": 7571,
+          "start": 1643029973.2704048,
+          "success": 1643029987.8774571,
+          "file": {
+            "etag": "61ee603434b83",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1643012148000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 7917
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2327,
+        "ts": 1643030103.0,
+        "time": "24/Jan/2022:13:15:03 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Portugal.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "0is3qgg9vdgl"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 245382,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "db642ef4-d8ff-441b-9897-7d2aab019ed4",
+          "start_line": 7596,
+          "success_line": 7600,
+          "start": 1643030103.5311875,
+          "success": 1643030118.040329,
+          "file": {
+            "etag": "2f1c1149ae4e255fec14843d64868878",
+            "fid": "72",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2329,
+        "ts": 1643030136.0,
+        "time": "24/Jan/2022:13:15:36 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Documents"
+          ],
+          "downloadStartSecret": [
+            "hwxlnjfjb1"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 12865,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "06e17e8a-a9ca-4b68-9290-46e4b2327f6c",
+          "start_line": 7603,
+          "success_line": 7607,
+          "start": 1643030136.369924,
+          "success": 1643030151.0837035,
+          "file": {
+            "etag": "61ee603434b83",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1643012148000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 7917
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2331,
+        "ts": 1643030173.0,
+        "time": "24/Jan/2022:13:16:13 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "wt1pvyqiw6g"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131204,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "296adb28-a53c-4b61-b2a7-f63e51c41bf8",
+          "start_line": 7610,
+          "success_line": 7614,
+          "start": 1643030173.0245204,
+          "success": 1643030187.564885,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2782,
+        "ts": 1643032079.0,
+        "time": "24/Jan/2022:13:47:59 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "6882j0athme"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6128196,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "4015c771-f4a1-42f7-850c-353f2b7a4c39",
+          "start_line": 7886,
+          "success_line": 7890,
+          "start": 1643032079.1497326,
+          "success": 1643032098.9340649,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 2786,
+        "ts": 1643032135.0,
+        "time": "24/Jan/2022:13:48:55 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "43254hk4j02"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6128196,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "d29c3e1c-b225-4766-a98b-adfcf57f98db",
+          "start_line": 7899,
+          "success_line": 7903,
+          "start": 1643032135.4431758,
+          "success": 1643032155.159908,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 3117,
+        "ts": 1643037225.0,
+        "time": "24/Jan/2022:15:13:45 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Documents/world.txt",
+        "query": {
+          "downloadStartSecret": [
+            "u8u9sm8wvr"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 7884,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "e16396f0-14e5-40d0-91fe-eec9c7bfe87e",
+          "start_line": 8036,
+          "success_line": 8040,
+          "start": 1643037225.4441717,
+          "success": 1643037239.9479742,
+          "file": {
+            "etag": "c69739518e6c978f534f2c929be484bc",
+            "fid": "180",
+            "file_type": "file",
+            "mime": "text/plain",
+            "mtime": 1642683334000,
+            "name": "world.txt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 7917
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 3430,
+        "ts": 1643038699.0,
+        "time": "24/Jan/2022:15:38:19 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "hbidygu8pr"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131203,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "63e1f149-4be6-409e-9b91-e93747344445",
+          "start_line": 8275,
+          "success_line": 8279,
+          "start": 1643038699.200211,
+          "success": 1643038718.9449039,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.1",
+        "line": 5469,
+        "ts": 1643058388.0,
+        "time": "24/Jan/2022:21:06:28 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Documents"
+          ],
+          "downloadStartSecret": [
+            "6b4hbeneu5i"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 149824,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "1f96c4f2-b719-4869-9462-898416e7ade4",
+          "start_line": 8909,
+          "success_line": 8913,
+          "start": 1643058387.5148478,
+          "success": 1643058407.3026423,
+          "file": {
+            "etag": "61ed822aea7a4",
+            "fid": "77",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642955306000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 145602
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 213,
+        "ts": 1642746802.0,
+        "time": "21/Jan/2022:06:33:22 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Lake-Constance.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "1jcj6vlljrw"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 541394,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "a94a114e-b721-47e7-8ca5-2f8878759b08",
+          "start_line": 1424,
+          "success_line": 1428,
+          "start": 1642746801.467912,
+          "success": 1642746821.3076112,
+          "file": {
+            "etag": null,
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642714862000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 31,
+            "share_permissions": 19,
+            "size": null
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 499,
+        "ts": 1642750178.0,
+        "time": "21/Jan/2022:07:29:38 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "ouvbcpvc2zc"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131204,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "e176cc5d-70ef-45e1-b85d-2a7197dee842",
+          "start_line": 1669,
+          "success_line": 1673,
+          "start": 1642750178.131234,
+          "success": 1642750197.9675522,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 1349,
+        "ts": 1642761715.0,
+        "time": "21/Jan/2022:10:41:55 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Portugal.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "c1lj7xapzx4"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 248389,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "3ee2bc18-1e39-4127-a0d3-6b189753a348",
+          "start_line": 673,
+          "success_line": 677,
+          "start": 1642761714.9208977,
+          "success": 1642761729.4832995,
+          "file": {
+            "etag": "2f1c1149ae4e255fec14843d64868878",
+            "fid": "72",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 2038,
+        "ts": 1642769044.0,
+        "time": "21/Jan/2022:12:44:04 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "e1cendwerng"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6128196,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": []
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 2205,
+        "ts": 1642770704.0,
+        "time": "21/Jan/2022:13:11:44 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "uyate06fkk"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131203,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": []
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 2245,
+        "ts": 1642771236.0,
+        "time": "21/Jan/2022:13:20:36 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "w96jlpplf8s"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6131204,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": []
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 2248,
+        "ts": 1642771280.0,
+        "time": "21/Jan/2022:13:21:20 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Documents"
+          ],
+          "downloadStartSecret": [
+            "snlybmdping"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 38086,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": []
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 2274,
+        "ts": 1642771729.0,
+        "time": "21/Jan/2022:13:28:49 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/ownCloud Manual.pdf",
+        "query": {
+          "downloadStartSecret": [
+            "3tikni5gzrj"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 6128196,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": []
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 3838,
+        "ts": 1642786584.0,
+        "time": "21/Jan/2022:17:36:24 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Portugal.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "wsab33tpp8a"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 245381,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "e7a6a4d0-d92c-4b8a-abd1-3425349cb1f1",
+          "start_line": 1677,
+          "success_line": 1681,
+          "start": 1642786584.007743,
+          "success": 1642786598.5954766,
+          "file": {
+            "etag": "2f1c1149ae4e255fec14843d64868878",
+            "fid": "72",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 3843,
+        "ts": 1642786626.0,
+        "time": "21/Jan/2022:17:37:06 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Lake-Constance.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "4uibpcpc6zf"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 544402,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "7f097c06-7b75-4469-a96a-f074e21ac312",
+          "start_line": 1684,
+          "success_line": 1688,
+          "start": 1642786626.1115317,
+          "success": 1642786640.6492698,
+          "file": {
+            "etag": "35c962c2035851be35f850ef31143f90",
+            "fid": "70",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 3863,
+        "ts": 1642786698.0,
+        "time": "21/Jan/2022:17:38:18 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Documents"
+          ],
+          "downloadStartSecret": [
+            "j7edhoac54c"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 41094,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "9e20e2ea-dbf9-4c28-a9b0-da80814c64cc",
+          "start_line": 1695,
+          "success_line": 1699,
+          "start": 1642786698.2633376,
+          "success": 1642786712.9842498,
+          "file": {
+            "etag": "61e9767a73e4e",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642690170000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 36227
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 3902,
+        "ts": 1642787169.0,
+        "time": "21/Jan/2022:17:46:09 +0000",
+        "method": "GET",
+        "path": "/index.php/apps/files/ajax/download.php",
+        "query": {
+          "dir": [
+            "/"
+          ],
+          "files": [
+            "Documents"
+          ],
+          "downloadStartSecret": [
+            "396dmnu5meo"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 41094,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "be0e62fd-6db3-4773-b0d5-0da1df1eec83",
+          "start_line": 1707,
+          "success_line": 1711,
+          "start": 1642787168.8577352,
+          "success": 1642787183.4655664,
+          "file": {
+            "etag": "61e9767a73e4e",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642690170000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 36227
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 5152,
+        "ts": 1642796244.0,
+        "time": "21/Jan/2022:20:17:24 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Lake-Constance.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "0yxouvm0amu"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 541394,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_2",
+          "transition_id": "fd447bec-b6cb-4d5d-8f92-0131c9987a31",
+          "start_line": 2157,
+          "success_line": 2161,
+          "start": 1642796243.9890451,
+          "success": 1642796258.634411,
+          "file": {
+            "etag": "35c962c2035851be35f850ef31143f90",
+            "fid": "70",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 5488,
+        "ts": 1642798386.0,
+        "time": "21/Jan/2022:20:53:06 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Lake-Constance.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "3xuidqywsxa"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 541394,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "c58b6a05-3f66-44d6-ab40-197372d5a5a4",
+          "start_line": 3480,
+          "success_line": 3484,
+          "start": 1642798386.2624662,
+          "success": 1642798406.2373652,
+          "file": {
+            "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 5494,
+        "ts": 1642798445.0,
+        "time": "21/Jan/2022:20:54:05 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Portugal.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "2jjz0gxppii"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 248389,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "773cd509-7d6a-4de2-afa8-f55ccb112b33",
+          "start_line": 3487,
+          "success_line": 3491,
+          "start": 1642798445.3601506,
+          "success": 1642798465.1435173,
+          "file": {
+            "etag": "1914e1111f0eb734a75f6a5e9baea2be",
+            "fid": "82",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 5626,
+        "ts": 1642800081.0,
+        "time": "21/Jan/2022:21:21:21 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Portugal.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "ah4aq0r329"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 248388,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "7d0c6b42-753e-4746-a0af-cdaacb9199c2",
+          "start_line": 3535,
+          "success_line": 3539,
+          "start": 1642800080.8723087,
+          "success": 1642800100.6912692,
+          "file": {
+            "etag": "1914e1111f0eb734a75f6a5e9baea2be",
+            "fid": "82",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "menu_action": "Download"
+        }
+      ]
+    },
+    {
+      "server": {
+        "file": "other_vhosts_access.log.4",
+        "line": 5630,
+        "ts": 1642800137.0,
+        "time": "21/Jan/2022:21:22:17 +0000",
+        "method": "GET",
+        "path": "/remote.php/webdav/Photos/Lake-Constance.jpg",
+        "query": {
+          "downloadStartSecret": [
+            "r92na8cbhjd"
+          ]
+        },
+        "status": 200,
+        "logged_bytes": 544402,
+        "host_client": [
+          "cloud.dmz.smith.russellmitchell.com:443",
+          "172.19.130.68"
+        ]
+      },
+      "matches": [
+        {
+          "host": "internal_employee_3",
+          "transition_id": "a261e808-11c3-401b-aff8-73d9a7e00bc8",
+          "start_line": 3542,
+          "success_line": 3546,
+          "start": 1642800136.8634517,
+          "success": 1642800156.624583,
+          "file": {
+            "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "menu_action": "Download"
+        }
+      ]
+    }
+  ]
+}

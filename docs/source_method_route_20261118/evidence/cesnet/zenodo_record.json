@@ -1,0 +1,135 @@
+{
+  "created": "2025-08-06T14:53:03.798965+00:00",
+  "modified": "2026-10-16T05:50:22.252104+00:00",
+  "id": 16753890,
+  "conceptrecid": "16753889",
+  "doi": "10.5281/zenodo.16753890",
+  "conceptdoi": "10.5281/zenodo.16753889",
+  "doi_url": "https://doi.org/10.5281/zenodo.16753890",
+  "metadata": {
+    "title": "CESNET-CC25: Dataset for detection of C&C communication of botnets in the IP flow format",
+    "doi": "10.5281/zenodo.16753890",
+    "publication_date": "2025-08-06",
+    "description": "<p><strong>CESNET-CC25</strong> is a dataset of real-world botnet Command-and-Control (C&amp;C) communication and benign traffic from an Internet service provider backbone, created to evaluate the detection of modern botnets in network traffic, including decentralized architectures and encrypted communication. It contains <strong>32 captures of live botnet samples</strong> of the families Mirai, Gafgyt, Hailbot, Kaiji, Miori and Xorbot, <strong>1,380 hours</strong> of C&amp;C traffic (160,743 IP flows) and <strong>194 million benign IP flows</strong> from the CESNET3 network. Existing datasets such as CTU-13 are more than a decade old and mostly short; CESNET-CC25 captures contemporary threats over long periods (up to 167 hours per sample), which is essential for multi-flow and periodicity-based detection.</p>\n<h2>The CESNET-CC25 dataset in three formats</h2>\n<ul>\n<li>PCAP (raw botnet packets): <a href=\"https://zenodo.org/records/16752462\">https://zenodo.org/records/16752462</a></li>\n<li>IP flows (ipfixprobe, CSV): <a href=\"https://zenodo.org/records/16753890\">https://zenodo.org/records/16753890</a> <strong>(this record)</strong></li>\n<li>Periodic features of multiflow time series (CSV): <a href=\"https://zenodo.org/records/16753981\">https://zenodo.org/records/16753981</a></li>\n</ul>\n<p>This record holds the dataset as <strong>IP flows in CSV</strong>, exported by <a href=\"https://github.com/CESNET/ipfixprobe\">ipfixprobe</a>: the botnet flows extracted from the PCAP captures and the benign flows of the CESNET3 network (anonymized IP addresses). Besides the usual flow fields, the records include packet-level sequences (packet lengths, directions and inter-packet times) for detailed per-flow analysis.</p>\n<h2>How the data were captured</h2>\n<ul>\n<li><strong>Botnet traffic</strong> was captured in an isolated laboratory: each botnet binary ran in its own virtual machine on a bare-metal host, the traffic was mirrored at the router and recorded with <code>tcpdump</code> on a dedicated monitoring probe. The traffic was supervised continuously and every malicious activity other than the C&amp;C communication (e.g. attack traffic) was promptly identified and blocked.</li>\n<li><strong>Benign traffic</strong> comes from live traffic of CESNET3, the Czech national research and education network, exported as IP flows by <a href=\"https://github.com/CESNET/ipfixprobe\">ipfixprobe</a> on monitoring probes behind network TAPs. The IP addresses of the benign traffic were anonymized.</li>\n</ul>\n<h2>Directory structure</h2>\n<ul>\n<li><code>benign/</code>: benign IP flows from the CESNET3 network</li>\n<li><code>botnet/&lt;folder&gt;/</code>: IP flows of one botnet sample (table below)</li>\n</ul>\n<h2>Train/test split</h2>\n<p>The flows are split chronologically into training and test parts (about 70:30):</p>\n<table>\n<tbody>\n<tr>\n<th>Traffic</th>\n<th>Train IP flows</th>\n<th>Test IP flows</th>\n<th>Total</th>\n</tr>\n<tr>\n<td>Benign</td>\n<td>132,683,119</td>\n<td>61,467,627</td>\n<td>194,150,746</td>\n</tr>\n<tr>\n<td>Botnet</td>\n<td>97,120</td>\n<td>63,623</td>\n<td>160,743</td>\n</tr>\n</tbody>\n</table>\n<h2>Botnet samples</h2>\n<table>\n<tbody>\n<tr>\n<th>Folder</th>\n<th>Family</th>\n<th>C&amp;C IP</th>\n<th>Port</th>\n<th>Duration [h]</th>\n<th>C&amp;C packets</th>\n<th>C&amp;C IP flows</th>\n</tr>\n<tr>\n<td>1-u4</td>\n<td>Gafgyt</td>\n<td>38.134.189.10</td>\n<td>12345</td>\n<td>138.21</td>\n<td>33,793</td>\n<td>8,290</td>\n</tr>\n<tr>\n<td>2-u5</td>\n<td>Mirai</td>\n<td>107.172.51.228</td>\n<td>3778</td>\n<td>24.71</td>\n<td>92,346</td>\n<td>22,263</td>\n</tr>\n<tr>\n<td>3-u6</td>\n<td>Mirai</td>\n<td>83.222.191.90</td>\n<td>13566</td>\n<td>25.43</td>\n<td>10,767</td>\n<td>1,954</td>\n</tr>\n<tr>\n<td>4-u7</td>\n<td>Mirai</td>\n<td>141.98.10.115</td>\n<td>60195</td>\n<td>25.23</td>\n<td>6,256</td>\n<td>1,532</td>\n</tr>\n<tr>\n<td>5-u8</td>\n<td>Mirai</td>\n<td>83.222.191.90</td>\n<td>13566</td>\n<td>25.07</td>\n<td>10,527</td>\n<td>1,879</td>\n</tr>\n<tr>\n<td>6-u8_2</td>\n<td>Kaiji</td>\n<td>158.178.235.53</td>\n<td>888</td>\n<td>167.01</td>\n<td>145,787</td>\n<td>3,635</td>\n</tr>\n<tr>\n<td>7-u6_3</td>\n<td>Mirai</td>\n<td>160.191.245.5</td>\n<td>56999</td>\n<td>20.43</td>\n<td>121,308</td>\n<td>17,464</td>\n</tr>\n<tr>\n<td>8-u8_3</td>\n<td>Mirai</td>\n<td>160.191.245.5</td>\n<td>56999</td>\n<td>20.17</td>\n<td>116,199</td>\n<td>16,609</td>\n</tr>\n<tr>\n<td>9-u0_0</td>\n<td>Miori</td>\n<td>79.124.40.48</td>\n<td>3277</td>\n<td>8.60</td>\n<td>19,889</td>\n<td>4,938</td>\n</tr>\n<tr>\n<td>10-u5_4</td>\n<td>Hailbot</td>\n<td>146.103.38.7</td>\n<td>4338*</td>\n<td>54.57</td>\n<td>16,024</td>\n<td>3,946</td>\n</tr>\n<tr>\n<td>11-u6_4</td>\n<td>Gafgyt</td>\n<td>103.130.214.198</td>\n<td>23</td>\n<td>3.12</td>\n<td>3,462</td>\n<td>975</td>\n</tr>\n<tr>\n<td>12-u7_4</td>\n<td>Mirai</td>\n<td>193.143.1.166</td>\n<td>1908</td>\n<td>1.98</td>\n<td>548</td>\n<td>126</td>\n</tr>\n<tr>\n<td>13-u8_4</td>\n<td>Hailbot</td>\n<td>146.103.38.7</td>\n<td>17526</td>\n<td>22.02</td>\n<td>4,300</td>\n<td>1,056</td>\n</tr>\n<tr>\n<td>14-u9</td>\n<td>Hailbot</td>\n<td>185.198.58.166</td>\n<td>18581*</td>\n<td>35.25</td>\n<td>6,851</td>\n<td>1,663</td>\n</tr>\n<tr>\n<td>15-u10</td>\n<td>Mirai</td>\n<td>156.244.6.20</td>\n<td>64715*</td>\n<td>47.32</td>\n<td>50,138</td>\n<td>583</td>\n</tr>\n<tr>\n<td>16-u11</td>\n<td>Gafgyt</td>\n<td>45.135.194.61</td>\n<td>6606</td>\n<td>10.39</td>\n<td>21,368</td>\n<td>125</td>\n</tr>\n<tr>\n<td>17-u10_3</td>\n<td>Hailbot</td>\n<td>172.86.73.60</td>\n<td>3130*</td>\n<td>70.02</td>\n<td>10,858</td>\n<td>2,540</td>\n</tr>\n<tr>\n<td>18-u11_2</td>\n<td>Mirai</td>\n<td>193.143.1.32*</td>\n<td>1440</td>\n<td>111.44</td>\n<td>28,078</td>\n<td>6,970</td>\n</tr>\n<tr>\n<td>19-u11_3</td>\n<td>Mirai</td>\n<td>172.86.73.60</td>\n<td>9823*</td>\n<td>68.98</td>\n<td>14,695</td>\n<td>3,412</td>\n</tr>\n<tr>\n<td>20-u9_4</td>\n<td>Gafgyt</td>\n<td>185.74.222.38</td>\n<td>8080</td>\n<td>15.41</td>\n<td>3,738</td>\n<td>928</td>\n</tr>\n<tr>\n<td>21-u10_4</td>\n<td>Mirai</td>\n<td>96.62.214.212</td>\n<td>3778</td>\n<td>22.49</td>\n<td>77,691</td>\n<td>18,918</td>\n</tr>\n<tr>\n<td>22-u11_5</td>\n<td>Gafgyt</td>\n<td>87.251.79.180</td>\n<td>12345</td>\n<td>42.94</td>\n<td>10,640</td>\n<td>2,610</td>\n</tr>\n<tr>\n<td>23-u12_5</td>\n<td>Gafgyt</td>\n<td>37.44.238.66</td>\n<td>666</td>\n<td>4.05</td>\n<td>987</td>\n<td>245</td>\n</tr>\n<tr>\n<td>24-u12_6</td>\n<td>Mirai</td>\n<td>84.200.24.112</td>\n<td>9931</td>\n<td>150.22</td>\n<td>36,415</td>\n<td>9,040</td>\n</tr>\n<tr>\n<td>25-u9_7</td>\n<td>Xorbot</td>\n<td>37.44.238.92</td>\n<td>443</td>\n<td>43.39</td>\n<td>156,215</td>\n<td>2,646</td>\n</tr>\n<tr>\n<td>26-u10_7</td>\n<td>Gafgyt</td>\n<td>162.0.214.70</td>\n<td>1111</td>\n<td>14.51</td>\n<td>9,892</td>\n<td>2,826</td>\n</tr>\n<tr>\n<td>27-u12_7</td>\n<td>Hailbot</td>\n<td>217.105.153.175</td>\n<td>11950</td>\n<td>2.03</td>\n<td>338</td>\n<td>94</td>\n</tr>\n<tr>\n<td>28-u9_8</td>\n<td>Gafgyt</td>\n<td>209.141.35.180</td>\n<td>23</td>\n<td>42.49</td>\n<td>53,901</td>\n<td>11,089</td>\n</tr>\n<tr>\n<td>29-u10_8</td>\n<td>Mirai</td>\n<td>159.89.101.70</td>\n<td>1440</td>\n<td>103.99</td>\n<td>26,103</td>\n<td>6,291</td>\n</tr>\n<tr>\n<td>30-u11_8</td>\n<td>Gafgyt</td>\n<td>196.251.80.231</td>\n<td>839</td>\n<td>1.23</td>\n<td>298</td>\n<td>75</td>\n</tr>\n<tr>\n<td>31-u9_9</td>\n<td>Gafgyt</td>\n<td>37.44.238.66</td>\n<td>666</td>\n<td>30.41</td>\n<td>7,697</td>\n<td>1,825</td>\n</tr>\n<tr>\n<td>32-u12_9</td>\n<td>Mirai</td>\n<td>209.141.59.9</td>\n<td>3778</td>\n<td>27.34</td>\n<td>15,634</td>\n<td>4,196</td>\n</tr>\n<tr>\n<td><strong>Total</strong></td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td><strong>1,380.44</strong></td>\n<td><strong>1,112,743</strong></td>\n<td><strong>160,743</strong></td>\n</tr>\n</tbody>\n</table>\n<h2>Recommendations for use</h2>\n<ul>\n<li>Build detectors on the statistical and behavioural features; leave out identifiers such as IP addresses, port numbers and protocol types. They are short-lived and do not generalize across networks and time.</li>\n<li>Botnet and benign traffic were captured at different points of the infrastructure, so inter-packet timing may differ for technical reasons; using it directly as a classification feature risks overfitting.</li>\n<li>Single flows of the two classes often look alike: the 160,743 botnet flows contain only 2,458 unique packet-length and direction sequences and part of them also occur in benign traffic. Multi-flow approaches (e.g. the periodic features record) avoid this ambiguity.</li>\n</ul>\n<h2>Safety notice</h2>\n<p>The data contain real malicious traffic and the addresses of real C&amp;C servers that were active at the time of capture. Use them for research and defence only; do not connect to the listed servers. The botnet binaries themselves are not part of the dataset.</p>\n<h2>Citation</h2>\n<p>If you use CESNET-CC25, please cite the paper:</p>\n<p>D. O&scaron;kera, J. Koumar, A. Pokorn&aacute;, K. Jeř&aacute;bek and T. Čejka, \"Botnet Detection Through Periodic Patterns in Command-and-Control Network Traffic,\" in <em>Proc. 21st International Conference on Network and Service Management (CNSM)</em>, 2025.</p>\n<pre>@inproceedings{oskera2025botnet,\n  title     = {Botnet Detection Through Periodic Patterns in Command-and-Control Network Traffic},\n  author    = {O{\\v{s}}kera, Dominik and Koumar, Josef and Pokorn{\\'a}, Al{\\v{z}}b{\\v{e}}ta and Je{\\v{r}}{\\'a}bek, Kamil and {\\v{C}}ejka, Tom{\\'a}{\\v{s}}},\n  booktitle = {2025 21st International Conference on Network and Service Management (CNSM)},\n  year      = {2025}\n}</pre>\n<p>and the record(s) you used (DOI of this record, see above).</p>\n<h2>Acknowledgement and contact</h2>\n<p>Dominik O&scaron;kera, Josef Koumar (corresponding author, josef.koumar@fit.cvut.cz), Alžběta Pokorn&aacute;, Kamil Jeř&aacute;bek and Tom&aacute;&scaron; Čejka; Czech Technical University in Prague, CESNET a.l.e., Brno University of Technology, Czech University of Life Sciences Prague.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Oškera, Dominik",
+        "affiliation": "Czech Technical University in Prague"
+      },
+      {
+        "name": "Koumar, Josef",
+        "affiliation": "Czech Technical University in Prague",
+        "orcid": "0000-0002-3643-9723"
+      },
+      {
+        "name": "Pokorná, Alžběta",
+        "affiliation": "Czech University of Life Sciences Prague"
+      },
+      {
+        "name": "Jeřábek, Kamil",
+        "affiliation": "CESNET, zájmové sdružení právnických osob",
+        "orcid": "0000-0002-5317-9222"
+      },
+      {
+        "name": "Čejka, Tomáš",
+        "affiliation": "CESNET, zájmové sdružení právnických osob",
+        "orcid": "0000-0001-7794-9511"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "16753889"
+          }
+        }
+      ]
+    }
+  },
+  "title": "CESNET-CC25: Dataset for detection of C&C communication of botnets in the IP flow format",
+  "links": {
+    "self": "https://zenodo.org/api/records/16753890",
+    "self_html": "https://zenodo.org/records/16753890",
+    "preview_html": "https://zenodo.org/records/16753890?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.16753890",
+    "self_doi": "https://doi.org/10.5281/zenodo.16753890",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.16753890",
+    "reserve_doi": "https://zenodo.org/api/records/16753890/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/16753889",
+    "parent_html": "https://zenodo.org/records/16753889",
+    "parent_doi": "https://doi.org/10.5281/zenodo.16753889",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.16753889",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:16753890/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:16753890/sequence/default",
+    "files": "https://zenodo.org/api/records/16753890/files",
+    "media_files": "https://zenodo.org/api/records/16753890/media-files",
+    "latest": "https://zenodo.org/api/records/16753890/versions/latest",
+    "latest_html": "https://zenodo.org/records/16753890/latest",
+    "versions": "https://zenodo.org/api/records/16753890/versions",
+    "draft": "https://zenodo.org/api/records/16753890/draft",
+    "access_links": "https://zenodo.org/api/records/16753890/access/links",
+    "access_grants": "https://zenodo.org/api/records/16753890/access/grants",
+    "access_users": "https://zenodo.org/api/records/16753890/access/users",
+    "access_request": "https://zenodo.org/api/records/16753890/access/request",
+    "access": "https://zenodo.org/api/records/16753890/access",
+    "communities": "https://zenodo.org/api/records/16753890/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/16753890/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/16753890/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/16753890/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/16753890/quota-increase",
+    "requests": "https://zenodo.org/api/records/16753890/requests"
+  },
+  "updated": "2026-10-16T05:50:22.252104+00:00",
+  "recid": "16753890",
+  "revision": 6,
+  "files": [
+    {
+      "id": "c91d4f55-6334-4f30-a353-039578983236",
+      "key": "botnet.tar.gz",
+      "size": 4218619,
+      "checksum": "md5:4df0c80a20e6d6f74d91f406d7ca4b48",
+      "links": {
+        "self": "https://zenodo.org/api/records/16753890/files/botnet.tar.gz/content"
+      }
+    },
+    {
+      "id": "28670e91-c040-47f9-966c-cd17d5972176",
+      "key": "benign.tar.gz",
+      "size": 14929198150,
+      "checksum": "md5:f2e44c43391cefb1a36c780bf983563a",
+      "links": {
+        "self": "https://zenodo.org/api/records/16753890/files/benign.tar.gz/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "543355"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 757,
+    "unique_downloads": 257,
+    "views": 714,
+    "unique_views": 650,
+    "version_downloads": 757,
+    "version_unique_downloads": 257,
+    "version_unique_views": 650,
+    "version_views": 714
+  },
+  "state": "done",
+  "submitted": true
+}
