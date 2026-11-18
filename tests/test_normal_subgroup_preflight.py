@@ -101,7 +101,7 @@ def test_preflight_rejects_existing_output_before_any_input_access(tmp_path, mon
         preflight.run(tmp_path / "archive", output)
 
 
-def test_module_has_only_explicit_preflight_cli(monkeypatch):
+def test_module_requires_an_explicit_mode(monkeypatch):
     from ids.normal_subgroup_training.__main__ import main
     monkeypatch.setattr("sys.argv", ["program", "--r30-archive", "unused", "--output", "unused"])
     with pytest.raises(SystemExit) as result:
@@ -141,8 +141,13 @@ def test_preflight_writes_frozen_targets_without_a_training_ready_state(bound_sy
     assert result["new_fits"] == result["optimizer_updates"] == 0
     assert result["training_ready"] is False and result["C_E_access"] is False
     for seed in (17, 29, 43):
-        arrays = np.load(output / f"protocol_blind_s{seed}/targets.npz", allow_pickle=False)
-        assert arrays["transport_target"].shape == (1040,)
+        for filename in ("targets.npz", "reference_scores.npz"):
+            with np.load(output / f"protocol_blind_s{seed}" / filename, allow_pickle=False) as arrays:
+                payload = {key: arrays[key] for key in arrays.files}
+                assert all(value.dtype.kind != "O" for value in payload.values())
+                if filename == "targets.npz":
+                    assert payload["transport_target"].shape == (1040,)
+                    assert payload["group_ids"].dtype.kind == "U"
     assert json.loads((output / "status.json").read_text())["training_ready"] is False
     manifest_path = output / "output_manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))

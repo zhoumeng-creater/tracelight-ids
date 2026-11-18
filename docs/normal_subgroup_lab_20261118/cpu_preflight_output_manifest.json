@@ -1,0 +1,70 @@
+{
+  "version": "normal-subgroup-preflight-output-v1",
+  "excluded": [
+    "output_manifest.json",
+    "status.json"
+  ],
+  "status_binding": "Final status.json records this manifest's hash and size; neither hashes itself",
+  "files": {
+    "groups.json": {
+      "sha256": "a8e7f5d7bce8542b06451cdbfa75f637c286cb23f5a0ac63211fc83e9a8e833d",
+      "bytes": 9603
+    },
+    "identities.json": {
+      "sha256": "869b141a9d72232a1c1773d22f665fea25253bb9c050875788e45dd3dfdb313f",
+      "bytes": 1937238
+    },
+    "input_receipt.json": {
+      "sha256": "11c946ac802d0347dcd9da538526cd34115ff7a2e28bc4b1ea218c7cc741102c",
+      "bytes": 625
+    },
+    "protocol_blind_s17/preprocessing.json": {
+      "sha256": "ae2ca5a114a9a4d0b45b85bb6d8c35b9b80cd1674a01428b23998aa4c52f229a",
+      "bytes": 1276
+    },
+    "protocol_blind_s17/reference_scores.npz": {
+      "sha256": "38266967b49eedcbbcea1c061af64bbcc53d35e0bc35ef804494ae8acbd888da",
+      "bytes": 308332
+    },
+    "protocol_blind_s17/target_metadata.json": {
+      "sha256": "3ae78fb37f2f7cabc372b64699900be842b548ab2a5739b3a225f1903e89e28d",
+      "bytes": 905
+    },
+    "protocol_blind_s17/targets.npz": {
+      "sha256": "ec78dfc1c003a78c3418221476f45dc78bec0a5e566793ae6959b0e53e0148c3",
+      "bytes": 597275
+    },
+    "protocol_blind_s29/preprocessing.json": {
+      "sha256": "ae2ca5a114a9a4d0b45b85bb6d8c35b9b80cd1674a01428b23998aa4c52f229a",
+      "bytes": 1276
+    },
+    "protocol_blind_s29/reference_scores.npz": {
+      "sha256": "e57075e5d521d648dde76e277026a7b26bc0e034669613d5df40974d0a428230",
+      "bytes": 337998
+    },
+    "protocol_blind_s29/target_metadata.json": {
+      "sha256": "ad8f85e2d176726755135017899af48e1f2f988cca2b23c3aba7834ee85635da",
+      "bytes": 906
+    },
+    "protocol_blind_s29/targets.npz": {
+      "sha256": "3115d5faa95f5103ae5999a4cc2938e62610b0c43377d54a1cf46553513c80a4",
+      "bytes": 653686
+    },
+    "protocol_blind_s43/preprocessing.json": {
+      "sha256": "ae2ca5a114a9a4d0b45b85bb6d8c35b9b80cd1674a01428b23998aa4c52f229a",
+      "bytes": 1276
+    },
+    "protocol_blind_s43/reference_scores.npz": {
+      "sha256": "618514a1c567a25ff4481232da24153f22e752f9dbf0b502ba7ac091c120c7c5",
+      "bytes": 334730
+    },
+    "protocol_blind_s43/target_metadata.json": {
+      "sha256": "3695125b3971b94814828dcf54d0caaaa77ba43ca819e63413e5ea7c6a947205",
+      "bytes": 903
+    },
+    "protocol_blind_s43/targets.npz": {
+      "sha256": "42abe5044e7c2b85fe45c03ed1fa62e07d65429ede12bd3855bee6a0913cc390",
+      "bytes": 646623
+    }
+  }
+}

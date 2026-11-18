@@ -1,1 +1,1 @@
-"""Normal subgroup target contracts; no training entry point or model imports."""
+"""Frozen normal-subgroup adaptation and registered laboratory execution."""

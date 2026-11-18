@@ -1,0 +1,87 @@
+{
+  "baseline_archive_relative_to_thesis": "实验归档/20261117_第三十轮模型训练重设计/回传",
+  "baseline_version": "model-training-redesign-r30-v1",
+  "baseline_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8",
+  "models": {
+    "protocol_blind_s17": {
+      "path": "models/protocol_blind_s17/trajectory/model.pt",
+      "sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f",
+      "selected_step": 7645,
+      "optimizer_steps": 9869,
+      "verified_sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f"
+    },
+    "protocol_blind_s29": {
+      "path": "models/protocol_blind_s29/trajectory/model.pt",
+      "sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5",
+      "selected_step": 4170,
+      "optimizer_steps": 6394,
+      "verified_sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5"
+    },
+    "protocol_blind_s43": {
+      "path": "models/protocol_blind_s43/trajectory/model.pt",
+      "sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3",
+      "selected_step": 6533,
+      "optimizer_steps": 8757,
+      "verified_sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3"
+    }
+  },
+  "files": {
+    "freeze.json": {
+      "bytes": 2483,
+      "sha256": "df8beea04bffdbab305684f558695474c7aa5922c83d31ed52b2d7c6e6f60e30"
+    },
+    "protocol.json": {
+      "bytes": 120368,
+      "sha256": "37dbe58b033533067d6b0c0ad043a67aeded43225d2c1d19bf19a2f5055f1c04"
+    },
+    "inputs/F.parquet": {
+      "bytes": 388413,
+      "sha256": "5a3a18ac2b8fd6430b9dd8635870fb941e1975077513466a84193d3e0b1d7a93"
+    },
+    "inputs/V.parquet": {
+      "bytes": 428407,
+      "sha256": "0d12a109b5115f7e826b9c58973a93b6ac9cf2a5e1cfee464eb916a67a46ee08"
+    },
+    "inputs/C.parquet": {
+      "bytes": 718982,
+      "sha256": "115d176e75946a02dd0d7342a8dd29ed560041727681613c28e23a5d1a34aa04"
+    },
+    "inputs/E_B.parquet": {
+      "bytes": 728025,
+      "sha256": "3fb95e282ee3eb62c0f95659de17ce0ed915e6e6c4e0f841c4f02ca297a5a025"
+    },
+    "inputs/E_D.parquet": {
+      "bytes": 1528167,
+      "sha256": "75285607869bb1b72c7a6fca248280690537f02614e33d9f730aa3165122b2eb"
+    },
+    "models/protocol_blind_s17/trajectory/model.pt": {
+      "bytes": 1742942,
+      "sha256": "90ae473a275ed4106a4bf5578c8abfd1f5dffce6a5d81062a66fd1809b53718f"
+    },
+    "models/protocol_blind_s29/trajectory/model.pt": {
+      "bytes": 1742942,
+      "sha256": "cb01d9109c1606ff4e9928661f46e97010e6aeec3e597fd9bb1407c6275ed6b5"
+    },
+    "models/protocol_blind_s43/trajectory/model.pt": {
+      "bytes": 1742942,
+      "sha256": "ce07aab29a650b5fd3375265903f78c6777c788a6089f58458ff8eb7323485f3"
+    },
+    "inputs/reference_decisions.parquet": {
+      "bytes": 1311762,
+      "sha256": "55b574d3c88dc867f3ae42527dcabea57d61754cbc09149a639f698c7d9d6e87"
+    },
+    "reports/protocol_blind_s17-decisions.parquet": {
+      "bytes": 3100505,
+      "sha256": "aaaead238fefa27ea7cc656581d36451d033faeb79a86c73a3953bb8cfd688af"
+    },
+    "reports/protocol_blind_s29-decisions.parquet": {
+      "bytes": 3101805,
+      "sha256": "fadc59bc54cf79915356c66ea35a801477e8b480ee659dac5e11a1c2c984d394"
+    },
+    "reports/protocol_blind_s43-decisions.parquet": {
+      "bytes": 3101816,
+      "sha256": "5374d68ab26c387396dccb0f7b906ad94a62eed8435daefa69b83c76ca3dc4ea"
+    }
+  },
+  "verification": "Byte hashes of immutable R30 models, inputs and already frozen historical decisions; no new evaluation scores"
+}

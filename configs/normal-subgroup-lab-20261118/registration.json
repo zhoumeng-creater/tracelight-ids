@@ -1,0 +1,46 @@
+{
+  "version": "normal-subgroup-r31-v1",
+  "execution_enabled": true,
+  "design_file": "configs/normal-subgroup-refinement-20261118/design.json",
+  "input_bindings_file": "configs/normal-subgroup-lab-20261118/input-bindings.json",
+  "source_manifest_file": "configs/normal-subgroup-lab-20261118/source_manifest.json",
+  "design_sha256": "95a4437d98ec6ffd4a0cf9daa132094f39bac9213f4aacc16f71cf3116278e6d",
+  "input_bindings_sha256": "2e4805af2ad6ef16295a1eaa70c9318b7aa37326f6d5263f724489cba52e6299",
+  "source_manifest_sha256": "37a461a5fe61b2f079db5e59fb4ec31d1f0230eef6415073542f91ee6da7b94c",
+  "parent_core_commit": "c2e6ab3064e80155e4d3d138a3f248d654b97ddf",
+  "baseline_version": "model-training-redesign-r30-v1",
+  "runtime_packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.14.0",
+    "scikit-learn": "1.5.1",
+    "pyarrow": "21.0.0",
+    "torch": "2.6.0+cu126",
+    "tabm": "0.0.3",
+    "rtdl_num_embeddings": "0.0.12"
+  },
+  "training_device_name": "NVIDIA GeForce RTX 4090 D",
+  "training_threads": 1,
+  "reference_and_selection": "CPU one thread internal batch256; anchors generated on the same scoring host",
+  "max_fits": 6,
+  "final_refits": 0,
+  "optimizer_steps_per_fit": 2224,
+  "validation_events_per_fit": 16,
+  "total_optimizer_steps": 13344,
+  "automatic_incomplete_fit_retry": false,
+  "benchmark": {
+    "single_rows": 64,
+    "repeats": 3,
+    "warmup": 8,
+    "batch_size": 128
+  },
+  "gpu_benchmark": {
+    "batch_size": 512,
+    "repeats": 3,
+    "warmup": 8
+  },
+  "design_status_note": "Preserve historical design-stage flags; this separate registration enables the reviewed implementation",
+  "development_preflight": "docs/normal_subgroup_lab_20261118/cpu_preflight_verification.json",
+  "new_blind_confirmation": false,
+  "automatic_deployment": false
+}

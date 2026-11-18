@@ -1,0 +1,52 @@
+{
+  "status": "implementation_verified_ready_for_registered_lab_run",
+  "timestamp": "2026-11-18T10:45:50.415401+08:00",
+  "tests": {
+    "passed": 111,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "seconds": 15.598,
+    "per_module": {
+      "tests.test_normal_subgroup_costs": 6,
+      "tests.test_normal_subgroup_evaluation": 17,
+      "tests.test_normal_subgroup_losses": 12,
+      "tests.test_normal_subgroup_preflight": 10,
+      "tests.test_normal_subgroup_runner": 16,
+      "tests.test_normal_subgroup_selection": 23,
+      "tests.test_normal_subgroup_targets": 18,
+      "tests.test_normal_subgroup_training": 9
+    },
+    "actual_wrapper": "scripts/RUN_NORMAL_SUBGROUP.ps1 -CheckOnly -Python D:/python/python.exe",
+    "junit_file": "pytest-release.xml",
+    "actual_synthetic_CUDA_pair_test": true
+  },
+  "ruff": {
+    "passed": true,
+    "command": "python -m ruff check src/ids/normal_subgroup_training tests/test_normal_subgroup_*.py"
+  },
+  "diff_check_passed": true,
+  "source_files": 207,
+  "source_manifest_sha256": "37a461a5fe61b2f079db5e59fb4ec31d1f0230eef6415073542f91ee6da7b94c",
+  "registration_sha256": "678baee361d1b139e23fae93b93982874b89b4d9b3f3ee42f8810dc5b073c5ea",
+  "design_version": "normal-subgroup-design-20261118-v2",
+  "design_formula_changed": false,
+  "CPU_preflight": "cpu_preflight_verification.json",
+  "production_target_reader_and_baseline_selectors_all_three_pass": true,
+  "actual_development_hardware": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "registered_formal_hardware": "NVIDIA GeForce RTX 4090 D",
+  "hardware_guard_verified": true,
+  "local_4050_is_not_claimed_incapable_of_training": true,
+  "registration_source_and_runtime_checks_passed": true,
+  "real_fit_calls": 0,
+  "real_optimizer_updates": 0,
+  "new_C_E_scores": 0,
+  "new_calibrations": 0,
+  "remaining": "Registered lab CPU preflight on that host, six paired fixed-budget trajectories, frozen C/E evaluation and isolated costs",
+  "research_success_not_yet_observed": [
+    "safe_nonfallback_improving_checkpoint",
+    "increment_over_identity_target",
+    "all_15_cells_and_all_TP_preserved"
+  ],
+  "release_tag": "normal-subgroup-r31-v1"
+}
