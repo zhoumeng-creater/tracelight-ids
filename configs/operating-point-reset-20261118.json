@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "status": "fixed_cached_score_development_comparison",
+  "authorization": "User approved the operating-point reset and prospective evaluation change in this chat on 2026-11-18.",
+  "base_commit": "9bb2bb30b1437e30dc33ef8383a014a334bc844a",
+  "models": ["protocol_blind_s17", "protocol_blind_s29", "protocol_blind_s43"],
+  "roles": {
+    "F": "Original R30 fitting; no new access or fitting needed.",
+    "V": "Original R30 checkpoint selection; frozen, no new operating-point search.",
+    "C": "All original 5511 normal calibration rows per model; thresholds use only these cached scores.",
+    "ED": "Already-open 17059-row development evaluation; never used to set rank, alpha, delta or select a model.",
+    "independent_confirmation": "Not ready; candidate source eligibility is reviewed separately. No claim of a new blind test."
+  },
+  "methods": [
+    {"id": "original_order_statistic", "alpha": 0.01, "expected_n": 5511, "expected_rank": 5457, "formula": "ceil(99*(n+1)/100)"},
+    {"id": "fixed_np_reference", "alpha": 0.01, "delta": 0.05, "expected_n": 5511, "expected_rank": 5469, "formula": "min k in 1..n such that Binomial(n,1-alpha).sf(k-1)<=delta", "role": "Existing standard calibration reference, not a new 2025/2026 algorithm or TLNP reproduction."}
+  ],
+  "decision": {"comparison": ">", "dtype": "float64", "scope": "one shared threshold per model across all 15 ED units"},
+  "execution": {"cached_score_analysis": true, "model_loads": 0, "forward_passes": 0, "optimizer_updates": 0, "lab_training_enabled": false, "parameter_search_enabled": false},
+  "prospective_evaluation": {
+    "fpr_budget_per_unit": "floor(n_normal/100)",
+    "pooled_fpr_cannot_offset_unit_violation": true,
+    "recall_and_cost_are_joint_outcomes": true,
+    "zero_old_tp_loss_is_preferred_not_universal_veto": true,
+    "report_every_added_and_lost_tp": true,
+    "retain_all_three_seeds": true,
+    "historical_R30_R31_acceptance_unchanged": true,
+    "no_deployment_adoption_without_independent_confirmation": true
+  },
+  "stopping": [
+    "Exactly one new fixed calibration reference; no alpha/delta/rank grid.",
+    "Any unit violation means this reference does not satisfy that model's declared development risk target; report and end this comparison.",
+    "Even if all development units pass, only retain a candidate for independent evaluation; do not select a winning seed or claim deployment risk control.",
+    "No automatic subgroup training, model replacement, fusion, new data collection or recalibration candidate after the result."
+  ],
+  "limitations": [
+    "The original ED labels and feasibility bounds were already examined before this design; this is a post-hoc development comparison, not pristine preregistration.",
+    "The rule and constants are fixed before computing its new threshold values and ED decisions.",
+    "The NP binomial reference assumes an independent fixed scorer and iid normal calibration from the target normal distribution; repeated development use, correlated flows and B-to-D shift prevent asserting that theorem here.",
+    "The pointwise nominal delta does not establish simultaneous 15-unit or three-seed finite-sample FPR guarantees.",
+    "Feasible intervals derived using ED labels are diagnostic-only and never enter calibration."
+  ]
+}
