@@ -1,0 +1,90 @@
+{
+  "status": "passed_core_implementation_checks_not_training_ready",
+  "timestamp": "2026-11-18T09:48:05.453317+08:00",
+  "parent_commit": "ce6b9533b6654e778435c2fbd2fe7c1d20b58c8e",
+  "baseline_tag_commit": "6ca3c92ec1ff8501f8c1a4c1ba19ce6e84517da8",
+  "runtime": {
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.14.0",
+    "scikit-learn": "1.5.1",
+    "torch": "2.6.0+cu126",
+    "tabm": "0.0.3",
+    "rtdl_num_embeddings": "0.0.12",
+    "pytest": "8.3.4",
+    "ruff": "0.9.4"
+  },
+  "tests": {
+    "total": 63,
+    "passed": 63,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 4.311,
+    "per_module": {
+      "tests.test_normal_subgroup_targets": 18,
+      "tests.test_normal_subgroup_losses": 12,
+      "tests.test_normal_subgroup_selection": 23,
+      "tests.test_normal_subgroup_preflight": 10
+    },
+    "junit_xml": "pytest-final.xml",
+    "command": "PYTHONPATH=local/model-training-test-deps; PYTEST_ADDOPTS=--junitxml=<work>/pytest-final.xml; scripts/CHECK_NORMAL_SUBGROUP_DESIGN.ps1 -CheckOnly -Python D:/python/python.exe",
+    "actual_powershell_wrapper_exercised": true
+  },
+  "ruff": {
+    "passed": true,
+    "command": "python -m ruff check src/ids/normal_subgroup_training tests/test_normal_subgroup_targets.py tests/test_normal_subgroup_losses.py tests/test_normal_subgroup_selection.py tests/test_normal_subgroup_preflight.py"
+  },
+  "real_input_binding_check": {
+    "status": "passed",
+    "bound_files": 6,
+    "F_rows": 19904,
+    "V_rows": 21450,
+    "normal_groups": 32,
+    "V_covered": 18645,
+    "real_model_loads": 0,
+    "real_forwards": 0,
+    "real_fits": 0
+  },
+  "cached_F_diagnostic": {
+    "all_three_target_sha_unchanged_after_integer_ECDF_fix": true,
+    "script": "audit_cached_f_target_geometry.py",
+    "report": "cached_f_target_geometry.json",
+    "is_new_model_effect": false,
+    "formal_CPU_reference": false,
+    "groups_targets_and_original_formula_sha_verified": true
+  },
+  "real_compute": {
+    "real_model_loads": 0,
+    "real_forwards": 0,
+    "real_fits": 0,
+    "new_real_scores": 0,
+    "C_E_scoring": 0,
+    "threshold_searches": 0
+  },
+  "synthetic_compute": "new_tiny_author_TabM_PLE_one_update_and_synthetic_gradient_replay_serialization_checks",
+  "uncompleted": [
+    "real_CPU_double_cold_replay",
+    "six_paired_trajectory_runner",
+    "all_six_artifact_freeze_and_C_E_delivery",
+    "formal_training_registration"
+  ],
+  "original_v1_and_R30": "not_modified",
+  "source_sha256": {
+    "configs/normal-subgroup-refinement-20261118/design.json": "95a4437d98ec6ffd4a0cf9daa132094f39bac9213f4aacc16f71cf3116278e6d",
+    "scripts/CHECK_NORMAL_SUBGROUP_DESIGN.ps1": "1860c26fd9da210f960016abba590ebdcafb7074da81b6e1af0b34cdb1596936",
+    "src/ids/normal_subgroup_training/__init__.py": "da7e3c877a2149e60709a37c1b2de586e7f7683a73e0304fa514de5e443fc64a",
+    "src/ids/normal_subgroup_training/__main__.py": "3009c1c7cd905574476e500c37e090ea5ff8c38b53ca78fbc9e76df683af65c0",
+    "src/ids/normal_subgroup_training/bindings.py": "52fe645b81bbdba80f01d1e2b438266f6a35a5c56c9224bc3371d8b33040270f",
+    "src/ids/normal_subgroup_training/groups.py": "1558ae24a7028959be9939d552f87284dfcb9ace9d03949cd074f1034957b2a2",
+    "src/ids/normal_subgroup_training/losses.py": "dc94f60790508ad7f57177a62ad2a417f4de35e8204f28fc0ba4b32956ba3f56",
+    "src/ids/normal_subgroup_training/preflight.py": "af0d0ced13d45967afd7c1465c467ec9be976665b8756be43c8edb8de09cdd1b",
+    "src/ids/normal_subgroup_training/selection.py": "8860952a266cdb396594fcc2caef5f24d3fa99cd8e6727d11644c664307dbfad",
+    "src/ids/normal_subgroup_training/targets.py": "3648ad11160fae9effa5dd17211be4c22a38eaab353915394e40adc388e248b4",
+    "tests/test_normal_subgroup_losses.py": "6c270e7ede04cb3a42c2d5d8b7679a56988e2cc4a597df2eea3f3cb755ca3558",
+    "tests/test_normal_subgroup_preflight.py": "7d1ec4d73993feb1d4a684962c4d96409fbdba7de8020cf99fe2555670300627",
+    "tests/test_normal_subgroup_selection.py": "cabbd7f1fa41ec8c27bad2bd141ac4c6913d7daa9fa3b8807bb09ca285b143ab",
+    "tests/test_normal_subgroup_targets.py": "15b95aefe72e89f52b2be4d5d2c53b8501b98b702c7e15243af3b4edc10cc2b8"
+  }
+}

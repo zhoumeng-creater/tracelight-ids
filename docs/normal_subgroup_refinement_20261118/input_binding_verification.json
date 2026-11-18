@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "bound_files": 6,
+  "F_rows": 19904,
+  "V_rows": 21450,
+  "normal_groups": 32,
+  "V_covered": 18645,
+  "real_model_loads": 0,
+  "real_forwards": 0,
+  "real_fits": 0
+}

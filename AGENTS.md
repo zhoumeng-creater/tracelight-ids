@@ -1,5 +1,13 @@
 # 本项目的持续研究要求
 
+## 2026-11-18 正常子群核心实现与目标核查完成（当前决定）
+
+[完善记录](docs/NORMAL_SUBGROUP_REFINEMENT_20261118.md)和[设计v2](configs/normal-subgroup-refinement-20261118/design.json)为当前依据。独立`normal_subgroup_training`已实现分组、精确目标、k32损失、双反传单步更新、选轮、输入绑定与零更新预检。v2将F绝对分数硬门槛改为逐正例正常逆序数不增，保留原分数软锚；并增加A/B来源内三个尾部Hq不退化，防止混合指标掩盖C所用B正常的尾部。原目标、系数、学习率、六轨迹预算与最终B72/D1964及15cell预算不变。
+
+旧F缓存的理想目标在三个seed均改善完整F及A/B来源内尾部最大富集。关键B36条在B内top1质量为0→0、16.48→0、36→8；另一10条模式为0→9、10→10、10→10。须报告尾部重分配、并列增加和旧GPU同输入微差，不能把这些数组当训练结果或新FP，也不据事后模式更换target。精确分位取整修复不改变三个实际目标SHA。
+
+当前只有[合成检查/零更新预检入口](docs/NORMAL_SUBGROUP_PREFLIGHT_20261118.md)，没有正式训练入口。真实模型加载/前向/拟合/新分数/阈值搜索均0；真实CPU双冷载尚未运行，六轨迹runner和完整交付接线尚未完成。保留`execution_enabled=false`，不得用旧脚本代跑。下一步完成runner与交付合同，并把零更新预检接为正式运行前置；不扩大模型或候选矩阵。原ce6b953设计和R30运行标签保持原样。
+
 ## 2026-11-18 正常子群模型与训练设计已定（当前决定，优先于下方历史安排）
 
 [完整修改方案](docs/NORMAL_SUBGROUP_TRAINING_DESIGN_20261118.md)及[唯一机器规格](configs/normal-subgroup-training-20261118/design.json)已选定固定单侧分位目标微调，状态`candidate_specified_implementation_pending`。保留R30 blind TabM+PLE、原预处理和全部既有检出；F-only四计数平衡分箱形成32正常组，不硬编码D错误。正常目标只下调，再按同网络输入等价类取min；成员BCE、全部正常目标MSE及A/B正例等权保护构成完整目标。

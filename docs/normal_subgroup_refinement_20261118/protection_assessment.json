@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-18",
+  "status": "v2_F_rank_and_A_B_tail_guards_implemented_synthetic_only",
+  "old_design_commit": "ce6b9533b6654e778435c2fbd2fe7c1d20b58c8e",
+  "real_training_runs": 0,
+  "real_model_loads": 0,
+  "real_network_forwards": 0,
+  "real_new_scores": 0,
+  "assessment": {
+    "v1_absolute_F_score_guard_necessary_for_TP_retention": false,
+    "v2_each_F_positive_normal_ge_count_not_increased": true,
+    "v2_guard_sufficient_for_C_threshold_or_D_TP_retention": false,
+    "soft_positive_anchor_guarantees_hard_guard": false,
+    "nonfallback_safe_improvement_proved_reachable": false,
+    "raw_F_score_decrease_is_reported_not_hard_rejection": true,
+    "loss_or_weight_or_training_algorithm_changed": false,
+    "source_A_B_each_H_q_not_above_step0": true,
+    "mechanism_each_source_H_q_not_above_control": true,
+    "pooled_H_remains_only_selection_objective": true
+  },
+  "counterexamples": {
+    "strictly_increasing_common_shift": {
+      "transform": "s_new=s_old-7",
+      "C_normal_rows": 5511,
+      "one_based_rank": 5457,
+      "old_threshold": 5456.0,
+      "new_threshold": 5449.0,
+      "old_eval_scores": [
+        0.0,
+        5456.0,
+        5457.0,
+        6000.0
+      ],
+      "new_eval_scores": [
+        -7.0,
+        5449.0,
+        5450.0,
+        5993.0
+      ],
+      "old_decisions": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "new_decisions": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "all_decisions_preserved": true,
+      "F_positive_old": [
+        2,
+        3
+      ],
+      "F_positive_new": [
+        -5,
+        -4
+      ],
+      "v1_guard_pass": false,
+      "F_inverse_counts_before": [
+        0,
+        0
+      ],
+      "F_inverse_counts_after": [
+        0,
+        0
+      ],
+      "F_normal_old": [
+        -2,
+        -1
+      ],
+      "F_normal_new": [
+        -9,
+        -8
+      ]
+    },
+    "soft_anchor_can_reduce_total_loss_while_lowering_positive": {
+      "synthetic_model": "normal=theta,positive=theta+2,theta0=0,normal_target=-1,Delta=1",
+      "objective": "0.5*(softplus(theta)+softplus(-theta-2))+(theta+1)^2+relu(-theta)^2",
+      "initial_positive_anchor_gradient": 0.0,
+      "initial_total_gradient": 2.190398538988941,
+      "finite_difference_gradient": 2.1903980389481603,
+      "witness_gradient_step": 0.01,
+      "theta_after": -0.02190398538988941,
+      "loss_before": 1.4100375958014588,
+      "loss_after": 1.3630613570839318,
+      "positive_score_before": 2.0,
+      "positive_score_after": 1.9780960146101105,
+      "positive_anchor_after": 0.0004797845759604887,
+      "interpretation": "analytic synthetic witness, not a claim about the real R30 update"
+    },
+    "soft_anchor_does_not_guarantee_v2_rank_protection": {
+      "synthetic_model": "normal=[theta-.5,theta],positive=2*theta+.0001,theta0=0,normal_targets=[-1.5,-1],Delta=1",
+      "initial_positive_anchor_gradient": 0.0,
+      "initial_total_gradient": 1.7194101671995154,
+      "registered_AdamW_lr": 0.0002,
+      "global_norm_clip": 1.0,
+      "AdamW_eps": 1E-08,
+      "first_bias_corrected_AdamW_theta": -0.00019999999800000004,
+      "normal_max_before": 0.0,
+      "positive_before": 0.0001,
+      "normal_max_after": -0.00019999999800000004,
+      "positive_after": -0.0002999999960000001,
+      "normal_ge_positive_count_before": 0,
+      "normal_ge_positive_count_after": 1,
+      "positive_anchor_after": 1.5999999680000008E-07,
+      "interpretation": "small-margin synthetic witness; real R30 margins/Jacobians were not inspected"
+    },
+    "F_strict_separation_not_sufficient_at_C_threshold": {
+      "F_normal": 0.0,
+      "F_positive_old": 1.0,
+      "F_positive_new": 0.1,
+      "unchanged_C_threshold": 0.5,
+      "normal_ge_positive_before": 0,
+      "normal_ge_positive_after": 0,
+      "old_detected": true,
+      "new_detected": false
+    },
+    "pooled_improvement_hides_source_B_tail_regression": {
+      "synthetic_only": true,
+      "groups_per_profile": 2,
+      "normal_rows_per_group": 100,
+      "pooled_normal_rows": 400,
+      "source_B_normal_rows": 200,
+      "pooled_H_q_before": [
+        0.3,
+        0.15,
+        0.03
+      ],
+      "pooled_H_q_after": [
+        0,
+        0,
+        0.01
+      ],
+      "source_B_H99_before": 0,
+      "source_B_H99_after": 0.01,
+      "existing_guards_pass": true,
+      "source_guard_pass": false,
+      "metric_field_injection": false,
+      "test": "test_pooled_improvement_cannot_hide_source_B_one_percent_tail_regression"
+    }
+  },
+  "implementation": "src/ids/normal_subgroup_training/selection.py",
+  "tests": "tests/test_normal_subgroup_selection.py",
+  "test_command": "python -m pytest tests/test_normal_subgroup_selection.py -q",
+  "tests_passed": 23,
+  "remaining": "Actual nonfallback guarded improvement and transfer to all 15 cells are unverified; no real fit was started."
+}
