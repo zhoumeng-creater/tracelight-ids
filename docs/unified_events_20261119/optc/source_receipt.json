@@ -1,0 +1,74 @@
+{
+  "generated_utc": "2026-11-18T16:25:00.894819+00:00",
+  "additional_data_bytes": 110332302,
+  "sources": {
+    "ecarbro": {
+      "name": "20190919_benign_AIA501-525_ecarbro.json.gz",
+      "id": "19SMwYBPqzTJbBKpIMxdfm5NqoanNXRMD",
+      "bytes": 13429353,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_benign_AIA501-525_ecarbro.json.gz",
+      "url": "https://drive.usercontent.google.com/download?id=19SMwYBPqzTJbBKpIMxdfm5NqoanNXRMD&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/19SMwYBPqzTJbBKpIMxdfm5NqoanNXRMD/view",
+      "sha256": "a9dc5390a66ca07e935e1df1554f4382363739b5da2dc78313ce0f0a851a2182"
+    },
+    "conn": {
+      "name": "20190919_conn_17-18.log.gz",
+      "id": "1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-",
+      "bytes": 60278906,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_conn_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-/view",
+      "sha256": "3e995173c868038cf1e4344a711c8ad38353f2c51884af05de9f59a2ac98d4c9"
+    },
+    "ssl": {
+      "name": "20190919_ssl_17-18.log.gz",
+      "id": "1IgiMYewELJLusoU5yUR81VDL_chSYsgM",
+      "bytes": 35942521,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_ssl_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1IgiMYewELJLusoU5yUR81VDL_chSYsgM&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/1IgiMYewELJLusoU5yUR81VDL_chSYsgM/view",
+      "sha256": "ebaf68bf5984692eb98b5797a2b1039fa83e92551e1116242bb86e915160981c"
+    },
+    "x509": {
+      "name": "20190919_x509_17-18.log.gz",
+      "id": "14TY0kdYS23gM0KVFUVPw7CgnQRLUcuIK",
+      "bytes": 681522,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_x509_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=14TY0kdYS23gM0KVFUVPw7CgnQRLUcuIK&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/14TY0kdYS23gM0KVFUVPw7CgnQRLUcuIK/view",
+      "sha256": "0dfb236a3a87a3b27ee89e1fbe4b3dd72bbbb3bb9a912f182021d1b095d37109"
+    },
+    "http": {
+      "file": "benign_20190919_http_17.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1rFfW740CFN4EKbj_szEiPE52gYyMzgqW&export=download&confirm=t",
+      "bytes": 16636170,
+      "sha256": "9bdab3233805891ba87ae1a330622e7409c5c4b3fd28b989e4b83c13ff05102a",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\benign_20190919_http_17.gz",
+      "reused_existing": true
+    },
+    "files": {
+      "file": "benign_20190919_files_17.gz",
+      "url": "https://drive.usercontent.google.com/download?id=110oZbclIrKkQ3OPWOUSxr7y4XYwNI-Vh&export=download&confirm=t",
+      "bytes": 12629303,
+      "sha256": "a09190af0b639c943aa95191895a2fc91d864d015724b3b2385b3c8569c87c84",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\benign_20190919_files_17.gz",
+      "reused_existing": true
+    }
+  },
+  "official_directory_evidence": {
+    "ecar_bro_benign": "https://drive.google.com/drive/folders/1XOGWT8R8ovw6J2DgNsui09ZwvrfOXIVa",
+    "19Sep19": "https://drive.google.com/drive/folders/1ALKFkSXaWLnuC4oa51DNyOhN1Jz2XnSq",
+    "AIA-501-525": "https://drive.google.com/drive/folders/1l0T20hYOwfBnUxPBBT89XPn9QrWHsVaV",
+    "observed_benign_child_folders": [
+      "17-18Sep19",
+      "18-19Sep19",
+      "19Sep19",
+      "20-23Sep19"
+    ],
+    "collection_semantics": "Official benign directory membership; not merely a date-before-attack inference. It does not override object-level contradictory evidence.",
+    "research_paper": "https://arxiv.org/abs/2103.03080",
+    "paper_section": "3.1, page 2: ecar/benign normal activity September 19-23; ecar-bro contains linking bro IDs."
+  },
+  "known_unknown": "Six 2019-09-19 news.com PE downloads remain unknown; not assigned a normal label.",
+  "script_sha256": "776e8361240802753c7cd0fa56e0effe0039940b308b9d1130799f7c201c4154"
+}

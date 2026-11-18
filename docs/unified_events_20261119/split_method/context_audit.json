@@ -1,0 +1,44 @@
+{
+  "schema": "prefix-context-v1",
+  "time_mode": "offline_flow_end_replay",
+  "model_calls": 0,
+  "unavailable_policy": "block-group",
+  "raw8_fields": [
+    "ip_protocol",
+    "orig_port",
+    "resp_port",
+    "duration_seconds",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes"
+  ],
+  "clock_semantics": "Offline flow-end replay only; flow_end_at is not actual detector receipt/export time.",
+  "actual_online_availability_claimed": false,
+  "audit": {
+    "input_observations": 45309,
+    "output_observations": 45309,
+    "unique_physical_flows": 45309,
+    "host_views": 45309,
+    "output_unique_physical_flows": 45309,
+    "input_group_counts": {
+      "optc:20190919:declared_normal_business_subset": 44944,
+      "optc:empire_custom:20190924_continues_20190925": 365
+    },
+    "blocked_observations": 0,
+    "unavailable_observation_count": 0,
+    "blocked_groups": [],
+    "unavailable_observations": [],
+    "all_supplied_rows_accounted_for": true,
+    "history_updates": 45309,
+    "group_counts": {
+      "optc:20190919:declared_normal_business_subset": 44944,
+      "optc:empire_custom:20190924_continues_20190925": 365
+    },
+    "max_hosts_in_one_group": 17,
+    "label_filter_applied": false,
+    "strictly_past_history": true,
+    "group_membership_completeness": "Every supplied row processed or explicitly whole-group blocked; verify supplied groups against the extraction manifest.",
+    "memory_scope": "Constant context state per host; batch sorting and returned rows require O(N) memory."
+  }
+}

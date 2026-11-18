@@ -1,0 +1,41 @@
+{
+  "schema": "prefix-context-v1",
+  "purpose": "Non-training deterministic history export and availability audit",
+  "model_calls": 0,
+  "group_key": ["complete_capture_group", "local_host_association_key"],
+  "stream_membership": "Every observed canonical network flow in the declared complete capture interval, independent of labels; not just positive or verified-normal rows",
+  "current_numeric_fields": ["ip_protocol", "orig_port", "resp_port", "duration_seconds", "orig_pkts", "resp_pkts", "orig_ip_bytes", "resp_ip_bytes"],
+  "raw8_source": "The unified network extraction only; do not fill missing measurements using action labels, host truth or HTTP payload lengths",
+  "physical_flow_identity": "flow_id uniquely identifies a host view. Multiple hosts may view one physical_flow_id within a group; each (physical_flow_id, host) updates once. Host views are not independent flows.",
+  "empty_history": "Fill all 18 numeric/comparison history positions with zero and set empty_history=1; later genuine missing measurements remain null",
+  "transform": "log1p of finite nonnegative values; missing stays null",
+  "state_per_group_host": {
+    "previous_completed_record": "transformed eight values, available_at, opaque peer key",
+    "prefix_means": "one running mean and nonmissing count per numeric field",
+    "reset": "At declared complete capture boundary; do not merge different sources, sensor duplicates or reserved attack groups"
+  },
+  "history_outputs": {
+    "previous_values": 8,
+    "prefix_means": 8,
+    "log1p_elapsed_since_previous_available": 1,
+    "same_peer_as_previous": 1,
+    "empty_history": 1
+  },
+  "total_input_dimensions_if_compared": 27,
+  "time_window": null,
+  "window_search": false,
+  "retained_previous_records_per_host": 1,
+  "equal_time_rule": "Query all records sharing an available_at timestamp before updating any of them; deterministic flow_id order only determines which tied record becomes previous for later times",
+  "strict_history_rule": "Every contributing record has available_at strictly before the current record",
+  "clock_priority": ["actual detector receipt/export clock when recorded", "fixed canonical packet replay export clock", "explicit completed-flow offline lower-bound experiment only"],
+  "forbidden_clock_substitution": "Do not replace a missing export clock with flow start; ts+duration alone cannot establish real online detection",
+  "explicit_offline_mode": "offline_flow_end_replay requires flow_end_at for every input and uses that clock consistently even if some available_at values exist; output states that it is not actual online availability",
+  "unavailable_clock_policy": "Default error. Explicit block-group emits no context for any group containing a null/absent required clock; audit preserves all blocked view IDs, counts, reason and original missing-clock observations. Invalid non-null clocks still raise.",
+  "forbidden_model_fields": ["IP identity", "domain", "hostname", "PID", "process image", "path", "capture/source identity", "attack time", "label"],
+  "identity_usage": "Opaque host and peer keys are for association only; only same_peer boolean may be emitted",
+  "memory_claim": "Constant numeric state per observed host; total memory scales with active host count and must be measured, not claimed globally bounded",
+  "cold_start": "No unobserved earlier traffic is invented; report capture-boundary cold starts",
+  "admission": "Freeze one canonical flow extraction and available_at field before export. AIT cloud uses independently justified Zeek 8.0.11 -C; keep strict output for extraction audit only.",
+  "training_status": "Not an F/V/C allocation and not a training launch; current exact-label and calibration identities remain incomplete",
+  "stop_condition": "If usable history cannot be formed without future records or label-conditioned sampling, do not create a context training arm"
+}

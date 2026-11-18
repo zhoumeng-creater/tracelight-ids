@@ -1,0 +1,49 @@
+{
+  "schema": "unified-groups-v1",
+  "groups": [
+    {
+      "group_id": "ait:russellmitchell:complete_run",
+      "split_role": "development",
+      "events": 138,
+      "observations": 2056,
+      "whole_group_reserved": false,
+      "assembled_extent": "selected_evidence_slices_not_complete_campaign"
+    },
+    {
+      "group_id": "optc:empire_custom:20190924_continues_20190925",
+      "split_role": "external_development",
+      "events": 26,
+      "observations": 26,
+      "whole_group_reserved": false,
+      "assembled_extent": "selected_evidence_slices_not_complete_campaign"
+    },
+    {
+      "group_id": "optc:20190919:declared_normal_business_subset",
+      "split_role": "external_development",
+      "events": 46656,
+      "observations": 42147,
+      "whole_group_reserved": false,
+      "assembled_extent": "selected_evidence_slices_not_complete_campaign"
+    },
+    {
+      "group_id": "optc:20190919:selected_normal_candidates",
+      "split_role": "unassigned_unknown",
+      "events": 6,
+      "observations": 0,
+      "whole_group_reserved": false,
+      "assembled_extent": "selected_evidence_slices_not_complete_campaign"
+    },
+    {
+      "group_id": "optc:meterpreter:20190925_complete_branch",
+      "split_role": "reserved_historical_confirmation",
+      "events": 5,
+      "observations": 5,
+      "whole_group_reserved": true,
+      "assembled_extent": "selected_evidence_slices_not_complete_campaign"
+    }
+  ],
+  "wider_source_registry": "split_method/split_registry.json",
+  "wider_registered_groups": 27,
+  "new_fit_validation_calibration_assignment": null,
+  "reason": "Independent whole-chain roles completed; no new trained detector or threshold calibration is registered."
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "unified-input-receipt-v1",
+  "workspace": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作",
+  "inputs": {
+    "统一事件与方法落实_20261119/ait/normal_event_connections.json": {
+      "sha256": "8c7e25653a99ea5521967a6ea159ef87d8f55054aec7a31a4319f597e77db6ef",
+      "bytes": 1568276
+    },
+    "统一事件与方法落实_20261119/ait/checksum_semantics.json": {
+      "sha256": "62154996b205bee25700949179fdd5955ce8d12a388d6908290f390f8725a0dc",
+      "bytes": 389722
+    },
+    "统一事件与方法落实_20261119/ait/referenced_connections.jsonl": {
+      "sha256": "2e60e95ad6351b48a172a0f99c34fdb206c3da9d8cd890ed03b91565ec483c26",
+      "bytes": 1173418
+    },
+    "统一事件与方法落实_20261119/ait_attack/checksum_semantics.json": {
+      "sha256": "9ca20aae730ae126f3b32054b3d7fdab52e3de336de0628985700a2c6cc140c5",
+      "bytes": 451418
+    },
+    "统一事件与方法落实_20261119/ait_attack/contract/analysis-strict/attempt-20261118T163354826997Z/action_connection_pairs.csv": {
+      "sha256": "14c103b93933d0336956f2e66e87d681377d443c7b7be57726318c3927938820",
+      "bytes": 4679725
+    },
+    "统一事件与方法落实_20261119/ait_attack/contract/analysis-strict/attempt-20261118T163354826997Z/raw8.csv": {
+      "sha256": "206c79ebab7589022889d8220d5ae5a725889732c54e4cf8a000d153bb2acdc9",
+      "bytes": 2587937
+    },
+    "统一事件与方法落实_20261119/ait_attack/contract/analysis-ignore_checksums/attempt-20261118T163356774339Z/action_connection_pairs.csv": {
+      "sha256": "3ee02f1d0855ffe34552345a2f656dc8bbd26b853874f1fe8c8f620cc722e5ed",
+      "bytes": 175224
+    },
+    "统一事件与方法落实_20261119/ait_attack/contract/analysis-ignore_checksums/attempt-20261118T163356774339Z/raw8.csv": {
+      "sha256": "c8687795208c03f022c85abb99348c65c2a1485cc2092575ba4bc00a6504541e",
+      "bytes": 2070196
+    },
+    "统一事件与方法落实_20261119/optc/normal_flow_events.jsonl.gz": {
+      "sha256": "bf06c3befbe2ea8a18500ce00348cd866836813ec09422e05325a055ea72fe0a",
+      "bytes": 3369743
+    },
+    "统一事件与方法落实_20261119/optc/normal_flow_observations.jsonl.gz": {
+      "sha256": "acd367d7217cd0492b02655601f7f01207dac2d7d5c52ba2a6366ec96e0f4fdf",
+      "bytes": 2407144
+    },
+    "统一事件与方法落实_20261119/optc/normal_http_file_objects.jsonl.gz": {
+      "sha256": "09e49940620154b04d40169e970578c7efc54dde26603d5d795afa6f789225ef",
+      "bytes": 344081
+    },
+    "独立来源与算法主线_20261118/evidence/optc/optc_event_slice.json": {
+      "sha256": "2d2a3176d03f34d3d939d3ec0ea4e8c3df242d11e99cd43dad9d282df37ce708",
+      "bytes": 31495
+    },
+    "独立来源与算法主线_20261118/evidence/optc/optc_control_channel_slice.json": {
+      "sha256": "5bba740808e813386ef0cfc12cc5a0815fec48e217209ba1fbdc977cd843a5f5",
+      "bytes": 365584
+    },
+    "统一事件与方法落实_20261119/split_method/meterpreter_qualification.json": {
+      "sha256": "9b600ffdd1db08f34d60e748f916a55e772165703da0a2a5f9de8b892644ab61",
+      "bytes": 49279
+    },
+    "独立来源与算法主线_20261118/evidence/optc/benign_file_business.json": {
+      "sha256": "e71f5b0557dd84ab1fce153c224440dc7bd93f730d5186f42e772ae682ce7e78",
+      "bytes": 11957
+    },
+    "统一事件与方法落实_20261119/split_method/split_registry.json": {
+      "sha256": "396dd5c28aa29330038e0953a09c0b22048fcbb31c5c24e6b907a79963d47d5c",
+      "bytes": 260894
+    },
+    "build_unified.py": {
+      "sha256": "8e422c3b2e18d8b14e95b5020453abd39cfda8d3a70c56c5c6e6f7781c8f5456",
+      "bytes": 22737
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "all_pcap_packets": 959549,
+  "captured_shorter_than_wire_packets": 0,
+  "linktype_1": 959549,
+  "in_interval_packets": 959549,
+  "parsed_ipv4_tcp_packets": 735507,
+  "non_ip": 221339,
+  "ipv6": 1413,
+  "non_tcp_ipv4_protocol_17": 1281,
+  "captured_ipv4_shorter_than_wire": 27914,
+  "non_tcp_ipv4_protocol_1": 9,
+  "first_pcap_packet_epoch": 1642684647.874864,
+  "last_pcap_packet_epoch": 1643093816.233258
+}

@@ -1,0 +1,156 @@
+{
+  "catalog": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261116_第二十七轮独立事件取证\\回传\\packet\\tcp-connection-candidates.csv",
+  "catalog_sha256": "e1a0ab26668f921b87be217697362b0c34c9866821c0eddeb580259bb24eb425",
+  "source_summary": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\实验归档\\20261116_第二十七轮独立事件取证\\回传\\packet\\packet-evidence-summary.json",
+  "source_summary_sha256": "8d2804b1f18ce6248b49ab51b6a4f1098d4514a91581ffd0681b5deb4a8c14af",
+  "connection_candidates": 3975,
+  "any_proxy_endpoint": 0,
+  "proxy_cloud_connections": 0,
+  "events": [
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:673",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:1057",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:1068",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:1070",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:1074",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:1663",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2152",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2154",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2168",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2187",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2313",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2327",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2329",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2331",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2782",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:2786",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:3117",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:3430",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.1:5469",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:213",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:499",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:1349",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:2038",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:2205",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:2245",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:2248",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:2274",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:3838",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:3843",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:3863",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:3902",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:5152",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:5488",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:5494",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:5626",
+      "backend_candidate_connection_ids": []
+    },
+    {
+      "event_id": "russellmitchell:other_vhosts_access.log.4:5630",
+      "backend_candidate_connection_ids": []
+    }
+  ],
+  "conclusion": "The existing IPv4 TCP catalog contains no proxy endpoint and cannot associate these proxy-to-cloud downloads. This is a catalog coverage result, not a claim about unknown mirror configurations or unsupported packets."
+}

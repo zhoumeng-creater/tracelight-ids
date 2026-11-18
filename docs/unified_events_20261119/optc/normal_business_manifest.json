@@ -1,0 +1,345 @@
+{
+  "schema_version": "optc_normal_business_v1",
+  "generated_utc": "2026-11-18T16:28:34.644348+00:00",
+  "script_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\assemble_normal_business.py",
+  "script_sha256": "4604ebf4be7893ac617ba90bb9b411417e57ad2429889459f1c8fc5b89c2658b",
+  "sources": {
+    "ecarbro": {
+      "name": "20190919_benign_AIA501-525_ecarbro.json.gz",
+      "id": "19SMwYBPqzTJbBKpIMxdfm5NqoanNXRMD",
+      "bytes": 13429353,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_benign_AIA501-525_ecarbro.json.gz",
+      "url": "https://drive.usercontent.google.com/download?id=19SMwYBPqzTJbBKpIMxdfm5NqoanNXRMD&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/19SMwYBPqzTJbBKpIMxdfm5NqoanNXRMD/view",
+      "sha256": "a9dc5390a66ca07e935e1df1554f4382363739b5da2dc78313ce0f0a851a2182"
+    },
+    "conn": {
+      "name": "20190919_conn_17-18.log.gz",
+      "id": "1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-",
+      "bytes": 60278906,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_conn_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-/view",
+      "sha256": "3e995173c868038cf1e4344a711c8ad38353f2c51884af05de9f59a2ac98d4c9"
+    },
+    "ssl": {
+      "name": "20190919_ssl_17-18.log.gz",
+      "id": "1IgiMYewELJLusoU5yUR81VDL_chSYsgM",
+      "bytes": 35942521,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_ssl_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1IgiMYewELJLusoU5yUR81VDL_chSYsgM&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/1IgiMYewELJLusoU5yUR81VDL_chSYsgM/view",
+      "sha256": "ebaf68bf5984692eb98b5797a2b1039fa83e92551e1116242bb86e915160981c"
+    },
+    "x509": {
+      "name": "20190919_x509_17-18.log.gz",
+      "id": "14TY0kdYS23gM0KVFUVPw7CgnQRLUcuIK",
+      "bytes": 681522,
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_x509_17-18.log.gz",
+      "url": "https://drive.usercontent.google.com/download?id=14TY0kdYS23gM0KVFUVPw7CgnQRLUcuIK&export=download&confirm=t",
+      "view_url": "https://drive.google.com/file/d/14TY0kdYS23gM0KVFUVPw7CgnQRLUcuIK/view",
+      "sha256": "0dfb236a3a87a3b27ee89e1fbe4b3dd72bbbb3bb9a912f182021d1b095d37109"
+    },
+    "http": {
+      "file": "benign_20190919_http_17.gz",
+      "url": "https://drive.usercontent.google.com/download?id=1rFfW740CFN4EKbj_szEiPE52gYyMzgqW&export=download&confirm=t",
+      "bytes": 16636170,
+      "sha256": "9bdab3233805891ba87ae1a330622e7409c5c4b3fd28b989e4b83c13ff05102a",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\benign_20190919_http_17.gz",
+      "reused_existing": true
+    },
+    "files": {
+      "file": "benign_20190919_files_17.gz",
+      "url": "https://drive.usercontent.google.com/download?id=110oZbclIrKkQ3OPWOUSxr7y4XYwNI-Vh&export=download&confirm=t",
+      "bytes": 12629303,
+      "sha256": "a09190af0b639c943aa95191895a2fc91d864d015724b3b2385b3c8569c87c84",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\benign_20190919_files_17.gz",
+      "reused_existing": true
+    }
+  },
+  "official_collection_evidence": {
+    "ecar_bro_benign": "https://drive.google.com/drive/folders/1XOGWT8R8ovw6J2DgNsui09ZwvrfOXIVa",
+    "19Sep19": "https://drive.google.com/drive/folders/1ALKFkSXaWLnuC4oa51DNyOhN1Jz2XnSq",
+    "AIA-501-525": "https://drive.google.com/drive/folders/1l0T20hYOwfBnUxPBBT89XPn9QrWHsVaV",
+    "observed_benign_child_folders": [
+      "17-18Sep19",
+      "18-19Sep19",
+      "19Sep19",
+      "20-23Sep19"
+    ],
+    "collection_semantics": "Official benign directory membership; not merely a date-before-attack inference. It does not override object-level contradictory evidence.",
+    "research_paper": "https://arxiv.org/abs/2103.03080",
+    "paper_section": "3.1, page 2: ecar/benign normal activity September 19-23; ecar-bro contains linking bro IDs."
+  },
+  "additional_data_bytes": 110332302,
+  "scan_stats": {
+    "http": {
+      "data_rows": 369303,
+      "fields": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "trans_depth",
+        "method",
+        "host",
+        "uri",
+        "referrer",
+        "version",
+        "user_agent",
+        "request_body_len",
+        "response_body_len",
+        "status_code",
+        "status_msg",
+        "info_code",
+        "info_msg",
+        "tags",
+        "username",
+        "password",
+        "proxied",
+        "orig_fuids",
+        "orig_filenames",
+        "orig_mime_types",
+        "resp_fuids",
+        "resp_filenames",
+        "resp_mime_types"
+      ],
+      "min_ts": 1568912399.24758,
+      "max_ts": 1568915999.669913
+    },
+    "files": {
+      "data_rows": 390322,
+      "fields": [
+        "ts",
+        "fuid",
+        "tx_hosts",
+        "rx_hosts",
+        "conn_uids",
+        "source",
+        "depth",
+        "analyzers",
+        "mime_type",
+        "filename",
+        "duration",
+        "local_orig",
+        "is_orig",
+        "seen_bytes",
+        "total_bytes",
+        "missing_bytes",
+        "overflow_bytes",
+        "timedout",
+        "parent_fuid",
+        "md5",
+        "sha1",
+        "sha256",
+        "extracted",
+        "extracted_cutoff",
+        "extracted_size"
+      ],
+      "min_ts": 1568912399.24758,
+      "max_ts": 1568915999.669913
+    },
+    "ssl": {
+      "data_rows": 1488381,
+      "fields": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "version",
+        "cipher",
+        "curve",
+        "server_name",
+        "resumed",
+        "last_alert",
+        "next_protocol",
+        "established",
+        "cert_chain_fuids",
+        "client_cert_chain_fuids",
+        "subject",
+        "issuer",
+        "client_subject",
+        "client_issuer"
+      ],
+      "min_ts": 1568912399.009568,
+      "max_ts": 1568915999.960911
+    },
+    "conn": {
+      "data_rows": 1580523,
+      "fields": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents"
+      ],
+      "min_ts": 1568912105.736308,
+      "max_ts": 1568915994.937793
+    }
+  },
+  "counts": {
+    "ecar_all_records": 177023,
+    "ecar_browser_records": 176812,
+    "http_browser_uid_rows": 11221,
+    "ssl_browser_uid_rows": 42150,
+    "conn_browser_http_or_ssl_uid_matches": 44691,
+    "complete_browser_html_documents": 686,
+    "normal_http_file_objects": 5026,
+    "normal_http_flow_events": 42,
+    "normal_tls_browser_flow_events": 41588,
+    "normal_flow_events": 41630
+  },
+  "all_http_mime_counts": {
+    "text/html": 105675,
+    "text/plain": 11251,
+    "application/x-possible-js": 31345,
+    "image/gif": 69111,
+    "image/jpeg": 90566,
+    "image/png": 47135,
+    "application/javascript": 4683,
+    "image/x-ms-bmp": 401,
+    "image/x-icon": 2356,
+    "application/font-woff": 836,
+    "application/x-shockwave-flash": 1599,
+    "-": 4046,
+    "application/x-possible-vbs": 291,
+    "application/x-possible-ps": 2,
+    "application/x-dosexec": 6
+  },
+  "normal_object_types": {
+    "webpage_stylesheet_download": 247,
+    "webpage_image_download": 4779
+  },
+  "normal_flow_host_count": 17,
+  "normal_flow_episode_count": 327,
+  "normal_tls_site_counts": {
+    "www.sac.com.cn": 14267,
+    "www.nok.se": 2130,
+    "www.elpais.com": 386,
+    "www.chase.com": 1690,
+    "www.usbank.com": 531,
+    "www.damasport.com": 1561,
+    "www.sis.gov.uk": 1387,
+    "www.elnashra.com": 2042,
+    "www.huawei.com": 902,
+    "www.noaa.gov": 703,
+    "www.kooora.com": 1221,
+    "www.cnooc.com.cn": 1763,
+    "www.ameblo.jp": 903,
+    "www.bild.de": 1143,
+    "www.fajrhospital.ir": 3200,
+    "www.nintendo.co.jp": 2796,
+    "www.goo.ne.jp": 90,
+    "www.thalesgroup.com": 1319,
+    "www.hospitalgeneral.salud.gob.mx": 61,
+    "www.zte.com.cn": 1053,
+    "www.cnsa.gov.cn": 481,
+    "www.chowtaifook.com": 1895,
+    "www.chinacoalenergy.com": 64
+  },
+  "rejections": {
+    "http_object": {
+      "crosses_capture_hour_boundary": 39,
+      "not_declared_static_object_type": 4728,
+      "no_observed_parent_document_within_120s": 1242,
+      "no_same_site_parent_url": 92,
+      "ecar_tuple_absent_or_ambiguous": 90,
+      "no_conn": 2,
+      "conn_not_complete_tcp_SF": 2
+    },
+    "http_flow": {
+      "http_connection_has_other_unqualified_transactions": 517
+    },
+    "tls_flow": {
+      "crosses_capture_hour_boundary": 11,
+      "conn_not_complete_tcp_SF": 503,
+      "tls_not_established_or_tuple_mismatch": 34,
+      "ecar_tuple_absent_or_ambiguous": 1,
+      "no_conn": 13
+    }
+  },
+  "comparability": {
+    "attack_download_object_bytes": 59392,
+    "attack_download_conn_resp_bytes": 59598,
+    "normal_objects_in_half_to_twice_attack_object_bytes": 494,
+    "normal_http_flows_in_half_to_twice_attack_conn_resp_bytes": 8,
+    "http_business": "Ordinary webpage image/font/CSS transfers, not normal executable/software-update downloads. All are real complete HTTP objects; non-EXE content does not invalidate them as HTTP transfer counterexamples.",
+    "port_difference": "Known malicious download uses HTTP 8080; normal HTTP transfer cohort may use port 80. Destination port is audit-only and excluded from the shared numeric input contract.",
+    "tls_business": "Known Empire control and this browser cohort both use established TLS on TCP 443. HTTPS payload/command identity is not observable here.",
+    "permitted_shared_numeric_inputs": [
+      "duration",
+      "orig_bytes",
+      "resp_bytes",
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes",
+      "missed_bytes"
+    ],
+    "provenance_not_model_inputs": [
+      "host/IP",
+      "PID/process",
+      "actorID",
+      "uid/fuid",
+      "URL/referrer",
+      "SNI",
+      "MIME",
+      "source date/line",
+      "label",
+      "destination port"
+    ]
+  },
+  "denominator": {
+    "complete_within_declared_business_filters": true,
+    "http_file_transfer_flows": 42,
+    "tls_browser_flows": 41588,
+    "whole_network_normal_denominator_established": false,
+    "meaning": "Every qualifying record in the specified source hour and 25-host eCAR shard was enumerated. This is a conditional normal-business denominator, not all normal enterprise traffic or evidence for remote administration/software updates.",
+    "unit": "Unique connection UID. Multiple file objects share connections and multiple connections share browser episodes; neither is counted as an independent attack/event repetition.",
+    "unknown_news_com_PE_events": 6,
+    "unknown_evidence_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\benign_file_business.json",
+    "unknown_evidence_sha256": "e71f5b0557dd84ab1fce153c224440dc7bd93f730d5186f42e772ae682ce7e78"
+  },
+  "rules": {
+    "http": "Official benign shard; unique browser eCAR uid/five-tuple; complete SF conn within hour; GET 200 zero request body; image/font/CSS MIME and extension where appropriate; response byte count equals complete files object; same-site parent HTML+file observed by same actor within prior 120s. Whole-flow normal requires ALL observed HTTP transactions to meet that rule.",
+    "tls": "Official benign shard; unique browser eCAR uid/five-tuple; complete SF TLS/443 conn within hour; one established SSL record with named-site SNI. Not a payload/action-level normal label.",
+    "excluded_known_infrastructure": [
+      "132.197.158.98",
+      "202.6.172.98",
+      "53.192.68.50"
+    ],
+    "not_used": "No model predictions/scores. No assumption that all non-red-team-IP traffic is normal. No relabeling of six PE anomalies."
+  },
+  "artifacts": {
+    "normal_flow_events.jsonl.gz": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_flow_events.jsonl.gz",
+      "bytes": 3369743,
+      "sha256": "bf06c3befbe2ea8a18500ce00348cd866836813ec09422e05325a055ea72fe0a"
+    },
+    "normal_http_file_objects.jsonl.gz": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_http_file_objects.jsonl.gz",
+      "bytes": 344081,
+      "sha256": "09e49940620154b04d40169e970578c7efc54dde26603d5d795afa6f789225ef"
+    }
+  }
+}

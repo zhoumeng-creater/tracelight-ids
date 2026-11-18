@@ -1,0 +1,47 @@
+[
+  {
+    "path": "environment/provisioning/ansible/group_vars/servers/suricata.yml",
+    "bytes": 2189,
+    "compressed": 742,
+    "CRC": 1245263570,
+    "offset": 25762723,
+    "sha256": "a78288e04a4b43173611098284c85ed227ca1a5fe950b113167799d4c3063f46",
+    "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&checksum_config_offset=25762723"
+  },
+  {
+    "path": "environment/provisioning/ansible/roles/suricata/tasks/main.yml",
+    "bytes": 1037,
+    "compressed": 362,
+    "CRC": 668659570,
+    "offset": 79615367,
+    "sha256": "63657650bd08b5841195a912a896eaa9d920fe814cf44dce04b0113047818afb",
+    "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&checksum_config_offset=79615367"
+  },
+  {
+    "path": "environment/provisioning/ansible/roles/suricata/templates/default_suricata.j2",
+    "bytes": 717,
+    "compressed": 445,
+    "CRC": 4149567957,
+    "offset": 79636368,
+    "sha256": "a5b4e4ad6957796e692e52bcc482f5a8af675bf8f22d0b3dacec63d00633e550",
+    "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&checksum_config_offset=79636368"
+  },
+  {
+    "path": "gather/cloud_share/facts.json",
+    "bytes": 1012336,
+    "compressed": 100600,
+    "CRC": 4278838280,
+    "offset": 189885337,
+    "sha256": "48ec85facf56fe029a7f68c8901415a0e42011a6dd77d7249a8786827ad6adeb",
+    "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&checksum_config_offset=189885337"
+  },
+  {
+    "path": "gather/cloud_share/configs/suricata/suricata.yaml",
+    "bytes": 64887,
+    "compressed": 20252,
+    "CRC": 1583483211,
+    "offset": 202808927,
+    "sha256": "44e2d4378e6020c3397cbb7d0a811c71d7717e24b6da0613063a313aeeeb9d53",
+    "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&checksum_config_offset=202808927"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "source_baseline": "source-method-route-v1 commit 74b5425",
+  "all_confirmed_normal_event_ids": [
+    "russellmitchell:other_vhosts_access.log.1:673",
+    "russellmitchell:other_vhosts_access.log.1:1057",
+    "russellmitchell:other_vhosts_access.log.1:1068",
+    "russellmitchell:other_vhosts_access.log.1:1070",
+    "russellmitchell:other_vhosts_access.log.1:1074",
+    "russellmitchell:other_vhosts_access.log.1:1663",
+    "russellmitchell:other_vhosts_access.log.1:2152",
+    "russellmitchell:other_vhosts_access.log.1:2154",
+    "russellmitchell:other_vhosts_access.log.1:2168",
+    "russellmitchell:other_vhosts_access.log.1:2187",
+    "russellmitchell:other_vhosts_access.log.1:2313",
+    "russellmitchell:other_vhosts_access.log.1:2327",
+    "russellmitchell:other_vhosts_access.log.1:2329",
+    "russellmitchell:other_vhosts_access.log.1:2331",
+    "russellmitchell:other_vhosts_access.log.1:2782",
+    "russellmitchell:other_vhosts_access.log.1:2786",
+    "russellmitchell:other_vhosts_access.log.1:3117",
+    "russellmitchell:other_vhosts_access.log.1:3430",
+    "russellmitchell:other_vhosts_access.log.1:5469",
+    "russellmitchell:other_vhosts_access.log.4:213",
+    "russellmitchell:other_vhosts_access.log.4:499",
+    "russellmitchell:other_vhosts_access.log.4:1349",
+    "russellmitchell:other_vhosts_access.log.4:3838",
+    "russellmitchell:other_vhosts_access.log.4:3843",
+    "russellmitchell:other_vhosts_access.log.4:3863",
+    "russellmitchell:other_vhosts_access.log.4:3902",
+    "russellmitchell:other_vhosts_access.log.4:5152",
+    "russellmitchell:other_vhosts_access.log.4:5488",
+    "russellmitchell:other_vhosts_access.log.4:5494",
+    "russellmitchell:other_vhosts_access.log.4:5626",
+    "russellmitchell:other_vhosts_access.log.4:5630"
+  ],
+  "event_request_min_utc": "2022-01-21T06:33:22+00:00",
+  "event_request_max_utc": "2022-01-24T21:06:28+00:00",
+  "candidate_members": [
+    {
+      "path": "gather/webserver/logs/suricata/log.pcap.1643023053",
+      "bytes": 188613595,
+      "compressed": 168108641,
+      "CRC": 1502792115,
+      "offset": 2705239899
+    },
+    {
+      "path": "gather/webserver/logs/suricata/log.pcap.1642684648",
+      "bytes": 1032053160,
+      "compressed": 894754262,
+      "CRC": 8349121,
+      "offset": 2885626389
+    },
+    {
+      "path": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+      "bytes": 525862169,
+      "compressed": 464709023,
+      "CRC": 3074706299,
+      "offset": 6345484912
+    }
+  ],
+  "selected_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+  "reason": "The only cloud member is smaller than the two proxy members required across Jan21 and Jan24. Backend association keeps prior client/proxy provenance and does not count both proxy legs as independent events. Actual packet coverage must be verified after acquisition.",
+  "checksum_modes": [
+    "strict",
+    "ignore_checksums"
+  ],
+  "no_arm_selection_by_match_count": true,
+  "new_fits": 0,
+  "model_forward_calls": 0
+}

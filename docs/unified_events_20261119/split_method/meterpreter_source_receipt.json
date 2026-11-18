@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-11-18T16:37:54.683080+00:00",
+  "scope": "qualification-only; no model or feature distribution selection",
+  "initial_network_hour_utc": [
+    "2019-09-25T14:00:00Z",
+    "2019-09-25T15:00:00Z"
+  ],
+  "additional_conn_reason": "Exact author PID/host-linked control UID may be exported in a later rotation; check adjacent hour and final available day rotation, without changing the identity query.",
+  "group_id": "optc:meterpreter:20190925_complete_branch",
+  "selected_action": "Sysclient0051 malicious Notepad++ update at 10:29:42 -04:00",
+  "sources": [
+    {
+      "id": "13gvdWllCM8RwECrrCU0axtnENbxwrK-z",
+      "title": "conn.14:00:00-15:00:00.log.gz",
+      "size": "46239694",
+      "url": "https://drive.google.com/file/d/13gvdWllCM8RwECrrCU0axtnENbxwrK-z/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_conn.140000-150000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_conn.140000-150000.log.gz",
+      "sha256": "4c36d6da1d2d3a3c99db5d342953457c3294bc7b0d92ccdef8e26f5517c3168e"
+    },
+    {
+      "id": "1PpuSts6AvSh9JnUzHLE0irUz4yb4ASxZ",
+      "title": "files.14:00:00-15:00:00.log.gz",
+      "size": "9313296",
+      "url": "https://drive.google.com/file/d/1PpuSts6AvSh9JnUzHLE0irUz4yb4ASxZ/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_files.140000-150000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_files.140000-150000.log.gz",
+      "sha256": "0e0b67233bdac5ac4705d82ab3d3a605433e3d995f4629d58c35852f6634dfee"
+    },
+    {
+      "id": "1hlfonpB93utzt98oyBJusRsUGRNBdcE3",
+      "title": "http.14:00:00-15:00:00.log.gz",
+      "size": "12689843",
+      "url": "https://drive.google.com/file/d/1hlfonpB93utzt98oyBJusRsUGRNBdcE3/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_http.140000-150000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_http.140000-150000.log.gz",
+      "sha256": "71c316f026f1015833e2b02529e36c320cb896557f7c77a3e14354dd0fa46d7f"
+    },
+    {
+      "id": "1SXZoY80Ihz0PngTdRlOOmElQQc_pMuEI",
+      "title": "ecarbro.json.gz",
+      "size": "37200",
+      "url": "https://drive.google.com/file/d/1SXZoY80Ihz0PngTdRlOOmElQQc_pMuEI/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_AIA51-75_ecarbro.json.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_AIA51-75_ecarbro.json.gz",
+      "sha256": "4d734f491afccafe0f068da772726eb823b910b8ebecc975e04e7b94ce559612"
+    },
+    {
+      "id": "16zzUP1b7kyPPITuZ3ugJuOWuNlFhFg5m",
+      "title": "ecarbro.json.gz",
+      "size": "20404",
+      "url": "https://drive.google.com/file/d/16zzUP1b7kyPPITuZ3ugJuOWuNlFhFg5m/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_AIA351-375_ecarbro.json.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_AIA351-375_ecarbro.json.gz",
+      "sha256": "75e7b530a00048d9326fe830f69ce3bde25a845bee94a443fc7debc57de63b26"
+    },
+    {
+      "id": "1xN28OqRnqravCe9yye0k0juojY5r6gxa",
+      "title": "conn.15:00:00-16:00:00.log.gz",
+      "size": "47342184",
+      "url": "https://drive.google.com/file/d/1xN28OqRnqravCe9yye0k0juojY5r6gxa/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_conn.150000-160000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_conn.150000-160000.log.gz",
+      "sha256": "b84ecae47923e8d6de361cece186e645a569985c63def1d1b557772b5cc44a78"
+    },
+    {
+      "id": "1u9tVPNsh2p52oXSJGlsNRJwqGPeoo9-E",
+      "title": "conn.17:00:00-18:00:00.log.gz",
+      "size": "43754252",
+      "url": "https://drive.google.com/file/d/1u9tVPNsh2p52oXSJGlsNRJwqGPeoo9-E/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_conn.170000-180000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_conn.170000-180000.log.gz",
+      "sha256": "6b9a5ea3bc880471f92a0a4b18c4c5af2d9c16552fdfa92d93df6730e7620595"
+    },
+    {
+      "id": "1zYC3_yAm-_AeYXwSEg_rbCKHBAVoloI2",
+      "title": "files.15:00:00-16:00:00.log.gz",
+      "size": "9530826",
+      "url": "https://drive.google.com/file/d/1zYC3_yAm-_AeYXwSEg_rbCKHBAVoloI2/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_files.150000-160000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_files.150000-160000.log.gz",
+      "sha256": "24bf619d37cc08cca119a1703af097f02f1551767f0000d408b68019b6d6fae2"
+    },
+    {
+      "id": "1rYwC03ltCtriR5p6bQWhMSEp1RcJqpsy",
+      "title": "http.15:00:00-16:00:00.log.gz",
+      "size": "12816274",
+      "url": "https://drive.google.com/file/d/1rYwC03ltCtriR5p6bQWhMSEp1RcJqpsy/view?usp=drivesdk",
+      "mime_type": "application/gzip",
+      "local_name": "20190925_http.150000-160000.log.gz",
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\sources\\20190925_http.150000-160000.log.gz",
+      "sha256": "632e0af1a87b54c315f8b452f34acb801d423347b6f1dbbc8344990e43ade452"
+    }
+  ],
+  "downloaded_bytes": 181743973
+}

@@ -1,0 +1,9 @@
+{
+  "path": "gather/intranet_server/facts.json",
+  "bytes": 956406,
+  "compressed": 96998,
+  "CRC": 2309763221,
+  "offset": 154124526,
+  "sha256": "fae3b9e4e17b5236e88a5645f0b3b0ecc67e36a4d4bd19eee28e758d1d04746f",
+  "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&checksum_intranet_offset=154124526"
+}

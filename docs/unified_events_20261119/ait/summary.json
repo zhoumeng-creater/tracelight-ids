@@ -1,0 +1,542 @@
+{
+  "capture": {
+    "member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+    "archive_url": "https://zenodo.org/api/records/19483937/files/russellmitchell.zip/content",
+    "archive_bytes": 7132670599,
+    "header_offset": 6345484912,
+    "data_offset": 6345485022,
+    "compressed_bytes": 464709023,
+    "pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647",
+    "sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+    "crc32": 3074706299,
+    "bytes": 525862169,
+    "range_workers": 4,
+    "chunk_bytes": 16777216,
+    "elapsed_seconds": 322.7144661999773
+  },
+  "source_manifest": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\normal_event_manifest.json",
+  "source_manifest_sha256": "d8da09bb47cac297827447949e58a709e337c9bad944c24f83a0f8a78c18bc6d",
+  "intranet_catalog_proxy_connections": 0,
+  "normal_events": 31,
+  "retained_unresolved_events": 5,
+  "packet_connections_whole_capture": 18591,
+  "normal_packet_candidate_distribution": {
+    "multiple": 31
+  },
+  "normal_request_second_distribution": {
+    "multiple": 31
+  },
+  "normal_request_second_proxy_payload_distribution": {
+    "unique": 27,
+    "multiple": 4
+  },
+  "normal_zeek_distribution_by_mode": {
+    "strict": {
+      "multiple": 31
+    },
+    "ignore_checksums": {
+      "multiple": 31
+    }
+  },
+  "normal_request_second_payload_zeek_distribution_by_mode": {
+    "strict": {
+      "unique": 27,
+      "multiple": 4
+    },
+    "ignore_checksums": {
+      "unique": 27,
+      "multiple": 4
+    }
+  },
+  "unique_packet_candidates_linked_to_normal_events": 263,
+  "packet_candidates_shared_between_events": {
+    "17169": [
+      "russellmitchell:other_vhosts_access.log.1:1057",
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070"
+    ],
+    "17170": [
+      "russellmitchell:other_vhosts_access.log.1:1057",
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070",
+      "russellmitchell:other_vhosts_access.log.1:1074"
+    ],
+    "17181": [
+      "russellmitchell:other_vhosts_access.log.1:1057",
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070",
+      "russellmitchell:other_vhosts_access.log.1:1074"
+    ],
+    "17186": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070",
+      "russellmitchell:other_vhosts_access.log.1:1074"
+    ],
+    "17187": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070"
+    ],
+    "17189": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070",
+      "russellmitchell:other_vhosts_access.log.1:1074"
+    ],
+    "17190": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070"
+    ],
+    "17194": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070"
+    ],
+    "17195": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070"
+    ],
+    "17196": [
+      "russellmitchell:other_vhosts_access.log.1:1068",
+      "russellmitchell:other_vhosts_access.log.1:1070"
+    ],
+    "17197": [
+      "russellmitchell:other_vhosts_access.log.1:1070",
+      "russellmitchell:other_vhosts_access.log.1:1074"
+    ],
+    "17198": [
+      "russellmitchell:other_vhosts_access.log.1:1070",
+      "russellmitchell:other_vhosts_access.log.1:1074"
+    ],
+    "17454": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17455": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17456": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17464": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154",
+      "russellmitchell:other_vhosts_access.log.1:2168"
+    ],
+    "17466": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154",
+      "russellmitchell:other_vhosts_access.log.1:2168"
+    ],
+    "17468": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17469": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17470": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17471": [
+      "russellmitchell:other_vhosts_access.log.1:2152",
+      "russellmitchell:other_vhosts_access.log.1:2154"
+    ],
+    "17486": [
+      "russellmitchell:other_vhosts_access.log.1:2168",
+      "russellmitchell:other_vhosts_access.log.1:2187"
+    ],
+    "17487": [
+      "russellmitchell:other_vhosts_access.log.1:2168",
+      "russellmitchell:other_vhosts_access.log.1:2187"
+    ],
+    "17532": [
+      "russellmitchell:other_vhosts_access.log.1:2313",
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17535": [
+      "russellmitchell:other_vhosts_access.log.1:2313",
+      "russellmitchell:other_vhosts_access.log.1:2327"
+    ],
+    "17543": [
+      "russellmitchell:other_vhosts_access.log.1:2313",
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329"
+    ],
+    "17545": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17546": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17547": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17548": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329"
+    ],
+    "17549": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17550": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17551": [
+      "russellmitchell:other_vhosts_access.log.1:2327",
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17556": [
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17557": [
+      "russellmitchell:other_vhosts_access.log.1:2329",
+      "russellmitchell:other_vhosts_access.log.1:2331"
+    ],
+    "17639": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17640": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17641": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17642": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17643": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17644": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17645": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "17646": [
+      "russellmitchell:other_vhosts_access.log.1:2782",
+      "russellmitchell:other_vhosts_access.log.1:2786"
+    ],
+    "2681": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2682": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2699": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2700": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2701": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2702": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2705": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "2706": [
+      "russellmitchell:other_vhosts_access.log.4:2245",
+      "russellmitchell:other_vhosts_access.log.4:2248"
+    ],
+    "3822": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3823": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3824": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3825": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3826": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3827": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3828": [
+      "russellmitchell:other_vhosts_access.log.4:3838",
+      "russellmitchell:other_vhosts_access.log.4:3843"
+    ],
+    "3833": [
+      "russellmitchell:other_vhosts_access.log.4:3843",
+      "russellmitchell:other_vhosts_access.log.4:3863"
+    ],
+    "3834": [
+      "russellmitchell:other_vhosts_access.log.4:3843",
+      "russellmitchell:other_vhosts_access.log.4:3863"
+    ],
+    "3835": [
+      "russellmitchell:other_vhosts_access.log.4:3843",
+      "russellmitchell:other_vhosts_access.log.4:3863"
+    ],
+    "4626": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4627": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4628": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4629": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4630": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4631": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4632": [
+      "russellmitchell:other_vhosts_access.log.4:5488",
+      "russellmitchell:other_vhosts_access.log.4:5494"
+    ],
+    "4774": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4775": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4776": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4777": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4778": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4779": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4780": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ],
+    "4781": [
+      "russellmitchell:other_vhosts_access.log.4:5626",
+      "russellmitchell:other_vhosts_access.log.4:5630"
+    ]
+  },
+  "zeek_connection_rows": {
+    "strict": 38734,
+    "ignore_checksums": 21925
+  },
+  "export_receipts": {
+    "strict": {
+      "status": "complete",
+      "mode": "strict",
+      "version": "8.0.11",
+      "runtime_kind": "wsl",
+      "pcap_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+      "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+      "wall_seconds": 22.215570600004867,
+      "logs": {
+        "conn": {
+          "exists": true,
+          "rows": 38734,
+          "sha256": "05c30ff86e335295ee8a67f3171c96d622abc8733480f5f57f2e7eb1b9d31930"
+        },
+        "http": {
+          "exists": true,
+          "rows": 46,
+          "sha256": "c143d548bc908013d56c3c508b363b4be903e9de96ce3390e629b1a238869e71"
+        },
+        "ssl": {
+          "exists": true,
+          "rows": 12998,
+          "sha256": "400def88464cdf7d23c4b74c42692c7b61dd17e75dc8193ee86506c3988b4e31"
+        },
+        "dns": {
+          "exists": true,
+          "rows": 404,
+          "sha256": "7da5a1b654229599d47a287b893bf08f3751fd72043e459258b4625f7f4a90e0"
+        },
+        "files": {
+          "exists": true,
+          "rows": 22,
+          "sha256": "40522b7ffa334bcc5ab792f9b96c6bcfe9a8e1f2a5175729f4feb808cd6bedfb"
+        },
+        "weird": {
+          "exists": true,
+          "rows": 17026,
+          "sha256": "f89c3b372f803abedd440586e887f79b512052e915a7156ee69af82bff03b5aa"
+        }
+      },
+      "command": [
+        "wsl",
+        "-d",
+        "Ubuntu",
+        "--exec",
+        "sh",
+        "-c",
+        "cd \"$1\" && shift && exec env \"$@\"",
+        "ait-zeek",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/统一事件与方法落实_20261119/ait/zeek/strict",
+        "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+        "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+        "LC_ALL=C",
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "zeek-resource.txt",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+        "-r",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/统一事件与方法落实_20261119/ait/source/cloud-share-log.pcap.1642684647",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/scripts/ait_contract/export.zeek"
+      ],
+      "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+      "checksum_policy": "validate",
+      "model_forward_calls": 0,
+      "gpu_jobs": 0,
+      "process_resources": {
+        "measured": true,
+        "source": "/usr/bin/time -v for this Zeek process",
+        "user_cpu_seconds": 9.83,
+        "system_cpu_seconds": 3.8,
+        "max_rss_kib": 122104,
+        "exit_status": 0
+      }
+    },
+    "ignore_checksums": {
+      "status": "complete",
+      "mode": "ignore_checksums",
+      "version": "8.0.11",
+      "runtime_kind": "wsl",
+      "pcap_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+      "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+      "wall_seconds": 20.067367600044236,
+      "logs": {
+        "conn": {
+          "exists": true,
+          "rows": 21925,
+          "sha256": "d0dd8b28e2166203302e223655cb7987f3c2289e2ff5f45d09d93773d397c7b0"
+        },
+        "http": {
+          "exists": true,
+          "rows": 161,
+          "sha256": "ed74825231d5a76f7fa7c73defa165f07327d160eb00fc05fc973b830e69e0f3"
+        },
+        "ssl": {
+          "exists": true,
+          "rows": 13155,
+          "sha256": "017fe83936d60b0567acbde673ae19dbde8aa07861d6732ee4f022697aff5fea"
+        },
+        "dns": {
+          "exists": true,
+          "rows": 414,
+          "sha256": "f2a3eb2e3518a255e4cc5d66542cc9d730c5b3c27da28283ceca7a3eb3f0fa3e"
+        },
+        "files": {
+          "exists": true,
+          "rows": 25,
+          "sha256": "b734536d3457362377c84ce6dc3a9a76144010fd003446efd5cb25390bb7db31"
+        },
+        "weird": {
+          "exists": true,
+          "rows": 168,
+          "sha256": "23b022733f5d373395c626711b5a85bd53824a3b4ed5541f8d9be9e1f64b52fc"
+        }
+      },
+      "command": [
+        "wsl",
+        "-d",
+        "Ubuntu",
+        "--exec",
+        "sh",
+        "-c",
+        "cd \"$1\" && shift && exec env \"$@\"",
+        "ait-zeek",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/统一事件与方法落实_20261119/ait/zeek/ignore_checksums",
+        "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+        "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+        "LC_ALL=C",
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "zeek-resource.txt",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+        "-C",
+        "-r",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/统一事件与方法落实_20261119/ait/source/cloud-share-log.pcap.1642684647",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/scripts/ait_contract/export.zeek"
+      ],
+      "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+      "checksum_policy": "explicitly ignore with -C",
+      "model_forward_calls": 0,
+      "gpu_jobs": 0,
+      "process_resources": {
+        "measured": true,
+        "source": "/usr/bin/time -v for this Zeek process",
+        "user_cpu_seconds": 7.13,
+        "system_cpu_seconds": 3.37,
+        "max_rss_kib": 121720,
+        "exit_status": 0
+      }
+    }
+  },
+  "new_model_fits": 0,
+  "model_forward_calls": 0,
+  "source_code": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\build_ait_connections.py": "1c45ba6edd6561fd3d127aad1e99fb37d20f843e628ab1151222f56d5a6480e0",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\prepare_ait_packet_evidence.py": "916f18134279993b67a15e0524730945dfcee99868cc6d663bb6f84953953417",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\zeek_runtime.py": "761b34c154e193122e0ae74a148e38ab5acf46492784ac3efa30106169e1cf71",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\export.zeek": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\analyze.py": "564df5a3e581013876327c511dcbce8e0406c8df5ace18281403fe927a46c6a0"
+  }
+}

@@ -1,0 +1,799 @@
+{
+  "status": "evidence_analysis_complete",
+  "variant": "strict",
+  "connections": 14008,
+  "raw8": [
+    "ip_protocol",
+    "orig_port",
+    "resp_port",
+    "duration_seconds",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes"
+  ],
+  "missing_value": -1,
+  "log_rows": {
+    "conn": 14008,
+    "http": 794,
+    "ssl": 1131,
+    "dns": 6486,
+    "files": 24,
+    "weird": 3041
+  },
+  "log_files_present": {
+    "conn": true,
+    "http": true,
+    "ssl": true,
+    "dns": true,
+    "files": true,
+    "weird": true
+  },
+  "input_sha256": {
+    "conn": "45c03f750b35481678ccd1338bf5574e1f13e2f1b3526cb9fc03e90b190af59b",
+    "http": "f714b9a9fc3e2f33d916943d29990ee597303dc7c88d550eafbd94a5f8a06799",
+    "ssl": "f78c79e1dc6a9d61c5bab4b99e1903b4dc6aca30461fd9537fb269ed4420a7cf",
+    "dns": "f8deee03304b63d12bd79b5b2379186c4d46e809ceb14bdb4333531fec88d557",
+    "files": "b1963a053707f6bf77d102330c79617ac1bb9d6072afcfb2b2624c09a961444a",
+    "weird": "f5150ea25aaee6f7d028aa78dabbee6993b193853736e70ca4d08ae9075b02f8"
+  },
+  "action_counts": {
+    "normal_business": 68,
+    "control_request": 32,
+    "download_action": 2
+  },
+  "action_results": [
+    {
+      "action_id": "1645ff58-95ee-4b48-a9bd-4cd1eb7003bf",
+      "kind": "normal_business",
+      "event_group": "1645ff58-95ee-4b48-a9bd-4cd1eb7003bf",
+      "match_class": "multiple",
+      "candidate_count": 112
+    },
+    {
+      "action_id": "6ec6f713-6bc0-4a07-b662-64c6e48d1c9a",
+      "kind": "normal_business",
+      "event_group": "6ec6f713-6bc0-4a07-b662-64c6e48d1c9a",
+      "match_class": "multiple",
+      "candidate_count": 136
+    },
+    {
+      "action_id": "ef4586f1-b6af-4f69-8e2e-eef492fad1fa",
+      "kind": "normal_business",
+      "event_group": "ef4586f1-b6af-4f69-8e2e-eef492fad1fa",
+      "match_class": "multiple",
+      "candidate_count": 143
+    },
+    {
+      "action_id": "124338e9-b4a2-412a-a977-3c09baab408d",
+      "kind": "normal_business",
+      "event_group": "124338e9-b4a2-412a-a977-3c09baab408d",
+      "match_class": "multiple",
+      "candidate_count": 150
+    },
+    {
+      "action_id": "4eebaab3-6256-4996-b068-5b904a5bc172",
+      "kind": "normal_business",
+      "event_group": "4eebaab3-6256-4996-b068-5b904a5bc172",
+      "match_class": "multiple",
+      "candidate_count": 164
+    },
+    {
+      "action_id": "14c58c11-aae0-4759-b543-6b39362e8353",
+      "kind": "normal_business",
+      "event_group": "14c58c11-aae0-4759-b543-6b39362e8353",
+      "match_class": "multiple",
+      "candidate_count": 175
+    },
+    {
+      "action_id": "920a5842-1cd1-408c-a13f-3940f31cab68",
+      "kind": "normal_business",
+      "event_group": "920a5842-1cd1-408c-a13f-3940f31cab68",
+      "match_class": "multiple",
+      "candidate_count": 179
+    },
+    {
+      "action_id": "b108ffe9-519e-4e1e-bf66-01487ad758c1",
+      "kind": "normal_business",
+      "event_group": "b108ffe9-519e-4e1e-bf66-01487ad758c1",
+      "match_class": "multiple",
+      "candidate_count": 190
+    },
+    {
+      "action_id": "e7929593-eb89-440c-bc74-5e8bbe00468b",
+      "kind": "normal_business",
+      "event_group": "e7929593-eb89-440c-bc74-5e8bbe00468b",
+      "match_class": "multiple",
+      "candidate_count": 202
+    },
+    {
+      "action_id": "175e2223-2521-4dcc-8356-41f5a309b4d1",
+      "kind": "normal_business",
+      "event_group": "175e2223-2521-4dcc-8356-41f5a309b4d1",
+      "match_class": "multiple",
+      "candidate_count": 204
+    },
+    {
+      "action_id": "80cabd99-1613-4ea4-8570-e1bd2bb96ef0",
+      "kind": "normal_business",
+      "event_group": "80cabd99-1613-4ea4-8570-e1bd2bb96ef0",
+      "match_class": "multiple",
+      "candidate_count": 218
+    },
+    {
+      "action_id": "5eed8c38-f7d3-4211-afbc-3107620af862",
+      "kind": "normal_business",
+      "event_group": "5eed8c38-f7d3-4211-afbc-3107620af862",
+      "match_class": "multiple",
+      "candidate_count": 225
+    },
+    {
+      "action_id": "d0df2bfd-9a7d-4593-a591-749a1961bb86",
+      "kind": "normal_business",
+      "event_group": "d0df2bfd-9a7d-4593-a591-749a1961bb86",
+      "match_class": "multiple",
+      "candidate_count": 227
+    },
+    {
+      "action_id": "99753767-4c90-467c-a1ea-92485761a1f6",
+      "kind": "normal_business",
+      "event_group": "99753767-4c90-467c-a1ea-92485761a1f6",
+      "match_class": "multiple",
+      "candidate_count": 227
+    },
+    {
+      "action_id": "8af98c73-011e-4e95-93fc-f45cecee3052",
+      "kind": "normal_business",
+      "event_group": "8af98c73-011e-4e95-93fc-f45cecee3052",
+      "match_class": "multiple",
+      "candidate_count": 237
+    },
+    {
+      "action_id": "b2d4cad2-a2c1-40e2-8627-bdffe0c4cc6d",
+      "kind": "normal_business",
+      "event_group": "b2d4cad2-a2c1-40e2-8627-bdffe0c4cc6d",
+      "match_class": "multiple",
+      "candidate_count": 247
+    },
+    {
+      "action_id": "f8994942-cfed-4656-a89a-79615467df65",
+      "kind": "normal_business",
+      "event_group": "f8994942-cfed-4656-a89a-79615467df65",
+      "match_class": "multiple",
+      "candidate_count": 254
+    },
+    {
+      "action_id": "28600766-7007-4633-9a25-6e112c316bfd",
+      "kind": "normal_business",
+      "event_group": "28600766-7007-4633-9a25-6e112c316bfd",
+      "match_class": "multiple",
+      "candidate_count": 266
+    },
+    {
+      "action_id": "bc2ec6ae-ca2a-446b-8c59-a987a54f7306",
+      "kind": "normal_business",
+      "event_group": "bc2ec6ae-ca2a-446b-8c59-a987a54f7306",
+      "match_class": "multiple",
+      "candidate_count": 280
+    },
+    {
+      "action_id": "f8a553c4-d66d-4a45-87e2-d5cbca66aa26",
+      "kind": "normal_business",
+      "event_group": "f8a553c4-d66d-4a45-87e2-d5cbca66aa26",
+      "match_class": "multiple",
+      "candidate_count": 284
+    },
+    {
+      "action_id": "fdcaa892-5ecb-40f2-b4a9-faea7a50ba83",
+      "kind": "normal_business",
+      "event_group": "fdcaa892-5ecb-40f2-b4a9-faea7a50ba83",
+      "match_class": "multiple",
+      "candidate_count": 291
+    },
+    {
+      "action_id": "c0911871-10ac-485c-96f0-5d2eb231705c",
+      "kind": "normal_business",
+      "event_group": "c0911871-10ac-485c-96f0-5d2eb231705c",
+      "match_class": "multiple",
+      "candidate_count": 304
+    },
+    {
+      "action_id": "7e8271ab-31f2-42db-8b86-0a42f4ef1775",
+      "kind": "normal_business",
+      "event_group": "7e8271ab-31f2-42db-8b86-0a42f4ef1775",
+      "match_class": "multiple",
+      "candidate_count": 321
+    },
+    {
+      "action_id": "a446e0ea-8b19-4d3c-9b75-44c9c1692647",
+      "kind": "normal_business",
+      "event_group": "a446e0ea-8b19-4d3c-9b75-44c9c1692647",
+      "match_class": "multiple",
+      "candidate_count": 328
+    },
+    {
+      "action_id": "8c8668c9-163e-4eaa-b73e-17a9814c71d6",
+      "kind": "normal_business",
+      "event_group": "8c8668c9-163e-4eaa-b73e-17a9814c71d6",
+      "match_class": "multiple",
+      "candidate_count": 333
+    },
+    {
+      "action_id": "ae7cfd2e-37d0-42e9-849c-a8c002f90d5a",
+      "kind": "normal_business",
+      "event_group": "ae7cfd2e-37d0-42e9-849c-a8c002f90d5a",
+      "match_class": "multiple",
+      "candidate_count": 347
+    },
+    {
+      "action_id": "011daeed-13f8-4873-90d8-1e2050a7105b",
+      "kind": "normal_business",
+      "event_group": "011daeed-13f8-4873-90d8-1e2050a7105b",
+      "match_class": "multiple",
+      "candidate_count": 364
+    },
+    {
+      "action_id": "368fe65d-125c-46c5-bee3-af073bcba4c4",
+      "kind": "normal_business",
+      "event_group": "368fe65d-125c-46c5-bee3-af073bcba4c4",
+      "match_class": "multiple",
+      "candidate_count": 376
+    },
+    {
+      "action_id": "5952a6fd-a497-4def-9ca1-6ef7b12a1cec",
+      "kind": "normal_business",
+      "event_group": "5952a6fd-a497-4def-9ca1-6ef7b12a1cec",
+      "match_class": "multiple",
+      "candidate_count": 381
+    },
+    {
+      "action_id": "ce952a31-614e-45f6-9ebb-6c2683e5c6d6",
+      "kind": "normal_business",
+      "event_group": "ce952a31-614e-45f6-9ebb-6c2683e5c6d6",
+      "match_class": "multiple",
+      "candidate_count": 381
+    },
+    {
+      "action_id": "1edd78f4-051a-4930-bc15-465f081b17d4",
+      "kind": "normal_business",
+      "event_group": "1edd78f4-051a-4930-bc15-465f081b17d4",
+      "match_class": "multiple",
+      "candidate_count": 398
+    },
+    {
+      "action_id": "1b39ba63-5019-4e84-ab04-08a2f27e167a",
+      "kind": "normal_business",
+      "event_group": "1b39ba63-5019-4e84-ab04-08a2f27e167a",
+      "match_class": "multiple",
+      "candidate_count": 416
+    },
+    {
+      "action_id": "7f6fc95c-a0c7-4d3b-8e41-413f6aaf8428",
+      "kind": "normal_business",
+      "event_group": "7f6fc95c-a0c7-4d3b-8e41-413f6aaf8428",
+      "match_class": "multiple",
+      "candidate_count": 417
+    },
+    {
+      "action_id": "766e1fae-6f68-4df5-9d42-16f44d93e515",
+      "kind": "normal_business",
+      "event_group": "766e1fae-6f68-4df5-9d42-16f44d93e515",
+      "match_class": "multiple",
+      "candidate_count": 422
+    },
+    {
+      "action_id": "695f1d38-2c41-4e70-850c-5b3a1d2f70c2",
+      "kind": "normal_business",
+      "event_group": "695f1d38-2c41-4e70-850c-5b3a1d2f70c2",
+      "match_class": "multiple",
+      "candidate_count": 427
+    },
+    {
+      "action_id": "e049f328-75f8-4a45-8afe-f411ce55cc3d",
+      "kind": "normal_business",
+      "event_group": "e049f328-75f8-4a45-8afe-f411ce55cc3d",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "7b2a30c0-ea2c-43ab-98a6-8cbef8b7eec7",
+      "kind": "normal_business",
+      "event_group": "7b2a30c0-ea2c-43ab-98a6-8cbef8b7eec7",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "4fd7fe4c-e440-4f2e-9b17-0fb7313938ad",
+      "kind": "normal_business",
+      "event_group": "4fd7fe4c-e440-4f2e-9b17-0fb7313938ad",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "f97e657a-70bb-4e5f-bf3b-4126791fa976",
+      "kind": "normal_business",
+      "event_group": "f97e657a-70bb-4e5f-bf3b-4126791fa976",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "d871ebde-209b-4afc-adce-f686fccbf2de",
+      "kind": "normal_business",
+      "event_group": "d871ebde-209b-4afc-adce-f686fccbf2de",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "6c2a6a0e-61c5-4e39-80ab-706aeee8c516",
+      "kind": "normal_business",
+      "event_group": "6c2a6a0e-61c5-4e39-80ab-706aeee8c516",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "dde43007-2f58-4b99-b79f-1600cf44e592",
+      "kind": "normal_business",
+      "event_group": "dde43007-2f58-4b99-b79f-1600cf44e592",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "e5bd56dd-dda6-48f9-8d20-73548c10f1fa",
+      "kind": "normal_business",
+      "event_group": "e5bd56dd-dda6-48f9-8d20-73548c10f1fa",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "7c59a4c1-0160-49cc-91e2-897d5e8022d7",
+      "kind": "normal_business",
+      "event_group": "7c59a4c1-0160-49cc-91e2-897d5e8022d7",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "2a2b45fc-703c-4b73-bb03-6d3c2e914d23",
+      "kind": "normal_business",
+      "event_group": "2a2b45fc-703c-4b73-bb03-6d3c2e914d23",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "2cc7436c-c626-467d-85a1-1906cc5f3c87",
+      "kind": "normal_business",
+      "event_group": "2cc7436c-c626-467d-85a1-1906cc5f3c87",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "21898b4c-3a6d-4998-ac59-6267df5e0c59",
+      "kind": "normal_business",
+      "event_group": "21898b4c-3a6d-4998-ac59-6267df5e0c59",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "18bd0634-528b-4181-8191-fa6172144e37",
+      "kind": "normal_business",
+      "event_group": "18bd0634-528b-4181-8191-fa6172144e37",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "3e8640ef-e27a-4df0-ad53-14faff82fb3e",
+      "kind": "normal_business",
+      "event_group": "3e8640ef-e27a-4df0-ad53-14faff82fb3e",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "2b0fc324-bada-47af-8024-5db615699cf0",
+      "kind": "normal_business",
+      "event_group": "2b0fc324-bada-47af-8024-5db615699cf0",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "b1cc8a4a-5ae6-4305-a1d7-b7a603c63ea0",
+      "kind": "normal_business",
+      "event_group": "b1cc8a4a-5ae6-4305-a1d7-b7a603c63ea0",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "7e189828-02ce-4514-8458-56eb438f80fe",
+      "kind": "normal_business",
+      "event_group": "7e189828-02ce-4514-8458-56eb438f80fe",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "e53de814-360c-437f-b35c-9f882b16589c",
+      "kind": "normal_business",
+      "event_group": "e53de814-360c-437f-b35c-9f882b16589c",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "c1111f26-fe22-4b1e-b005-511eb8323b28",
+      "kind": "normal_business",
+      "event_group": "c1111f26-fe22-4b1e-b005-511eb8323b28",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "6e74889b-ef7f-410e-ae08-b6584c6b05ea",
+      "kind": "normal_business",
+      "event_group": "6e74889b-ef7f-410e-ae08-b6584c6b05ea",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "e50acc52-edeb-446e-81b6-8ed9a49e20a4",
+      "kind": "normal_business",
+      "event_group": "e50acc52-edeb-446e-81b6-8ed9a49e20a4",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "eb1bef6d-f5aa-439f-8470-5977e89b4573",
+      "kind": "normal_business",
+      "event_group": "eb1bef6d-f5aa-439f-8470-5977e89b4573",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "f38b302e-25a3-46db-b30e-34903305deb9",
+      "kind": "normal_business",
+      "event_group": "f38b302e-25a3-46db-b30e-34903305deb9",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "2b7ec90e-cbd3-4578-9bcf-7aab48f1f411",
+      "kind": "normal_business",
+      "event_group": "2b7ec90e-cbd3-4578-9bcf-7aab48f1f411",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "120a2ecb-f6c8-4f5a-810e-e29dbecd9e52",
+      "kind": "normal_business",
+      "event_group": "120a2ecb-f6c8-4f5a-810e-e29dbecd9e52",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "9ac89b9f-54e1-434f-aa00-55c192ce6e35",
+      "kind": "normal_business",
+      "event_group": "9ac89b9f-54e1-434f-aa00-55c192ce6e35",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "862dec70-2086-4610-81dc-4bcec68f886f",
+      "kind": "normal_business",
+      "event_group": "862dec70-2086-4610-81dc-4bcec68f886f",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "5cfc0bb4-1c4f-4499-99e2-bc14462a699e",
+      "kind": "normal_business",
+      "event_group": "5cfc0bb4-1c4f-4499-99e2-bc14462a699e",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "28d325e9-7371-46fd-9914-c9dcc93068ec",
+      "kind": "normal_business",
+      "event_group": "28d325e9-7371-46fd-9914-c9dcc93068ec",
+      "match_class": "multiple",
+      "candidate_count": 6
+    },
+    {
+      "action_id": "cb06c252-d7fb-4b4c-bbb6-9f9a672ad3a6",
+      "kind": "normal_business",
+      "event_group": "cb06c252-d7fb-4b4c-bbb6-9f9a672ad3a6",
+      "match_class": "multiple",
+      "candidate_count": 7
+    },
+    {
+      "action_id": "a9180460-23b2-4fa8-baaf-424d156afef7",
+      "kind": "normal_business",
+      "event_group": "a9180460-23b2-4fa8-baaf-424d156afef7",
+      "match_class": "multiple",
+      "candidate_count": 7
+    },
+    {
+      "action_id": "7ac33e70-96c9-470f-af3e-3abd87d5dc16",
+      "kind": "normal_business",
+      "event_group": "7ac33e70-96c9-470f-af3e-3abd87d5dc16",
+      "match_class": "multiple",
+      "candidate_count": 7
+    },
+    {
+      "action_id": "a4ebe6fb-c0e8-42d8-94c8-39e6961bfdeb",
+      "kind": "normal_business",
+      "event_group": "a4ebe6fb-c0e8-42d8-94c8-39e6961bfdeb",
+      "match_class": "multiple",
+      "candidate_count": 7
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8498",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "multiple",
+      "candidate_count": 2
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8499",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8500",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8501",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8502",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8503",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8504",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8505",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8506",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8507",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8508",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8509",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8510",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8511",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8512",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8513",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8514",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8515",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8516",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8517",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8518",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8519",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8520",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8521",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8522",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8523",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8524",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8525",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8526",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8527",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8528",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2:8529",
+      "kind": "control_request",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "one",
+      "candidate_count": 1
+    },
+    {
+      "action_id": "download:WPHashCrack",
+      "kind": "download_action",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "multiple",
+      "candidate_count": 4
+    },
+    {
+      "action_id": "download:password list",
+      "kind": "download_action",
+      "event_group": "russellmitchell-webshell-20220124",
+      "match_class": "multiple",
+      "candidate_count": 2
+    }
+  ],
+  "conflicting_normal_attack_associations": [],
+  "interval_relations": {
+    "before": 696,
+    "unknown_end": 6049,
+    "inside": 7091,
+    "after": 171,
+    "crosses_both_boundaries": 1
+  },
+  "missing_fields": {
+    "ip_protocol": 24,
+    "orig_port": 0,
+    "resp_port": 0,
+    "duration_seconds": 6049,
+    "orig_pkts": 0,
+    "resp_pkts": 0,
+    "orig_ip_bytes": 0,
+    "resp_ip_bytes": 0
+  },
+  "clock": {
+    "instrumented_connections": 14008,
+    "eof_connections": 5,
+    "shutdown_connections": 5,
+    "export_before_zeek_reported_end": 0,
+    "interpretation": "offline network-time export instrumentation, not actual detector receipt"
+  },
+  "conditions": {
+    "connection_records": "met",
+    "export_clock_instrumentation": "met",
+    "same_service_normal_event_candidates": "observed",
+    "pure_normal_evaluation_denominator": "unresolved_requires_business_adjudication",
+    "normal_file_download_business_provenance": "unresolved_not_supplied",
+    "online_feedback_arrival": "unresolved_not_supplied",
+    "http_download_request_observed": "unresolved"
+  },
+  "new_fits": 0,
+  "model_forward_calls": 0,
+  "fpr_computed": false,
+  "truth_policy": "All connections remain unknown; event associations and visible protocol evidence do not automatically create pure labels."
+}

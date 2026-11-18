@@ -1,0 +1,203 @@
+{
+  "scope": "One independent source-to-unified review; no downloads, model calls or edits to unified files.",
+  "checks": {
+    "unique_event_ids": {
+      "pass": true,
+      "detail": null
+    },
+    "unique_observation_ids": {
+      "pass": true,
+      "detail": null
+    },
+    "all_links_resolve": {
+      "pass": true,
+      "detail": null
+    },
+    "no_cross_group_links": {
+      "pass": true,
+      "detail": null
+    },
+    "all_empire_controls_are_source_confirmed": {
+      "pass": true,
+      "detail": null
+    },
+    "no_meterpreter_control_candidates_dropped": {
+      "pass": true,
+      "detail": null
+    },
+    "exact_source_event_set": {
+      "pass": true,
+      "detail": {
+        "expected": 46831,
+        "actual": 46831
+      }
+    },
+    "exact_source_observation_set": {
+      "pass": true,
+      "detail": {
+        "expected": 44234,
+        "actual": 44234
+      }
+    },
+    "no_label_or_unit_promotion": {
+      "pass": true,
+      "detail": null
+    },
+    "exact_source_flow_labels": {
+      "pass": true,
+      "detail": null
+    },
+    "all_source_links_and_multiplicity_preserved": {
+      "pass": true,
+      "detail": {
+        "expected": 58274,
+        "actual": 58274,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    "linked_flow_count_preserves_link_rows": {
+      "pass": true,
+      "detail": null
+    },
+    "whole_group_single_role": {
+      "pass": true,
+      "detail": {
+        "ait:russellmitchell:complete_run": [
+          "development"
+        ],
+        "optc:20190919:selected_normal_candidates": [
+          "unassigned_unknown"
+        ],
+        "optc:empire_custom:20190924_continues_20190925": [
+          "external_development"
+        ],
+        "optc:meterpreter:20190925_complete_branch": [
+          "reserved_historical_confirmation"
+        ],
+        "optc:20190919:declared_normal_business_subset": [
+          "external_development"
+        ]
+      }
+    },
+    "all_split_assignments_exact": {
+      "pass": true,
+      "detail": null
+    },
+    "canonical_70_exact_audited_Uids": {
+      "pass": true,
+      "detail": {
+        "cloud": 38,
+        "attack": 32
+      }
+    },
+    "four_length_blocked_exact": {
+      "pass": true,
+      "detail": [
+        "ait-intranet:ignore_checksums:C9jIOB3sbceXfz7MUd",
+        "ait-intranet:ignore_checksums:CcdNJr1dGfckguVKFf",
+        "ait-intranet:ignore_checksums:CrOVrK38NBo8HZp3B4",
+        "ait-intranet:ignore_checksums:Cro1eQdE27uq5BUA4"
+      ]
+    },
+    "canonical_no_strict_no_label_propagation": {
+      "pass": true,
+      "detail": null
+    },
+    "raw8_values_equal_source_no_zero_fill": {
+      "pass": true,
+      "detail": []
+    },
+    "times_equal_source_no_zero_fill": {
+      "pass": true,
+      "detail": []
+    },
+    "identity_fields_outside_raw8": {
+      "pass": true,
+      "detail": null
+    },
+    "actual_availability_remains_unknown": {
+      "pass": true,
+      "detail": null
+    },
+    "publisher_no_missing_duration_exercises_fallback": {
+      "pass": true,
+      "detail": []
+    },
+    "missing_duration_sentinels_not_canonical": {
+      "pass": true,
+      "detail": {
+        "count": 441,
+        "statuses": {
+          "diagnostic_strict_checksum_filtered": 436,
+          "not_qualified_outside_audited_packet_candidates": 5
+        }
+      }
+    },
+    "raw8_missing_metadata_preserved": {
+      "pass": true,
+      "detail": []
+    },
+    "unknown_and_repeat_counts_not_upgraded": {
+      "pass": true,
+      "detail": {
+        "unknown": 11,
+        "repeated_transfers": 3
+      }
+    },
+    "AIT_candidate_links_never_pure_flow_truth": {
+      "pass": true,
+      "detail": null
+    },
+    "frozen_unified_unchanged": {
+      "pass": true,
+      "detail": null
+    },
+    "summary_counts_match_actual": {
+      "pass": true,
+      "detail": null
+    },
+    "summary_missing_counts_match_actual": {
+      "pass": true,
+      "detail": null
+    }
+  },
+  "passed": true,
+  "source_counts": {
+    "cloud_events": 36,
+    "intranet_actions": 102,
+    "optc_normal_events": 41630,
+    "optc_normal_observations": 42147,
+    "optc_normal_objects": 5026
+  },
+  "input_sha256": {
+    "build_unified.py": "8e422c3b2e18d8b14e95b5020453abd39cfda8d3a70c56c5c6e6f7781c8f5456",
+    "evaluation_units.jsonl.gz": "9b3c8fcf6511d706851a32f241dfd44b9fd4dd0fa5f2474968085cf9976d1883",
+    "events.jsonl.gz": "7cf70a589ef0de5f2e99fa8847224960becc07c97ea15185328fa90164660295",
+    "event_flow_links.jsonl.gz": "d9d8679c433b96a84e62ff32821d87717da31efd18043784adbffd76096d5bdc",
+    "groups.json": "3894523f9c43303361ab95f107d472e9bebc02615ec16d99ea3910538809d82c",
+    "observations.jsonl.gz": "bc94f984ab3b1c3b5af4c3d5c44debfe5c7eb8d09d0f52b01a58b6ba76f36358",
+    "output_receipt.json": "3691d4c334437bc3098688c2a0bab1752f50635a7c45192e8c0fdb9b54691e9d",
+    "source_receipt.json": "e205cd1fcb1562b4a578382c85d41d325ea0bd19839d1c3be397ef1abe51f000",
+    "split_assignments.jsonl.gz": "b3e955dfe53e1bb9b8a2c5b69776325fd3045c677a588974685e7dcc4d403fbd",
+    "summary.json": "0e5856e70bb01c4d8fa7325af014d0cbc481de3ee67e64a82411c60c32749d47"
+  },
+  "observations": [
+    {
+      "severity": "resolved",
+      "finding": "The revision preserves raw8_missing_fields, duration_missing and raw8_complete. The metadata and summary assertions verify 441 missing-duration rows and zero incomplete canonical rows."
+    },
+    {
+      "severity": "resolved",
+      "finding": "Code review confirms optc_flow and unknown PE event ends now preserve null for missing duration. Actual publisher durations are present and all assembled observation times still match source."
+    },
+    {
+      "severity": "count_unit",
+      "finding": "The 32 cleared intranet packet candidates contain 33 whole-episode -C UIDs, of which 32 are referenced by action_connection_pairs. The unlinked tail of packet 3579 is not an omitted action candidate.",
+      "unlinked_cleared_uids": [
+        "ait-intranet:ignore_checksums:Cx8B0f2CIu1QdU8bw6"
+      ]
+    }
+  ],
+  "script_sha256": "1f6dc0740e96b3f054033b91989954adf49bad2b6b84311d54d61cd52f16c297"
+}

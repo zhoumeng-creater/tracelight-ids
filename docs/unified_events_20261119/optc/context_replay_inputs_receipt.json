@@ -1,0 +1,91 @@
+{
+  "schema_version": "optc_single_packet_clock_resolution_v1",
+  "generated_utc": "2026-11-18T16:59:38.269116+00:00",
+  "script_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\resolve_single_packet_clock.py",
+  "script_sha256": "830f44e2b09acdfeb298be5da2aee4282690586f75a87778e85f3a97551bb223",
+  "input": {
+    "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_inputs.jsonl.gz",
+    "sha256_before": "612ff8b20a3b794ccb35fe69ebf3d60f7bae2907081331340214ec14baddf18c",
+    "sha256_after": "612ff8b20a3b794ccb35fe69ebf3d60f7bae2907081331340214ec14baddf18c",
+    "rows": 45309
+  },
+  "output": {
+    "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_replay_inputs.jsonl.gz",
+    "sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005",
+    "bytes": 2710759,
+    "rows": 45309
+  },
+  "resolved_count": 2,
+  "unchanged_dictionary_count": 45307,
+  "all_raw8_unchanged": true,
+  "native_duration_null_count_before": 2,
+  "native_duration_null_count_after": 2,
+  "actual_available_at_null_count": 45309,
+  "unresolved_observed_end_count": 0,
+  "resolved_records": [
+    {
+      "flow_id": "optc:20190924:CPdC8j3SCUkw9Gccff:142.20.57.246",
+      "uid": "CPdC8j3SCUkw9Gccff",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "source_line": 661637,
+      "raw8_unchanged": [
+        17,
+        55959,
+        53,
+        null,
+        1,
+        0,
+        56,
+        0
+      ],
+      "flow_end_at_before": null,
+      "offline_observed_end_after": "2019-09-24T17:24:36.339617+00:00",
+      "actual_available_at": null
+    },
+    {
+      "flow_id": "optc:20190924:C4hCrq1WFLFdAFIKf9:142.20.57.246",
+      "uid": "C4hCrq1WFLFdAFIKf9",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "source_line": 662153,
+      "raw8_unchanged": [
+        17,
+        63630,
+        53,
+        null,
+        1,
+        0,
+        56,
+        0
+      ],
+      "flow_end_at_before": null,
+      "offline_observed_end_after": "2019-09-24T17:24:37.361120+00:00",
+      "actual_available_at": null
+    }
+  ],
+  "inspected_primary_source": {
+    "raw_url": "https://raw.githubusercontent.com/zeek/zeek/v2.6.1/scripts/base/protocols/conn/main.bro",
+    "references": [
+      {
+        "url": "https://github.com/zeek/zeek/blob/v2.6.1/scripts/base/protocols/conn/main.bro#L18-L19",
+        "meaning": "Conn::Info.ts is the first-packet time."
+      },
+      {
+        "url": "https://github.com/zeek/zeek/blob/v2.6.1/scripts/base/protocols/conn/main.bro#L229-L245",
+        "meaning": "duration is assigned only for positive c$duration; packet counts can be present without positive duration."
+      },
+      {
+        "url": "https://github.com/zeek/zeek/blob/v2.6.1/scripts/base/protocols/conn/main.bro#L275-L282",
+        "meaning": "The record is written on connection_state_remove; packet time is not the logging/timeout event time."
+      }
+    ],
+    "exact_OpTC_runtime_version_confirmed": false
+  },
+  "reasoning": {
+    "sufficient_basis": "Observed packet count equals one and native ts denotes the first observed packet. Therefore first and last observed packet times coincide.",
+    "duration_semantics": "Positive-only optional duration explains why a one-packet record can omit duration. Missing duration by itself is NOT treated as zero.",
+    "what_was_changed": "Only flow_end_at plus explicit observed_end_basis in the two reviewed records. Native raw8 duration and all actual availability fields remain unchanged/unknown.",
+    "what_was_not_inferred": "UDP timeout time, connection-state removal time, actual log writing/ingestion time, or online availability.",
+    "mode": "Explicit offline observed-end replay; not an online availability trace."
+  },
+  "operations": "Read existing 2.7 MB context artifact only; no original conn rescan, no data download, no prefix/model execution."
+}

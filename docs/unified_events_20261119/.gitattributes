@@ -1,0 +1,4 @@
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.md text eol=lf
+ait/source/capture_config/** -whitespace
+ait_attack/source/capture_config/** -whitespace

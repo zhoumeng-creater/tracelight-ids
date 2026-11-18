@@ -1,0 +1,19 @@
+{
+  "schema": "context-binding-v1",
+  "actual_export_rows": 45309,
+  "not_strictly_prior_history_rows": 0,
+  "linked_observations": 42173,
+  "event_context_links": 46682,
+  "input_sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005",
+  "original_input_sha256": "612ff8b20a3b794ccb35fe69ebf3d60f7bae2907081331340214ec14baddf18c",
+  "output_sha256": "d960ab466d6cb33b3898327a0849448bc70984c91552ed3b43434e658990dd84",
+  "module_sha256": "e4745e1a5549396c5264284961cdcc759630d0f321a70a5d2355bf4aa2a738f1",
+  "audit_sha256": "63f35616f86c179025a15ba3b6081dec0719ff1f8d49c90da53f9a0c1b109932",
+  "binding_sha256": "d7200f2fa2138cbc68d2485ea05af41e94db25fff711d8ff66685ad55a2aecc7",
+  "binding_script_sha256": "09db49dc2c07b2c3ca16638f5b9aadd240f055201dce9dee00003add74ee0a9f",
+  "model_calls": 0,
+  "training_calls": 0,
+  "time_mode": "offline_flow_end_replay",
+  "actual_online_availability_claimed": false,
+  "held_out_Meterpreter_context_generated": false
+}

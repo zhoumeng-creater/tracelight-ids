@@ -1,0 +1,60 @@
+{
+  "schema": "unified-evidence-v1",
+  "model_fits": 0,
+  "model_forwards": 0,
+  "threshold_searches": 0,
+  "counts": {
+    "events": 46831,
+    "observations": 44234,
+    "links": 58274,
+    "split_assignments": 91065
+  },
+  "event_units": {
+    "business_action": 138,
+    "http_file_object": 5032,
+    "network_session": 41655,
+    "http_file_transfer": 6
+  },
+  "event_labels": {
+    "normal": 46755,
+    "malicious": 62,
+    "unknown": 11,
+    "attack_associated_transfer": 3
+  },
+  "flow_labels": {
+    "unknown": 2576,
+    "normal": 41630,
+    "known_control_transport": 25,
+    "malicious_download": 3
+  },
+  "observation_status": {
+    "not_qualified_outside_audited_packet_candidates": 332,
+    "capture_qualified_C": 70,
+    "diagnostic_strict_checksum_filtered": 1356,
+    "capture_semantics_not_qualified": 294,
+    "blocked_invalid_captured_IP_lengths": 4,
+    "publisher_connection_record": 42178
+  },
+  "evaluation_units": {
+    "declared_normal_business_units": 26,
+    "normal_connections": 41630,
+    "units_requiring_zero_FP": 10
+  },
+  "integrity": {
+    "all_links_resolve": true,
+    "cross_group_links": 0,
+    "whole_group_role_conflicts": 0,
+    "rows_with_missing_raw8": 441,
+    "qualified_rows_with_missing_raw8": 0,
+    "strict_rows_used_as_canonical": 0,
+    "original_source_files_preserved": true
+  },
+  "limits": [
+    "Counts mix objects, actions and flows; never sum as independent attacks.",
+    "AIT action-to-flow candidates are not pure supervised labels.",
+    "OpTC B1/B2 business subset is not a whole-network false-positive denominator.",
+    "Observation table is evidence-linked, not the complete background stream required for history.",
+    "flow_end is a lower bound, not actual online availability.",
+    "Meterpreter whole branch reserved, retrieved slices not the full branch."
+  ]
+}

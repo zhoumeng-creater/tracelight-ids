@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-11-18T16:45:55.174336+00:00",
+  "script_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\assemble_normal_observations.py",
+  "script_sha256": "86d8ca3155223120840dc7fd17105f02656580e6787702b969ea3e97e825ca05",
+  "output": {
+    "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_flow_observations.jsonl.gz",
+    "rows": 42147,
+    "bytes": 2407144,
+    "sha256": "acd367d7217cd0492b02655601f7f01207dac2d7d5c52ba2a6366ec96e0f4fdf"
+  },
+  "source_conn": {
+    "name": "20190919_conn_17-18.log.gz",
+    "id": "1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-",
+    "bytes": 60278906,
+    "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\sources\\20190919_conn_17-18.log.gz",
+    "url": "https://drive.usercontent.google.com/download?id=1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-&export=download&confirm=t",
+    "view_url": "https://drive.google.com/file/d/1fJvUt8nEhfROmzP3AjsofKo4GTHSvhd-/view",
+    "sha256": "3e995173c868038cf1e4344a711c8ad38353f2c51884af05de9f59a2ac98d4c9"
+  },
+  "source_conn_rows_scanned": 1580523,
+  "raw8_fields": [
+    "ip_protocol",
+    "orig_port",
+    "resp_port",
+    "duration_seconds",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes"
+  ],
+  "raw8_missing_values": {
+    "ip_protocol": 0,
+    "orig_port": 0,
+    "resp_port": 0,
+    "duration_seconds": 0,
+    "orig_pkts": 0,
+    "resp_pkts": 0,
+    "orig_ip_bytes": 0,
+    "resp_ip_bytes": 0
+  },
+  "unique_flow_ids": 42147,
+  "unique_uids": 42147,
+  "unmatched_event_uids": 0,
+  "normal_flow_uid_count": 41630,
+  "http_file_object_count": 5026,
+  "http_object_parent_unique_uid_count": 559,
+  "normal_flow_object_parent_uid_intersection_count": 42,
+  "normal_flow_only_uid_count": 41588,
+  "object_parent_only_uid_count": 517,
+  "union_uid_count": 42147,
+  "unmatched_object_uids": 0,
+  "normal_flow_label_eligible_true": 41630,
+  "normal_flow_label_eligible_false": 517,
+  "existing_artifact_sha256_before": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_flow_events.jsonl.gz": "bf06c3befbe2ea8a18500ce00348cd866836813ec09422e05325a055ea72fe0a",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_http_file_objects.jsonl.gz": "09e49940620154b04d40169e970578c7efc54dde26603d5d795afa6f789225ef"
+  },
+  "existing_artifact_sha256_after": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_flow_events.jsonl.gz": "bf06c3befbe2ea8a18500ce00348cd866836813ec09422e05325a055ea72fe0a",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_http_file_objects.jsonl.gz": "09e49940620154b04d40169e970578c7efc54dde26603d5d795afa6f789225ef"
+  },
+  "time_semantics": "zeek_reported_end = conn.ts + conn.duration; available_at_lower_bound equals this end, actual log emission/ingestion time remains null.",
+  "label_semantics": "Exact UID union of existing normal-flow events and existing HTTP objects. A parent connection is normal_flow_label_eligible only if already in the normal-flow table; an object does not promote its whole connection to normal."
+}

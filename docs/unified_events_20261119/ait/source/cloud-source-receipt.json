@@ -1,0 +1,15 @@
+{
+  "member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+  "archive_url": "https://zenodo.org/api/records/19483937/files/russellmitchell.zip/content",
+  "archive_bytes": 7132670599,
+  "header_offset": 6345484912,
+  "data_offset": 6345485022,
+  "compressed_bytes": 464709023,
+  "pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647",
+  "sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+  "crc32": 3074706299,
+  "bytes": 525862169,
+  "range_workers": 4,
+  "chunk_bytes": 16777216,
+  "elapsed_seconds": 322.7144661999773
+}
