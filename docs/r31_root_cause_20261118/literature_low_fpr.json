@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-18",
+  "execution": "static_primary_sources_and_author_code_only",
+  "model_loads": 0,
+  "forward_passes": 0,
+  "fits": 0,
+  "new_scores_or_thresholds": 0,
+  "main_verdict": "Adopt Cooper constraint/proxy/dual implementation patterns, not a turnkey success claim; do not directly replace the objective with STACO or tapAUC.",
+  "sources": [
+    {
+      "method": "Cooper",
+      "paper": {
+        "title": "Cooper: A Library for Constrained Optimization in Deep Learning",
+        "year": 2025,
+        "first_publication": "2025-04-01",
+        "url": "https://arxiv.org/html/2504.01212v1",
+        "status": "arXiv preprint"
+      },
+      "author_repo": "https://github.com/cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "commit_date": "2025-06-09T17:38:04Z",
+      "license": "MIT",
+      "verdict": "adopt_implementation_pattern_only",
+      "actual_optimization": {
+        "primal": "objective plus sum(detach(multiplier)*proxy_violation)",
+        "dual": "sum(multiplier*detach(strict_violation)), ascent and nonnegative projection",
+        "default_if_strict_absent": "uses violation for both primal and dual",
+        "required_model_randomization": false,
+        "nonconvex_feasible_checkpoint_guarantee": false,
+        "indexed_identity_multipliers": true
+      },
+      "code_refs": [
+        {
+          "path": "Cooper/src/cooper/constraints/constraint_state.py",
+          "lines": [
+            15,
+            79
+          ]
+        },
+        {
+          "path": "Cooper/src/cooper/formulations/formulations.py",
+          "lines": [
+            108,
+            127
+          ]
+        },
+        {
+          "path": "Cooper/src/cooper/formulations/utils.py",
+          "lines": [
+            49,
+            88
+          ]
+        },
+        {
+          "path": "Cooper/src/cooper/optim/constrained_optimizers/simultaneous_optimizer.py",
+          "lines": [
+            56,
+            76
+          ]
+        },
+        {
+          "path": "Cooper/src/cooper/optim/constrained_optimizers/constrained_optimizer.py",
+          "lines": [
+            59,
+            95
+          ]
+        },
+        {
+          "path": "Cooper/src/cooper/multipliers/multipliers.py",
+          "lines": [
+            137,
+            170
+          ]
+        }
+      ],
+      "not_proven": [
+        "IDS normal subgroup low-FPR transfer",
+        "preservation of every baseline TP identity",
+        "feasibility of a single nonconvex deterministic TabM checkpoint"
+      ],
+      "project_gaps": [
+        "same training-permitted calibration functional in group risk and identity protection",
+        "strict > ties and finite-sample order statistic",
+        "proxy derivative through model-dependent calibration",
+        "k32 deployment-score coupling",
+        "per-identity sampling and sum/mean weighting",
+        "full true-violation checkpoint selection",
+        "held-out C/E remain outside training and selection"
+      ]
+    },
+    {
+      "method": "STACO",
+      "paper": {
+        "title": "Stochastic Primal-Dual Double Block-Coordinate for Two-way Partial AUC Maximization",
+        "year": 2025,
+        "first_publication": "2025-05-28",
+        "revision": "2025-09-28",
+        "url": "https://arxiv.org/html/2505.21944v2",
+        "venue": "Transactions on Machine Learning Research"
+      },
+      "author_repo": "https://github.com/Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "commit_date": "2026-08-21T19:40:05Z",
+      "license": "MIT",
+      "verdict": "not_direct_replacement_for_this_task",
+      "actual_optimization": "Nested CVaR two-way partial AUC, squared-hinge default; per-positive s1/u/dual and common s2",
+      "zero_gradient_claim_correction": "Strict separation d>0 does not imply d>=margin. Weighted selected pair gradients vanish when all relevant pair differences meet margin, or gates/dual weights are zero. No actual R30 gradient was computed.",
+      "author_example": {
+        "score": "raw output, last_activation=None",
+        "theta_0": 0.5,
+        "theta_1": 0.5,
+        "max_fpr_metric": 0.3,
+        "min_tpr_metric": 0.7,
+        "safe_identity_checkpoint_selection": false
+      },
+      "source_issue": {
+        "kind": "index_contract_mismatch",
+        "description": "Example passes positive-only index[:num_pos]; loss defines ids_p only when index length equals prediction length, then uses ids_p unconditionally.",
+        "loss_ref": {
+          "path": "STACO/libauc/losses/auc.py",
+          "lines": [
+            829,
+            851
+          ]
+        },
+        "example_ref": {
+          "path": "STACO/examples/18_Optimizing_tpAUC_Loss_with_STACO_on_Imbalanced_data.code.txt",
+          "lines": [
+            158,
+            158
+          ]
+        }
+      }
+    },
+    {
+      "method": "tapAUC",
+      "paper": {
+        "title": "Towards a Trustworthy Anomaly Detection for Critical Applications through Approximated Partial AUC Loss",
+        "year": 2025,
+        "first_publication": "2025-02-17",
+        "revision": "2025-04-01",
+        "url": "https://arxiv.org/html/2502.11570v2",
+        "status": "arXiv preprint"
+      },
+      "author_repo": "https://github.com/ArnaudBougaham/tapAUC",
+      "commit": "24c2dde9248348e73094a156a64b323a6b41203d",
+      "commit_date": "2025-04-02T13:14:18Z",
+      "license": "No LICENSE in pinned repository tree",
+      "verdict": "do_not_adopt_original_script_or_claim_identity_protection",
+      "actual_optimization": "Partial negative selection plus pairwise squared hinge on sigmoid scores; training-derived zero-FN threshold",
+      "paper_report": {
+        "datasets": 6,
+        "mean_tpr_percent": 92.52,
+        "mean_fpr_percent": 20.43
+      },
+      "source_findings": [
+        {
+          "path": "tapAUC/tapAUC.code.txt",
+          "lines": [
+            162,
+            172
+          ],
+          "finding": "Descending scores followed by selection from negative-index tail selects low-score negatives."
+        },
+        {
+          "path": "tapAUC/tapAUC.code.txt",
+          "lines": [
+            186,
+            187
+          ],
+          "finding": "Threshold derived from final training batch outputs, not full training cohort."
+        },
+        {
+          "path": "tapAUC/tapAUC.code.txt",
+          "lines": [
+            100,
+            118
+          ],
+          "finding": "Zero-FN threshold min positive with >= decisions differs from project strict >."
+        },
+        {
+          "path": "tapAUC/tapAUC.code.txt",
+          "lines": [
+            190,
+            206
+          ],
+          "finding": "Test fold evaluated each epoch, final epoch reported; no safe identity checkpoint rule."
+        }
+      ]
+    }
+  ],
+  "boundary_sources": [
+    {
+      "method": "SACSIM",
+      "paper_year": 2026,
+      "publication_date": "2026-08-10",
+      "url": "https://doi.org/10.1093/biomtc/ujag138",
+      "code": "author journal supplement, sacsim 0.1.0, raw archive hash in manifest",
+      "needs": [
+        "target covariates",
+        "target class prevalence",
+        "single-index/shift assumptions"
+      ],
+      "decision": "Do not use as F-only neural-training repair; retain as transfer-information boundary."
+    },
+    {
+      "method": "FairPOT",
+      "paper_year": 2025,
+      "url": "https://ojs.aaai.org/index.php/AIES/article/view/36660",
+      "author_code_status": "not verified",
+      "decision": "Exclude: score postprocessing/AUC-xAUC tradeoff, not required model-training constraints."
+    }
+  ],
+  "project_mathematical_contract_to_complete": {
+    "score": "logit(mean_k sigmoid(logit_k)), k=32, stable FP64 implementation",
+    "normal_true_risk": "mean_{x in N_g} 1[s_theta(x)>t_Q(theta)]",
+    "positive_identity_true_violation": "1[s_theta(x_i)<=t_Q(theta)]",
+    "training_permission": "Q, normal-risk sets and protected identities must stay inside training-permitted data; C/E excluded",
+    "strict_monotone_invariance": "True decisions invariant under common strictly increasing score transform and corresponding exact order-statistic calibration",
+    "proxy_not_effect_proof": true,
+    "C_recalibration_not_same_distribution_guarantee": true
+  },
+  "snapshot_manifest": "author_sources_low_fpr/manifest.json",
+  "snapshot_file_count": 33
+}

@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-18",
+  "scope": "independent_design_challenge_read_only_sources_and_existing_metrics",
+  "new_model_loads": 0,
+  "new_forward_calls": 0,
+  "new_fits": 0,
+  "new_threshold_searches": 0,
+  "D_defined_groups": false,
+  "new_experiment_registration": false,
+  "analytic_counterexample": {
+    "kind": "continuous_population_hand_derivation_not_empirical_fit",
+    "F_C_normal_weights": [
+      0.5,
+      0.5
+    ],
+    "D_normal_weights": [
+      0.25,
+      0.75
+    ],
+    "original_normal_components": [
+      "Uniform(0,1)",
+      "Uniform(1,2)"
+    ],
+    "ideal_target_components": [
+      "Uniform(0,1)",
+      "Uniform(0,2)"
+    ],
+    "original_calibration_q99": 1.98,
+    "ideal_target_calibration_q99": 1.96,
+    "original_D_FPR": 0.015,
+    "ideal_target_D_FPR": 0.015,
+    "positive_score": 3,
+    "positive_detection_unchanged": true
+  },
+  "local_evidence": [
+    {
+      "path": "docs/r31_design_review_20261117/input_mechanism.md",
+      "bytes": 9388,
+      "sha256": "f9d40f396169ee44f0e32b47aa711a65b49ab8b4e8cf51dba5606d35417e28f7"
+    },
+    {
+      "path": "docs/r31_design_review_20261117/input_mechanism_summary.json",
+      "bytes": 108526,
+      "sha256": "bab03750a137ceae9d7f5f12a22b1d1aecf52017566c3d40e65ae9a4ab9484a8"
+    },
+    {
+      "path": "docs/normal_subgroup_design_20261118/subgroup_training_spec.md",
+      "bytes": 12928,
+      "sha256": "943a07c890f7955b942bc8ef248e061629ea411890b41357e0213be1c455af58"
+    },
+    {
+      "path": "docs/normal_subgroup_design_20261118/f_group_counts.json",
+      "bytes": 19352,
+      "sha256": "96ba7b3251dacc63ea55edfa6ac510f5ac62c4c9186e9ea5098886f015b1aa9b"
+    },
+    {
+      "path": "docs/normal_subgroup_refinement_20261118/cached_f_target_geometry.md",
+      "bytes": 10805,
+      "sha256": "061ed2aae7b6860056feb69f241b950a86cbc7ab3f05c3618b97f9f72b06005a"
+    },
+    {
+      "path": "docs/normal_subgroup_refinement_20261118/cached_f_target_geometry.json",
+      "bytes": 376644,
+      "sha256": "cb4c8558575cdd874398cde648b08b86322fe96513b9f670398f94a14c382151"
+    },
+    {
+      "path": "docs/normal_subgroup_results_20261118/design_interpretation.json",
+      "bytes": 330969,
+      "sha256": "b97ded20254b5044f2d07a2a4aedb999d3d20ed09b8a56fd108e4a9070283f19"
+    },
+    {
+      "path": "docs/normal_subgroup_design_20261118/alignment_proposal.md",
+      "bytes": 15447,
+      "sha256": "bfd991c90aa9349d0410a92c0e2e3d92b9418c93a7fc12ea2f95586e57ff231d"
+    }
+  ],
+  "references": [
+    {
+      "id": "MFSWB2025",
+      "year": 2025,
+      "venue": "ICLR",
+      "paper": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/8711bd7223057ce98a6030a687609b87-Abstract-Conference.html",
+      "repository": "khainb/MFSWB",
+      "commit": "fb5c3630841c0a02405a26233d92c5cd49f21668",
+      "local_files": [
+        {
+          "path": "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/SWAE/metrics/wasserstein.py",
+          "bytes": 13254,
+          "sha256": "eceefd0f9cdca4a902d2d02d38299715798a5dd0376afb606054da9bd77c18b0"
+        },
+        {
+          "path": "docs/normal_subgroup_design_20261118/author_sources/khainb_MFSWB/SWAE/swae/trainer.py",
+          "bytes": 5197,
+          "sha256": "a88484df21e56745ae0fd5ed0f95101091bee39f4cee9fdd2ee9dfd888b1d0e0"
+        }
+      ],
+      "read_lines": {
+        "SWAE/metrics/wasserstein.py": [
+          [
+            8,
+            13
+          ],
+          [
+            38,
+            95
+          ],
+          [
+            134,
+            165
+          ]
+        ],
+        "SWAE/swae/trainer.py": [
+          [
+            35,
+            43
+          ],
+          [
+            89,
+            116
+          ]
+        ]
+      },
+      "adoption": "audit distribution objects; reject unsupported one-sided target guarantee"
+    },
+    {
+      "id": "NPMC2025",
+      "issue_year": 2025,
+      "online_year": 2024,
+      "preprint_first_year": 2021,
+      "venue": "JASA 120(550):1164-1177",
+      "paper": "https://yangfengstat.github.io/assets/pdf/tian2025neyman.pdf",
+      "doi": "10.1080/01621459.2024.2402567",
+      "author_code": {
+        "repository": "ytstat/npcs",
+        "commit": "79e8f8cb6332c0160d738229e876ec64ac4483ae",
+        "files": [
+          {
+            "path": "docs/r31_root_cause_20261118/author_npcs/DESCRIPTION",
+            "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/DESCRIPTION",
+            "git_blob_sha1": "63d3bf8bc2b8a8395c58ad4fb765d31a8494aa17",
+            "sha256": "39a90ea5e0e2f8bfbba542554c8fe1e4f966a8eb95153e2a845250ef1b598391",
+            "bytes": 1027
+          },
+          {
+            "path": "docs/r31_root_cause_20261118/author_npcs/R/npcs.R",
+            "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/npcs.R",
+            "git_blob_sha1": "cdd6739963d529c20636629629e338ed289f2a1a",
+            "sha256": "3f932a0c29db09f2d2d0757f26d9c1c87865b46332ce87c32a7b5e27e9d44420",
+            "bytes": 32464
+          },
+          {
+            "path": "docs/r31_root_cause_20261118/author_npcs/R/funcs.R",
+            "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/funcs.R",
+            "git_blob_sha1": "7c6ff7a31cc8d9b9f9747348386be128927f6b3f",
+            "sha256": "359f857565c75fb6af0aabe80764d2c76f0167b8f71a67d4f8f65f345ae93766",
+            "bytes": 22678
+          },
+          {
+            "path": "docs/r31_root_cause_20261118/author_npcs/R/duality_check.R",
+            "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/duality_check.R",
+            "git_blob_sha1": "82a893711f6aa6386305c72ac32042f3b4f5fd86",
+            "sha256": "954176bd6555a5c8a61b9f1a7224a232aab7af476d4aceee883ac0d081ceef20",
+            "bytes": 3613
+          },
+          {
+            "path": "docs/r31_root_cause_20261118/author_npcs/R/predict.npcs.R",
+            "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/predict.npcs.R",
+            "git_blob_sha1": "1c307a4a5e5a4a487fa06e8e6a8a42c9d2959292",
+            "sha256": "862f43f84cd354e19222e25c907a056453987d4bb2ca666edca1ca65ee294214",
+            "bytes": 3378
+          }
+        ],
+        "execution": "not_imported_or_executed",
+        "license": "GPL-2",
+        "package_version": "0.2.0"
+      },
+      "read_lines": {
+        "R/npcs.R": [
+          [
+            43,
+            54
+          ],
+          [
+            250,
+            260
+          ],
+          [
+            554,
+            589
+          ]
+        ],
+        "R/funcs.R": [
+          [
+            225,
+            246
+          ],
+          [
+            280,
+            302
+          ]
+        ],
+        "R/predict.npcs.R": [
+          [
+            59,
+            62
+          ]
+        ],
+        "R/duality_check.R": [
+          [
+            1,
+            55
+          ]
+        ]
+      },
+      "adoption": "risk constraints and feasibility assumptions only; fixed binary posterior wrapper is a threshold change, not normal rank repair"
+    },
+    {
+      "id": "NP_both_shift_2026",
+      "year": 2026,
+      "venue": "ICLR",
+      "paper": "https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Paper-Conference.pdf",
+      "official_code_archive": "https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Supplemental-Conference.zip",
+      "local_files": [
+        {
+          "path": "docs/r31_root_cause_20261118/author_sources/np_both_shift_2026/manifest.json",
+          "bytes": 942,
+          "sha256": "281f5a995413cf7214d65d6a5073d34cf3fc355a2c258123380fef4ce9f80d8f"
+        },
+        {
+          "path": "docs/r31_root_cause_20261118/author_sources/np_both_shift_2026/Nasa.ipynb",
+          "bytes": 48486,
+          "sha256": "ea4eb4c8b3794497bac32f5ccab646309900fa973eafcccd14e7e8f94fb9b47f"
+        },
+        {
+          "path": "docs/r31_root_cause_20261118/author_sources/np_both_shift_2026/Nasa.source.txt",
+          "bytes": 38739,
+          "sha256": "c7baabd9842202f11a4ce61fca8fd0d2d50dec89ff294896330b37ef5d167fd2"
+        }
+      ],
+      "read_lines": {
+        "Nasa.source.txt": [
+          [
+            53,
+            57
+          ],
+          [
+            211,
+            217
+          ],
+          [
+            249,
+            265
+          ],
+          [
+            364,
+            392
+          ]
+        ]
+      },
+      "adoption": "explicit target/source risk constraints and labeled target-data requirement; not unchanged 1pct original FPR guarantee"
+    }
+  ]
+}

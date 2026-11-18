@@ -1,0 +1,10 @@
+# Full author snapshots are kept in the local research archive.
+# Publish source locations/hashes and our analysis, not complete upstream files.
+author_sources/**
+!author_sources/**/
+!author_sources/**/manifest.json
+!author_sources/**/supplement_inventory.json
+author_sources_low_fpr/**
+!author_sources_low_fpr/manifest.json
+author_npcs/**
+!author_npcs/source_manifest.json

@@ -1,0 +1,26 @@
+{
+  "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Supplemental-Conference.zip",
+  "zip_bytes": 34240,
+  "entries": [
+    {
+      "path": "Supp/",
+      "bytes": 0
+    },
+    {
+      "path": "Supp/Nasa.ipynb",
+      "bytes": 48486
+    },
+    {
+      "path": "Supp/Climsim.ipynb",
+      "bytes": 42684
+    },
+    {
+      "path": "Supp/Link_dataset.pdf",
+      "bytes": 19719
+    },
+    {
+      "path": "__MACOSX/Supp/._Link_dataset.pdf",
+      "bytes": 433
+    }
+  ]
+}

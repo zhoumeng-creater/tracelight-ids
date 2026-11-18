@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-18",
+  "status": "risk_aligned_design_direction_selected_not_training_ready",
+  "supersedes_future_plan_only": "normal-subgroup-r31-v1",
+  "historical_registration_and_outcome_unchanged": true,
+  "root_findings": [
+    "single_sided_pooled_quantile_target_does_not_equalize_conditional_distributions_or_imply_recalibrated_group_risk_reduction",
+    "training_F_absolute_score_soft_anchor_differs_from_V_per_positive_inversion_protection_and_actual_operating_point",
+    "pooled_H_dominated_by_top_ten_percent_and_not_the_final_cell_false_positive_risk",
+    "F_only_32_leaf_partition_has_no_established_target_domain_conditional_risk_coverage"
+  ],
+  "new_evidence": {
+    "analytic_counterexample_exact_target_fit_FPR_before_after": [0.015, 0.015],
+    "analytic_counterexample_positive_recall_before_after": [1, 1],
+    "V_inversion_rejected_events": 89,
+    "V_inversion_rejected_positive_union": 39,
+    "rejected_events_with_both_panels_still_separated": 85,
+    "rejected_events_with_B_UDP_panel_not_separated": 4,
+    "original_V_positive_count_above_original_C_threshold_each_seed": 2805,
+    "rejected_checkpoint_actual_C_E_performance_known": false
+  },
+  "keep": ["R30_reference_artifacts", "TabM_PLE_single_model", "original_feature_semantics", "member_probability_aggregation", "original_final_C_calibration_rule", "all_original_B_D_TP_identity_preservation", "all_15_cell_original_budgets", "all_three_seed_reporting"],
+  "retire_from_next_design": ["single_sided_whole_distribution_target_as_primary_intervention", "pooled_H_as_primary_improvement_endpoint", "unjustified_total_tie_pair_nonincrease_as_acceptance_proxy", "global_per_positive_inversion_nonincrease_as_automatic_surrogate_for_TP_preservation"],
+  "selected_problem": "minimize worst specified normal-group alarm risk after the fixed calibration functional, subject to preservation of positive decisions under that same functional",
+  "author_implementation_reference": "Cooper 2025 primal-dual, proxy and true violation separation; not installed or executed",
+  "open_before_registration": [
+    "define and justify risk family coverage from training and validation information",
+    "freeze development reference and evaluation identities without C/E training or selection",
+    "resolve strict decision margin, quantile differentiation, score scale and true/proxy relationship",
+    "verify constrained update and full-identity diagnostics before fixing a bounded single comparison"
+  ],
+  "execution_enabled": false,
+  "new_lab_run_required_now": false,
+  "analysis_compute": {"model_loads": 0, "model_forwards": 0, "fits": 0, "real_data_recalibrations": 0, "threshold_searches": 0, "author_code_training_runs": 0},
+  "report": "docs/R31_ROOT_CAUSE_AND_RESOLUTION_20261118.md"
+}

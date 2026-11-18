@@ -1,0 +1,59 @@
+{
+  "repository": "eneugut/transfer-learning-neyman-pearson",
+  "commit": "f048fc973c01adffc8b3cacff8481957d644abe2",
+  "retrieved": "2026-11-18",
+  "paper": "https://arxiv.org/abs/2501.01525",
+  "not_implementation_of": "https://arxiv.org/abs/2511.06641",
+  "executed": false,
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/README.md",
+      "bytes": 12409,
+      "sha256": "e5c31aaa805700f33d30fc74f2cd7b0fe7574a2ac7a2dd70628e0a004025b339",
+      "git_blob_sha1": "494826d895e3c2b4c925d0266abfdfa296ba5324"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/LICENSE",
+      "bytes": 1516,
+      "sha256": "8193dec6f79ad0c5768de64d685c018c1c4cb7d2344f2fd06bca314c947ea83d",
+      "git_blob_sha1": "86819c8ab8773b630361ea760fc81f63488ed18d"
+    },
+    {
+      "path": "tlnp_lib/loss.py",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/tlnp_lib/loss.py",
+      "bytes": 4935,
+      "sha256": "1be839a603c80ef7db48f7ed77bce7079e03e8eca9182f7a760fa085054bef3e",
+      "git_blob_sha1": "a88fb1121843bf0ba67ac12e23beaba02c7cbc1b"
+    },
+    {
+      "path": "tlnp_lib/lambda_tuner.py",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/tlnp_lib/lambda_tuner.py",
+      "bytes": 4750,
+      "sha256": "ebeaac687e8f30e628a90c16c5b0e1e9bc059978f51aa2334f653df30de44754",
+      "git_blob_sha1": "1df5853a0632727b6026c94b560101f96bc3edb9"
+    },
+    {
+      "path": "tlnp_lib/point_selection_utils.py",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/tlnp_lib/point_selection_utils.py",
+      "bytes": 4780,
+      "sha256": "77eab636d359afcbdf3894e79bbc5a4591ef3aa89be0fc8ab209cefdbb75847e",
+      "git_blob_sha1": "d9b0cbb6fea56fd2d5ece2ab3f2b7d61533f15c2"
+    },
+    {
+      "path": "tlnp_lib/transfer_learning_neyman_pearson.py",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/tlnp_lib/transfer_learning_neyman_pearson.py",
+      "bytes": 24242,
+      "sha256": "00aa7726e7f86f69e58d097b078cc3794777224dc6a83a637c4735450fe87a62",
+      "git_blob_sha1": "13f23ca6b7c5bfd484a177189541a7457fdcd045"
+    },
+    {
+      "path": "tlnp_lib/training_utils.py",
+      "url": "https://raw.githubusercontent.com/eneugut/transfer-learning-neyman-pearson/f048fc973c01adffc8b3cacff8481957d644abe2/tlnp_lib/training_utils.py",
+      "bytes": 7433,
+      "sha256": "107067d826d1b9b173348f89fbd2bb5f435841a07a8d88a408867ddfc256d603",
+      "git_blob_sha1": "41dd531ad6e42e65fb4c1dd88eac5fdef643508c"
+    }
+  ]
+}

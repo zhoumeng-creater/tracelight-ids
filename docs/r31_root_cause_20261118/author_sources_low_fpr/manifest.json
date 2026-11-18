@@ -1,0 +1,328 @@
+{
+  "files": [
+    {
+      "method": "tapAUC",
+      "repo": "ArnaudBougaham/tapAUC",
+      "commit": "24c2dde9248348e73094a156a64b323a6b41203d",
+      "path": "tapAUC/README.md",
+      "url": "https://raw.githubusercontent.com/ArnaudBougaham/tapAUC/24c2dde9248348e73094a156a64b323a6b41203d/README.md",
+      "bytes": 1590,
+      "sha256": "a9975f0fff256c135c144c1095074d16c5cce21b1d756dd09d897aa25fd3a1f0"
+    },
+    {
+      "method": "tapAUC",
+      "repo": "ArnaudBougaham/tapAUC",
+      "commit": "24c2dde9248348e73094a156a64b323a6b41203d",
+      "path": "tapAUC/tapAUC.ipynb",
+      "url": "https://raw.githubusercontent.com/ArnaudBougaham/tapAUC/24c2dde9248348e73094a156a64b323a6b41203d/tapAUC.ipynb",
+      "bytes": 23423,
+      "sha256": "57827a4a9696cafaa6efed0e0b5b5b9369b21ee92ab20c443017beec9ceb2d86"
+    },
+    {
+      "method": "STACO",
+      "repo": "Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "path": "STACO/LICENSE",
+      "url": "https://raw.githubusercontent.com/Optimization-AI/LibAUC/3c02aa9877e0091114a00f94a8c6367698eb5637/LICENSE",
+      "bytes": 1063,
+      "sha256": "efb8aef9961930702e18e29c2c370ca757b483cd909b9de7f606d0a58612173f"
+    },
+    {
+      "method": "STACO",
+      "repo": "Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "path": "STACO/libauc/losses/auc.py",
+      "url": "https://raw.githubusercontent.com/Optimization-AI/LibAUC/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/losses/auc.py",
+      "bytes": 60161,
+      "sha256": "5040227229fdd2d05ccfb035482a79c8e449bb76736de36df4b4512ef3a429de"
+    },
+    {
+      "method": "STACO",
+      "repo": "Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "path": "STACO/libauc/losses/surrogate.py",
+      "url": "https://raw.githubusercontent.com/Optimization-AI/LibAUC/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/losses/surrogate.py",
+      "bytes": 2687,
+      "sha256": "eba5cb3a3ae802109e0c89311af71e05d798d8e1e3068c86e81b323941b88828"
+    },
+    {
+      "method": "STACO",
+      "repo": "Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "path": "STACO/libauc/optimizers/staco.py",
+      "url": "https://raw.githubusercontent.com/Optimization-AI/LibAUC/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/optimizers/staco.py",
+      "bytes": 12837,
+      "sha256": "70bc5a2c1a7ce19a17fd3431046b967fd1fc2a74b8fe70f2ed0053207ed47216"
+    },
+    {
+      "method": "STACO",
+      "repo": "Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "path": "STACO/examples/18_Optimizing_tpAUC_Loss_with_STACO_on_Imbalanced_data.ipynb",
+      "url": "https://raw.githubusercontent.com/Optimization-AI/LibAUC/3c02aa9877e0091114a00f94a8c6367698eb5637/examples/18_Optimizing_tpAUC_Loss_with_STACO_on_Imbalanced_data.ipynb",
+      "bytes": 131514,
+      "sha256": "325ee7793e38756384e96dbb576b1e872a5ac1885fbb48fe165984b3c66af4d3"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/README.md",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/README.md",
+      "bytes": 2223,
+      "sha256": "a93a409af52672b6bb9b24d0499f3f11fd3382a008f542917316afb2f6ae3627",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/sacsim/DESCRIPTION",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/sacsim/DESCRIPTION",
+      "bytes": 578,
+      "sha256": "622f65f629373c21cb1c252aadba224269f74fccbd6b7e71f61c6d4513b196e7",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/sacsim/LICENSE.md",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/sacsim/LICENSE.md",
+      "bytes": 34904,
+      "sha256": "585e25ef8f5946a52bf2aed68d5becfc38be94a8663aa01c1b31d88aa57f1de3",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/sacsim/R/func_wts.R",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/sacsim/R/func_wts.R",
+      "bytes": 26924,
+      "sha256": "815ee193cc9affd401a99f3caa7634ee1a328741310fe48ba88a9e0e63908056",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/sacsim/R/rule_tools.R",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/sacsim/R/rule_tools.R",
+      "bytes": 20942,
+      "sha256": "542753464cc37903523dd9a231379055a22d4c6311c12b8bb29d987817d06920",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/sacsim/R/utilis.R",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/sacsim/R/utilis.R",
+      "bytes": 2151,
+      "sha256": "2906e8377aadfc73f1cea0ba16e73d3e6da2166311f382feb2f2413639536c10",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/simuCode/drive_simu.R",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/simuCode/drive_simu.R",
+      "bytes": 4404,
+      "sha256": "d9b93289fe9e64fc85e955576de6eff5abb34356de6641e415aae9cc08ab3edb",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "paper_doi": "10.1093/biomtc/ujag138",
+      "version": "journal_supplement_2026_08_10",
+      "path": "SACSIM/simuCode/proc_simu.R",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "zip_member": "shiftAdjCode_public/shiftAdjCode/simuCode/proc_simu.R",
+      "bytes": 4832,
+      "sha256": "ff1d8be199b8daa6617e6518cad3d738a36323cb3566b4117b639c670d394d03",
+      "parent_zip_sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "path": "SACSIM/ujag138_supplemental_files.zip",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/supplementaryFiles",
+      "bytes": 796987,
+      "sha256": "934fe1175a6e7937a4b1201bee4afdea32455458bfc2892ee3fc88b73bae8029"
+    },
+    {
+      "method": "SACSIM",
+      "path": "SACSIM/article.xml",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13455594/fullTextXML",
+      "bytes": 135835,
+      "sha256": "decbf25ca17ad544149033cfffaedfd611928deba6b28ded3d9adbb1d1e82f67"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/LICENSE",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/LICENSE",
+      "bytes": 1079,
+      "sha256": "59cfe283e6b5034f4eebb81eec04c499fd85de9e54e0ddc025187115dad21276"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/README.md",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/README.md",
+      "bytes": 10778,
+      "sha256": "858a6aa9ced690044bc7faae761d452f974a2e63f57d06b8ca1678211f4ad067"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/cmp.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/cmp.py",
+      "bytes": 17451,
+      "sha256": "efe9fd8ed27f0c280086c97ab413fd250ebb9f2ba0804014fae8b5fd952178a6"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/constraints/constraint.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/constraints/constraint.py",
+      "bytes": 3509,
+      "sha256": "92b515749c2d43e8b3c3988a57399a6c927f5e13d7493631fe456b92ba9a4282"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/constraints/constraint_state.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/constraints/constraint_state.py",
+      "bytes": 5124,
+      "sha256": "ab438ea23a53c6408075d94855953b0e4bf9aa1b90deba288d7417e8eebf5cc4"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/formulations/formulations.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/formulations/formulations.py",
+      "bytes": 13430,
+      "sha256": "e504d05d51653cfeebf5abfe09b90dc060c310aa9a37386691d050db5a9d3fe2"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/formulations/utils.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/formulations/utils.py",
+      "bytes": 7406,
+      "sha256": "622b60ffe24ad22d68e5ef25715fbe238764ed434fd70daaf7c7ef9771ac991f"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/optim/constrained_optimizers/simultaneous_optimizer.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/optim/constrained_optimizers/simultaneous_optimizer.py",
+      "bytes": 3242,
+      "sha256": "2de20898d6a702a17d6c11beb9dafd3cd23ac09a49416e029e4e79671636ed4d"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/optim/constrained_optimizers/constrained_optimizer.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/optim/constrained_optimizers/constrained_optimizer.py",
+      "bytes": 4733,
+      "sha256": "616905ef1d31be68f65d69f9030280cf93204d027a3029958bbb0c19a02d2265"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/src/cooper/multipliers/multipliers.py",
+      "url": "https://raw.githubusercontent.com/cooper-org/cooper/30b158e0262f7073c7710bd1c4996e462af4ff35/src/cooper/multipliers/multipliers.py",
+      "bytes": 7940,
+      "sha256": "ccf24b3d82e3571555eeb4c112c13db1427452b49c5fa2a405bc69ca4224c0ac"
+    },
+    {
+      "method": "Cooper",
+      "repo": "cooper-org/cooper",
+      "commit": "30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "path": "Cooper/commit_metadata.json",
+      "url": "https://api.github.com/repos/cooper-org/cooper/commits/30b158e0262f7073c7710bd1c4996e462af4ff35",
+      "bytes": 13226,
+      "sha256": "4dd022640a9d7e0d77678b15896313c63903d7fa863441389bfecdf4dfee736e",
+      "kind": "author_repository_metadata"
+    },
+    {
+      "method": "STACO",
+      "repo": "Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "path": "STACO/commit_metadata.json",
+      "url": "https://api.github.com/repos/Optimization-AI/LibAUC/commits/3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "bytes": 9683,
+      "sha256": "ac3928d618c6c6739ba5830ce6bd067fab66550d923949b73b956efdf4260d4b",
+      "kind": "author_repository_metadata"
+    },
+    {
+      "method": "tapAUC",
+      "repo": "ArnaudBougaham/tapAUC",
+      "commit": "24c2dde9248348e73094a156a64b323a6b41203d",
+      "path": "tapAUC/commit_metadata.json",
+      "url": "https://api.github.com/repos/ArnaudBougaham/tapAUC/commits/24c2dde9248348e73094a156a64b323a6b41203d",
+      "bytes": 5579,
+      "sha256": "56227b9bddc3d66a1620d5ecad19d4065b3d430a87d503e9436c3fe443031aa8",
+      "kind": "author_repository_metadata"
+    },
+    {
+      "method": "tapAUC",
+      "repo": "ArnaudBougaham/tapAUC",
+      "commit": "24c2dde9248348e73094a156a64b323a6b41203d",
+      "path": "tapAUC/tree_metadata.json",
+      "url": "https://api.github.com/repos/ArnaudBougaham/tapAUC/git/trees/24c2dde9248348e73094a156a64b323a6b41203d?recursive=1",
+      "bytes": 635,
+      "sha256": "fe748e6bc1b234bfd23cac5541ddbef4263d49be58c9c7204d90d5dc2a2c13a9",
+      "kind": "author_repository_metadata"
+    },
+    {
+      "method": "tapAUC",
+      "path": "tapAUC/tapAUC.code.txt",
+      "kind": "code_cells_readable_derivative",
+      "source": "tapAUC/tapAUC.ipynb",
+      "source_sha256": "57827a4a9696cafaa6efed0e0b5b5b9369b21ee92ab20c443017beec9ceb2d86",
+      "bytes": 20037,
+      "sha256": "55b7f20bd63c7532ecbac73cce7c350f2c6f78b132a0a9b7ed40daeaf6c663cd",
+      "transform": "Code cells in notebook order, original cell index comments and original source; no code executed."
+    },
+    {
+      "method": "STACO",
+      "path": "STACO/examples/18_Optimizing_tpAUC_Loss_with_STACO_on_Imbalanced_data.code.txt",
+      "kind": "code_cells_readable_derivative",
+      "source": "STACO/examples/18_Optimizing_tpAUC_Loss_with_STACO_on_Imbalanced_data.ipynb",
+      "source_sha256": "325ee7793e38756384e96dbb576b1e872a5ac1885fbb48fe165984b3c66af4d3",
+      "bytes": 10207,
+      "sha256": "4e4287932b121741937d4a2dc024a7179fcfc2566d8f8b833974e567bb3f9ee8",
+      "transform": "Code cells in notebook order, original cell index comments and original source; no code executed."
+    }
+  ],
+  "execution": "download_and_static_read_only; no imports, model loads, forward passes, fitting or new threshold/score computation",
+  "retrieved_date": "2026-11-18",
+  "raw_sources_unchanged": true,
+  "license_status": {
+    "Cooper": "MIT: LICENSE preserved",
+    "STACO": "MIT: LICENSE preserved",
+    "tapAUC": "No LICENSE in pinned full repository tree; tree_metadata.json preserved",
+    "SACSIM": "Package GPL (>= 3); article CC BY 4.0; attached archive hash preserved"
+  }
+}

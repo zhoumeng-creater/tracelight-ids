@@ -1,0 +1,30 @@
+{
+  "kind": "analytic_counterexample_not_IDS_experiment",
+  "claim_refuted": "Exact fitting of the single-sided pooled-quantile target suffices to repair arbitrary normal-mixture change",
+  "fractions": {
+    "alpha": "1/100",
+    "old_cutoff": "99/50",
+    "new_cutoff": "49/25",
+    "old_g2_risk": "1/50",
+    "new_g2_risk": "1/50",
+    "old_d_risk": "3/200",
+    "new_d_risk": "3/200"
+  },
+  "decimals": {
+    "alpha": 0.01,
+    "old_cutoff": 1.98,
+    "new_cutoff": 1.96,
+    "old_g2_risk": 0.02,
+    "new_g2_risk": 0.02,
+    "old_d_risk": 0.015,
+    "new_d_risk": 0.015
+  },
+  "positive_score": 3,
+  "positive_recall_before_and_after": 1,
+  "normal_target_realization_error": 0,
+  "normal_scores_never_increase": true,
+  "actual_IDS_model_loads": 0,
+  "actual_IDS_forwards": 0,
+  "actual_IDS_fits": 0,
+  "actual_IDS_threshold_searches": 0
+}

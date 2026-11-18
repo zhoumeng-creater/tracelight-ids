@@ -1,0 +1,30 @@
+{
+  "cache_guard_audit.py": {
+    "sha256": "24648988d83a1ee808261e968ec8faef4b83c5e9c347dd40722dd1294ef22ec3",
+    "bytes": 24840
+  },
+  "cache_guard_audit.json": {
+    "sha256": "9db06b5840c9c74d38ec239adf44017867a93a948760851c0f2e42ccdffbca60",
+    "bytes": 201762
+  },
+  "cache_guard_audit.md": {
+    "sha256": "095ccbcdc426d41a11a92605df7f534ab2520722cca9320917f7d7e3a95c70a4",
+    "bytes": 5870
+  },
+  "cache_guard_positive_baseline.csv": {
+    "sha256": "3d807d2f9d4d879bc9703671e878c3b925f1b33a609cccc208064e0c6b837993",
+    "bytes": 1072723
+  },
+  "cache_guard_worsened_events.csv": {
+    "sha256": "59090766fb7caa3e1384e0b5427822fcf2f1cbe36868f6d0c28b95390671f869",
+    "bytes": 138485
+  },
+  "cache_guard_baseline_normals.csv": {
+    "sha256": "72e007cd5ab235d4aac533bbd8e6e614f65e784641278a29146d499d8fb10566",
+    "bytes": 4275
+  },
+  "cache_guard_baseline_pairs.csv": {
+    "sha256": "383c33853bf329e1f0a69e3de4c04b504f81d4eb20fdc4d64b98a8583deb9f3a",
+    "bytes": 78584
+  }
+}

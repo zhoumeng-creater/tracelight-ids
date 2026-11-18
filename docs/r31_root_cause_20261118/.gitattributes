@@ -1,0 +1,5 @@
+# Preserve source/evidence bytes; retain original third-party formatting.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+author_sources/** -whitespace
+author_sources_low_fpr/** -whitespace
+author_npcs/** -whitespace

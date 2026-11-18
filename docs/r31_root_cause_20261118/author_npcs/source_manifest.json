@@ -1,0 +1,44 @@
+{
+  "repository": "ytstat/npcs",
+  "commit": "79e8f8cb6332c0160d738229e876ec64ac4483ae",
+  "files": [
+    {
+      "path": "docs/r31_root_cause_20261118/author_npcs/DESCRIPTION",
+      "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/DESCRIPTION",
+      "git_blob_sha1": "63d3bf8bc2b8a8395c58ad4fb765d31a8494aa17",
+      "sha256": "39a90ea5e0e2f8bfbba542554c8fe1e4f966a8eb95153e2a845250ef1b598391",
+      "bytes": 1027
+    },
+    {
+      "path": "docs/r31_root_cause_20261118/author_npcs/R/npcs.R",
+      "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/npcs.R",
+      "git_blob_sha1": "cdd6739963d529c20636629629e338ed289f2a1a",
+      "sha256": "3f932a0c29db09f2d2d0757f26d9c1c87865b46332ce87c32a7b5e27e9d44420",
+      "bytes": 32464
+    },
+    {
+      "path": "docs/r31_root_cause_20261118/author_npcs/R/funcs.R",
+      "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/funcs.R",
+      "git_blob_sha1": "7c6ff7a31cc8d9b9f9747348386be128927f6b3f",
+      "sha256": "359f857565c75fb6af0aabe80764d2c76f0167b8f71a67d4f8f65f345ae93766",
+      "bytes": 22678
+    },
+    {
+      "path": "docs/r31_root_cause_20261118/author_npcs/R/duality_check.R",
+      "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/duality_check.R",
+      "git_blob_sha1": "82a893711f6aa6386305c72ac32042f3b4f5fd86",
+      "sha256": "954176bd6555a5c8a61b9f1a7224a232aab7af476d4aceee883ac0d081ceef20",
+      "bytes": 3613
+    },
+    {
+      "path": "docs/r31_root_cause_20261118/author_npcs/R/predict.npcs.R",
+      "url": "https://raw.githubusercontent.com/ytstat/npcs/79e8f8cb6332c0160d738229e876ec64ac4483ae/R/predict.npcs.R",
+      "git_blob_sha1": "1c307a4a5e5a4a487fa06e8e6a8a42c9d2959292",
+      "sha256": "862f43f84cd354e19222e25c907a056453987d4bb2ca666edca1ca65ee294214",
+      "bytes": 3378
+    }
+  ],
+  "execution": "not_imported_or_executed",
+  "license": "GPL-2",
+  "package_version": "0.2.0"
+}

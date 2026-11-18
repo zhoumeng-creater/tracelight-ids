@@ -1,0 +1,22 @@
+{
+  "official_source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Supplemental-Conference.zip",
+  "zip_sha256": "16d56a85ea354e088b27c10404763b6ea648b78f004b8caebee082445fd480d7",
+  "zip_bytes": 34240,
+  "retrieved": "2026-11-18",
+  "executed": false,
+  "paper": "https://proceedings.iclr.cc/paper_files/paper/2026/file/33870b3e099880cd8e705cd07173ac27-Paper-Conference.pdf",
+  "files": [
+    {
+      "member": "Supp/Nasa.ipynb",
+      "bytes": 48486,
+      "sha256": "ea4eb4c8b3794497bac32f5ccab646309900fa973eafcccd14e7e8f94fb9b47f",
+      "code_text_sha256": "c7baabd9842202f11a4ce61fca8fd0d2d50dec89ff294896330b37ef5d167fd2"
+    },
+    {
+      "member": "Supp/Climsim.ipynb",
+      "bytes": 42684,
+      "sha256": "4965b2373263b2342c118a427d1da0db240332d48bb2e40a2af065c07a1e51c7",
+      "code_text_sha256": "a80dc9ac9af81642b64f1a446718941aefeaca8fd71d22e273aa52147ce1263c"
+    }
+  ]
+}
