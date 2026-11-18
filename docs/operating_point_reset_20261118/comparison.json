@@ -1,7 +1,7 @@
 {
   "status": "development_comparison_complete",
   "spec_sha256": "0c38a8585c6846010ad6e0cfbcc76674331b116f6d07b3cf3b528eeb92e8bb2d",
-  "calibration_only_sha256": "2bfbcd34c28fb4158b81682024dbd4d2785be54e9bc29bf2ea08b84aeab43491",
+  "calibration_only_sha256": "a21110c08e84410ef8cc9987987bbde9b7d54442bb67e63661803cb83d75cd27",
   "input_files": {
     "protocol_blind_s17": {
       "decisions_sha256": "aaaead238fefa27ea7cc656581d36451d033faeb79a86c73a3953bb8cfd688af",

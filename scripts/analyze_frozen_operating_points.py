@@ -29,7 +29,8 @@ def read_json(path: Path):
 
 def write_json(path: Path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+                    encoding="utf-8", newline="\n")
 
 
 def fixed_rank(n: int, alpha: float, delta: float | None) -> tuple[int, float | None]:
@@ -176,9 +177,10 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
               "independent_confirmation": False, "deployment_adoption": False,
               "summaries": summaries, "families": families, "original_cost_context": cost_context}
     write_json(output_dir / "comparison.json", result)
-    pd.DataFrame(cells).to_csv(output_dir / "comparison_cells.csv", index=False, encoding="utf-8")
+    pd.DataFrame(cells).to_csv(output_dir / "comparison_cells.csv", index=False, encoding="utf-8",
+                             lineterminator="\n")
     pd.DataFrame(changes, columns=["model_id", "method", "source_id", "row_id", "family", "score", "change"]).to_csv(
-        output_dir / "comparison_changes.csv", index=False, encoding="utf-8")
+        output_dir / "comparison_changes.csv", index=False, encoding="utf-8", lineterminator="\n")
     lines = ["# R30 固定操作点开发比较", "", "原模型与C/ED身份保持不变，只新增一个固定NP参照。"
              "模型加载、前向、拟合均为0；原R30/R31验收不改。", "",
              "| seed | 规则 | C误报 | ED检出/2036 | ED误报 | 合规单元/15 | 丢失旧TP | 移除旧FP |",
@@ -200,7 +202,7 @@ def run(return_dir: Path, output_dir: Path, spec_path: Path):
               "模型、输入和前向路径未改，原模型成本仅可复用为上下文；本次缓存分析耗时不是模型推理成本。"
               "没有新轻量化收益，也没有原创算法或独立确认结果。", "",
               "本次比较在此结束：不扫alpha/delta，不挑种子，不自动追加训练或另一条校准规则。"]
-    (output_dir / "comparison.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (output_dir / "comparison.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"output": str(output_dir), "summaries": summaries}, ensure_ascii=False))
 
 
