@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>研究历程 · TraceLight</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="history.css">
+  <script defer src="history-data.js"></script>
+  <script defer src="history.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#timeline">跳到研究阶段</a>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a class="brand" href="index.html">TraceLight</a>
+      <nav aria-label="页面导航"><a href="#current">当前决定</a><a href="#history">研究历程</a><a href="index.html">返回证据回放 ↗</a></nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="intro" id="current" aria-labelledby="page-title">
+      <p class="eyebrow">RESEARCH RECORD · 截至 2026-11-19</p>
+      <h1 id="page-title">走过哪些路，<br>留下什么证据。</h1>
+      <p class="lead">从早期轻量化，到监督、输入和操作点重设。把取得的成果、没有成立的解释和现在的决定放回同一条时间线。</p>
+      <div class="current-state">
+        <div><span class="state-label">当前批次</span><h2>四臂尚未运行</h2><p>santos 单来源／加入 Unraveled 监督，分别保留／置零端口。主参照已固定为 mixed_ports_zero，等待实验室执行。</p></div>
+        <div><span class="state-label">研究结论</span><h2>原创机制尚未成立</h2><p>这批只检验监督扩充和端口依赖。已有轻量化、输入修复和检测增益，不等于已完成新的算法贡献。</p></div>
+      </div>
+      <div class="current-links"><a href="../CURRENT_RESEARCH.md">现行研究决定</a><a href="../research_history_20261119/index.md">完整历程与设计重建</a><a href="../COVERAGE_BATCH_LAB_20261119.md">四臂说明</a><a href="../coverage_basis_20261119/batch/registration.json">冻结注册</a></div>
+    </section>
+
+    <section class="history-layout" id="history" aria-labelledby="history-title">
+      <aside class="filter-panel">
+        <p class="eyebrow">按研究问题查看</p>
+        <h2 id="history-title">阶段时间轴</h2>
+        <div id="category-filters" class="category-filters" role="group" aria-label="研究主题"></div>
+        <label class="field-label" for="status-filter">执行状态</label>
+        <select id="status-filter"><option value="all">全部状态</option></select>
+        <label class="field-label" for="history-search">查找阶段</label>
+        <input id="history-search" type="search" placeholder="如：R30、蒸馏、正常标签" autocomplete="off">
+        <label class="field-label" for="history-order">时间顺序</label>
+        <select id="history-order"><option value="ascending">从早期开始</option><option value="descending">从最近开始</option></select>
+        <button id="reset-filters" class="reset-button" type="button">清除筛选</button>
+        <p class="filter-note">“完成实验”表示已经执行，不表示通过效果要求。检查数量不作为检测成功证据。</p>
+        <a class="data-link" href="history-data.js">查看页面证据数据 ↗</a>
+      </aside>
+      <div class="timeline-panel">
+        <div class="timeline-head"><p id="result-count" aria-live="polite"></p><span>目的 → 证据 → 处置</span></div>
+        <p class="reading-note">旧轮次的输入、数据划分和保护门槛各不相同。当前不把“所有旧 TP 零损失”作为新方法的永久否决条件，保留全部增失与成本取舍。</p>
+        <ol id="timeline" class="timeline" tabindex="-1"></ol>
+        <div id="empty-state" class="empty-state" hidden><h3>没有符合条件的阶段</h3><p>可以调整主题、执行状态，或清除搜索词。</p></div>
+      </div>
+    </section>
+    <noscript><p class="noscript">启用 JavaScript 后可筛选阶段。页面不访问外部服务；也可直接阅读 <a href="history-data.js">证据数据</a>和<a href="../CURRENT_RESEARCH.md">现行研究决定</a>。</p></noscript>
+  </main>
+  <footer class="wrap footer"><span>TraceLight · 研究记录</span><p>来源链接区分仓库文档与本地归档；阶段摘要不替代原始逐行结果。</p><a href="index.html">返回证据回放</a></footer>
+</body>
+</html>
