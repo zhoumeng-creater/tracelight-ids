@@ -1,0 +1,17 @@
+{
+  "packet_records": 2592965,
+  "caplen_less_than_orig_len": 0,
+  "ipv4_frame_shorter_than_declared_total": 0,
+  "min_packet_time": 1624259338.198585,
+  "max_packet_time": 1624346942.143561,
+  "truncated_tail": {
+    "offset": 3518820278,
+    "expected_frame_bytes": 1251,
+    "actual_frame_bytes": 58
+  },
+  "caplen_gt_snaplen": 0,
+  "adjacent_timestamp_reversals": 1467,
+  "pcap_snaplen": 65535,
+  "linktype": 1,
+  "representation_modified": false
+}

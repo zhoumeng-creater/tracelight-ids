@@ -1,0 +1,53 @@
+{
+  "all_slice_connections": 381,
+  "candidate_connections": 25,
+  "c2_candidates": 6,
+  "c2_complete": 5,
+  "normal_candidates": 19,
+  "normal_complete_business_connections": 16,
+  "candidate_incomplete": 4,
+  "action_episodes": 2,
+  "new_apt_campaigns": 1,
+  "verified_precise_framework_names": 0,
+  "verified_attack_download_actions": 0,
+  "connection_labels": {
+    "None": 360,
+    "0": 16,
+    "1": 5
+  },
+  "training_role_assigned": false,
+  "training_eligible_connections": 0,
+  "complete_normal_denominator": false,
+  "actual_available_at_known": false,
+  "source_csv_validation": [
+    {
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210621_net1013x.csv",
+      "sha256": "cbc00c3397d81972c321223e0318fd1b99f2c9d00143b98d1070359dbb56a272",
+      "header_columns": 89,
+      "width_counts": {
+        "89": 45960,
+        "104": 7,
+        "90": 170
+      },
+      "valid_rows": 45960,
+      "malformed_rows": 177
+    },
+    {
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210622_net1013x.csv",
+      "sha256": "aaf60e435aed2cd2fe873f1315a95907c4d19f7a92edb9f3c500342cc8f5d4e1",
+      "header_columns": 89,
+      "width_counts": {
+        "89": 38280,
+        "104": 6,
+        "90": 111
+      },
+      "valid_rows": 38280,
+      "malformed_rows": 117
+    }
+  ],
+  "output_hashes": {
+    "connections.jsonl": "fd791eb050d8f226b8fef69330009c920ff103dc65cd07980f248511b06e923b",
+    "events.jsonl": "14ab752c2e3ef6d7214dfc88e7a583b73b1aea70dc864f55bc07e22032a765fb",
+    "links.jsonl": "9c653c51fd190562776beca52c857c43dd47c22d7bd6a4b483c54affd33c7c46"
+  }
+}

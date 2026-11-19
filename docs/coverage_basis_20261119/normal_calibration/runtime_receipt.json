@@ -1,0 +1,101 @@
+{
+  "kind": "wsl",
+  "distro": "Ubuntu",
+  "binary": "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+  "version": "8.0.11",
+  "library_path": "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+  "zeek_path": "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+  "export_script": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\code\\scripts\\fit_contract\\vendor_ait\\scripts\\ait_contract\\export.zeek",
+  "private_install": true,
+  "package_manifest_sha256": "61c1d186b4891d2307449cf64ed4df769c00da3e56dbeb17b854f4dfa658556b",
+  "rootfs": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\local\\ait-zeek-runtime\\rootfs",
+  "packages": [
+    {
+      "name": "zeek-8.0-core",
+      "version": "1:8.0.11-0",
+      "url": "https://download.opensuse.org/repositories/security:/zeek/xUbuntu_24.04/amd64/zeek-8.0-core_8.0.11-0_amd64.deb",
+      "bytes": 10883424,
+      "sha256": "0b3e180d7677d7009b93fe13091d44079be7fd91e7b1a3cc7d9bc4dd0f337714"
+    },
+    {
+      "name": "libpcap0.8t64",
+      "version": "1.10.4-4.1ubuntu3",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libp/libpcap/libpcap0.8t64_1.10.4-4.1ubuntu3_amd64.deb",
+      "bytes": 151326,
+      "sha256": "62e3379edd4b8cf748f2a1260c96f54dd2074ae4f956bd2b444440d62c0b5d2a"
+    },
+    {
+      "name": "libmaxminddb0",
+      "version": "1.9.1-1build1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libm/libmaxminddb/libmaxminddb0_1.9.1-1build1_amd64.deb",
+      "bytes": 24382,
+      "sha256": "7e0251548b110e498d9f695c2212b4241af611aec5f1d99c564e6abc7ec2df0b"
+    },
+    {
+      "name": "libibverbs1",
+      "version": "50.0-2ubuntu0.2",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/r/rdma-core/libibverbs1_50.0-2ubuntu0.2_amd64.deb",
+      "bytes": 67960,
+      "sha256": "8489558105ee1d1c65ae6e0f1bac0e9b15f314a68f106ee9a63c89821242bd8e"
+    },
+    {
+      "name": "libnl-3-200",
+      "version": "3.7.0-0.3build1.1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-3-200_3.7.0-0.3build1.1_amd64.deb",
+      "bytes": 55706,
+      "sha256": "15b3f61db753dc3db6f62f4259f8b822299343e500886776486612a13a2ed247"
+    },
+    {
+      "name": "libnl-route-3-200",
+      "version": "3.7.0-0.3build1.1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-route-3-200_3.7.0-0.3build1.1_amd64.deb",
+      "bytes": 189094,
+      "sha256": "c9dbd29cb7fdcf1a0587726cbc5432a7d3e81242108dfcfa2dd6716c44c74d4d"
+    },
+    {
+      "name": "libzmq5",
+      "version": "4.3.5-1build2",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/z/zeromq3/libzmq5_4.3.5-1build2_amd64.deb",
+      "bytes": 260300,
+      "sha256": "fff197d2a164e3ec83fef23afd55bad93971b3327d7353db9a305a199d55d402"
+    },
+    {
+      "name": "libsodium23",
+      "version": "1.0.18-1ubuntu0.24.04.1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libs/libsodium/libsodium23_1.0.18-1ubuntu0.24.04.1_amd64.deb",
+      "bytes": 161290,
+      "sha256": "74d6f8fbd65f7f71b6f4f4223bef5fb57c1c14cd4e9ce788ead2b88e8c3ee236"
+    },
+    {
+      "name": "libpgm-5.3-0t64",
+      "version": "5.3.128~dfsg-2.1build1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/libp/libpgm/libpgm-5.3-0t64_5.3.128~dfsg-2.1build1_amd64.deb",
+      "bytes": 166620,
+      "sha256": "9382625866a207b3da34f541799d10203a5693e5928c8d08f6d10be1c545d0a5"
+    },
+    {
+      "name": "libnorm1t64",
+      "version": "1.5.9+dfsg-3.1build1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/universe/n/norm/libnorm1t64_1.5.9+dfsg-3.1build1_amd64.deb",
+      "bytes": 153694,
+      "sha256": "0ff2047ae4ccf2d1b5f338922f98a8652344ee1c0f18dc80a419753d06582cc6"
+    },
+    {
+      "name": "libbsd0",
+      "version": "0.12.1-1build1.1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd0_0.12.1-1build1.1_amd64.deb",
+      "bytes": 41238,
+      "sha256": "f3857b0863ac5cfd4263e9bf6cfb1d4be88d5321e4070d5bc2b62b0949e6c86f"
+    },
+    {
+      "name": "libmd0",
+      "version": "1.1.0-2build1.1",
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd0_1.1.0-2build1.1_amd64.deb",
+      "bytes": 26976,
+      "sha256": "e5ba01d3c41f256aaf57ec59aa0554857162e3e7f97cdfbff1ed2c0e8d720ee7"
+    }
+  ],
+  "version_output": "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek version 8.0.11",
+  "binary_sha256": "dbf1d7e7bf7d65b06a70b889aeadf7dabe1cc280d2f21c9b1b33aec9304c4600",
+  "gnu_time": "/usr/bin/time"
+}

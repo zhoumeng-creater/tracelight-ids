@@ -1,0 +1,12 @@
+{
+  "url": "https://gitlab.com/api/v4/projects/asu22%2Funraveled/repository/tree?per_page=100",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\root_tree.json",
+  "bytes": 1275,
+  "sha256": "33e0ccf25d4c8fc6c24ef4646c15faf1ce39fbaa678c96ab4cf417dcadb64951",
+  "response_headers": {
+    "Content-Length": null,
+    "ETag": "W/\"33e0ccf25d4c8fc6c24ef4646c15faf1\"",
+    "Last-Modified": null,
+    "Content-Type": "application/json"
+  }
+}

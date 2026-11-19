@@ -1,0 +1,229 @@
+{
+  "real_estimator_fit_calls": 0,
+  "calls": [
+    {
+      "call": "construct",
+      "ordinal": 0,
+      "parameters": {
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.1,
+        "early_stopping": false,
+        "random_state": 20261111,
+        "class_weight": "balanced",
+        "categorical_features": null
+      }
+    },
+    {
+      "call": "fit",
+      "ordinal": 0,
+      "markers": [
+        1.0,
+        2.0
+      ],
+      "labels": [
+        0,
+        1
+      ]
+    },
+    {
+      "call": "construct",
+      "ordinal": 1,
+      "parameters": {
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.1,
+        "early_stopping": false,
+        "random_state": 20261111,
+        "class_weight": "balanced",
+        "categorical_features": null
+      }
+    },
+    {
+      "call": "fit",
+      "ordinal": 1,
+      "markers": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "labels": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "call": "construct",
+      "ordinal": 2,
+      "parameters": {
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.1,
+        "early_stopping": false,
+        "random_state": 20261111,
+        "class_weight": "balanced",
+        "categorical_features": null
+      }
+    },
+    {
+      "call": "fit",
+      "ordinal": 2,
+      "markers": [
+        1.0,
+        2.0
+      ],
+      "labels": [
+        0,
+        1
+      ]
+    },
+    {
+      "call": "construct",
+      "ordinal": 3,
+      "parameters": {
+        "max_iter": 200,
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.1,
+        "early_stopping": false,
+        "random_state": 20261111,
+        "class_weight": "balanced",
+        "categorical_features": null
+      }
+    },
+    {
+      "call": "fit",
+      "ordinal": 3,
+      "markers": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "labels": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "call": "score",
+      "ordinal": 0,
+      "phase": "C",
+      "markers": [
+        10.0,
+        11.0,
+        12.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": false
+    },
+    {
+      "call": "score",
+      "ordinal": 1,
+      "phase": "C",
+      "markers": [
+        10.0,
+        11.0,
+        12.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": false
+    },
+    {
+      "call": "score",
+      "ordinal": 2,
+      "phase": "C",
+      "markers": [
+        10.0,
+        11.0,
+        12.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": false
+    },
+    {
+      "call": "score",
+      "ordinal": 3,
+      "phase": "C",
+      "markers": [
+        10.0,
+        11.0,
+        12.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": false
+    },
+    {
+      "call": "score",
+      "ordinal": 0,
+      "phase": "remaining",
+      "markers": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        20.0,
+        21.0,
+        30.0,
+        31.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": true
+    },
+    {
+      "call": "score",
+      "ordinal": 1,
+      "phase": "remaining",
+      "markers": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        20.0,
+        21.0,
+        30.0,
+        31.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": true
+    },
+    {
+      "call": "score",
+      "ordinal": 2,
+      "phase": "remaining",
+      "markers": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        20.0,
+        21.0,
+        30.0,
+        31.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": true
+    },
+    {
+      "call": "score",
+      "ordinal": 3,
+      "phase": "remaining",
+      "markers": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        20.0,
+        21.0,
+        30.0,
+        31.0
+      ],
+      "all_four_models_and_fit_receipts_exist": true,
+      "all_thresholds_saved": true
+    }
+  ]
+}

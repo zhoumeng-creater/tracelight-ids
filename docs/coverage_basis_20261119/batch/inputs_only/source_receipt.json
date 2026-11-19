@@ -1,0 +1,23 @@
+{
+  "registration_sha256": "4ff8a57a1114ebb67ffa36d9e3ea1d88bda15d8aee46db90dc9ef7fe377f06d2",
+  "inputs": {
+    "rows": {
+      "path": "rows.jsonl.gz",
+      "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+    },
+    "cohorts": {
+      "path": "cohorts.json",
+      "sha256": "358f8ecc0da25d9be8fc7a553a880838aa8ce39a22f70981a17ab8e346b33277"
+    },
+    "events": {
+      "path": "events.jsonl.gz",
+      "sha256": "35f374ac82107456a3495523f4140ae6b86b53327f0aec7f7b03c2a675b0186d"
+    },
+    "normal_units": {
+      "path": "normal_units.jsonl.gz",
+      "sha256": "e1d7f3a71626b9586ae66d0b5628f8f111a7ce186028278e2dd5ec31b02b1551"
+    }
+  },
+  "runner_sha256": "75157e925366e737f013af9edf98bcc533edcbadb55f6cc768669e4af70754ba",
+  "report_helper_sha256": "493afd66ff057e19c7ad23751738b4560dc453b62789a0fc1adbd10402822910"
+}

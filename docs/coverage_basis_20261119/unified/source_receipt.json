@@ -1,0 +1,91 @@
+{
+  "script_sha256": "e48312e1752f7de6af0522bc63fa5774bcaa9d59c5545831b080b9ceff753205",
+  "sources": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\event_flow_links.jsonl.gz",
+      "sha256": "ce7a413596aab8554ada47c11973e7da89fc23f415529f3cd78239c691f2d57e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\events.jsonl.gz",
+      "sha256": "0c4be3a33aa1cd73b3ae55dfa7cbaa1f1c9196e982c3ea7108cf51116644ea7e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\inference_rows.jsonl.gz",
+      "sha256": "069ca092a0d3a9d52962316b89c68ac581061403332f1e69a88907c808b604d4"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\model_rows.jsonl.gz",
+      "sha256": "124ce59b761430429d9146bcf504e2689a14c1dfef4384010c0bb40e1a6cdb98"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\observations.jsonl.gz",
+      "sha256": "c44708081a72b2486d18b57731d08c3082523edaef00c93ca034c5d15da24f8b"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\split_assignments.jsonl.gz",
+      "sha256": "9ce07d8b36615df8a39ea2f5fd87b39ea5ecb82ad577f697c955be99641ff3c0"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\assembly_receipt.json",
+      "sha256": "1cba899f3792d426b027ba8a284d238ecae4bbbfc327c7dffc745e37b44b1727"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\connections.jsonl.gz",
+      "sha256": "c64dfcf0f5cff97c64c9f1529ef3f889c7ccedb68ce1c509854e0c37d5b7c2fc"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\events.jsonl",
+      "sha256": "b283c777b494369486ffafb8cdbb133dcc4fefb994873b380348c317decae711"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\links.jsonl",
+      "sha256": "ce5effd78236a0c040cc6668eaa1dcefa173d14a0943932c9873470dca3ec2b1"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\old_slice_aliases.jsonl",
+      "sha256": "16fdad038e9b7c3c64de244e2bdf57c07600a22284195af8dfdc8d9d54f39173"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\network_mapping\\connections.jsonl",
+      "sha256": "fd791eb050d8f226b8fef69330009c920ff103dc65cd07980f248511b06e923b"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\dependency_components.jsonl.gz",
+      "sha256": "431682f70df16c1192f6e8fc2949358b18823aff06da06f3fbe35c468c136888"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\extracted\\intranet_server\\connections.jsonl.gz",
+      "sha256": "e63687f26dce8d7a1df5b2a9315c1ed772f03ab34c8677ad6c93f12912b2ce26"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\qualified_connections.jsonl.gz",
+      "sha256": "ad8f53a8dbc7d3f19e87d53254c183b5fc45692c8787e6489c6d2378cbadcc3e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\v2\\business_episodes.jsonl.gz",
+      "sha256": "38ca443fd385e719f144c799287c47908d23ef8ecd92d25b6dfe4d8324bf3859"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\v2\\connection_candidates.jsonl.gz",
+      "sha256": "f7cdc6d07383e8bfbd3b22d2a6e8cfff8c23f103e1cc04b11c6e6a75b3303230"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\v2\\episode_flow_links.jsonl.gz",
+      "sha256": "f7a3a033ede9559d0ea7bee80a65a70d56369b275e930e73f26949e4baf15c9e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_management\\event_flow_links.jsonl.gz",
+      "sha256": "760f9b5265a2fa9da5399ca8cc58c5a669897e8c59bb255ee13cf2dbde383c3b"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_management\\events.jsonl.gz",
+      "sha256": "734ab648bc78d3f84d8d670ca8880447c6481a077fcf6477ee5010fde2684910"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_management\\referenced_connections.jsonl.gz",
+      "sha256": "73b7fd3f42f80f46f110f9c6aedd87024fa9458e5d2b80fb344beb05a7d4a386"
+    }
+  ],
+  "argv_attack_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture",
+  "normal_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\v2"
+}

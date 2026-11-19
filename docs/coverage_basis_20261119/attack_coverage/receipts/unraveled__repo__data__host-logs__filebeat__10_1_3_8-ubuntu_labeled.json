@@ -1,0 +1,12 @@
+{
+  "url": "https://gitlab.com/asu22/unraveled/-/raw/d2ea90055d82fa448ab20588a13e3ec8bfd74816/data/host-logs/filebeat/10_1_3_8-ubuntu_labeled",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\repo\\data\\host-logs\\filebeat\\10_1_3_8-ubuntu_labeled",
+  "bytes": 579246,
+  "sha256": "abcafa0fae9f0155d1de53c0bf17bec293b52ce82a2fdb120a30df6ec3cdb559",
+  "response_headers": {
+    "Content-Length": "579246",
+    "ETag": "\"5fce4474fb7aa67fabb09b9d0b958d3e\"",
+    "Last-Modified": null,
+    "Content-Type": "text/plain; charset=utf-8"
+  }
+}

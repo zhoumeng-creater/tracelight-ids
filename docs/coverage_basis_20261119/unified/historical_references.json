@@ -1,0 +1,19 @@
+{
+  "former_history19_tables_not_consumed": [
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\context_rows.jsonl.gz",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\context_rows.jsonl.gz"
+  ],
+  "old_fit_dataset_preserved": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset",
+  "historical_attack_slice_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\network_mapping",
+  "old_slice_exposure": {
+    "campaign_id": "unraveled:apt_2021_single_campaign",
+    "observations": 381,
+    "label_counts": {
+      "None": 360,
+      "0": 16,
+      "1": 5
+    },
+    "normal_denominator_complete": false,
+    "current_samples": false
+  }
+}

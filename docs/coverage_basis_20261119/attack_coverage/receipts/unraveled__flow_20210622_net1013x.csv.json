@@ -1,0 +1,12 @@
+{
+  "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day2_06222021/net1013x_Flow_labeled.csv",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210622_net1013x.csv",
+  "bytes": 21798174,
+  "sha256": "aaf60e435aed2cd2fe873f1315a95907c4d19f7a92edb9f3c500342cc8f5d4e1",
+  "response_headers": {
+    "Content-Length": "21798174",
+    "ETag": "\"9e78e1baa108241a6a6afa8bf9f292ea-2\"",
+    "Last-Modified": "Mon, 30 Aug 2021 05:53:49 GMT",
+    "Content-Type": "binary/octet-stream"
+  }
+}

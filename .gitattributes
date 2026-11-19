@@ -7,3 +7,4 @@
 *.yml text eol=lf
 # These extraction sources are bound byte-for-byte in scientific receipts.
 scripts/fit_contract/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/coverage_batch/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

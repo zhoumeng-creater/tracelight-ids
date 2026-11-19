@@ -1,0 +1,26 @@
+{
+  "schema": "normal-business-cohorts-v1",
+  "source": "russellmitchell only; previously opened development source",
+  "early_candidate_C_days_UTC": [
+    "2022-01-21",
+    "2022-01-22"
+  ],
+  "later_normal_validation_days_UTC": [
+    "2022-01-23",
+    "2022-01-24"
+  ],
+  "episode_rule": "Explicit selecting_activity -> target business activity start through explicit return to selecting_activity; entire original activity, not request/flow count.",
+  "connection_rule": "Full SF Zeek record, complete raw8, wholly inside simulation, not EOF/shutdown; all possible service requests have author-normal labels plus known internal actor active business episode. Shared ownCloud proxy requires bidirectional request-identity coverage and every possible frontend actor normal.",
+  "role_rule": "No cross-day episode or connection is split. Connected components of episode-flow edges stay together; cross-day/incomplete/conflicting components are unresolved.",
+  "quality_filter": "No rejection based on truncation, packet-length normalization, packet count, byte count, or model score.",
+  "normal_label_scope": "Conditional B-grade service-connection normality given complete published log members and actor evidence; no unique client TCP request attribution is implied by coarse Apache seconds.",
+  "services": [
+    "intranet_browsing",
+    "owncloud_file_workflow"
+  ],
+  "strata": "OwnCloud exact file-transfer request flows distinguished from interface/API workflow flows.",
+  "independent_sample_claim": false,
+  "population_one_percent_guarantee": false,
+  "threshold_or_model_calls": 0,
+  "official_label_rule_source": "https://zenodo.org/records/19483937"
+}

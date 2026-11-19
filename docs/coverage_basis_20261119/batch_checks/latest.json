@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "tests_run": 16,
+  "failure_count": 0,
+  "error_count": 0,
+  "outcomes": [
+    {
+      "test": "__main__.CoverageBatchChecks.test_01_inspection_constructs_no_model",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_02_fit_and_evaluation_identity_overlap_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_03_complete_source_group_leak_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_04_F_base_must_be_a_true_subset",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_05_reserved_and_unregistered_score_rows_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_06_unknown_background_in_registered_fit_group_is_not_fitted",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_07_explicit_fit_classes_and_normal_only_C",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_08_ports_only_and_missingness_are_preserved",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_09_integer_budget_small_C_and_strict_threshold",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_10_ties_are_not_split_or_forced_to_spend_budget",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_11_four_fits_persist_before_C_and_thresholds_before_evaluation",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_12_pairwise_added_and_removed_conservation",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_13_multiple_candidate_event_bounds_and_unresolved_cases",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_14_normal_unit_integer_budget_and_unknown_rejection",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_15_C_background_is_scored_but_not_calibrated_or_counted_normal",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.CoverageBatchChecks.test_16_source_metadata_and_arm_specific_fit_markers_are_preserved",
+      "status": "passed"
+    }
+  ],
+  "input_scope": "Only artificial rows declared in this module",
+  "real_data_rows_read": 0,
+  "real_model_constructions": 0,
+  "real_model_fits": 0,
+  "toy_fit_calls": 12,
+  "toy_score_calls": 24,
+  "runner_sha256": "75157e925366e737f013af9edf98bcc533edcbadb55f6cc768669e4af70754ba",
+  "report_helper_sha256": "493afd66ff057e19c7ad23751738b4560dc453b62789a0fc1adbd10402822910",
+  "test_sha256": "18cd8e4cf3ddb4645350a4f88e2f68f78d192abd280d43826d3e0d82de7d17f6",
+  "artifacts": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\batch_checks\\synthetic_20261119T032724591193Z"
+}

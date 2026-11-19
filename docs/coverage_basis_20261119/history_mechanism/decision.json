@@ -1,0 +1,36 @@
+{
+  "decision": "remove_fixed_history19_training_arm",
+  "parent_adopted": true,
+  "deleted_from_next_proposed_fit": "HGB27 = current raw8 + previous raw8 + whole-prefix mean8 + log gap + samepeer + empty flag",
+  "retain_artifacts": true,
+  "mutated_fvc_mapper_or_model_code": false,
+  "model_fit_calls": 0,
+  "model_score_calls": 0,
+  "threshold_calls": 0,
+  "evidence": {
+    "ait_download_actions": 4,
+    "ait_download_candidate_connections": 6,
+    "true_wget_control_available_strictly_before_download_query_actions": 0,
+    "ait_download_samepeer_true_candidates": 0,
+    "ait_later_github_candidates_with_unknown_last_slot": 2,
+    "ait_normal_owncloud_actions": 86,
+    "ait_normal_owncloud_actions_with_any_samepeer_candidate": 86,
+    "optc_documented_download_prefix": {"known_control_flows": 24, "total_flows": 360, "previous_class": "unknown_flow"},
+    "optc_control_queries_with_previous_confirmed_control": 23,
+    "optc_control_queries": 24,
+    "all_analyzed_events_or_objects": 5306,
+    "all_event_candidate_context_rows": 6401
+  },
+  "retained_local_mechanism": "Repeated host-peer control communication is directly observed; it is a mature C2 mechanism, not evidence of command-caused download recognition.",
+  "current_implementable_scope": "Existing HGB8 and separate control/download action evaluation with known normal-business units; no replacement history arm is adopted by this result.",
+  "specific_history_research_question": "Does repeated same-host-peer completed communication carry information beyond an individual flow for recurring C2? Existing EarlyCrow/CESNET mechanisms already address this; the present positive traces alone do not authorize a new fit.",
+  "algorithm_innovation_established": false,
+  "unsupported_claims": [
+    "recovered command-to-download causal relation",
+    "cross-implementation action-relation learning",
+    "effective semantic compression by history19",
+    "real online early detection from these offline clocks"
+  ],
+  "new_window_or_loss_proposed": false,
+  "evidence_files": ["README.md", "research_scope.md", "method_comparison.md", "event_history_evidence.jsonl.gz", "candidate_history_evidence.jsonl.gz", "all_event_candidate_history.csv", "attack_download_details.json", "summary.json", "source_receipt.json"]
+}

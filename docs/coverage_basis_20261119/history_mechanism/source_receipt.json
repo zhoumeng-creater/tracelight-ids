@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\events.jsonl.gz",
+      "sha256": "0c4be3a33aa1cd73b3ae55dfa7cbaa1f1c9196e982c3ea7108cf51116644ea7e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\event_flow_links.jsonl.gz",
+      "sha256": "ce7a413596aab8554ada47c11973e7da89fc23f415529f3cd78239c691f2d57e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\observations.jsonl.gz",
+      "sha256": "c44708081a72b2486d18b57731d08c3082523edaef00c93ca034c5d15da24f8b"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\context_rows.jsonl.gz",
+      "sha256": "0401ddfca59899fa00e40d7c904d03d5335b9ca5c458375173c307a2efcda2f7"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\context_inputs.jsonl.gz",
+      "sha256": "2b0fdbf4d519527fd998bd4c5778c2cfe330c88aa41d75a894b23179b7c74961"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\context_rows.jsonl.gz",
+      "sha256": "d960ab466d6cb33b3898327a0849448bc70984c91552ed3b43434e658990dd84"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_replay_inputs.jsonl.gz",
+      "sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\inference_rows.jsonl.gz",
+      "sha256": "069ca092a0d3a9d52962316b89c68ac581061403332f1e69a88907c808b604d4"
+    }
+  ],
+  "script_sha256": "2accc18cc90a7e0af9438639aa0567067f30723b151cc6a66b7cd07cd4987835",
+  "output_events": 5306,
+  "no_model_imports": true
+}

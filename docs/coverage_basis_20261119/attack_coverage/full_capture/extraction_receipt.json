@@ -1,0 +1,128 @@
+{
+  "status": "complete",
+  "download_receipt": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\full_capture\\download_receipt.json",
+  "source_pcap_sha256": "6da54d26f3396e78c067ce8c66dfee5ba47c48c331394d0f3e2f782cd2a15813",
+  "processing_pcap_sha256": "2111f2b2ef43d6364d90731c4f55fc5c25cf899e994f3d3aefe9eadf39851ec3",
+  "complete_records_derivation": {
+    "source_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\full_capture\\net1013x.pcap",
+    "source_sha256": "6da54d26f3396e78c067ce8c66dfee5ba47c48c331394d0f3e2f782cd2a15813",
+    "processing_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\full_capture\\net1013x.complete_records.pcap",
+    "processing_sha256": "2111f2b2ef43d6364d90731c4f55fc5c25cf899e994f3d3aefe9eadf39851ec3",
+    "preserved_source_interval_half_open": [
+      0,
+      3518820278
+    ],
+    "incomplete_trailing_record_bytes_excluded": 74,
+    "complete_packet_records_preserved": 2592965,
+    "all_complete_record_headers_and_frame_bytes_unchanged": true,
+    "original_failure_logs": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\zeek_original_truncated_tail",
+    "tail_record": {
+      "offset": 3518820278,
+      "expected_frame_bytes": 1251,
+      "actual_frame_bytes": 58
+    },
+    "reason": "source S3 object ends inside its last record; no caplen/orig_len or frame repair"
+  },
+  "quality": {
+    "packet_records": 2592965,
+    "caplen_less_than_orig_len": 0,
+    "ipv4_frame_shorter_than_declared_total": 0,
+    "min_packet_time": 1624259338.198585,
+    "max_packet_time": 1624346942.143561,
+    "truncated_tail": {
+      "offset": 3518820278,
+      "expected_frame_bytes": 1251,
+      "actual_frame_bytes": 58
+    },
+    "caplen_gt_snaplen": 0,
+    "adjacent_timestamp_reversals": 1467,
+    "pcap_snaplen": 65535,
+    "linktype": 1,
+    "representation_modified": false
+  },
+  "export": {
+    "status": "complete",
+    "mode": "ignore_checksums",
+    "version": "8.0.11",
+    "runtime_kind": "wsl",
+    "pcap_sha256": "2111f2b2ef43d6364d90731c4f55fc5c25cf899e994f3d3aefe9eadf39851ec3",
+    "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+    "wall_seconds": 57.031255500158295,
+    "logs": {
+      "conn": {
+        "exists": true,
+        "rows": 47032,
+        "sha256": "f52345a2b4d7c125c01b1eb89a89daf7008e8d6f2e01b40d8a1b585de3286ba5"
+      },
+      "http": {
+        "exists": true,
+        "rows": 7331,
+        "sha256": "7d5a21ff1bb079cc6f76d00a17d4fc92410bea1362c57f5ed9dd77b81467cacc"
+      },
+      "ssl": {
+        "exists": true,
+        "rows": 19511,
+        "sha256": "b4523e956cff656e7f1b75113189d3e4d0ef7afe3b64cca84533bab9231dc1e9"
+      },
+      "dns": {
+        "exists": true,
+        "rows": 21501,
+        "sha256": "bcf7ca4e01b48e2ccaeae4b950241f844a23da88a433e6365dd3bb4663354679"
+      },
+      "files": {
+        "exists": true,
+        "rows": 9864,
+        "sha256": "83b3a528a90eca2e25438eb0661ddb460b247435b51e92096edb549ce7c2f49f"
+      },
+      "weird": {
+        "exists": true,
+        "rows": 209,
+        "sha256": "b03688df6d8728504016179a63cadeac69cb69bf2168f2c42eda83cf38670a14"
+      }
+    },
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--exec",
+      "sh",
+      "-c",
+      "cd \"$1\" && shift && exec env \"$@\"",
+      "ait-zeek",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/覆盖与历史依据落实_20261119/attack_coverage/full_capture/zeek",
+      "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+      "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+      "LC_ALL=C",
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "zeek-resource.txt",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+      "-C",
+      "-r",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/覆盖与历史依据落实_20261119/attack_coverage/source/unraveled/full_capture/net1013x.complete_records.pcap",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/覆盖与历史依据落实_20261119/attack_coverage/vendor/export.zeek"
+    ],
+    "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+    "checksum_policy": "explicitly ignore with -C",
+    "model_forward_calls": 0,
+    "gpu_jobs": 0,
+    "process_resources": {
+      "measured": true,
+      "source": "/usr/bin/time -v for this Zeek process",
+      "user_cpu_seconds": 22.88,
+      "system_cpu_seconds": 8.19,
+      "max_rss_kib": 122644,
+      "exit_status": 0
+    }
+  },
+  "counts": {
+    "all_connections": 47032,
+    "involving_monitored_host": 12824,
+    "raw8_missing": 756
+  },
+  "base_connections_sha256": "c10cf1bdc073890473397958738b164d8c342845cb60fd3890b40ae3bbab1d30",
+  "role": "opened_source_development",
+  "fit_validation_role": null,
+  "training_or_scoring_run": false
+}

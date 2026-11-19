@@ -1,0 +1,17 @@
+{
+  "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\full_capture\\net1013x.pcap",
+  "source_sha256": "6da54d26f3396e78c067ce8c66dfee5ba47c48c331394d0f3e2f782cd2a15813",
+  "source_byte_offset": 3518820278,
+  "tail_record_bytes_present": 74,
+  "record_sha256": "b5a33f0ffc8b70a31043c486a17ca627ec3951e59489a7475fe35e4ae9056830",
+  "packet_timestamp": 1624346942.148403,
+  "declared_caplen": 1251,
+  "declared_orig_len": 1251,
+  "stored_frame_bytes": 58,
+  "source": "10.8.10.84",
+  "destination": "10.1.3.8",
+  "orig_port": 443,
+  "resp_port": 54992,
+  "ip_protocol": 6,
+  "raw8_policy": "only complete original records measured; do not restore counters or frame payload from the partial record"
+}

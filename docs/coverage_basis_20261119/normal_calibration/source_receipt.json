@@ -1,0 +1,201 @@
+{
+  "source_record": "https://zenodo.org/records/19483937",
+  "archive": "russellmitchell_no-pcaps.zip",
+  "index_sha256": "93a2dc34a9d7fd372878a73309ebed1afdc23727ad4a3da2b2d7e891b16d5137",
+  "members": [
+    {
+      "path": "dataset.yaml",
+      "bytes": 97,
+      "compressed": 73,
+      "CRC": 3596671278,
+      "offset": 0,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\dataset.yaml",
+      "sha256": "fba756deba1ccc5db4cb3e7674026c9d6aa8ba07ba5e601396abc0f81fb1a5e5",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\dataset.yaml"
+    },
+    {
+      "path": "processing/config/servers.yaml",
+      "bytes": 14835,
+      "compressed": 1719,
+      "CRC": 2018724569,
+      "offset": 519839722,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\processing\\config\\servers.yaml",
+      "sha256": "992bb3533597cb597023697c6172a92f267605ff1a6c55321934a162c8a808e2",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\processing\\config\\servers.yaml"
+    },
+    {
+      "path": "labels/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+      "bytes": 1637968,
+      "compressed": 24568,
+      "CRC": 894213070,
+      "offset": 518444180,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\labels\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.2",
+      "sha256": "ab6a834e2f9b8321cb7045cd78e0d88eea851a0f4b5231827f16e87ca7286154",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\labels\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.2"
+    },
+    {
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+      "bytes": 149432,
+      "compressed": 5428,
+      "CRC": 2974726761,
+      "offset": 155527948,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.1",
+      "sha256": "d43f56bbe787107208221453a42b1c3eb0619795071d4ef76183da34d3275e99",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.1"
+    },
+    {
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+      "bytes": 1565078,
+      "compressed": 49076,
+      "CRC": 3014553721,
+      "offset": 155560531,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.2",
+      "sha256": "4d3d700f50c6dde5295ebc57a00701b7c3049812c6f6709b3f809e36be362153",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.2"
+    },
+    {
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+      "bytes": 256115,
+      "compressed": 7679,
+      "CRC": 3060201496,
+      "offset": 155609748,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.3",
+      "sha256": "7e3144f380a12db73cd4c9f53f3cbb48b33a8757485533508b955d1a6a2203b3",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.3"
+    },
+    {
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+      "bytes": 289482,
+      "compressed": 9404,
+      "CRC": 2515359074,
+      "offset": 155617685,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.4",
+      "sha256": "9efe17b91cd03b1a5a0032611eeda6be8a4ea8ceb71b77a58abd61e209492352",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.4"
+    },
+    {
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+      "bytes": 1514577,
+      "compressed": 63947,
+      "CRC": 2109735952,
+      "offset": 192205050,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.1",
+      "sha256": "dd84f0feb1700360023d7d821aa5b2dd2602b0890f18b536ea80f9e3a414b134",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.1"
+    },
+    {
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+      "bytes": 1950136,
+      "compressed": 82399,
+      "CRC": 1952069807,
+      "offset": 192122536,
+      "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&normal_calibration_offset=192122536",
+      "content_range": "bytes 192122536-192205446/522084364",
+      "sha256": "a090adf1107f0ce49d7bc59f919f6ffc3a5dc5b8ef7041aac55b0074eb973872",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.2"
+    },
+    {
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+      "bytes": 2163226,
+      "compressed": 68349,
+      "CRC": 181942443,
+      "offset": 192270702,
+      "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&normal_calibration_offset=192270702",
+      "content_range": "bytes 192270702-192339562/522084364",
+      "sha256": "7fc9e50d4ebd484e5ed30ff913101580031a337610236b697f2bd342dd48d05a",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.3"
+    },
+    {
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+      "bytes": 2094454,
+      "compressed": 77296,
+      "CRC": 4216665876,
+      "offset": 192045125,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.4",
+      "sha256": "0c140f45b8367d20f876ed853252fa41e8908f8c8505b7339c1b2ee5e8d9b987",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.4"
+    },
+    {
+      "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.1",
+      "bytes": 1281400,
+      "compressed": 59631,
+      "CRC": 1479037390,
+      "offset": 99993022,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.1",
+      "sha256": "b87709fc6b7385ae12324688892f5a7ded0f9967951e4297862c9b8b0d008294",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.1"
+    },
+    {
+      "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.2",
+      "bytes": 1656416,
+      "compressed": 72842,
+      "CRC": 133321978,
+      "offset": 99919741,
+      "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&normal_calibration_offset=99919741",
+      "content_range": "bytes 99919741-99993094/522084364",
+      "sha256": "52844d158f359d2c74fd6a3eb5d6334e9d7b6cbce6fb01ebf4e12701e92c22f7",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.2"
+    },
+    {
+      "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.3",
+      "bytes": 1850740,
+      "compressed": 61871,
+      "CRC": 669995206,
+      "offset": 99496681,
+      "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&normal_calibration_offset=99496681",
+      "content_range": "bytes 99496681-99559063/522084364",
+      "sha256": "3594e58d0d58eadeadff4961065838a5484965eff4247b5a75211209f035f334",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.3"
+    },
+    {
+      "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.4",
+      "bytes": 1789416,
+      "compressed": 72459,
+      "CRC": 2218251589,
+      "offset": 99420118,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.4",
+      "sha256": "34fa3568b528da7b8387c48b3fcfadddb38b2c1b6ea2505e18a6b9f92208fef9",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.4"
+    },
+    {
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 490480,
+      "compressed": 39789,
+      "CRC": 3173540868,
+      "offset": 389825000,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\internal_employee_0\\logs\\sm.log",
+      "sha256": "957ca78f4a3c91c9746c88c95ab198d2c55b56a32aaeb83a9be508a26110ee44",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\internal_employee_0\\logs\\sm.log"
+    },
+    {
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 3986702,
+      "compressed": 351896,
+      "CRC": 2503626503,
+      "offset": 119288461,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\gather\\internal_employee_1\\logs\\sm.log",
+      "sha256": "d6b677affd2d97f79b8f84c2cb7dbebab636554fa85e92a2bba537481583f15b",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\internal_employee_1\\logs\\sm.log"
+    },
+    {
+      "path": "gather/internal_employee_2/logs/sm.log",
+      "bytes": 3572107,
+      "compressed": 312348,
+      "CRC": 2612865765,
+      "offset": 411190805,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\internal_employee_2\\logs\\sm.log",
+      "sha256": "18d5d3e7425bb7a2f92fa353960ab7487a9e1b09ed77fc35e0e3f294e9e0cc2c",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\internal_employee_2\\logs\\sm.log"
+    },
+    {
+      "path": "gather/internal_employee_3/logs/sm.log",
+      "bytes": 3674057,
+      "compressed": 318497,
+      "CRC": 1567071474,
+      "offset": 204790362,
+      "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\internal_employee_3\\logs\\sm.log",
+      "sha256": "5c2ff0fc8f338490a375f19319c9c1bc0e75b7bbe6c9e3db4665fc9eb7045800",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\internal_employee_3\\logs\\sm.log"
+    }
+  ]
+}

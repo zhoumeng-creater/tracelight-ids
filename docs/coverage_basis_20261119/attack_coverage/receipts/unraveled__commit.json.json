@@ -1,0 +1,12 @@
+{
+  "url": "https://gitlab.com/api/v4/projects/asu22%2Funraveled/repository/commits/master",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\commit.json",
+  "bytes": 780,
+  "sha256": "778ec895888455ec2a95db954e13324b7255664b5d2cf7bb646f0553c7ab9d8d",
+  "response_headers": {
+    "Content-Length": null,
+    "ETag": "W/\"778ec895888455ec2a95db954e13324b\"",
+    "Last-Modified": null,
+    "Content-Type": "application/json"
+  }
+}

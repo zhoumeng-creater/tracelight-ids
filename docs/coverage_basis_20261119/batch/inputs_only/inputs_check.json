@@ -1,0 +1,336 @@
+{
+  "model_constructions": 0,
+  "fit_calls": 0,
+  "score_calls": 0,
+  "threshold_calculations": 0,
+  "unique_rows": 59707,
+  "cohorts": {
+    "F_base": {
+      "rows": 471,
+      "labels": {
+        "0": 439,
+        "1": 32
+      }
+    },
+    "F_expanded": {
+      "rows": 13252,
+      "labels": {
+        "0": 12747,
+        "1": 505
+      }
+    },
+    "C": {
+      "rows": 3475,
+      "labels": {
+        "0": 3475
+      }
+    },
+    "V": {
+      "rows": 661,
+      "labels": {
+        "0": 431,
+        "None": 213,
+        "1": 17
+      }
+    },
+    "external_development": {
+      "rows": 42173,
+      "labels": {
+        "0": 41630,
+        "None": 518,
+        "1": 25
+      }
+    }
+  },
+  "allocation_groups": {
+    "ait:santos:complete_run": [
+      "F_expanded"
+    ],
+    "unraveled:apt_2021_single_campaign": [
+      "F_expanded"
+    ],
+    "ait:russellmitchell:complete_run": [
+      "C"
+    ],
+    "ait:fox:complete_run": [
+      "V"
+    ],
+    "optc:20190919:declared_normal_business_subset": [
+      "external_development"
+    ],
+    "optc:empire_custom:20190924_continues_20190925": [
+      "external_development"
+    ]
+  },
+  "normal_units": [
+    {
+      "unit_id": "F:intranet_server:qualified_normal_business",
+      "normal_count": 125,
+      "integer_FP_budget": 1,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "F:cloud_share:qualified_normal_business",
+      "normal_count": 314,
+      "integer_FP_budget": 3,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "V:intranet_server:qualified_normal_business",
+      "normal_count": 73,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "V:cloud_share:qualified_normal_business",
+      "normal_count": 357,
+      "integer_FP_budget": 3,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:cc1733fecec2b7cf",
+      "normal_count": 172,
+      "integer_FP_budget": 1,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:e0f49b0c60148afd",
+      "normal_count": 2,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:03c5c50d111bd0be",
+      "normal_count": 3977,
+      "integer_FP_budget": 39,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:1dd3cb5ab3c25b98",
+      "normal_count": 1245,
+      "integer_FP_budget": 12,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:434e457c8a1fe185",
+      "normal_count": 295,
+      "integer_FP_budget": 2,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:7340ffebca965788",
+      "normal_count": 64,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:9bc7f2dab0c23540",
+      "normal_count": 183,
+      "integer_FP_budget": 1,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:d12752c2b9d91e80",
+      "normal_count": 1947,
+      "integer_FP_budget": 19,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:eadc16f7f4943e70",
+      "normal_count": 2,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:d092a265bbf7bfa2",
+      "normal_count": 2565,
+      "integer_FP_budget": 25,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:9c624c626dd65f2d",
+      "normal_count": 6,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:463d3e2b6c1e7c66",
+      "normal_count": 857,
+      "integer_FP_budget": 8,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:52f649dccd21e493",
+      "normal_count": 2020,
+      "integer_FP_budget": 20,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:67a95b870efbaad8",
+      "normal_count": 4652,
+      "integer_FP_budget": 46,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:aa3906b521634f12",
+      "normal_count": 9,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:6d14e1c563ac5a05",
+      "normal_count": 5864,
+      "integer_FP_budget": 58,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:1b3eed5482eae7ea",
+      "normal_count": 1,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:97a3abe5c5433ec7",
+      "normal_count": 1357,
+      "integer_FP_budget": 13,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:3b25b4265803a06a",
+      "normal_count": 9,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:138929069cbd78c7",
+      "normal_count": 8722,
+      "integer_FP_budget": 87,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:94386e25f522bbba",
+      "normal_count": 5,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:aecbc6878e01de8e",
+      "normal_count": 3299,
+      "integer_FP_budget": 32,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:2e5dff6778d97974",
+      "normal_count": 2,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:17069c70bece2713",
+      "normal_count": 2119,
+      "integer_FP_budget": 21,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:4f80a2cd7c3fc729",
+      "normal_count": 6,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "optc_normal:b59647074e98ad4a",
+      "normal_count": 2250,
+      "integer_FP_budget": 22,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "C:host:cloud_share",
+      "normal_count": 2565,
+      "integer_FP_budget": 25,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "C:host:intranet_server",
+      "normal_count": 910,
+      "integer_FP_budget": 9,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "C:business:intranet_browser_requests",
+      "normal_count": 910,
+      "integer_FP_budget": 9,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "C:business:owncloud_file_transfer_request",
+      "normal_count": 188,
+      "integer_FP_budget": 1,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "C:business:owncloud_interface_or_API",
+      "normal_count": 2377,
+      "integer_FP_budget": 23,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "V:intranet_server:normal_SSH_management",
+      "normal_count": 1,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:dns",
+      "normal_count": 4388,
+      "integer_FP_budget": 43,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:http_application",
+      "normal_count": 1645,
+      "integer_FP_budget": 16,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:ntp",
+      "normal_count": 884,
+      "integer_FP_budget": 8,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:other_tcp",
+      "normal_count": 27,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:other_udp",
+      "normal_count": 263,
+      "integer_FP_budget": 2,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:ssh",
+      "normal_count": 20,
+      "integer_FP_budget": 0,
+      "all_members_resolve_to_known_normal": true
+    },
+    {
+      "unit_id": "Unraveled:normal:tls_application",
+      "normal_count": 5081,
+      "integer_FP_budget": 50,
+      "all_members_resolve_to_known_normal": true
+    }
+  ],
+  "events": 46972,
+  "planned_fits": 4,
+  "parameters": {
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "learning_rate": 0.1,
+    "early_stopping": false,
+    "random_state": 20261111,
+    "class_weight": "balanced",
+    "categorical_features": null
+  }
+}

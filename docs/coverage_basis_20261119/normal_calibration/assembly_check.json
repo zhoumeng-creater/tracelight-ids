@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "all_candidate_connection_ids_unique",
+      "passed": true
+    },
+    {
+      "check": "qualified_partition_complete",
+      "passed": true
+    },
+    {
+      "check": "C_and_later_validation_stable_ids_disjoint",
+      "passed": true
+    },
+    {
+      "check": "C_and_later_validation_episode_ids_disjoint",
+      "passed": true
+    },
+    {
+      "check": "C_and_later_validation_dependency_components_disjoint",
+      "passed": true
+    },
+    {
+      "check": "roles_fixed_by_complete_early_and_later_days",
+      "passed": true
+    },
+    {
+      "check": "all_consumable_components_complete",
+      "passed": true
+    },
+    {
+      "check": "normal_labels_have_whole_connection_evidence",
+      "passed": true
+    },
+    {
+      "check": "all_intranet_request_candidates_supported_by_actors",
+      "passed": true
+    },
+    {
+      "check": "all_cloud_frontend_candidates_supported_by_actors",
+      "passed": true
+    },
+    {
+      "check": "raw8_features_and_full_background_context_references_present",
+      "passed": true
+    },
+    {
+      "check": "context_strictly_past",
+      "passed": true
+    },
+    {
+      "check": "cross_day_connections_retained_unresolved",
+      "passed": true
+    },
+    {
+      "check": "all_historical_C25_preserved_and_raw8_equal",
+      "passed": true
+    }
+  ],
+  "strata": [
+    {
+      "role": "C_candidate",
+      "capture_host": "intranet_server",
+      "connections": 284,
+      "episodes": 36,
+      "dependency_components": 36,
+      "actors": [
+        "internal_employee_1",
+        "internal_employee_2",
+        "internal_employee_3"
+      ],
+      "dates": [
+        "2022-01-21",
+        "2022-01-22"
+      ],
+      "file_transfer_request_connections": 0
+    },
+    {
+      "role": "C_candidate",
+      "capture_host": "cloud_share",
+      "connections": 81,
+      "episodes": 3,
+      "dependency_components": 3,
+      "actors": [
+        "internal_employee_2",
+        "internal_employee_3"
+      ],
+      "dates": [
+        "2022-01-21"
+      ],
+      "file_transfer_request_connections": 6
+    },
+    {
+      "role": "normal_time_validation",
+      "capture_host": "intranet_server",
+      "connections": 283,
+      "episodes": 32,
+      "dependency_components": 32,
+      "actors": [
+        "internal_employee_1",
+        "internal_employee_2",
+        "internal_employee_3"
+      ],
+      "dates": [
+        "2022-01-23",
+        "2022-01-24"
+      ],
+      "file_transfer_request_connections": 0
+    },
+    {
+      "role": "normal_time_validation",
+      "capture_host": "cloud_share",
+      "connections": 335,
+      "episodes": 8,
+      "dependency_components": 6,
+      "actors": [
+        "internal_employee_2",
+        "internal_employee_3"
+      ],
+      "dates": [
+        "2022-01-23",
+        "2022-01-24"
+      ],
+      "file_transfer_request_connections": 72
+    },
+    {
+      "role": "unresolved",
+      "capture_host": "cloud_share",
+      "connections": 270,
+      "episodes": 10,
+      "dependency_components": 6,
+      "actors": [
+        "internal_employee_2",
+        "internal_employee_3"
+      ],
+      "dates": [
+        "2022-01-22",
+        "2022-01-23",
+        "2022-01-24"
+      ],
+      "file_transfer_request_connections": 34
+    }
+  ],
+  "candidate_count": 16374,
+  "qualified_count": 1253,
+  "cross_day_candidates_retained": 20,
+  "historical_C25_disposition_counts": {
+    "unresolved": 16,
+    "normal_time_validation": 9
+  },
+  "model_calls": 0,
+  "normalization_reruns": 0,
+  "script_sha256": "b88beb3ac418f937d7e7bfde31296e74070102c6cebb7f26be71cfbc3c3fae6d"
+}

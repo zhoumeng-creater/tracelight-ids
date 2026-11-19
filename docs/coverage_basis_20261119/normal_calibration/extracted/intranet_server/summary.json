@@ -1,0 +1,34 @@
+{
+  "connections": 11000,
+  "protocols": {
+    "tcp": 4431,
+    "icmp": 1844,
+    "udp": 4701,
+    "unknown_transport": 24
+  },
+  "rows_with_missing_raw8": 4497,
+  "rows_with_capture_truncation_candidates": 180,
+  "nonunique_flow_keys": 0,
+  "packet_provenance_association": {
+    "truncated_capture_records": 55980,
+    "unassigned_truncated_records": 0,
+    "uniquely_assigned_truncated_records": 55980,
+    "multiply_assigned_truncated_records": 0
+  },
+  "normalization_counts": {
+    "all_records": 688941,
+    "status:eligible_complete_headers": 462302,
+    "original_caplen_less_than_orig_len": 0,
+    "status:not_ipv4": 226595,
+    "orig_len_changed_records": 55980,
+    "ipv4_records_with_missing_captured_bytes": 55980,
+    "ipv4_declared_missing_bytes_sum_not_unique_stream": 187735705,
+    "status:unsupported_ipv4_transport": 44,
+    "truncated_records_not_eligible_for_normalization": 0
+  },
+  "model_calls": 0,
+  "labels_assigned": 0,
+  "new_zeek_exports": 1,
+  "reused_exact_full_capture_export": false,
+  "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+}

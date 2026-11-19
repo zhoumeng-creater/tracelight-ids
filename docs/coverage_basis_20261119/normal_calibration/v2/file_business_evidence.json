@@ -1,0 +1,1788 @@
+{
+  "summary": {
+    "unique_service_file_requests": 33,
+    "exact_completed_normal_download_actions": 33,
+    "file_requests_without_completed_action_match": 0,
+    "file_request_connection_candidates": 188
+  },
+  "requests": [
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1057",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1057",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 1057,
+        "line_sha256": "749a3a728ef72719791af53209584b5bf4bab75dc3474a81e52a301af6f6b497",
+        "timestamp": 1643017478.0,
+        "utc": "2022-01-24T09:44:38+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Marketing&downloadStartSecret=yf144ftlmuq HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Marketing&downloadStartSecret=yf144ftlmuq",
+        "status": 200,
+        "logged_bytes": 7656444,
+        "author_attack_labels": [],
+        "request_identity_sha256": "35b6aedfc07c31c042d9d73e0f12665aae9c2691f0b6fbb2c2ed199118dfe99d"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CBli8y13siv8rOB3U3",
+        "ait:russellmitchell:cloud_share:Cd34o43KEGD220E4tk",
+        "ait:russellmitchell:cloud_share:C5tPYX3epfEwhGxyGk",
+        "ait:russellmitchell:cloud_share:CXUAvn4nOqoDzAm0o2",
+        "ait:russellmitchell:cloud_share:CFyNUa3qA5ZWRF5S8f",
+        "ait:russellmitchell:cloud_share:CZEJSy7XaAezNdLO1",
+        "ait:russellmitchell:cloud_share:CiQJry4GnmwTqaNqX8",
+        "ait:russellmitchell:cloud_share:Cwd0rc2Hpm6lVtPqFc",
+        "ait:russellmitchell:cloud_share:CskJj1Y0DSGBUWZRk",
+        "ait:russellmitchell:cloud_share:CG6Hoj1HCcil8x2gla"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:50d94c59-3dde-453d-b226-61eff0c7b584",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7262,
+          "completion_line": 7263,
+          "start": 1643017478.3844755,
+          "completion": 1643017497.7178237,
+          "file": {
+            "etag": "61e9594f73fa6",
+            "fid": "35",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642682703000,
+            "name": "Marketing",
+            "path": "/",
+            "permissions": 7,
+            "share_permissions": 15,
+            "size": 7582876
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1068",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1068",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 1068,
+        "line_sha256": "400d089429f0da525edb25e4b0c05c36afed1a6880035ef81a3071c05130349d",
+        "timestamp": 1643017594.0,
+        "utc": "2022-01-24T09:46:34+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=86p1c1gqrqc HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=86p1c1gqrqc",
+        "status": 200,
+        "logged_bytes": 6131204,
+        "author_attack_labels": [],
+        "request_identity_sha256": "d2d845bc5186eb3b189ff20248581aba7ce9428ff4c19fa3d7971e6833eb8940"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cn7n8u43HUObK9hCp4",
+        "ait:russellmitchell:cloud_share:ChgKPA3Ls23wCXXEqg",
+        "ait:russellmitchell:cloud_share:CG9LUjyySdqMBUsZ5",
+        "ait:russellmitchell:cloud_share:CleLxA9qZkOyajAQ1",
+        "ait:russellmitchell:cloud_share:CIu6nSXnJQ9waRB2f"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:812886d5-eb9f-4fe6-9179-ae210cf04e19",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7287,
+          "completion_line": 7288,
+          "start": 1643017594.2738063,
+          "completion": 1643017613.6025038,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1070",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1070",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 1070,
+        "line_sha256": "11364a093b688f6a817c077f8a831fb8243aa92a4b66276ea12a2fccb4050baa",
+        "timestamp": 1643017632.0,
+        "utc": "2022-01-24T09:47:12+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=a7hscqdscyh HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=a7hscqdscyh",
+        "status": 200,
+        "logged_bytes": 6131204,
+        "author_attack_labels": [],
+        "request_identity_sha256": "f9a2b2d259e354bf7f5505e1b3568ede24cdfdbf5f550cd0a9bd95b994a996c7"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cn7n8u43HUObK9hCp4",
+        "ait:russellmitchell:cloud_share:ChgKPA3Ls23wCXXEqg",
+        "ait:russellmitchell:cloud_share:CG9LUjyySdqMBUsZ5",
+        "ait:russellmitchell:cloud_share:CleLxA9qZkOyajAQ1",
+        "ait:russellmitchell:cloud_share:CIu6nSXnJQ9waRB2f",
+        "ait:russellmitchell:cloud_share:CyqbYA2aQpdll0T4sc",
+        "ait:russellmitchell:cloud_share:Cars25ljYZ7Aakhse"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:83bcf0cf-77a9-4c1d-93e2-b5ddcaa66ad8",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7294,
+          "completion_line": 7295,
+          "start": 1643017632.7057676,
+          "completion": 1643017652.00261,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1074",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1074",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 1074,
+        "line_sha256": "2497a06e17c25a3b33d710de69145fa2df10138e07c37016bc0c056cd5f1bd05",
+        "timestamp": 1643017698.0,
+        "utc": "2022-01-24T09:48:18+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=76wykg33x1k HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=76wykg33x1k",
+        "status": 200,
+        "logged_bytes": 6131204,
+        "author_attack_labels": [],
+        "request_identity_sha256": "96e126d679bdbf106c966e38944527afee782a861af9247a15385047dae1fb55"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cn7n8u43HUObK9hCp4",
+        "ait:russellmitchell:cloud_share:Cars25ljYZ7Aakhse",
+        "ait:russellmitchell:cloud_share:Cl0NmV2zET27Fe7kQj",
+        "ait:russellmitchell:cloud_share:CdZeOQ2yi1YWCg4nE8",
+        "ait:russellmitchell:cloud_share:CIB61O1FcHm4sTd6f"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:29aa5f4b-a6d4-483d-be0e-0a4f66665ba9",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7301,
+          "completion_line": 7302,
+          "start": 1643017698.3436718,
+          "completion": 1643017717.652561,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1663",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:1663",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 1663,
+        "line_sha256": "3d63ae75e3ec0e9b35b60e19608a67a2e9f64264fe6c2d2de3332b26558ae90e",
+        "timestamp": 1643025001.0,
+        "utc": "2022-01-24T11:50:01+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Photos/Lake-Constance.jpg?downloadStartSecret=ddtgrbmezxe HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Photos/Lake-Constance.jpg?downloadStartSecret=ddtgrbmezxe",
+        "status": 200,
+        "logged_bytes": 544402,
+        "author_attack_labels": [],
+        "request_identity_sha256": "5b682b6845e6a48d9f52460d1cccfdca1ec2a4a1428eb81af1cbbaa2a22eeb4e"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:C5rWg91ieYoWixbiNc",
+        "ait:russellmitchell:cloud_share:CQpPCY32zVxLvB6o3i",
+        "ait:russellmitchell:cloud_share:C7dre92QQB768kyZWk",
+        "ait:russellmitchell:cloud_share:C3yoiFQoEGA7J0Pyf",
+        "ait:russellmitchell:cloud_share:C8CQuD4uTEgfrqszk6",
+        "ait:russellmitchell:cloud_share:CwpG1u4IAzgIf7ZSbk",
+        "ait:russellmitchell:cloud_share:CiMy6i2YFNAwbFr9Vf"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:0183cf32-674d-4623-a7f4-51647e711b25",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7795,
+          "completion_line": 7796,
+          "start": 1643025001.1576772,
+          "completion": 1643025020.5080674,
+          "file": {
+            "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2152",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2152",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2152,
+        "line_sha256": "6f5a30007d78ccedc8ae310fc77c138de192ca0ac63a0da8d2d6e3e41eaacaef",
+        "timestamp": 1643028511.0,
+        "utc": "2022-01-24T12:48:31+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=v8hc5h3vxq HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=v8hc5h3vxq",
+        "status": 200,
+        "logged_bytes": 6128195,
+        "author_attack_labels": [],
+        "request_identity_sha256": "ab3e9d50bd21fb7974f741816194c5631bffc935f3ece1e6d292f65f18d89588"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cn0LR33W9vUGophGcc",
+        "ait:russellmitchell:cloud_share:CzBFzz3DkHuAHKN468",
+        "ait:russellmitchell:cloud_share:C1Spau3C4lQHkFd8sk",
+        "ait:russellmitchell:cloud_share:CyheJ600ApKY3LH9l"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:d06d71b1-84e9-469d-976a-149d57b9baa0",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7487,
+          "completion_line": 7488,
+          "start": 1643028511.202896,
+          "completion": 1643028525.4937649,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2154",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2154",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2154,
+        "line_sha256": "c00401d9658f82a0639dd99570238e648315aa0abc279ebd74af5583ae329123",
+        "timestamp": 1643028552.0,
+        "utc": "2022-01-24T12:49:12+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Photos&downloadStartSecret=y4m6mkz3fq8 HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Photos&downloadStartSecret=y4m6mkz3fq8",
+        "status": 200,
+        "logged_bytes": 1025468,
+        "author_attack_labels": [],
+        "request_identity_sha256": "76e67dd590b87d65d21e058242692156cfdf6a72fef1a960c22c909b4862eba8"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cn0LR33W9vUGophGcc",
+        "ait:russellmitchell:cloud_share:CzBFzz3DkHuAHKN468",
+        "ait:russellmitchell:cloud_share:C1Spau3C4lQHkFd8sk",
+        "ait:russellmitchell:cloud_share:CyheJ600ApKY3LH9l",
+        "ait:russellmitchell:cloud_share:CKPFyj1uWDAam4Wo28",
+        "ait:russellmitchell:cloud_share:CE3alMnevYDhnHKdc"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:8384f106-a261-49e8-88f8-64d90fb54ba7",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7494,
+          "completion_line": 7495,
+          "start": 1643028552.0930378,
+          "completion": 1643028566.429642,
+          "file": {
+            "etag": "61e9767a92669",
+            "fid": "69",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642690170000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2168",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2168",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2168,
+        "line_sha256": "6182193232f6602dbccaa2e29ab60e9a3cebf20edd4448124cf3405ae427d98f",
+        "timestamp": 1643028917.0,
+        "utc": "2022-01-24T12:55:17+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=lwtadheaxy HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=lwtadheaxy",
+        "status": 200,
+        "logged_bytes": 6131203,
+        "author_attack_labels": [],
+        "request_identity_sha256": "09aee2926842e26ab6ad84a061b43ce510eb68c6ab93984fe55add1b062173df"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CM7PyE1XUTvtx0lC7",
+        "ait:russellmitchell:cloud_share:Cc33lM3TH1sX9SWbN6",
+        "ait:russellmitchell:cloud_share:CE4ZEO1TF1BV842Zl8",
+        "ait:russellmitchell:cloud_share:Czyqrk1lP8rduYRlVk",
+        "ait:russellmitchell:cloud_share:C1SQ6Fg2BrZvtTsEi"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:093063cf-6b96-463a-a7a8-08bd0a730b59",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7506,
+          "completion_line": 7507,
+          "start": 1643028917.5448403,
+          "completion": 1643028931.8142602,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2187",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2187",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2187,
+        "line_sha256": "a18a1b743e43169be5168902c2339cf00a72a8e81c730cf68d0fd7e8e8b77031",
+        "timestamp": 1643029293.0,
+        "utc": "2022-01-24T13:01:33+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Photos&downloadStartSecret=pvxllhs4nba HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Photos&downloadStartSecret=pvxllhs4nba",
+        "status": 200,
+        "logged_bytes": 1022460,
+        "author_attack_labels": [],
+        "request_identity_sha256": "0fcd1029c9fe5565f12e2dd9d1b6ea424edd72d7768380459f300b95df9ad862"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CIEiAS3YOokwztamPh",
+        "ait:russellmitchell:cloud_share:C9mBzT1oVUcZJxH4oi",
+        "ait:russellmitchell:cloud_share:CJoaxG23O2tBJMdFVf",
+        "ait:russellmitchell:cloud_share:CyvOWt2PvPPSx4iUtl",
+        "ait:russellmitchell:cloud_share:CFwtME1aLYvFdfhUee"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:f63be472-554d-4e4b-be2c-4474bdc38545",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7545,
+          "completion_line": 7546,
+          "start": 1643029293.6877673,
+          "completion": 1643029307.9630094,
+          "file": {
+            "etag": "61e9767a92669",
+            "fid": "69",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642690170000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2313",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2313",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2313,
+        "line_sha256": "529d3e9d2a80dd9c9d7b143239161ad64d6812f5d294b9112e8c517616acafd3",
+        "timestamp": 1643029973.0,
+        "utc": "2022-01-24T13:12:53+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=tlib2mjrk6 HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=tlib2mjrk6",
+        "status": 200,
+        "logged_bytes": 12865,
+        "author_attack_labels": [],
+        "request_identity_sha256": "3e3f9d2a4c78579f9c5c6c38db208a1262fa85564cd5474f093fbc278ef36771"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CYzilV3zO5CYFh1zTb",
+        "ait:russellmitchell:cloud_share:CXIPSf28cVU5USaZKa",
+        "ait:russellmitchell:cloud_share:CGyyCK2MsR6iUTbft4",
+        "ait:russellmitchell:cloud_share:CZ0K7Pfc0e3SLoNke",
+        "ait:russellmitchell:cloud_share:ChB0Hc1JchomN5jCVc"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:a1aa0ec3-3eb3-4636-9e66-ed23731508ff",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7570,
+          "completion_line": 7571,
+          "start": 1643029973.5691051,
+          "completion": 1643029987.8774571,
+          "file": {
+            "etag": "61ee603434b83",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1643012148000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 7917
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2327",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2327",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2327,
+        "line_sha256": "e345a94368a4def1757f215ddd9b4e930ebedf9cfd68ad14409cad47f4f2d7ac",
+        "timestamp": 1643030103.0,
+        "utc": "2022-01-24T13:15:03+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Photos/Portugal.jpg?downloadStartSecret=0is3qgg9vdgl HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Photos/Portugal.jpg?downloadStartSecret=0is3qgg9vdgl",
+        "status": 200,
+        "logged_bytes": 245382,
+        "author_attack_labels": [],
+        "request_identity_sha256": "531571482bbdaab908bd73e362e758b2ef4b430a392bae28b9ec29387b16dc80"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:C4FZl2qeBsCFqrYA1",
+        "ait:russellmitchell:cloud_share:C3dnyx66NuBwYZgOl",
+        "ait:russellmitchell:cloud_share:CeU1iW1xS8F2WTd2l5",
+        "ait:russellmitchell:cloud_share:CsIWwX3bKnJ03lOByh",
+        "ait:russellmitchell:cloud_share:Cx9w142MMuJeoi8FJl",
+        "ait:russellmitchell:cloud_share:CqoZ5338sXlpb0mnL",
+        "ait:russellmitchell:cloud_share:CUKTgW1xSFLSL8oFL5",
+        "ait:russellmitchell:cloud_share:CNt7wt1riI5CS7PX5h"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:db642ef4-d8ff-441b-9897-7d2aab019ed4",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7599,
+          "completion_line": 7600,
+          "start": 1643030103.8026917,
+          "completion": 1643030118.040329,
+          "file": {
+            "etag": "2f1c1149ae4e255fec14843d64868878",
+            "fid": "72",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2329",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2329",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2329,
+        "line_sha256": "d1bc6116e1300c428b128598c8b1156c515b6be597d337c6c3587dedd7a3d080",
+        "timestamp": 1643030136.0,
+        "utc": "2022-01-24T13:15:36+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=hwxlnjfjb1 HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=hwxlnjfjb1",
+        "status": 200,
+        "logged_bytes": 12865,
+        "author_attack_labels": [],
+        "request_identity_sha256": "a555190e6d2432aa262778d32630bc62141b8b44e85d2bc4311cfc1911f44e4d"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:C4FZl2qeBsCFqrYA1",
+        "ait:russellmitchell:cloud_share:C3dnyx66NuBwYZgOl",
+        "ait:russellmitchell:cloud_share:CeU1iW1xS8F2WTd2l5",
+        "ait:russellmitchell:cloud_share:CsIWwX3bKnJ03lOByh",
+        "ait:russellmitchell:cloud_share:Cx9w142MMuJeoi8FJl",
+        "ait:russellmitchell:cloud_share:CqoZ5338sXlpb0mnL",
+        "ait:russellmitchell:cloud_share:CUKTgW1xSFLSL8oFL5",
+        "ait:russellmitchell:cloud_share:CNt7wt1riI5CS7PX5h",
+        "ait:russellmitchell:cloud_share:CHP67H2pSoI1q2LcL4",
+        "ait:russellmitchell:cloud_share:Cw5lNC1QA0oaTlvyX1"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:06e17e8a-a9ca-4b68-9290-46e4b2327f6c",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7606,
+          "completion_line": 7607,
+          "start": 1643030136.7288935,
+          "completion": 1643030151.0837035,
+          "file": {
+            "etag": "61ee603434b83",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1643012148000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 7917
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2331",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2331",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2331,
+        "line_sha256": "6101c9629e355f4263df36152daef8d3c5150ef0ad4df30bf860537a7b9d9e89",
+        "timestamp": 1643030173.0,
+        "utc": "2022-01-24T13:16:13+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=wt1pvyqiw6g HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=wt1pvyqiw6g",
+        "status": 200,
+        "logged_bytes": 6131204,
+        "author_attack_labels": [],
+        "request_identity_sha256": "06859f73942d712a035f057c3996e87244340ceabe2d2b6230dd23fc2a702667"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:C3dnyx66NuBwYZgOl",
+        "ait:russellmitchell:cloud_share:CeU1iW1xS8F2WTd2l5",
+        "ait:russellmitchell:cloud_share:CsIWwX3bKnJ03lOByh",
+        "ait:russellmitchell:cloud_share:CqoZ5338sXlpb0mnL",
+        "ait:russellmitchell:cloud_share:CUKTgW1xSFLSL8oFL5",
+        "ait:russellmitchell:cloud_share:CNt7wt1riI5CS7PX5h",
+        "ait:russellmitchell:cloud_share:CHP67H2pSoI1q2LcL4",
+        "ait:russellmitchell:cloud_share:Cw5lNC1QA0oaTlvyX1",
+        "ait:russellmitchell:cloud_share:CSZnNx3LGDGeCvbOD4",
+        "ait:russellmitchell:cloud_share:C9OmMR2lht6xfEyn9e"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:296adb28-a53c-4b61-b2a7-f63e51c41bf8",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7613,
+          "completion_line": 7614,
+          "start": 1643030173.2927632,
+          "completion": 1643030187.564885,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2782",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2782",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2782,
+        "line_sha256": "a236878f4c818b2afd12e019414525d264fa2c213ef9711babea24ebee34acf4",
+        "timestamp": 1643032079.0,
+        "utc": "2022-01-24T13:47:59+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=6882j0athme HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=6882j0athme",
+        "status": 200,
+        "logged_bytes": 6128196,
+        "author_attack_labels": [],
+        "request_identity_sha256": "5528dc7f0f783e0020a334969e35e876dd8dcbdb59a076fc24015dee8ea2c986"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CFBCGZ1mSczTcH7GT6",
+        "ait:russellmitchell:cloud_share:CA9Q2SGKrIPWHpm5c",
+        "ait:russellmitchell:cloud_share:CzyL5p4azcloTn8JE",
+        "ait:russellmitchell:cloud_share:CJjqP124xPNXmSwGXc",
+        "ait:russellmitchell:cloud_share:CiEUE52qqol9kdCTGf",
+        "ait:russellmitchell:cloud_share:C0sDev4ceznyT6Ngp2",
+        "ait:russellmitchell:cloud_share:CnnItiHOGSn33hAVb",
+        "ait:russellmitchell:cloud_share:C9Mo6B4n3HUOTYwrA2",
+        "ait:russellmitchell:cloud_share:C4v5ti2xRmYGpFSq68",
+        "ait:russellmitchell:cloud_share:CxkKv62SO3HEm6gf7g",
+        "ait:russellmitchell:cloud_share:Cj1lTX29ZAm1pzJr8f"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:4015c771-f4a1-42f7-850c-353f2b7a4c39",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7889,
+          "completion_line": 7890,
+          "start": 1643032079.6046472,
+          "completion": 1643032098.9340649,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2786",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:2786",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 2786,
+        "line_sha256": "55274eba79909abd88a05ef414414ae29638b7c8a2faa213771ba79a6bff4f15",
+        "timestamp": 1643032135.0,
+        "utc": "2022-01-24T13:48:55+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=43254hk4j02 HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=43254hk4j02",
+        "status": 200,
+        "logged_bytes": 6128196,
+        "author_attack_labels": [],
+        "request_identity_sha256": "9d9685e3fdf2bcc9139bd92b411095df389294a9711e8a7f6157dc4867124e01"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CiEUE52qqol9kdCTGf",
+        "ait:russellmitchell:cloud_share:C0sDev4ceznyT6Ngp2",
+        "ait:russellmitchell:cloud_share:CnnItiHOGSn33hAVb",
+        "ait:russellmitchell:cloud_share:C4v5ti2xRmYGpFSq68",
+        "ait:russellmitchell:cloud_share:Cj1lTX29ZAm1pzJr8f",
+        "ait:russellmitchell:cloud_share:CS5BjK2ndTrHofWkI7",
+        "ait:russellmitchell:cloud_share:CawuR2HbF6nUrcCf6"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:d29c3e1c-b225-4766-a98b-adfcf57f98db",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7902,
+          "completion_line": 7903,
+          "start": 1643032135.8517861,
+          "completion": 1643032155.159908,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:3117",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:3117",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 3117,
+        "line_sha256": "766d0543a92421e25635c84913695c99bc78162c992fc36c273356a15a3a195c",
+        "timestamp": 1643037225.0,
+        "utc": "2022-01-24T15:13:45+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Documents/world.txt?downloadStartSecret=u8u9sm8wvr HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Documents/world.txt?downloadStartSecret=u8u9sm8wvr",
+        "status": 200,
+        "logged_bytes": 7884,
+        "author_attack_labels": [],
+        "request_identity_sha256": "435f6e3de41f8f7604f3dd8380ac37808d00f8b01082ce318c0c285ccd2f57a9"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cjmp7z3xZbr2dS2wJk",
+        "ait:russellmitchell:cloud_share:Cmr5Py35eZgIialGH8",
+        "ait:russellmitchell:cloud_share:Cra9qO2GdkVv3Ejo09",
+        "ait:russellmitchell:cloud_share:CORRTw3P2ffyJiQaj",
+        "ait:russellmitchell:cloud_share:CubjYJ3jBZfJMbwPxj",
+        "ait:russellmitchell:cloud_share:CRaGkOJfDSfUNqSjc",
+        "ait:russellmitchell:cloud_share:Crkqov0UWkoaWAPLi",
+        "ait:russellmitchell:cloud_share:Cfawoc3C2rJt4I15Yf"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:e16396f0-14e5-40d0-91fe-eec9c7bfe87e",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 8039,
+          "completion_line": 8040,
+          "start": 1643037225.7005122,
+          "completion": 1643037239.9479742,
+          "file": {
+            "etag": "c69739518e6c978f534f2c929be484bc",
+            "fid": "180",
+            "file_type": "file",
+            "mime": "text/plain",
+            "mtime": 1642683334000,
+            "name": "world.txt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 7917
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:3430",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:3430",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 3430,
+        "line_sha256": "e086d78e32eecac836f0e28aa52e14a34615cbd4cb57f1311c06bfdd55c2d67e",
+        "timestamp": 1643038699.0,
+        "utc": "2022-01-24T15:38:19+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=hbidygu8pr HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=hbidygu8pr",
+        "status": 200,
+        "logged_bytes": 6131203,
+        "author_attack_labels": [],
+        "request_identity_sha256": "eaa5ca6f286c3823e6682ce0539eadd2251d750e8c84faded63e1b4006316067"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CrOjFc1CQWNJCAzHB8",
+        "ait:russellmitchell:cloud_share:CeJzfx3TvALRzm5DV9",
+        "ait:russellmitchell:cloud_share:CfKuIb3ZHaxOvGkNT4",
+        "ait:russellmitchell:cloud_share:C9cu284MZ27HXWs1ui",
+        "ait:russellmitchell:cloud_share:C1sLcO18eJbTHNJQpl",
+        "ait:russellmitchell:cloud_share:CjQVXM26lwpPVlQ7j",
+        "ait:russellmitchell:cloud_share:CWwVeQ3qhO3j9pg702"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:63e1f149-4be6-409e-9b91-e93747344445",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 8278,
+          "completion_line": 8279,
+          "start": 1643038699.6145606,
+          "completion": 1643038718.9449039,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:5469",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:5469",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 5469,
+        "line_sha256": "5a35465b32568ee9d2403b1e7e6aafbb9d71d772577c89f82309e188c8a385ba",
+        "timestamp": 1643058388.0,
+        "utc": "2022-01-24T21:06:28+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=6b4hbeneu5i HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=6b4hbeneu5i",
+        "status": 200,
+        "logged_bytes": 149824,
+        "author_attack_labels": [],
+        "request_identity_sha256": "9ffec24fa2fa034e50016193f83d055cf94de8750627602b69713c40fb8dc1c7"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cw3WyyX3veLboJWa",
+        "ait:russellmitchell:cloud_share:CQXQiUA0ueN7RuCIi",
+        "ait:russellmitchell:cloud_share:CpHkwn3abcFJfHVQyj",
+        "ait:russellmitchell:cloud_share:C1GO263Gz83ugSbHm7",
+        "ait:russellmitchell:cloud_share:CxymtkbobSrbn1pua",
+        "ait:russellmitchell:cloud_share:C4aGW74HcK9gPgbv3c",
+        "ait:russellmitchell:cloud_share:CdLoke176C6sgM17Zh",
+        "ait:russellmitchell:cloud_share:CZUqLB5OdvtLxduk8",
+        "ait:russellmitchell:cloud_share:C8nGXR2O9HNPv55zEc"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:1f96c4f2-b719-4869-9462-898416e7ade4",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 8912,
+          "completion_line": 8913,
+          "start": 1643058387.9754505,
+          "completion": 1643058407.3026423,
+          "file": {
+            "etag": "61ed822aea7a4",
+            "fid": "77",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642955306000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 145602
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:673",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.1:673",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+        "line": 673,
+        "line_sha256": "4997946a3daa820c80aeb76f1ebecbbc3e13f932242c4b7ca3976c5a810a80fc",
+        "timestamp": 1643016205.0,
+        "utc": "2022-01-24T09:23:25+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=hew9rtqqq6p HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=hew9rtqqq6p",
+        "status": 200,
+        "logged_bytes": 6128196,
+        "author_attack_labels": [],
+        "request_identity_sha256": "1147b3a6e6ccc6720c6dd66f502e365f19541cd43da30d07ae5394986e175d52"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CkwiJ1bPlTX4dYk4f",
+        "ait:russellmitchell:cloud_share:CJWsNaP4RCuoCXdfd",
+        "ait:russellmitchell:cloud_share:C6PkbW26FLbg6XNLfk",
+        "ait:russellmitchell:cloud_share:C44Jed45AaUybTOsMa"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:4d73b635-bf21-4670-b672-9a1a84af6a65",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 7062,
+          "completion_line": 7063,
+          "start": 1643016205.7335947,
+          "completion": 1643016220.0218325,
+          "file": {
+            "etag": "ed4b60fa7e646e180c38b839e16094a8",
+            "fid": "66",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642690170000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:4762",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:4762",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 4762,
+        "line_sha256": "6c2f2f5945a5016c5284024ab8e48dde1a0cd918c9953a6e1c201398b5077945",
+        "timestamp": 1642952271.0,
+        "utc": "2022-01-23T15:37:51+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Documents/Example.odt?downloadStartSecret=w4zcqi7z97d HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Documents/Example.odt?downloadStartSecret=w4zcqi7z97d",
+        "status": 200,
+        "logged_bytes": 37351,
+        "author_attack_labels": [],
+        "request_identity_sha256": "2ef23c990fc2ef5669da0061021ea268c9a7df16476dcbc9fd7d800af158210f"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CP4dAM1k66q9HpVE75",
+        "ait:russellmitchell:cloud_share:CfycCX1KxggfR6X8Ia",
+        "ait:russellmitchell:cloud_share:CEQAs43NnL7JVuVoqc",
+        "ait:russellmitchell:cloud_share:CnSOAE4hxjFLjzCoX2",
+        "ait:russellmitchell:cloud_share:CvpKjy4f8ai4ohw8Jf",
+        "ait:russellmitchell:cloud_share:ChqJmA179zTBDlnuk4",
+        "ait:russellmitchell:cloud_share:C8zHjN4DfrqxBkGR8",
+        "ait:russellmitchell:cloud_share:Chi0wd41okY0j4Y66",
+        "ait:russellmitchell:cloud_share:Cf9Hh54LOXMrVyM506",
+        "ait:russellmitchell:cloud_share:CXPBaQ3Rok9hh9BCUf"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:3467199b-8f46-4600-ae45-2ccb2256a809",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6819,
+          "completion_line": 6820,
+          "start": 1642952271.034302,
+          "completion": 1642952290.350718,
+          "file": {
+            "etag": "7fbb1ab6e1e3f42d71ae825bc31bb767",
+            "fid": "78",
+            "file_type": "file",
+            "mime": "application/vnd.oasis.opendocument.text",
+            "mtime": 1642691732000,
+            "name": "Example.odt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 36227
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:4776",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:4776",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 4776,
+        "line_sha256": "dea8fa5b6edd47aad93e83b1e089ba768be2e9a194a451a6dc02001856b906e4",
+        "timestamp": 1642952424.0,
+        "utc": "2022-01-23T15:40:24+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Documents/Example.odt?downloadStartSecret=5qxgxh3baoy HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Documents/Example.odt?downloadStartSecret=5qxgxh3baoy",
+        "status": 200,
+        "logged_bytes": 40359,
+        "author_attack_labels": [],
+        "request_identity_sha256": "18e5e57aec28b3e61e5865dc4a8450d30f3206fb00cc8741adab2fbfe935887e"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Chi0wd41okY0j4Y66",
+        "ait:russellmitchell:cloud_share:CdsVXh4qjw64h2gekb",
+        "ait:russellmitchell:cloud_share:CUPfpZ2HcdUVrdQLfi",
+        "ait:russellmitchell:cloud_share:CUN9RF27plQROyBb37",
+        "ait:russellmitchell:cloud_share:CmXLLS0YY3JwHeR72",
+        "ait:russellmitchell:cloud_share:CCobfS2tc5zrHnQXB8"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:b3221798-a006-467c-bcaf-c8048cf4ff39",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6844,
+          "completion_line": 6845,
+          "start": 1642952424.297009,
+          "completion": 1642952443.6199658,
+          "file": {
+            "etag": "7fbb1ab6e1e3f42d71ae825bc31bb767",
+            "fid": "78",
+            "file_type": "file",
+            "mime": "application/vnd.oasis.opendocument.text",
+            "mtime": 1642691732000,
+            "name": "Example.odt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 36227
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:4791",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:4791",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 4791,
+        "line_sha256": "79f26e7714d898f365e860e9ed3c31affad7a5ba6e77713f344b9b7c45555313",
+        "timestamp": 1642952846.0,
+        "utc": "2022-01-23T15:47:26+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Documents/movie.png?downloadStartSecret=4adjzbnglr8 HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Documents/movie.png?downloadStartSecret=4adjzbnglr8",
+        "status": 200,
+        "logged_bytes": 4841,
+        "author_attack_labels": [],
+        "request_identity_sha256": "60ca97c1b596d7020e88406e3aab90bfb64164494964b83b17787d1bd617f137"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CdfVKF3IKbrht7SWKi",
+        "ait:russellmitchell:cloud_share:CWZTAR0NCNt7PhKY8",
+        "ait:russellmitchell:cloud_share:CrpHMx10uc9AXU4jvj",
+        "ait:russellmitchell:cloud_share:CvT6Bd4VsPeqAhhfPc",
+        "ait:russellmitchell:cloud_share:C9Vr5K1weMAUk7LdE8",
+        "ait:russellmitchell:cloud_share:CW6Oy32BzF94xruJW8"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:c4300cff-d951-488e-9717-0e663800c014",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6856,
+          "completion_line": 6857,
+          "start": 1642952846.7742069,
+          "completion": 1642952866.130863,
+          "file": {
+            "etag": "7715df51d9f71fa099cd4fd39c5c1ee5",
+            "fid": "129",
+            "file_type": "file",
+            "mime": "image/png",
+            "mtime": 1642683311000,
+            "name": "movie.png",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 855
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5153",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5153",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 5153,
+        "line_sha256": "9c82f9d28805e8e15808d247dcf7ad0076759afd4f35d54feadf3c17708a7eb9",
+        "timestamp": 1642955150.0,
+        "utc": "2022-01-23T16:25:50+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=9b831m52ej9 HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=9b831m52ej9",
+        "status": 200,
+        "logged_bytes": 149656,
+        "author_attack_labels": [],
+        "request_identity_sha256": "9b27018103721f7dcb25fcdbadaa2563bffb3d7e450b5d61d5582575dd342c74"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CMIQwF3OmUkNbdN1S5",
+        "ait:russellmitchell:cloud_share:CmTDAb2HvpZ1A5NBwf",
+        "ait:russellmitchell:cloud_share:Capxfg3gHMGn9e5298",
+        "ait:russellmitchell:cloud_share:CoAYLU3OS18G98fqPf",
+        "ait:russellmitchell:cloud_share:CB634Qgxu28rPSqb1",
+        "ait:russellmitchell:cloud_share:C0lAc22zxm6xpMdh3c"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:c1ed81d7-ff72-4675-aaee-989e724956d6",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6913,
+          "completion_line": 6914,
+          "start": 1642955149.9879212,
+          "completion": 1642955169.3176825,
+          "file": {
+            "etag": "61ed78d4c5f40",
+            "fid": "77",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642952916000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 145602
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5157",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5157",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 5157,
+        "line_sha256": "21c12d723b2e9e88a3597b7564cca2b2201628fd5bd0f47fdee575623bc316fd",
+        "timestamp": 1642955210.0,
+        "utc": "2022-01-23T16:26:50+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Photos/Lake-Constance.jpg?downloadStartSecret=brsgi90xx59 HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Photos/Lake-Constance.jpg?downloadStartSecret=brsgi90xx59",
+        "status": 200,
+        "logged_bytes": 541394,
+        "author_attack_labels": [],
+        "request_identity_sha256": "8dbe3d2de16f8d364ebe8743d12ed72ac244d1f4430152badd62e51afbe90fd5"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CmTDAb2HvpZ1A5NBwf",
+        "ait:russellmitchell:cloud_share:CoAYLU3OS18G98fqPf",
+        "ait:russellmitchell:cloud_share:C0lAc22zxm6xpMdh3c",
+        "ait:russellmitchell:cloud_share:CvLAUq1Wc8usLfEoR2",
+        "ait:russellmitchell:cloud_share:CbZKsS17IYbt0tSf5"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:15425629-32e1-4b4a-a4de-dc897cc3e2cf",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6926,
+          "completion_line": 6927,
+          "start": 1642955210.1339254,
+          "completion": 1642955229.4337811,
+          "file": {
+            "etag": "ee470805ffe46f4505ef9de31fcc4ad0",
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5210",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5210",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 5210,
+        "line_sha256": "3e82eaeaf00d4b5693836fb1792762b5e75f5801d23dbea4ec1e3ac1aa833094",
+        "timestamp": 1642956204.0,
+        "utc": "2022-01-23T16:43:24+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=9enivsfsyp HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=9enivsfsyp",
+        "status": 200,
+        "logged_bytes": 149823,
+        "author_attack_labels": [],
+        "request_identity_sha256": "87d48eaf6f3e8559b8b64ac633303a0fa4ccea5d291e345a50b351b7f7800608"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cu3cn52ndkABSrtSze",
+        "ait:russellmitchell:cloud_share:CtvLvG4fmXpPbsiECk",
+        "ait:russellmitchell:cloud_share:C5FJHT6X4wPfx8bt3",
+        "ait:russellmitchell:cloud_share:CkNnci2bNDhSU1Hc23"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:ea2c9884-4145-4c41-91de-6eb68d57dd59",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6967,
+          "completion_line": 6968,
+          "start": 1642956204.1077192,
+          "completion": 1642956223.423665,
+          "file": {
+            "etag": "61ed822aea7a4",
+            "fid": "77",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642955306000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 145602
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5248",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5248",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 5248,
+        "line_sha256": "3255aa1f33286dab351b0b189499e5827dba3d476bed603f230f6c00a9be5130",
+        "timestamp": 1642957062.0,
+        "utc": "2022-01-23T16:57:42+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=4sihk3cntea HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=4sihk3cntea",
+        "status": 200,
+        "logged_bytes": 152832,
+        "author_attack_labels": [],
+        "request_identity_sha256": "e764fcf5c4d016ac8db2bdb0ae59e0f81da00a5f2b7b6d6b16a3763c56b7a97d"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CNU65O3qgXggdaiJz5",
+        "ait:russellmitchell:cloud_share:CCjGKMuOo0FhCiik3",
+        "ait:russellmitchell:cloud_share:CrrL984j8RCZpg69X8",
+        "ait:russellmitchell:cloud_share:CQ7Zww4dVfk1PkHQJa",
+        "ait:russellmitchell:cloud_share:Cjim72417SBQljyE73",
+        "ait:russellmitchell:cloud_share:CKQtH23M9XE7yNPUdb",
+        "ait:russellmitchell:cloud_share:CWGmLI338X9QSkrKk6"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:25325903-1803-4c52-bd45-015f768b0e46",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 6997,
+          "completion_line": 6998,
+          "start": 1642957062.7951345,
+          "completion": 1642957082.1321564,
+          "file": {
+            "etag": "61ed822aea7a4",
+            "fid": "77",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642955306000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 145602
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5251",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5251",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 5251,
+        "line_sha256": "864032eb5b0810a802ca11a39104cf97e1642e818a97f372e15111e1513d5ff2",
+        "timestamp": 1642957120.0,
+        "utc": "2022-01-23T16:58:40+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=fxfs2f6p7tg HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=fxfs2f6p7tg",
+        "status": 200,
+        "logged_bytes": 6131204,
+        "author_attack_labels": [],
+        "request_identity_sha256": "5b87c846c9b9993db8aac2a5830ef391a66a5174d3e27121bd4c0424cef4299b"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CrrL984j8RCZpg69X8",
+        "ait:russellmitchell:cloud_share:CQ7Zww4dVfk1PkHQJa",
+        "ait:russellmitchell:cloud_share:Cjim72417SBQljyE73",
+        "ait:russellmitchell:cloud_share:CEfCKs3w5uGg2s1R6b",
+        "ait:russellmitchell:cloud_share:CyrGRl1XXgfkVFCLz6"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:a0d6818c-f4a5-4591-9e15-dd38334ad433",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7004,
+          "completion_line": 7005,
+          "start": 1642957120.4803367,
+          "completion": 1642957139.8048224,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5601",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:5601",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 5601,
+        "line_sha256": "bdf81be6847e208856a4efeaf629de7f1c5c7cff2bb05627090fa6530e683eeb",
+        "timestamp": 1642961090.0,
+        "utc": "2022-01-23T18:04:50+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=lehvl67lmgr HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=lehvl67lmgr",
+        "status": 200,
+        "logged_bytes": 152832,
+        "author_attack_labels": [],
+        "request_identity_sha256": "b83cc7ab3130f9c76704d3053c163a486f42183db79ee4551e4d21703a3d4e02"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:Cpyfoe4didmWKcIbFf",
+        "ait:russellmitchell:cloud_share:C6jMgr3TmnympimHsb",
+        "ait:russellmitchell:cloud_share:CTuLzJ1ZWawOMfgREj",
+        "ait:russellmitchell:cloud_share:CjM3ap5O541Rcimmh",
+        "ait:russellmitchell:cloud_share:CXUn9o156ApCdy43w7",
+        "ait:russellmitchell:cloud_share:CPvG8MoFxJrtzA7P8",
+        "ait:russellmitchell:cloud_share:CYTw2e3cghjqUFPyLi",
+        "ait:russellmitchell:cloud_share:ClW5fA3UQucKvL2ZY7",
+        "ait:russellmitchell:cloud_share:CAhLbsYmfArP3Ojz4",
+        "ait:russellmitchell:cloud_share:CqwO0j2DRwcxg7RAV6",
+        "ait:russellmitchell:cloud_share:Cy1L924beuhvvKI9n3"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:ff96c694-760b-43d8-a5c7-ef537dbab95e",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 7097,
+          "completion_line": 7098,
+          "start": 1642961090.5084784,
+          "completion": 1642961109.8265386,
+          "file": {
+            "etag": "61ed822aea7a4",
+            "fid": "77",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642955306000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 145602
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:6172",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.2:6172",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+        "line": 6172,
+        "line_sha256": "fc6433e7fcf08492954459e55cc00b3c97f7c8e0d41cfe20f0ec387e0e8f360f",
+        "timestamp": 1642964094.0,
+        "utc": "2022-01-23T18:54:54+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=lb5mmehx39 HTTP/1.1",
+        "method": "GET",
+        "target": "/index.php/apps/files/ajax/download.php?dir=%2F&files=Documents&downloadStartSecret=lb5mmehx39",
+        "status": 200,
+        "logged_bytes": 4653,
+        "author_attack_labels": [],
+        "request_identity_sha256": "ffbee42ab2a929754a962870a57a7c17da157abff430dad46203c22312ac8a05"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CVuPdJ2byzU6wk7ul1",
+        "ait:russellmitchell:cloud_share:CSrYXB4bwAjmJQ21S1",
+        "ait:russellmitchell:cloud_share:Cs18Ac2b7uMxPi5j65",
+        "ait:russellmitchell:cloud_share:CTLYmL2s2YXJnk00j2",
+        "ait:russellmitchell:cloud_share:CAuqeA36iiW4LgEjzf",
+        "ait:russellmitchell:cloud_share:CSiXtQ2ixTB7HWyjxg",
+        "ait:russellmitchell:cloud_share:C0ITJfvU49yuaNaf6",
+        "ait:russellmitchell:cloud_share:CAf5IpUnwR1abemY6",
+        "ait:russellmitchell:cloud_share:C4xeYL2Eq7fOa4HhJl"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:c6e72c10-93b6-4173-b2d9-cfb9d7678add",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 6551,
+          "completion_line": 6552,
+          "start": 1642964094.598614,
+          "completion": 1642964108.917825,
+          "file": {
+            "etag": "61ed98723be61",
+            "fid": "67",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642961010000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 0
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.3:4767",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.3:4767",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+        "line": 4767,
+        "line_sha256": "52672260245ff170a31a1fd748d446aaef06fcef2620f83319e9c814abc37145",
+        "timestamp": 1642875086.0,
+        "utc": "2022-01-22T18:11:26+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Photos/Portugal.jpg?downloadStartSecret=w8g7wg256p HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Photos/Portugal.jpg?downloadStartSecret=w8g7wg256p",
+        "status": 200,
+        "logged_bytes": 248388,
+        "author_attack_labels": [],
+        "request_identity_sha256": "e58129501fb61b47a3b78e109a29c6e66017b0f6ab9b6cd9db16c6839790cbb9"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:COr0Fw4v2Tt1ClUEPi"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:b2c8827b-01a2-4961-851b-71613bf4890c",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 5330,
+          "completion_line": 5331,
+          "start": 1642875085.9593008,
+          "completion": 1642875105.2927718,
+          "file": {
+            "etag": "1914e1111f0eb734a75f6a5e9baea2be",
+            "fid": "82",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642691732000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          }
+        }
+      ],
+      "unique_flow_for_request": true,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.4:1349",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.4:1349",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+        "line": 1349,
+        "line_sha256": "f8909dd0ed92fdd8d977228c1e71a9b435c13db5bff26b16336ebac954edc0a0",
+        "timestamp": 1642761715.0,
+        "utc": "2022-01-21T10:41:55+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Photos/Portugal.jpg?downloadStartSecret=c1lj7xapzx4 HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Photos/Portugal.jpg?downloadStartSecret=c1lj7xapzx4",
+        "status": 200,
+        "logged_bytes": 248389,
+        "author_attack_labels": [],
+        "request_identity_sha256": "bd80802cd27b369de16b05f7bf936989ec617890effac13c550b6d8a48ecc344"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:C14cf92mMAhM8H3iIe",
+        "ait:russellmitchell:cloud_share:CjcHF2366nM2Anz27e",
+        "ait:russellmitchell:cloud_share:CLsL5m4W0JW3ztZv84",
+        "ait:russellmitchell:cloud_share:CLl2Uy3wXBoHdPSc01",
+        "ait:russellmitchell:cloud_share:C9IwV92Ptg1hzvv6ae",
+        "ait:russellmitchell:cloud_share:CCeh3X3UZkmGh368s2",
+        "ait:russellmitchell:cloud_share:C1vfWh3i965LdpuD8e",
+        "ait:russellmitchell:cloud_share:CXvs5rkGGaKhz2Aj"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_2:3ee2bc18-1e39-4127-a0d3-6b189753a348",
+          "actor": "internal_employee_2",
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "intent_line": 676,
+          "completion_line": 677,
+          "start": 1642761715.2059195,
+          "completion": 1642761729.4832995,
+          "file": {
+            "etag": "2f1c1149ae4e255fec14843d64868878",
+            "fid": "72",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642690170000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.4:213",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.4:213",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+        "line": 213,
+        "line_sha256": "bd90b3865ba451995820f934482e1d68de6cdc319b83d57e51c6f726534a6bd6",
+        "timestamp": 1642746802.0,
+        "utc": "2022-01-21T06:33:22+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/Photos/Lake-Constance.jpg?downloadStartSecret=1jcj6vlljrw HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/Photos/Lake-Constance.jpg?downloadStartSecret=1jcj6vlljrw",
+        "status": 200,
+        "logged_bytes": 541394,
+        "author_attack_labels": [],
+        "request_identity_sha256": "7aa02561ba27ddd77efb9f3beaa561ac95794427c956f830bf53e47979e24d38"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CXbrf91VBr2s5JMED3",
+        "ait:russellmitchell:cloud_share:CyOoQC4bnF4zHq33mc",
+        "ait:russellmitchell:cloud_share:CTeXJz1zOEWAVf0f7l",
+        "ait:russellmitchell:cloud_share:Cc67VB2RL9Fo3E37z6",
+        "ait:russellmitchell:cloud_share:CMwLEL1hU29mWKnTS6"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:a94a114e-b721-47e7-8ca5-2f8878759b08",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 1427,
+          "completion_line": 1428,
+          "start": 1642746801.9760783,
+          "completion": 1642746821.3076112,
+          "file": {
+            "etag": null,
+            "fid": "80",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642714862000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 31,
+            "share_permissions": 19,
+            "size": null
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    },
+    {
+      "service_request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.4:499",
+      "request": {
+        "request_id": "russellmitchell:gather/cloud_share/logs/apache2/other_vhosts_access.log.4:499",
+        "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+        "line": 499,
+        "line_sha256": "d9df91cd126205c665e0372dd999a6b7c7b94bf879090cb24ae11f91e12ce56d",
+        "timestamp": 1642750178.0,
+        "utc": "2022-01-21T07:29:38+00:00",
+        "client_ip": "172.19.130.68",
+        "vhost": "cloud.dmz.smith.russellmitchell.com:443",
+        "request": "GET /remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=ouvbcpvc2zc HTTP/1.1",
+        "method": "GET",
+        "target": "/remote.php/webdav/ownCloud%20Manual.pdf?downloadStartSecret=ouvbcpvc2zc",
+        "status": 200,
+        "logged_bytes": 6131204,
+        "author_attack_labels": [],
+        "request_identity_sha256": "fd3092819bdc39af9bf90b12d399ac59f104647f34949b32cebe7b4d2eade5a9"
+      },
+      "candidate_flow_ids": [
+        "ait:russellmitchell:cloud_share:CrqR604eR7LtF9l5Pe",
+        "ait:russellmitchell:cloud_share:CZw2NAYZeQTsW0aKi",
+        "ait:russellmitchell:cloud_share:CEsx7v1x7pVsxlHqxf",
+        "ait:russellmitchell:cloud_share:CqmPgn3cDgwageTB78",
+        "ait:russellmitchell:cloud_share:CB35VU1XrV9en0NXn6",
+        "ait:russellmitchell:cloud_share:ChPUiq3Z7CIs1NpfH2",
+        "ait:russellmitchell:cloud_share:C6TZij1CqRAwdt0IXl",
+        "ait:russellmitchell:cloud_share:CuaeZl15HDZILP4g3f",
+        "ait:russellmitchell:cloud_share:CmIqY018RXcMuqB814",
+        "ait:russellmitchell:cloud_share:CKOrZILH2yulEWEr8",
+        "ait:russellmitchell:cloud_share:C0KXgp3V3PPgQvIiRg"
+      ],
+      "exact_object_and_time_actor_completion_candidates": [
+        {
+          "action_id": "ait:russellmitchell:normal_download:internal_employee_3:e176cc5d-70ef-45e1-b85d-2a7197dee842",
+          "actor": "internal_employee_3",
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "intent_line": 1672,
+          "completion_line": 1673,
+          "start": 1642750178.5552015,
+          "completion": 1642750197.9675522,
+          "file": {
+            "etag": "78b525544abf1df2589065e4b4013749",
+            "fid": "76",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642691732000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          }
+        }
+      ],
+      "unique_flow_for_request": false,
+      "multiple_connections_not_independent_downloads": true
+    }
+  ]
+}

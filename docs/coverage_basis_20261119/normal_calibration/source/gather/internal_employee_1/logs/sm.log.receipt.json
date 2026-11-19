@@ -1,0 +1,10 @@
+{
+  "path": "gather/internal_employee_1/logs/sm.log",
+  "bytes": 3986702,
+  "compressed": 351896,
+  "CRC": 2503626503,
+  "offset": 119288461,
+  "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\gather\\internal_employee_1\\logs\\sm.log",
+  "sha256": "d6b677affd2d97f79b8f84c2cb7dbebab636554fa85e92a2bba537481583f15b",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\internal_employee_1\\logs\\sm.log"
+}

@@ -1,0 +1,348 @@
+{
+  "schema": "normal-business-cohorts-v1",
+  "captures": [
+    {
+      "capture_host": "intranet_server",
+      "all_connections": 11000,
+      "host_view_connections": 5008,
+      "service_endpoint_candidates": 2065,
+      "connection_source_sha256": "e63687f26dce8d7a1df5b2a9315c1ed772f03ab34c8677ad6c93f12912b2ce26",
+      "extraction_receipt_sha256": "488a860d9c6739d3f352e1d81b487a70e6a56d33602f9711c935f37068a04b45",
+      "earliest_connection_start": "2022-01-20T13:16:53.292889+00:00",
+      "latest_observed_end": "2022-01-25T06:56:56.502153+00:00"
+    },
+    {
+      "capture_host": "cloud_share",
+      "all_connections": 21925,
+      "host_view_connections": 20630,
+      "service_endpoint_candidates": 14309,
+      "connection_source_sha256": "987ef6b983b2a4922546c87464ec4d2d811ad352d14de9a62c26b45236f0f8ad",
+      "extraction_receipt_sha256": "f1929eb2aab888a5d0567d9359d7433ddef561cae0bcd6e0e28da279320a0871",
+      "earliest_connection_start": "2022-01-20T13:17:27.874864+00:00",
+      "latest_observed_end": "2022-01-25T06:56:56.233258+00:00"
+    }
+  ],
+  "source_log_members": [
+    {
+      "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.1",
+      "sha256": "d43f56bbe787107208221453a42b1c3eb0619795071d4ef76183da34d3275e99",
+      "rows": 601,
+      "first": "2022-01-24T07:34:57+00:00",
+      "last": "2022-01-24T20:59:10+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+      "sha256": "4d3d700f50c6dde5295ebc57a00701b7c3049812c6f6709b3f809e36be362153",
+      "rows": 8530,
+      "first": "2022-01-23T06:36:13+00:00",
+      "last": "2022-01-24T04:37:25+00:00",
+      "attack_label_rows": 7695,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.3",
+      "sha256": "7e3144f380a12db73cd4c9f53f3cbb48b33a8757485533508b955d1a6a2203b3",
+      "rows": 933,
+      "first": "2022-01-22T07:26:47+00:00",
+      "last": "2022-01-22T20:12:45+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.4",
+      "sha256": "9efe17b91cd03b1a5a0032611eeda6be8a4ea8ceb71b77a58abd61e209492352",
+      "rows": 1120,
+      "first": "2022-01-21T05:55:22+00:00",
+      "last": "2022-01-22T06:16:08+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+      "sha256": "dd84f0feb1700360023d7d821aa5b2dd2602b0890f18b536ea80f9e3a414b134",
+      "rows": 5546,
+      "first": "2022-01-24T07:36:12+00:00",
+      "last": "2022-01-24T21:37:20+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+      "sha256": "a090adf1107f0ce49d7bc59f919f6ffc3a5dc5b8ef7041aac55b0074eb973872",
+      "rows": 6954,
+      "first": "2022-01-23T06:25:19+00:00",
+      "last": "2022-01-24T03:57:19+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+      "sha256": "7fc9e50d4ebd484e5ed30ff913101580031a337610236b697f2bd342dd48d05a",
+      "rows": 7591,
+      "first": "2022-01-22T06:25:18+00:00",
+      "last": "2022-01-23T06:24:49+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+      "sha256": "0c140f45b8367d20f876ed853252fa41e8908f8c8505b7339c1b2ee5e8d9b987",
+      "rows": 7409,
+      "first": "2022-01-21T06:29:45+00:00",
+      "last": "2022-01-22T06:24:51+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.1",
+      "sha256": "b87709fc6b7385ae12324688892f5a7ded0f9967951e4297862c9b8b0d008294",
+      "rows": 5515,
+      "first": "2022-01-24T07:36:12+00:00",
+      "last": "2022-01-24T21:37:20+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.2",
+      "sha256": "52844d158f359d2c74fd6a3eb5d6334e9d7b6cbce6fb01ebf4e12701e92c22f7",
+      "rows": 6869,
+      "first": "2022-01-23T06:25:19+00:00",
+      "last": "2022-01-23T23:02:01+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.3",
+      "sha256": "3594e58d0d58eadeadff4961065838a5484965eff4247b5a75211209f035f334",
+      "rows": 7541,
+      "first": "2022-01-22T06:25:18+00:00",
+      "last": "2022-01-23T06:24:49+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    },
+    {
+      "member": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.4",
+      "sha256": "34fa3568b528da7b8387c48b3fcfadddb38b2c1b6ea2505e18a6b9f92208fef9",
+      "rows": 7366,
+      "first": "2022-01-21T06:29:44+00:00",
+      "last": "2022-01-22T06:24:51+00:00",
+      "attack_label_rows": 0,
+      "complete_archive_member": true
+    }
+  ],
+  "actor_sources": [
+    {
+      "actor": "internal_employee_0",
+      "actor_ip": "10.143.1.78",
+      "member": "gather/internal_employee_0/logs/sm.log",
+      "sha256": "957ca78f4a3c91c9746c88c95ab198d2c55b56a32aaeb83a9be508a26110ee44",
+      "author_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "closed_episode_counts": {
+        "owncloud_file_workflow": 3,
+        "intranet_browsing": 4
+      }
+    },
+    {
+      "actor": "internal_employee_1",
+      "actor_ip": "10.143.2.91",
+      "member": "gather/internal_employee_1/logs/sm.log",
+      "sha256": "d6b677affd2d97f79b8f84c2cb7dbebab636554fa85e92a2bba537481583f15b",
+      "author_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "closed_episode_counts": {
+        "intranet_browsing": 52
+      }
+    },
+    {
+      "actor": "internal_employee_2",
+      "actor_ip": "10.143.2.25",
+      "member": "gather/internal_employee_2/logs/sm.log",
+      "sha256": "18d5d3e7425bb7a2f92fa353960ab7487a9e1b09ed77fc35e0e3f294e9e0cc2c",
+      "author_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "closed_episode_counts": {
+        "owncloud_file_workflow": 22,
+        "intranet_browsing": 38
+      }
+    },
+    {
+      "actor": "internal_employee_3",
+      "actor_ip": "10.143.3.65",
+      "member": "gather/internal_employee_3/logs/sm.log",
+      "sha256": "5c2ff0fc8f338490a375f19319c9c1bc0e75b7bbe6c9e3db4665fc9eb7045800",
+      "author_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "closed_episode_counts": {
+        "intranet_browsing": 52,
+        "owncloud_file_workflow": 31
+      }
+    }
+  ],
+  "business_episodes_total": 255,
+  "business_episodes_complete_valid_day": 144,
+  "business_episodes_with_consumable_qualified_connections": 79,
+  "dependency_components_with_consumable_connections": 77,
+  "whole_service_connection_candidates": 16374,
+  "normal_identity_qualified_connections": 1253,
+  "role_counts": {
+    "C_candidate": 365,
+    "normal_time_validation": 618,
+    "unresolved": 270
+  },
+  "episode_counts_by_role": {
+    "C_candidate": 39,
+    "normal_time_validation": 40
+  },
+  "dependency_component_counts_by_role": {
+    "C_candidate": 39,
+    "normal_time_validation": 38
+  },
+  "qualified_strata": [
+    {
+      "role": "C_candidate",
+      "date_utc": "2022-01-21",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_file_transfer_request",
+      "connections": 6
+    },
+    {
+      "role": "C_candidate",
+      "date_utc": "2022-01-21",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_interface_or_API",
+      "connections": 75
+    },
+    {
+      "role": "C_candidate",
+      "date_utc": "2022-01-21",
+      "capture_host": "intranet_server",
+      "business_stratum": "intranet_browser_requests",
+      "connections": 166
+    },
+    {
+      "role": "C_candidate",
+      "date_utc": "2022-01-22",
+      "capture_host": "intranet_server",
+      "business_stratum": "intranet_browser_requests",
+      "connections": 118
+    },
+    {
+      "role": "normal_time_validation",
+      "date_utc": "2022-01-23",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_file_transfer_request",
+      "connections": 19
+    },
+    {
+      "role": "normal_time_validation",
+      "date_utc": "2022-01-23",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_interface_or_API",
+      "connections": 64
+    },
+    {
+      "role": "normal_time_validation",
+      "date_utc": "2022-01-23",
+      "capture_host": "intranet_server",
+      "business_stratum": "intranet_browser_requests",
+      "connections": 117
+    },
+    {
+      "role": "normal_time_validation",
+      "date_utc": "2022-01-24",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_file_transfer_request",
+      "connections": 53
+    },
+    {
+      "role": "normal_time_validation",
+      "date_utc": "2022-01-24",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_interface_or_API",
+      "connections": 199
+    },
+    {
+      "role": "normal_time_validation",
+      "date_utc": "2022-01-24",
+      "capture_host": "intranet_server",
+      "business_stratum": "intranet_browser_requests",
+      "connections": 166
+    },
+    {
+      "role": "unresolved",
+      "date_utc": "2022-01-22",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_interface_or_API",
+      "connections": 3
+    },
+    {
+      "role": "unresolved",
+      "date_utc": "2022-01-23",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_file_transfer_request",
+      "connections": 8
+    },
+    {
+      "role": "unresolved",
+      "date_utc": "2022-01-23",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_interface_or_API",
+      "connections": 135
+    },
+    {
+      "role": "unresolved",
+      "date_utc": "2022-01-24",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_file_transfer_request",
+      "connections": 26
+    },
+    {
+      "role": "unresolved",
+      "date_utc": "2022-01-24",
+      "capture_host": "cloud_share",
+      "business_stratum": "owncloud_interface_or_API",
+      "connections": 98
+    }
+  ],
+  "candidate_rejection_reasons": {
+    "no_service_request_in_complete_connection_envelope": 1913,
+    "no_supported_normal_business_episode": 10053,
+    "whole_connection_not_inside_author_simulation": 1896,
+    "connection_not_SF_complete": 4831,
+    "some_service_requests_lack_normal_actor_activity_evidence": 863,
+    "author_attack_request_possible_in_connection": 129,
+    "no_frontend_requests_in_complete_connection_envelope": 1634,
+    "raw8_incomplete": 252,
+    "frontend_backend_request_identity_sets_not_closed": 159,
+    "some_possible_proxy_requests_have_unknown_or_inactive_actor": 11438,
+    "not_expected_cloud_reverse_proxy_endpoint": 21
+  },
+  "context_full_background_rows": 25638,
+  "cross_role_stable_identity_overlap": 0,
+  "cross_role_dependency_component_overlap": 0,
+  "prior_C25_preserved_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+  "model_calls": 0,
+  "training_calls": 0,
+  "threshold_calculations": 0,
+  "population_1pct_95pct_guarantee_claimed": false,
+  "dependence": "Four simulated users, one AIT run, shared services and generation mechanism. Flows within activities and dependency components are correlated; dates and actors are not proven independent population draws.",
+  "coverage_limit": "Only evidence-supported internal-actor intranet browsing and ownCloud workflows; unknown/VPN actors and incomplete or mixed envelopes remain unresolved, not normal.",
+  "source_receipt_sha256": "b6945c2847cdfe5f3587da85aa2f5f086658473b3f253862f453ca9ad2548107",
+  "code_source_receipt_sha256": "d0ddbe1e1335df0041f169e5ebb0bbb489625b6030b2e1791597e67e75b3ad33",
+  "script_sha256": "b69beedb43e3bf3cb984b6ec4d40b0744031b821651f79841f784524240ebc53"
+}

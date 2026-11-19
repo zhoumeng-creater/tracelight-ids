@@ -1,0 +1,5 @@
+﻿source,implementation_family_id,campaign_id,current_role,attack_action_events,positive_connections,whole_capture_available,precise_framework_or_recipe_known
+AIT-LDS,ait:wpdiscuz_webshell_download_reverse_recipe,ait:santos:wpdiscuz_complete_chain,F,36,32,True,True
+AIT-LDS,ait:wpdiscuz_webshell_download_reverse_recipe,ait:fox:wpdiscuz_complete_chain,V,21,17,True,True
+OpTC,optc:empire_powershell_custom,optc:empire_custom:20190924_continues_20190925,externaldev,,26,selected complete rotations only,True
+Unraveled,unraveled:drive_by_implant_tls:framework_unresolved,unraveled:apt_2021_single_campaign,opened_source_development,1,473,True,False

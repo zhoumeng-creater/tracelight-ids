@@ -1,0 +1,38 @@
+{
+  "schema": "vendored-ait-extractor-source-v1",
+  "source_git_head": "73a914818f6a8243bcb598fd5f2d26907580eb6d",
+  "source_git_status_of_files": "",
+  "files": [
+    {
+      "path": "scripts/ait_contract/analyze.py",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\analyze.py",
+      "bytes": 22078,
+      "sha256": "564df5a3e581013876327c511dcbce8e0406c8df5ace18281403fe927a46c6a0"
+    },
+    {
+      "path": "scripts/ait_contract/zeek_runtime.py",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\zeek_runtime.py",
+      "bytes": 15460,
+      "sha256": "761b34c154e193122e0ae74a148e38ab5acf46492784ac3efa30106169e1cf71"
+    },
+    {
+      "path": "scripts/ait_contract/export.zeek",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\export.zeek",
+      "bytes": 1049,
+      "sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc"
+    },
+    {
+      "path": "scripts/ait_contract/runtime-packages.json",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\runtime-packages.json",
+      "bytes": 3915,
+      "sha256": "61c1d186b4891d2307449cf64ed4df769c00da3e56dbeb17b854f4dfa658556b"
+    },
+    {
+      "path": "scripts/ait_contract/RUNTIME_SOURCES.md",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\ait-flow-contract-20261118\\scripts\\ait_contract\\RUNTIME_SOURCES.md",
+      "bytes": 2079,
+      "sha256": "8c142d28aca9d9040e5cda6113a231ac054cde5740a77ac0649bbffc849eb818"
+    }
+  ],
+  "method": "Exact byte copies of dependencies used by pcap_extract.py; no binary/runtime copied. Existing extraction source and receipts unchanged."
+}

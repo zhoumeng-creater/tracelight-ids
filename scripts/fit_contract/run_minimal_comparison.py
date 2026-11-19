@@ -379,6 +379,13 @@ def main():
     parser.add_argument("--threads", type=int, help="Required for real fitting; not used by --inputs-only")
     parser.add_argument("--inputs-only", action="store_true", help="Inspect real inputs without constructing or running models")
     args = parser.parse_args()
+    policy_path = Path(__file__).resolve().parents[2] / "configs/source-coverage-20261119.json"
+    if not args.inputs_only and policy_path.exists():
+        policy = json.loads(policy_path.read_text(encoding="utf-8"))
+        if not policy["execution_enabled"]:
+            parser.error("The source-fit-contract-v1.1 HGB8/HGB27 comparison has been retired: "
+                         "the fixed history19 mechanism was rejected by event-level availability evidence. "
+                         "See docs/COVERAGE_AND_METHOD_DECISION_20261119.md. Historical inputs-only inspection remains available.")
     sources = {name: {"path": str(path.resolve()), "sha256": sha(path)} for name in
                ("model_rows", "inference_rows", "events", "normal_units")
                if (path := getattr(args, name)) is not None}

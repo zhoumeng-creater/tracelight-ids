@@ -1,0 +1,266 @@
+{
+  "coverage_raw8": {
+    "before": "narrow_raw8",
+    "after": "mixed_raw8",
+    "by_role": [
+      {
+        "role": "C",
+        "rows": 3,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "C_background",
+        "rows": 1,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_base",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_expansion",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "V",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "external_development",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      }
+    ]
+  },
+  "coverage_ports_zero": {
+    "before": "narrow_ports_zero",
+    "after": "mixed_ports_zero",
+    "by_role": [
+      {
+        "role": "C",
+        "rows": 3,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "C_background",
+        "rows": 1,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_base",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_expansion",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "V",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "external_development",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      }
+    ]
+  },
+  "ports_narrow": {
+    "before": "narrow_raw8",
+    "after": "narrow_ports_zero",
+    "by_role": [
+      {
+        "role": "C",
+        "rows": 3,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "C_background",
+        "rows": 1,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_base",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_expansion",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "V",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "external_development",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      }
+    ]
+  },
+  "ports_mixed": {
+    "before": "mixed_raw8",
+    "after": "mixed_ports_zero",
+    "by_role": [
+      {
+        "role": "C",
+        "rows": 3,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "C_background",
+        "rows": 1,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_base",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "F_expansion",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "V",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      },
+      {
+        "role": "external_development",
+        "rows": 2,
+        "TP_added": 0,
+        "TP_lost": 0,
+        "FP_added": 0,
+        "FP_removed": 0,
+        "unknown_added_alerts": 0,
+        "unknown_removed_alerts": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210621_net1013x.csv",
+    "sha256": "cbc00c3397d81972c321223e0318fd1b99f2c9d00143b98d1070359dbb56a272",
+    "header_columns": 89,
+    "width_counts": {
+      "89": 45960,
+      "104": 7,
+      "90": 170
+    },
+    "valid_rows": 45960,
+    "malformed_rows": 177
+  },
+  {
+    "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210622_net1013x.csv",
+    "sha256": "aaf60e435aed2cd2fe873f1315a95907c4d19f7a92edb9f3c500342cc8f5d4e1",
+    "header_columns": 89,
+    "width_counts": {
+      "89": 38280,
+      "104": 6,
+      "90": 111
+    },
+    "valid_rows": 38280,
+    "malformed_rows": 117
+  }
+]

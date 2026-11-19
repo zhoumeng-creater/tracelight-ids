@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "no_model_calls": true,
+  "checks": [
+    {
+      "scope": "normal_mail",
+      "previously_verified_connections_recovered": 16,
+      "packet_identity_ledger": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\mapping_check\\normal_mail\\packet_membership.jsonl.gz",
+      "source_annotations_subset": 142,
+      "all_connections": 144,
+      "links": 144
+    },
+    {
+      "scope": "apt_c2",
+      "previously_verified_connections_recovered": 5,
+      "packet_identity_ledger": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\mapping_check\\apt_c2\\packet_membership.jsonl.gz",
+      "source_annotations_subset": 236,
+      "all_connections": 237,
+      "links": 237
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "threads": 1,
+  "device": "cpu",
+  "arms": {
+    "narrow_raw8": {
+      "fit_seconds": 5.6900084018707275e-05,
+      "fit_rows": 2,
+      "model_bytes": 683,
+      "model_sha256": "c5c29fa63bae1f46f238127fbff150b938635a142a4becfb3768b368b850805b",
+      "calibration_score_seconds": 0.0003217998892068863,
+      "remaining_score_seconds": 0.0003784000873565674,
+      "scored_rows": 11
+    },
+    "mixed_raw8": {
+      "fit_seconds": 5.3799943998456e-05,
+      "fit_rows": 4,
+      "model_bytes": 819,
+      "model_sha256": "c5a027ce067598de2f925ce6370732516eda7f34fbe207454dba5b5e55a1e061",
+      "calibration_score_seconds": 0.00031180004589259624,
+      "remaining_score_seconds": 0.00044640013948082924,
+      "scored_rows": 11
+    },
+    "narrow_ports_zero": {
+      "fit_seconds": 6.16998877376318e-05,
+      "fit_rows": 2,
+      "model_bytes": 683,
+      "model_sha256": "69fcab9aae9fad984e3d4a839c781f063950fb566a001bf7f2d4c67de8cbfd2c",
+      "calibration_score_seconds": 0.0001822998747229576,
+      "remaining_score_seconds": 0.0004241999704390764,
+      "scored_rows": 11
+    },
+    "mixed_ports_zero": {
+      "fit_seconds": 5.079992115497589e-05,
+      "fit_rows": 4,
+      "model_bytes": 819,
+      "model_sha256": "50b2af8b5ed13621e4941b28f08781f6768ad86184560ab64c71fb74038db6e9",
+      "calibration_score_seconds": 0.00015620002523064613,
+      "remaining_score_seconds": 0.0005048001185059547,
+      "scored_rows": 11
+    }
+  },
+  "scope": "Actual fixed fits and batch scoring; not per-alert latency or full extractor cost"
+}

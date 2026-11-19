@@ -1,0 +1,368 @@
+{
+  "source_url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+  "source_object_bytes": 3518820352,
+  "source_etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+  "selection": "contiguous source PCAP record interval chosen by declared action/business times; no model scores",
+  "requested_time_start": 1624318560,
+  "requested_time_end": 1624318800,
+  "source_record_byte_interval_half_open": [
+    3200648283,
+    3211920460
+  ],
+  "global_header_source_byte_interval_half_open": [
+    0,
+    24
+  ],
+  "lower_bracket": {
+    "low_offset": 3200648283,
+    "low_time": 1624318546.119496,
+    "high_offset": 3200755742,
+    "high_time": 1624318577.416628
+  },
+  "upper_bracket": {
+    "low_offset": 3211811528,
+    "low_time": 1624318798.756353,
+    "high_offset": 3211920460,
+    "high_time": 1624318825.990806
+  },
+  "output_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\pcap_slices\\apt_c2\\slice.pcap",
+  "output_bytes": 11272201,
+  "sha256": "a2288fe0067052e61e784046cd9f0d5bb3fe1790cce5dc33ddee42021198fee8",
+  "packet_records": 9291,
+  "min_packet_time": 1624318546.119496,
+  "max_packet_time": 1624318825.990679,
+  "adjacent_out_of_order_timestamps": 1,
+  "preservation": "all record headers, caplen, orig_len and frame bytes copied unchanged",
+  "complete_source_day": false,
+  "limitations": [
+    "Contiguous source-byte slice only; possible ongoing connections at both boundaries.",
+    "Completeness of selected connections must be checked against original flow row and TCP boundaries.",
+    "No assumption that endpoint-only or all unlabelled traffic is normal."
+  ],
+  "requests": [
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 0,
+      "range_end": 23,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "acc530668c8bc60b2d229281130b1899bfc81d70fdada5c34b3236c628f739c8",
+      "bytes": 24
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 24,
+      "range_end": 131095,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "d5650ba6c982cc8366d40f09ab5482d2072387e31c3552309c4169e96a37d36f",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3518689280,
+      "range_end": 3518820351,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "01d88027e9487884cf0bb9fe557ae8680ae80e10a3f0c25db2e62abc72a413bc",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 1759344663,
+      "range_end": 1759475734,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "c272e8e70d1e79f35d3a604bb09b5c270d51372f4087aee736814c8435a10936",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 2639019324,
+      "range_end": 2639150395,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "faf30dd9f3f6fedd54c8c25178db3fd02f5b2c54cc09f6708be08b3183d5b0ea",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3078854335,
+      "range_end": 3078985406,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "f8db61719490639d01621ff09a591ef0b37936e32078124487966da4b80f64f8",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3298772122,
+      "range_end": 3298903193,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "6ccdd4449b642f9dd2565863701670133937f3692f2e40aee394a56187a99bcb",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3188816150,
+      "range_end": 3188947221,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "50d731bd59c4074b45de730f72e0de0bc8b0a07d8e1262f2145ae5be13f8d896",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3243802137,
+      "range_end": 3243933208,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "cf56cbb5e1fb068aad66320d478965c0a0c704f69a8f39601b72ee0ab79accde",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3216314689,
+      "range_end": 3216445760,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "ad0910e4c7bd6fb7d9d37928a7cb6507a4d8bf47db6db709065f33c7689bad06",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3202571317,
+      "range_end": 3202702388,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "c66728fdc695910192ebd68338a9e4a66139d12e54f71c8051ba845d9843275a",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3195699146,
+      "range_end": 3195830217,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "aa22ca37839788abad013af6109f44fcf5fb4b6453bd980fa0fbebc8c6322456",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3199135726,
+      "range_end": 3199266797,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "1c7772d127e6c0df360ef1663344d929b5e8b25da007221302bfd9513d9fe9cb",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3200857638,
+      "range_end": 3200988709,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "613d658588484dc816a5994948495831ed8f6d12063a481d649ce3327752676a",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3200002114,
+      "range_end": 3200133185,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "a7c7e6053d9329426d270f364eb7946cc2b2ba242fbd1619d7480fefc6f98e7a",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3200432729,
+      "range_end": 3200563800,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "3d85681ac107736553b42f922705e9b6df2526ca4e6f19f5a9eb4d6feb2aa932",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3200648019,
+      "range_end": 3200779090,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "8f79f1c50e9f77ca0e4837dc65c304d506bb9566fa02a93f62d5eaa5ed910ad9",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3200754306,
+      "range_end": 3200885377,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "6a994e6ffa234dd29a27db533af4272dcde020fd7c81657d937549515b796559",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3209443548,
+      "range_end": 3209574619,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "b74bfdecab2b1837a0229397f4308a453b56828a0621e81e318d9e58a874c1a5",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3212880445,
+      "range_end": 3213011516,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "e060a31f7992043b122ee8e62c3189fb824ade9863f80f94207918f465b0527b",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3211164790,
+      "range_end": 3211295861,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "e3ee5f58ed73c2a595f95b824548cbde033423c77077a236aef6fc98fbff3204",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3212025220,
+      "range_end": 3212156291,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "9cce3b101bcd5f253563ebd238a863a4eca299ecb7c7362d034ac0ece38cd958",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3211595741,
+      "range_end": 3211726812,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "9e9424c53ef685c8e3652d5b3136748a377e285176057d2d9b13d3184f981059",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3211811457,
+      "range_end": 3211942528,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "855700c032b850b89db57ee5fcca9cd83ce3559e11809db0d075965236eb07f6",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3211918489,
+      "range_end": 3212049560,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "ecb17d9dfb9f3500409ea8a461767bdbcd854edaa05b2329ac34b378263fd7fd",
+      "bytes": 131072
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3200648283,
+      "range_end": 3201696858,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "6dcc43bcc50edf95ca0d93865afd4631398d061ff968a7a6bafe62ecbab73d59",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3201696859,
+      "range_end": 3202745434,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "bb82b38b10f4bf592de59b2b43b28aee92f908c6cc0814b029796aaf733acae3",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3202745435,
+      "range_end": 3203794010,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "78d41e1563d316a585d73e381ee7c4c0e9a814238ce266f7a3d88ca563146ed0",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3203794011,
+      "range_end": 3204842586,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "f455a2a4350f66c6fd00037910e51c28a80a73b002e092bc42ca1b19e4801bff",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3204842587,
+      "range_end": 3205891162,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "c116541adc33f740193ba5ab774afe82205adcb657ad9b83fbf77007b5690052",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3205891163,
+      "range_end": 3206939738,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "289e5421fec9dde9e2061d02e2d81d02ffd9ce6d126de2f82b0bce128f8caa58",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3206939739,
+      "range_end": 3207988314,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "eac3c8fa7865a61d1b21a204c39125b933a91847135df079b7e23fce9820c55c",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3207988315,
+      "range_end": 3209036890,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "c1a0172479d375cea00a1d3029b6b949c567a14b1d43b3da361bf11a5798d249",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3211134043,
+      "range_end": 3211920459,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "fdab9c57ad25f8abb29f3a86ff1ec1f152eae6f3c5286092a3710d8f9a0b504a",
+      "bytes": 786417
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3210085467,
+      "range_end": 3211134042,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "4db2a64d4b20df3cda71c83654fdbdfd08ee37accfb5cf4cbc48cee4508fa9d9",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+      "range_start": 3209036891,
+      "range_end": 3210085466,
+      "object_bytes": 3518820352,
+      "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+      "sha256": "bdc794c16f011a2ed00d32de3d426169cf8b232154d76f8a20d7d046d28c052d",
+      "bytes": 1048576
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "inputs": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\processing\\config\\servers.yaml": {
+      "sha256": "ff3034bb7d43514dd8b7fc74dcf1a97eae84d8d7d71c0c42f61a4cf20db56402",
+      "bytes": 19255
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\dataset.yaml": {
+      "sha256": "376bb5c1766d4305c18617b27a10375b0286f99047ef0fc7de5408ee00fdc415",
+      "bytes": 88
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_2\\logs\\sm.log": {
+      "sha256": "354e3f59cbd5e518f6ba638a1872e38fbdd585c4bd61eb04532934208483d87a",
+      "bytes": 400605
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\remote_employee_0\\logs\\sm.log": {
+      "sha256": "c9d7f3a45b6a8b563eb60f01002f67df794a8440023ebd35c1e98135e69f15be",
+      "bytes": 392221
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\processing\\config\\servers.yaml": {
+      "sha256": "85d8b7820433ba22f7c88e11c831d2e11eaba9476026eb5d90d7d9dab975a1b4",
+      "bytes": 19237
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\dataset.yaml": {
+      "sha256": "eb0a63cabab14be4035caacd09eaa5f91f50379794992a4bb156536ae6b00a1f",
+      "bytes": 85
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\internal_employee_3\\logs\\sm.log": {
+      "sha256": "06e32fab4cf7da56976ed707c0f32c94544541ea4c3416b3366074ad24d7074b",
+      "bytes": 463830
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\remote_employee_2\\logs\\sm.log": {
+      "sha256": "1580b74ca767b080b424bf23b256e646e6ab6fd0128cbbb26cba5b2edfcb37a1",
+      "bytes": 1099058
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\connections.jsonl.gz": {
+      "sha256": "900190e5ad682f4fcbdb49ea64a0aa4367786043132d778efd3103f6893b8e55",
+      "bytes": 2575495
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\connections.jsonl.gz": {
+      "sha256": "e5f7c00f45315d91209dd063ff5470b5c773f56865c62cba2d5887caf2ec5ec4",
+      "bytes": 3273148
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\connections.jsonl.gz": {
+      "sha256": "cff69678e38f99542ad01de3a9192ec3848796405733affa776da02a690e1a89",
+      "bytes": 3879511
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\connections.jsonl.gz": {
+      "sha256": "6f11bcc295f139e8a49cdf869e3277162bbc74076c3a4c98447e2f61ef446e4a",
+      "bytes": 6095391
+    }
+  },
+  "script_sha256": "3b2aa68fb5d3bbb09092376b6057f0d974e3564b9009d320657c34679c5903fd"
+}

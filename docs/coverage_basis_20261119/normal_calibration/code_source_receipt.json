@@ -1,0 +1,51 @@
+{
+  "tag": "source-fit-contract-v1.1",
+  "commit": "793f1d4f59bdce4c3e82176bf6be84186deee224",
+  "files": [
+    {
+      "path": "scripts/fit_contract/pcap_normalize.py",
+      "sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+      "bytes": 12135
+    },
+    {
+      "path": "scripts/fit_contract/pcap_extract.py",
+      "sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+      "bytes": 11232
+    },
+    {
+      "path": "docs/unified_events_20261119/split_method/prefix_context.py",
+      "sha256": "e4745e1a5549396c5264284961cdcc759630d0f321a70a5d2355bf4aa2a738f1",
+      "bytes": 13407
+    },
+    {
+      "path": "scripts/fit_contract/vendor_ait/scripts/ait_contract/RUNTIME_SOURCES.md",
+      "sha256": "8c142d28aca9d9040e5cda6113a231ac054cde5740a77ac0649bbffc849eb818",
+      "bytes": 2079
+    },
+    {
+      "path": "scripts/fit_contract/vendor_ait/scripts/ait_contract/analyze.py",
+      "sha256": "564df5a3e581013876327c511dcbce8e0406c8df5ace18281403fe927a46c6a0",
+      "bytes": 22078
+    },
+    {
+      "path": "scripts/fit_contract/vendor_ait/scripts/ait_contract/export.zeek",
+      "sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+      "bytes": 1049
+    },
+    {
+      "path": "scripts/fit_contract/vendor_ait/scripts/ait_contract/runtime-packages.json",
+      "sha256": "61c1d186b4891d2307449cf64ed4df769c00da3e56dbeb17b854f4dfa658556b",
+      "bytes": 3915
+    },
+    {
+      "path": "scripts/fit_contract/vendor_ait/scripts/ait_contract/zeek_runtime.py",
+      "sha256": "761b34c154e193122e0ae74a148e38ab5acf46492784ac3efa30106169e1cf71",
+      "bytes": 15460
+    },
+    {
+      "path": "scripts/fit_contract/vendor_ait/source_receipt.json",
+      "sha256": "02e5ed7a2686c133c4f03ab0c628357e9c48c07cbf213f08a31ad386293a1830",
+      "bytes": 2140
+    }
+  ]
+}

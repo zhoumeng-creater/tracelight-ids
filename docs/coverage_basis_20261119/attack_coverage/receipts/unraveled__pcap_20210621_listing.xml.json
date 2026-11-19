@@ -1,0 +1,12 @@
+{
+  "url": "https://dapt2021.s3.amazonaws.com/?list-type=2&prefix=raw/network-captures/Week5_Day1_06212021/&max-keys=1000",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\pcap_20210621_listing.xml",
+  "bytes": 1826,
+  "sha256": "ae6ddff914b25ff63ea103b9dc51ea413002fd378314b3c2ebf256be4bfe3ffe",
+  "response_headers": {
+    "Content-Length": null,
+    "ETag": null,
+    "Last-Modified": null,
+    "Content-Type": "application/xml"
+  }
+}

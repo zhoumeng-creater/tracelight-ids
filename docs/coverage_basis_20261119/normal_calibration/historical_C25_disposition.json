@@ -1,0 +1,377 @@
+{
+  "original_file_sha256": "d5ed3868727c38af83578fb32d03f6495535caac86bba0488091969f28b13a25",
+  "current_role_counts": {
+    "unresolved": 16,
+    "normal_time_validation": 9
+  },
+  "rows": [
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:COMlCq1pHtAYpWg2q5",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CMwLEL1hU29mWKnTS6",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:ea8a4b5f5f5fd2175d06d87f5d0d0a5b8b13f5d8384b93af3d21d1ef4f7f3675",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "some_possible_proxy_requests_have_unknown_or_inactive_actor"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:1ab6fcc4c8fe34f711e6429cb078b08fa755d09db75d8366c9f67bf93d08c000",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CLkA3W2pp2LKierkHa",
+      "current_flow_id": "ait:russellmitchell:cloud_share:C0KXgp3V3PPgQvIiRg",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:e643053aea9f821aa8bc1a060b33f7460329a839925033b0e0c4c8010c4a1c64",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "some_possible_proxy_requests_have_unknown_or_inactive_actor"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:9b938a72988967dcb90e5f4bf21fb6d1d22c01698d9cbb1a995c8ba2c89feca2",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CMTLNZYlYtNDxnu04",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CXvs5rkGGaKhz2Aj",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:ce527536f617aea20967740ce30f76f1bdc6f6c4dfd4914e4e0c43aa9e8be4a9",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "connection_not_SF_complete"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:a6dc5a72a995df2bca03aaf0921855cd6d811d93b9b8b1a48530a996af8b7c58",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CXulLE1XunxRyM3ZR5",
+      "current_flow_id": "ait:russellmitchell:cloud_share:C44Jed45AaUybTOsMa",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:742407462fe556a1f5ae19f4647e43277dce7ba98b61ecd664c253c8b3d03561",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:C6eWE843aaKFv0gixk",
+      "current_flow_id": "ait:russellmitchell:cloud_share:Cwd0rc2Hpm6lVtPqFc",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:bc3a7ea4b209708db8df7fa40d855476f7ec575305cf82066b987247505fc77b",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CRpGQs1qQ6W7xmpBVk",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CskJj1Y0DSGBUWZRk",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:c01f5d56569b8dc9c50b87b8bcd470fbe14676826659a95990756cd6f4837b18",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CznZop1OhCMwoRnRUj",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CG6Hoj1HCcil8x2gla",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:48e8057776d255835c47e4ab46d69e95f38467176cbf08d9a05dade453de2ce7",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:Cb3J9s2TC79tozVlEg",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CIu6nSXnJQ9waRB2f",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:271ca93c35e7a1d23faa2c1227ea002d6de332066dd46ab21c3d6e68e72bf573",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "connection_not_SF_complete"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:Cmj88a46BOMbeKDyx5",
+      "current_flow_id": "ait:russellmitchell:cloud_share:Cars25ljYZ7Aakhse",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:102538588b310029065e7eae5046cde606b2cd8e132ef2acd4770ae9fe29d4c5",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:C91W91Bn9fk0iPj6a",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CIB61O1FcHm4sTd6f",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:6feb445f00c8b2aff884996a994ef3b7e98203eae2515b74b285c1a262a62747",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:b1119f427094822ddafb55b743994ca98d27049cf0c013b4fb46f441fce66ebf",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CFh6pG32MM3f0xhs9g",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CiMy6i2YFNAwbFr9Vf",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:19d457d80961d25210d19d7c5a4711046359361698266445d293aa65cf004f61",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "some_possible_proxy_requests_have_unknown_or_inactive_actor"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:019693ce0332e930e846b9d3df487a296c6826883e8f8a89dbda8769b0489240",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CZvLonvapa2IXpBE1",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CyheJ600ApKY3LH9l",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:fee6c300e05542e3f372cc12a90a7cbf1c616068fbe013ca6802ccf6052d3745",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CHduJZ1bjj1oGZu8F8",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CE3alMnevYDhnHKdc",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:fa950e3610fd357e48232721e53ffec74f7ff0d6170b0f206f4a66e2e80e6ed7",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CJIRXC1QyousASHEHi",
+      "current_flow_id": "ait:russellmitchell:cloud_share:C1SQ6Fg2BrZvtTsEi",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:25b43db4401e4c290cab5bb90ab34a7e92ca164cf9eace0e028bddd52fa7b11d",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "connection_not_SF_complete"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CQOtHs3mbWuPnHtRXj",
+      "current_flow_id": "ait:russellmitchell:cloud_share:ChB0Hc1JchomN5jCVc",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:60c4596166b209009b6592af8dcefbf38d86ff6e4d58c34e2dddb56ebb92fdd3",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CUFiicC54vlaUaVRk",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CNt7wt1riI5CS7PX5h",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:9fa765c83799ca8e4b1a2f87ff4c472ec23f92788dc2412fe440a3968fd6c379",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:Cm5kDo4v8HXomzh2Il",
+      "current_flow_id": "ait:russellmitchell:cloud_share:Cw5lNC1QA0oaTlvyX1",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:199e558ccc077e3b3bbbfe2501eda6ff09956543bbf3052d9562dc2aff628989",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "connection_not_SF_complete"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CdzPak1Q7U4RjqffEl",
+      "current_flow_id": "ait:russellmitchell:cloud_share:C9OmMR2lht6xfEyn9e",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:5f7eb98d2b8d3ae63f418edd8d5008292dc0bf0a255a444db6b5c898c1b52084",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:6feff3f2bfcad0fe8bb3390dc5ef5890633cc195d1d673d9348a38292a6a0c2a",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CtpFMd3ygsu1vCQFCe",
+      "current_flow_id": "ait:russellmitchell:cloud_share:C4v5ti2xRmYGpFSq68",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:b8b108d5d7624081cb816f36efdd152bc2a3398212ddf2fd32537d5e94ee3426",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:7ce4f44ac588581d30c9671ae03adf12f00676d523fe8a460c399640b356b243",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CIIkdU1gJKGOaNBXT2",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CxkKv62SO3HEm6gf7g",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:72a97fd92c9307e60faa5a75f29c2612c1f4cd4a93c338533c835128daf215aa",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "connection_not_SF_complete"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:7ce4f44ac588581d30c9671ae03adf12f00676d523fe8a460c399640b356b243",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CDyf5d1RGNoQvAIELe",
+      "current_flow_id": "ait:russellmitchell:cloud_share:Cj1lTX29ZAm1pzJr8f",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:2f78c5636f73bfbd5cdc72e36f8db88fb2419fef23820f6c06c8cb9239281479",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:7ce4f44ac588581d30c9671ae03adf12f00676d523fe8a460c399640b356b243",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CJcQlm47RK5ESKU1G",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CawuR2HbF6nUrcCf6",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:10af6dd7e1c19ad826e3b8a93bcdd1ea96733f4d97d9e752f6b0b4ad859be618",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:7ce4f44ac588581d30c9671ae03adf12f00676d523fe8a460c399640b356b243",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:Cf2vmQ2RpSapJlemB6",
+      "current_flow_id": "ait:russellmitchell:cloud_share:Cfawoc3C2rJt4I15Yf",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:20ae29b096d98baba03d53ce006a0000061d6ad03a029851a4dd174207b50d33",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "normal_time_validation",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:743b83cdb346464ca978a4de8fab4419aaa17955eb739553b7294e13b7649a71",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:CWFsJ63TSyJz4gFQM",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CWwVeQ3qhO3j9pg702",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:112249b59db89c591242e90787cc4e7ce2819ebd1bfd0b10107d5ea1f47cf409",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": false,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [
+        "connection_not_SF_complete"
+      ],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:743b83cdb346464ca978a4de8fab4419aaa17955eb739553b7294e13b7649a71",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    },
+    {
+      "old_flow_id": "ait-cloud:ignore_checksums:C33xTE2SiecYYF6Pi",
+      "current_flow_id": "ait:russellmitchell:cloud_share:CdLoke176C6sgM17Zh",
+      "stable_flow_id": "ait:russellmitchell:cloud_share:e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac:flowkey:667b036204048eff82838e09be4b22fb5e185699f91079744c017af5b5496935",
+      "historical_C25_qualification_preserved": true,
+      "historical_source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+      "current_normal_identity_qualified": true,
+      "current_role": "unresolved",
+      "current_rejection_reasons": [],
+      "current_dependency_component_id": "ait:russellmitchell:normal_dependency:d8bdbc1c251523781e6bead4ad0d1f6eb5762189cac63e5becdbd8889ed0684f",
+      "current_raw8_equal_historical": true,
+      "previously_opened_and_C_eligible": true,
+      "new_temporal_validation_is_not_blind": true
+    }
+  ]
+}

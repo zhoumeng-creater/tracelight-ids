@@ -1,0 +1,157 @@
+{
+  "schema": "current-evidence-unified-20261119-v1",
+  "events": 47285,
+  "observations": 209722,
+  "event_flow_links": 102409,
+  "split_assignments": 257007,
+  "flow_rows": 209722,
+  "normal_business_episodes_added": 255,
+  "service_connection_candidates": 16374,
+  "service_candidates_without_episode": 10053,
+  "normal_episode_flow_links_added": 7483,
+  "normal_label_evidence_qualified": 3475,
+  "qualified_role_counts": {
+    "C_candidate_whole_run": 3475
+  },
+  "normal_model_input_ready": 3475,
+  "normal_calibration_candidates": 3475,
+  "normal_management_events_added": 58,
+  "normal_management_candidate_connections_reused": 7,
+  "normal_management_complete_normal_candidates": 1,
+  "historical_C25_current_states": {
+    "C_candidate_whole_run|normal_label_evidence=True": 25
+  },
+  "attack_intake": {
+    "state": "full_capture_ingested",
+    "directory": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture",
+    "connections": 47032,
+    "campaign_role": "opened_source_development",
+    "canonical_slice_rows_added": 0,
+    "historical_slice_alias_status": {
+      "exact_start_tuple": 335,
+      "unmatched": 46
+    },
+    "source_receipt": {
+      "status": "complete",
+      "source_scope": "one complete downloaded source object; Zeek processes all complete original packet records, excluding the incomplete final record only",
+      "campaign_id": "unraveled:apt_2021_single_campaign",
+      "role": "opened_source_development",
+      "fit_validation_role": null,
+      "no_training_or_scoring": true,
+      "all_connections": 47032,
+      "all_author_valid_rows": 45960,
+      "target_host_author_rows": 12582,
+      "target_host_connections": 12824,
+      "links": 47303,
+      "all_connection_labels": {
+        "0": 46363,
+        "None": 185,
+        "1": 484
+      },
+      "target_host_connection_labels": {
+        "0": 12308,
+        "1": 484,
+        "None": 32
+      },
+      "target_host_author_label_counts": {
+        "0:normal": 12100,
+        "1:other_attack": 9,
+        "1:c2_channel": 473
+      },
+      "author_match_status": {
+        "multiple_candidates_preserved": 358,
+        "single_candidate": 45602
+      },
+      "target_author_match_status": {
+        "multiple_candidates_preserved": 116,
+        "single_candidate": 12466
+      },
+      "exact_author_packet_validation": 45960,
+      "target_exact_author_packet_validation": 12582,
+      "all_unmatched_or_quality_reasons": {},
+      "target_unmatched_or_quality_reasons": {},
+      "labels_assigned_to_non_SF_connections": {
+        "S0": 2693,
+        "OTH": 290,
+        "RSTR": 494,
+        "SH": 27,
+        "RSTO": 1209,
+        "RSTOS0": 12,
+        "S1": 14,
+        "RSTRH": 1,
+        "S2": 1
+      },
+      "normal_missing_raw8_labels_retained": 745,
+      "packet_mapping_diagnostics": {
+        "all_complete_packet_records": 2592965,
+        "parsed_packets": 2568165,
+        "packets_without_author_candidate": 28493,
+        "packets_without_zeek_candidate": 0,
+        "packets_multi_author": 0,
+        "packets_multi_zeek": 60,
+        "non_ip_or_short_ip": 24800,
+        "incomplete_frame": 1
+      },
+      "alias_status": {
+        "exact_start_tuple": 335,
+        "unmatched": 46
+      },
+      "earlier_slice_version_superseded": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\network_mapping",
+      "stable_flow_key": "SHA256(source entire PCAP SHA + native protocol + original endpoints/ports + start fixed at 6 decimals)",
+      "source_pcap_sha256": "6da54d26f3396e78c067ce8c66dfee5ba47c48c331394d0f3e2f782cd2a15813",
+      "output_hashes": {
+        "connections.jsonl.gz": "c64dfcf0f5cff97c64c9f1529ef3f889c7ccedb68ce1c509854e0c37d5b7c2fc",
+        "events.jsonl": "b283c777b494369486ffafb8cdbb133dcc4fefb994873b380348c317decae711",
+        "links.jsonl": "ce5effd78236a0c040cc6668eaa1dcefa173d14a0943932c9873470dca3ec2b1",
+        "target_host_author_flow_matches.jsonl.gz": "260730c5d7507bca6eba571c7e8797ad7e086e90a119b3f53e70801e9f6a3809",
+        "old_slice_aliases.jsonl": "16fdad038e9b7c3c64de244e2bdf57c07600a22284195af8dfdc8d9d54f39173"
+      },
+      "aggregate_events": 4,
+      "target_host_target_label_counts": {
+        "0": 12308,
+        "None": 43,
+        "1": 473
+      },
+      "target_host_target_kind_counts": {
+        "normal": 12308,
+        "other_attack": 11,
+        "unknown": 32,
+        "c2": 473
+      },
+      "partial_capture_flow_ids": [
+        "unraveled:20210621:net1013x:545013ee97aaea0602462426cda3ed03"
+      ],
+      "partial_capture_raw8_scope": "complete original records observed; final incomplete record not reconstructed",
+      "normal_denominator_scope": "all source-labelled normal observations involving the declared host in this complete-record capture; source normal annotation only, not a claim about unlabelled/malformed background",
+      "packet_membership_sha256": "1ad84e74e92a86c64e254ffac19bcf9d986b0936d752cb848f88a7436cce6241"
+    }
+  },
+  "merge_counts": {
+    "base_added": 151690,
+    "normal_calibration_capture_added": 11000,
+    "normal_management_reused": 7,
+    "unraveled_full_capture_added": 47032,
+    "duplicate_link_evidence_collapsed": 456
+  },
+  "current_role_counts": {
+    "external_development": 42173,
+    "reserved_historical_confirmation": 5,
+    "F": 32099,
+    "opened_source_development": 63590,
+    "V": 55481,
+    "C_candidate_whole_run": 16374
+  },
+  "checks": {
+    "all_links_resolve": true,
+    "unique_stable_observations": true,
+    "features8_width": 8,
+    "features27_exported": false,
+    "unqualified_normal_candidates_remain_null": true,
+    "old_C25_not_duplicated": true,
+    "current_adopted_C_rows": 0,
+    "new_training_batch_registered": false
+  },
+  "training_calls": 0,
+  "model_score_calls": 0,
+  "threshold_calls": 0
+}

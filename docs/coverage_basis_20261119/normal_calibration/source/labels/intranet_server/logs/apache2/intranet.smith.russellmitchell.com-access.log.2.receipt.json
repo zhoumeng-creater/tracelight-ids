@@ -1,0 +1,10 @@
+{
+  "path": "labels/intranet_server/logs/apache2/intranet.smith.russellmitchell.com-access.log.2",
+  "bytes": 1637968,
+  "compressed": 24568,
+  "CRC": 894213070,
+  "offset": 518444180,
+  "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\labels\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.2",
+  "sha256": "ab6a834e2f9b8321cb7045cd78e0d88eea851a0f4b5231827f16e87ca7286154",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\labels\\intranet_server\\logs\\apache2\\intranet.smith.russellmitchell.com-access.log.2"
+}

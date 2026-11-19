@@ -1,0 +1,122 @@
+{
+  "narrow_raw8": [
+    {
+      "role": "F_base",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "F_expansion",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "V",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    },
+    {
+      "role": "external_development",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    }
+  ],
+  "mixed_raw8": [
+    {
+      "role": "F_base",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "F_expansion",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "V",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    },
+    {
+      "role": "external_development",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    }
+  ],
+  "narrow_ports_zero": [
+    {
+      "role": "F_base",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "F_expansion",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "V",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    },
+    {
+      "role": "external_development",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    }
+  ],
+  "mixed_ports_zero": [
+    {
+      "role": "F_base",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "F_expansion",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 0,
+      "FN": 1
+    },
+    {
+      "role": "V",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    },
+    {
+      "role": "external_development",
+      "target_kind": "control",
+      "positive_flows": 1,
+      "TP": 1,
+      "FN": 0
+    }
+  ]
+}

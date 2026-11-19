@@ -1,0 +1,12 @@
+{
+  "url": "https://gitlab.com/asu22/unraveled/-/raw/d2ea90055d82fa448ab20588a13e3ec8bfd74816/data/host-logs/windows/10_1_3_17-windows-securityevents-ansible_labeled.csv",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\repo\\data\\host-logs\\windows\\10_1_3_17-windows-securityevents-ansible_labeled.csv",
+  "bytes": 27331150,
+  "sha256": "77163e82a16b5cfcaacf69143a53ac35d3e755b53141ff5bf1448118371ca33b",
+  "response_headers": {
+    "Content-Length": "27331150",
+    "ETag": "\"c78fcda005b070be8433c3ff258c39e8\"",
+    "Last-Modified": null,
+    "Content-Type": "text/plain; charset=utf-8"
+  }
+}

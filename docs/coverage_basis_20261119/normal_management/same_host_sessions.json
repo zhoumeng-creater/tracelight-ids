@@ -1,0 +1,970 @@
+{
+  "sessions": [
+    {
+      "event_id": "ait:santos:normal_ssh_session:internal_employee_2:6e6a722f-f680-42c3-91c9-180ca5fb0695",
+      "kind": "normal_ssh_session",
+      "run": "santos",
+      "actor": "internal_employee_2",
+      "actor_ip": "192.168.104.88",
+      "actor_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "source_member": "gather/internal_employee_2/logs/sm.log",
+      "target_ip": "192.168.104.155",
+      "target_port": 22,
+      "target_host_role": "intranet_server",
+      "proxy_host": null,
+      "actor_connect_attempt": {
+        "member": "gather/internal_employee_2/logs/sm.log",
+        "line": 880,
+        "timestamp": 1642104344.4786701,
+        "utc": "2022-01-13T20:05:44.478670+00:00",
+        "message": "Connecting to SSH host",
+        "transition_id": "6e6a722f-f680-42c3-91c9-180ca5fb0695"
+      },
+      "actor_connected": {
+        "member": "gather/internal_employee_2/logs/sm.log",
+        "line": 882,
+        "timestamp": 1642104347.832867,
+        "utc": "2022-01-13T20:05:47.832867+00:00",
+        "message": "Connected to SSH host",
+        "transition_id": "6e6a722f-f680-42c3-91c9-180ca5fb0695"
+      },
+      "actor_disconnect_attempt": null,
+      "actor_disconnected": null,
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_2/logs/sm.log",
+          "line": 881,
+          "timestamp": 1642104347.8282824,
+          "utc": "2022-01-13T20:05:47.828282+00:00",
+          "message": "Received shell output",
+          "transition_id": "6e6a722f-f680-42c3-91c9-180ca5fb0695",
+          "shell_output_sha256": "c54d50062741f55122bdd96ae41e5ec54a87c43b18adf141ae012e099eaabc08",
+          "shell_output_lines": 31
+        }
+      ],
+      "actor_failure_evidence": [],
+      "command_event_ids": [
+        "ait:santos:normal_ssh_command:internal_employee_2:77f7dddd-4de1-453c-9436-d39664cf2868"
+      ],
+      "last_session_evidence_at": 1642104361.01006,
+      "source_registered_role": "F",
+      "training_admission": false,
+      "connect_interval_in_author_simulation": false,
+      "target_is_one_of_current_monitored_hosts": true,
+      "actor_session_closed": false,
+      "candidate_flow_ids": [
+        "ait:santos:intranet_server:COa9yH3dxHR5N2Ng7k"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:santos:intranet_server:COa9yH3dxHR5N2Ng7k"
+      ],
+      "whole_connection_normal_label_assigned": false
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_session:internal_employee_3:c5617a53-6855-4ba5-81c8-741bc42336a2",
+      "kind": "normal_ssh_session",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "actor_ip": "10.35.35.202",
+      "actor_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "source_member": "gather/internal_employee_3/logs/sm.log",
+      "target_ip": "10.35.35.206",
+      "target_port": 22,
+      "target_host_role": "intranet_server",
+      "proxy_host": null,
+      "actor_connect_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 9,
+        "timestamp": 1642160494.0064716,
+        "utc": "2022-01-14T11:41:34.006472+00:00",
+        "message": "Connecting to SSH host",
+        "transition_id": "c5617a53-6855-4ba5-81c8-741bc42336a2"
+      },
+      "actor_connected": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 11,
+        "timestamp": 1642160497.3021057,
+        "utc": "2022-01-14T11:41:37.302106+00:00",
+        "message": "Connected to SSH host",
+        "transition_id": "c5617a53-6855-4ba5-81c8-741bc42336a2"
+      },
+      "actor_disconnect_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 14,
+        "timestamp": 1642160515.4380841,
+        "utc": "2022-01-14T11:41:55.438084+00:00",
+        "message": "Disconnecting from SSH Host",
+        "transition_id": "1b5c3ec4-a0c3-4fa7-8d65-5c52ce29cb3a"
+      },
+      "actor_disconnected": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 15,
+        "timestamp": 1642160515.442541,
+        "utc": "2022-01-14T11:41:55.442541+00:00",
+        "message": "Disconnected from SSH Host",
+        "transition_id": "1b5c3ec4-a0c3-4fa7-8d65-5c52ce29cb3a"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 10,
+          "timestamp": 1642160497.2997549,
+          "utc": "2022-01-14T11:41:37.299755+00:00",
+          "message": "Received shell output",
+          "transition_id": "c5617a53-6855-4ba5-81c8-741bc42336a2",
+          "shell_output_sha256": "3de006b3b8b933ac5f8dd27340ac2b92d4457865e4283b1ec65f379700d4c57a",
+          "shell_output_lines": 31
+        }
+      ],
+      "actor_failure_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 403,
+          "timestamp": 1642168728.133579,
+          "utc": "2022-01-14T13:58:48.133579+00:00",
+          "message": "State machine execution failure",
+          "transition_id": "450faeda-d9eb-4476-b67b-a596c94a4232"
+        },
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 404,
+          "timestamp": 1642168728.7578533,
+          "utc": "2022-01-14T13:58:48.757853+00:00",
+          "message": "Trying to recover statemachine from exception ",
+          "transition_id": "450faeda-d9eb-4476-b67b-a596c94a4232"
+        },
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 417,
+          "timestamp": 1642171894.6441507,
+          "utc": "2022-01-14T14:51:34.644151+00:00",
+          "message": "State machine execution failure",
+          "transition_id": "cb827c8a-aab5-4fc1-9730-821b4d86a15f"
+        },
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 418,
+          "timestamp": 1642171895.0977526,
+          "utc": "2022-01-14T14:51:35.097753+00:00",
+          "message": "Trying to recover statemachine from exception ",
+          "transition_id": "cb827c8a-aab5-4fc1-9730-821b4d86a15f"
+        }
+      ],
+      "command_event_ids": [],
+      "last_session_evidence_at": 1642176061.133736,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "connect_interval_in_author_simulation": false,
+      "target_is_one_of_current_monitored_hosts": true,
+      "actor_session_closed": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:C0Uvy71n95L3GTgF1f"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:C0Uvy71n95L3GTgF1f"
+      ],
+      "whole_connection_normal_label_assigned": false
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "kind": "normal_ssh_session",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "actor_ip": "10.35.35.202",
+      "actor_groups": [
+        "employee",
+        "internal_employee",
+        "intranet"
+      ],
+      "source_member": "gather/internal_employee_3/logs/sm.log",
+      "target_ip": "10.35.35.206",
+      "target_port": 22,
+      "target_host_role": "intranet_server",
+      "proxy_host": null,
+      "actor_connect_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 745,
+        "timestamp": 1642230584.9012163,
+        "utc": "2022-01-15T07:09:44.901216+00:00",
+        "message": "Connecting to SSH host",
+        "transition_id": "fddfed6d-98dc-4fd3-87a9-c2bc69fb319a"
+      },
+      "actor_connected": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 747,
+        "timestamp": 1642230589.3104663,
+        "utc": "2022-01-15T07:09:49.310466+00:00",
+        "message": "Connected to SSH host",
+        "transition_id": "fddfed6d-98dc-4fd3-87a9-c2bc69fb319a"
+      },
+      "actor_disconnect_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 824,
+        "timestamp": 1642231064.087365,
+        "utc": "2022-01-15T07:17:44.087365+00:00",
+        "message": "Disconnecting from SSH Host",
+        "transition_id": "29dfb4fe-cec7-4178-b61e-3fcc0444b6dc"
+      },
+      "actor_disconnected": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 825,
+        "timestamp": 1642231064.0929036,
+        "utc": "2022-01-15T07:17:44.092904+00:00",
+        "message": "Disconnected from SSH Host",
+        "transition_id": "29dfb4fe-cec7-4178-b61e-3fcc0444b6dc"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 746,
+          "timestamp": 1642230589.3077197,
+          "utc": "2022-01-15T07:09:49.307720+00:00",
+          "message": "Received shell output",
+          "transition_id": "fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+          "shell_output_sha256": "0d4eaa7a2a7d7743aab4d78f51f0096edb67f027357089733edbdf937faea180",
+          "shell_output_lines": 32
+        }
+      ],
+      "actor_failure_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 835,
+          "timestamp": 1642231398.6900423,
+          "utc": "2022-01-15T07:23:18.690042+00:00",
+          "message": "State machine execution failure",
+          "transition_id": "d71c5a79-cf26-415f-8897-d6e96ae58dc7"
+        },
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 836,
+          "timestamp": 1642231399.2745323,
+          "utc": "2022-01-15T07:23:19.274532+00:00",
+          "message": "Trying to recover statemachine from exception ",
+          "transition_id": "d71c5a79-cf26-415f-8897-d6e96ae58dc7"
+        }
+      ],
+      "command_event_ids": [
+        "ait:fox:normal_ssh_command:internal_employee_3:81196e1b-efe7-426d-8b0f-b578f33aea9f",
+        "ait:fox:normal_ssh_command:internal_employee_3:19e33cfc-1014-41fa-aa0d-7252dbb70d44",
+        "ait:fox:normal_ssh_command:internal_employee_3:21475f24-644a-4b90-afe9-a3462b7aab02",
+        "ait:fox:normal_ssh_command:internal_employee_3:4620fa83-62a0-443d-95b4-6032b01974bf",
+        "ait:fox:normal_ssh_command:internal_employee_3:6245eec8-1686-44f0-b2d5-876eb1c8dfe7",
+        "ait:fox:normal_ssh_command:internal_employee_3:95c9c7a9-ae2e-44d8-8d34-40c80519b089"
+      ],
+      "last_session_evidence_at": 1642231405.6079757,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "connect_interval_in_author_simulation": true,
+      "target_is_one_of_current_monitored_hosts": true,
+      "actor_session_closed": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "whole_connection_normal_label_assigned": false
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_session:remote_employee_2:2359fa5c-9b60-4c70-a407-69be12f7b3e3",
+      "kind": "normal_ssh_session",
+      "run": "fox",
+      "actor": "remote_employee_2",
+      "actor_ip": "192.168.129.254",
+      "actor_groups": [
+        "employee",
+        "internet",
+        "remote_employee"
+      ],
+      "source_member": "gather/remote_employee_2/logs/sm.log",
+      "target_ip": "10.35.35.206",
+      "target_port": 22,
+      "target_host_role": "intranet_server",
+      "proxy_host": null,
+      "actor_connect_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1074,
+        "timestamp": 1642239193.2389832,
+        "utc": "2022-01-15T09:33:13.238983+00:00",
+        "message": "Connecting to SSH host",
+        "transition_id": "2359fa5c-9b60-4c70-a407-69be12f7b3e3"
+      },
+      "actor_connected": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1076,
+        "timestamp": 1642239195.1114142,
+        "utc": "2022-01-15T09:33:15.111414+00:00",
+        "message": "Connected to SSH host",
+        "transition_id": "2359fa5c-9b60-4c70-a407-69be12f7b3e3"
+      },
+      "actor_disconnect_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1107,
+        "timestamp": 1642442045.6622,
+        "utc": "2022-01-17T17:54:05.662200+00:00",
+        "message": "Disconnecting from SSH Host",
+        "transition_id": null
+      },
+      "actor_disconnected": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1108,
+        "timestamp": 1642442045.667451,
+        "utc": "2022-01-17T17:54:05.667451+00:00",
+        "message": "Disconnected from SSH Host",
+        "transition_id": null
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 1075,
+          "timestamp": 1642239195.1072078,
+          "utc": "2022-01-15T09:33:15.107208+00:00",
+          "message": "Received shell output",
+          "transition_id": "2359fa5c-9b60-4c70-a407-69be12f7b3e3",
+          "shell_output_sha256": "f18746354c89f616489bbf0421eb99f0da6bd89a7387a8ab8648520544e0711d",
+          "shell_output_lines": 38
+        }
+      ],
+      "actor_failure_evidence": [
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 1106,
+          "timestamp": 1642442045.6534352,
+          "utc": "2022-01-17T17:54:05.653435+00:00",
+          "message": "State machine execution failure",
+          "transition_id": "d0b56b21-d773-4b1a-b9bb-2d1f8e9fdacc"
+        },
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 1830,
+          "timestamp": 1642442120.2403772,
+          "utc": "2022-01-17T17:55:20.240377+00:00",
+          "message": "Trying to recover statemachine from exception ",
+          "transition_id": "d0b56b21-d773-4b1a-b9bb-2d1f8e9fdacc"
+        }
+      ],
+      "command_event_ids": [
+        "ait:fox:normal_ssh_command:remote_employee_2:c0f72c28-e740-45b4-be8d-7275793c85e2",
+        "ait:fox:normal_ssh_command:remote_employee_2:d9ab0d4f-6715-4698-b465-c84992ea6643",
+        "ait:fox:normal_ssh_command:remote_employee_2:d0b56b21-d773-4b1a-b9bb-2d1f8e9fdacc"
+      ],
+      "last_session_evidence_at": 1642445289.7280767,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "connect_interval_in_author_simulation": true,
+      "target_is_one_of_current_monitored_hosts": true,
+      "actor_session_closed": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ],
+      "whole_connection_normal_label_assigned": false
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_session:remote_employee_2:d162e619-c1ae-43ce-8e4f-7f6544acec94",
+      "kind": "normal_ssh_session",
+      "run": "fox",
+      "actor": "remote_employee_2",
+      "actor_ip": "192.168.129.254",
+      "actor_groups": [
+        "employee",
+        "internet",
+        "remote_employee"
+      ],
+      "source_member": "gather/remote_employee_2/logs/sm.log",
+      "target_ip": "10.35.35.206",
+      "target_port": 22,
+      "target_host_role": "intranet_server",
+      "proxy_host": null,
+      "actor_connect_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 2216,
+        "timestamp": 1642451447.9953527,
+        "utc": "2022-01-17T20:30:47.995353+00:00",
+        "message": "Connecting to SSH host",
+        "transition_id": "d162e619-c1ae-43ce-8e4f-7f6544acec94"
+      },
+      "actor_connected": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 2218,
+        "timestamp": 1642451450.7017524,
+        "utc": "2022-01-17T20:30:50.701752+00:00",
+        "message": "Connected to SSH host",
+        "transition_id": "d162e619-c1ae-43ce-8e4f-7f6544acec94"
+      },
+      "actor_disconnect_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 2226,
+        "timestamp": 1642653989.0833929,
+        "utc": "2022-01-20T04:46:29.083393+00:00",
+        "message": "Disconnecting from SSH Host",
+        "transition_id": null
+      },
+      "actor_disconnected": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 2227,
+        "timestamp": 1642653989.0887828,
+        "utc": "2022-01-20T04:46:29.088783+00:00",
+        "message": "Disconnected from SSH Host",
+        "transition_id": null
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 2217,
+          "timestamp": 1642451450.698133,
+          "utc": "2022-01-17T20:30:50.698133+00:00",
+          "message": "Received shell output",
+          "transition_id": "d162e619-c1ae-43ce-8e4f-7f6544acec94",
+          "shell_output_sha256": "cc22b107a53c108d4f0d53b4d7b4f354b79518006a2fbd14b5d197fc85469e2d",
+          "shell_output_lines": 30
+        }
+      ],
+      "actor_failure_evidence": [
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 2225,
+          "timestamp": 1642653989.07655,
+          "utc": "2022-01-20T04:46:29.076550+00:00",
+          "message": "State machine execution failure",
+          "transition_id": "b947aed9-34db-4a1d-8208-4ff96f72cd3e"
+        },
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 2949,
+          "timestamp": 1642654062.9709437,
+          "utc": "2022-01-20T04:47:42.970944+00:00",
+          "message": "Trying to recover statemachine from exception ",
+          "transition_id": "b947aed9-34db-4a1d-8208-4ff96f72cd3e"
+        }
+      ],
+      "command_event_ids": [
+        "ait:fox:normal_ssh_command:remote_employee_2:b947aed9-34db-4a1d-8208-4ff96f72cd3e"
+      ],
+      "last_session_evidence_at": 1642654062.9709437,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "connect_interval_in_author_simulation": true,
+      "target_is_one_of_current_monitored_hosts": true,
+      "actor_session_closed": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CTfMByqi3ynZyXu0c"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CTfMByqi3ynZyXu0c"
+      ],
+      "whole_connection_normal_label_assigned": false
+    }
+  ],
+  "valid_same_host_commands": [
+    {
+      "event_id": "ait:fox:normal_ssh_command:internal_employee_3:81196e1b-efe7-426d-8b0f-b578f33aea9f",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "session_event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "tail /var/log/syslog",
+      "sudo": true,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 753,
+        "timestamp": 1642230608.4390347,
+        "utc": "2022-01-15T07:10:08.439035+00:00",
+        "message": "Executing command",
+        "transition_id": "81196e1b-efe7-426d-8b0f-b578f33aea9f"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 755,
+        "timestamp": 1642230608.442222,
+        "utc": "2022-01-15T07:10:08.442222+00:00",
+        "message": "Executed command",
+        "transition_id": "81196e1b-efe7-426d-8b0f-b578f33aea9f"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 754,
+          "timestamp": 1642230608.4412851,
+          "utc": "2022-01-15T07:10:08.441285+00:00",
+          "message": "Received shell output",
+          "transition_id": "81196e1b-efe7-426d-8b0f-b578f33aea9f",
+          "shell_output_sha256": "055539df4a0b804c58caf46c0cd2941af10d64c1395ddd8e50b5f55d945841e6",
+          "shell_output_lines": 1
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:internal_employee_3:19e33cfc-1014-41fa-aa0d-7252dbb70d44",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "session_event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "\u0003",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 762,
+        "timestamp": 1642230797.7154975,
+        "utc": "2022-01-15T07:13:17.715497+00:00",
+        "message": "Executing command",
+        "transition_id": "19e33cfc-1014-41fa-aa0d-7252dbb70d44"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 764,
+        "timestamp": 1642230797.723326,
+        "utc": "2022-01-15T07:13:17.723326+00:00",
+        "message": "Executed command",
+        "transition_id": "19e33cfc-1014-41fa-aa0d-7252dbb70d44"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 763,
+          "timestamp": 1642230797.722286,
+          "utc": "2022-01-15T07:13:17.722286+00:00",
+          "message": "Received shell output",
+          "transition_id": "19e33cfc-1014-41fa-aa0d-7252dbb70d44",
+          "shell_output_sha256": "dc01e0cb855b147567be1fb0f343c62636aaea0aceb3d4c13041491e2e3b9ebd",
+          "shell_output_lines": 12
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:internal_employee_3:21475f24-644a-4b90-afe9-a3462b7aab02",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "session_event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "ip addr",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 776,
+        "timestamp": 1642230810.6612823,
+        "utc": "2022-01-15T07:13:30.661282+00:00",
+        "message": "Executing command",
+        "transition_id": "21475f24-644a-4b90-afe9-a3462b7aab02"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 778,
+        "timestamp": 1642230810.9120164,
+        "utc": "2022-01-15T07:13:30.912016+00:00",
+        "message": "Executed command",
+        "transition_id": "21475f24-644a-4b90-afe9-a3462b7aab02"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 777,
+          "timestamp": 1642230810.9107242,
+          "utc": "2022-01-15T07:13:30.910724+00:00",
+          "message": "Received shell output",
+          "transition_id": "21475f24-644a-4b90-afe9-a3462b7aab02",
+          "shell_output_sha256": "5f09c3d5c02f2bd1fe7427df76beae2c514a9a59363b308c81af8eccef126111",
+          "shell_output_lines": 13
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:internal_employee_3:4620fa83-62a0-443d-95b4-6032b01974bf",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "session_event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "tail /var/log/syslog",
+      "sudo": true,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 790,
+        "timestamp": 1642230827.8793228,
+        "utc": "2022-01-15T07:13:47.879323+00:00",
+        "message": "Executing command",
+        "transition_id": "4620fa83-62a0-443d-95b4-6032b01974bf"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 792,
+        "timestamp": 1642230827.8823922,
+        "utc": "2022-01-15T07:13:47.882392+00:00",
+        "message": "Executed command",
+        "transition_id": "4620fa83-62a0-443d-95b4-6032b01974bf"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 791,
+          "timestamp": 1642230827.8814235,
+          "utc": "2022-01-15T07:13:47.881423+00:00",
+          "message": "Received shell output",
+          "transition_id": "4620fa83-62a0-443d-95b4-6032b01974bf",
+          "shell_output_sha256": "055539df4a0b804c58caf46c0cd2941af10d64c1395ddd8e50b5f55d945841e6",
+          "shell_output_lines": 1
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:internal_employee_3:6245eec8-1686-44f0-b2d5-876eb1c8dfe7",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "session_event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "\u0003",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 799,
+        "timestamp": 1642231011.603924,
+        "utc": "2022-01-15T07:16:51.603924+00:00",
+        "message": "Executing command",
+        "transition_id": "6245eec8-1686-44f0-b2d5-876eb1c8dfe7"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 801,
+        "timestamp": 1642231011.6075106,
+        "utc": "2022-01-15T07:16:51.607511+00:00",
+        "message": "Executed command",
+        "transition_id": "6245eec8-1686-44f0-b2d5-876eb1c8dfe7"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 800,
+          "timestamp": 1642231011.6066482,
+          "utc": "2022-01-15T07:16:51.606648+00:00",
+          "message": "Received shell output",
+          "transition_id": "6245eec8-1686-44f0-b2d5-876eb1c8dfe7",
+          "shell_output_sha256": "cb1f7a0be67598cd6e98da0fb4821372f7f193a6136b851500b8910803f56dfe",
+          "shell_output_lines": 11
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:internal_employee_3:95c9c7a9-ae2e-44d8-8d34-40c80519b089",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "internal_employee_3",
+      "session_event_id": "ait:fox:normal_ssh_session:internal_employee_3:fddfed6d-98dc-4fd3-87a9-c2bc69fb319a",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "ip addr",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 813,
+        "timestamp": 1642231038.393668,
+        "utc": "2022-01-15T07:17:18.393668+00:00",
+        "message": "Executing command",
+        "transition_id": "95c9c7a9-ae2e-44d8-8d34-40c80519b089"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/internal_employee_3/logs/sm.log",
+        "line": 815,
+        "timestamp": 1642231038.401623,
+        "utc": "2022-01-15T07:17:18.401623+00:00",
+        "message": "Executed command",
+        "transition_id": "95c9c7a9-ae2e-44d8-8d34-40c80519b089"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/internal_employee_3/logs/sm.log",
+          "line": 814,
+          "timestamp": 1642231038.4001772,
+          "utc": "2022-01-15T07:17:18.400177+00:00",
+          "message": "Received shell output",
+          "transition_id": "95c9c7a9-ae2e-44d8-8d34-40c80519b089",
+          "shell_output_sha256": "62b68276f11ba99cbb1ce9567757605643d577a4bab2bb16bc7ebad9b02214ea",
+          "shell_output_lines": 2
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CNArPw2fO9dbfOUI3"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:remote_employee_2:c0f72c28-e740-45b4-be8d-7275793c85e2",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "remote_employee_2",
+      "session_event_id": "ait:fox:normal_ssh_session:remote_employee_2:2359fa5c-9b60-4c70-a407-69be12f7b3e3",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "tail /var/log/syslog",
+      "sudo": true,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1082,
+        "timestamp": 1642239200.0964203,
+        "utc": "2022-01-15T09:33:20.096420+00:00",
+        "message": "Executing command",
+        "transition_id": "c0f72c28-e740-45b4-be8d-7275793c85e2"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1084,
+        "timestamp": 1642239200.1038783,
+        "utc": "2022-01-15T09:33:20.103878+00:00",
+        "message": "Executed command",
+        "transition_id": "c0f72c28-e740-45b4-be8d-7275793c85e2"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 1083,
+          "timestamp": 1642239200.1030366,
+          "utc": "2022-01-15T09:33:20.103037+00:00",
+          "message": "Received shell output",
+          "transition_id": "c0f72c28-e740-45b4-be8d-7275793c85e2",
+          "shell_output_sha256": "055539df4a0b804c58caf46c0cd2941af10d64c1395ddd8e50b5f55d945841e6",
+          "shell_output_lines": 1
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:remote_employee_2:d9ab0d4f-6715-4698-b465-c84992ea6643",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "remote_employee_2",
+      "session_event_id": "ait:fox:normal_ssh_session:remote_employee_2:2359fa5c-9b60-4c70-a407-69be12f7b3e3",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "\u0003",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1091,
+        "timestamp": 1642239483.321232,
+        "utc": "2022-01-15T09:38:03.321232+00:00",
+        "message": "Executing command",
+        "transition_id": "d9ab0d4f-6715-4698-b465-c84992ea6643"
+      },
+      "actor_executed_receipt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1093,
+        "timestamp": 1642239483.3247902,
+        "utc": "2022-01-15T09:38:03.324790+00:00",
+        "message": "Executed command",
+        "transition_id": "d9ab0d4f-6715-4698-b465-c84992ea6643"
+      },
+      "shell_output_evidence": [
+        {
+          "member": "gather/remote_employee_2/logs/sm.log",
+          "line": 1092,
+          "timestamp": 1642239483.323923,
+          "utc": "2022-01-15T09:38:03.323923+00:00",
+          "message": "Received shell output",
+          "transition_id": "d9ab0d4f-6715-4698-b465-c84992ea6643",
+          "shell_output_sha256": "eba34242d3b8800b534aa8aab5958d729e9cf51dc5000dad9841f8e94b58f051",
+          "shell_output_lines": 11
+        }
+      ],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:remote_employee_2:d0b56b21-d773-4b1a-b9bb-2d1f8e9fdacc",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "remote_employee_2",
+      "session_event_id": "ait:fox:normal_ssh_session:remote_employee_2:2359fa5c-9b60-4c70-a407-69be12f7b3e3",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "top",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 1105,
+        "timestamp": 1642239494.2433882,
+        "utc": "2022-01-15T09:38:14.243388+00:00",
+        "message": "Executing command",
+        "transition_id": "d0b56b21-d773-4b1a-b9bb-2d1f8e9fdacc"
+      },
+      "actor_executed_receipt": null,
+      "shell_output_evidence": [],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CxDSdw1n1YLIhfhBC6"
+      ]
+    },
+    {
+      "event_id": "ait:fox:normal_ssh_command:remote_employee_2:b947aed9-34db-4a1d-8208-4ff96f72cd3e",
+      "kind": "normal_ssh_command",
+      "run": "fox",
+      "actor": "remote_employee_2",
+      "session_event_id": "ait:fox:normal_ssh_session:remote_employee_2:d162e619-c1ae-43ce-8e4f-7f6544acec94",
+      "target_ip": "10.35.35.206",
+      "target_host_role": "intranet_server",
+      "command": "top",
+      "sudo": false,
+      "working_directory": null,
+      "actor_execution_attempt": {
+        "member": "gather/remote_employee_2/logs/sm.log",
+        "line": 2224,
+        "timestamp": 1642451464.4290955,
+        "utc": "2022-01-17T20:31:04.429096+00:00",
+        "message": "Executing command",
+        "transition_id": "b947aed9-34db-4a1d-8208-4ff96f72cd3e"
+      },
+      "actor_executed_receipt": null,
+      "shell_output_evidence": [],
+      "download_related_command_tokens": [],
+      "exit_status": null,
+      "exit_status_observed": false,
+      "source_registered_role": "V",
+      "training_admission": false,
+      "execution_interval_in_author_simulation": true,
+      "candidate_flow_ids": [
+        "ait:fox:intranet_server:CTfMByqi3ynZyXu0c"
+      ],
+      "mapping_status": "unique_candidate",
+      "same_monitored_host_candidate_flow_ids": [
+        "ait:fox:intranet_server:CTfMByqi3ynZyXu0c"
+      ]
+    }
+  ]
+}

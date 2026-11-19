@@ -1,0 +1,71 @@
+{
+  "schema": "source-coverage-port-batch-20261119-v1",
+  "execution_enabled": false,
+  "threads": 4,
+  "parameters": {
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "learning_rate": 0.1,
+    "early_stopping": false,
+    "random_state": 20261111,
+    "class_weight": "balanced",
+    "categorical_features": null
+  },
+  "arms": {
+    "narrow_raw8": [
+      "F_base",
+      false
+    ],
+    "mixed_raw8": [
+      "F_expanded",
+      false
+    ],
+    "narrow_ports_zero": [
+      "F_base",
+      true
+    ],
+    "mixed_ports_zero": [
+      "F_expanded",
+      true
+    ]
+  },
+  "primary_arm": "mixed_ports_zero",
+  "primary_arm_basis": "沿用 R26/R30 对端口来源捷径的处理，检验扩充监督后的行为统计基线；在读取本批次结果前固定。",
+  "comparison_policy": "四臂全部报告；其余三臂为固定对照，不根据 fox/OpTC 选择赢家或重训。",
+  "negative_result_scope": "阴性结果只否定这套 HGB、输入与监督设定的收益，不推出 raw8 或所有历史信息普遍无效。",
+  "code_sha256": {
+    "runner": "75157e925366e737f013af9edf98bcc533edcbadb55f6cc768669e4af70754ba",
+    "report_helper": "493afd66ff057e19c7ad23751738b4560dc453b62789a0fc1adbd10402822910"
+  },
+  "inputs": {
+    "rows": {
+      "path": "rows.jsonl.gz",
+      "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+    },
+    "cohorts": {
+      "path": "cohorts.json",
+      "sha256": "358f8ecc0da25d9be8fc7a553a880838aa8ce39a22f70981a17ab8e346b33277"
+    },
+    "events": {
+      "path": "events.jsonl.gz",
+      "sha256": "35f374ac82107456a3495523f4140ae6b86b53327f0aec7f7b03c2a675b0186d"
+    },
+    "normal_units": {
+      "path": "normal_units.jsonl.gz",
+      "sha256": "e1d7f3a71626b9586ae66d0b5628f8f111a7ce186028278e2dd5ec31b02b1551"
+    }
+  },
+  "allocation_unit": "complete source run/campaign; no cross-role split",
+  "calibration": {
+    "cohort": "C",
+    "alpha": 0.01,
+    "rule": "score > sorted_C[-(floor(.01*n)+1)]",
+    "population_guarantee": false
+  },
+  "model_selection": false,
+  "seed_search": false,
+  "refits": 0,
+  "target": "Control and malicious download; other author attacks retain truth but target_label=null",
+  "development_only": true,
+  "algorithm_innovation_claim": false
+}

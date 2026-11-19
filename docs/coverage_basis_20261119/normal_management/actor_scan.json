@@ -1,0 +1,3179 @@
+[
+  {
+    "run": "santos",
+    "actor": "internal_employee_2",
+    "counts": {
+      "Executing transition selecting_activity -> name='ssh_select_ssh_server' -> target=ssh_selected_server": 2,
+      "Selected SSH host": 2,
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": 2,
+      "Connecting to SSH host": 2,
+      "Connected to SSH host": 2,
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": 2,
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": 2,
+      "Executing command": 2,
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": 1,
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": 1,
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": 1,
+      "Disconnecting from SSH Host": 1,
+      "Disconnected from SSH Host": 1
+    },
+    "samples": {
+      "Executing transition selecting_activity -> name='ssh_select_ssh_server' -> target=ssh_selected_server": {
+        "line": 745,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Executing transition selecting_activity -> name='ssh_select_ssh_server' -> target=ssh_selected_server",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "ssh_selected_server",
+          "timestamp": 1642102751.6697483,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "8fcb58b5-908c-4bc3-8ed6-dee67ae0261e"
+        }
+      },
+      "Selected SSH host": {
+        "line": 746,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Selected SSH host",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "yYfHuWuy7J02",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "cscott",
+            "verify_host": false
+          },
+          "target": "ssh_selected_server",
+          "timestamp": 1642102751.6713035,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "8fcb58b5-908c-4bc3-8ed6-dee67ae0261e"
+        }
+      },
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": {
+        "line": 748,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "ssh_connected",
+          "timestamp": 1642102751.67468,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "89b574b0-8c81-4b53-8f8a-699f527ae15c"
+        }
+      },
+      "Connecting to SSH host": {
+        "line": 749,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connecting to SSH host",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "cscott@172.21.131.50"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "yYfHuWuy7J02",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "cscott",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642102751.675555,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "89b574b0-8c81-4b53-8f8a-699f527ae15c"
+        }
+      },
+      "Connected to SSH host": {
+        "line": 751,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connected to SSH host",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "cscott@172.21.131.50"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "yYfHuWuy7J02",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "cscott",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642102752.048348,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "89b574b0-8c81-4b53-8f8a-699f527ae15c"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": {
+        "line": 753,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642102780.8768034,
+          "transition": "ssh_select_command_chain",
+          "transition_id": "4d8dc0b9-0aa5-40bd-8ee1-6ec37e9e9230"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": {
+        "line": 756,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "ssh_sudo_check",
+          "timestamp": 1642102780.8784008,
+          "transition": "ssh_exec_command",
+          "transition_id": "cef6d5fc-22c5-4d5e-a061-d7d162925ca4"
+        }
+      },
+      "Executing command": {
+        "line": 757,
+        "record": {
+          "command": {
+            "chdir": null,
+            "cmd": "ps aux",
+            "expect": ".*@.*:.*\\$\\s+",
+            "idle_after": "tiny",
+            "sudo": false,
+            "sudo_user": null
+          },
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing command",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "yYfHuWuy7J02",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "cscott",
+            "verify_host": false
+          },
+          "target": "ssh_sudo_check",
+          "timestamp": 1642102780.8786438,
+          "transition": "ssh_exec_command",
+          "transition_id": "cef6d5fc-22c5-4d5e-a061-d7d162925ca4"
+        }
+      },
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": {
+        "line": 763,
+        "record": {
+          "current_state": "ssh_sudo_check",
+          "level": "info",
+          "message": "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642102781.614593,
+          "transition": "ssh_no_sudo_password_required",
+          "transition_id": "a2f11d52-a103-417d-9ee8-25f3b6d67ce5"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": {
+        "line": 765,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "ssh_connected",
+          "timestamp": 1642102781.615672,
+          "transition": "ssh_command_finished",
+          "transition_id": "575be399-a251-4289-bdee-6502477d6bb2"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": {
+        "line": 767,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "target": "selecting_activity",
+          "timestamp": 1642102808.8297198,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "5f91a6f8-11bb-422d-ad36-fb0b290589fa"
+        }
+      },
+      "Disconnecting from SSH Host": {
+        "line": 768,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Disconnecting from SSH Host",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "yYfHuWuy7J02",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "cscott",
+            "verify_host": false
+          },
+          "target": "selecting_activity",
+          "timestamp": 1642102808.830546,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "5f91a6f8-11bb-422d-ad36-fb0b290589fa"
+        }
+      },
+      "Disconnected from SSH Host": {
+        "line": 769,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Disconnected from SSH Host",
+          "run": "66280de2-8f6f-4418-be05-9a03340ac06e",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "yYfHuWuy7J02",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "cscott",
+            "verify_host": false
+          },
+          "target": "selecting_activity",
+          "timestamp": 1642102808.8366299,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "5f91a6f8-11bb-422d-ad36-fb0b290589fa"
+        }
+      }
+    }
+  },
+  {
+    "run": "santos",
+    "actor": "remote_employee_0",
+    "counts": {
+      "Connected to VPN": 3,
+      "Executing transition selecting_activity -> name='ssh_user_vpn_connect' -> target=ssh_user_vpn_connected": 3,
+      "Executing transition ssh_user_vpn_connected -> name='ssh_select_ssh_server' -> target=ssh_selected_server": 3,
+      "Selected SSH host": 3,
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": 3,
+      "Connecting to SSH host": 3,
+      "Connected to SSH host": 3,
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": 6,
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": 7,
+      "Executing command": 7,
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": 5,
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": 4,
+      "Disconnecting from SSH Host": 2,
+      "Disconnected from SSH Host": 2,
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": 1,
+      "Already connected to VPN": 1
+    },
+    "samples": {
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "horde_vpn_connected",
+          "timestamp": 1642085109.2503114,
+          "transition": "horde_vpn_connect",
+          "transition_id": "9e8a43b0-bc59-4350-85f3-87afd5b64777",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/gmorgan/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Executing transition selecting_activity -> name='ssh_user_vpn_connect' -> target=ssh_user_vpn_connected": {
+        "line": 136,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Executing transition selecting_activity -> name='ssh_user_vpn_connect' -> target=ssh_user_vpn_connected",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_user_vpn_connected",
+          "timestamp": 1642086228.0295048,
+          "transition": "ssh_user_vpn_connect",
+          "transition_id": "7d890d1c-290e-4a67-a274-25b34f8055b2"
+        }
+      },
+      "Executing transition ssh_user_vpn_connected -> name='ssh_select_ssh_server' -> target=ssh_selected_server": {
+        "line": 182,
+        "record": {
+          "current_state": "ssh_user_vpn_connected",
+          "level": "info",
+          "message": "Executing transition ssh_user_vpn_connected -> name='ssh_select_ssh_server' -> target=ssh_selected_server",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_selected_server",
+          "timestamp": 1642086232.3253443,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "fe6b4879-bd2e-4f1d-88b5-2d30594ce6eb"
+        }
+      },
+      "Selected SSH host": {
+        "line": 183,
+        "record": {
+          "current_state": "ssh_user_vpn_connected",
+          "level": "info",
+          "message": "Selected SSH host",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "55jt3dFwLyVL",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "gmorgan",
+            "verify_host": false
+          },
+          "target": "ssh_selected_server",
+          "timestamp": 1642086232.3259306,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "fe6b4879-bd2e-4f1d-88b5-2d30594ce6eb"
+        }
+      },
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": {
+        "line": 185,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_connected",
+          "timestamp": 1642086232.3270924,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "afa00451-818f-4691-8b2d-edeecdd141dc"
+        }
+      },
+      "Connecting to SSH host": {
+        "line": 186,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connecting to SSH host",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "gmorgan@172.21.131.50"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "55jt3dFwLyVL",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "gmorgan",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642086232.3275197,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "afa00451-818f-4691-8b2d-edeecdd141dc"
+        }
+      },
+      "Connected to SSH host": {
+        "line": 188,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connected to SSH host",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "gmorgan@172.21.131.50"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "55jt3dFwLyVL",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "gmorgan",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642086232.6503065,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "afa00451-818f-4691-8b2d-edeecdd141dc"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": {
+        "line": 190,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642086274.034369,
+          "transition": "ssh_select_command_chain",
+          "transition_id": "7d2a40b0-394b-439b-b751-0596cade11d5"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": {
+        "line": 193,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_sudo_check",
+          "timestamp": 1642086274.037333,
+          "transition": "ssh_exec_command",
+          "transition_id": "5289774a-b99f-41e7-a443-f78886e39157"
+        }
+      },
+      "Executing command": {
+        "line": 194,
+        "record": {
+          "command": {
+            "chdir": null,
+            "cmd": "ps aux",
+            "expect": ".*@.*:.*\\$\\s+",
+            "idle_after": "tiny",
+            "sudo": false,
+            "sudo_user": null
+          },
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing command",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "55jt3dFwLyVL",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "gmorgan",
+            "verify_host": false
+          },
+          "target": "ssh_sudo_check",
+          "timestamp": 1642086274.037874,
+          "transition": "ssh_exec_command",
+          "transition_id": "5289774a-b99f-41e7-a443-f78886e39157"
+        }
+      },
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": {
+        "line": 200,
+        "record": {
+          "current_state": "ssh_sudo_check",
+          "level": "info",
+          "message": "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642086275.154408,
+          "transition": "ssh_no_sudo_password_required",
+          "transition_id": "201e359e-51ef-4a12-a0d5-67500f2b0531"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": {
+        "line": 202,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_connected",
+          "timestamp": 1642086275.1556067,
+          "transition": "ssh_command_finished",
+          "transition_id": "f801a4ad-1965-402f-981f-5714894c4e15"
+        }
+      },
+      "Disconnecting from SSH Host": {
+        "line": 224,
+        "record": {
+          "level": "info",
+          "message": "Disconnecting from SSH Host",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "55jt3dFwLyVL",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "gmorgan",
+            "verify_host": false
+          },
+          "timestamp": 1642301527.436515
+        }
+      },
+      "Disconnected from SSH Host": {
+        "line": 225,
+        "record": {
+          "level": "info",
+          "message": "Disconnected from SSH Host",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.21.131.50",
+            "max_sudo_tries": 3,
+            "password": "55jt3dFwLyVL",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "gmorgan",
+            "verify_host": false
+          },
+          "timestamp": 1642301527.4383457
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": {
+        "line": 1021,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "selecting_activity",
+          "timestamp": 1642321447.9940822,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "f2cc7f7c-63fa-4ded-9e15-5fbe57c8fc2b"
+        }
+      },
+      "Already connected to VPN": {
+        "line": 1026,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "f4516e0d-3fef-4c5f-9d66-821335f12fc1",
+          "target": "ssh_user_vpn_connected",
+          "timestamp": 1642321634.6566408,
+          "transition": "ssh_user_vpn_connect",
+          "transition_id": "7c471bb7-19f6-4653-b08f-99bb79a1e34e"
+        }
+      }
+    }
+  },
+  {
+    "run": "santos",
+    "actor": "remote_employee_1",
+    "counts": {
+      "Connected to VPN": 26,
+      "Already connected to VPN": 109
+    },
+    "samples": {
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "431cfe80-fe85-45b0-a0d6-7b00663df151",
+          "target": "horde_vpn_connected",
+          "timestamp": 1642085109.8546638,
+          "transition": "horde_vpn_connect",
+          "transition_id": "4a26eb50-f4da-49cd-8ce4-29365af9e272",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/apierce/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Already connected to VPN": {
+        "line": 157,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "431cfe80-fe85-45b0-a0d6-7b00663df151",
+          "target": "web_browser_vpn_connected",
+          "timestamp": 1642089219.3428903,
+          "transition": "web_browser_vpn_connect",
+          "transition_id": "fec7283e-da68-4dcd-b681-000027d4b6f8"
+        }
+      }
+    }
+  },
+  {
+    "run": "santos",
+    "actor": "remote_employee_2",
+    "counts": {
+      "Connected to VPN": 56,
+      "Already connected to VPN": 127
+    },
+    "samples": {
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "10c0afdd-2f49-4c20-b2d5-79ce25c54a2a",
+          "target": "owncloud_vpn_connected",
+          "timestamp": 1642085100.8873956,
+          "transition": "owncloud_vpn_connect",
+          "transition_id": "094573b1-7c43-4d03-8a26-5c44a86016c9",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/sfitzgerald/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Already connected to VPN": {
+        "line": 201,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "10c0afdd-2f49-4c20-b2d5-79ce25c54a2a",
+          "target": "web_browser_vpn_connected",
+          "timestamp": 1642092755.9104648,
+          "transition": "web_browser_vpn_connect",
+          "transition_id": "1cce424b-9937-4144-b69e-5a023e4e4cba"
+        }
+      }
+    }
+  },
+  {
+    "run": "fox",
+    "actor": "internal_employee_3",
+    "counts": {
+      "Executing transition selecting_activity -> name='ssh_select_ssh_server' -> target=ssh_selected_server": 5,
+      "Selected SSH host": 5,
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": 5,
+      "Connecting to SSH host": 5,
+      "Connected to SSH host": 5,
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": 4,
+      "Disconnecting from SSH Host": 4,
+      "Disconnected from SSH Host": 4,
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": 9,
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": 11,
+      "Executing command": 11,
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": 10,
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": 8
+    },
+    "samples": {
+      "Executing transition selecting_activity -> name='ssh_select_ssh_server' -> target=ssh_selected_server": {
+        "line": 5,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Executing transition selecting_activity -> name='ssh_select_ssh_server' -> target=ssh_selected_server",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "ssh_selected_server",
+          "timestamp": 1642160493.9996195,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "d67f1fc0-9ef4-4910-b9e6-ae33559a97f6"
+        }
+      },
+      "Selected SSH host": {
+        "line": 6,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Selected SSH host",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "10.35.35.206",
+            "max_sudo_tries": 3,
+            "password": "H2zhbxoZKJ2W",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "phopkins",
+            "verify_host": false
+          },
+          "target": "ssh_selected_server",
+          "timestamp": 1642160494.003315,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "d67f1fc0-9ef4-4910-b9e6-ae33559a97f6"
+        }
+      },
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": {
+        "line": 8,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "ssh_connected",
+          "timestamp": 1642160494.0054848,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "c5617a53-6855-4ba5-81c8-741bc42336a2"
+        }
+      },
+      "Connecting to SSH host": {
+        "line": 9,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connecting to SSH host",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "phopkins@10.35.35.206"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "10.35.35.206",
+            "max_sudo_tries": 3,
+            "password": "H2zhbxoZKJ2W",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "phopkins",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642160494.0064716,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "c5617a53-6855-4ba5-81c8-741bc42336a2"
+        }
+      },
+      "Connected to SSH host": {
+        "line": 11,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connected to SSH host",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "phopkins@10.35.35.206"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "10.35.35.206",
+            "max_sudo_tries": 3,
+            "password": "H2zhbxoZKJ2W",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "phopkins",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642160497.3021057,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "c5617a53-6855-4ba5-81c8-741bc42336a2"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": {
+        "line": 13,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "selecting_activity",
+          "timestamp": 1642160515.4374514,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "1b5c3ec4-a0c3-4fa7-8d65-5c52ce29cb3a"
+        }
+      },
+      "Disconnecting from SSH Host": {
+        "line": 14,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Disconnecting from SSH Host",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "10.35.35.206",
+            "max_sudo_tries": 3,
+            "password": "H2zhbxoZKJ2W",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "phopkins",
+            "verify_host": false
+          },
+          "target": "selecting_activity",
+          "timestamp": 1642160515.4380841,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "1b5c3ec4-a0c3-4fa7-8d65-5c52ce29cb3a"
+        }
+      },
+      "Disconnected from SSH Host": {
+        "line": 15,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Disconnected from SSH Host",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "10.35.35.206",
+            "max_sudo_tries": 3,
+            "password": "H2zhbxoZKJ2W",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "phopkins",
+            "verify_host": false
+          },
+          "target": "selecting_activity",
+          "timestamp": 1642160515.442541,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "1b5c3ec4-a0c3-4fa7-8d65-5c52ce29cb3a"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": {
+        "line": 499,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642176072.1912756,
+          "transition": "ssh_select_command_chain",
+          "transition_id": "7102c3e8-9f7a-45c3-b19d-65b3e9e74e8b"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": {
+        "line": 502,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "ssh_sudo_check",
+          "timestamp": 1642176072.1935983,
+          "transition": "ssh_exec_command",
+          "transition_id": "5ac5b74e-6f73-4028-b34f-bff3f9bb1f88"
+        }
+      },
+      "Executing command": {
+        "line": 503,
+        "record": {
+          "command": {
+            "chdir": null,
+            "cmd": "ip addr",
+            "expect": ".*@.*:.*\\$\\s+",
+            "idle_after": "tiny",
+            "sudo": false,
+            "sudo_user": null
+          },
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing command",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "H2zhbxoZKJ2W",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "phopkins",
+            "verify_host": false
+          },
+          "target": "ssh_sudo_check",
+          "timestamp": 1642176072.1939678,
+          "transition": "ssh_exec_command",
+          "transition_id": "5ac5b74e-6f73-4028-b34f-bff3f9bb1f88"
+        }
+      },
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": {
+        "line": 509,
+        "record": {
+          "current_state": "ssh_sudo_check",
+          "level": "info",
+          "message": "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642176073.0362017,
+          "transition": "ssh_no_sudo_password_required",
+          "transition_id": "a00b73d0-0aa2-47fb-a955-ee15d8df8af3"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": {
+        "line": 511,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected",
+          "run": "068666fc-407a-4ffb-9b92-ffa8d24806bd",
+          "target": "ssh_connected",
+          "timestamp": 1642176073.036985,
+          "transition": "ssh_command_finished",
+          "transition_id": "6f9fd30e-44ce-4f4a-959a-07488d4f8ad7"
+        }
+      }
+    }
+  },
+  {
+    "run": "fox",
+    "actor": "remote_employee_0",
+    "counts": {
+      "Connected to VPN": 14,
+      "Already connected to VPN": 122
+    },
+    "samples": {
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "4bb6ae9b-8143-4fb8-9b23-ef0e83026e01",
+          "target": "horde_vpn_connected",
+          "timestamp": 1642160484.0866187,
+          "transition": "horde_vpn_connect",
+          "transition_id": "8c062ca3-9a12-44c5-a254-0c06ec36794a",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/dmorgan/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Already connected to VPN": {
+        "line": 135,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "4bb6ae9b-8143-4fb8-9b23-ef0e83026e01",
+          "target": "wpdiscuz_vpn_connected",
+          "timestamp": 1642167435.7878478,
+          "transition": "wpdiscuz_vpn_connect",
+          "transition_id": "abcee891-8cb6-490d-b1bb-ee159a34f112"
+        }
+      }
+    }
+  },
+  {
+    "run": "fox",
+    "actor": "remote_employee_1",
+    "counts": {
+      "Connected to VPN": 23,
+      "Already connected to VPN": 143
+    },
+    "samples": {
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "ac58c170-3021-4eef-ae7f-c7e4e220ddb6",
+          "target": "wp_editor_vpn_connected",
+          "timestamp": 1642160473.6766343,
+          "transition": "wp_editor_vpn_connect",
+          "transition_id": "9780fab2-9de7-4b6e-9c87-4a4fc4fc9e40",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/jwright/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Already connected to VPN": {
+        "line": 149,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "ac58c170-3021-4eef-ae7f-c7e4e220ddb6",
+          "target": "web_browser_vpn_connected",
+          "timestamp": 1642161436.8787544,
+          "transition": "web_browser_vpn_connect",
+          "transition_id": "2dd465b5-c622-4c3e-a1bd-6ea474982ea0"
+        }
+      }
+    }
+  },
+  {
+    "run": "fox",
+    "actor": "remote_employee_2",
+    "counts": {
+      "Executing transition selecting_activity -> name='ssh_user_vpn_connect' -> target=ssh_user_vpn_connected": 9,
+      "Connected to VPN": 6,
+      "Executing transition ssh_user_vpn_connected -> name='ssh_select_ssh_server' -> target=ssh_selected_server": 9,
+      "Selected SSH host": 9,
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": 9,
+      "Connecting to SSH host": 9,
+      "Connected to SSH host": 9,
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": 14,
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": 19,
+      "Executing command": 19,
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": 16,
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": 11,
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": 6,
+      "Disconnecting from SSH Host": 9,
+      "Disconnected from SSH Host": 9,
+      "Already connected to VPN": 23
+    },
+    "samples": {
+      "Executing transition selecting_activity -> name='ssh_user_vpn_connect' -> target=ssh_user_vpn_connected": {
+        "line": 5,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Executing transition selecting_activity -> name='ssh_user_vpn_connect' -> target=ssh_user_vpn_connected",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_user_vpn_connected",
+          "timestamp": 1642160479.6067023,
+          "transition": "ssh_user_vpn_connect",
+          "transition_id": "7bdb14c3-8079-4800-8aae-93cd42cbf68b"
+        }
+      },
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_user_vpn_connected",
+          "timestamp": 1642160484.0919805,
+          "transition": "ssh_user_vpn_connect",
+          "transition_id": "7bdb14c3-8079-4800-8aae-93cd42cbf68b",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/hwarren/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Executing transition ssh_user_vpn_connected -> name='ssh_select_ssh_server' -> target=ssh_selected_server": {
+        "line": 51,
+        "record": {
+          "current_state": "ssh_user_vpn_connected",
+          "level": "info",
+          "message": "Executing transition ssh_user_vpn_connected -> name='ssh_select_ssh_server' -> target=ssh_selected_server",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_selected_server",
+          "timestamp": 1642160484.0937574,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "fb44c261-9f78-411f-8e0d-20193661394e"
+        }
+      },
+      "Selected SSH host": {
+        "line": 52,
+        "record": {
+          "current_state": "ssh_user_vpn_connected",
+          "level": "info",
+          "message": "Selected SSH host",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "0OmYQgy96450",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "hwarren",
+            "verify_host": false
+          },
+          "target": "ssh_selected_server",
+          "timestamp": 1642160484.0947561,
+          "transition": "ssh_select_ssh_server",
+          "transition_id": "fb44c261-9f78-411f-8e0d-20193661394e"
+        }
+      },
+      "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected": {
+        "line": 54,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Executing transition ssh_selected_server -> name='ssh_ssh_connect' -> target=ssh_connected",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_connected",
+          "timestamp": 1642160484.097011,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "9b6a667c-1a64-4347-afd7-831dd5d302f2"
+        }
+      },
+      "Connecting to SSH host": {
+        "line": 55,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connecting to SSH host",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "hwarren@172.17.131.81"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "0OmYQgy96450",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "hwarren",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642160484.0999088,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "9b6a667c-1a64-4347-afd7-831dd5d302f2"
+        }
+      },
+      "Connected to SSH host": {
+        "line": 57,
+        "record": {
+          "current_state": "ssh_selected_server",
+          "level": "info",
+          "message": "Connected to SSH host",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "ssh_args": [
+            "ssh",
+            "-o",
+            "StrictHostKeyChecking=no",
+            "-p",
+            "22",
+            "hwarren@172.17.131.81"
+          ],
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "0OmYQgy96450",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "hwarren",
+            "verify_host": false
+          },
+          "target": "ssh_connected",
+          "timestamp": 1642160484.696413,
+          "transition": "ssh_ssh_connect",
+          "transition_id": "9b6a667c-1a64-4347-afd7-831dd5d302f2"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain": {
+        "line": 59,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_select_command_chain' -> target=ssh_executing_chain",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642160492.4002922,
+          "transition": "ssh_select_command_chain",
+          "transition_id": "86ce45ee-28bd-4974-8444-c907dcf7fc23"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check": {
+        "line": 62,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_exec_command' -> target=ssh_sudo_check",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_sudo_check",
+          "timestamp": 1642160492.4027307,
+          "transition": "ssh_exec_command",
+          "transition_id": "c92d1664-0126-43db-8da0-ced9337585d6"
+        }
+      },
+      "Executing command": {
+        "line": 63,
+        "record": {
+          "command": {
+            "chdir": null,
+            "cmd": "date",
+            "expect": ".*@.*:.*\\$\\s+",
+            "idle_after": "tiny",
+            "sudo": false,
+            "sudo_user": null
+          },
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing command",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "0OmYQgy96450",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "hwarren",
+            "verify_host": false
+          },
+          "target": "ssh_sudo_check",
+          "timestamp": 1642160492.40317,
+          "transition": "ssh_exec_command",
+          "transition_id": "c92d1664-0126-43db-8da0-ced9337585d6"
+        }
+      },
+      "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain": {
+        "line": 69,
+        "record": {
+          "current_state": "ssh_sudo_check",
+          "level": "info",
+          "message": "Executing transition ssh_sudo_check -> name='ssh_no_sudo_password_required' -> target=ssh_executing_chain",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_executing_chain",
+          "timestamp": 1642160493.3557818,
+          "transition": "ssh_no_sudo_password_required",
+          "transition_id": "c4df0ba7-0bf0-4ead-bb9f-c3b4154ff9ad"
+        }
+      },
+      "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected": {
+        "line": 71,
+        "record": {
+          "current_state": "ssh_executing_chain",
+          "level": "info",
+          "message": "Executing transition ssh_executing_chain -> name='ssh_command_finished' -> target=ssh_connected",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "ssh_connected",
+          "timestamp": 1642160493.356854,
+          "transition": "ssh_command_finished",
+          "transition_id": "457c1145-0893-4f8c-931e-9c096b612290"
+        }
+      },
+      "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity": {
+        "line": 87,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Executing transition ssh_connected -> name='ssh_ssh_disconnect' -> target=selecting_activity",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "selecting_activity",
+          "timestamp": 1642160538.1353002,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "713986e3-7026-4395-b239-46ebb998f3db"
+        }
+      },
+      "Disconnecting from SSH Host": {
+        "line": 88,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Disconnecting from SSH Host",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "0OmYQgy96450",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "hwarren",
+            "verify_host": false
+          },
+          "target": "selecting_activity",
+          "timestamp": 1642160538.1372864,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "713986e3-7026-4395-b239-46ebb998f3db"
+        }
+      },
+      "Disconnected from SSH Host": {
+        "line": 89,
+        "record": {
+          "current_state": "ssh_connected",
+          "level": "info",
+          "message": "Disconnected from SSH Host",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "ssh_host": {
+            "commands": [
+              [
+                {
+                  "chdir": null,
+                  "cmd": "date",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ip addr",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "ps aux",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "tail /var/log/syslog",
+                  "expect": ".*",
+                  "idle_after": "medium",
+                  "sudo": true,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ],
+              [
+                {
+                  "chdir": null,
+                  "cmd": "top",
+                  "expect": "avail Mem",
+                  "idle_after": "medium",
+                  "sudo": false,
+                  "sudo_user": null
+                },
+                {
+                  "chdir": null,
+                  "cmd": "\u0003",
+                  "expect": ".*@.*:.*\\$\\s+",
+                  "idle_after": "tiny",
+                  "sudo": false,
+                  "sudo_user": null
+                }
+              ]
+            ],
+            "force_password": false,
+            "host": "172.17.131.81",
+            "max_sudo_tries": 3,
+            "password": "0OmYQgy96450",
+            "port": 22,
+            "proxy_host": null,
+            "proxy_port": 22,
+            "proxy_ssh_key": null,
+            "proxy_username": null,
+            "proxy_verify_host": true,
+            "shell_prompt_pattern": ".*@.*:.*\\$\\s+",
+            "ssh_key": null,
+            "username": "hwarren",
+            "verify_host": false
+          },
+          "target": "selecting_activity",
+          "timestamp": 1642160538.1420631,
+          "transition": "ssh_ssh_disconnect",
+          "transition_id": "713986e3-7026-4395-b239-46ebb998f3db"
+        }
+      },
+      "Already connected to VPN": {
+        "line": 92,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "f54301a6-170d-45e0-8380-07c106ad6c78",
+          "target": "web_browser_vpn_connected",
+          "timestamp": 1642160722.8656898,
+          "transition": "web_browser_vpn_connect",
+          "transition_id": "8630e52a-d09b-4194-a5d2-a934c0f06d8a"
+        }
+      }
+    }
+  },
+  {
+    "run": "fox",
+    "actor": "remote_employee_3",
+    "counts": {
+      "Connected to VPN": 7,
+      "Already connected to VPN": 115
+    },
+    "samples": {
+      "Connected to VPN": {
+        "line": 49,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Connected to VPN",
+          "run": "5578f579-599b-49c2-95ac-6fe23c41daa4",
+          "target": "horde_vpn_connected",
+          "timestamp": 1642160473.0225103,
+          "transition": "horde_vpn_connect",
+          "transition_id": "5de3cc6c-b58f-4c85-a042-b2d7b4c2bb7b",
+          "vpn_cmd": [
+            "sudo",
+            "openvpn",
+            "--auth-nocache",
+            "--config",
+            "/home/bpotter/.openvpn/work.ovpn"
+          ]
+        }
+      },
+      "Already connected to VPN": {
+        "line": 88,
+        "record": {
+          "current_state": "selecting_activity",
+          "level": "info",
+          "message": "Already connected to VPN",
+          "run": "5578f579-599b-49c2-95ac-6fe23c41daa4",
+          "target": "horde_vpn_connected",
+          "timestamp": 1642161719.0862725,
+          "transition": "horde_vpn_connect",
+          "transition_id": "9838a8aa-fbfa-4afd-b23d-ea26b807933e"
+        }
+      }
+    }
+  }
+]

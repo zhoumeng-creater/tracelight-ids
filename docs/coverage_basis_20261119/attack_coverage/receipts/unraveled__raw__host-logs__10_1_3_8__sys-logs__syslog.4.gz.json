@@ -1,0 +1,12 @@
+{
+  "url": "https://dapt2021.s3.amazonaws.com/raw/host-logs/10_1_3_8/sys-logs/syslog.4.gz",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\raw\\host-logs\\10_1_3_8\\sys-logs\\syslog.4.gz",
+  "bytes": 196402,
+  "sha256": "0c3fd0b6e78e93610bfff41498658d516582f37b9e0b57eb2939482eb77d86d5",
+  "response_headers": {
+    "Content-Length": "196402",
+    "ETag": "\"e2a194bc568400af239cee9e8e21915d\"",
+    "Last-Modified": "Mon, 30 Aug 2021 05:52:23 GMT",
+    "Content-Type": "application/x-gzip"
+  }
+}

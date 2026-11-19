@@ -1,0 +1,335 @@
+{
+  "schema": "whole-run-normal-v2",
+  "all_service_connection_candidates": 16374,
+  "label_evidence_qualified": 3475,
+  "model_input_ready_among_label_qualified": 3475,
+  "label_qualified_but_input_pending": 0,
+  "source_role": "C_candidate_whole_run",
+  "v1_qualified_count": 1253,
+  "v1_role_unknown_270_still_label_qualified": 270,
+  "v1_role_unknown_270_now_C_candidates": 270,
+  "additional_label_qualified_after_removing_unjustified_gates": 2222,
+  "recovered_old_reasons": {
+    "connection_not_SF_complete": 1394,
+    "some_possible_proxy_requests_have_unknown_or_inactive_actor": 1341,
+    "no_supported_normal_business_episode": 499
+  },
+  "normal_candidates_by_conn_state": {
+    "SF": 2081,
+    "RSTO": 433,
+    "RSTR": 541,
+    "S3": 420
+  },
+  "normal_candidates_by_host": {
+    "intranet_server": 910,
+    "cloud_share": 2565
+  },
+  "normal_candidates_by_business_stratum": {
+    "intranet_browser_requests": 910,
+    "owncloud_interface_or_API": 2377,
+    "owncloud_file_transfer_request": 188
+  },
+  "actor_activity_candidates_referenced": 170,
+  "normal_connections_without_activity_episode_attribution": 499,
+  "normal_connections_with_incomplete_activity_candidates": 620,
+  "unique_service_file_requests": 33,
+  "exact_completed_normal_download_actions": 33,
+  "file_requests_without_completed_action_match": 0,
+  "file_request_connection_candidates": 188,
+  "old_C25_v1_exclusion_breakdown": {
+    "closed_episode_gate_only": 3,
+    "SF_input_gate_only": 6,
+    "not_downgraded_in_v1": 16
+  },
+  "old_C25_v2_label_qualified": 25,
+  "old_C25_v2_C_candidates": 25,
+  "qualified_strata": [
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTO",
+      "connections": 2
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTR",
+      "connections": 1
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "S3",
+      "connections": 1
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "SF",
+      "connections": 20
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTO",
+      "connections": 55
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTR",
+      "connections": 36
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "S3",
+      "connections": 60
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-21",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "SF",
+      "connections": 286
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-22",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTO",
+      "connections": 1
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-22",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTO",
+      "connections": 7
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-22",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTR",
+      "connections": 8
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-22",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "S3",
+      "connections": 13
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-22",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "SF",
+      "connections": 4
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTO",
+      "connections": 6
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTR",
+      "connections": 1
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "SF",
+      "connections": 55
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTO",
+      "connections": 47
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTR",
+      "connections": 109
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "S3",
+      "connections": 141
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-23",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "SF",
+      "connections": 454
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTO",
+      "connections": 10
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "RSTR",
+      "connections": 1
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "S3",
+      "connections": 3
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_file_transfer_request",
+      "conn_state": "SF",
+      "connections": 87
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTO",
+      "connections": 200
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "RSTR",
+      "connections": 147
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "S3",
+      "connections": 202
+    },
+    {
+      "capture_host": "cloud_share",
+      "date_utc": "2022-01-24",
+      "business_stratum": "owncloud_interface_or_API",
+      "conn_state": "SF",
+      "connections": 608
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-21",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTO",
+      "connections": 26
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-21",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTR",
+      "connections": 68
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-21",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "SF",
+      "connections": 166
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-22",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTO",
+      "connections": 33
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-22",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTR",
+      "connections": 93
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-22",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "SF",
+      "connections": 118
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-23",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTO",
+      "connections": 32
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-23",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTR",
+      "connections": 68
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-23",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "SF",
+      "connections": 117
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-24",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTO",
+      "connections": 14
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-24",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "RSTR",
+      "connections": 9
+    },
+    {
+      "capture_host": "intranet_server",
+      "date_utc": "2022-01-24",
+      "business_stratum": "intranet_browser_requests",
+      "conn_state": "SF",
+      "connections": 166
+    }
+  ],
+  "scope": "Only complete russellmitchell source; normal validation may use fox/OpTC under separate source assignments. No role change to source files is applied here.",
+  "independence": "Flows and activity candidates are correlated within one simulation, shared actors and services; no iid population guarantee follows from connection count.",
+  "training_calls": 0,
+  "score_calls": 0,
+  "threshold_calls": 0,
+  "source_normalization_runs": 0,
+  "source_tables_modified": false
+}

@@ -1,0 +1,10 @@
+{
+  "path": "gather/webserver/logs/apache2/cloud.smith.russellmitchell.com-access.log.1",
+  "bytes": 1281400,
+  "compressed": 59631,
+  "CRC": 1479037390,
+  "offset": 99993022,
+  "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.1",
+  "sha256": "b87709fc6b7385ae12324688892f5a7ded0f9967951e4297862c9b8b0d008294",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.1"
+}

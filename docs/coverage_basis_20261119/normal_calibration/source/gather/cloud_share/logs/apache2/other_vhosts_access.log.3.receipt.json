@@ -1,0 +1,11 @@
+{
+  "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+  "bytes": 2163226,
+  "compressed": 68349,
+  "CRC": 181942443,
+  "offset": 192270702,
+  "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&normal_calibration_offset=192270702",
+  "content_range": "bytes 192270702-192339562/522084364",
+  "sha256": "7fc9e50d4ebd484e5ed30ff913101580031a337610236b697f2bd342dd48d05a",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.3"
+}

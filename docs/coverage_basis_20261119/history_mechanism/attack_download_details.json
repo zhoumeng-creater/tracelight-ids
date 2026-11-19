@@ -1,0 +1,4582 @@
+[
+  {
+    "event_id": "ait:fox:wpdiscuz_complete_chain:download:password_list",
+    "run": "fox",
+    "kind": "attack_download",
+    "unit": "business_action",
+    "chain_id": "ait:fox:wpdiscuz_complete_chain",
+    "action_start": 1642509546.6098053,
+    "action_end": 1642509549.3542569,
+    "action_evidence": {
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:download:password_list",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "kind": "attack_download",
+      "object": "password_list",
+      "url": "http://192.168.130.77/rockyou.txt",
+      "intent": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 858,
+        "timestamp": 1642509546.6098053,
+        "utc": "2022-01-18T12:39:06.609805+00:00",
+        "message": "Downloading password list"
+      },
+      "completion": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 861,
+        "timestamp": 1642509549.3542569,
+        "utc": "2022-01-18T12:39:09.354257+00:00",
+        "message": "Downloaded password list"
+      },
+      "network_match_status": "pending_pcap",
+      "label_level": "actor_completion_pending_network_confirmation"
+    },
+    "candidate_flow_ids": [
+      "ait:fox:intranet_server:Cjaku94eD7bn5eoPj2"
+    ],
+    "candidate_count": 1,
+    "context_view_count": 1,
+    "all_candidates_have_context": true,
+    "candidate_details": [
+      {
+        "event_id": "ait:fox:wpdiscuz_complete_chain:download:password_list",
+        "kind": "attack_download",
+        "run": "fox",
+        "flow_id": "ait:fox:intranet_server:Cjaku94eD7bn5eoPj2",
+        "context_view_id": "ait:fox:intranet_server:Cjaku94eD7bn5eoPj2",
+        "group": "ait:fox:intranet_server:complete_capture",
+        "host": "ait:fox:intranet_server",
+        "query_time_mode": "available_at",
+        "query_available_at": 1642509565.060342,
+        "action_start": 1642509546.6098053,
+        "action_end": 1642509549.3542569,
+        "query_minus_action_end_seconds": 15.706085205078125,
+        "flow_label": 1,
+        "peer": "192.168.130.77",
+        "previous_flow_id": "ait:fox:intranet_server:Cm90jp3pPdOmEK3bM",
+        "previous_context_view_id": "ait:fox:intranet_server:Cm90jp3pPdOmEK3bM",
+        "previous_class": "confirmed_attack_chain_flow",
+        "previous_linked_event_ids": [
+          "ait:fox:wpdiscuz_complete_chain:webshell:854"
+        ],
+        "previous_available_at": 1642509549.816316,
+        "previous_peer": "172.17.130.196",
+        "same_peer_as_previous": 0,
+        "prefix_count": 11497,
+        "prefix_first_available_at": 1642159284.793038,
+        "prefix_span_seconds": 350280.26730418205,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 14,
+          "possible_attack_chain_candidate": 4,
+          "qualified_normal_flow": 52,
+          "possible_normal_business_candidate": 106,
+          "unknown_flow": 11321
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:779",
+            "kind": "webshell_command",
+            "action_start": 1642509484.700875,
+            "action_end": 1642509485.1468139,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CE0r2BFFqNoyzuuVd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509489.835907
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:fox:intranet_server:CcL1Ah3nhehSMfkULh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509490.148489
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:784",
+            "kind": "webshell_command",
+            "action_start": 1642509486.5168831,
+            "action_end": 1642509486.835556,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:C7YR4U2UJM8s7YMNCi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509491.872619
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:789",
+            "kind": "webshell_command",
+            "action_start": 1642509488.0303802,
+            "action_end": 1642509488.18639,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CvY5DM2DoYeDsJUJ16",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509493.997079
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:794",
+            "kind": "webshell_command",
+            "action_start": 1642509489.831015,
+            "action_end": 1642509490.1677985,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CQCc9q4esgy1XRAB01",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509496.256931
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:799",
+            "kind": "webshell_command",
+            "action_start": 1642509491.8672798,
+            "action_end": 1642509492.2402353,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CctbFc4fLkNKLB7OXk",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509497.794884
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:804",
+            "kind": "webshell_command",
+            "action_start": 1642509493.9918094,
+            "action_end": 1642509494.4244244,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CC7o8J2je9iFZKHJo9",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509499.414412
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:809",
+            "kind": "webshell_command",
+            "action_start": 1642509496.2510664,
+            "action_end": 1642509496.3732538,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CaDrXO3LDT0Mdx5SOb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509501.462092
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:814",
+            "kind": "webshell_command",
+            "action_start": 1642509497.7898147,
+            "action_end": 1642509497.91793,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CSeOdA1fspMTrjUI93",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509503.865431
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:819",
+            "kind": "webshell_command",
+            "action_start": 1642509499.3553455,
+            "action_end": 1642509499.4790325,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:C2ttvXD90cZMNDlz",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509505.286021
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:824",
+            "kind": "webshell_command",
+            "action_start": 1642509501.4568708,
+            "action_end": 1642509501.9349663,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CybYLE3LiIkxazUQLh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509507.806564
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:829",
+            "kind": "webshell_command",
+            "action_start": 1642509503.8583033,
+            "action_end": 1642509503.9815838,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CKLP3319jLeTsEvdik",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509508.996459
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:834",
+            "kind": "webshell_command",
+            "action_start": 1642509505.2808385,
+            "action_end": 1642509505.6214006,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CDyCO9OG1OkBflfY5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509510.986433
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:839",
+            "kind": "webshell_command",
+            "action_start": 1642509507.8016958,
+            "action_end": 1642509507.9285095,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CVg3284fo02szsLF74",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509512.926679
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:849",
+            "kind": "webshell_command",
+            "action_start": 1642509509.5463712,
+            "action_end": 1642509542.0666025,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CdZ9YC2FttwHSvaFOe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509547.052846
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:854",
+            "kind": "webshell_command",
+            "action_start": 1642509543.238261,
+            "action_end": 1642509544.3596501,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:Cm90jp3pPdOmEK3bM",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": true,
+                "export_times": [
+                  1642509549.816316
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": true
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+            "kind": "attack_download",
+            "action_start": 1642509509.5459087,
+            "action_end": 1642509542.0663235,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509547.051293
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:fox:intranet_server:CyyYte1hKA3vEfNQt4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509516.557283
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          }
+        ],
+        "exact_url_wget_commands": [
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:859",
+            "command": [
+              "wget",
+              "http://192.168.130.77/rockyou.txt"
+            ],
+            "intent": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 859,
+              "timestamp": 1642509546.6114807,
+              "utc": "2022-01-18T12:39:06.611481+00:00",
+              "message": "Sending web shell command"
+            },
+            "response": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 862,
+              "timestamp": 1642509549.3545675,
+              "utc": "2022-01-18T12:39:09.354568+00:00",
+              "message": "Web shell command response"
+            },
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CBMt6v2N3Vo0awE1v8",
+                "same_as_query_connection": false,
+                "export_times": [
+                  1642509565.060342
+                ],
+                "available_before_query": false,
+                "retained_in_last_slot": false
+              }
+            ]
+          }
+        ],
+        "observation": {
+          "connection_start": 1642509546.746751,
+          "observed_end": 1642509549.329059,
+          "replay_export_time": 1642509565.060342,
+          "source_address": "10.35.35.206",
+          "destination_address": "192.168.130.77",
+          "label": 1
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+    "run": "fox",
+    "kind": "attack_download",
+    "unit": "business_action",
+    "chain_id": "ait:fox:wpdiscuz_complete_chain",
+    "action_start": 1642509509.5459087,
+    "action_end": 1642509542.0663235,
+    "action_evidence": {
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "kind": "attack_download",
+      "object": "wphashcrack",
+      "url": "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz",
+      "intent": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 848,
+        "timestamp": 1642509509.5459087,
+        "utc": "2022-01-18T12:38:29.545909+00:00",
+        "message": "Downloading WPHashCrack"
+      },
+      "completion": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 851,
+        "timestamp": 1642509542.0663235,
+        "utc": "2022-01-18T12:39:02.066324+00:00",
+        "message": "Downloaded WPHashCrack"
+      },
+      "network_match_status": "pending_pcap",
+      "label_level": "actor_completion_pending_network_confirmation"
+    },
+    "candidate_flow_ids": [
+      "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+      "ait:fox:intranet_server:CyyYte1hKA3vEfNQt4"
+    ],
+    "candidate_count": 2,
+    "context_view_count": 2,
+    "all_candidates_have_context": true,
+    "candidate_details": [
+      {
+        "event_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+        "kind": "attack_download",
+        "run": "fox",
+        "flow_id": "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+        "context_view_id": "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+        "group": "ait:fox:intranet_server:complete_capture",
+        "host": "ait:fox:intranet_server",
+        "query_time_mode": "available_at",
+        "query_available_at": 1642509547.051293,
+        "action_start": 1642509509.5459087,
+        "action_end": 1642509542.0663235,
+        "query_minus_action_end_seconds": 4.9849693775177,
+        "flow_label": null,
+        "peer": "140.82.121.10",
+        "previous_flow_id": "ait:fox:intranet_server:CZ8coB1ExnfT2tvB12",
+        "previous_context_view_id": "ait:fox:intranet_server:CZ8coB1ExnfT2tvB12",
+        "previous_class": "unknown_flow",
+        "previous_linked_event_ids": [],
+        "previous_available_at": 1642509521.256957,
+        "previous_peer": "10.35.32.1",
+        "same_peer_as_previous": 0,
+        "prefix_count": 11494,
+        "prefix_first_available_at": 1642159284.793038,
+        "prefix_span_seconds": 350262.2582550049,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 12,
+          "possible_attack_chain_candidate": 3,
+          "qualified_normal_flow": 52,
+          "possible_normal_business_candidate": 106,
+          "unknown_flow": 11321
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:779",
+            "kind": "webshell_command",
+            "action_start": 1642509484.700875,
+            "action_end": 1642509485.1468139,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CE0r2BFFqNoyzuuVd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509489.835907
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:fox:intranet_server:CcL1Ah3nhehSMfkULh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509490.148489
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:784",
+            "kind": "webshell_command",
+            "action_start": 1642509486.5168831,
+            "action_end": 1642509486.835556,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:C7YR4U2UJM8s7YMNCi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509491.872619
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:789",
+            "kind": "webshell_command",
+            "action_start": 1642509488.0303802,
+            "action_end": 1642509488.18639,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CvY5DM2DoYeDsJUJ16",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509493.997079
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:794",
+            "kind": "webshell_command",
+            "action_start": 1642509489.831015,
+            "action_end": 1642509490.1677985,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CQCc9q4esgy1XRAB01",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509496.256931
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:799",
+            "kind": "webshell_command",
+            "action_start": 1642509491.8672798,
+            "action_end": 1642509492.2402353,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CctbFc4fLkNKLB7OXk",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509497.794884
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:804",
+            "kind": "webshell_command",
+            "action_start": 1642509493.9918094,
+            "action_end": 1642509494.4244244,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CC7o8J2je9iFZKHJo9",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509499.414412
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:809",
+            "kind": "webshell_command",
+            "action_start": 1642509496.2510664,
+            "action_end": 1642509496.3732538,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CaDrXO3LDT0Mdx5SOb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509501.462092
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:814",
+            "kind": "webshell_command",
+            "action_start": 1642509497.7898147,
+            "action_end": 1642509497.91793,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CSeOdA1fspMTrjUI93",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509503.865431
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:819",
+            "kind": "webshell_command",
+            "action_start": 1642509499.3553455,
+            "action_end": 1642509499.4790325,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:C2ttvXD90cZMNDlz",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509505.286021
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:824",
+            "kind": "webshell_command",
+            "action_start": 1642509501.4568708,
+            "action_end": 1642509501.9349663,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CybYLE3LiIkxazUQLh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509507.806564
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:829",
+            "kind": "webshell_command",
+            "action_start": 1642509503.8583033,
+            "action_end": 1642509503.9815838,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CKLP3319jLeTsEvdik",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509508.996459
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:834",
+            "kind": "webshell_command",
+            "action_start": 1642509505.2808385,
+            "action_end": 1642509505.6214006,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CDyCO9OG1OkBflfY5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509510.986433
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:839",
+            "kind": "webshell_command",
+            "action_start": 1642509507.8016958,
+            "action_end": 1642509507.9285095,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CVg3284fo02szsLF74",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509512.926679
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          }
+        ],
+        "exact_url_wget_commands": [
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:849",
+            "command": [
+              "wget",
+              "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz"
+            ],
+            "intent": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 849,
+              "timestamp": 1642509509.5463712,
+              "utc": "2022-01-18T12:38:29.546371+00:00",
+              "message": "Sending web shell command"
+            },
+            "response": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 852,
+              "timestamp": 1642509542.0666025,
+              "utc": "2022-01-18T12:39:02.066602+00:00",
+              "message": "Web shell command response"
+            },
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CdZ9YC2FttwHSvaFOe",
+                "same_as_query_connection": false,
+                "export_times": [
+                  1642509547.052846
+                ],
+                "available_before_query": false,
+                "retained_in_last_slot": false
+              }
+            ]
+          }
+        ],
+        "observation": {
+          "connection_start": 1642509511.297077,
+          "observed_end": 1642509542.051229,
+          "replay_export_time": 1642509547.051293,
+          "source_address": "10.35.35.206",
+          "destination_address": "140.82.121.10",
+          "label": null
+        }
+      },
+      {
+        "event_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+        "kind": "attack_download",
+        "run": "fox",
+        "flow_id": "ait:fox:intranet_server:CyyYte1hKA3vEfNQt4",
+        "context_view_id": "ait:fox:intranet_server:CyyYte1hKA3vEfNQt4",
+        "group": "ait:fox:intranet_server:complete_capture",
+        "host": "ait:fox:intranet_server",
+        "query_time_mode": "available_at",
+        "query_available_at": 1642509516.557283,
+        "action_start": 1642509509.5459087,
+        "action_end": 1642509542.0663235,
+        "query_minus_action_end_seconds": -25.509040594100952,
+        "flow_label": null,
+        "peer": "140.82.121.3",
+        "previous_flow_id": "ait:fox:intranet_server:CVg3284fo02szsLF74",
+        "previous_context_view_id": "ait:fox:intranet_server:CVg3284fo02szsLF74",
+        "previous_class": "confirmed_attack_chain_flow",
+        "previous_linked_event_ids": [
+          "ait:fox:wpdiscuz_complete_chain:webshell:839"
+        ],
+        "previous_available_at": 1642509512.926679,
+        "previous_peer": "172.17.130.196",
+        "same_peer_as_previous": 0,
+        "prefix_count": 11488,
+        "prefix_first_available_at": 1642159284.793038,
+        "prefix_span_seconds": 350231.76424503326,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 12,
+          "possible_attack_chain_candidate": 2,
+          "qualified_normal_flow": 52,
+          "possible_normal_business_candidate": 106,
+          "unknown_flow": 11316
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:779",
+            "kind": "webshell_command",
+            "action_start": 1642509484.700875,
+            "action_end": 1642509485.1468139,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CE0r2BFFqNoyzuuVd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509489.835907
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:fox:intranet_server:CcL1Ah3nhehSMfkULh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509490.148489
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:784",
+            "kind": "webshell_command",
+            "action_start": 1642509486.5168831,
+            "action_end": 1642509486.835556,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:C7YR4U2UJM8s7YMNCi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509491.872619
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:789",
+            "kind": "webshell_command",
+            "action_start": 1642509488.0303802,
+            "action_end": 1642509488.18639,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CvY5DM2DoYeDsJUJ16",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509493.997079
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:794",
+            "kind": "webshell_command",
+            "action_start": 1642509489.831015,
+            "action_end": 1642509490.1677985,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CQCc9q4esgy1XRAB01",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509496.256931
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:799",
+            "kind": "webshell_command",
+            "action_start": 1642509491.8672798,
+            "action_end": 1642509492.2402353,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CctbFc4fLkNKLB7OXk",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509497.794884
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:804",
+            "kind": "webshell_command",
+            "action_start": 1642509493.9918094,
+            "action_end": 1642509494.4244244,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CC7o8J2je9iFZKHJo9",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509499.414412
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:809",
+            "kind": "webshell_command",
+            "action_start": 1642509496.2510664,
+            "action_end": 1642509496.3732538,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CaDrXO3LDT0Mdx5SOb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509501.462092
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:814",
+            "kind": "webshell_command",
+            "action_start": 1642509497.7898147,
+            "action_end": 1642509497.91793,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CSeOdA1fspMTrjUI93",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509503.865431
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:819",
+            "kind": "webshell_command",
+            "action_start": 1642509499.3553455,
+            "action_end": 1642509499.4790325,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:C2ttvXD90cZMNDlz",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509505.286021
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:824",
+            "kind": "webshell_command",
+            "action_start": 1642509501.4568708,
+            "action_end": 1642509501.9349663,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CybYLE3LiIkxazUQLh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509507.806564
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:829",
+            "kind": "webshell_command",
+            "action_start": 1642509503.8583033,
+            "action_end": 1642509503.9815838,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CKLP3319jLeTsEvdik",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509508.996459
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:834",
+            "kind": "webshell_command",
+            "action_start": 1642509505.2808385,
+            "action_end": 1642509505.6214006,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CDyCO9OG1OkBflfY5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642509510.986433
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:839",
+            "kind": "webshell_command",
+            "action_start": 1642509507.8016958,
+            "action_end": 1642509507.9285095,
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CVg3284fo02szsLF74",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": true,
+                "export_times": [
+                  1642509512.926679
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": true
+          }
+        ],
+        "exact_url_wget_commands": [
+          {
+            "event_id": "ait:fox:wpdiscuz_complete_chain:webshell:849",
+            "command": [
+              "wget",
+              "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz"
+            ],
+            "intent": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 849,
+              "timestamp": 1642509509.5463712,
+              "utc": "2022-01-18T12:38:29.546371+00:00",
+              "message": "Sending web shell command"
+            },
+            "response": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 852,
+              "timestamp": 1642509542.0666025,
+              "utc": "2022-01-18T12:39:02.066602+00:00",
+              "message": "Web shell command response"
+            },
+            "candidates": [
+              {
+                "flow_id": "ait:fox:intranet_server:CdZ9YC2FttwHSvaFOe",
+                "same_as_query_connection": false,
+                "export_times": [
+                  1642509547.052846
+                ],
+                "available_before_query": false,
+                "retained_in_last_slot": false
+              }
+            ]
+          }
+        ],
+        "observation": {
+          "connection_start": 1642509509.967194,
+          "observed_end": 1642509511.553689,
+          "replay_export_time": 1642509516.557283,
+          "source_address": "10.35.35.206",
+          "destination_address": "140.82.121.3",
+          "label": null
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "ait:santos:wpdiscuz_complete_chain:download:password_list",
+    "run": "santos",
+    "kind": "attack_download",
+    "unit": "business_action",
+    "chain_id": "ait:santos:wpdiscuz_complete_chain",
+    "action_start": 1642418679.1718335,
+    "action_end": 1642418681.3093953,
+    "action_evidence": {
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:download:password_list",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "kind": "attack_download",
+      "object": "password_list",
+      "url": "http://10.229.2.216/rockyou.txt",
+      "intent": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 385,
+        "timestamp": 1642418679.1718335,
+        "utc": "2022-01-17T11:24:39.171834+00:00",
+        "message": "Downloading password list"
+      },
+      "completion": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 388,
+        "timestamp": 1642418681.3093953,
+        "utc": "2022-01-17T11:24:41.309395+00:00",
+        "message": "Downloaded password list"
+      },
+      "network_match_status": "pending_pcap",
+      "label_level": "actor_completion_pending_network_confirmation"
+    },
+    "candidate_flow_ids": [
+      "ait:santos:intranet_server:CCXIoY2v3POzsti4f"
+    ],
+    "candidate_count": 1,
+    "context_view_count": 1,
+    "all_candidates_have_context": true,
+    "candidate_details": [
+      {
+        "event_id": "ait:santos:wpdiscuz_complete_chain:download:password_list",
+        "kind": "attack_download",
+        "run": "santos",
+        "flow_id": "ait:santos:intranet_server:CCXIoY2v3POzsti4f",
+        "context_view_id": "ait:santos:intranet_server:CCXIoY2v3POzsti4f",
+        "group": "ait:santos:intranet_server:complete_capture",
+        "host": "ait:santos:intranet_server",
+        "query_time_mode": "available_at",
+        "query_available_at": 1642418690.782855,
+        "action_start": 1642418679.1718335,
+        "action_end": 1642418681.3093953,
+        "query_minus_action_end_seconds": 9.473459720611572,
+        "flow_label": 1,
+        "peer": "10.229.2.216",
+        "previous_flow_id": "ait:santos:intranet_server:Ccp9p44u3bo7dsAyYl",
+        "previous_context_view_id": "ait:santos:intranet_server:Ccp9p44u3bo7dsAyYl",
+        "previous_class": "confirmed_attack_chain_flow",
+        "previous_linked_event_ids": [
+          "ait:santos:wpdiscuz_complete_chain:webshell:381"
+        ],
+        "previous_available_at": 1642418685.307283,
+        "previous_peer": "172.21.128.119",
+        "same_peer_as_previous": 0,
+        "prefix_count": 5283,
+        "prefix_first_available_at": 1642084685.125894,
+        "prefix_span_seconds": 334005.6569609642,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 29,
+          "possible_attack_chain_candidate": 4,
+          "qualified_normal_flow": 107,
+          "possible_normal_business_candidate": 10,
+          "unknown_flow": 5133
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:231",
+            "kind": "webshell_command",
+            "action_start": 1642418580.3350146,
+            "action_end": 1642418580.4661314,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CKOx9K291NtrNR6C63",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418587.256282
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:santos:intranet_server:CvuGtp46PiAKIXgCLg",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418587.256282
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:236",
+            "kind": "webshell_command",
+            "action_start": 1642418583.5050712,
+            "action_end": 1642418583.6206234,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CcPoQe1XNDtLo5n4N8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418591.353108
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:241",
+            "kind": "webshell_command",
+            "action_start": 1642418587.2506752,
+            "action_end": 1642418587.4073584,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CU0twA2NYTBNYKSEY2",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418594.750737
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:246",
+            "kind": "webshell_command",
+            "action_start": 1642418591.3478587,
+            "action_end": 1642418591.492727,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:COAHgP3jVLJHKFQAbd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418596.512897
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:251",
+            "kind": "webshell_command",
+            "action_start": 1642418594.7466,
+            "action_end": 1642418594.8709745,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CX4SGh1iNOiPhsiH81",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418600.67088
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:256",
+            "kind": "webshell_command",
+            "action_start": 1642418596.5075474,
+            "action_end": 1642418596.6185064,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CIgvPJ23pndXzLDQi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418602.846694
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:261",
+            "kind": "webshell_command",
+            "action_start": 1642418599.1603694,
+            "action_end": 1642418599.2731724,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C4uTbilkCIMa71AJb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418606.214388
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:266",
+            "kind": "webshell_command",
+            "action_start": 1642418601.1408916,
+            "action_end": 1642418601.2703185,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CNfU8k4rat65kTJzpb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418606.255637
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:271",
+            "kind": "webshell_command",
+            "action_start": 1642418602.8414202,
+            "action_end": 1642418602.95297,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CuaGN14pZUThDQxGne",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418608.969868
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:276",
+            "kind": "webshell_command",
+            "action_start": 1642418606.2084527,
+            "action_end": 1642418606.322134,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CSm2eX3qQWRxmFVzye",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418611.354079
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:281",
+            "kind": "webshell_command",
+            "action_start": 1642418608.9647071,
+            "action_end": 1642418609.1025925,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CwJ8eRI5ul9kRp9kl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418614.544622
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:286",
+            "kind": "webshell_command",
+            "action_start": 1642418611.3486753,
+            "action_end": 1642418611.515451,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:COZT2c14WClhJxN6nl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418617.541246
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:291",
+            "kind": "webshell_command",
+            "action_start": 1642418615.2395413,
+            "action_end": 1642418615.3534768,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CqqVFA1HAntATUUGde",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418621.660065
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:296",
+            "kind": "webshell_command",
+            "action_start": 1642418617.5366228,
+            "action_end": 1642418617.6438856,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CQBNaZaru6LKjlVs4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418623.557583
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:301",
+            "kind": "webshell_command",
+            "action_start": 1642418619.8573368,
+            "action_end": 1642418619.97135,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C7Qd322IgBshKM4Vm7",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418625.253809
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:306",
+            "kind": "webshell_command",
+            "action_start": 1642418621.6549742,
+            "action_end": 1642418621.7664874,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CKdY4n2F77iCuHlD4k",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418628.838486
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:311",
+            "kind": "webshell_command",
+            "action_start": 1642418623.5523388,
+            "action_end": 1642418623.6724842,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:ChmcUrOmy55gp3Z5j",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418628.838486
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:316",
+            "kind": "webshell_command",
+            "action_start": 1642418625.248149,
+            "action_end": 1642418625.3787434,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:ChUwUsAYemTSYkfz8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418631.197755
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:321",
+            "kind": "webshell_command",
+            "action_start": 1642418628.832204,
+            "action_end": 1642418628.9517367,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C72AuMiyPMoZb1khd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418634.739914
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:326",
+            "kind": "webshell_command",
+            "action_start": 1642418631.1906478,
+            "action_end": 1642418631.4711733,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CbUW3n29WNBDNYLg8k",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418637.430907
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:331",
+            "kind": "webshell_command",
+            "action_start": 1642418634.7339609,
+            "action_end": 1642418634.8606591,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CWXn6e1sbTn36GcSge",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418641.064193
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:336",
+            "kind": "webshell_command",
+            "action_start": 1642418637.4256926,
+            "action_end": 1642418637.5621717,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CPXE854T1il6IiCUO8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418644.151581
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:341",
+            "kind": "webshell_command",
+            "action_start": 1642418639.2474222,
+            "action_end": 1642418639.5269709,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Cizxi54gjtO22AZoBe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418644.959027
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:346",
+            "kind": "webshell_command",
+            "action_start": 1642418641.0587988,
+            "action_end": 1642418641.173952,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Cc7bru4FIax0Lyhur4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418647.410915
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:351",
+            "kind": "webshell_command",
+            "action_start": 1642418644.144998,
+            "action_end": 1642418644.260765,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CJpxMFnmQA9zCpJg8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418651.06528
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:356",
+            "kind": "webshell_command",
+            "action_start": 1642418647.4050007,
+            "action_end": 1642418647.5146072,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Ctxh5A2AxiIdoJnci4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418654.067639
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:361",
+            "kind": "webshell_command",
+            "action_start": 1642418651.0581737,
+            "action_end": 1642418651.1826622,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CRtEbw2z54gRzZquDd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418656.210123
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:366",
+            "kind": "webshell_command",
+            "action_start": 1642418654.0612597,
+            "action_end": 1642418654.3570483,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CMBGDOSt9oC8OCs71",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418659.355993
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:376",
+            "kind": "webshell_command",
+            "action_start": 1642418656.203269,
+            "action_end": 1642418672.6295266,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CidFRg1eWhsxbMwXC5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418679.177729
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:381",
+            "kind": "webshell_command",
+            "action_start": 1642418675.5620959,
+            "action_end": 1642418676.6744971,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Ccp9p44u3bo7dsAyYl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": true,
+                "export_times": [
+                  1642418685.307283
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": true
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+            "kind": "attack_download",
+            "action_start": 1642418656.2027395,
+            "action_end": 1642418672.6291978,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418679.177729
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:santos:intranet_server:CwXMJf1cqy4ultcTI2",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418661.974627
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          }
+        ],
+        "exact_url_wget_commands": [
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:386",
+            "command": [
+              "wget",
+              "http://10.229.2.216/rockyou.txt"
+            ],
+            "intent": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 386,
+              "timestamp": 1642418679.1725607,
+              "utc": "2022-01-17T11:24:39.172561+00:00",
+              "message": "Sending web shell command"
+            },
+            "response": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 389,
+              "timestamp": 1642418681.309796,
+              "utc": "2022-01-17T11:24:41.309796+00:00",
+              "message": "Web shell command response"
+            },
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CWjJmFsrd3nOv7JGa",
+                "same_as_query_connection": false,
+                "export_times": [
+                  1642418690.782855
+                ],
+                "available_before_query": false,
+                "retained_in_last_slot": false
+              }
+            ]
+          }
+        ],
+        "observation": {
+          "connection_start": 1642418679.46954,
+          "observed_end": 1642418681.27702,
+          "replay_export_time": 1642418690.782855,
+          "source_address": "192.168.104.155",
+          "destination_address": "10.229.2.216",
+          "label": 1
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+    "run": "santos",
+    "kind": "attack_download",
+    "unit": "business_action",
+    "chain_id": "ait:santos:wpdiscuz_complete_chain",
+    "action_start": 1642418656.2027395,
+    "action_end": 1642418672.6291978,
+    "action_evidence": {
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "kind": "attack_download",
+      "object": "wphashcrack",
+      "url": "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz",
+      "intent": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 375,
+        "timestamp": 1642418656.2027395,
+        "utc": "2022-01-17T11:24:16.202739+00:00",
+        "message": "Downloading WPHashCrack"
+      },
+      "completion": {
+        "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+        "line": 378,
+        "timestamp": 1642418672.6291978,
+        "utc": "2022-01-17T11:24:32.629198+00:00",
+        "message": "Downloaded WPHashCrack"
+      },
+      "network_match_status": "pending_pcap",
+      "label_level": "actor_completion_pending_network_confirmation"
+    },
+    "candidate_flow_ids": [
+      "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+      "ait:santos:intranet_server:CwXMJf1cqy4ultcTI2"
+    ],
+    "candidate_count": 2,
+    "context_view_count": 2,
+    "all_candidates_have_context": true,
+    "candidate_details": [
+      {
+        "event_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+        "kind": "attack_download",
+        "run": "santos",
+        "flow_id": "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+        "context_view_id": "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+        "group": "ait:santos:intranet_server:complete_capture",
+        "host": "ait:santos:intranet_server",
+        "query_time_mode": "available_at",
+        "query_available_at": 1642418679.177729,
+        "action_start": 1642418656.2027395,
+        "action_end": 1642418672.6291978,
+        "query_minus_action_end_seconds": 6.5485310554504395,
+        "flow_label": null,
+        "peer": "140.82.121.10",
+        "previous_flow_id": "ait:santos:intranet_server:CkfUn84KIXFqcfVFO5",
+        "previous_context_view_id": "ait:santos:intranet_server:CkfUn84KIXFqcfVFO5",
+        "previous_class": "unknown_flow",
+        "previous_linked_event_ids": [],
+        "previous_available_at": 1642418666.691987,
+        "previous_peer": "192.168.104.1",
+        "same_peer_as_previous": 0,
+        "prefix_count": 5280,
+        "prefix_first_available_at": 1642084685.125894,
+        "prefix_span_seconds": 333994.0518348217,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 27,
+          "possible_attack_chain_candidate": 3,
+          "qualified_normal_flow": 107,
+          "possible_normal_business_candidate": 10,
+          "unknown_flow": 5133
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:231",
+            "kind": "webshell_command",
+            "action_start": 1642418580.3350146,
+            "action_end": 1642418580.4661314,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CKOx9K291NtrNR6C63",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418587.256282
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:santos:intranet_server:CvuGtp46PiAKIXgCLg",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418587.256282
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:236",
+            "kind": "webshell_command",
+            "action_start": 1642418583.5050712,
+            "action_end": 1642418583.6206234,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CcPoQe1XNDtLo5n4N8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418591.353108
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:241",
+            "kind": "webshell_command",
+            "action_start": 1642418587.2506752,
+            "action_end": 1642418587.4073584,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CU0twA2NYTBNYKSEY2",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418594.750737
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:246",
+            "kind": "webshell_command",
+            "action_start": 1642418591.3478587,
+            "action_end": 1642418591.492727,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:COAHgP3jVLJHKFQAbd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418596.512897
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:251",
+            "kind": "webshell_command",
+            "action_start": 1642418594.7466,
+            "action_end": 1642418594.8709745,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CX4SGh1iNOiPhsiH81",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418600.67088
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:256",
+            "kind": "webshell_command",
+            "action_start": 1642418596.5075474,
+            "action_end": 1642418596.6185064,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CIgvPJ23pndXzLDQi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418602.846694
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:261",
+            "kind": "webshell_command",
+            "action_start": 1642418599.1603694,
+            "action_end": 1642418599.2731724,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C4uTbilkCIMa71AJb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418606.214388
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:266",
+            "kind": "webshell_command",
+            "action_start": 1642418601.1408916,
+            "action_end": 1642418601.2703185,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CNfU8k4rat65kTJzpb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418606.255637
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:271",
+            "kind": "webshell_command",
+            "action_start": 1642418602.8414202,
+            "action_end": 1642418602.95297,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CuaGN14pZUThDQxGne",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418608.969868
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:276",
+            "kind": "webshell_command",
+            "action_start": 1642418606.2084527,
+            "action_end": 1642418606.322134,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CSm2eX3qQWRxmFVzye",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418611.354079
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:281",
+            "kind": "webshell_command",
+            "action_start": 1642418608.9647071,
+            "action_end": 1642418609.1025925,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CwJ8eRI5ul9kRp9kl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418614.544622
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:286",
+            "kind": "webshell_command",
+            "action_start": 1642418611.3486753,
+            "action_end": 1642418611.515451,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:COZT2c14WClhJxN6nl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418617.541246
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:291",
+            "kind": "webshell_command",
+            "action_start": 1642418615.2395413,
+            "action_end": 1642418615.3534768,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CqqVFA1HAntATUUGde",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418621.660065
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:296",
+            "kind": "webshell_command",
+            "action_start": 1642418617.5366228,
+            "action_end": 1642418617.6438856,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CQBNaZaru6LKjlVs4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418623.557583
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:301",
+            "kind": "webshell_command",
+            "action_start": 1642418619.8573368,
+            "action_end": 1642418619.97135,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C7Qd322IgBshKM4Vm7",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418625.253809
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:306",
+            "kind": "webshell_command",
+            "action_start": 1642418621.6549742,
+            "action_end": 1642418621.7664874,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CKdY4n2F77iCuHlD4k",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418628.838486
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:311",
+            "kind": "webshell_command",
+            "action_start": 1642418623.5523388,
+            "action_end": 1642418623.6724842,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:ChmcUrOmy55gp3Z5j",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418628.838486
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:316",
+            "kind": "webshell_command",
+            "action_start": 1642418625.248149,
+            "action_end": 1642418625.3787434,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:ChUwUsAYemTSYkfz8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418631.197755
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:321",
+            "kind": "webshell_command",
+            "action_start": 1642418628.832204,
+            "action_end": 1642418628.9517367,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C72AuMiyPMoZb1khd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418634.739914
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:326",
+            "kind": "webshell_command",
+            "action_start": 1642418631.1906478,
+            "action_end": 1642418631.4711733,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CbUW3n29WNBDNYLg8k",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418637.430907
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:331",
+            "kind": "webshell_command",
+            "action_start": 1642418634.7339609,
+            "action_end": 1642418634.8606591,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CWXn6e1sbTn36GcSge",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418641.064193
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:336",
+            "kind": "webshell_command",
+            "action_start": 1642418637.4256926,
+            "action_end": 1642418637.5621717,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CPXE854T1il6IiCUO8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418644.151581
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:341",
+            "kind": "webshell_command",
+            "action_start": 1642418639.2474222,
+            "action_end": 1642418639.5269709,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Cizxi54gjtO22AZoBe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418644.959027
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:346",
+            "kind": "webshell_command",
+            "action_start": 1642418641.0587988,
+            "action_end": 1642418641.173952,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Cc7bru4FIax0Lyhur4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418647.410915
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:351",
+            "kind": "webshell_command",
+            "action_start": 1642418644.144998,
+            "action_end": 1642418644.260765,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CJpxMFnmQA9zCpJg8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418651.06528
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:356",
+            "kind": "webshell_command",
+            "action_start": 1642418647.4050007,
+            "action_end": 1642418647.5146072,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Ctxh5A2AxiIdoJnci4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418654.067639
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:361",
+            "kind": "webshell_command",
+            "action_start": 1642418651.0581737,
+            "action_end": 1642418651.1826622,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CRtEbw2z54gRzZquDd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418656.210123
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:366",
+            "kind": "webshell_command",
+            "action_start": 1642418654.0612597,
+            "action_end": 1642418654.3570483,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CMBGDOSt9oC8OCs71",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418659.355993
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          }
+        ],
+        "exact_url_wget_commands": [
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:376",
+            "command": [
+              "wget",
+              "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz"
+            ],
+            "intent": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 376,
+              "timestamp": 1642418656.203269,
+              "utc": "2022-01-17T11:24:16.203269+00:00",
+              "message": "Sending web shell command"
+            },
+            "response": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 379,
+              "timestamp": 1642418672.6295266,
+              "utc": "2022-01-17T11:24:32.629527+00:00",
+              "message": "Web shell command response"
+            },
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CidFRg1eWhsxbMwXC5",
+                "same_as_query_connection": false,
+                "export_times": [
+                  1642418679.177729
+                ],
+                "available_before_query": false,
+                "retained_in_last_slot": false
+              }
+            ]
+          }
+        ],
+        "observation": {
+          "connection_start": 1642418656.730035,
+          "observed_end": 1642418672.62003,
+          "replay_export_time": 1642418679.177729,
+          "source_address": "192.168.104.155",
+          "destination_address": "140.82.121.10",
+          "label": null
+        }
+      },
+      {
+        "event_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+        "kind": "attack_download",
+        "run": "santos",
+        "flow_id": "ait:santos:intranet_server:CwXMJf1cqy4ultcTI2",
+        "context_view_id": "ait:santos:intranet_server:CwXMJf1cqy4ultcTI2",
+        "group": "ait:santos:intranet_server:complete_capture",
+        "host": "ait:santos:intranet_server",
+        "query_time_mode": "available_at",
+        "query_available_at": 1642418661.974627,
+        "action_start": 1642418656.2027395,
+        "action_end": 1642418672.6291978,
+        "query_minus_action_end_seconds": -10.654570817947388,
+        "flow_label": null,
+        "peer": "140.82.121.4",
+        "previous_flow_id": "ait:santos:intranet_server:CMBGDOSt9oC8OCs71",
+        "previous_context_view_id": "ait:santos:intranet_server:CMBGDOSt9oC8OCs71",
+        "previous_class": "confirmed_attack_chain_flow",
+        "previous_linked_event_ids": [
+          "ait:santos:wpdiscuz_complete_chain:webshell:366"
+        ],
+        "previous_available_at": 1642418659.355993,
+        "previous_peer": "172.21.128.119",
+        "same_peer_as_previous": 0,
+        "prefix_count": 5275,
+        "prefix_first_available_at": 1642084685.125894,
+        "prefix_span_seconds": 333976.8487329483,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 27,
+          "possible_attack_chain_candidate": 2,
+          "qualified_normal_flow": 107,
+          "possible_normal_business_candidate": 10,
+          "unknown_flow": 5129
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:231",
+            "kind": "webshell_command",
+            "action_start": 1642418580.3350146,
+            "action_end": 1642418580.4661314,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CKOx9K291NtrNR6C63",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418587.256282
+                ],
+                "flow_label": null
+              },
+              {
+                "flow_id": "ait:santos:intranet_server:CvuGtp46PiAKIXgCLg",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418587.256282
+                ],
+                "flow_label": null
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:236",
+            "kind": "webshell_command",
+            "action_start": 1642418583.5050712,
+            "action_end": 1642418583.6206234,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CcPoQe1XNDtLo5n4N8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418591.353108
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:241",
+            "kind": "webshell_command",
+            "action_start": 1642418587.2506752,
+            "action_end": 1642418587.4073584,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CU0twA2NYTBNYKSEY2",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418594.750737
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:246",
+            "kind": "webshell_command",
+            "action_start": 1642418591.3478587,
+            "action_end": 1642418591.492727,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:COAHgP3jVLJHKFQAbd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418596.512897
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:251",
+            "kind": "webshell_command",
+            "action_start": 1642418594.7466,
+            "action_end": 1642418594.8709745,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CX4SGh1iNOiPhsiH81",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418600.67088
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:256",
+            "kind": "webshell_command",
+            "action_start": 1642418596.5075474,
+            "action_end": 1642418596.6185064,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CIgvPJ23pndXzLDQi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418602.846694
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:261",
+            "kind": "webshell_command",
+            "action_start": 1642418599.1603694,
+            "action_end": 1642418599.2731724,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C4uTbilkCIMa71AJb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418606.214388
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:266",
+            "kind": "webshell_command",
+            "action_start": 1642418601.1408916,
+            "action_end": 1642418601.2703185,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CNfU8k4rat65kTJzpb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418606.255637
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:271",
+            "kind": "webshell_command",
+            "action_start": 1642418602.8414202,
+            "action_end": 1642418602.95297,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CuaGN14pZUThDQxGne",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418608.969868
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:276",
+            "kind": "webshell_command",
+            "action_start": 1642418606.2084527,
+            "action_end": 1642418606.322134,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CSm2eX3qQWRxmFVzye",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418611.354079
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:281",
+            "kind": "webshell_command",
+            "action_start": 1642418608.9647071,
+            "action_end": 1642418609.1025925,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CwJ8eRI5ul9kRp9kl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418614.544622
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:286",
+            "kind": "webshell_command",
+            "action_start": 1642418611.3486753,
+            "action_end": 1642418611.515451,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:COZT2c14WClhJxN6nl",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418617.541246
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:291",
+            "kind": "webshell_command",
+            "action_start": 1642418615.2395413,
+            "action_end": 1642418615.3534768,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CqqVFA1HAntATUUGde",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418621.660065
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:296",
+            "kind": "webshell_command",
+            "action_start": 1642418617.5366228,
+            "action_end": 1642418617.6438856,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CQBNaZaru6LKjlVs4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418623.557583
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:301",
+            "kind": "webshell_command",
+            "action_start": 1642418619.8573368,
+            "action_end": 1642418619.97135,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C7Qd322IgBshKM4Vm7",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418625.253809
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:306",
+            "kind": "webshell_command",
+            "action_start": 1642418621.6549742,
+            "action_end": 1642418621.7664874,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CKdY4n2F77iCuHlD4k",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418628.838486
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:311",
+            "kind": "webshell_command",
+            "action_start": 1642418623.5523388,
+            "action_end": 1642418623.6724842,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:ChmcUrOmy55gp3Z5j",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418628.838486
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:316",
+            "kind": "webshell_command",
+            "action_start": 1642418625.248149,
+            "action_end": 1642418625.3787434,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:ChUwUsAYemTSYkfz8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418631.197755
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:321",
+            "kind": "webshell_command",
+            "action_start": 1642418628.832204,
+            "action_end": 1642418628.9517367,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:C72AuMiyPMoZb1khd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418634.739914
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:326",
+            "kind": "webshell_command",
+            "action_start": 1642418631.1906478,
+            "action_end": 1642418631.4711733,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CbUW3n29WNBDNYLg8k",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418637.430907
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:331",
+            "kind": "webshell_command",
+            "action_start": 1642418634.7339609,
+            "action_end": 1642418634.8606591,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CWXn6e1sbTn36GcSge",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418641.064193
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:336",
+            "kind": "webshell_command",
+            "action_start": 1642418637.4256926,
+            "action_end": 1642418637.5621717,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CPXE854T1il6IiCUO8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418644.151581
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:341",
+            "kind": "webshell_command",
+            "action_start": 1642418639.2474222,
+            "action_end": 1642418639.5269709,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Cizxi54gjtO22AZoBe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418644.959027
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:346",
+            "kind": "webshell_command",
+            "action_start": 1642418641.0587988,
+            "action_end": 1642418641.173952,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Cc7bru4FIax0Lyhur4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418647.410915
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:351",
+            "kind": "webshell_command",
+            "action_start": 1642418644.144998,
+            "action_end": 1642418644.260765,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CJpxMFnmQA9zCpJg8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418651.06528
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:356",
+            "kind": "webshell_command",
+            "action_start": 1642418647.4050007,
+            "action_end": 1642418647.5146072,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:Ctxh5A2AxiIdoJnci4",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418654.067639
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:361",
+            "kind": "webshell_command",
+            "action_start": 1642418651.0581737,
+            "action_end": 1642418651.1826622,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CRtEbw2z54gRzZquDd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1642418656.210123
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:366",
+            "kind": "webshell_command",
+            "action_start": 1642418654.0612597,
+            "action_end": 1642418654.3570483,
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CMBGDOSt9oC8OCs71",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": true,
+                "export_times": [
+                  1642418659.355993
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": true
+          }
+        ],
+        "exact_url_wget_commands": [
+          {
+            "event_id": "ait:santos:wpdiscuz_complete_chain:webshell:376",
+            "command": [
+              "wget",
+              "https://github.com/ait-aecid/wphashcrack/archive/refs/tags/v0.1.tar.gz"
+            ],
+            "intent": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 376,
+              "timestamp": 1642418656.203269,
+              "utc": "2022-01-17T11:24:16.203269+00:00",
+              "message": "Sending web shell command"
+            },
+            "response": {
+              "member": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+              "line": 379,
+              "timestamp": 1642418672.6295266,
+              "utc": "2022-01-17T11:24:32.629527+00:00",
+              "message": "Web shell command response"
+            },
+            "candidates": [
+              {
+                "flow_id": "ait:santos:intranet_server:CidFRg1eWhsxbMwXC5",
+                "same_as_query_connection": false,
+                "export_times": [
+                  1642418679.177729
+                ],
+                "available_before_query": false,
+                "retained_in_last_slot": false
+              }
+            ]
+          }
+        ],
+        "observation": {
+          "connection_start": 1642418656.347811,
+          "observed_end": 1642418656.973337,
+          "replay_export_time": 1642418661.974627,
+          "source_address": "192.168.104.155",
+          "destination_address": "140.82.121.4",
+          "label": null
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "optc:empire:download:CJ2kfq1Fa0PZCafIMe",
+    "run": "OpTC",
+    "kind": "repeated_tool_transfer",
+    "unit": "http_file_transfer",
+    "chain_id": "optc:empire_custom:20190924_continues_20190925",
+    "action_start": 1569346978.458456,
+    "action_end": 1569346978.463468,
+    "action_evidence": {
+      "file": "previous/optc_event_slice.json",
+      "uid": "CJ2kfq1Fa0PZCafIMe"
+    },
+    "candidate_flow_ids": [
+      "optc:20190924:CJ2kfq1Fa0PZCafIMe"
+    ],
+    "candidate_count": 1,
+    "context_view_count": 1,
+    "all_candidates_have_context": true,
+    "candidate_details": [
+      {
+        "event_id": "optc:empire:download:CJ2kfq1Fa0PZCafIMe",
+        "kind": "repeated_tool_transfer",
+        "run": "OpTC",
+        "flow_id": "optc:20190924:CJ2kfq1Fa0PZCafIMe",
+        "context_view_id": "optc:20190924:CJ2kfq1Fa0PZCafIMe:142.20.57.246",
+        "group": "optc:empire_custom:20190924_continues_20190925",
+        "host": "142.20.57.246",
+        "query_time_mode": "offline_flow_end_replay",
+        "query_available_at": 1569346978.463468,
+        "action_start": 1569346978.458456,
+        "action_end": 1569346978.463468,
+        "query_minus_action_end_seconds": 0.0,
+        "flow_label": null,
+        "peer": "132.197.158.98",
+        "previous_flow_id": "optc:20190924:Cb9Kk94BOuxXfJGk6c",
+        "previous_context_view_id": "optc:20190924:Cb9Kk94BOuxXfJGk6c:142.20.57.246",
+        "previous_class": "unknown_flow",
+        "previous_linked_event_ids": [],
+        "previous_available_at": 1569346535.505573,
+        "previous_peer": "132.197.158.98",
+        "same_peer_as_previous": 1,
+        "prefix_count": 363,
+        "prefix_first_available_at": 1569344395.093551,
+        "prefix_span_seconds": 2583.369917154312,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 25,
+          "possible_attack_chain_candidate": 0,
+          "qualified_normal_flow": 0,
+          "possible_normal_business_candidate": 0,
+          "unknown_flow": 338
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "optc:empire:control:C1J2KwHr7cvOIOmgd",
+            "kind": "known_control_transport",
+            "action_start": 1569344985.147416,
+            "action_end": 1569344985.247432,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C1J2KwHr7cvOIOmgd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344985.247432
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:C2Q8D51W6tHpvoYxA",
+            "kind": "known_control_transport",
+            "action_start": 1569344864.181497,
+            "action_end": 1569344864.246622,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C2Q8D51W6tHpvoYxA",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344864.246622
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:C33CeB2gJspaThpXId",
+            "kind": "known_control_transport",
+            "action_start": 1569344425.19692,
+            "action_end": 1569344425.269019,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C33CeB2gJspaThpXId",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344425.269019
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:C4MyDy4A1jNgPbSLUe",
+            "kind": "known_control_transport",
+            "action_start": 1569344696.968886,
+            "action_end": 1569344697.035142,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C4MyDy4A1jNgPbSLUe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344697.035142
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CBgv3915XtEcv9H0u5",
+            "kind": "known_control_transport",
+            "action_start": 1569344773.445585,
+            "action_end": 1569344773.723708,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CBgv3915XtEcv9H0u5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344773.723708
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CC3YGVx5bg5I1HT01",
+            "kind": "known_control_transport",
+            "action_start": 1569344833.995417,
+            "action_end": 1569344834.065317,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CC3YGVx5bg5I1HT01",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344834.065317
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CHyHPu4wvcWN6dUOj9",
+            "kind": "known_control_transport",
+            "action_start": 1569345015.795381,
+            "action_end": 1569345015.861415,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CHyHPu4wvcWN6dUOj9",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569345015.861415
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CIOPii41cMw95egeG3",
+            "kind": "known_control_transport",
+            "action_start": 1569344924.600577,
+            "action_end": 1569344924.669955,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CIOPii41cMw95egeG3",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344924.669955
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CJDJs93xM1x8xzdXU5",
+            "kind": "known_control_transport",
+            "action_start": 1569344515.730496,
+            "action_end": 1569344515.804408,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CJDJs93xM1x8xzdXU5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344515.804408
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CKLH0X3znLq90ZNgJ8",
+            "kind": "known_control_transport",
+            "action_start": 1569344666.803626,
+            "action_end": 1569344666.877028,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CKLH0X3znLq90ZNgJ8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344666.877028
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CNDxT14TCxcF53Fuol",
+            "kind": "known_control_transport",
+            "action_start": 1569344727.113542,
+            "action_end": 1569344727.189608,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CNDxT14TCxcF53Fuol",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344727.189608
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CQxc0bLgEUw2PG5dg",
+            "kind": "known_control_transport",
+            "action_start": 1569344485.501475,
+            "action_end": 1569344485.566646,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CQxc0bLgEUw2PG5dg",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344485.566646
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CSF0z71nGwstAJX9qb",
+            "kind": "known_control_transport",
+            "action_start": 1569344636.62534,
+            "action_end": 1569344636.698479,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CSF0z71nGwstAJX9qb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344636.698479
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CSTr2G4KNkFx0Tm6Di",
+            "kind": "known_control_transport",
+            "action_start": 1569344455.346732,
+            "action_end": 1569344455.415211,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CSTr2G4KNkFx0Tm6Di",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344455.415211
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CUDbpo1avdRSDEPNMe",
+            "kind": "known_control_transport",
+            "action_start": 1569344395.019358,
+            "action_end": 1569344395.093551,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CUDbpo1avdRSDEPNMe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344395.093551
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CY2P7x6XwkgA5RHIi",
+            "kind": "known_control_transport",
+            "action_start": 1569344545.93924,
+            "action_end": 1569344546.011802,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CY2P7x6XwkgA5RHIi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344546.011802
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Carbw8tcn2GlAry2j",
+            "kind": "known_control_transport",
+            "action_start": 1569344576.187395,
+            "action_end": 1569344576.263057,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Carbw8tcn2GlAry2j",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344576.263057
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Cb7EUJ1Uokxi1Lul09",
+            "kind": "known_control_transport",
+            "action_start": 1569344757.342666,
+            "action_end": 1569344757.4347,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Cb7EUJ1Uokxi1Lul09",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344757.4347
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:ChA3L02ixyH2U45NYh",
+            "kind": "known_control_transport",
+            "action_start": 1569345045.926148,
+            "action_end": 1569345046.022514,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:ChA3L02ixyH2U45NYh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569345046.022514
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Ci3HIz4PIYgFhDOcj",
+            "kind": "known_control_transport",
+            "action_start": 1569344954.72526,
+            "action_end": 1569344954.789129,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Ci3HIz4PIYgFhDOcj",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344954.789129
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CuYEuu3CZw4ULe50xj",
+            "kind": "known_control_transport",
+            "action_start": 1569344985.506,
+            "action_end": 1569344985.687797,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CuYEuu3CZw4ULe50xj",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344985.687797
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Cw3qQZ2o864GUB3oci",
+            "kind": "known_control_transport",
+            "action_start": 1569344803.826086,
+            "action_end": 1569344803.895754,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Cw3qQZ2o864GUB3oci",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344803.895754
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CyHXNmgYhAh2Fg99e",
+            "kind": "known_control_transport",
+            "action_start": 1569344606.393546,
+            "action_end": 1569344606.458892,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CyHXNmgYhAh2Fg99e",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344606.458892
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CzM1TF43q7EAb4MIth",
+            "kind": "known_control_transport",
+            "action_start": 1569344894.426863,
+            "action_end": 1569344894.49531,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CzM1TF43q7EAb4MIth",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344894.49531
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:download:CSHrim2uG4Jj6MUi31",
+            "kind": "malicious_tool_download",
+            "action_start": 1569346017.933649,
+            "action_end": 1569346017.936547,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CSHrim2uG4Jj6MUi31",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569346017.936547
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          }
+        ],
+        "exact_url_wget_commands": [],
+        "observation": {
+          "connection_start": 1569346978.449929,
+          "observed_end": 1569346978.463468,
+          "replay_export_time": null,
+          "source_address": "142.20.57.246",
+          "destination_address": "132.197.158.98",
+          "label": null
+        }
+      }
+    ]
+  },
+  {
+    "event_id": "optc:empire:download:CSHrim2uG4Jj6MUi31",
+    "run": "OpTC",
+    "kind": "malicious_tool_download",
+    "unit": "http_file_transfer",
+    "chain_id": "optc:empire_custom:20190924_continues_20190925",
+    "action_start": 1569346017.933649,
+    "action_end": 1569346017.936547,
+    "action_evidence": {
+      "file": "previous/optc_event_slice.json",
+      "uid": "CSHrim2uG4Jj6MUi31"
+    },
+    "candidate_flow_ids": [
+      "optc:20190924:CSHrim2uG4Jj6MUi31"
+    ],
+    "candidate_count": 1,
+    "context_view_count": 1,
+    "all_candidates_have_context": true,
+    "candidate_details": [
+      {
+        "event_id": "optc:empire:download:CSHrim2uG4Jj6MUi31",
+        "kind": "malicious_tool_download",
+        "run": "OpTC",
+        "flow_id": "optc:20190924:CSHrim2uG4Jj6MUi31",
+        "context_view_id": "optc:20190924:CSHrim2uG4Jj6MUi31:142.20.57.246",
+        "group": "optc:empire_custom:20190924_continues_20190925",
+        "host": "142.20.57.246",
+        "query_time_mode": "offline_flow_end_replay",
+        "query_available_at": 1569346017.936547,
+        "action_start": 1569346017.933649,
+        "action_end": 1569346017.936547,
+        "query_minus_action_end_seconds": 0.0,
+        "flow_label": 1,
+        "peer": "132.197.158.98",
+        "previous_flow_id": "optc:20190924:CzaMrB33RmJ7Z8NAdh",
+        "previous_context_view_id": "optc:20190924:CzaMrB33RmJ7Z8NAdh:142.20.57.246",
+        "previous_class": "unknown_flow",
+        "previous_linked_event_ids": [],
+        "previous_available_at": 1569346015.020421,
+        "previous_peer": "132.197.158.98",
+        "same_peer_as_previous": 1,
+        "prefix_count": 360,
+        "prefix_first_available_at": 1569344395.093551,
+        "prefix_span_seconds": 1622.8429961204529,
+        "prefix_categories": {
+          "confirmed_attack_chain_flow": 24,
+          "possible_attack_chain_candidate": 0,
+          "qualified_normal_flow": 0,
+          "possible_normal_business_candidate": 0,
+          "unknown_flow": 336
+        },
+        "prior_completed_same_workflow_actions": [
+          {
+            "event_id": "optc:empire:control:C1J2KwHr7cvOIOmgd",
+            "kind": "known_control_transport",
+            "action_start": 1569344985.147416,
+            "action_end": 1569344985.247432,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C1J2KwHr7cvOIOmgd",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344985.247432
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:C2Q8D51W6tHpvoYxA",
+            "kind": "known_control_transport",
+            "action_start": 1569344864.181497,
+            "action_end": 1569344864.246622,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C2Q8D51W6tHpvoYxA",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344864.246622
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:C33CeB2gJspaThpXId",
+            "kind": "known_control_transport",
+            "action_start": 1569344425.19692,
+            "action_end": 1569344425.269019,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C33CeB2gJspaThpXId",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344425.269019
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:C4MyDy4A1jNgPbSLUe",
+            "kind": "known_control_transport",
+            "action_start": 1569344696.968886,
+            "action_end": 1569344697.035142,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:C4MyDy4A1jNgPbSLUe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344697.035142
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CBgv3915XtEcv9H0u5",
+            "kind": "known_control_transport",
+            "action_start": 1569344773.445585,
+            "action_end": 1569344773.723708,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CBgv3915XtEcv9H0u5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344773.723708
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CC3YGVx5bg5I1HT01",
+            "kind": "known_control_transport",
+            "action_start": 1569344833.995417,
+            "action_end": 1569344834.065317,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CC3YGVx5bg5I1HT01",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344834.065317
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CHyHPu4wvcWN6dUOj9",
+            "kind": "known_control_transport",
+            "action_start": 1569345015.795381,
+            "action_end": 1569345015.861415,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CHyHPu4wvcWN6dUOj9",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569345015.861415
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CIOPii41cMw95egeG3",
+            "kind": "known_control_transport",
+            "action_start": 1569344924.600577,
+            "action_end": 1569344924.669955,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CIOPii41cMw95egeG3",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344924.669955
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CJDJs93xM1x8xzdXU5",
+            "kind": "known_control_transport",
+            "action_start": 1569344515.730496,
+            "action_end": 1569344515.804408,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CJDJs93xM1x8xzdXU5",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344515.804408
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CKLH0X3znLq90ZNgJ8",
+            "kind": "known_control_transport",
+            "action_start": 1569344666.803626,
+            "action_end": 1569344666.877028,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CKLH0X3znLq90ZNgJ8",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344666.877028
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CNDxT14TCxcF53Fuol",
+            "kind": "known_control_transport",
+            "action_start": 1569344727.113542,
+            "action_end": 1569344727.189608,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CNDxT14TCxcF53Fuol",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344727.189608
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CQxc0bLgEUw2PG5dg",
+            "kind": "known_control_transport",
+            "action_start": 1569344485.501475,
+            "action_end": 1569344485.566646,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CQxc0bLgEUw2PG5dg",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344485.566646
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CSF0z71nGwstAJX9qb",
+            "kind": "known_control_transport",
+            "action_start": 1569344636.62534,
+            "action_end": 1569344636.698479,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CSF0z71nGwstAJX9qb",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344636.698479
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CSTr2G4KNkFx0Tm6Di",
+            "kind": "known_control_transport",
+            "action_start": 1569344455.346732,
+            "action_end": 1569344455.415211,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CSTr2G4KNkFx0Tm6Di",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344455.415211
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CUDbpo1avdRSDEPNMe",
+            "kind": "known_control_transport",
+            "action_start": 1569344395.019358,
+            "action_end": 1569344395.093551,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CUDbpo1avdRSDEPNMe",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344395.093551
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CY2P7x6XwkgA5RHIi",
+            "kind": "known_control_transport",
+            "action_start": 1569344545.93924,
+            "action_end": 1569344546.011802,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CY2P7x6XwkgA5RHIi",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344546.011802
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Carbw8tcn2GlAry2j",
+            "kind": "known_control_transport",
+            "action_start": 1569344576.187395,
+            "action_end": 1569344576.263057,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Carbw8tcn2GlAry2j",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344576.263057
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Cb7EUJ1Uokxi1Lul09",
+            "kind": "known_control_transport",
+            "action_start": 1569344757.342666,
+            "action_end": 1569344757.4347,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Cb7EUJ1Uokxi1Lul09",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344757.4347
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:ChA3L02ixyH2U45NYh",
+            "kind": "known_control_transport",
+            "action_start": 1569345045.926148,
+            "action_end": 1569345046.022514,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:ChA3L02ixyH2U45NYh",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569345046.022514
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Ci3HIz4PIYgFhDOcj",
+            "kind": "known_control_transport",
+            "action_start": 1569344954.72526,
+            "action_end": 1569344954.789129,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Ci3HIz4PIYgFhDOcj",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344954.789129
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CuYEuu3CZw4ULe50xj",
+            "kind": "known_control_transport",
+            "action_start": 1569344985.506,
+            "action_end": 1569344985.687797,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CuYEuu3CZw4ULe50xj",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344985.687797
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:Cw3qQZ2o864GUB3oci",
+            "kind": "known_control_transport",
+            "action_start": 1569344803.826086,
+            "action_end": 1569344803.895754,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:Cw3qQZ2o864GUB3oci",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344803.895754
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CyHXNmgYhAh2Fg99e",
+            "kind": "known_control_transport",
+            "action_start": 1569344606.393546,
+            "action_end": 1569344606.458892,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CyHXNmgYhAh2Fg99e",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344606.458892
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          },
+          {
+            "event_id": "optc:empire:control:CzM1TF43q7EAb4MIth",
+            "kind": "known_control_transport",
+            "action_start": 1569344894.426863,
+            "action_end": 1569344894.49531,
+            "candidates": [
+              {
+                "flow_id": "optc:20190924:CzM1TF43q7EAb4MIth",
+                "same_as_query_connection": false,
+                "available_before_query": true,
+                "retained_in_last_slot": false,
+                "export_times": [
+                  1569344894.49531
+                ],
+                "flow_label": 1
+              }
+            ],
+            "any_available": true,
+            "all_available": true,
+            "any_in_last_slot": false
+          }
+        ],
+        "exact_url_wget_commands": [],
+        "observation": {
+          "connection_start": 1569346017.924356,
+          "observed_end": 1569346017.936547,
+          "replay_export_time": null,
+          "source_address": "142.20.57.246",
+          "destination_address": "132.197.158.98",
+          "label": 1
+        }
+      }
+    ]
+  }
+]

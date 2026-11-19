@@ -1,0 +1,54 @@
+{
+  "fit_calls": 4,
+  "arms": [
+    "narrow_raw8",
+    "mixed_raw8",
+    "narrow_ports_zero",
+    "mixed_ports_zero"
+  ],
+  "model_selection": false,
+  "early_stopping": false,
+  "seed_search": false,
+  "refits": 0,
+  "score_rows_per_arm": 12,
+  "thresholds": {
+    "narrow_raw8": {
+      "threshold": 0.12,
+      "comparison": ">",
+      "alpha": 0.01,
+      "C_count": 3,
+      "integer_FP_budget": 0,
+      "C_empirical_FP": 0,
+      "population_guarantee": false
+    },
+    "mixed_raw8": {
+      "threshold": 0.121,
+      "comparison": ">",
+      "alpha": 0.01,
+      "C_count": 3,
+      "integer_FP_budget": 0,
+      "C_empirical_FP": 0,
+      "population_guarantee": false
+    },
+    "narrow_ports_zero": {
+      "threshold": 0.122,
+      "comparison": ">",
+      "alpha": 0.01,
+      "C_count": 3,
+      "integer_FP_budget": 0,
+      "C_empirical_FP": 0,
+      "population_guarantee": false
+    },
+    "mixed_ports_zero": {
+      "threshold": 0.123,
+      "comparison": ">",
+      "alpha": 0.01,
+      "C_count": 3,
+      "integer_FP_budget": 0,
+      "C_empirical_FP": 0,
+      "population_guarantee": false
+    }
+  },
+  "historical_development_only": true,
+  "algorithm_innovation_test": false
+}

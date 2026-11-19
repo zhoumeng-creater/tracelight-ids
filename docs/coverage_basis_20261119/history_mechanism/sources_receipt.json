@@ -1,0 +1,56 @@
+{
+  "earlycrow_commit": "dd556631d008517fd4f4d859aabf756dca794e55",
+  "enhanced_decrypto_commit": "0c8c1bce8e2a83ea79d6a525020ba94593565023",
+  "files": [
+    {
+      "file": "sources\\EarlyCrow__CSUpdatingProcess__CSU_dataflow.py",
+      "bytes": 6882,
+      "sha256": "a713ed7f67c560643c0ea477ad4c75abaee9324edffacf81913377506b0b3968"
+    },
+    {
+      "file": "sources\\EarlyCrow__dataflow.py",
+      "bytes": 1268,
+      "sha256": "c05d7d6fb06953f8440d2311697a7034f8d37130c14aedd9c3be14fd2b018499"
+    },
+    {
+      "file": "sources\\EarlyCrow__PairFlow__pairflow_dataflow.py",
+      "bytes": 15407,
+      "sha256": "d92a7f8c2b28d455687f87b1af721ec4b24aa8fa0bede21353595df20cf28d4a"
+    },
+    {
+      "file": "sources\\EarlyCrow__profiles__destProfile.py",
+      "bytes": 7550,
+      "sha256": "352b38d60ce12553b918fab9ec194095071777491da0cd24d5518cc22345e9e5"
+    },
+    {
+      "file": "sources\\EarlyCrow__profiles__hostProfile.py",
+      "bytes": 19593,
+      "sha256": "456df7c59df00004887412bfae12481db9ec75606a4a58bfe0a19a5e5022d9e3"
+    },
+    {
+      "file": "sources\\EnhancedDeCrypto__new_model.py",
+      "bytes": 20524,
+      "sha256": "d654690ed6204ccf861e141ee80c2a20d6d5855b241ac2a377645ce282556102"
+    },
+    {
+      "file": "sources\\experiments__classification_performance_unseen_malware.py",
+      "bytes": 2519,
+      "sha256": "f19b1d3d927585b64b4c58d47254ed7bf93a87287a28d657bc8a1d1462e2ff7f"
+    },
+    {
+      "file": "sources\\isc22.pdf",
+      "bytes": 1331659,
+      "sha256": "942ac3d95ffe2f81381e7db40e584cff70b25dc6f842c0202137583bcdcb0a8c"
+    },
+    {
+      "file": "sources\\isc22.txt",
+      "bytes": 80270,
+      "sha256": "dd9f5747585f1d08ed3a711f1c1f94452aeb634cec027c01d71412aa7ebba449"
+    },
+    {
+      "file": "sources\\README.md",
+      "bytes": 8603,
+      "sha256": "973c075004c5c461e8ddb80ee1480faf8e4a362cedcb3ab7bcce04da579f72ed"
+    }
+  ]
+}

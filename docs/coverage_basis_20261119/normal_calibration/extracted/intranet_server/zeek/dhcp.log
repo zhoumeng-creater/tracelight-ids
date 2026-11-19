@@ -1,0 +1,322 @@
+{"ts":1642720433.53083,"uids":["CZCr8Y1mClfshTc6V"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642720440.560774,"uids":["CZCr8Y1mClfshTc6V"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642720453.489501,"uids":["CZCr8Y1mClfshTc6V"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642720470.173483,"uids":["CsY99b34MW7yyQMYTj"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.0046122074127197266}
+{"ts":1642736633.742866,"uids":["CJCjfn4QMaY15dV4f2","CPTGgx2isaQuOntuNc"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010068416595458984}
+{"ts":1642736640.668298,"uids":["CPTGgx2isaQuOntuNc"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642736653.250878,"uids":["CPTGgx2isaQuOntuNc"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642744733.863369,"uids":["CycuEt3SthLOiWfxvc","CM9DSY2zHo3GXmnudi"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011730194091796875}
+{"ts":1642744740.729401,"uids":["CycuEt3SthLOiWfxvc"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642744753.128221,"uids":["CycuEt3SthLOiWfxvc"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642745396.823502,"uids":["CthdtT3PQMHABKNyqd"],"mac":"fa:16:3e:8d:b9:7c","host_name":"monitoring","requested_addr":"10.143.0.35","msg_types":["DISCOVER","REQUEST"],"duration":0.0012278556823730469}
+{"ts":1642746074.698428,"uids":["CrFHEA1e72w6gJyJx1"],"mac":"fa:16:3e:46:ce:20","host_name":"internal-share","requested_addr":"10.143.0.103","msg_types":["DISCOVER","REQUEST"],"duration":0.0018429756164550781}
+{"ts":1642746264.444909,"uids":["CBucyW3FxrxM1Uiee3"],"mac":"fa:16:3e:e1:05:6e","host_name":"mgmthost","requested_addr":"10.143.1.36","msg_types":["DISCOVER","REQUEST"],"duration":0.0008518695831298828}
+{"ts":1642746729.726795,"uids":["CDN0I33kBt6YqPCCv4","CPa87B1IPrrMioWoJd"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","requested_addr":"10.143.2.4","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["DISCOVER","OFFER","REQUEST","ACK"],"duration":0.004789113998413086}
+{"ts":1642748720.756167,"uids":["C27Bez1MlGD4vGgAga"],"mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","requested_addr":"10.143.0.1","msg_types":["DISCOVER","REQUEST"],"duration":0.0019731521606445313}
+{"ts":1642748783.924267,"uids":["CvCcQV36mf1sQKEQi1"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642748790.759314,"uids":["CvCcQV36mf1sQKEQi1"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642748803.06968,"uids":["CvCcQV36mf1sQKEQi1"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642750808.95338,"uids":["CQuDrRX73sV6XVhW5","Cf60IE10UEqgGljbC5"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011188983917236328}
+{"ts":1642750815.775213,"uids":["Cf60IE10UEqgGljbC5"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642750828.040214,"uids":["Cf60IE10UEqgGljbC5"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642751821.469341,"uids":["CwWt2t3gaaWxHYtSDa","CDx0Vw1X1GpFp3WXq"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010428428649902344}
+{"ts":1642751828.284251,"uids":["CwWt2t3gaaWxHYtSDa"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642751840.514651,"uids":["CwWt2t3gaaWxHYtSDa"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752327.725163,"uids":["C0vVwM2DFPhyl7yKE3","Cysiw1192yxbL7PsMj"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010399818420410156}
+{"ts":1642752334.535883,"uids":["Cysiw1192yxbL7PsMj"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752346.761053,"uids":["Cysiw1192yxbL7PsMj"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752580.856479,"uids":["CAgvAf19G1qwNesHhi"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752587.662715,"uids":["CAgvAf19G1qwNesHhi"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752599.884142,"uids":["CAgvAf19G1qwNesHhi"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752707.418782,"uids":["CZ0rby2adyvNyoeWtf"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752714.225737,"uids":["CZ0rby2adyvNyoeWtf"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752726.445922,"uids":["CZ0rby2adyvNyoeWtf"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752770.70135,"uids":["CZ0rby2adyvNyoeWtf"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752777.509345,"uids":["CZ0rby2adyvNyoeWtf"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752789.728584,"uids":["CZ0rby2adyvNyoeWtf"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642752830.712583,"uids":["CZ0rby2adyvNyoeWtf","CZhxXI5YANErZEV49"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.4698410034179688}
+{"ts":1642752837.5206,"uids":["CZ0rby2adyvNyoeWtf","CZhxXI5YANErZEV49"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.277812957763672}
+{"ts":1642752849.738454,"uids":["CZ0rby2adyvNyoeWtf","CZhxXI5YANErZEV49"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2585818767547607}
+{"ts":1642758234.331697,"uids":["CNsbMc46ASNJQ5Q17d"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642758240.878732,"uids":["CNsbMc46ASNJQ5Q17d"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642758253.023619,"uids":["CNsbMc46ASNJQ5Q17d"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642760934.409797,"uids":["CgLrTY3zkBqr6jy2n8"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642760940.918749,"uids":["CgLrTY3zkBqr6jy2n8"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642760953.036922,"uids":["CgLrTY3zkBqr6jy2n8"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642762284.445607,"uids":["CADgBx4tkF00dcLRGi"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642762290.937035,"uids":["CADgBx4tkF00dcLRGi"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642762303.044491,"uids":["CADgBx4tkF00dcLRGi"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642762959.466156,"uids":["CINPAu49MZudeYIWnd"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642762965.944229,"uids":["CINPAu49MZudeYIWnd"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642762978.047307,"uids":["CINPAu49MZudeYIWnd"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763296.975869,"uids":["CJaufi1QCQPhpUzPh1"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763303.44407,"uids":["CJaufi1QCQPhpUzPh1"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763315.549298,"uids":["CJaufi1QCQPhpUzPh1"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763465.728766,"uids":["CKSdk12K4rYGOVF0T5"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763472.195571,"uids":["CKSdk12K4rYGOVF0T5"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763484.298953,"uids":["CKSdk12K4rYGOVF0T5"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763550.106959,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763556.575667,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763568.673665,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763610.118561,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763616.586482,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763628.685554,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642763634.53082,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","requested_addr":"10.143.2.91","msg_types":["DISCOVER","REQUEST"],"duration":0.021046161651611328}
+{"ts":1642763640.974355,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","requested_addr":"10.143.1.78","msg_types":["DISCOVER","REQUEST"],"duration":0.007061004638671875}
+{"ts":1642763653.081043,"uids":["CDMpQ2Pmsqq143la8"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","requested_addr":"10.143.2.25","msg_types":["DISCOVER","REQUEST"],"duration":0.004175901412963867}
+{"ts":1642789929.411944,"uids":["Ccbcw5mFfFQMI8IJ5"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.003475189208984375}
+{"ts":1642791919.852347,"uids":["CdPI6x1OFAErWu18fg"],"client_addr":"10.143.0.1","mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642798667.147804,"uids":["CKfEaFoWZFMJL4dtd"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642806833.644917,"uids":["C9JIjG1mclIK65vAJi","CriQwpNG3KxhiPXfa"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011870861053466797}
+{"ts":1642806840.627987,"uids":["CriQwpNG3KxhiPXfa"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642814866.80507,"uids":["C236v94sgjnugwkFjg"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642822966.632017,"uids":["CgIwfIquaXCAvaXud"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642823034.530769,"uids":["CxQ7ppW8net3yvFz9"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642823040.927238,"uids":["CxQ7ppW8net3yvFz9"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642827016.547957,"uids":["C3zjJl3jLphiXDOl9"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642829041.505518,"uids":["CIK7bm1RTnyfTC7Yy7"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642830053.98192,"uids":["CErBdC1u2Q4IIcQhpc"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642830214.665165,"uids":["CoErcU1fcEcjqVDIB"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.0036630630493164063}
+{"ts":1642830560.221255,"uids":["CeaIdP2ZZ1o4OKbrdj"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642830813.342748,"uids":["CmYvlU39VLtaKTUuSl"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642830939.899762,"uids":["CLBVh83Co9ty2P1OT6"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642831003.181862,"uids":["CJpno21Hknb1kTVEXl"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642831063.191081,"uids":["CqQMsTHTGFkhOkKc6","CmjtIE2h7pkj2HKXDc"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2588930130004883}
+{"ts":1642831134.973806,"uids":["C1OqVt2lCeVbCQzJl8"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642831141.075419,"uids":["C1OqVt2lCeVbCQzJl8"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642835185.195653,"uids":["CQP3gDxWUOAIEF83c","CaulpB3BiFVhoWwVBh"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010571479797363281}
+{"ts":1642835191.150103,"uids":["CaulpB3BiFVhoWwVBh"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642837216.186189,"uids":["CJmgY24hegBg5lI8vb"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642837210.304412,"uids":["CJmgY24hegBg5lI8vb","Ca8mhZ2UqMPKonFN14"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010790824890136719}
+{"ts":1642838228.706708,"uids":["CTNTmZ2qUlyy8vLVDc"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642838222.85997,"uids":["CKEaMF105pyu6v64B1","CTNTmZ2qUlyy8vLVDc"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0012178421020507813}
+{"ts":1642838734.963462,"uids":["CsuOlC11Hp5u3elbmk"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642838729.136925,"uids":["Cr8thW1wVK3iZISIU3","CsuOlC11Hp5u3elbmk"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011179447174072266}
+{"ts":1642838826.909878,"uids":["CLEF4N1ynnRimJYUU3"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642838988.093257,"uids":["CBRoGAsiO6pXzNiVc"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642838982.27731,"uids":["CBRoGAsiO6pXzNiVc"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642839114.658089,"uids":["CPMJS232m47UTHhf56"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642839108.84496,"uids":["CPMJS232m47UTHhf56"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642839177.942574,"uids":["CPMJS232m47UTHhf56"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642839172.131197,"uids":["CPMJS232m47UTHhf56"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642839237.944722,"uids":["CPVonl20ax39sIF9ce","CPMJS232m47UTHhf56"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.267747163772583}
+{"ts":1642839232.141364,"uids":["CPVonl20ax39sIF9ce","CPMJS232m47UTHhf56"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.262598991394043}
+{"ts":1642842707.13875,"uids":["CgO3Zu4IwVs2gQCdXk"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642844634.989356,"uids":["CG0r821F3RE9R2P7Oe"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642844641.108658,"uids":["CG0r821F3RE9R2P7Oe"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642844647.25534,"uids":["CG0r821F3RE9R2P7Oe"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642845617.311461,"uids":["CChsTR2RXm96ldrHm8"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642846102.340868,"uids":["C3JuA13VEktHghec69"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642846344.854537,"uids":["CnAHlv4cB6xj80mlb1"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642846466.113328,"uids":["CW1Bn6cSbKsaA2do6"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642846526.741854,"uids":["CkVP7s4lB8HU2GUYSb"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642846586.752796,"uids":["CpbfBs3Fii0El3aWM8"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642846587.382521,"uids":["CpbfBs3Fii0El3aWM8"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","requested_addr":"10.143.3.65","msg_types":["DISCOVER","REQUEST"],"duration":0.025426149368286133}
+{"ts":1642847294.172455,"uids":["C8eQLQ1v4OKz9dOKSb"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642847341.055289,"uids":["CKnaoj35QlbTtBD0Rh"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642847334.782342,"uids":["CKnaoj35QlbTtBD0Rh"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642848691.02967,"uids":["CHoR9l4OC9PAKOJlc"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642848684.679105,"uids":["CHoR9l4OC9PAKOJlc"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849359.63596,"uids":["CFMjzP2BYj2peQkQFf"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849366.016006,"uids":["CFMjzP2BYj2peQkQFf"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849703.509443,"uids":["CTpP8gzmcSVVKFN75"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849697.100301,"uids":["CTpP8gzmcSVVKFN75"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849872.258305,"uids":["ChQuwa38qumaEC3YZf"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849865.830041,"uids":["ChQuwa38qumaEC3YZf"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849956.631558,"uids":["CogE0I1m9bQHSqLuK"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642849950.202234,"uids":["CogE0I1m9bQHSqLuK"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642850016.641141,"uids":["CogE0I1m9bQHSqLuK"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642850010.213835,"uids":["CogE0I1m9bQHSqLuK"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642850034.59217,"uids":["CogE0I1m9bQHSqLuK"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","requested_addr":"10.143.2.91","msg_types":["DISCOVER","REQUEST"],"duration":0.015856027603149414}
+{"ts":1642850041.016584,"uids":["CogE0I1m9bQHSqLuK"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","requested_addr":"10.143.1.78","msg_types":["DISCOVER","REQUEST"],"duration":0.01465916633605957}
+{"ts":1642863493.859883,"uids":["CzMttnv29EwhUFSEc"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642869870.796138,"uids":["CBGZ0p4WQzS92Leo4g"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.004318952560424805}
+{"ts":1642870289.771904,"uids":["CDiz494Xf041HZexE1"],"client_addr":"10.143.0.1","mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642871593.703271,"uids":["CLWTwk4jR9cygx9XQe"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642875643.625875,"uids":["Civxgibqrr7XLcWr5"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642877668.587745,"uids":["Cmi9aCZFSzAPAU07e"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642878681.067097,"uids":["CEKQwqPObVdju1oV"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642879187.308007,"uids":["CKqW404G5wpqaF4Ktf"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642879440.427075,"uids":["CDkInv3LBsj0G70ez8"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642879566.986999,"uids":["CDNvJ41Ei6ZTmNybY1"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642879630.266362,"uids":["CRoaOQ2JGK6RekTZD2"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642879690.275924,"uids":["CPNz5d43DVu9Xk2P4i","Cs8T162bqetuRl7J3"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2605581283569336}
+{"ts":1642886473.661969,"uids":["CU6Gbp2HHiV2JXejH2"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642889786.736305,"uids":["C16Rj71cg4QgRAcU8c"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642889863.722604,"uids":["CVWUHBjsowixhSEai"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642891558.754504,"uids":["CaA7uT3APvldUvWO9b"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642892406.262898,"uids":["C9NQW92aAPETUTHyC5"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642892830.024838,"uids":["CnqPyq43k36h0t5mEb"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642893041.904173,"uids":["C0tfsJ1cyF1cH9DDt9"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642893147.845399,"uids":["CdZEVO3IXPgD50SQwi"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642893207.854573,"uids":["CAhJfGOeusdFCfa21"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642893235.325488,"uids":["C7haU93uFqZKzSDe2l","CAuCUs157DcqFkFH5g"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011060237884521484}
+{"ts":1642893253.813759,"uids":["CAhJfGOeusdFCfa21"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","requested_addr":"10.143.2.25","msg_types":["DISCOVER","REQUEST"],"duration":0.004976987838745117}
+{"ts":1642905986.867265,"uids":["CS8l1tGNwGzRhnW1a"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642909185.117569,"uids":["CajYBffOMoTWoSFgb"],"client_addr":"10.143.0.1","mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642909434.723294,"uids":["CvgESw3GSbysAukU8g"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642910088.461815,"uids":["CQoI8SQPOPscKtD2g"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.010187864303588867}
+{"ts":1642914086.932465,"uids":["CHKoiuu09E5IANT0h"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642917534.420826,"uids":["CwcGAT1XPINtN1ULL1","CAn8Oi4oVIACxXsXa4"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010790824890136719}
+{"ts":1642918136.963704,"uids":["CHqKpSjpEuY31d5xf"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642920161.978772,"uids":["C6C5Xl19wtJpZ2uC11"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642921174.488597,"uids":["CUTTrD4quoWjjIjRI5"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642921584.269747,"uids":["CAbGVRmojn4JkE6Xd","CPkpxv1vprAlxSGaXi"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010750293731689453}
+{"ts":1642921680.740244,"uids":["CmMITS2gT1h89VRNK"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642921933.867908,"uids":["C1xxZw0IhV4jl3cVg"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642922060.431011,"uids":["CDcc511Veh4nm8EJB1"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642922123.71404,"uids":["C1Qi7t3zGiw2OQHBFj"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642922183.723824,"uids":["CtBIKS1mKg4pOu5mX2","Cu8c3B163sXGI51zn9"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.260668992996216}
+{"ts":1642923609.194549,"uids":["CbAJr34hb6X2YqZwLe","CKGvR53tUG1jJ7loGb"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011868476867675781}
+{"ts":1642924621.657981,"uids":["CxSMia1uCvD8A3LSF4","CxATqB2PIkzLtbe3s2"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0011250972747802734}
+{"ts":1642925127.888862,"uids":["CuU8rSzR0kC2pkcpb","CShpNr4dpJ5skVHt48"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.001194000244140625}
+{"ts":1642925381.007261,"uids":["C0joRG2jbIQM83B6Q2"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642925507.562463,"uids":["CjvSSZ3lLnH82PxgE4"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642925570.833475,"uids":["CXnHi72OSougy282ja"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642925630.843879,"uids":["CYRTH118dD5Ui1j8j3","C2fHWbdjpOopnZnB2"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2652199268341064}
+{"ts":1642927587.209942,"uids":["CXOvqH3ZaA6Dyx96I8"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642930287.321117,"uids":["CV8qS13BLy1mN2JrVf"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642931034.370214,"uids":["CpyEaM3Oq33aN71AKj"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642931637.37474,"uids":["CzuFN03hG0fHOS0vG4"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642932312.404435,"uids":["CnUQiw22MOHBPx7sFc"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642932649.916915,"uids":["CFDKB92disoXmyvMGd"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642932818.67379,"uids":["CLpfKqDH5h96lb1nd"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642932903.052206,"uids":["CYwf9Y225QuPbhMKi6"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642932963.063566,"uids":["CNgNsg39tX2ig8rnpf"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642932987.459515,"uids":["CNgNsg39tX2ig8rnpf"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","requested_addr":"10.143.3.65","msg_types":["DISCOVER","REQUEST"],"duration":0.0071489810943603516}
+{"ts":1642933734.502029,"uids":["CHPuSHVlhHGF8wDLc"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642934929.961847,"uids":["C3ruNForhOrQnad6"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642935084.566101,"uids":["CsZ0Oi3J9vEvdvi7A3"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642935759.606145,"uids":["C5E3P42BxuvYOIYU52"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642936097.11519,"uids":["CylS1b3X251MCu8Ygl"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642936265.872412,"uids":["C0O1Pu1FabG973oWPe"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642936350.253637,"uids":["CluQ5u10UbPMVLhm0e"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642936410.264331,"uids":["CTUS833mwknb0Ux80f"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642936434.646588,"uids":["CTUS833mwknb0Ux80f"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","requested_addr":"10.143.2.91","msg_types":["DISCOVER","REQUEST"],"duration":0.02605891227722168}
+{"ts":1642936454.830803,"uids":["C1PA331VYCSEs4Uv2"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642948368.463967,"uids":["CydUZsnkcUtIgAD74"],"client_addr":"10.143.0.1","mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642949271.430241,"uids":["C1HzeO13BAKibfKY03"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.009668827056884766}
+{"ts":1642951129.834308,"uids":["CW457E4PuEZmI95QF1"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642952654.61142,"uids":["CAVwV62Ov08IrMK2y7"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642959229.770894,"uids":["CmjkS02f9nbJSovln5"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642960754.499422,"uids":["CVZVIG3oU4xfcLH1bg"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642963279.738026,"uids":["CjK6ir4gDiLlESFOk"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642964804.445231,"uids":["CSGvpH3FpanOCgmdlc"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642965304.72198,"uids":["ClTJMx1p5r6cNaGb8c"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642966317.21446,"uids":["CqEY244TE7eDZwCpqi"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642966823.458481,"uids":["Cc0idc4UOMx4hL5Rgi"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642966829.41822,"uids":["Cc0idc4UOMx4hL5Rgi"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642967076.581761,"uids":["C5DmbS1Y1cfrpvXFp6"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642967203.142502,"uids":["CavoRX1PdJkyuGT5hf"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642967266.423189,"uids":["C55bOx19xrkiCLOIsi"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642967326.435145,"uids":["C7Lzfq3oj3BefhMX73","CZNlLyFsmikIJKWE2"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2577030658721924}
+{"ts":1642967841.902365,"uids":["CLEf021rvFb2IfprR"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642968348.157883,"uids":["C70SEmF3ZFx8GOaU6"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642968601.264189,"uids":["Cbypk82EiByCdQ8Zog"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642968727.82557,"uids":["CmUA0J35RC6ahivG2"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642968791.107952,"uids":["CByiT73eoE9yDsJVe7"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642968851.118176,"uids":["Cmp9pd1GxApMEM6Vyj","CDytLf4SoTd4MKMUwj"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2592339515686035}
+{"ts":1642973485.04149,"uids":["CnExv137vIH9UEKwZe"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642974254.109408,"uids":["CV1V533ge3z0cR29Za"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642976187.420835,"uids":["CCZoPpAVmbIakCWYg"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1642976562.716908,"uids":["CkHEs81FI2TDN8K6c6"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642976953.975003,"uids":["Cf89B52PKPhHxAnAhj"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642978101.554104,"uids":["Ch07VITDntXqfHGLb"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642978303.907533,"uids":["CdP3lC2Tzd9ttMPbKl"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642978870.97421,"uids":["CYKseG16hleSxTr9ze"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642978978.87395,"uids":["CvpCYM24QcDjvYzW31"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979255.680938,"uids":["C1xplx4WwuUzwZb0Ha"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979316.359696,"uids":["C3hb4A3pIYstL5J0Ha"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979448.036216,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979485.099508,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979544.214474,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979569.469426,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979604.22317,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979629.48039,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979640.421866,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","requested_addr":"10.143.1.78","msg_types":["DISCOVER","REQUEST"],"duration":0.004255056381225586}
+{"ts":1642979635.616833,"uids":["CfWNdO26tUPHQuH6Vd"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642979653.845652,"uids":["C1tMcVbx6QlWoQKxj"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","requested_addr":"10.143.2.25","msg_types":["DISCOVER","REQUEST"],"duration":0.016255855560302734}
+{"ts":1642988641.174858,"uids":["CGl6bF1YXJDDFYX7Pj"],"client_addr":"10.143.0.1","mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1642990796.837674,"uids":["C57mQC4fhmQmZo3Nea"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.004252195358276367}
+{"ts":1642992387.067353,"uids":["Csq6Po3EyxkDyOCPhh"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643000486.894559,"uids":["CCxLkG4ZWZjnUMpteh"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643004536.802135,"uids":["C7fP71OKcTpqc4WAf"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643006561.757673,"uids":["CDw8x74pVcPPlaZbVi"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643007574.23774,"uids":["Cm7e6e1bDgiLspzCN8"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643008080.475691,"uids":["CMRvc82xSaO4Jqy865"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643008333.595897,"uids":["CEWIGK1IxoY6P9E0Ea"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643008460.155597,"uids":["CPJYAd10uf7CpqsCzb"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643008523.43657,"uids":["C3VEoDQOppk6gLI5k"],"mac":"fa:16:3e:5e:79:d8","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643008583.446695,"uids":["CIwe48469xAbBHLqyc","CuYoTq2QiENzEOHha8"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.257741928100586}
+{"ts":1643013987.097262,"uids":["CepMVB3wBNXTsL5CS8"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643016687.293179,"uids":["CU533U2xWKqxkrTSSa"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643018037.390728,"uids":["ClTvG2zsv630UsrUe"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643018712.443685,"uids":["C90tp944jUDW5lXNbg"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643019049.965691,"uids":["CjUnW4UvK3374j5F6"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643019218.728473,"uids":["C2Jsfn2Swr2LHU0wTk"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643019303.109359,"uids":["CDyNMf1nPUGfPkLji7"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643019363.119989,"uids":["ClavHB3xTU4dRKzA5h"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643019387.514966,"uids":["ClavHB3xTU4dRKzA5h"],"mac":"fa:16:3e:5e:79:d8","host_name":"internal-employee-3","requested_addr":"10.143.3.65","msg_types":["DISCOVER","REQUEST"],"duration":0.005215883255004883}
+{"ts":1643019666.544378,"uids":["CglTagxYWh5q3fEdg","CVbw6l2oM4Ba6iIT5c"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0009448528289794922}
+{"ts":1643022840.784293,"uids":["CauJKetqDqvGR3px3"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643022854.839022,"uids":["CauJKetqDqvGR3px3"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643028754.361496,"uids":["CnrPz32NohZbQjCDQc"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.00937199592590332}
+{"ts":1643035865.831512,"uids":["CRI8G54HUYNs2f2rQ","CPWKk64fhvw069eyaj"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0008771419525146484}
+{"ts":1643039041.013509,"uids":["CEwcuq1XKOHVoTXdaj"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643039054.716801,"uids":["CEwcuq1XKOHVoTXdaj"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643043965.48528,"uids":["CsblDg34EqkP6ZPpVe","C44SaS6p7Jnty8VVk"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0009920597076416016}
+{"ts":1643047141.125,"uids":["CToAv92hL3iYapZ9Mc"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643047154.655622,"uids":["CToAv92hL3iYapZ9Mc"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643048015.311616,"uids":["Cq4HhXPnn5iL0kHN6","Cjcmyn3wMwJA3KehI1"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0009720325469970703}
+{"ts":1643050040.225561,"uids":["CBODfN2SzfydOYP4Oa","C8PJ9j2eXXNOM1amvi"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.0010809898376464844}
+{"ts":1643051052.680165,"uids":["C4RGNj3URQRnrKMcv9","C6yCgg4TKBGbh5den1"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.001127004623413086}
+{"ts":1643051191.181501,"uids":["CoRajIwL4FO6n8i3j"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643051204.624507,"uids":["CoRajIwL4FO6n8i3j"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643051558.909193,"uids":["CD7iDb2qNd26XXHoka","COitfc3RMKe6uFFyz9"],"client_addr":"10.143.2.91","mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["REQUEST","NAK"],"duration":0.001074075698852539}
+{"ts":1643051812.022832,"uids":["CfLdr13Z2tmngNqUif"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643051938.579836,"uids":["CgLjkP27xFijz76GL3"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643052001.860722,"uids":["Ci7dP54D2IhhtVjHt7"],"mac":"fa:16:3e:d4:40:84","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643052061.869864,"uids":["Codddp4T3H4YYOXONb","CzQpcm1rTdINDjf97i"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.256427049636841}
+{"ts":1643053216.209927,"uids":["CGmxk547dy4nQkESU1"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643053229.609214,"uids":["CGmxk547dy4nQkESU1"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643054228.725633,"uids":["CpOexs5h9YLqPkMra"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643054242.10263,"uids":["CpOexs5h9YLqPkMra"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643054734.980988,"uids":["CiWcy14AmfaHs3ES2i"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643054748.348791,"uids":["CiWcy14AmfaHs3ES2i"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643054988.110213,"uids":["C3om7YGAWAlWIIrz6"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643055001.471157,"uids":["C3om7YGAWAlWIIrz6"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643055114.674188,"uids":["CVyRMr3oVxRMsab0l4"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643055128.033058,"uids":["CVyRMr3oVxRMsab0l4"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643055177.958111,"uids":["CVyRMr3oVxRMsab0l4"],"mac":"fa:16:3e:14:ac:4e","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643055191.315258,"uids":["CVyRMr3oVxRMsab0l4"],"mac":"fa:16:3e:39:f3:1d","server_message":"lease not found","msg_types":["NAK"],"duration":0.0}
+{"ts":1643055237.968807,"uids":["C0LRXk2oiUxgDZaAqg","CVyRMr3oVxRMsab0l4"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.2583260536193848}
+{"ts":1643055251.325883,"uids":["C0LRXk2oiUxgDZaAqg","CVyRMr3oVxRMsab0l4"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","server_message":"lease not found","msg_types":["NAK","REQUEST"],"duration":3.258026123046875}
+{"ts":1643059050.384809,"uids":["C6aJMj1T9knor7Ucif"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643060640.842488,"uids":["CONAPp4rFg382drWA9"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643060654.235951,"uids":["CONAPp4rFg382drWA9"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643062543.011379,"uids":["CzNzQW2cs151362yJk"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643063340.645317,"uids":["Cu74Lz3DdM4jHGS3Sg"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643063354.059202,"uids":["Cu74Lz3DdM4jHGS3Sg"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643064289.326387,"uids":["CuWfgb2aLQoXtwlZQe"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643064690.548112,"uids":["CTz3ssPks6kKXaCA4"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643064703.97155,"uids":["CTz3ssPks6kKXaCA4"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065162.480851,"uids":["CWeycNOsu99igXFT5"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065365.498326,"uids":["CymbQD4eePcNmYMU4e"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065378.926902,"uids":["CymbQD4eePcNmYMU4e"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065599.061143,"uids":["CcZeCf2a8iFiGxVAxc"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065702.973846,"uids":["CMXrA325ab4K1SoQ85"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065716.40638,"uids":["CMXrA325ab4K1SoQ85"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065817.350678,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065871.712782,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065885.144683,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065926.494631,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065956.080925,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065969.513647,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643065986.505725,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643066016.091292,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643066029.525397,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643066040.472699,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:14:ac:4e","host_name":"internal-employee-0","requested_addr":"10.143.1.78","msg_types":["DISCOVER","REQUEST"],"duration":0.00896310806274414}
+{"ts":1643066035.65876,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:d4:40:84","host_name":"internal-employee-1","requested_addr":"10.143.2.91","msg_types":["DISCOVER","REQUEST"],"duration":0.019459009170532227}
+{"ts":1643066053.898571,"uids":["CShBqt36SizEh5ME35"],"mac":"fa:16:3e:39:f3:1d","host_name":"internal-employee-2","requested_addr":"10.143.2.25","msg_types":["DISCOVER","REQUEST"],"duration":0.020793914794921875}
+{"ts":1643066775.04857,"uids":["C7KADh4d3rkTzXFJO1"],"client_addr":"10.143.0.1","mac":"fa:16:3e:a8:c3:5e","host_name":"inet-firewall","msg_types":["REQUEST"],"duration":0.0}
+{"ts":1643067952.446633,"uids":["CxUhIu29Wqe7jv4d3h"],"client_addr":"10.143.2.4","server_addr":"10.143.0.2","mac":"fa:16:3e:75:ba:2b","host_name":"intranet-server","assigned_addr":"10.143.2.4","lease_time":86400.0,"msg_types":["REQUEST","ACK"],"duration":0.0038039684295654297}

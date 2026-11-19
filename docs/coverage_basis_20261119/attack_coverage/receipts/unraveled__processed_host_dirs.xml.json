@@ -1,0 +1,12 @@
+{
+  "url": "https://dapt2021.s3.amazonaws.com/?list-type=2&prefix=processed/host-logs/&delimiter=/&max-keys=1000",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\processed_host_dirs.xml",
+  "bytes": 496,
+  "sha256": "ef2102908c5a2f3944ef505eb93e2e2294643feb452abf5e19dc7dcb3e661c0c",
+  "response_headers": {
+    "Content-Length": null,
+    "ETag": null,
+    "Last-Modified": null,
+    "Content-Type": "application/xml"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "execution_enabled": false,
+  "status": "fixed_history19_retired_separate_four_fit_laboratory_batch_ready",
+  "execution_scope": "retired_source_fit_contract_HGB8_HGB27_only",
+  "decision_source": "User requested filling attack coverage, calibration evidence and history rationale before deciding whether to run; necessary justified comparisons are to be run as one fixed batch.",
+  "superseded_execution_recipe": "source-fit-contract-v1.1",
+  "preserved_artifacts": "All previous source files, event tables, registrations and model results remain historical evidence.",
+  "history_decision": "Remove the HGB27 training arm; preserve its implementation and previous artifacts as historical evidence.",
+  "history_reason": "The true wget control flow is unavailable strictly before the download query for all four AIT download actions. A last-flow slot and whole-prefix mean do not establish the proposed command-to-download mechanism.",
+  "normal_cohorts": {"whole_run_C_candidate_flows": 3475, "C_verified_file_download_actions": 33, "normal_file_request_candidate_flows": 188, "historical_C25_normal_identity_retained": 25},
+  "algorithm_innovation_established": false,
+  "replacement_history_arm": null,
+  "real_model_calls_in_this_workstation": false,
+  "parameter_or_threshold_search": false,
+  "replacement_registration": "docs/coverage_basis_20261119/batch/registration.json",
+  "experiment_decision": "Do not run the retired HGB8/HGB27 comparison. A separate fixed four-fit HGB source-support x port-input baseline batch will answer whether complete additional C2 supervision transfers beyond port identities. It does not test an original algorithm or expanded malicious-download supervision."
+}

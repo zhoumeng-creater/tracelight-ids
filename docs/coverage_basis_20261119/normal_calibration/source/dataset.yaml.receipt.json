@@ -1,0 +1,10 @@
+{
+  "path": "dataset.yaml",
+  "bytes": 97,
+  "compressed": 73,
+  "CRC": 3596671278,
+  "offset": 0,
+  "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\data\\raw\\ait-lds\\source-audit-20261115\\dataset.yaml",
+  "sha256": "fba756deba1ccc5db4cb3e7674026c9d6aa8ba07ba5e601396abc0f81fb1a5e5",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\dataset.yaml"
+}

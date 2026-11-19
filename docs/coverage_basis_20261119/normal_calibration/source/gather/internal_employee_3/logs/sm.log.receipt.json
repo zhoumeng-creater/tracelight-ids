@@ -1,0 +1,10 @@
+{
+  "path": "gather/internal_employee_3/logs/sm.log",
+  "bytes": 3674057,
+  "compressed": 318497,
+  "CRC": 1567071474,
+  "offset": 204790362,
+  "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\internal_employee_3\\logs\\sm.log",
+  "sha256": "5c2ff0fc8f338490a375f19319c9c1bc0e75b7bbe6c9e3db4665fc9eb7045800",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\internal_employee_3\\logs\\sm.log"
+}

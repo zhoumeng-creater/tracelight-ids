@@ -1,0 +1,142 @@
+{
+  "host": "10.1.3.8",
+  "author_day": "Week5_Day1_06212021",
+  "source_flow_table": {
+    "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210621_net1013x.csv",
+    "sha256": "cbc00c3397d81972c321223e0318fd1b99f2c9d00143b98d1070359dbb56a272",
+    "header_columns": 89,
+    "width_counts": {
+      "89": 45960,
+      "104": 7,
+      "90": 170
+    },
+    "valid_rows": 45960,
+    "malformed_rows": 177
+  },
+  "capture_folder_not_UTC_calendar_day": true,
+  "all_valid_rows_min_first_utc": "2021-06-21T07:08:58.198000+00:00",
+  "all_valid_rows_max_last_utc": "2021-06-22T07:29:02.143000+00:00",
+  "host_rows_min_first_utc": "2021-06-21T07:09:01.519000+00:00",
+  "host_rows_max_last_utc": "2021-06-22T07:29:02.143000+00:00",
+  "subsets": {
+    "all_target_host": {
+      "valid_author_rows": 12582,
+      "explicit_normal": 12100,
+      "explicit_C2": 473,
+      "other_explicit_attack": 9,
+      "unresolved_or_other": 0,
+      "activity_signature_counts": [
+        {
+          "activity": "Normal",
+          "stage": "Benign",
+          "signature": "None",
+          "count": 12100
+        },
+        {
+          "activity": "Remote System Discovery",
+          "stage": "Lateral Movement",
+          "signature": "APT",
+          "count": 9
+        },
+        {
+          "activity": "Exfiltration over C2 channel",
+          "stage": "Data Exfiltration",
+          "signature": "APT",
+          "count": 441
+        },
+        {
+          "activity": "Encrypted Channel: Symmetric Cryptography",
+          "stage": "Establish Foothold",
+          "signature": "APT",
+          "count": 32
+        }
+      ]
+    },
+    "target_tcp_resp_port443": {
+      "valid_author_rows": 5523,
+      "explicit_normal": 5050,
+      "explicit_C2": 473,
+      "other_explicit_attack": 0,
+      "unresolved_or_other": 0,
+      "activity_signature_counts": [
+        {
+          "activity": "Normal",
+          "stage": "Benign",
+          "signature": "None",
+          "count": 5050
+        },
+        {
+          "activity": "Exfiltration over C2 channel",
+          "stage": "Data Exfiltration",
+          "signature": "APT",
+          "count": 441
+        },
+        {
+          "activity": "Encrypted Channel: Symmetric Cryptography",
+          "stage": "Establish Foothold",
+          "signature": "APT",
+          "count": 32
+        }
+      ]
+    },
+    "target_tls_application": {
+      "valid_author_rows": 5601,
+      "explicit_normal": 5128,
+      "explicit_C2": 473,
+      "other_explicit_attack": 0,
+      "unresolved_or_other": 0,
+      "activity_signature_counts": [
+        {
+          "activity": "Normal",
+          "stage": "Benign",
+          "signature": "None",
+          "count": 5128
+        },
+        {
+          "activity": "Exfiltration over C2 channel",
+          "stage": "Data Exfiltration",
+          "signature": "APT",
+          "count": 441
+        },
+        {
+          "activity": "Encrypted Channel: Symmetric Cryptography",
+          "stage": "Establish Foothold",
+          "signature": "APT",
+          "count": 32
+        }
+      ]
+    },
+    "target_c2_server": {
+      "valid_author_rows": 473,
+      "explicit_normal": 0,
+      "explicit_C2": 473,
+      "other_explicit_attack": 0,
+      "unresolved_or_other": 0,
+      "activity_signature_counts": [
+        {
+          "activity": "Exfiltration over C2 channel",
+          "stage": "Data Exfiltration",
+          "signature": "APT",
+          "count": 441
+        },
+        {
+          "activity": "Encrypted Channel: Symmetric Cryptography",
+          "stage": "Establish Foothold",
+          "signature": "APT",
+          "count": 32
+        }
+      ]
+    }
+  },
+  "pcap_source_url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+  "pcap_full_bytes": 3518820352,
+  "pcap_GiB": 3.2771568298339844,
+  "anonymous_range_access_verified": true,
+  "same_object_etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+  "full_pcap_downloaded": false,
+  "evidence_against_whole_victim_ip_attack_label": "Same victim IP has both author-explicit Normal and per-flow APT C2 annotations; table counts and source rows retained. This disproves whole-victim-IP=APT labeling, not all possible endpoint/time rules.",
+  "ground_truth_generation_code_status": "not obtained; cannot independently reproduce author annotation procedure",
+  "normal_policy": "Accept author-explicit Normal as source-graded normal labels when exact flow linkage is complete; no requirement for a process log for every normal row. Unlabelled/Background/malformed rows are not Normal.",
+  "flow_granularity_limit": "NFStream rows may split longer physical connections. Full extraction must keep all author candidates and refuse conflicting/mixed whole-connection labels; do not directly compare their raw fields as Zeek raw8.",
+  "next_bounded_action": "If parent authorizes, retrieve this one 3518820352-byte net1013x PCAP with validated ranges and extract full capture once; associate all source-grade explicit Normal/C2 by tuple plus intervals, retaining other/unknown records. No other day/source needed for that step."
+}

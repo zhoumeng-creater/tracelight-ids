@@ -1,0 +1,10 @@
+{
+  "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+  "bytes": 1514577,
+  "compressed": 63947,
+  "CRC": 2109735952,
+  "offset": 192205050,
+  "reused_local_source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.1",
+  "sha256": "dd84f0feb1700360023d7d821aa5b2dd2602b0890f18b536ea80f9e3a414b134",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.1"
+}

@@ -1,0 +1,10 @@
+{
+  "version": "v2",
+  "correction": "SF and explicitly closed actor activity were extra v1 cohort conditions, not author normal-label rules or requirements of the fixed raw8 contract. V2 removes both from label qualification.",
+  "label_rule": "Whole observation interval inside author validity; original service requests exist; every possible actor-side request belongs to a known author normal internal actor and is author-unlabelled; no candidate attack request; cloud frontend/backend request identity sets close and proxy endpoint is correct.",
+  "input_rule": "Keep conn_state, completeness, missingness, EOF and truncation as separate facts. model_input_ready requires complete raw8 plus existing context and finite replay time; it does not require SF or activity closure.",
+  "role_rule": "Candidate C allocation covers the whole russellmitchell source. Unknown labels are not normal calibration samples. V1 early/later data remain history.",
+  "whole_run_answer": "The 270 v1 role-unresolved rows already met the stricter row-level normal evidence; only linked component closure prevented temporal roles. Whole-source assignment removes that role obstacle, without converting unknown row labels.",
+  "official_normal_rule": "https://zenodo.org/records/19483937",
+  "NP_limit": "Sample dependence remains; neither recovered connections nor activity components establish iid draws or a 95% population 1% guarantee."
+}

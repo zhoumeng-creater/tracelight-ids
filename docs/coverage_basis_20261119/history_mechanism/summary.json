@@ -1,0 +1,446 @@
+{
+  "model_fit_calls": 0,
+  "model_score_calls": 0,
+  "threshold_calls": 0,
+  "event_count": 5306,
+  "candidate_context_rows": 6401,
+  "groups": {
+    "OpTC/known_control_transport": {
+      "events": 24,
+      "unique_candidate_flows": 24,
+      "event_candidate_context_rows": 24,
+      "all_candidates_have_context_events": 24,
+      "previous_class_rows": {
+        "confirmed_attack_chain_flow": 23,
+        "empty": 1
+      },
+      "previous_class_unique_views": {
+        "confirmed_attack_chain_flow": 23,
+        "empty": 1
+      },
+      "same_peer_unique_views": 23,
+      "same_peer_rows": 23,
+      "events_all_candidates_samepeer": 23,
+      "events_any_candidate_samepeer": 23,
+      "prefix_count_range": [
+        0,
+        23
+      ],
+      "prefix_span_seconds_range": [
+        0,
+        650.9289631843567
+      ]
+    },
+    "OpTC/malicious_tool_download": {
+      "events": 1,
+      "unique_candidate_flows": 1,
+      "event_candidate_context_rows": 1,
+      "all_candidates_have_context_events": 1,
+      "previous_class_rows": {
+        "unknown_flow": 1
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 1
+      },
+      "same_peer_unique_views": 1,
+      "same_peer_rows": 1,
+      "events_all_candidates_samepeer": 1,
+      "events_any_candidate_samepeer": 1,
+      "prefix_count_range": [
+        360,
+        360
+      ],
+      "prefix_span_seconds_range": [
+        1622.8429961204529,
+        1622.8429961204529
+      ]
+    },
+    "OpTC/repeated_tool_transfer": {
+      "events": 1,
+      "unique_candidate_flows": 1,
+      "event_candidate_context_rows": 1,
+      "all_candidates_have_context_events": 1,
+      "previous_class_rows": {
+        "unknown_flow": 1
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 1
+      },
+      "same_peer_unique_views": 1,
+      "same_peer_rows": 1,
+      "events_all_candidates_samepeer": 1,
+      "events_any_candidate_samepeer": 1,
+      "prefix_count_range": [
+        363,
+        363
+      ],
+      "prefix_span_seconds_range": [
+        2583.369917154312,
+        2583.369917154312
+      ]
+    },
+    "OpTC/webpage_image_download": {
+      "events": 4779,
+      "unique_candidate_flows": 556,
+      "event_candidate_context_rows": 4779,
+      "all_candidates_have_context_events": 4779,
+      "previous_class_rows": {
+        "possible_normal_business_candidate": 3424,
+        "unknown_flow": 618,
+        "qualified_normal_flow": 735,
+        "empty": 2
+      },
+      "previous_class_unique_views": {
+        "possible_normal_business_candidate": 383,
+        "unknown_flow": 71,
+        "qualified_normal_flow": 101,
+        "empty": 1
+      },
+      "same_peer_unique_views": 466,
+      "same_peer_rows": 3853,
+      "events_all_candidates_samepeer": 3853,
+      "events_any_candidate_samepeer": 3853,
+      "prefix_count_range": [
+        0,
+        8765
+      ],
+      "prefix_span_seconds_range": [
+        0,
+        3534.864145040512
+      ]
+    },
+    "OpTC/webpage_stylesheet_download": {
+      "events": 247,
+      "unique_candidate_flows": 167,
+      "event_candidate_context_rows": 247,
+      "all_candidates_have_context_events": 247,
+      "previous_class_rows": {
+        "unknown_flow": 30,
+        "possible_normal_business_candidate": 186,
+        "qualified_normal_flow": 31
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 23,
+        "possible_normal_business_candidate": 124,
+        "qualified_normal_flow": 20
+      },
+      "same_peer_unique_views": 146,
+      "same_peer_rows": 217,
+      "events_all_candidates_samepeer": 217,
+      "events_any_candidate_samepeer": 217,
+      "prefix_count_range": [
+        4,
+        8765
+      ],
+      "prefix_span_seconds_range": [
+        0.0002009868621826172,
+        3534.864145040512
+      ]
+    },
+    "fox/attack_download": {
+      "events": 2,
+      "unique_candidate_flows": 3,
+      "event_candidate_context_rows": 3,
+      "all_candidates_have_context_events": 2,
+      "previous_class_rows": {
+        "confirmed_attack_chain_flow": 2,
+        "unknown_flow": 1
+      },
+      "previous_class_unique_views": {
+        "confirmed_attack_chain_flow": 2,
+        "unknown_flow": 1
+      },
+      "same_peer_unique_views": 0,
+      "same_peer_rows": 0,
+      "events_all_candidates_samepeer": 0,
+      "events_any_candidate_samepeer": 0,
+      "prefix_count_range": [
+        11488,
+        11497
+      ],
+      "prefix_span_seconds_range": [
+        350231.76424503326,
+        350280.26730418205
+      ]
+    },
+    "fox/normal_intranet_page_retrieval": {
+      "events": 58,
+      "unique_candidate_flows": 228,
+      "event_candidate_context_rows": 228,
+      "all_candidates_have_context_events": 58,
+      "previous_class_rows": {
+        "unknown_flow": 190,
+        "qualified_normal_flow": 3,
+        "possible_normal_business_candidate": 35
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 190,
+        "qualified_normal_flow": 3,
+        "possible_normal_business_candidate": 35
+      },
+      "same_peer_unique_views": 105,
+      "same_peer_rows": 105,
+      "events_all_candidates_samepeer": 23,
+      "events_any_candidate_samepeer": 39,
+      "prefix_count_range": [
+        1431,
+        12543
+      ],
+      "prefix_span_seconds_range": [
+        80783.33498620987,
+        442534.1507000923
+      ]
+    },
+    "fox/normal_owncloud_file_download": {
+      "events": 42,
+      "unique_candidate_flows": 406,
+      "event_candidate_context_rows": 463,
+      "all_candidates_have_context_events": 42,
+      "previous_class_rows": {
+        "qualified_normal_flow": 255,
+        "unknown_flow": 183,
+        "possible_normal_business_candidate": 25
+      },
+      "previous_class_unique_views": {
+        "qualified_normal_flow": 218,
+        "unknown_flow": 164,
+        "possible_normal_business_candidate": 24
+      },
+      "same_peer_unique_views": 327,
+      "same_peer_rows": 369,
+      "events_all_candidates_samepeer": 11,
+      "events_any_candidate_samepeer": 42,
+      "prefix_count_range": [
+        3694,
+        31344
+      ],
+      "prefix_span_seconds_range": [
+        73684.53281188011,
+        465812.948884964
+      ]
+    },
+    "fox/reverse_shell_channel": {
+      "events": 1,
+      "unique_candidate_flows": 2,
+      "event_candidate_context_rows": 2,
+      "all_candidates_have_context_events": 1,
+      "previous_class_rows": {
+        "unknown_flow": 1,
+        "possible_attack_chain_candidate": 1
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 1,
+        "possible_attack_chain_candidate": 1
+      },
+      "same_peer_unique_views": 0,
+      "same_peer_rows": 0,
+      "events_all_candidates_samepeer": 0,
+      "events_any_candidate_samepeer": 0,
+      "prefix_count_range": [
+        11554,
+        11584
+      ],
+      "prefix_span_seconds_range": [
+        352381.77125120163,
+        352711.75528907776
+      ]
+    },
+    "fox/webshell_command": {
+      "events": 18,
+      "unique_candidate_flows": 21,
+      "event_candidate_context_rows": 21,
+      "all_candidates_have_context_events": 18,
+      "previous_class_rows": {
+        "unknown_flow": 5,
+        "possible_attack_chain_candidate": 4,
+        "confirmed_attack_chain_flow": 12
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 5,
+        "possible_attack_chain_candidate": 4,
+        "confirmed_attack_chain_flow": 12
+      },
+      "same_peer_unique_views": 19,
+      "same_peer_rows": 19,
+      "events_all_candidates_samepeer": 16,
+      "events_any_candidate_samepeer": 17,
+      "prefix_count_range": [
+        11469,
+        11582
+      ],
+      "prefix_span_seconds_range": [
+        350205.04286909103,
+        352680.539812088
+      ]
+    },
+    "santos/attack_download": {
+      "events": 2,
+      "unique_candidate_flows": 3,
+      "event_candidate_context_rows": 3,
+      "all_candidates_have_context_events": 2,
+      "previous_class_rows": {
+        "confirmed_attack_chain_flow": 2,
+        "unknown_flow": 1
+      },
+      "previous_class_unique_views": {
+        "confirmed_attack_chain_flow": 2,
+        "unknown_flow": 1
+      },
+      "same_peer_unique_views": 0,
+      "same_peer_rows": 0,
+      "events_all_candidates_samepeer": 0,
+      "events_any_candidate_samepeer": 0,
+      "prefix_count_range": [
+        5275,
+        5283
+      ],
+      "prefix_span_seconds_range": [
+        333976.8487329483,
+        334005.6569609642
+      ]
+    },
+    "santos/normal_intranet_page_retrieval": {
+      "events": 53,
+      "unique_candidate_flows": 137,
+      "event_candidate_context_rows": 137,
+      "all_candidates_have_context_events": 53,
+      "previous_class_rows": {
+        "unknown_flow": 127,
+        "qualified_normal_flow": 10
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 127,
+        "qualified_normal_flow": 10
+      },
+      "same_peer_unique_views": 39,
+      "same_peer_rows": 39,
+      "events_all_candidates_samepeer": 20,
+      "events_any_candidate_samepeer": 22,
+      "prefix_count_range": [
+        689,
+        5917
+      ],
+      "prefix_span_seconds_range": [
+        68538.94384288788,
+        364623.73753499985
+      ]
+    },
+    "santos/normal_owncloud_file_download": {
+      "events": 44,
+      "unique_candidate_flows": 375,
+      "event_candidate_context_rows": 445,
+      "all_candidates_have_context_events": 44,
+      "previous_class_rows": {
+        "qualified_normal_flow": 271,
+        "unknown_flow": 122,
+        "possible_normal_business_candidate": 52
+      },
+      "previous_class_unique_views": {
+        "qualified_normal_flow": 231,
+        "unknown_flow": 107,
+        "possible_normal_business_candidate": 37
+      },
+      "same_peer_unique_views": 347,
+      "same_peer_rows": 408,
+      "events_all_candidates_samepeer": 22,
+      "events_any_candidate_samepeer": 44,
+      "prefix_count_range": [
+        2552,
+        15723
+      ],
+      "prefix_span_seconds_range": [
+        81751.440376997,
+        369333.1584289074
+      ]
+    },
+    "santos/reverse_shell_channel": {
+      "events": 1,
+      "unique_candidate_flows": 2,
+      "event_candidate_context_rows": 2,
+      "all_candidates_have_context_events": 1,
+      "previous_class_rows": {
+        "possible_attack_chain_candidate": 2
+      },
+      "previous_class_unique_views": {
+        "possible_attack_chain_candidate": 2
+      },
+      "same_peer_unique_views": 0,
+      "same_peer_rows": 0,
+      "events_all_candidates_samepeer": 0,
+      "events_any_candidate_samepeer": 0,
+      "prefix_count_range": [
+        5335,
+        5339
+      ],
+      "prefix_span_seconds_range": [
+        336009.625002861,
+        336354.4062638283
+      ]
+    },
+    "santos/webshell_command": {
+      "events": 33,
+      "unique_candidate_flows": 45,
+      "event_candidate_context_rows": 45,
+      "all_candidates_have_context_events": 33,
+      "previous_class_rows": {
+        "unknown_flow": 14,
+        "possible_attack_chain_candidate": 5,
+        "confirmed_attack_chain_flow": 26
+      },
+      "previous_class_unique_views": {
+        "unknown_flow": 14,
+        "possible_attack_chain_candidate": 5,
+        "confirmed_attack_chain_flow": 26
+      },
+      "same_peer_unique_views": 33,
+      "same_peer_rows": 33,
+      "events_all_candidates_samepeer": 27,
+      "events_any_candidate_samepeer": 29,
+      "prefix_count_range": [
+        5242,
+        5338
+      ],
+      "prefix_span_seconds_range": [
+        333902.13038802147,
+        336298.5565788746
+      ]
+    }
+  },
+  "optc_normal_objects_deduplicated_parent_summary": {
+    "events": 5026,
+    "unique_candidate_flows": 559,
+    "event_candidate_context_rows": 5026,
+    "all_candidates_have_context_events": 5026,
+    "previous_class_rows": {
+      "possible_normal_business_candidate": 3610,
+      "unknown_flow": 648,
+      "qualified_normal_flow": 766,
+      "empty": 2
+    },
+    "previous_class_unique_views": {
+      "possible_normal_business_candidate": 384,
+      "unknown_flow": 73,
+      "qualified_normal_flow": 101,
+      "empty": 1
+    },
+    "same_peer_unique_views": 469,
+    "same_peer_rows": 4070,
+    "events_all_candidates_samepeer": 4070,
+    "events_any_candidate_samepeer": 4070,
+    "prefix_count_range": [
+      0,
+      8765
+    ],
+    "prefix_span_seconds_range": [
+      0,
+      3534.864145040512
+    ]
+  },
+  "interpretation": [
+    "AIT query uses offline Zeek export network_time, not real ingestion.",
+    "OpTC query is offline flow-end replay, not observed exporter availability.",
+    "Prior actor-completed workflow events are not causal edges.",
+    "Unknown prefix flows cannot be called benign or unrelated.",
+    "Candidate rows are not independent events; all candidate bounds retained."
+  ]
+}

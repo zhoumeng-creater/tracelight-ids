@@ -1,0 +1,235 @@
+{
+  "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\flow_20210621_net1013x.csv",
+  "bytes": 26038650,
+  "sha256": "cbc00c3397d81972c321223e0318fd1b99f2c9d00143b98d1070359dbb56a272",
+  "complete_object": true,
+  "retrieval": "validated contiguous HTTP ranges",
+  "range_receipts": [
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 0,
+      "range_end": 1048575,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "11201731c8b04f390037176667c80dde0617dd27cead6127fe2ab8064c9a6ce2",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 1048576,
+      "range_end": 2097151,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "8b370efa84722dfde0e68e3be1a7b107afa9a452b68d371e7489f5e8ea0d51ca",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 2097152,
+      "range_end": 3145727,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "eb122a8672fa7e4b0068fcac3d02db6537b76171679a58e06d3a41243e4f7bf9",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 3145728,
+      "range_end": 4194303,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "dd2cbd5f3986c88e38bb7db08ee7f6a3271fdacc8e079051741895a8d65363d6",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 4194304,
+      "range_end": 5242879,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "85f09b0150d155d12760d5e7b1144d35f159528a328a84dc30a24bf10c91388e",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 5242880,
+      "range_end": 6291455,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "882c8dc7749f02ca1a7b0552ad0e3d1b596ac6ed9fd08c082951f26e31136b35",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 6291456,
+      "range_end": 7340031,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "87f4f077776c5be79f7368b5dd423602593aeed049944787ba95afa36d953d76",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 7340032,
+      "range_end": 8388607,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "7543876347b5498814e12de340fd2ea82490a167c4479e38deea4e4208b08dff",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 8388608,
+      "range_end": 9437183,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "f0786df65a5346b2d6b01c0b3bdb503e18fbf43b0c929a1b5bebbdba7904c811",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 9437184,
+      "range_end": 10485759,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "0aa2a88b4ebc5fbbde8efc303830f0cdcc78bc81a554fbf76b21ab4176901b53",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 10485760,
+      "range_end": 11534335,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "b61f1e9cd85fef64c1585be30163f843758ecde6513f766facd75aa0170e98ce",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 11534336,
+      "range_end": 12582911,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "aa7649724cf29c9641e4eb2ffd71007c98c1f6dc16ff13d95378d38dc06ca460",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 12582912,
+      "range_end": 13631487,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "1c36dad9b4b425da586d98828f00e624f00f9ca63999971802e0c40621ecfb2f",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 13631488,
+      "range_end": 14680063,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "fb75e7e2afaf15f0e5c0e1503f6afce46c41a063838f5ad0c1327217e6a995fb",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 14680064,
+      "range_end": 15728639,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "438dfd092d5fd04e413043057a1b45a4f8b9a47d23abff552905d7bea3de4b96",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 15728640,
+      "range_end": 16777215,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "183c2dda47c4e4d7b5d03ec6e1f2f7859511ea7ffa63c53907a48ed2fef6b6d7",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 16777216,
+      "range_end": 17825791,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "00e39a7d36ae2b2d74f2e3c932e5691c2df3f5a761a9c3cd845816398ddbd5cd",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 17825792,
+      "range_end": 18874367,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "0351d9f3d941b6e76f729ea89c032f974865201f6151d73781a7e34fec58bb9d",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 18874368,
+      "range_end": 19922943,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "fc0540863e0009a8aa721ac64eb1af3ba5b6d74c9eb073dbbb574fb45231e75b",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 19922944,
+      "range_end": 20971519,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "7a28d6a28ec5b7732dcd874d2828a83937d7039d60d6a54d476e83c70f4c1aa3",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 20971520,
+      "range_end": 22020095,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "5b91a48b204a58c7d6fc620fcc2d98a0175734ffb4d1e9dee49ff112be44128d",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 22020096,
+      "range_end": 23068671,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "f3a8ffc5c6c8f7f53620407d86b0dd31c90e103217168a12ea78da46c59ac600",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 23068672,
+      "range_end": 24117247,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "0e732fdcc22e9d6671a45b94bf53a14b3bd5b41b90f8fa2a87e9b1b81bb2132f",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 24117248,
+      "range_end": 25165823,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "6c6fffbb59fdd66abfaf99c38528702ba362dd8527b7f29738873a5667f92baf",
+      "bytes": 1048576
+    },
+    {
+      "url": "https://dapt2021.s3.amazonaws.com/processed/network-flows/Week5_Day1_06212021/net1013x_Flow_labeled.csv",
+      "range_start": 25165824,
+      "range_end": 26038649,
+      "object_bytes": 26038650,
+      "etag": "\"f0684f941c3a58fbebc4f7e09ea633aa-2\"",
+      "sha256": "e0ba1138b072021aee284001db3bdbe1c4c22a175f738fc35fdbbe776688561f",
+      "bytes": 872826
+    }
+  ]
+}

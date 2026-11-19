@@ -1,0 +1,9 @@
+{
+  "url": "https://dapt2021.s3.amazonaws.com/raw/network-captures/Week5_Day1_06212021/net1013x.pcap",
+  "range_start": 879674685,
+  "range_end": 879805756,
+  "object_bytes": 3518820352,
+  "etag": "\"f752b111fd79f14d3712f9ccdb046c9e-210\"",
+  "sha256": "0e16956afca3103f446f0df571a2818118f645122743bd29d07522fcaa769408",
+  "bytes": 131072
+}

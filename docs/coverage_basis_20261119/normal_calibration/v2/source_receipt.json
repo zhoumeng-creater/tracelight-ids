@@ -1,0 +1,38 @@
+{
+  "inputs": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\connection_candidates.jsonl.gz": {
+      "sha256": "903252d4747ddba5c080402cb632c7e174763c0f18a2debdfff7b178d4fe57d2",
+      "bytes": 14131647
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\request_evidence.jsonl.gz": {
+      "sha256": "e4e8bc52dbc6b936200f4367004402ec00d68e4e54438591f342946a10467c8a",
+      "bytes": 6025272
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\business_episodes.jsonl.gz": {
+      "sha256": "26dddc2e55b98650520c54a03459211187c50e9a8fe544faf207068e9d22c8f5",
+      "bytes": 31931
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\context_rows.jsonl.gz": {
+      "sha256": "1c01cb9d29e0b65e52091ce4e984dfce86fb08afee18b080269a6aa354f131fb",
+      "bytes": 4717997
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\historical_C25_disposition.json": {
+      "sha256": "773cabb23e1e194a9a32697d6e303e9998e4d4a8c52688b029bf51ca0e701051",
+      "bytes": 26346
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\source_receipt.json": {
+      "sha256": "b6945c2847cdfe5f3587da85aa2f5f086658473b3f253862f453ca9ad2548107",
+      "bytes": 13855
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\normal_calibration\\extracted\\intranet_server\\connections.jsonl.gz": {
+      "sha256": "e63687f26dce8d7a1df5b2a9315c1ed772f03ab34c8677ad6c93f12912b2ce26",
+      "bytes": 1927253
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\russellmitchell\\cloud_share\\connections.jsonl.gz": {
+      "sha256": "987ef6b983b2a4922546c87464ec4d2d811ad352d14de9a62c26b45236f0f8ad",
+      "bytes": 3976334
+    }
+  },
+  "script_sha256": "9426eaab42d8626aa17065baf38ada81eacc017e8ade76b30cc5a72142bac4b1",
+  "receipt_packaging_note": "Explicitly includes both existing full connection tables used to read conn_state and raw8 quality; no extraction or model rerun."
+}
