@@ -1,0 +1,32 @@
+[
+  {
+    "file": "EKD.py",
+    "url": "https://raw.githubusercontent.com/Tencent/TFace/171ec1434aca0972e111663ac646c9c1e3e44b5b/recognition/tasks/ekd/distillation/ekd.py",
+    "sha256": "a518a9512740abcce2d0149f492e15fd643ff3ccaab309b37f972ab24d6cb4ac",
+    "bytes": 3616
+  },
+  {
+    "file": "SEKD_selection_scoring.py",
+    "url": "https://raw.githubusercontent.com/almogtavor/SE-KD3x/08b276383a31fe5c07eb6685f9c4557b78e42880/sekd/distill/_mixins/selection_scoring.py",
+    "sha256": "59b98b3d7ad6de8b7cff8f8fddf4cbf21ee1b9671f1f5bd6a6587ca18c31b2bd",
+    "bytes": 5541
+  },
+  {
+    "file": "SEKD_kd_core.py",
+    "url": "https://raw.githubusercontent.com/almogtavor/SE-KD3x/08b276383a31fe5c07eb6685f9c4557b78e42880/sekd/distill/_mixins/kd_core.py",
+    "sha256": "088471404658e85e6dd2793b0e6167db2d2cb69d935e06559567e995b77b5fcd",
+    "bytes": 2408
+  },
+  {
+    "file": "GRACE_computation.py",
+    "url": "https://raw.githubusercontent.com/abhishekpanigrahi1996/GRACE/64fc99a10049f79abe05e2be638a178b448985d0/GRACE/GRACE_computation.py",
+    "sha256": "db76b9702ef318895b141bb9eb7140ddb824523baa2dcacb86989a944a941458",
+    "bytes": 5580
+  },
+  {
+    "file": "LibAUC_auc.py",
+    "url": "https://raw.githubusercontent.com/Optimization-AI/LibAUC/3c02aa9877e0091114a00f94a8c6367698eb5637/libauc/losses/auc.py",
+    "sha256": "5040227229fdd2d05ccfb035482a79c8e449bb76736de36df4b4512ef3a429de",
+    "bytes": 60161
+  }
+]

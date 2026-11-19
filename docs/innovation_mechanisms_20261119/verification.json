@@ -1,0 +1,13 @@
+{
+  "relative_and_local_links_checked": 41,
+  "missing": [],
+  "real_model_calls": 0,
+  "real_training_calls": 0,
+  "threshold_searches": 0,
+  "synthetic_checks": {
+    "temporal": 15,
+    "distillation": 4,
+    "representation": 6
+  },
+  "frozen_rows_sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+}

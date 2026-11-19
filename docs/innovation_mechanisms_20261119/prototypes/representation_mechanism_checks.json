@@ -1,0 +1,66 @@
+{
+  "real_model_calls": 0,
+  "fitting_calls": 0,
+  "threshold_computations": 0,
+  "algebra": {
+    "checks_passed": 6,
+    "endpoint_secants_annihilated": true,
+    "middle_residual": [
+      0.5000000000000002,
+      -0.4999999999999998
+    ],
+    "middle_squared_norm": 0.5,
+    "middle_label_not_identifiable_from_two_normal_endpoints": true,
+    "normal_middle_included_then_all_two_bin_directions_collapsed": true,
+    "within_component_invariance_does_not_fix_between_component_score_offsets": [
+      -10.0,
+      -5.0
+    ],
+    "curved_normal_manifold_affine_span_can_erase_off_manifold_attack": true,
+    "arbitrary_coordinate_scaling_changes_middle_squared_norm_to": 0.7999999999999999
+  },
+  "f_only_support": {
+    "source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\innovation-mechanisms-20261119\\docs\\coverage_basis_20261119\\batch\\rows.jsonl.gz",
+    "source_sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c",
+    "condition_fields": [
+      "ip_protocol",
+      "orig_pkts",
+      "resp_pkts",
+      "orig_ip_bytes",
+      "resp_ip_bytes"
+    ],
+    "cohorts": {
+      "F_base": {
+        "normal_rows": 439,
+        "attack_rows": 32,
+        "attack_target_kinds": {
+          "control": 31,
+          "download": 1
+        },
+        "normal_condition_groups": 275,
+        "singleton_normal_condition_groups": 236,
+        "normal_groups_with_two_observed_distinct_durations": 39,
+        "normal_rows_in_these_groups": 203,
+        "cross_allocation_group_distinct_duration_normal_groups": 0,
+        "attack_rows_with_any_same_condition_normal_support": 0,
+        "attack_rows_with_same_condition_normal_duration_pair": 0
+      },
+      "F_expanded": {
+        "normal_rows": 12747,
+        "attack_rows": 505,
+        "attack_target_kinds": {
+          "control": 504,
+          "download": 1
+        },
+        "normal_condition_groups": 3960,
+        "singleton_normal_condition_groups": 3163,
+        "normal_groups_with_two_observed_distinct_durations": 792,
+        "normal_rows_in_these_groups": 9512,
+        "cross_allocation_group_distinct_duration_normal_groups": 0,
+        "attack_rows_with_any_same_condition_normal_support": 0,
+        "attack_rows_with_same_condition_normal_duration_pair": 0
+      }
+    },
+    "interpretation": "Observed normal pairs are label-consistent examples, not interventions or counterfactual nuisance pairs."
+  }
+}

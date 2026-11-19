@@ -26,6 +26,6 @@
 
 `coverage-baseline-batch-v1` 是已经发布、尚无真实回传的四次 HGB 基线比较。主臂 `mixed_ports_zero`，只检验监督扩充与端口处理。实验内容与运行命令仍见[原批次说明](docs/COVERAGE_BATCH_LAB_20261119.md)。harrison 与 Meterpreter 保留材料不读取、不评分。
 
-HGB27 固定历史臂已撤下；R31 及后续分组风险训练不恢复默认主线。新算法机制未立项。四臂结果只作一次完整解释，不自动挑赢家或追加训练；[回传汇总](docs/research_history_20261119/outcome_policy.md)不加载模型或改阈值。
+HGB27 固定历史臂已撤下；R31 及后续分组风险训练不恢复默认主线。[创新机制探索](docs/innovation_mechanisms_20261119/index.md)已形成有向记忆的具体表示假设及数学原型，尚未形成原创贡献或新增训练批次。四臂结果只作一次完整解释，不自动挑赢家或追加训练；[回传汇总](docs/research_history_20261119/outcome_policy.md)不加载模型或改阈值。
 
 旧入口全文保存在已发布的 [e7c149e 版本 AGENTS.md](https://github.com/zhoumeng-creater/tracelight-ids/blob/e7c149e1ccba8d27271a5072fd6a05367e95553e/AGENTS.md)，历史规格和各轮证据继续保留。

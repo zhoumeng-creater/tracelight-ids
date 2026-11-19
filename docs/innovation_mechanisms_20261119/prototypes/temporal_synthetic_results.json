@@ -1,0 +1,518 @@
+{
+  "scope": "synthetic_representation_only",
+  "real_model_calls": 0,
+  "real_data_reads": 0,
+  "tests": {
+    "same_query_mean_endpoint_last7": {
+      "left": {
+        "context": [
+          0.5,
+          -0.5,
+          -1.0
+        ],
+        "ratio": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          0.4054651081081644,
+          0.4054651081081644,
+          2.0794415416798357
+        ],
+        "log_first_order_support": [
+          0.6931471805599453,
+          0.6931471805599453,
+          2.0794415416798357
+        ],
+        "unsupported_pair_count": 0
+      },
+      "right": {
+        "context": [
+          -0.5,
+          0.5,
+          -1.0
+        ],
+        "ratio": [
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          0.4054651081081644,
+          0.4054651081081644,
+          2.0794415416798357
+        ],
+        "log_first_order_support": [
+          0.6931471805599453,
+          0.6931471805599453,
+          2.0794415416798357
+        ],
+        "unsupported_pair_count": 0
+      }
+    },
+    "same_mean_and_ema": {
+      "ema": [
+        0.109375,
+        0.109375,
+        1.875
+      ],
+      "left": {
+        "context": [
+          -0.06716417910447761,
+          0.06716417910447761,
+          -1.0
+        ],
+        "ratio": [
+          -0.13432835820895522,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          0.0032661447125708226,
+          0.0032661447125708226,
+          0.18654439886588003
+        ],
+        "log_first_order_support": [
+          0.10379679368164356,
+          0.10379679368164356,
+          1.0560526742493137
+        ],
+        "unsupported_pair_count": 0
+      },
+      "right": {
+        "context": [
+          0.061643835616438346,
+          -0.061643835616438346,
+          -1.0
+        ],
+        "ratio": [
+          0.12328767123287669,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          0.0035581155175646666,
+          0.0035581155175646666,
+          0.18654439886588003
+        ],
+        "log_first_order_support": [
+          0.10379679368164356,
+          0.10379679368164356,
+          1.0560526742493137
+        ],
+        "unsupported_pair_count": 0
+      }
+    },
+    "exact_strict_pair_expansion": {
+      "A": [
+        -0.21063634605306908,
+        -0.08873740111445658,
+        0.10885891234442255
+      ],
+      "S": [
+        0.4797562428535924,
+        0.3462764412126532,
+        0.40695737035373303
+      ],
+      "passed": true
+    },
+    "global_positive_amplitude_invariance": {
+      "factor": 7,
+      "passed": true
+    },
+    "stale_history_counterexample": {
+      "before": {
+        "context": [
+          0.5,
+          -0.5,
+          0.0
+        ],
+        "ratio": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          0.3732302419250783,
+          0.3732302419250783,
+          0.0
+        ],
+        "log_first_order_support": [
+          0.6443966600735709,
+          0.6931471805599453,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      },
+      "after_100_idle_seconds": {
+        "context": [
+          0.5,
+          -0.5,
+          0.0
+        ],
+        "ratio": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          9.325044605166027e-10,
+          9.325044605166027e-10,
+          0.0
+        ],
+        "log_first_order_support": [
+          4.1078711483478905e-05,
+          4.539889921686465e-05,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      },
+      "ratio_does_not_forget": true,
+      "support_channels_decay": true
+    },
+    "event_duplication_counterexample": {
+      "base": {
+        "context": [
+          0.5,
+          -0.5,
+          0.0
+        ],
+        "ratio": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          0.4054651081081644,
+          0.4054651081081644,
+          0.0
+        ],
+        "log_first_order_support": [
+          1.0986122886681098,
+          0.6931471805599453,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      },
+      "duplicated": {
+        "context": [
+          0.3333333333333333,
+          -0.3333333333333333,
+          0.0
+        ],
+        "ratio": [
+          0.6666666666666666,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          1.3862943611198906,
+          1.3862943611198906,
+          0.0
+        ],
+        "log_first_order_support": [
+          1.6094379124341003,
+          1.0986122886681098,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      }
+    },
+    "same_geometric_signature_different_segmentation": {
+      "unsplit": {
+        "context": [
+          -0.5,
+          0.5,
+          0.0
+        ],
+        "ratio": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          0.4054651081081644,
+          0.4054651081081644,
+          0.0
+        ],
+        "log_first_order_support": [
+          1.0986122886681098,
+          0.6931471805599453,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      },
+      "split": {
+        "context": [
+          -0.3333333333333333,
+          0.3333333333333333,
+          0.0
+        ],
+        "ratio": [
+          -0.6666666666666666,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          0.5596157879354227,
+          0.5596157879354227,
+          0.0
+        ],
+        "log_first_order_support": [
+          1.0986122886681098,
+          0.6931471805599453,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      },
+      "A_equal": true,
+      "P_equal": true,
+      "S_12": [
+        1.0,
+        1.5
+      ],
+      "not_a_higher_signature_order_gain": true
+    },
+    "order_cancellation_counterexample": {
+      "first": {
+        "context": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "ratio": [
+          0.0,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          1.0986122886681098,
+          1.0986122886681098,
+          2.70805020110221
+        ],
+        "log_first_order_support": [
+          1.0986122886681098,
+          1.0986122886681098,
+          2.0794415416798357
+        ],
+        "unsupported_pair_count": 0
+      },
+      "second": {
+        "context": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "ratio": [
+          0.0,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          1.0986122886681098,
+          1.0986122886681098,
+          2.70805020110221
+        ],
+        "log_first_order_support": [
+          1.0986122886681098,
+          1.0986122886681098,
+          2.0794415416798357
+        ],
+        "unsupported_pair_count": 0
+      }
+    },
+    "pure_repeated_c2_is_invisible": {
+      "read": {
+        "context": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ratio": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "log_first_order_support": [
+          4.61512051684126,
+          0.0,
+          0.0
+        ],
+        "unsupported_pair_count": 3
+      }
+    },
+    "normal_attack_identical_observation_counterexample": {
+      "cannot_distinguish": true
+    },
+    "background_scope": {
+      "disjoint": {
+        "context": [
+          0.5,
+          -0.5,
+          -1.0
+        ],
+        "ratio": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          0.4054651081081644,
+          0.4054651081081644,
+          6.90875477931522
+        ],
+        "log_first_order_support": [
+          0.6931471805599453,
+          0.6931471805599453,
+          6.90875477931522
+        ],
+        "unsupported_pair_count": 0
+      },
+      "overlapping": {
+        "context": [
+          4.995000004995e-07,
+          -4.995000004995e-07,
+          0.0
+        ],
+        "ratio": [
+          9.99000000999e-07,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          13.123365874735919,
+          13.123365874735919,
+          0.0
+        ],
+        "log_first_order_support": [
+          6.90975328164481,
+          6.90975328164481,
+          0.0
+        ],
+        "unsupported_pair_count": 2
+      }
+    },
+    "keep_vector_not_self_bilinear": {
+      "one_hot_read": {
+        "context": [
+          1.0,
+          1.0,
+          0.0
+        ],
+        "ratio": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "log_pair_support": [
+          2.0794415416798357,
+          2.0794415416798357,
+          0.0
+        ],
+        "log_first_order_support": [
+          0.6931471805599453,
+          0.6931471805599453,
+          2.0794415416798357
+        ],
+        "unsupported_pair_count": 0
+      },
+      "q_dot_Rq": 0.0,
+      "self_bilinear_is_identically_zero": true
+    },
+    "same_batch_no_order_or_cross_read": {
+      "before": [
+        {
+          "context": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "ratio": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "log_pair_support": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "log_first_order_support": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unsupported_pair_count": 3
+        },
+        {
+          "context": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "ratio": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "log_pair_support": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "log_first_order_support": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "unsupported_pair_count": 3
+        }
+      ],
+      "after_A": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "late_export_not_recovered": {
+      "query_at": 10,
+      "excluded_export_at": 20,
+      "read": {
+        "context": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ratio": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "log_pair_support": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "log_first_order_support": [
+          0.0,
+          0.0,
+          0.6931471805599453
+        ],
+        "unsupported_pair_count": 3
+      }
+    },
+    "state_budget": {
+      "r8_float32_values": 64,
+      "packed_numeric_bytes_plus_float64_clock": 264,
+      "python_object_overhead_included": false,
+      "shared_host_index_and_extractor_cost_must_be_added": true
+    }
+  },
+  "test_count": 15
+}

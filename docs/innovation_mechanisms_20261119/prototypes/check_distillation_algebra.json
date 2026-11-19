@@ -1,0 +1,170 @@
+{
+  "created_utc": "2026-11-19T05:39:26.400283+00:00",
+  "scope": "synthetic_algebra_only",
+  "numpy_version": "1.26.4",
+  "script_sha256": "433f2544a3a5fec304d43ed82edf1e98e122a614894bbe8ba38e83e4b260f18a",
+  "real_model_training_calls": 0,
+  "real_model_forward_calls": 0,
+  "real_data_reads": 0,
+  "checks": {
+    "strict_budget_and_ties": {
+      "passed": true,
+      "cases": [
+        {
+          "name": "ties_budget_two",
+          "n": 10,
+          "beta": 0.2,
+          "budget": 2,
+          "threshold": 0.8,
+          "strict_fp": 2,
+          "ties": 3
+        },
+        {
+          "name": "ties_budget_one_is_not_spent",
+          "n": 10,
+          "beta": 0.1,
+          "budget": 1,
+          "threshold": 0.9,
+          "strict_fp": 0,
+          "ties": 2
+        },
+        {
+          "name": "zero_budget",
+          "n": 10,
+          "beta": 0.0,
+          "budget": 0,
+          "threshold": 0.9,
+          "strict_fp": 0,
+          "ties": 2
+        },
+        {
+          "name": "small_n_1_percent",
+          "n": 17,
+          "beta": 0.01,
+          "budget": 0,
+          "threshold": 1.0,
+          "strict_fp": 0,
+          "ties": 1
+        },
+        {
+          "name": "all_equal",
+          "n": 200,
+          "beta": 0.01,
+          "budget": 2,
+          "threshold": 0.4,
+          "strict_fp": 0,
+          "ties": 200
+        }
+      ]
+    },
+    "teacher_magnitude_and_finite_intervals": {
+      "passed": true,
+      "betas": [
+        0.0025,
+        0.005,
+        0.01
+      ],
+      "teacher": [
+        0.2,
+        0.3,
+        0.984,
+        0.987,
+        0.9895,
+        0.999
+      ],
+      "transformed_teacher": [
+        0.3333333333333333,
+        0.39564392373896007,
+        0.8869058913937345,
+        0.8970492771266881,
+        0.9066086587092567,
+        0.9693317021457333
+      ],
+      "interval_bits": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "ordinal_losses": [
+        0.5098500209453131,
+        0.5098500209453131
+      ],
+      "ordinal_gradient_max_difference": 0.0,
+      "kl_losses": [
+        0.2408548036216879,
+        0.09978462056701605
+      ],
+      "kl_gradient_max_difference": 0.022222222222222213,
+      "within_interval_order_reversal_keeps_targets": true
+    },
+    "jacobian_projection_equivalence": {
+      "passed": true,
+      "jacobian_shape": [
+        5,
+        3
+      ],
+      "rank": 2,
+      "unreachable_residual_norm": 1.6537835408541228,
+      "initial_gradient_max_difference": 8.881784197001252e-16,
+      "synthetic_sgd_steps": 10,
+      "trajectory_max_difference": 1.1102230246251565e-16,
+      "objective_constant_difference": 1.3675000000000002,
+      "constant_difference_max_error": 4.440892098500626e-16
+    },
+    "stop_gradient_is_not_full_quantile_derivative": {
+      "passed": true,
+      "unique_anchor": 0.1,
+      "anchor_index": 2,
+      "frozen_gradient": [
+        0.03858183512080067,
+        0.09390072757636288,
+        -0.14285714285714285,
+        -0.06908462068783146,
+        -0.04360247566932314
+      ],
+      "full_quantile_gradient": [
+        0.03858183512080067,
+        0.09390072757636288,
+        -0.01979546634000895,
+        -0.06908462068783146,
+        -0.04360247566932314
+      ],
+      "frozen_finite_difference_max_error": 1.1500758678728573e-11,
+      "full_finite_difference_max_error": 1.831634843796337e-11,
+      "stopped_vs_full_max_difference": 0.1230616765171339,
+      "common_shift_invariant_when_quantile_recomputed": true,
+      "common_shift_invariant_when_quantile_frozen": false,
+      "tied_quantile_left_derivative": -0.1521498205203642,
+      "tied_quantile_right_derivative": -0.12499999701987008,
+      "tied_quantile_unique_derivative": false
+    }
+  },
+  "all_passed": true
+}
