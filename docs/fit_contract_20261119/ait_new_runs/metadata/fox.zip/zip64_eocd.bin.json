@@ -1,0 +1,9 @@
+{
+  "archive": "fox.zip",
+  "url": "https://zenodo.org/api/records/19483937/files/fox.zip/content?download=1&ait_new_range=15837626609-15837626664",
+  "start": 15837626609,
+  "end": 15837626664,
+  "bytes": 56,
+  "sha256": "fd851a8f8bfecb14f023511172f9ad6791190c8fded4347c9b5646045d744fe4",
+  "archive_bytes": 15837626707
+}

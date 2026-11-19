@@ -1,12 +1,12 @@
 # 固定 HGB8 / HGB27 实验室运行
 
-运行版本：`source-fit-contract-v1`。仅在既定实验室 RTX4090D 工作站运行真实拟合；本比较的 sklearn HGB 使用该工作站的 CPU。项目 `pyproject.toml` 固定 scikit-learn 1.5.1、NumPy 1.26.4 等依赖，沿用项目虚拟环境。
+运行版本：`source-fit-contract-v1.1`。仅在既定实验室 RTX4090D 工作站运行真实拟合；本比较的 sklearn HGB 使用该工作站的 CPU。项目 `pyproject.toml` 固定 scikit-learn 1.5.1、NumPy 1.26.4 等依赖，沿用项目虚拟环境。
 
 在实验室项目目录执行：
 
 ```powershell
 git fetch origin --tags
-git switch --detach source-fit-contract-v1
+git switch --detach source-fit-contract-v1.1
 .\scripts\RUN_FIT_CONTRACT.ps1 -Threads 4
 ```
 

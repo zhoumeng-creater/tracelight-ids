@@ -1,0 +1,9 @@
+{
+  "archive": "santos.zip",
+  "url": "https://zenodo.org/api/records/19483937/files/santos.zip/content?download=1&ait_new_range=10002522298-10004843825",
+  "start": 10002522298,
+  "end": 10004843825,
+  "bytes": 2321528,
+  "sha256": "7139d3392f4cdaaf35cb96c8ecd8103ab3408aefd1ac24ca24367339f054ce4b",
+  "archive_bytes": 10004843924
+}
