@@ -1,0 +1,1152 @@
+{
+  "scope": "existing_real_event_and_connection_facts_only",
+  "fitting_calls": 0,
+  "model_calls": 0,
+  "threshold_calls": 0,
+  "OpTC": {
+    "context_records": 45309,
+    "groups": {
+      "control": {
+        "flows": 24,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 23,
+        "last_prior_batch_any_same_peer": 23,
+        "last_prior_batch_all_same_peer": 23,
+        "nonunique_last_prior_batch": 0,
+        "any_prior_same_peer": 23,
+        "previous_same_non_duration_shape": 7,
+        "any_prior_tls443": 23,
+        "any_prior_confirmed_normal_tls443": 0,
+        "any_prior_confirmed_attack": 23,
+        "prior_confirmed_attack_count": {
+          "n": 24,
+          "min": 0,
+          "median": 11.5,
+          "max": 23
+        },
+        "response_dominant": 23,
+        "prefix_count": {
+          "n": 24,
+          "min": 0,
+          "median": 11.5,
+          "max": 23
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 23,
+          "min": 0.4403650760650635,
+          "median": 30.174644947052002,
+          "max": 30.458302974700928
+        },
+        "previous_gap_seconds": {
+          "n": 23,
+          "min": 0.4403650760650635,
+          "median": 30.174644947052002,
+          "max": 30.458302974700928
+        }
+      },
+      "attack_download": {
+        "flows": 1,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 1,
+        "last_prior_batch_any_same_peer": 1,
+        "last_prior_batch_all_same_peer": 1,
+        "nonunique_last_prior_batch": 0,
+        "any_prior_same_peer": 1,
+        "previous_same_non_duration_shape": 0,
+        "any_prior_tls443": 1,
+        "any_prior_confirmed_normal_tls443": 0,
+        "any_prior_confirmed_attack": 1,
+        "prior_confirmed_attack_count": {
+          "n": 1,
+          "min": 24,
+          "median": 24,
+          "max": 24
+        },
+        "response_dominant": 1,
+        "prefix_count": {
+          "n": 1,
+          "min": 360,
+          "median": 360,
+          "max": 360
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 1,
+          "min": 2.916126012802124,
+          "median": 2.916126012802124,
+          "max": 2.916126012802124
+        },
+        "previous_gap_seconds": {
+          "n": 1,
+          "min": 2.916126012802124,
+          "median": 2.916126012802124,
+          "max": 2.916126012802124
+        }
+      },
+      "normal_tls": {
+        "flows": 41588,
+        "hosts": 17,
+        "groups": 1,
+        "same_peer_predecessor": 40846,
+        "last_prior_batch_any_same_peer": 40846,
+        "last_prior_batch_all_same_peer": 40846,
+        "nonunique_last_prior_batch": 12,
+        "any_prior_same_peer": 41584,
+        "previous_same_non_duration_shape": 6063,
+        "any_prior_tls443": 41573,
+        "any_prior_confirmed_normal_tls443": 41571,
+        "any_prior_confirmed_attack": 0,
+        "prior_confirmed_attack_count": {
+          "n": 41588,
+          "min": 0,
+          "median": 0.0,
+          "max": 0
+        },
+        "response_dominant": 21398,
+        "prefix_count": {
+          "n": 41588,
+          "min": 1,
+          "median": 1793.5,
+          "max": 9349
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 41584,
+          "min": 9.5367431640625e-07,
+          "median": 0.005321025848388672,
+          "max": 974.25927901268
+        },
+        "previous_gap_seconds": {
+          "n": 41588,
+          "min": 9.5367431640625e-07,
+          "median": 0.005298495292663574,
+          "max": 879.3624148368835
+        }
+      },
+      "normal_http": {
+        "flows": 42,
+        "hosts": 9,
+        "groups": 1,
+        "same_peer_predecessor": 26,
+        "last_prior_batch_any_same_peer": 26,
+        "last_prior_batch_all_same_peer": 26,
+        "nonunique_last_prior_batch": 0,
+        "any_prior_same_peer": 31,
+        "previous_same_non_duration_shape": 0,
+        "any_prior_tls443": 42,
+        "any_prior_confirmed_normal_tls443": 42,
+        "any_prior_confirmed_attack": 0,
+        "prior_confirmed_attack_count": {
+          "n": 42,
+          "min": 0,
+          "median": 0.0,
+          "max": 0
+        },
+        "response_dominant": 41,
+        "prefix_count": {
+          "n": 42,
+          "min": 105,
+          "median": 1608.5,
+          "max": 5073
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 31,
+          "min": 1.9073486328125e-06,
+          "median": 0.0026900768280029297,
+          "max": 839.9789199829102
+        },
+        "previous_gap_seconds": {
+          "n": 42,
+          "min": 1.9073486328125e-06,
+          "median": 0.22428858280181885,
+          "max": 741.5118169784546
+        }
+      },
+      "same_host_normal_tls": {
+        "flows": 172,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 172,
+        "last_prior_batch_any_same_peer": 172,
+        "last_prior_batch_all_same_peer": 172,
+        "nonunique_last_prior_batch": 0,
+        "any_prior_same_peer": 172,
+        "previous_same_non_duration_shape": 5,
+        "any_prior_tls443": 171,
+        "any_prior_confirmed_normal_tls443": 171,
+        "any_prior_confirmed_attack": 0,
+        "prior_confirmed_attack_count": {
+          "n": 172,
+          "min": 0,
+          "median": 0.0,
+          "max": 0
+        },
+        "response_dominant": 138,
+        "prefix_count": {
+          "n": 172,
+          "min": 8,
+          "median": 95.5,
+          "max": 184
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 172,
+          "min": 1.9073486328125e-06,
+          "median": 0.0019894838333129883,
+          "max": 1.7334589958190918
+        },
+        "previous_gap_seconds": {
+          "n": 172,
+          "min": 1.9073486328125e-06,
+          "median": 0.0019894838333129883,
+          "max": 1.7334589958190918
+        }
+      },
+      "same_host_normal_http": {
+        "flows": 0,
+        "hosts": 0,
+        "groups": 0,
+        "same_peer_predecessor": 0,
+        "last_prior_batch_any_same_peer": 0,
+        "last_prior_batch_all_same_peer": 0,
+        "nonunique_last_prior_batch": 0,
+        "any_prior_same_peer": 0,
+        "previous_same_non_duration_shape": 0,
+        "any_prior_tls443": 0,
+        "any_prior_confirmed_normal_tls443": 0,
+        "any_prior_confirmed_attack": 0,
+        "prior_confirmed_attack_count": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "response_dominant": 0,
+        "prefix_count": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        },
+        "previous_gap_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null
+        }
+      }
+    },
+    "attack_download_details": [
+      {
+        "id": "optc:20190924:CSHrim2uG4Jj6MUi31",
+        "host": "142.20.57.246",
+        "peer": "132.197.158.98",
+        "group": "optc:empire_custom:20190924_continues_20190925",
+        "time": 1569346017.936547,
+        "raw": [
+          6,
+          54680,
+          8080,
+          0.012191,
+          8,
+          52,
+          725,
+          61690
+        ],
+        "label": 1,
+        "kind": "download",
+        "service": "other",
+        "business": null,
+        "host_is_originator": true,
+        "prefix_count": 360,
+        "prefix_labels": {
+          "0": 0,
+          "1": 24,
+          "None": 336
+        },
+        "prior_tls443": 307,
+        "prior_normal_tls443": 0,
+        "prior_normal_http80": 0,
+        "same_peer_prefix": 3,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190924:CzaMrB33RmJ7Z8NAdh",
+        "previous_label": null,
+        "previous_service": "other",
+        "previous_gap_seconds": 2.916126012802124,
+        "same_peer_latest_gap_seconds": 2.916126012802124,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      }
+    ],
+    "controls_non_duration_shapes": {
+      "[6, 6, 8, 919, 2609]": 12,
+      "[6, 7, 8, 959, 2609]": 6,
+      "[6, 7, 9, 1034, 3965]": 1,
+      "[6, 6, 7, 919, 1401]": 1,
+      "[6, 527, 51, 677561, 4329]": 1,
+      "[6, 7, 8, 1034, 2853]": 1,
+      "[6, 8, 9, 1281, 2649]": 1,
+      "[6, 6, 7, 919, 1481]": 1
+    },
+    "normal_objects_parent_completion": {
+      "same_connection_not_prior_completed_flow": 1096,
+      "separate_parent_not_yet_ended": 2185,
+      "separate_parent_flow_available": 1744,
+      "separate_parent_tied": 1
+    },
+    "normal_objects_parent_completion_unique_connections": {
+      "same_connection_not_prior_completed_flow": 105,
+      "separate_parent_not_yet_ended": 270,
+      "separate_parent_flow_available": 183,
+      "separate_parent_tied": 1
+    },
+    "same_host_normal_examples": [
+      {
+        "id": "optc:20190919:C05WxF39v53x9CBGI9",
+        "host": "142.20.57.246",
+        "peer": "109.172.36.5",
+        "group": "optc:20190919:declared_normal_business_subset",
+        "time": 1568914681.257143,
+        "raw": [
+          6,
+          50705,
+          443,
+          0.014396,
+          9,
+          20,
+          1289,
+          16716
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "TLS443",
+        "business": "normal_tls_browser_background",
+        "host_is_originator": true,
+        "prefix_count": 171,
+        "prefix_labels": {
+          "0": 158,
+          "1": 0,
+          "None": 13
+        },
+        "prior_tls443": 161,
+        "prior_normal_tls443": 158,
+        "prior_normal_http80": 0,
+        "same_peer_prefix": 70,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190919:CPy08s1aaIkZgoFmi4",
+        "previous_label": 0,
+        "previous_service": "TLS443",
+        "previous_gap_seconds": 0.0004000663757324219,
+        "same_peer_latest_gap_seconds": 0.0004000663757324219,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      },
+      {
+        "id": "optc:20190919:C0RhMq1oAEjmFeVtC",
+        "host": "142.20.57.246",
+        "peer": "134.151.45.5",
+        "group": "optc:20190919:declared_normal_business_subset",
+        "time": 1568914657.037273,
+        "raw": [
+          6,
+          50509,
+          443,
+          0.015701,
+          7,
+          8,
+          1241,
+          1676
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "TLS443",
+        "business": "normal_tls_browser_background",
+        "host_is_originator": true,
+        "prefix_count": 49,
+        "prefix_labels": {
+          "0": 40,
+          "1": 0,
+          "None": 9
+        },
+        "prior_tls443": 41,
+        "prior_normal_tls443": 40,
+        "prior_normal_http80": 0,
+        "same_peer_prefix": 42,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190919:C4DHjg2vdpNUDoj44l",
+        "previous_label": 0,
+        "previous_service": "TLS443",
+        "previous_gap_seconds": 0.001096963882446289,
+        "same_peer_latest_gap_seconds": 0.001096963882446289,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      },
+      {
+        "id": "optc:20190919:C2C1XU3RAax8ynmhze",
+        "host": "142.20.57.246",
+        "peer": "109.172.36.5",
+        "group": "optc:20190919:declared_normal_business_subset",
+        "time": 1568914681.199568,
+        "raw": [
+          6,
+          50681,
+          443,
+          0.019773,
+          11,
+          23,
+          1401,
+          19913
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "TLS443",
+        "business": "normal_tls_browser_background",
+        "host_is_originator": true,
+        "prefix_count": 148,
+        "prefix_labels": {
+          "0": 136,
+          "1": 0,
+          "None": 12
+        },
+        "prior_tls443": 138,
+        "prior_normal_tls443": 136,
+        "prior_normal_http80": 0,
+        "same_peer_prefix": 47,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190919:CVPzXn15rgsv8A7IA",
+        "previous_label": 0,
+        "previous_service": "TLS443",
+        "previous_gap_seconds": 0.0011839866638183594,
+        "same_peer_latest_gap_seconds": 0.0011839866638183594,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      }
+    ],
+    "normal_http_examples": [
+      {
+        "id": "optc:20190919:CzBYVl2SykMQhic3ak",
+        "host": "142.20.58.9",
+        "peer": "84.199.177.226",
+        "group": "optc:20190919:declared_normal_business_subset",
+        "time": 1568915456.226402,
+        "raw": [
+          6,
+          53046,
+          80,
+          6.252175,
+          8,
+          52,
+          624,
+          62057
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "HTTP80",
+        "business": "normal_http_webpage_file_transfer",
+        "host_is_originator": true,
+        "prefix_count": 5073,
+        "prefix_labels": {
+          "0": 4671,
+          "1": 0,
+          "None": 402
+        },
+        "prior_tls443": 4758,
+        "prior_normal_tls443": 4663,
+        "prior_normal_http80": 8,
+        "same_peer_prefix": 13,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190919:CtQY804bE677F5mD16",
+        "previous_label": null,
+        "previous_service": "HTTP80",
+        "previous_gap_seconds": 0.00020503997802734375,
+        "same_peer_latest_gap_seconds": 0.00020503997802734375,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      },
+      {
+        "id": "optc:20190919:C8pAn93MmiG2M3jG83",
+        "host": "142.20.58.9",
+        "peer": "80.31.69.82",
+        "group": "optc:20190919:declared_normal_business_subset",
+        "time": 1568913435.271399,
+        "raw": [
+          6,
+          62462,
+          80,
+          5.025472,
+          12,
+          64,
+          1848,
+          76330
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "HTTP80",
+        "business": "normal_http_webpage_file_transfer",
+        "host_is_originator": true,
+        "prefix_count": 2484,
+        "prefix_labels": {
+          "0": 2364,
+          "1": 0,
+          "None": 120
+        },
+        "prior_tls443": 2414,
+        "prior_normal_tls443": 2364,
+        "prior_normal_http80": 0,
+        "same_peer_prefix": 7,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190919:CAiXvPACN3z7mNVE",
+        "previous_label": null,
+        "previous_service": "HTTP80",
+        "previous_gap_seconds": 41.96701002120972,
+        "same_peer_latest_gap_seconds": 41.96701002120972,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      },
+      {
+        "id": "optc:20190919:CuxGyIbFWyu03s6c3",
+        "host": "142.20.58.6",
+        "peer": "178.82.247.50",
+        "group": "optc:20190919:declared_normal_business_subset",
+        "time": 1568913013.104354,
+        "raw": [
+          6,
+          57633,
+          80,
+          5.482305,
+          14,
+          39,
+          2187,
+          42516
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "HTTP80",
+        "business": "normal_http_webpage_file_transfer",
+        "host_is_originator": true,
+        "prefix_count": 107,
+        "prefix_labels": {
+          "0": 84,
+          "1": 0,
+          "None": 23
+        },
+        "prior_tls443": 82,
+        "prior_normal_tls443": 82,
+        "prior_normal_http80": 2,
+        "same_peer_prefix": 3,
+        "previous_same_peer": true,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": true,
+        "last_prior_batch_all_same_peer": true,
+        "previous_id": "optc:20190919:CKEmhx3FQhF86hOkuk",
+        "previous_label": 0,
+        "previous_service": "HTTP80",
+        "previous_gap_seconds": 0.00011301040649414062,
+        "same_peer_latest_gap_seconds": 0.00011301040649414062,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      }
+    ],
+    "download_direction_attribution": {
+      "query": "optc:20190924:CSHrim2uG4Jj6MUi31",
+      "prefix_count": 360,
+      "rare_prior_records": [
+        {
+          "flow_id": "optc:20190924:CPdC8j3SCUkw9Gccff",
+          "raw8": [
+            17,
+            55959,
+            53,
+            null,
+            1,
+            0,
+            56,
+            0
+          ],
+          "flow_end_at": "2019-09-24T17:24:36.339617+00:00",
+          "previous_strict_prefix_count": 354,
+          "seconds_before_download": 141.59693002700806,
+          "label": null,
+          "present_in_scored_rows": false,
+          "host_is_originator": true,
+          "source": "142.20.57.246",
+          "destination": "8.8.8.8",
+          "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+          "source_line": 661637
+        },
+        {
+          "flow_id": "optc:20190924:C4hCrq1WFLFdAFIKf9",
+          "raw8": [
+            17,
+            63630,
+            53,
+            null,
+            1,
+            0,
+            56,
+            0
+          ],
+          "flow_end_at": "2019-09-24T17:24:37.361120+00:00",
+          "previous_strict_prefix_count": 355,
+          "seconds_before_download": 140.5754270553589,
+          "label": null,
+          "present_in_scored_rows": false,
+          "host_is_originator": true,
+          "source": "142.20.57.246",
+          "destination": "8.8.4.4",
+          "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+          "source_line": 662153
+        },
+        {
+          "flow_id": "optc:20190924:CKHWt23hPE1PcMlWhl",
+          "raw8": [
+            1,
+            3,
+            0,
+            1.021554,
+            2,
+            0,
+            168,
+            0
+          ],
+          "flow_end_at": "2019-09-24T17:24:37.361244+00:00",
+          "previous_strict_prefix_count": 356,
+          "seconds_before_download": 140.57530307769775,
+          "label": null,
+          "present_in_scored_rows": false,
+          "host_is_originator": false,
+          "source": "142.20.60.1",
+          "destination": "142.20.57.246",
+          "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+          "source_line": 682974
+        }
+      ],
+      "rare_channels": {
+        "5": "duration_missing",
+        "11": "UDP",
+        "12": "other_protocol"
+      },
+      "direction": [
+        -0.09770030251374634,
+        0.0007163084337816463,
+        -0.003308433381989428,
+        0.0027940914196653865,
+        0.0010129386942595213,
+        -0.9848252180045871,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.010128205270525097,
+        -0.9848252180045871,
+        -0.9864192388892026
+      ],
+      "rare_channel_squared_norm_fraction": 0.9966917439076598,
+      "normal_http_comparator_count": 42,
+      "normal_http_rare_direction_nonzero_counts": {
+        "5": 0,
+        "11": 0,
+        "12": 0
+      },
+      "normal_http_rare_first_support_nonzero_counts": {
+        "5": 0,
+        "11": 0,
+        "12": 0
+      },
+      "all_normal_background_TCP_duration_present": 44944,
+      "rare_channels_present_in_query_itself": false,
+      "interpretation": "Three unlabeled protocol/measurement records late in one attack-hour prefix dominate direction. Normal-hour background lacks these channels. Presence already appears in first-order P; no command-to-download edge has been established.",
+      "source_receipts": [
+        {
+          "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\真实先后关系核验_20261119\\representation\\query_representations.jsonl.gz",
+          "sha256": "61d22cdc1615ce74ee5163fbd25de930d0dcb86aa918153574d685b3b215d232"
+        },
+        {
+          "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_replay_inputs.jsonl.gz",
+          "sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005"
+        },
+        {
+          "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\batch\\rows.jsonl.gz",
+          "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+        }
+      ],
+      "model_calls": 0,
+      "fitting_calls": 0,
+      "threshold_calls": 0
+    },
+    "source_scope_check": {
+      "source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "source_sha256": "429a509bfb01972c69950f18c72ad6571859021cc145105e1a92d0eb274b92f3",
+      "source_sha_matches_receipt": true,
+      "source_records": 1553112,
+      "host_selected_uids": 365,
+      "exported_uids": 365,
+      "missing_from_export": [],
+      "extra_in_export": [],
+      "filter": "Either original endpoint equals 142.20.57.246; no label/PID/protocol/duration/time filtering beyond named source file",
+      "clock_scope": "Only one output rotation; no actual receipt time; empty cold start; not full-day history"
+    }
+  },
+  "Unraveled": {
+    "context_records": 12824,
+    "groups": {
+      "control": {
+        "flows": 473,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 93,
+        "last_prior_batch_any_same_peer": 99,
+        "last_prior_batch_all_same_peer": 88,
+        "nonunique_last_prior_batch": 64,
+        "any_prior_same_peer": 472,
+        "previous_same_non_duration_shape": 7,
+        "any_prior_tls443": 473,
+        "any_prior_confirmed_normal_tls443": 473,
+        "any_prior_confirmed_attack": 472,
+        "prior_confirmed_attack_count": {
+          "n": 473,
+          "min": 0,
+          "median": 236,
+          "max": 471
+        },
+        "response_dominant": 470,
+        "prefix_count": {
+          "n": 473,
+          "min": 10048,
+          "median": 11141,
+          "max": 12818
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 472,
+          "min": 5.066348075866699,
+          "median": 60.0073961019516,
+          "max": 120.20969080924988
+        },
+        "previous_gap_seconds": {
+          "n": 473,
+          "min": 0.15088891983032227,
+          "median": 28.845303058624268,
+          "max": 118.12289094924927
+        }
+      },
+      "normal": {
+        "flows": 12308,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 3787,
+        "last_prior_batch_any_same_peer": 4025,
+        "last_prior_batch_all_same_peer": 3564,
+        "nonunique_last_prior_batch": 5457,
+        "any_prior_same_peer": 11989,
+        "previous_same_non_duration_shape": 571,
+        "any_prior_tls443": 12282,
+        "any_prior_confirmed_normal_tls443": 12282,
+        "any_prior_confirmed_attack": 2300,
+        "prior_confirmed_attack_count": {
+          "n": 12308,
+          "min": 0,
+          "median": 0.0,
+          "max": 471
+        },
+        "response_dominant": 10323,
+        "prefix_count": {
+          "n": 12308,
+          "min": 0,
+          "median": 6159.0,
+          "max": 12818
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 11989,
+          "min": 2.5987625122070312e-05,
+          "median": 32.48003697395325,
+          "max": 58253.90465593338
+        },
+        "previous_gap_seconds": {
+          "n": 12307,
+          "min": 2.5987625122070312e-05,
+          "median": 2.667362928390503,
+          "max": 300.6400260925293
+        }
+      },
+      "normal_tls443": {
+        "flows": 5081,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 1270,
+        "last_prior_batch_any_same_peer": 1411,
+        "last_prior_batch_all_same_peer": 1127,
+        "nonunique_last_prior_batch": 2218,
+        "any_prior_same_peer": 4823,
+        "previous_same_non_duration_shape": 30,
+        "any_prior_tls443": 5080,
+        "any_prior_confirmed_normal_tls443": 5080,
+        "any_prior_confirmed_attack": 769,
+        "prior_confirmed_attack_count": {
+          "n": 5081,
+          "min": 0,
+          "median": 0,
+          "max": 449
+        },
+        "response_dominant": 4846,
+        "prefix_count": {
+          "n": 5081,
+          "min": 6,
+          "median": 6277,
+          "max": 12766
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 4823,
+          "min": 2.5987625122070312e-05,
+          "median": 65.58015012741089,
+          "max": 58253.90465593338
+        },
+        "previous_gap_seconds": {
+          "n": 5081,
+          "min": 2.5987625122070312e-05,
+          "median": 2.492347002029419,
+          "max": 136.8088321685791
+        }
+      },
+      "normal_ssh": {
+        "flows": 20,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 0,
+        "last_prior_batch_any_same_peer": 0,
+        "last_prior_batch_all_same_peer": 0,
+        "nonunique_last_prior_batch": 8,
+        "any_prior_same_peer": 19,
+        "previous_same_non_duration_shape": 0,
+        "any_prior_tls443": 20,
+        "any_prior_confirmed_normal_tls443": 20,
+        "any_prior_confirmed_attack": 6,
+        "prior_confirmed_attack_count": {
+          "n": 20,
+          "min": 0,
+          "median": 0.0,
+          "max": 360
+        },
+        "response_dominant": 2,
+        "prefix_count": {
+          "n": 20,
+          "min": 85,
+          "median": 8427.5,
+          "max": 12542
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 19,
+          "min": 127.26376008987427,
+          "median": 4245.201356172562,
+          "max": 7213.630122900009
+        },
+        "previous_gap_seconds": {
+          "n": 20,
+          "min": 1.075456142425537,
+          "median": 21.37714195251465,
+          "max": 134.97069382667542
+        }
+      },
+      "normal_in_control_export_span": {
+        "flows": 2300,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 536,
+        "last_prior_batch_any_same_peer": 580,
+        "last_prior_batch_all_same_peer": 476,
+        "nonunique_last_prior_batch": 999,
+        "any_prior_same_peer": 2279,
+        "previous_same_non_duration_shape": 29,
+        "any_prior_tls443": 2300,
+        "any_prior_confirmed_normal_tls443": 2300,
+        "any_prior_confirmed_attack": 2300,
+        "prior_confirmed_attack_count": {
+          "n": 2300,
+          "min": 1,
+          "median": 253.0,
+          "max": 471
+        },
+        "response_dominant": 1754,
+        "prefix_count": {
+          "n": 2300,
+          "min": 10049,
+          "median": 11446.0,
+          "max": 12818
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 2279,
+          "min": 0.00023794174194335938,
+          "median": 99.94207096099854,
+          "max": 42714.377895116806
+        },
+        "previous_gap_seconds": {
+          "n": 2300,
+          "min": 0.00023794174194335938,
+          "median": 3.688960075378418,
+          "max": 116.67007184028625
+        }
+      },
+      "normal_tls443_in_control_export_span": {
+        "flows": 769,
+        "hosts": 1,
+        "groups": 1,
+        "same_peer_predecessor": 121,
+        "last_prior_batch_any_same_peer": 144,
+        "last_prior_batch_all_same_peer": 96,
+        "nonunique_last_prior_batch": 360,
+        "any_prior_same_peer": 749,
+        "previous_same_non_duration_shape": 0,
+        "any_prior_tls443": 769,
+        "any_prior_confirmed_normal_tls443": 769,
+        "any_prior_confirmed_attack": 769,
+        "prior_confirmed_attack_count": {
+          "n": 769,
+          "min": 10,
+          "median": 260,
+          "max": 449
+        },
+        "response_dominant": 739,
+        "prefix_count": {
+          "n": 769,
+          "min": 10070,
+          "median": 11692,
+          "max": 12766
+        },
+        "same_peer_latest_gap_seconds": {
+          "n": 749,
+          "min": 0.002190828323364258,
+          "median": 134.43509197235107,
+          "max": 42714.377895116806
+        },
+        "previous_gap_seconds": {
+          "n": 769,
+          "min": 0.002190828323364258,
+          "median": 3.364021062850952,
+          "max": 55.36366605758667
+        }
+      }
+    },
+    "control_export_range": [
+      1624318642.541058,
+      1624346942.143561
+    ],
+    "control_peers": [
+      "10.8.10.84"
+    ],
+    "normal_connections_to_control_peers": 0,
+    "control_services": {
+      "(6, 443)": 473
+    },
+    "control_non_duration_unique_shapes": 67,
+    "control_observation_time_counts": 471,
+    "control_raw5_shapes_most_common": [
+      [
+        "[6, 17, 16, 1810, 2148]",
+        64
+      ],
+      [
+        "[6, 17, 15, 1810, 2096]",
+        37
+      ],
+      [
+        "[6, 17, 16, 1811, 2148]",
+        31
+      ],
+      [
+        "[6, 17, 16, 1807, 2148]",
+        29
+      ],
+      [
+        "[6, 17, 15, 1807, 2096]",
+        28
+      ]
+    ],
+    "normal_examples_during_control": [
+      {
+        "id": "unraveled:20210621:net1013x:29ec3499e108a408759607c31e315906",
+        "host": "10.1.3.8",
+        "peer": "23.204.249.185",
+        "group": "unraveled:apt_2021_single_campaign",
+        "time": 1624319186.431669,
+        "raw": [
+          6,
+          43094,
+          443,
+          306.53811597824097,
+          359,
+          556,
+          22436,
+          549413
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "tls_application",
+        "business": [
+          "tls_application"
+        ],
+        "host_is_originator": true,
+        "connection_start": 1624318874.111371,
+        "observed_end": 1624319180.649487,
+        "prefix_count": 10070,
+        "prefix_labels": {
+          "0": 10020,
+          "1": 10,
+          "None": 40
+        },
+        "prior_tls443": 4322,
+        "prior_normal_tls443": 4312,
+        "prior_normal_http80": 1341,
+        "same_peer_prefix": 0,
+        "previous_same_peer": false,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": false,
+        "last_prior_batch_all_same_peer": false,
+        "previous_id": "unraveled:20210621:net1013x:19c04a6ad1e273c890baa23fb12e0480",
+        "previous_label": 0,
+        "previous_service": "other_udp",
+        "previous_gap_seconds": 27.23634696006775,
+        "same_peer_latest_gap_seconds": null,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      },
+      {
+        "id": "unraveled:20210621:net1013x:5cd3afc2f02d4c0595870ace8d9e8089",
+        "host": "10.1.3.8",
+        "peer": "18.116.3.221",
+        "group": "unraveled:apt_2021_single_campaign",
+        "time": 1624319247.646687,
+        "raw": [
+          6,
+          42136,
+          443,
+          60.969101905822754,
+          15,
+          22,
+          2048,
+          26097
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "tls_application",
+        "business": [
+          "tls_application"
+        ],
+        "host_is_originator": true,
+        "connection_start": 1624319181.651149,
+        "observed_end": 1624319242.620251,
+        "prefix_count": 10075,
+        "prefix_labels": {
+          "0": 10024,
+          "1": 11,
+          "None": 40
+        },
+        "prior_tls443": 4324,
+        "prior_normal_tls443": 4313,
+        "prior_normal_http80": 1342,
+        "same_peer_prefix": 18,
+        "previous_same_peer": false,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": false,
+        "last_prior_batch_all_same_peer": false,
+        "previous_id": "unraveled:20210621:net1013x:da70efd1b46a5499b9dade27898826b5",
+        "previous_label": 0,
+        "previous_service": "dns",
+        "previous_gap_seconds": 4.961485147476196,
+        "same_peer_latest_gap_seconds": 4221.26078414917,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      },
+      {
+        "id": "unraveled:20210621:net1013x:55b475171fca59462b3a4aae7e3de8e0",
+        "host": "10.1.3.8",
+        "peer": "18.116.3.221",
+        "group": "unraveled:apt_2021_single_campaign",
+        "time": 1624319308.308817,
+        "raw": [
+          6,
+          42140,
+          443,
+          60.60770392417908,
+          14,
+          22,
+          2086,
+          25889
+        ],
+        "label": 0,
+        "kind": "normal",
+        "service": "tls_application",
+        "business": [
+          "tls_application"
+        ],
+        "host_is_originator": true,
+        "connection_start": 1624319242.622374,
+        "observed_end": 1624319303.230078,
+        "prefix_count": 10079,
+        "prefix_labels": {
+          "0": 10027,
+          "1": 12,
+          "None": 40
+        },
+        "prior_tls443": 4326,
+        "prior_normal_tls443": 4314,
+        "prior_normal_http80": 1342,
+        "same_peer_prefix": 19,
+        "previous_same_peer": false,
+        "last_prior_batch_count": 1,
+        "last_prior_batch_any_same_peer": false,
+        "last_prior_batch_all_same_peer": false,
+        "previous_id": "unraveled:20210621:net1013x:8df66e978d6df97d02f887f6e5d972ea",
+        "previous_label": 1,
+        "previous_service": "ssl",
+        "previous_gap_seconds": 6.975385904312134,
+        "same_peer_latest_gap_seconds": 60.6621298789978,
+        "previous_same_non_duration_shape": false,
+        "response_dominant": true
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\batch\\rows.jsonl.gz",
+      "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_replay_inputs.jsonl.gz",
+      "sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_flow_events.jsonl.gz",
+      "sha256": "bf06c3befbe2ea8a18500ce00348cd866836813ec09422e05325a055ea72fe0a"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\normal_http_file_objects.jsonl.gz",
+      "sha256": "09e49940620154b04d40169e970578c7efc54dde26603d5d795afa6f789225ef"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\connections.jsonl.gz",
+      "sha256": "c64dfcf0f5cff97c64c9f1529ef3f889c7ccedb68ce1c509854e0c37d5b7c2fc"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+  "source_sha256": "429a509bfb01972c69950f18c72ad6571859021cc145105e1a92d0eb274b92f3",
+  "source_sha_matches_receipt": true,
+  "source_records": 1553112,
+  "host_selected_uids": 365,
+  "exported_uids": 365,
+  "missing_from_export": [],
+  "extra_in_export": [],
+  "filter": "Either original endpoint equals 142.20.57.246; no label/PID/protocol/duration/time filtering beyond named source file",
+  "clock_scope": "Only one output rotation; no actual receipt time; empty cold start; not full-day history"
+}

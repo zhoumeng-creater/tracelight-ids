@@ -1,0 +1,15 @@
+{
+  "local_links_checked": 42,
+  "missing_links": [],
+  "python_syntax": "passed",
+  "history_views": 125987,
+  "query_views": 56220,
+  "same_information_reconstruction_max_abs_error": 6.455946888195285e-14,
+  "model_calls": 0,
+  "fits": 0,
+  "thresholds": 0,
+  "complete_readouts": {
+    "path": "E:/OneDrive - Coventry University/中传/毕业论文/工作/真实先后关系核验_20261119/representation/query_representations.jsonl.gz",
+    "sha256": "61d22cdc1615ce74ee5163fbd25de930d0dcb86aa918153574d685b3b215d232"
+  }
+}

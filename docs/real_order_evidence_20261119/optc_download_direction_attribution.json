@@ -1,0 +1,127 @@
+{
+  "query": "optc:20190924:CSHrim2uG4Jj6MUi31",
+  "prefix_count": 360,
+  "rare_prior_records": [
+    {
+      "flow_id": "optc:20190924:CPdC8j3SCUkw9Gccff",
+      "raw8": [
+        17,
+        55959,
+        53,
+        null,
+        1,
+        0,
+        56,
+        0
+      ],
+      "flow_end_at": "2019-09-24T17:24:36.339617+00:00",
+      "previous_strict_prefix_count": 354,
+      "seconds_before_download": 141.59693002700806,
+      "label": null,
+      "present_in_scored_rows": false,
+      "host_is_originator": true,
+      "source": "142.20.57.246",
+      "destination": "8.8.8.8",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "source_line": 661637
+    },
+    {
+      "flow_id": "optc:20190924:C4hCrq1WFLFdAFIKf9",
+      "raw8": [
+        17,
+        63630,
+        53,
+        null,
+        1,
+        0,
+        56,
+        0
+      ],
+      "flow_end_at": "2019-09-24T17:24:37.361120+00:00",
+      "previous_strict_prefix_count": 355,
+      "seconds_before_download": 140.5754270553589,
+      "label": null,
+      "present_in_scored_rows": false,
+      "host_is_originator": true,
+      "source": "142.20.57.246",
+      "destination": "8.8.4.4",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "source_line": 662153
+    },
+    {
+      "flow_id": "optc:20190924:CKHWt23hPE1PcMlWhl",
+      "raw8": [
+        1,
+        3,
+        0,
+        1.021554,
+        2,
+        0,
+        168,
+        0
+      ],
+      "flow_end_at": "2019-09-24T17:24:37.361244+00:00",
+      "previous_strict_prefix_count": 356,
+      "seconds_before_download": 140.57530307769775,
+      "label": null,
+      "present_in_scored_rows": false,
+      "host_is_originator": false,
+      "source": "142.20.60.1",
+      "destination": "142.20.57.246",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\evidence\\optc\\optc_2019-09-24_conn_17-18.log.gz",
+      "source_line": 682974
+    }
+  ],
+  "rare_channels": {
+    "5": "duration_missing",
+    "11": "UDP",
+    "12": "other_protocol"
+  },
+  "direction": [
+    -0.09770030251374634,
+    0.0007163084337816463,
+    -0.003308433381989428,
+    0.0027940914196653865,
+    0.0010129386942595213,
+    -0.9848252180045871,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.010128205270525097,
+    -0.9848252180045871,
+    -0.9864192388892026
+  ],
+  "rare_channel_squared_norm_fraction": 0.9966917439076598,
+  "normal_http_comparator_count": 42,
+  "normal_http_rare_direction_nonzero_counts": {
+    "5": 0,
+    "11": 0,
+    "12": 0
+  },
+  "normal_http_rare_first_support_nonzero_counts": {
+    "5": 0,
+    "11": 0,
+    "12": 0
+  },
+  "all_normal_background_TCP_duration_present": 44944,
+  "rare_channels_present_in_query_itself": false,
+  "interpretation": "Three unlabeled protocol/measurement records late in one attack-hour prefix dominate direction. Normal-hour background lacks these channels. Presence already appears in first-order P; no command-to-download edge has been established.",
+  "source_receipts": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\真实先后关系核验_20261119\\representation\\query_representations.jsonl.gz",
+      "sha256": "61d22cdc1615ce74ee5163fbd25de930d0dcb86aa918153574d685b3b215d232"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_replay_inputs.jsonl.gz",
+      "sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\batch\\rows.jsonl.gz",
+      "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+    }
+  ],
+  "model_calls": 0,
+  "fitting_calls": 0,
+  "threshold_calls": 0
+}

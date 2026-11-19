@@ -1,0 +1,3944 @@
+{
+  "scope": "fixed descriptive representation analysis; not a classifier comparison",
+  "model_calls": 0,
+  "fits": 0,
+  "thresholds": 0,
+  "calibration_used": false,
+  "reserved_sources_used": false,
+  "rate": 0.0,
+  "dimension": 13,
+  "scales_positive_log_median_F_expanded": [
+    0.13602618948253276,
+    2.302585092994046,
+    2.0794415416798357,
+    6.852242569051878,
+    7.340186835320115
+  ],
+  "numeric_fields": [
+    "duration_seconds",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes"
+  ],
+  "scale_fit_rows": 13252,
+  "input_receipts": {
+    "rows": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\real-order-evidence-20261119\\docs\\coverage_basis_20261119\\batch\\rows.jsonl.gz",
+      "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+    },
+    "events": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\real-order-evidence-20261119\\docs\\coverage_basis_20261119\\batch\\events.jsonl.gz",
+      "sha256": "35f374ac82107456a3495523f4140ae6b86b53327f0aec7f7b03c2a675b0186d"
+    },
+    "ait": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\context_inputs.jsonl.gz",
+      "sha256": "2b0fdbf4d519527fd998bd4c5778c2cfe330c88aa41d75a894b23179b7c74961"
+    },
+    "optc": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\optc\\context_replay_inputs.jsonl.gz",
+      "sha256": "508c193821edd91d752353c39ccc91c5270bbb41d37c7ef2d763b38768ed5005"
+    },
+    "unraveled": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\connections.jsonl.gz",
+      "sha256": "c64dfcf0f5cff97c64c9f1529ef3f889c7ccedb68ce1c509854e0c37d5b7c2fc"
+    }
+  },
+  "history_views": 125987,
+  "query_views": 56220,
+  "query_connections": 56220,
+  "query_classes": {
+    "0": 54808,
+    "None": 865,
+    "1": 547
+  },
+  "missing_query_connections": [],
+  "same_information_reconstruction_max_abs_error": 6.455946888195285e-14,
+  "both_state_payload_float32_plus_clock": 684,
+  "both_readout_dimensions": 39,
+  "groups": [
+    {
+      "group": "ait:fox:cloud_share:complete_capture",
+      "host": "ait:fox:cloud_share",
+      "history_rows": 32358,
+      "query_views": 406
+    },
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "history_rows": 13278,
+      "query_views": 255
+    },
+    {
+      "group": "ait:santos:cloud_share:complete_capture",
+      "host": "ait:santos:cloud_share",
+      "history_rows": 16146,
+      "query_views": 375
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "history_rows": 6072,
+      "query_views": 187
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.246",
+      "history_rows": 192,
+      "query_views": 184
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.247",
+      "history_rows": 4176,
+      "query_views": 4001
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.251",
+      "history_rows": 1335,
+      "query_views": 1259
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.252",
+      "history_rows": 308,
+      "query_views": 300
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.0",
+      "history_rows": 87,
+      "query_views": 76
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.10",
+      "history_rows": 1498,
+      "query_views": 1372
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.11",
+      "history_rows": 9352,
+      "query_views": 8791
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.12",
+      "history_rows": 3657,
+      "query_views": 3349
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.13",
+      "history_rows": 2376,
+      "query_views": 2158
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.14",
+      "history_rows": 2506,
+      "query_views": 2290
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.3",
+      "history_rows": 217,
+      "query_views": 202
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.4",
+      "history_rows": 2122,
+      "query_views": 1967
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.5",
+      "history_rows": 2794,
+      "query_views": 2613
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.6",
+      "history_rows": 972,
+      "query_views": 910
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.7",
+      "history_rows": 2110,
+      "query_views": 2048
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.8",
+      "history_rows": 4897,
+      "query_views": 4666
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.9",
+      "history_rows": 6345,
+      "query_views": 5961
+    },
+    {
+      "group": "optc:empire_custom:20190924_continues_20190925",
+      "host": "142.20.57.246",
+      "history_rows": 365,
+      "query_views": 26
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "history_rows": 12824,
+      "query_views": 12824
+    }
+  ],
+  "populations": [
+    {
+      "group": "ait:fox:cloud_share:complete_capture",
+      "host": "ait:fox:cloud_share",
+      "label": 0,
+      "kind": "normal",
+      "views": 357,
+      "physical_connections": 357,
+      "prefix_count": {
+        "n": 357,
+        "min": 3694.0,
+        "q25": 12342.0,
+        "median": 19341.0,
+        "q75": 24645.0,
+        "max": 31344.0
+      },
+      "known_attack_prefix_count": {
+        "n": 357,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 357,
+        "min": 0.04708753299683062,
+        "q25": 0.07722922382433034,
+        "median": 0.09818937975857547,
+        "q75": 0.1286775313684726,
+        "max": 0.8761195642628189
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 357,
+        "min": 0.0003773224705685835,
+        "q25": 0.0021924012373441687,
+        "median": 0.0035938622489426735,
+        "q75": 0.005588982307025987,
+        "max": 0.028502743282226906
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 357,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 301,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:fox:cloud_share:complete_capture",
+      "host": "ait:fox:cloud_share",
+      "label": null,
+      "kind": "unknown",
+      "views": 49,
+      "physical_connections": 49,
+      "prefix_count": {
+        "n": 49,
+        "min": 3754.0,
+        "q25": 6363.0,
+        "median": 23726.0,
+        "q75": 24709.0,
+        "max": 29693.0
+      },
+      "known_attack_prefix_count": {
+        "n": 49,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 49,
+        "min": 0.045599018289957625,
+        "q25": 0.06527468713459877,
+        "median": 0.09290625440794278,
+        "q75": 0.1534763185187355,
+        "max": 0.8462277967724603
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 49,
+        "min": 0.00015396772358185207,
+        "q25": 0.0036079619627711074,
+        "median": 0.005480682460463021,
+        "q75": 0.007106411758592418,
+        "max": 0.03873621366891106
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 49,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 40,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "label": 0,
+      "kind": "normal",
+      "views": 74,
+      "physical_connections": 74,
+      "prefix_count": {
+        "n": 74,
+        "min": 1355.0,
+        "q25": 2744.0,
+        "median": 3932.0,
+        "q75": 12004.0,
+        "max": 12543.0
+      },
+      "known_attack_prefix_count": {
+        "n": 74,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 17.0,
+        "max": 17.0
+      },
+      "direction_norm": {
+        "n": 74,
+        "min": 0.06201631639656021,
+        "q25": 0.1146532735407417,
+        "median": 0.24071516177880198,
+        "q75": 0.5129813676650481,
+        "max": 0.9849930217377136
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 74,
+        "min": 0.0007578974195132371,
+        "q25": 0.0011117828684949597,
+        "median": 0.0026287401599692827,
+        "q75": 0.03545819660558856,
+        "max": 0.19817708845657972
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 74,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0004784046439386641,
+        "max": 0.0008447803776553964
+      },
+      "same_previous_peer": 41,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "label": null,
+      "kind": "unknown",
+      "views": 164,
+      "physical_connections": 164,
+      "prefix_count": {
+        "n": 164,
+        "min": 1431.0,
+        "q25": 3365.0,
+        "median": 4805.5,
+        "q75": 11800.0,
+        "max": 12539.0
+      },
+      "known_attack_prefix_count": {
+        "n": 164,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 17.0,
+        "max": 17.0
+      },
+      "direction_norm": {
+        "n": 164,
+        "min": 0.052557587668557774,
+        "q25": 0.1367094075339596,
+        "median": 0.3483751387549315,
+        "q75": 0.6184338248607044,
+        "max": 0.9917939006400116
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 164,
+        "min": 0.00032273709489929504,
+        "q25": 0.0008061561475061611,
+        "median": 0.0019461787307305841,
+        "q75": 0.046759698566538034,
+        "max": 0.23381819512322424
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 164,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0005199141112974068,
+        "max": 0.0010270072066522196
+      },
+      "same_previous_peer": 69,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "label": 1,
+      "kind": "control",
+      "views": 16,
+      "physical_connections": 16,
+      "prefix_count": {
+        "n": 16,
+        "min": 11471.0,
+        "q25": 11477.75,
+        "median": 11482.5,
+        "q75": 11489.0,
+        "max": 11584.0
+      },
+      "known_attack_prefix_count": {
+        "n": 16,
+        "min": 0.0,
+        "q25": 3.75,
+        "median": 7.5,
+        "q75": 11.25,
+        "max": 16.0
+      },
+      "direction_norm": {
+        "n": 16,
+        "min": 0.762916581216313,
+        "q25": 0.8590347992497468,
+        "median": 0.8964814717754679,
+        "q75": 0.9771841628827413,
+        "max": 0.98197149338985
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 16,
+        "min": 0.07989892853306965,
+        "q25": 0.1583455123426346,
+        "median": 0.18304143291565458,
+        "q75": 0.22657494985519755,
+        "max": 0.2343945347937037
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 16,
+        "min": 0.0,
+        "q25": 0.00020285662481293876,
+        "median": 0.00042354124730978326,
+        "q75": 0.0006157622111681443,
+        "max": 0.0006664764104498122
+      },
+      "same_previous_peer": 14,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "label": 1,
+      "kind": "download",
+      "views": 1,
+      "physical_connections": 1,
+      "prefix_count": {
+        "n": 1,
+        "min": 11497.0,
+        "q25": 11497.0,
+        "median": 11497.0,
+        "q75": 11497.0,
+        "max": 11497.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1,
+        "min": 14.0,
+        "q25": 14.0,
+        "median": 14.0,
+        "q75": 14.0,
+        "max": 14.0
+      },
+      "direction_norm": {
+        "n": 1,
+        "min": 0.7737590536676241,
+        "q25": 0.7737590536676241,
+        "median": 0.7737590536676241,
+        "q75": 0.7737590536676241,
+        "max": 0.7737590536676241
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1,
+        "min": 0.21648503353160437,
+        "q25": 0.21648503353160437,
+        "median": 0.21648503353160437,
+        "q75": 0.21648503353160437,
+        "max": 0.21648503353160437
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1,
+        "min": 0.0006962171402449813,
+        "q25": 0.0006962171402449813,
+        "median": 0.0006962171402449813,
+        "q75": 0.0006962171402449813,
+        "max": 0.0006962171402449813
+      },
+      "same_previous_peer": 0,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:santos:cloud_share:complete_capture",
+      "host": "ait:santos:cloud_share",
+      "label": null,
+      "kind": "unknown",
+      "views": 61,
+      "physical_connections": 61,
+      "prefix_count": {
+        "n": 61,
+        "min": 2552.0,
+        "q25": 5689.0,
+        "median": 9484.0,
+        "q75": 12944.0,
+        "max": 14255.0
+      },
+      "known_attack_prefix_count": {
+        "n": 61,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 61,
+        "min": 0.09318173318368914,
+        "q25": 0.1393681022139505,
+        "median": 0.14664027113449749,
+        "q75": 0.1631963199308022,
+        "max": 0.6927278762544097
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 61,
+        "min": 0.00017192263978287048,
+        "q25": 0.0010854993540814024,
+        "median": 0.0015498511268904258,
+        "q75": 0.0024417439477273373,
+        "max": 0.007514139529643178
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 61,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 58,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:santos:cloud_share:complete_capture",
+      "host": "ait:santos:cloud_share",
+      "label": 0,
+      "kind": "normal",
+      "views": 314,
+      "physical_connections": 314,
+      "prefix_count": {
+        "n": 314,
+        "min": 2560.0,
+        "q25": 4100.75,
+        "median": 9902.0,
+        "q75": 13118.75,
+        "max": 15723.0
+      },
+      "known_attack_prefix_count": {
+        "n": 314,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 314,
+        "min": 0.09247746747702458,
+        "q25": 0.1415383415830256,
+        "median": 0.17011137226472484,
+        "q75": 0.4151799072254389,
+        "max": 0.6888236446429936
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 314,
+        "min": 0.0005025042590368258,
+        "q25": 0.000977110340685653,
+        "median": 0.002034892118558131,
+        "q75": 0.003618750813016372,
+        "max": 0.013006087729683008
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 314,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 297,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "label": 0,
+      "kind": "normal",
+      "views": 125,
+      "physical_connections": 125,
+      "prefix_count": {
+        "n": 125,
+        "min": 689.0,
+        "q25": 1859.0,
+        "median": 3005.0,
+        "q75": 4022.0,
+        "max": 5917.0
+      },
+      "known_attack_prefix_count": {
+        "n": 125,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 32.0
+      },
+      "direction_norm": {
+        "n": 125,
+        "min": 0.04534484631220729,
+        "q25": 0.08770213977074882,
+        "median": 0.14305503964074182,
+        "q75": 0.1757062607484819,
+        "max": 0.5398425922095667
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 125,
+        "min": 0.0007112140904822067,
+        "q25": 0.008328557760130223,
+        "median": 0.010429951931477072,
+        "q75": 0.013384802084617179,
+        "max": 0.06113398691294228
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 125,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.010167782767650443
+      },
+      "same_previous_peer": 37,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "label": null,
+      "kind": "unknown",
+      "views": 30,
+      "physical_connections": 30,
+      "prefix_count": {
+        "n": 30,
+        "min": 1121.0,
+        "q25": 3368.25,
+        "median": 5302.0,
+        "q75": 5323.0,
+        "max": 5807.0
+      },
+      "known_attack_prefix_count": {
+        "n": 30,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 31.0,
+        "q75": 31.0,
+        "max": 32.0
+      },
+      "direction_norm": {
+        "n": 30,
+        "min": 0.04244117285619111,
+        "q25": 0.1367128188284184,
+        "median": 0.15338238949970878,
+        "q75": 0.23604064646826683,
+        "max": 0.24772289522307975
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 30,
+        "min": 0.0014692055206453336,
+        "q25": 0.018103932850643437,
+        "median": 0.02054329304957042,
+        "q75": 0.039348736830106396,
+        "max": 0.06771137130832516
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 30,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.007619117080219761,
+        "q75": 0.011027620916800878,
+        "max": 0.011474877979873746
+      },
+      "same_previous_peer": 17,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "label": 1,
+      "kind": "control",
+      "views": 31,
+      "physical_connections": 31,
+      "prefix_count": {
+        "n": 31,
+        "min": 5244.0,
+        "q25": 5251.5,
+        "median": 5259.0,
+        "q75": 5270.5,
+        "max": 5339.0
+      },
+      "known_attack_prefix_count": {
+        "n": 31,
+        "min": 0.0,
+        "q25": 7.5,
+        "median": 14.0,
+        "q75": 22.5,
+        "max": 31.0
+      },
+      "direction_norm": {
+        "n": 31,
+        "min": 0.14842199538447207,
+        "q25": 0.1517972917458864,
+        "median": 0.1541711423928663,
+        "q75": 0.15540661179173862,
+        "max": 0.2263092166663398
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 31,
+        "min": 0.023246854153572735,
+        "q25": 0.05464880079106656,
+        "median": 0.05675321192920381,
+        "q75": 0.059482731613856324,
+        "max": 0.07257921133828006
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 31,
+        "min": 0.0,
+        "q25": 0.002586389033247595,
+        "median": 0.004826076465828755,
+        "q75": 0.007176188972785259,
+        "max": 0.010559402635996654
+      },
+      "same_previous_peer": 29,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "label": 1,
+      "kind": "download",
+      "views": 1,
+      "physical_connections": 1,
+      "prefix_count": {
+        "n": 1,
+        "min": 5283.0,
+        "q25": 5283.0,
+        "median": 5283.0,
+        "q75": 5283.0,
+        "max": 5283.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1,
+        "min": 29.0,
+        "q25": 29.0,
+        "median": 29.0,
+        "q75": 29.0,
+        "max": 29.0
+      },
+      "direction_norm": {
+        "n": 1,
+        "min": 0.15492287869217825,
+        "q25": 0.15492287869217825,
+        "median": 0.15492287869217825,
+        "q75": 0.15492287869217825,
+        "max": 0.15492287869217825
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1,
+        "min": 0.06444709123139221,
+        "q25": 0.06444709123139221,
+        "median": 0.06444709123139221,
+        "q75": 0.06444709123139221,
+        "max": 0.06444709123139221
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1,
+        "min": 0.007166265941378425,
+        "q25": 0.007166265941378425,
+        "median": 0.007166265941378425,
+        "q75": 0.007166265941378425,
+        "max": 0.007166265941378425
+      },
+      "same_previous_peer": 0,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.246",
+      "label": null,
+      "kind": "unknown",
+      "views": 12,
+      "physical_connections": 12,
+      "prefix_count": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 2.75,
+        "median": 95.0,
+        "q75": 187.25,
+        "max": 190.0
+      },
+      "known_attack_prefix_count": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 0.027256005514146406,
+        "median": 0.10532921091655927,
+        "q75": 0.4780833977014589,
+        "max": 1.0901932451451195
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 0.0025245456001877576,
+        "median": 0.0039933247311304335,
+        "q75": 0.020545321573233202,
+        "max": 0.07566075512843745
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 10,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.246",
+      "label": 0,
+      "kind": "normal",
+      "views": 172,
+      "physical_connections": 172,
+      "prefix_count": {
+        "n": 172,
+        "min": 8.0,
+        "q25": 51.75,
+        "median": 95.5,
+        "q75": 140.25,
+        "max": 184.0
+      },
+      "known_attack_prefix_count": {
+        "n": 172,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 172,
+        "min": 0.12293157369189513,
+        "q25": 0.6517893469864925,
+        "median": 0.6848471531458202,
+        "q75": 0.792702691964545,
+        "max": 0.8336622356960215
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 172,
+        "min": 0.0007258812683173937,
+        "q25": 0.003417615710305459,
+        "median": 0.005230350390955359,
+        "q75": 0.014259408853463523,
+        "max": 0.09941396075513435
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 172,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 172,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.247",
+      "label": 0,
+      "kind": "normal",
+      "views": 3979,
+      "physical_connections": 3979,
+      "prefix_count": {
+        "n": 3979,
+        "min": 1.0,
+        "q25": 1083.5,
+        "median": 2135.0,
+        "q75": 3147.5,
+        "max": 4173.0
+      },
+      "known_attack_prefix_count": {
+        "n": 3979,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 3979,
+        "min": 0.0,
+        "q25": 0.2214239824558067,
+        "median": 0.2993070703587254,
+        "q75": 0.3819759066726459,
+        "max": 1.2416145188341836
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 3979,
+        "min": 0.0,
+        "q25": 0.00146818981867914,
+        "median": 0.0025204233437554,
+        "q75": 0.0038847750562936694,
+        "max": 0.12678179340626938
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 3979,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 3960,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.247",
+      "label": null,
+      "kind": "unknown",
+      "views": 22,
+      "physical_connections": 22,
+      "prefix_count": {
+        "n": 22,
+        "min": 32.0,
+        "q25": 157.75,
+        "median": 524.5,
+        "q75": 787.75,
+        "max": 4052.0
+      },
+      "known_attack_prefix_count": {
+        "n": 22,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 22,
+        "min": 0.029113245267705985,
+        "q25": 0.2356515711450854,
+        "median": 0.47749032530003455,
+        "q75": 0.6505833366685194,
+        "max": 1.3267706495776472
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 22,
+        "min": 0.0018336537907281871,
+        "q25": 0.016469173796997954,
+        "median": 0.04210387704455243,
+        "q75": 0.0849259709501604,
+        "max": 0.18662933129081793
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 22,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 18,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.251",
+      "label": 0,
+      "kind": "normal",
+      "views": 1245,
+      "physical_connections": 1245,
+      "prefix_count": {
+        "n": 1245,
+        "min": 6.0,
+        "q25": 357.0,
+        "median": 680.0,
+        "q75": 996.0,
+        "max": 1334.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1245,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 1245,
+        "min": 0.05044411965605441,
+        "q25": 0.25479268805194455,
+        "median": 0.3201381615353496,
+        "q75": 0.3702794663753597,
+        "max": 0.7665454111018013
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1245,
+        "min": 0.0007201707469615803,
+        "q25": 0.0015356262801436427,
+        "median": 0.0020097918022476124,
+        "q75": 0.0031964142654723297,
+        "max": 0.06490376210226126
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1245,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 1233,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.251",
+      "label": null,
+      "kind": "unknown",
+      "views": 14,
+      "physical_connections": 14,
+      "prefix_count": {
+        "n": 14,
+        "min": 59.0,
+        "q25": 100.0,
+        "median": 214.5,
+        "q75": 399.75,
+        "max": 1132.0
+      },
+      "known_attack_prefix_count": {
+        "n": 14,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 14,
+        "min": 0.045961812898480905,
+        "q25": 0.30917497085216145,
+        "median": 0.4160635704218377,
+        "q75": 0.5544410761942358,
+        "max": 0.9276726343855116
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 14,
+        "min": 0.0027024927715355307,
+        "q25": 0.0057613212233012,
+        "median": 0.01606557918795555,
+        "q75": 0.03895957235417941,
+        "max": 0.04982050601475235
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 14,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 12,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.252",
+      "label": 0,
+      "kind": "normal",
+      "views": 295,
+      "physical_connections": 295,
+      "prefix_count": {
+        "n": 295,
+        "min": 1.0,
+        "q25": 84.5,
+        "median": 160.0,
+        "q75": 233.5,
+        "max": 307.0
+      },
+      "known_attack_prefix_count": {
+        "n": 295,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 295,
+        "min": 0.0,
+        "q25": 0.15680824294236329,
+        "median": 0.24942360147982215,
+        "q75": 0.3353633396894111,
+        "max": 0.9498403642626975
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 295,
+        "min": 0.0,
+        "q25": 0.000977441902928926,
+        "median": 0.0013083959576779547,
+        "q75": 0.0020557956011569394,
+        "max": 0.0558529359344859
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 295,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 294,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.57.252",
+      "label": null,
+      "kind": "unknown",
+      "views": 5,
+      "physical_connections": 5,
+      "prefix_count": {
+        "n": 5,
+        "min": 30.0,
+        "q25": 31.0,
+        "median": 32.0,
+        "q75": 34.0,
+        "max": 35.0
+      },
+      "known_attack_prefix_count": {
+        "n": 5,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 5,
+        "min": 0.2693221374734581,
+        "q25": 1.1600361288824168,
+        "median": 1.218431598668768,
+        "q75": 1.2670710017393865,
+        "max": 1.355450334674493
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 5,
+        "min": 0.031459769568525364,
+        "q25": 0.06711697881928225,
+        "median": 0.08647000854736894,
+        "q75": 0.09117091553688084,
+        "max": 0.12616924644063582
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 5,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 4,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.0",
+      "label": 0,
+      "kind": "normal",
+      "views": 64,
+      "physical_connections": 64,
+      "prefix_count": {
+        "n": 64,
+        "min": 1.0,
+        "q25": 18.75,
+        "median": 34.5,
+        "q75": 51.25,
+        "max": 67.0
+      },
+      "known_attack_prefix_count": {
+        "n": 64,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 64,
+        "min": 0.0,
+        "q25": 0.3597817490957093,
+        "median": 0.3775934115937839,
+        "q75": 0.42690520485292127,
+        "max": 0.7866079863417397
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 64,
+        "min": 0.0,
+        "q25": 0.0029125572537149437,
+        "median": 0.003960146701517619,
+        "q75": 0.006440706536658178,
+        "max": 0.01659210958641122
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 64,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 63,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.0",
+      "label": null,
+      "kind": "unknown",
+      "views": 12,
+      "physical_connections": 12,
+      "prefix_count": {
+        "n": 12,
+        "min": 74.0,
+        "q25": 76.75,
+        "median": 79.5,
+        "q75": 83.25,
+        "max": 86.0
+      },
+      "known_attack_prefix_count": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 12,
+        "min": 0.7408082647450943,
+        "q25": 1.0775332407902045,
+        "median": 1.0994463252771727,
+        "q75": 1.165494326512973,
+        "max": 1.2680105876698387
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 12,
+        "min": 0.013223885946155312,
+        "q25": 0.0562818030682026,
+        "median": 0.07994484379009587,
+        "q75": 0.09223290707386636,
+        "max": 0.10747345077573922
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 12,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 10,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.10",
+      "label": 0,
+      "kind": "normal",
+      "views": 1358,
+      "physical_connections": 1358,
+      "prefix_count": {
+        "n": 1358,
+        "min": 1.0,
+        "q25": 347.25,
+        "median": 728.5,
+        "q75": 1113.75,
+        "max": 1497.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1358,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 1358,
+        "min": 0.0,
+        "q25": 0.046052345977325604,
+        "median": 0.1050975953884181,
+        "q75": 0.20582129357755893,
+        "max": 0.8429436421880934
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1358,
+        "min": 0.0,
+        "q25": 0.001030108950932366,
+        "median": 0.0014096776160943936,
+        "q75": 0.002521898583472211,
+        "max": 0.0642417370887684
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1358,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 1349,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.10",
+      "label": null,
+      "kind": "unknown",
+      "views": 14,
+      "physical_connections": 14,
+      "prefix_count": {
+        "n": 14,
+        "min": 393.0,
+        "q25": 396.25,
+        "median": 1423.5,
+        "q75": 1426.75,
+        "max": 1433.0
+      },
+      "known_attack_prefix_count": {
+        "n": 14,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 14,
+        "min": 0.14851021265568634,
+        "q25": 0.20717321033480762,
+        "median": 0.3627818644778652,
+        "q75": 0.8415228209073256,
+        "max": 0.9099456196341487
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 14,
+        "min": 0.013149252426225333,
+        "q25": 0.018837616863330985,
+        "median": 0.025795090852607512,
+        "q75": 0.09556818188461004,
+        "max": 0.10652420416825162
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 14,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 13,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.11",
+      "label": 0,
+      "kind": "normal",
+      "views": 8731,
+      "physical_connections": 8731,
+      "prefix_count": {
+        "n": 8731,
+        "min": 2.0,
+        "q25": 2387.5,
+        "median": 4722.0,
+        "q75": 7022.5,
+        "max": 9349.0
+      },
+      "known_attack_prefix_count": {
+        "n": 8731,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 8731,
+        "min": 0.006581700914140214,
+        "q25": 0.09123356013200472,
+        "median": 0.13459476516408364,
+        "q75": 0.19664864969010187,
+        "max": 1.0082794989050825
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 8731,
+        "min": 0.00017456154101811935,
+        "q25": 0.000894622126758471,
+        "median": 0.0013256266849257098,
+        "q75": 0.0019751724832097525,
+        "max": 0.2841791676480895
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 8731,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 8271,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.11",
+      "label": null,
+      "kind": "unknown",
+      "views": 60,
+      "physical_connections": 60,
+      "prefix_count": {
+        "n": 60,
+        "min": 183.0,
+        "q25": 1772.75,
+        "median": 3669.0,
+        "q75": 5175.25,
+        "max": 8765.0
+      },
+      "known_attack_prefix_count": {
+        "n": 60,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 60,
+        "min": 0.03268099711870799,
+        "q25": 0.1071456714891112,
+        "median": 0.15798776478324225,
+        "q75": 0.22440931688261567,
+        "max": 0.4342875922642043
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 60,
+        "min": 0.0013537357055206835,
+        "q25": 0.01087244214763919,
+        "median": 0.017678679352186696,
+        "q75": 0.029484606137346662,
+        "max": 0.06587372999536485
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 60,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 51,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.12",
+      "label": 0,
+      "kind": "normal",
+      "views": 3304,
+      "physical_connections": 3304,
+      "prefix_count": {
+        "n": 3304,
+        "min": 1.0,
+        "q25": 919.75,
+        "median": 1806.5,
+        "q75": 2738.5,
+        "max": 3653.0
+      },
+      "known_attack_prefix_count": {
+        "n": 3304,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 3304,
+        "min": 0.0,
+        "q25": 0.08034528016911308,
+        "median": 0.1423819244502164,
+        "q75": 0.19127687638563926,
+        "max": 0.6818049481634085
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 3304,
+        "min": 0.0,
+        "q25": 0.0008747818815537877,
+        "median": 0.0011817777774809275,
+        "q75": 0.002314501955812196,
+        "max": 0.08364429413417651
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 3304,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 3298,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.12",
+      "label": null,
+      "kind": "unknown",
+      "views": 45,
+      "physical_connections": 45,
+      "prefix_count": {
+        "n": 45,
+        "min": 581.0,
+        "q25": 2027.0,
+        "median": 2269.0,
+        "q75": 3260.0,
+        "max": 3599.0
+      },
+      "known_attack_prefix_count": {
+        "n": 45,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 45,
+        "min": 0.017797787232621782,
+        "q25": 0.15883263349749432,
+        "median": 0.2445985910597378,
+        "q75": 0.2945551940362224,
+        "max": 0.8789474277148418
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 45,
+        "min": 0.0017616421846692026,
+        "q25": 0.013946056030993005,
+        "median": 0.01830049596215466,
+        "q75": 0.026206155839145664,
+        "max": 0.0764300077250846
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 45,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 40,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.13",
+      "label": 0,
+      "kind": "normal",
+      "views": 2121,
+      "physical_connections": 2121,
+      "prefix_count": {
+        "n": 2121,
+        "min": 1.0,
+        "q25": 579.0,
+        "median": 1198.0,
+        "q75": 1792.0,
+        "max": 2375.0
+      },
+      "known_attack_prefix_count": {
+        "n": 2121,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 2121,
+        "min": 0.0,
+        "q25": 0.08407336343377605,
+        "median": 0.142573847111178,
+        "q75": 0.21631054147264087,
+        "max": 0.8997574194069384
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 2121,
+        "min": 0.0,
+        "q25": 0.0011224166626329964,
+        "median": 0.0015207715824678975,
+        "q75": 0.0019193341597685373,
+        "max": 0.055619510464326664
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 2121,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 2116,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.13",
+      "label": null,
+      "kind": "unknown",
+      "views": 37,
+      "physical_connections": 37,
+      "prefix_count": {
+        "n": 37,
+        "min": 846.0,
+        "q25": 1028.0,
+        "median": 1125.0,
+        "q75": 1311.0,
+        "max": 1381.0
+      },
+      "known_attack_prefix_count": {
+        "n": 37,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 37,
+        "min": 0.09013982726404406,
+        "q25": 0.18467787643115702,
+        "median": 0.3838812038465729,
+        "q75": 0.40961496923604007,
+        "max": 0.4616682122974964
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 37,
+        "min": 0.0024403463421831667,
+        "q25": 0.004354675334920427,
+        "median": 0.00742004346000652,
+        "q75": 0.012603942721691741,
+        "max": 0.015739051895224482
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 37,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 32,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.14",
+      "label": 0,
+      "kind": "normal",
+      "views": 2256,
+      "physical_connections": 2256,
+      "prefix_count": {
+        "n": 2256,
+        "min": 1.0,
+        "q25": 584.75,
+        "median": 1199.5,
+        "q75": 1843.25,
+        "max": 2504.0
+      },
+      "known_attack_prefix_count": {
+        "n": 2256,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 2256,
+        "min": 0.0,
+        "q25": 0.12258798250842787,
+        "median": 0.20684040696220127,
+        "q75": 0.2771648957336422,
+        "max": 0.911501849069465
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 2256,
+        "min": 0.0,
+        "q25": 0.0007481775729940948,
+        "median": 0.0013155898552926332,
+        "q75": 0.0022904171905235547,
+        "max": 0.07665076475101346
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 2256,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 2242,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.14",
+      "label": null,
+      "kind": "unknown",
+      "views": 34,
+      "physical_connections": 34,
+      "prefix_count": {
+        "n": 34,
+        "min": 1169.0,
+        "q25": 1241.25,
+        "median": 1381.5,
+        "q75": 1834.75,
+        "max": 2149.0
+      },
+      "known_attack_prefix_count": {
+        "n": 34,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 34,
+        "min": 0.08252987665837144,
+        "q25": 0.26794778812611414,
+        "median": 0.3951858423419311,
+        "q75": 0.45309935051532396,
+        "max": 0.5282705802530789
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 34,
+        "min": 0.009512077874805486,
+        "q25": 0.015459425206772313,
+        "median": 0.02244942433825405,
+        "q75": 0.029718194871350086,
+        "max": 0.05449445791088904
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 34,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 30,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.3",
+      "label": null,
+      "kind": "unknown",
+      "views": 19,
+      "physical_connections": 19,
+      "prefix_count": {
+        "n": 19,
+        "min": 6.0,
+        "q25": 40.5,
+        "median": 131.0,
+        "q75": 142.5,
+        "max": 147.0
+      },
+      "known_attack_prefix_count": {
+        "n": 19,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 19,
+        "min": 0.07404590621984669,
+        "q25": 0.15497011545038136,
+        "median": 0.2183603163460982,
+        "q75": 0.5362914216508414,
+        "max": 1.1857733573447469
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 19,
+        "min": 0.008658814774900374,
+        "q25": 0.018999012950129426,
+        "median": 0.026377667704067465,
+        "q75": 0.036452581604161344,
+        "max": 0.09617471323894566
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 19,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 16,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.3",
+      "label": 0,
+      "kind": "normal",
+      "views": 183,
+      "physical_connections": 183,
+      "prefix_count": {
+        "n": 183,
+        "min": 12.0,
+        "q25": 57.5,
+        "median": 105.0,
+        "q75": 168.5,
+        "max": 216.0
+      },
+      "known_attack_prefix_count": {
+        "n": 183,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 183,
+        "min": 0.009491840501707186,
+        "q25": 0.1445039421886128,
+        "median": 0.6388499545916257,
+        "q75": 0.7027400320954094,
+        "max": 0.801938173174821
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 183,
+        "min": 0.0007160123142562203,
+        "q25": 0.004468370551623932,
+        "median": 0.011425470031186543,
+        "q75": 0.027824801148910915,
+        "max": 0.09263244498541477
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 183,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 183,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.4",
+      "label": 0,
+      "kind": "normal",
+      "views": 1947,
+      "physical_connections": 1947,
+      "prefix_count": {
+        "n": 1947,
+        "min": 1.0,
+        "q25": 530.5,
+        "median": 1049.0,
+        "q75": 1574.5,
+        "max": 2119.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1947,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 1947,
+        "min": 0.0,
+        "q25": 0.04428430915270347,
+        "median": 0.0747856588080814,
+        "q75": 0.11876465216700796,
+        "max": 0.920899270193332
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1947,
+        "min": 0.0,
+        "q25": 0.0006624399372952163,
+        "median": 0.0012745481974486192,
+        "q75": 0.0019301161762814217,
+        "max": 0.026165295701302715
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1947,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 1924,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.4",
+      "label": null,
+      "kind": "unknown",
+      "views": 20,
+      "physical_connections": 20,
+      "prefix_count": {
+        "n": 20,
+        "min": 228.0,
+        "q25": 342.75,
+        "median": 990.0,
+        "q75": 1700.5,
+        "max": 1979.0
+      },
+      "known_attack_prefix_count": {
+        "n": 20,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 20,
+        "min": 0.006725388837512927,
+        "q25": 0.029446718910350927,
+        "median": 0.37642418496757957,
+        "q75": 0.8267922496117662,
+        "max": 1.0832262892442348
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 20,
+        "min": 0.0012641722136772704,
+        "q25": 0.003338058361844295,
+        "median": 0.0321842106213181,
+        "q75": 0.08784570297948283,
+        "max": 0.20461030546623615
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 20,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 15,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.5",
+      "label": 0,
+      "kind": "normal",
+      "views": 2567,
+      "physical_connections": 2567,
+      "prefix_count": {
+        "n": 2567,
+        "min": 1.0,
+        "q25": 690.5,
+        "median": 1385.0,
+        "q75": 2076.5,
+        "max": 2789.0
+      },
+      "known_attack_prefix_count": {
+        "n": 2567,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 2567,
+        "min": 0.0,
+        "q25": 0.10976556838106216,
+        "median": 0.20220963794520289,
+        "q75": 0.2726827367305913,
+        "max": 0.7032246915767163
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 2567,
+        "min": 0.0,
+        "q25": 0.0016014211785982998,
+        "median": 0.0024272542877182765,
+        "q75": 0.003674341304411307,
+        "max": 0.06524512027888216
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 2567,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 2532,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.5",
+      "label": null,
+      "kind": "unknown",
+      "views": 46,
+      "physical_connections": 46,
+      "prefix_count": {
+        "n": 46,
+        "min": 1317.0,
+        "q25": 1360.25,
+        "median": 2266.5,
+        "q75": 2279.75,
+        "max": 2732.0
+      },
+      "known_attack_prefix_count": {
+        "n": 46,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 46,
+        "min": 0.051487723276167005,
+        "q25": 0.2507389560887263,
+        "median": 0.37983275050904913,
+        "q75": 0.4614576327779305,
+        "max": 0.5445502477418961
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 46,
+        "min": 0.010024246932304155,
+        "q25": 0.03694905964603552,
+        "median": 0.04674001181306471,
+        "q75": 0.06182984019153896,
+        "max": 0.07920057959219826
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 46,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 41,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.6",
+      "label": 0,
+      "kind": "normal",
+      "views": 863,
+      "physical_connections": 863,
+      "prefix_count": {
+        "n": 863,
+        "min": 2.0,
+        "q25": 242.5,
+        "median": 470.0,
+        "q75": 711.5,
+        "max": 970.0
+      },
+      "known_attack_prefix_count": {
+        "n": 863,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 863,
+        "min": 0.009070722434650855,
+        "q25": 0.05641535958743913,
+        "median": 0.20930091293118536,
+        "q75": 0.3931454854475872,
+        "max": 0.9744977107503018
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 863,
+        "min": 4.6234045684337205e-05,
+        "q25": 0.0006754325391203056,
+        "median": 0.0010968595107024044,
+        "q75": 0.002320371413884962,
+        "max": 0.49460738162999063
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 863,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 862,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.6",
+      "label": null,
+      "kind": "unknown",
+      "views": 47,
+      "physical_connections": 47,
+      "prefix_count": {
+        "n": 47,
+        "min": 31.0,
+        "q25": 383.5,
+        "median": 627.0,
+        "q75": 865.0,
+        "max": 883.0
+      },
+      "known_attack_prefix_count": {
+        "n": 47,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 47,
+        "min": 0.019974329626660035,
+        "q25": 0.11961793249940114,
+        "median": 0.3135864045193124,
+        "q75": 0.4529455586321578,
+        "max": 1.4391604390769375
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 47,
+        "min": 0.00021290164219681454,
+        "q25": 0.002367748983897699,
+        "median": 0.008914816307067946,
+        "q75": 0.019899902787762908,
+        "max": 0.04968749731145283
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 47,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 41,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.7",
+      "label": 0,
+      "kind": "normal",
+      "views": 2020,
+      "physical_connections": 2020,
+      "prefix_count": {
+        "n": 2020,
+        "min": 1.0,
+        "q25": 516.75,
+        "median": 1038.5,
+        "q75": 1571.25,
+        "max": 2109.0
+      },
+      "known_attack_prefix_count": {
+        "n": 2020,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 2020,
+        "min": 0.0,
+        "q25": 0.10593235463917779,
+        "median": 0.1918882109531838,
+        "q75": 0.25402073913573187,
+        "max": 0.6820558315982774
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 2020,
+        "min": 0.0,
+        "q25": 0.0011417024831893983,
+        "median": 0.0016803297825713523,
+        "q75": 0.002734652546046522,
+        "max": 0.04464934386713068
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 2020,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 2008,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.7",
+      "label": null,
+      "kind": "unknown",
+      "views": 28,
+      "physical_connections": 28,
+      "prefix_count": {
+        "n": 28,
+        "min": 714.0,
+        "q25": 1106.75,
+        "median": 1215.5,
+        "q75": 1660.25,
+        "max": 1862.0
+      },
+      "known_attack_prefix_count": {
+        "n": 28,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 28,
+        "min": 0.009448787421680205,
+        "q25": 0.1997934588222359,
+        "median": 0.3213361258342856,
+        "q75": 0.36360855346382626,
+        "max": 0.44045381185489885
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 28,
+        "min": 0.0010136489686274443,
+        "q25": 0.03182460149749546,
+        "median": 0.038651029863115985,
+        "q75": 0.04355738952485085,
+        "max": 0.07316593817362425
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 28,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 24,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.8",
+      "label": 0,
+      "kind": "normal",
+      "views": 4652,
+      "physical_connections": 4652,
+      "prefix_count": {
+        "n": 4652,
+        "min": 13.0,
+        "q25": 1189.75,
+        "median": 2391.5,
+        "q75": 3637.25,
+        "max": 4896.0
+      },
+      "known_attack_prefix_count": {
+        "n": 4652,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 4652,
+        "min": 0.0028639677827198714,
+        "q25": 0.0691277997109098,
+        "median": 0.2324748633565282,
+        "q75": 0.30926166580041786,
+        "max": 0.629523590336882
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 4652,
+        "min": 3.3796621520873395e-05,
+        "q25": 0.0009859353446950029,
+        "median": 0.0025035026706945384,
+        "q75": 0.0037389614683475177,
+        "max": 0.1294172430419405
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 4652,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 4578,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.8",
+      "label": null,
+      "kind": "unknown",
+      "views": 14,
+      "physical_connections": 14,
+      "prefix_count": {
+        "n": 14,
+        "min": 4435.0,
+        "q25": 4439.25,
+        "median": 4448.5,
+        "q75": 4654.25,
+        "max": 4725.0
+      },
+      "known_attack_prefix_count": {
+        "n": 14,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 14,
+        "min": 0.35812900924780144,
+        "q25": 0.40031791420058005,
+        "median": 0.5095630171961094,
+        "q75": 0.5549898440381099,
+        "max": 0.5918544336469911
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 14,
+        "min": 0.07087390496845304,
+        "q25": 0.07571013257797826,
+        "median": 0.08179516335979112,
+        "q75": 0.08697590205300837,
+        "max": 0.0917562498594166
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 14,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 13,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.9",
+      "label": 0,
+      "kind": "normal",
+      "views": 5873,
+      "physical_connections": 5873,
+      "prefix_count": {
+        "n": 5873,
+        "min": 13.0,
+        "q25": 1553.0,
+        "median": 3190.0,
+        "q75": 4782.0,
+        "max": 6344.0
+      },
+      "known_attack_prefix_count": {
+        "n": 5873,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 5873,
+        "min": 0.0033165060573815243,
+        "q25": 0.09341937103144003,
+        "median": 0.1746412933564009,
+        "q75": 0.2619316769608142,
+        "max": 0.7682883495546995
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 5873,
+        "min": 9.732231416388886e-05,
+        "q25": 0.0007929556891276175,
+        "median": 0.0011737626849318786,
+        "q75": 0.0021718460226359208,
+        "max": 0.07257729493720366
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 5873,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 5787,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:20190919:declared_normal_business_subset",
+      "host": "142.20.58.9",
+      "label": null,
+      "kind": "unknown",
+      "views": 88,
+      "physical_connections": 88,
+      "prefix_count": {
+        "n": 88,
+        "min": 945.0,
+        "q25": 2481.75,
+        "median": 2505.5,
+        "q75": 3476.25,
+        "max": 5086.0
+      },
+      "known_attack_prefix_count": {
+        "n": 88,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "direction_norm": {
+        "n": 88,
+        "min": 0.012546787176036042,
+        "q25": 0.22113693390209313,
+        "median": 0.35616220310386226,
+        "q75": 0.4163263425144803,
+        "max": 0.6337125555870546
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 88,
+        "min": 0.00096696239993453,
+        "q25": 0.028061873096051203,
+        "median": 0.031995055779566225,
+        "q75": 0.04240290672582295,
+        "max": 0.07466876882717688
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 88,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.0
+      },
+      "same_previous_peer": 73,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:empire_custom:20190924_continues_20190925",
+      "host": "142.20.57.246",
+      "label": 1,
+      "kind": "control",
+      "views": 24,
+      "physical_connections": 24,
+      "prefix_count": {
+        "n": 24,
+        "min": 0.0,
+        "q25": 5.75,
+        "median": 11.5,
+        "q75": 17.25,
+        "max": 23.0
+      },
+      "known_attack_prefix_count": {
+        "n": 24,
+        "min": 0.0,
+        "q25": 5.75,
+        "median": 11.5,
+        "q75": 17.25,
+        "max": 23.0
+      },
+      "direction_norm": {
+        "n": 24,
+        "min": 0.0,
+        "q25": 0.006650188548504736,
+        "median": 0.03354389805402447,
+        "q75": 0.05932864630708208,
+        "max": 0.15382309854845455
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 24,
+        "min": 0.0,
+        "q25": 0.0002518458270744715,
+        "median": 0.0012659622326150108,
+        "q75": 0.0026258195834818086,
+        "max": 0.0050266871787746775
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 24,
+        "min": 0.0,
+        "q25": 0.005404784037432556,
+        "median": 0.023250232630031113,
+        "q75": 0.044116516210054614,
+        "max": 0.10961574345256146
+      },
+      "same_previous_peer": 23,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:empire_custom:20190924_continues_20190925",
+      "host": "142.20.57.246",
+      "label": 1,
+      "kind": "download",
+      "views": 1,
+      "physical_connections": 1,
+      "prefix_count": {
+        "n": 1,
+        "min": 360.0,
+        "q25": 360.0,
+        "median": 360.0,
+        "q75": 360.0,
+        "max": 360.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1,
+        "min": 24.0,
+        "q25": 24.0,
+        "median": 24.0,
+        "q75": 24.0,
+        "max": 24.0
+      },
+      "direction_norm": {
+        "n": 1,
+        "min": 1.7095182234654513,
+        "q25": 1.7095182234654513,
+        "median": 1.7095182234654513,
+        "q75": 1.7095182234654513,
+        "max": 1.7095182234654513
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1,
+        "min": 0.0011947491849825381,
+        "q25": 0.0011947491849825381,
+        "median": 0.0011947491849825381,
+        "q75": 0.0011947491849825381,
+        "max": 0.0011947491849825381
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1,
+        "min": 0.024678569217077825,
+        "q25": 0.024678569217077825,
+        "median": 0.024678569217077825,
+        "q75": 0.024678569217077825,
+        "max": 0.024678569217077825
+      },
+      "same_previous_peer": 1,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "optc:empire_custom:20190924_continues_20190925",
+      "host": "142.20.57.246",
+      "label": null,
+      "kind": "unknown",
+      "views": 1,
+      "physical_connections": 1,
+      "prefix_count": {
+        "n": 1,
+        "min": 363.0,
+        "q25": 363.0,
+        "median": 363.0,
+        "q75": 363.0,
+        "max": 363.0
+      },
+      "known_attack_prefix_count": {
+        "n": 1,
+        "min": 25.0,
+        "q25": 25.0,
+        "median": 25.0,
+        "q75": 25.0,
+        "max": 25.0
+      },
+      "direction_norm": {
+        "n": 1,
+        "min": 1.6865872178660395,
+        "q25": 1.6865872178660395,
+        "median": 1.6865872178660395,
+        "q75": 1.6865872178660395,
+        "max": 1.6865872178660395
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 1,
+        "min": 0.0010500685171440372,
+        "q25": 0.0010500685171440372,
+        "median": 0.0010500685171440372,
+        "q75": 0.0010500685171440372,
+        "max": 0.0010500685171440372
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 1,
+        "min": 0.018793500871298052,
+        "q25": 0.018793500871298052,
+        "median": 0.018793500871298052,
+        "q75": 0.018793500871298052,
+        "max": 0.018793500871298052
+      },
+      "same_previous_peer": 1,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "label": 0,
+      "kind": "normal",
+      "views": 12308,
+      "physical_connections": 12308,
+      "prefix_count": {
+        "n": 12308,
+        "min": 0.0,
+        "q25": 3079.0,
+        "median": 6159.0,
+        "q75": 9239.25,
+        "max": 12818.0
+      },
+      "known_attack_prefix_count": {
+        "n": 12308,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 471.0
+      },
+      "direction_norm": {
+        "n": 12308,
+        "min": 0.0,
+        "q25": 0.4695727394972039,
+        "median": 0.580868635051598,
+        "q75": 0.6691995172873919,
+        "max": 1.5456960397194686
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 12308,
+        "min": 0.0,
+        "q25": 0.01256057450775143,
+        "median": 0.03154464486614879,
+        "q75": 0.06122671257574013,
+        "max": 0.46585770457093567
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 12308,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.06685129114690959
+      },
+      "same_previous_peer": 4025,
+      "missing_current_numeric": 73
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "label": null,
+      "kind": "other_attack",
+      "views": 11,
+      "physical_connections": 11,
+      "prefix_count": {
+        "n": 11,
+        "min": 1188.0,
+        "q25": 3087.5,
+        "median": 3691.0,
+        "q75": 7485.0,
+        "max": 10102.0
+      },
+      "known_attack_prefix_count": {
+        "n": 11,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 12.0
+      },
+      "direction_norm": {
+        "n": 11,
+        "min": 0.5025960148197008,
+        "q25": 0.5427703347630772,
+        "median": 0.5620109591717716,
+        "q75": 0.7220370112678829,
+        "max": 0.7980633298017832
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 11,
+        "min": 0.0048080542611313865,
+        "q25": 0.007665830983076192,
+        "median": 0.01193699896809395,
+        "q75": 0.041603883647743096,
+        "max": 0.15971791066637409
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 11,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.002135979024428719
+      },
+      "same_previous_peer": 1,
+      "missing_current_numeric": 2
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "label": null,
+      "kind": "unknown",
+      "views": 32,
+      "physical_connections": 32,
+      "prefix_count": {
+        "n": 32,
+        "min": 9920.0,
+        "q25": 9937.0,
+        "median": 9993.0,
+        "q75": 10010.0,
+        "max": 12377.0
+      },
+      "known_attack_prefix_count": {
+        "n": 32,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 297.0
+      },
+      "direction_norm": {
+        "n": 32,
+        "min": 0.4869059724459871,
+        "q25": 0.48854145318923003,
+        "median": 0.49624918814460617,
+        "q75": 0.5202410074658299,
+        "max": 0.5705451991559297
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 32,
+        "min": 0.0064458924340533574,
+        "q25": 0.014371016708735083,
+        "median": 0.03304267186784389,
+        "q75": 0.033394540759143256,
+        "max": 0.034317631811393495
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 32,
+        "min": 0.0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0.039821142282489605
+      },
+      "same_previous_peer": 12,
+      "missing_current_numeric": 0
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "label": 1,
+      "kind": "control",
+      "views": 473,
+      "physical_connections": 473,
+      "prefix_count": {
+        "n": 473,
+        "min": 10048.0,
+        "q25": 10761.0,
+        "median": 11141.0,
+        "q75": 12530.0,
+        "max": 12818.0
+      },
+      "known_attack_prefix_count": {
+        "n": 473,
+        "min": 0.0,
+        "q25": 118.0,
+        "median": 236.0,
+        "q75": 354.0,
+        "max": 471.0
+      },
+      "direction_norm": {
+        "n": 473,
+        "min": 0.3398594440876145,
+        "q25": 0.4362586580113409,
+        "median": 0.4791359114303545,
+        "q75": 0.5127023053888987,
+        "max": 0.5498533048837558
+      },
+      "pair_vs_mass_matched_pool_linf": {
+        "n": 473,
+        "min": 0.007986318510180751,
+        "q25": 0.00953584377828362,
+        "median": 0.010201213325753744,
+        "q75": 0.010636789272200076,
+        "max": 0.01740996859136149
+      },
+      "known_attack_removal_direction_linf": {
+        "n": 473,
+        "min": 0.0,
+        "q25": 0.022146061367819242,
+        "median": 0.03849157719827315,
+        "q75": 0.04764169672447589,
+        "max": 0.06453186237622387
+      },
+      "same_previous_peer": 99,
+      "missing_current_numeric": 0
+    }
+  ],
+  "same_host_tcp443_by_attack_period": {
+    "ait:fox:intranet_server:complete_capture|ait:fox:intranet_server": {
+      "attack": {
+        "views": 15,
+        "physical_connections": 15,
+        "prefix_count": {
+          "n": 15,
+          "min": 11471.0,
+          "q25": 11476.5,
+          "median": 11482.0,
+          "q75": 11486.0,
+          "max": 11497.0
+        },
+        "known_attack_prefix_count": {
+          "n": 15,
+          "min": 0.0,
+          "q25": 3.5,
+          "median": 7.0,
+          "q75": 10.5,
+          "max": 14.0
+        },
+        "direction_norm": {
+          "n": 15,
+          "min": 0.762916581216313,
+          "q25": 0.8649304058649945,
+          "median": 0.9007338228936849,
+          "q75": 0.9775198966701828,
+          "max": 0.98197149338985
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 15,
+          "min": 0.10727758156494166,
+          "q25": 0.15987311386297115,
+          "median": 0.18858807638378605,
+          "q75": 0.2267937378757967,
+          "max": 0.2343945347937037
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 15,
+          "min": 0.0,
+          "q25": 0.00019016478006059212,
+          "median": 0.000421595334823166,
+          "q75": 0.0005939402285245476,
+          "max": 0.0006664764104498122
+        },
+        "same_previous_peer": 14,
+        "missing_current_numeric": 0
+      },
+      "normal_before": {
+        "views": 52,
+        "physical_connections": 52,
+        "prefix_count": {
+          "n": 52,
+          "min": 2160.0,
+          "q25": 2440.5,
+          "median": 3091.0,
+          "q75": 3935.5,
+          "max": 5638.0
+        },
+        "known_attack_prefix_count": {
+          "n": 52,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "max": 0.0
+        },
+        "direction_norm": {
+          "n": 52,
+          "min": 0.06201631639656021,
+          "q25": 0.10033989249077585,
+          "median": 0.15378740970887897,
+          "q75": 0.2526202568081333,
+          "max": 0.3645787625924524
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 52,
+          "min": 0.0007578974195132371,
+          "q25": 0.000915121186650489,
+          "median": 0.0018543962999695669,
+          "q75": 0.003822773922889898,
+          "max": 0.013709613428088074
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 52,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "max": 0.0
+        },
+        "same_previous_peer": 28,
+        "missing_current_numeric": 0
+      },
+      "normal_during": {
+        "views": 0,
+        "physical_connections": 0,
+        "prefix_count": {
+          "n": 0
+        },
+        "known_attack_prefix_count": {
+          "n": 0
+        },
+        "direction_norm": {
+          "n": 0
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 0
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 0
+        },
+        "same_previous_peer": 0,
+        "missing_current_numeric": 0
+      },
+      "normal_after": {
+        "views": 21,
+        "physical_connections": 21,
+        "prefix_count": {
+          "n": 21,
+          "min": 11731.0,
+          "q25": 12004.0,
+          "median": 12382.0,
+          "q75": 12437.0,
+          "max": 12543.0
+        },
+        "known_attack_prefix_count": {
+          "n": 21,
+          "min": 17.0,
+          "q25": 17.0,
+          "median": 17.0,
+          "q75": 17.0,
+          "max": 17.0
+        },
+        "direction_norm": {
+          "n": 21,
+          "min": 0.4872080809135278,
+          "q25": 0.521546976596829,
+          "median": 0.6379236742887953,
+          "q75": 0.6779448450949709,
+          "max": 0.7480123060998084
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 21,
+          "min": 0.035001502665286524,
+          "q25": 0.07952331244576716,
+          "median": 0.10031606860550094,
+          "q75": 0.11287506629600597,
+          "max": 0.19817708845657972
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 21,
+          "min": 0.000471709156488467,
+          "q25": 0.0005466792512267976,
+          "median": 0.0005766326289656648,
+          "q75": 0.0007193748885963303,
+          "max": 0.0008447803776553964
+        },
+        "same_previous_peer": 13,
+        "missing_current_numeric": 0
+      }
+    },
+    "ait:santos:intranet_server:complete_capture|ait:santos:intranet_server": {
+      "attack": {
+        "views": 30,
+        "physical_connections": 30,
+        "prefix_count": {
+          "n": 30,
+          "min": 5244.0,
+          "q25": 5251.25,
+          "median": 5259.0,
+          "q75": 5269.0,
+          "max": 5283.0
+        },
+        "known_attack_prefix_count": {
+          "n": 30,
+          "min": 0.0,
+          "q25": 7.25,
+          "median": 14.0,
+          "q75": 21.75,
+          "max": 29.0
+        },
+        "direction_norm": {
+          "n": 30,
+          "min": 0.14842199538447207,
+          "q25": 0.15161955862307744,
+          "median": 0.1541071565209799,
+          "q75": 0.15527228952855013,
+          "max": 0.2171028803910988
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 30,
+          "min": 0.034288289034635,
+          "q25": 0.05503339417867934,
+          "median": 0.05684370768344102,
+          "q75": 0.0598345974946969,
+          "max": 0.07257921133828006
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 30,
+          "min": 0.0,
+          "q25": 0.002501297692342183,
+          "median": 0.004817374114116732,
+          "q75": 0.0067690819750949385,
+          "max": 0.00899133961521855
+        },
+        "same_previous_peer": 29,
+        "missing_current_numeric": 0
+      },
+      "normal_before": {
+        "views": 107,
+        "physical_connections": 107,
+        "prefix_count": {
+          "n": 107,
+          "min": 689.0,
+          "q25": 1276.0,
+          "median": 2461.0,
+          "q75": 3740.0,
+          "max": 4516.0
+        },
+        "known_attack_prefix_count": {
+          "n": 107,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "max": 0.0
+        },
+        "direction_norm": {
+          "n": 107,
+          "min": 0.04534484631220729,
+          "q25": 0.08644775261635068,
+          "median": 0.12513028247773395,
+          "q75": 0.17547387029908118,
+          "max": 0.5398425922095667
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 107,
+          "min": 0.0007112140904822067,
+          "q25": 0.006068683208316675,
+          "median": 0.009750196427328356,
+          "q75": 0.012333490318710628,
+          "max": 0.027293720799984426
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 107,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "max": 0.0
+        },
+        "same_previous_peer": 30,
+        "missing_current_numeric": 0
+      },
+      "normal_during": {
+        "views": 0,
+        "physical_connections": 0,
+        "prefix_count": {
+          "n": 0
+        },
+        "known_attack_prefix_count": {
+          "n": 0
+        },
+        "direction_norm": {
+          "n": 0
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 0
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 0
+        },
+        "same_previous_peer": 0,
+        "missing_current_numeric": 0
+      },
+      "normal_after": {
+        "views": 18,
+        "physical_connections": 18,
+        "prefix_count": {
+          "n": 18,
+          "min": 5346.0,
+          "q25": 5350.0,
+          "median": 5717.0,
+          "q75": 5717.0,
+          "max": 5917.0
+        },
+        "known_attack_prefix_count": {
+          "n": 18,
+          "min": 32.0,
+          "q25": 32.0,
+          "median": 32.0,
+          "q75": 32.0,
+          "max": 32.0
+        },
+        "direction_norm": {
+          "n": 18,
+          "min": 0.13722288761033447,
+          "q25": 0.14767586128259047,
+          "median": 0.15147866472920835,
+          "q75": 0.19355621843008258,
+          "max": 0.20213964741552362
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 18,
+          "min": 0.02610949521891462,
+          "q25": 0.026863188850589307,
+          "median": 0.030864773488246122,
+          "q75": 0.03510321603837145,
+          "max": 0.06113398691294228
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 18,
+          "min": 0.006659897749165103,
+          "q25": 0.007353461275124934,
+          "median": 0.007902717010098585,
+          "q75": 0.00962722669313133,
+          "max": 0.010167782767650443
+        },
+        "same_previous_peer": 7,
+        "missing_current_numeric": 0
+      }
+    },
+    "optc:empire_custom:20190924_continues_20190925|142.20.57.246": {
+      "attack": {
+        "views": 24,
+        "physical_connections": 24,
+        "prefix_count": {
+          "n": 24,
+          "min": 0.0,
+          "q25": 5.75,
+          "median": 11.5,
+          "q75": 17.25,
+          "max": 23.0
+        },
+        "known_attack_prefix_count": {
+          "n": 24,
+          "min": 0.0,
+          "q25": 5.75,
+          "median": 11.5,
+          "q75": 17.25,
+          "max": 23.0
+        },
+        "direction_norm": {
+          "n": 24,
+          "min": 0.0,
+          "q25": 0.006650188548504736,
+          "median": 0.03354389805402447,
+          "q75": 0.05932864630708208,
+          "max": 0.15382309854845455
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 24,
+          "min": 0.0,
+          "q25": 0.0002518458270744715,
+          "median": 0.0012659622326150108,
+          "q75": 0.0026258195834818086,
+          "max": 0.0050266871787746775
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 24,
+          "min": 0.0,
+          "q25": 0.005404784037432556,
+          "median": 0.023250232630031113,
+          "q75": 0.044116516210054614,
+          "max": 0.10961574345256146
+        },
+        "same_previous_peer": 23,
+        "missing_current_numeric": 0
+      },
+      "normal_before": {
+        "views": 0,
+        "physical_connections": 0,
+        "prefix_count": {
+          "n": 0
+        },
+        "known_attack_prefix_count": {
+          "n": 0
+        },
+        "direction_norm": {
+          "n": 0
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 0
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 0
+        },
+        "same_previous_peer": 0,
+        "missing_current_numeric": 0
+      },
+      "normal_during": {
+        "views": 0,
+        "physical_connections": 0,
+        "prefix_count": {
+          "n": 0
+        },
+        "known_attack_prefix_count": {
+          "n": 0
+        },
+        "direction_norm": {
+          "n": 0
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 0
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 0
+        },
+        "same_previous_peer": 0,
+        "missing_current_numeric": 0
+      },
+      "normal_after": {
+        "views": 0,
+        "physical_connections": 0,
+        "prefix_count": {
+          "n": 0
+        },
+        "known_attack_prefix_count": {
+          "n": 0
+        },
+        "direction_norm": {
+          "n": 0
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 0
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 0
+        },
+        "same_previous_peer": 0,
+        "missing_current_numeric": 0
+      }
+    },
+    "unraveled:apt_2021_single_campaign|10.1.3.8": {
+      "attack": {
+        "views": 473,
+        "physical_connections": 473,
+        "prefix_count": {
+          "n": 473,
+          "min": 10048.0,
+          "q25": 10761.0,
+          "median": 11141.0,
+          "q75": 12530.0,
+          "max": 12818.0
+        },
+        "known_attack_prefix_count": {
+          "n": 473,
+          "min": 0.0,
+          "q25": 118.0,
+          "median": 236.0,
+          "q75": 354.0,
+          "max": 471.0
+        },
+        "direction_norm": {
+          "n": 473,
+          "min": 0.3398594440876145,
+          "q25": 0.4362586580113409,
+          "median": 0.4791359114303545,
+          "q75": 0.5127023053888987,
+          "max": 0.5498533048837558
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 473,
+          "min": 0.007986318510180751,
+          "q25": 0.00953584377828362,
+          "median": 0.010201213325753744,
+          "q75": 0.010636789272200076,
+          "max": 0.01740996859136149
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 473,
+          "min": 0.0,
+          "q25": 0.022146061367819242,
+          "median": 0.03849157719827315,
+          "q75": 0.04764169672447589,
+          "max": 0.06453186237622387
+        },
+        "same_previous_peer": 99,
+        "missing_current_numeric": 0
+      },
+      "normal_before": {
+        "views": 4312,
+        "physical_connections": 4312,
+        "prefix_count": {
+          "n": 4312,
+          "min": 6.0,
+          "q25": 3260.0,
+          "median": 5489.5,
+          "q75": 7818.75,
+          "max": 10046.0
+        },
+        "known_attack_prefix_count": {
+          "n": 4312,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "max": 0.0
+        },
+        "direction_norm": {
+          "n": 4312,
+          "min": 0.14471336866220652,
+          "q25": 0.6039404696463316,
+          "median": 0.6654866464217302,
+          "q75": 0.7359519877936008,
+          "max": 1.2214590881643914
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 4312,
+          "min": 0.0038673729038890547,
+          "q25": 0.009800529923310345,
+          "median": 0.013558384623493153,
+          "q75": 0.024661785780615522,
+          "max": 0.17819060990132396
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 4312,
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "max": 0.0
+        },
+        "same_previous_peer": 1267,
+        "missing_current_numeric": 4
+      },
+      "normal_during": {
+        "views": 769,
+        "physical_connections": 769,
+        "prefix_count": {
+          "n": 769,
+          "min": 10070.0,
+          "q25": 11146.0,
+          "median": 11692.0,
+          "q75": 12066.0,
+          "max": 12766.0
+        },
+        "known_attack_prefix_count": {
+          "n": 769,
+          "min": 10.0,
+          "q25": 237.0,
+          "median": 260.0,
+          "q75": 268.0,
+          "max": 449.0
+        },
+        "direction_norm": {
+          "n": 769,
+          "min": 0.36205062874742366,
+          "q25": 0.4229816062627622,
+          "median": 0.45132514874866514,
+          "q75": 0.4773251480277489,
+          "max": 0.5476601212492377
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 769,
+          "min": 0.004376800204185599,
+          "q25": 0.00958943856060887,
+          "median": 0.01341356184196485,
+          "q75": 0.018658649893318002,
+          "max": 0.043137233558112144
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 769,
+          "min": 0.0015690211129019693,
+          "q25": 0.023774860121155095,
+          "median": 0.0360904442333137,
+          "q75": 0.03856554609024922,
+          "max": 0.062155670962128776
+        },
+        "same_previous_peer": 144,
+        "missing_current_numeric": 0
+      },
+      "normal_after": {
+        "views": 0,
+        "physical_connections": 0,
+        "prefix_count": {
+          "n": 0
+        },
+        "known_attack_prefix_count": {
+          "n": 0
+        },
+        "direction_norm": {
+          "n": 0
+        },
+        "pair_vs_mass_matched_pool_linf": {
+          "n": 0
+        },
+        "known_attack_removal_direction_linf": {
+          "n": 0
+        },
+        "same_previous_peer": 0,
+        "missing_current_numeric": 0
+      }
+    }
+  },
+  "paired_summaries": [
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "kind": "control",
+      "method": "nearest_time",
+      "match_scope": "within_group",
+      "pairs": 15,
+      "different_normal_connections": 2,
+      "history_part_l2": {
+        "n": 15,
+        "min": 0.046367804006776175,
+        "q25": 0.49562731816919237,
+        "median": 0.9489597139150587,
+        "q75": 1.0320380267190408,
+        "max": 1.040588702067041
+      },
+      "current_query_part_l2": {
+        "n": 15,
+        "min": 0.0028565535605380825,
+        "q25": 0.0036214227732100125,
+        "median": 0.00562904899653077,
+        "q75": 0.04533462125018294,
+        "max": 0.7748979619403816
+      },
+      "time_gap_seconds": {
+        "n": 15,
+        "min": -7445.654997110367,
+        "q25": -7439.244290113449,
+        "median": -7432.463448047638,
+        "q75": -15.633743524551392,
+        "max": 7447.40735912323
+      },
+      "history_larger_than_query_part": 11,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "ait:fox:intranet_server:complete_capture",
+      "host": "ait:fox:intranet_server",
+      "kind": "control",
+      "method": "nearest_current_input",
+      "match_scope": "within_group",
+      "pairs": 15,
+      "different_normal_connections": 5,
+      "history_part_l2": {
+        "n": 15,
+        "min": 0.12114279840913106,
+        "q25": 0.9117020919957484,
+        "median": 1.1078151539062278,
+        "q75": 1.1866934736477148,
+        "max": 1.1911132236622757
+      },
+      "current_query_part_l2": {
+        "n": 15,
+        "min": 0.0006459527514919759,
+        "q25": 0.0020106462539211216,
+        "median": 0.0021430155359892086,
+        "q75": 0.002318583223073066,
+        "max": 0.04290093729690613
+      },
+      "time_gap_seconds": {
+        "n": 15,
+        "min": -161513.69736385345,
+        "q25": -100920.51295506954,
+        "median": -100911.16659903526,
+        "q75": -94133.85946857929,
+        "max": 21951.46932411194
+      },
+      "history_larger_than_query_part": 15,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "kind": "control",
+      "method": "nearest_time",
+      "match_scope": "within_group",
+      "pairs": 30,
+      "different_normal_connections": 1,
+      "history_part_l2": {
+        "n": 30,
+        "min": 0.13207198201018155,
+        "q25": 0.14292698865729128,
+        "median": 0.1462999878656593,
+        "q75": 0.1478886212547966,
+        "max": 0.1615941675210481
+      },
+      "current_query_part_l2": {
+        "n": 30,
+        "min": 0.008069913226911545,
+        "q25": 0.0157405541684467,
+        "median": 0.016668360139570328,
+        "q75": 0.01689752273498637,
+        "max": 0.03684506203224082
+      },
+      "time_gap_seconds": {
+        "n": 30,
+        "min": -2466.5723099708557,
+        "q25": -2422.5873978734016,
+        "median": -2404.627940893173,
+        "q75": -2385.355375647545,
+        "max": -2367.142562866211
+      },
+      "history_larger_than_query_part": 30,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "ait:santos:intranet_server:complete_capture",
+      "host": "ait:santos:intranet_server",
+      "kind": "control",
+      "method": "nearest_current_input",
+      "match_scope": "within_group",
+      "pairs": 30,
+      "different_normal_connections": 4,
+      "history_part_l2": {
+        "n": 30,
+        "min": 0.09802703393353172,
+        "q25": 0.28961628198006256,
+        "median": 0.29513648796595604,
+        "q75": 0.29793848703910775,
+        "max": 0.30042961505936566
+      },
+      "current_query_part_l2": {
+        "n": 30,
+        "min": 0.0009470559917051278,
+        "q25": 0.004362710729620089,
+        "median": 0.004788490983703879,
+        "q75": 0.004968071845232667,
+        "max": 0.016896540005888992
+      },
+      "time_gap_seconds": {
+        "n": 30,
+        "min": -256561.53944301605,
+        "q25": -256542.3393214941,
+        "median": -256524.79227399826,
+        "q75": -256505.87206745148,
+        "max": 21522.19448208809
+      },
+      "history_larger_than_query_part": 30,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "kind": "control",
+      "method": "nearest_time",
+      "match_scope": "within_group",
+      "pairs": 473,
+      "different_normal_connections": 133,
+      "history_part_l2": {
+        "n": 473,
+        "min": 0.0,
+        "q25": 0.0004017361896733181,
+        "median": 0.0008079173142043344,
+        "q75": 0.001463650149647677,
+        "max": 0.043525547060579754
+      },
+      "current_query_part_l2": {
+        "n": 473,
+        "min": 0.0001392382848040267,
+        "q25": 0.005890057209950916,
+        "median": 0.006373106226740459,
+        "q75": 0.017099716881651364,
+        "max": 0.19098079973223156
+      },
+      "time_gap_seconds": {
+        "n": 473,
+        "min": -1321.1141638755798,
+        "q25": -150.4818880558014,
+        "median": -1.279115915298462,
+        "q75": 81.96674513816833,
+        "max": 834.0658531188965
+      },
+      "history_larger_than_query_part": 7,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "kind": "control",
+      "method": "nearest_current_input",
+      "match_scope": "within_group",
+      "pairs": 473,
+      "different_normal_connections": 11,
+      "history_part_l2": {
+        "n": 473,
+        "min": 0.0008621635467943269,
+        "q25": 0.4203802219971865,
+        "median": 0.44596840139717114,
+        "q75": 0.46798640816908843,
+        "max": 0.4860739791375529
+      },
+      "current_query_part_l2": {
+        "n": 473,
+        "min": 0.00013724402074577046,
+        "q25": 0.0012185513729135072,
+        "median": 0.0012266761042879467,
+        "q75": 0.0015882908284442392,
+        "max": 0.016268398577134247
+      },
+      "time_gap_seconds": {
+        "n": 473,
+        "min": -55308.29633688927,
+        "q25": -47706.29609084129,
+        "median": -40141.65898990631,
+        "q75": -33059.82213497162,
+        "max": 38.45903992652893
+      },
+      "history_larger_than_query_part": 473,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "kind": "control",
+      "method": "nearest_time",
+      "match_scope": "same_attack_period",
+      "pairs": 473,
+      "different_normal_connections": 132,
+      "history_part_l2": {
+        "n": 473,
+        "min": 0.0,
+        "q25": 0.0004017361896733181,
+        "median": 0.0008188272307651904,
+        "q75": 0.0014921338831222631,
+        "max": 0.043525547060579754
+      },
+      "current_query_part_l2": {
+        "n": 473,
+        "min": 0.0001392382848040267,
+        "q25": 0.005821249947674013,
+        "median": 0.006373106226740459,
+        "q75": 0.017099716881651364,
+        "max": 0.19098079973223156
+      },
+      "time_gap_seconds": {
+        "n": 473,
+        "min": -1321.1141638755798,
+        "q25": -139.93060111999512,
+        "median": 0.7262921333312988,
+        "q75": 112.30128598213196,
+        "max": 834.0658531188965
+      },
+      "history_larger_than_query_part": 7,
+      "same_peer_pairs": 0
+    },
+    {
+      "group": "unraveled:apt_2021_single_campaign",
+      "host": "10.1.3.8",
+      "kind": "control",
+      "method": "nearest_current_input",
+      "match_scope": "same_attack_period",
+      "pairs": 473,
+      "different_normal_connections": 10,
+      "history_part_l2": {
+        "n": 473,
+        "min": 0.0006631127647399912,
+        "q25": 0.03019641492494585,
+        "median": 0.06639000426048439,
+        "q75": 0.10336956354698729,
+        "max": 0.13503140058425872
+      },
+      "current_query_part_l2": {
+        "n": 473,
+        "min": 1.4072973433489594e-05,
+        "q25": 0.0007621068404846523,
+        "median": 0.0008844718511716498,
+        "q75": 0.000889530456340102,
+        "max": 0.003305167100766172
+      },
+      "time_gap_seconds": {
+        "n": 473,
+        "min": -27541.505832910538,
+        "q25": -20225.127273082733,
+        "median": -13156.584282875061,
+        "q75": -6175.663330078125,
+        "max": 17264.03254199028
+      },
+      "history_larger_than_query_part": 472,
+      "same_peer_pairs": 0
+    }
+  ],
+  "attack_download_events": [
+    {
+      "event_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+      "kind": "attack_download",
+      "role": "F_base",
+      "association_mode": "one_of",
+      "candidate_set_complete": true,
+      "candidate_views": [
+        {
+          "flow_id": "ait:santos:intranet_server:CwXMJf1cqy4ultcTI2",
+          "host": "ait:santos:intranet_server",
+          "label": null,
+          "prefix_count": 5275,
+          "known_attack_prefix_count": 27,
+          "direction": [
+            0.07182870253462341,
+            -0.029188203226348432,
+            -0.02203855817981185,
+            -0.05516984254405018,
+            -0.031397995037598485,
+            -0.019561543649780154,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.10415295367824559,
+            0.02417468018764405,
+            0.03547580873942997
+          ],
+          "pool_difference_linf": 0.06757665155629969,
+          "oracle_removal_direction_linf": 0.007148976055648123
+        },
+        {
+          "flow_id": "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+          "host": "ait:santos:intranet_server",
+          "label": null,
+          "prefix_count": 5280,
+          "known_attack_prefix_count": 27,
+          "direction": [
+            0.043225527438277345,
+            -0.05774298350139022,
+            -0.05040012085992181,
+            -0.08438217855874187,
+            -0.06034364457368473,
+            -0.05067753510339244,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.13293318914083027,
+            -0.0154989600993777,
+            0.005257207512042008
+          ],
+          "pool_difference_linf": 0.04258112655558069,
+          "oracle_removal_direction_linf": 0.0080892581047914
+        }
+      ]
+    },
+    {
+      "event_id": "ait:santos:wpdiscuz_complete_chain:download:password_list",
+      "kind": "attack_download",
+      "role": "F_base",
+      "association_mode": "one_of",
+      "candidate_set_complete": true,
+      "candidate_views": [
+        {
+          "flow_id": "ait:santos:intranet_server:CCXIoY2v3POzsti4f",
+          "host": "ait:santos:intranet_server",
+          "label": 1,
+          "prefix_count": 5283,
+          "known_attack_prefix_count": 29,
+          "direction": [
+            0.06958030681933458,
+            -0.032363615846423666,
+            -0.025319878084526088,
+            -0.057763099537614424,
+            -0.03431172265770796,
+            -0.021270299826298026,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.1058645905411852,
+            0.012362875683098969,
+            0.03383388136302864
+          ],
+          "pool_difference_linf": 0.06444709123139221,
+          "oracle_removal_direction_linf": 0.007166265941378425
+        }
+      ]
+    },
+    {
+      "event_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+      "kind": "attack_download",
+      "role": "V",
+      "association_mode": "one_of",
+      "candidate_set_complete": true,
+      "candidate_views": [
+        {
+          "flow_id": "ait:fox:intranet_server:CyyYte1hKA3vEfNQt4",
+          "host": "ait:fox:intranet_server",
+          "label": null,
+          "prefix_count": 11488,
+          "known_attack_prefix_count": 12,
+          "direction": [
+            0.20353790844672526,
+            -0.3071122834990184,
+            -0.3016110694426317,
+            -0.2387624517686474,
+            -0.2297122213780199,
+            0.27400317708752203,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.21494558894680518,
+            0.28906061372193104,
+            0.2506389743809662
+          ],
+          "pool_difference_linf": 0.1708082339484052,
+          "oracle_removal_direction_linf": 0.0005972848000597719
+        },
+        {
+          "flow_id": "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+          "host": "ait:fox:intranet_server",
+          "label": null,
+          "prefix_count": 11494,
+          "known_attack_prefix_count": 12,
+          "direction": [
+            0.16957594992606181,
+            -0.3368507327148332,
+            -0.33123215715170373,
+            -0.2704599371822998,
+            -0.261030641180254,
+            0.2396500300534935,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.24895990895142567,
+            0.2454664848089343,
+            0.21517898625181042
+          ],
+          "pool_difference_linf": 0.14373621228725317,
+          "oracle_removal_direction_linf": 0.000610397404573082
+        }
+      ]
+    },
+    {
+      "event_id": "ait:fox:wpdiscuz_complete_chain:download:password_list",
+      "kind": "attack_download",
+      "role": "V",
+      "association_mode": "one_of",
+      "candidate_set_complete": true,
+      "candidate_views": [
+        {
+          "flow_id": "ait:fox:intranet_server:Cjaku94eD7bn5eoPj2",
+          "host": "ait:fox:intranet_server",
+          "label": 1,
+          "prefix_count": 11497,
+          "known_attack_prefix_count": 14,
+          "direction": [
+            0.2812039729741187,
+            -0.22694016510505718,
+            -0.2218110711106987,
+            -0.15575255022262186,
+            -0.14794552640128086,
+            0.3517087681708972,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.12640938815062286,
+            0.35159243247427985,
+            0.3308822201840317
+          ],
+          "pool_difference_linf": 0.21648503353160437,
+          "oracle_removal_direction_linf": 0.0006962171402449813
+        }
+      ]
+    },
+    {
+      "event_id": "optc:empire:download:CSHrim2uG4Jj6MUi31",
+      "kind": "malicious_tool_download",
+      "role": "external_development",
+      "association_mode": "all_confirmed",
+      "candidate_set_complete": true,
+      "candidate_views": [
+        {
+          "flow_id": "optc:20190924:CSHrim2uG4Jj6MUi31",
+          "host": "142.20.57.246",
+          "label": 1,
+          "prefix_count": 360,
+          "known_attack_prefix_count": 24,
+          "direction": [
+            -0.09770030251374634,
+            0.0007163084337816463,
+            -0.003308433381989428,
+            0.0027940914196653865,
+            0.0010129386942595213,
+            -0.9848252180045871,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.010128205270525097,
+            -0.9848252180045871,
+            -0.9864192388892026
+          ],
+          "pool_difference_linf": 0.0011947491849825381,
+          "oracle_removal_direction_linf": 0.024678569217077825
+        }
+      ]
+    }
+  ]
+}

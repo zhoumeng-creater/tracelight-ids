@@ -1,0 +1,643 @@
+{
+  "scope": "existing_AIT_santos_F_and_fox_V_only",
+  "real_model_calls": 0,
+  "fitting_calls": 0,
+  "threshold_searches": 0,
+  "C_or_reserved_material_used": false,
+  "sources": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\context_inputs.jsonl.gz",
+      "sha256": "2b0fdbf4d519527fd998bd4c5778c2cfe330c88aa41d75a894b23179b7c74961"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\events.jsonl.gz",
+      "sha256": "0c4be3a33aa1cd73b3ae55dfa7cbaa1f1c9196e982c3ea7108cf51116644ea7e"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\batch\\rows.jsonl.gz",
+      "sha256": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\history_mechanism\\candidate_history_evidence.jsonl.gz",
+      "sha256": "d71edbb28f8ed4f1d3c2b3b2e037a79dedff7e0c3ff420b980dedcee302fa704"
+    }
+  ],
+  "runs": {
+    "santos": {
+      "event_business": [
+        {
+          "kind": "attack_download",
+          "event_count": 2,
+          "unique_candidate_flows": 3,
+          "flow_labels": {
+            "None": 2,
+            "1": 1
+          },
+          "single_candidate_events": 1,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            80,
+            443
+          ]
+        },
+        {
+          "kind": "normal_intranet_page_retrieval",
+          "event_count": 53,
+          "unique_candidate_flows": 137,
+          "flow_labels": {
+            "0": 125,
+            "None": 12
+          },
+          "single_candidate_events": 35,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "normal_owncloud_file_download",
+          "event_count": 44,
+          "unique_candidate_flows": 375,
+          "flow_labels": {
+            "0": 314,
+            "None": 61
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 52,
+          "hosts": [
+            "ait:santos:cloud_share"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "reverse_shell_channel",
+          "event_count": 1,
+          "unique_candidate_flows": 2,
+          "flow_labels": {
+            "1": 1,
+            "None": 1
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            16486
+          ]
+        },
+        {
+          "kind": "webshell_command",
+          "event_count": 33,
+          "unique_candidate_flows": 45,
+          "flow_labels": {
+            "None": 15,
+            "1": 30
+          },
+          "single_candidate_events": 30,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        }
+      ],
+      "same_host_HTTPS_control_vs_normal": {
+        "attack_control_flows": 30,
+        "normal_flows": 125,
+        "attack_available_interval": [
+          1642418591.353108,
+          1642418690.782855
+        ],
+        "normal_before_first_control": 107,
+        "normal_during_control_interval": 0,
+        "normal_after_last_control": 18,
+        "normal_queries_with_prior_confirmed_controls": 18,
+        "prior_control_count_range_for_these_normals": [
+          30,
+          30
+        ],
+        "examples_with_prior_control": [
+          {
+            "flow_id": "ait:santos:intranet_server:CAEFI04bjkV7H8vwVc",
+            "label": 0,
+            "target_kind": "normal",
+            "available_at": 1642421264.516484,
+            "host": "ait:santos:intranet_server",
+            "peer": "192.168.104.198",
+            "resp_port": 443,
+            "prior_confirmed_controls": 30
+          },
+          {
+            "flow_id": "ait:santos:intranet_server:CP3jnA25PhwgmYgVf",
+            "label": 0,
+            "target_kind": "normal",
+            "available_at": 1642421264.516484,
+            "host": "ait:santos:intranet_server",
+            "peer": "192.168.104.198",
+            "resp_port": 443,
+            "prior_confirmed_controls": 30
+          },
+          {
+            "flow_id": "ait:santos:intranet_server:CX5dGVPlJyff594xg",
+            "label": 0,
+            "target_kind": "normal",
+            "available_at": 1642421264.516484,
+            "host": "ait:santos:intranet_server",
+            "peer": "192.168.104.198",
+            "resp_port": 443,
+            "prior_confirmed_controls": 30
+          }
+        ],
+        "shared_export_time_pairs": [],
+        "control_peer_addresses": [
+          "172.21.128.119"
+        ],
+        "normal_peer_addresses": [
+          "192.168.104.198",
+          "192.168.104.81"
+        ]
+      },
+      "actor_vs_export_command_pair_order": {
+        "pairs": 528,
+        "counts": {
+          "all_candidates_preserve_actor_before": 527,
+          "no_candidate_pair_preserves_strict_actor_before": 1
+        },
+        "examples": {
+          "all_candidates_preserve_actor_before": {
+            "earlier_action": "ait:santos:wpdiscuz_complete_chain:webshell:231",
+            "later_action": "ait:santos:wpdiscuz_complete_chain:webshell:236",
+            "earlier_exports": [
+              1642418587.256282,
+              1642418587.256282
+            ],
+            "later_exports": [
+              1642418591.353108
+            ]
+          },
+          "no_candidate_pair_preserves_strict_actor_before": {
+            "earlier_action": "ait:santos:wpdiscuz_complete_chain:webshell:306",
+            "later_action": "ait:santos:wpdiscuz_complete_chain:webshell:311",
+            "earlier_exports": [
+              1642418628.838486
+            ],
+            "later_exports": [
+              1642418628.838486
+            ]
+          }
+        }
+      },
+      "normal_actor_consecutive_event_order": [
+        {
+          "kind": "normal_intranet_page_retrieval",
+          "actor_count": 2,
+          "consecutive_nonoverlapping_action_pairs": 51,
+          "counts": {
+            "all_candidates_preserve_actor_before": 51
+          },
+          "examples": {
+            "all_candidates_preserve_actor_before": {
+              "actor": "internal_employee_0",
+              "earlier_action": "ait:santos:normal:internal_employee_0:c8d25367-31d1-4fe2-81e2-e0201fa0ef42",
+              "later_action": "ait:santos:normal:internal_employee_0:d6e22e06-f5db-4315-91b6-0f4517c488fe",
+              "earlier_export_range": [
+                1642153224.069737,
+                1642153224.069737
+              ],
+              "later_export_range": [
+                1642162097.81655,
+                1642162109.529545
+              ],
+              "overlapping_candidate_flow_count": 0
+            }
+          }
+        },
+        {
+          "kind": "normal_owncloud_file_download",
+          "actor_count": 2,
+          "consecutive_nonoverlapping_action_pairs": 42,
+          "counts": {
+            "candidate_dependent_or_tied": 14,
+            "all_candidates_preserve_actor_before": 28
+          },
+          "examples": {
+            "candidate_dependent_or_tied": {
+              "actor": "internal_employee_0",
+              "earlier_action": "ait:santos:normal:internal_employee_0:dd7746c1-16ed-4c92-bd21-a27ab31258bf",
+              "later_action": "ait:santos:normal:internal_employee_0:927e44c6-5501-42bf-9725-6f88af0f4d6d",
+              "earlier_export_range": [
+                1642166435.010462,
+                1642166539.206334
+              ],
+              "later_export_range": [
+                1642166495.325601,
+                1642166690.538021
+              ],
+              "overlapping_candidate_flow_count": 2
+            },
+            "all_candidates_preserve_actor_before": {
+              "actor": "internal_employee_0",
+              "earlier_action": "ait:santos:normal:internal_employee_0:927e44c6-5501-42bf-9725-6f88af0f4d6d",
+              "later_action": "ait:santos:normal:internal_employee_0:a99a683d-e5b3-4a99-87a2-6cbfa33c1a4a",
+              "earlier_export_range": [
+                1642166495.325601,
+                1642166690.538021
+              ],
+              "later_export_range": [
+                1642254296.232297,
+                1642254358.174118
+              ],
+              "overlapping_candidate_flow_count": 0
+            }
+          }
+        }
+      ],
+      "attack_downloads": [
+        {
+          "event_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+          "actor_start": 1642418656.2027395,
+          "actor_end": 1642418672.6291978,
+          "candidates": [
+            {
+              "flow_id": "ait:santos:intranet_server:CwXMJf1cqy4ultcTI2",
+              "available_at": 1642418661.974627,
+              "label": null,
+              "resp_port": 443,
+              "peer": "140.82.121.4",
+              "previous_class": "confirmed_attack_chain_flow",
+              "prefix_count": 5275,
+              "prefix_categories": {
+                "confirmed_attack_chain_flow": 27,
+                "possible_attack_chain_candidate": 2,
+                "qualified_normal_flow": 107,
+                "possible_normal_business_candidate": 10,
+                "unknown_flow": 5129
+              },
+              "wget_predecessor_available": false
+            },
+            {
+              "flow_id": "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+              "available_at": 1642418679.177729,
+              "label": null,
+              "resp_port": 443,
+              "peer": "140.82.121.10",
+              "previous_class": "unknown_flow",
+              "prefix_count": 5280,
+              "prefix_categories": {
+                "confirmed_attack_chain_flow": 27,
+                "possible_attack_chain_candidate": 3,
+                "qualified_normal_flow": 107,
+                "possible_normal_business_candidate": 10,
+                "unknown_flow": 5133
+              },
+              "wget_predecessor_available": false
+            }
+          ]
+        },
+        {
+          "event_id": "ait:santos:wpdiscuz_complete_chain:download:password_list",
+          "actor_start": 1642418679.1718335,
+          "actor_end": 1642418681.3093953,
+          "candidates": [
+            {
+              "flow_id": "ait:santos:intranet_server:CCXIoY2v3POzsti4f",
+              "available_at": 1642418690.782855,
+              "label": 1,
+              "resp_port": 80,
+              "peer": "10.229.2.216",
+              "previous_class": "confirmed_attack_chain_flow",
+              "prefix_count": 5283,
+              "prefix_categories": {
+                "confirmed_attack_chain_flow": 29,
+                "possible_attack_chain_candidate": 4,
+                "qualified_normal_flow": 107,
+                "possible_normal_business_candidate": 10,
+                "unknown_flow": 5133
+              },
+              "wget_predecessor_available": false
+            }
+          ]
+        }
+      ]
+    },
+    "fox": {
+      "event_business": [
+        {
+          "kind": "attack_download",
+          "event_count": 2,
+          "unique_candidate_flows": 3,
+          "flow_labels": {
+            "1": 1,
+            "None": 2
+          },
+          "single_candidate_events": 1,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            80,
+            443
+          ]
+        },
+        {
+          "kind": "normal_intranet_page_retrieval",
+          "event_count": 58,
+          "unique_candidate_flows": 228,
+          "flow_labels": {
+            "None": 155,
+            "0": 73
+          },
+          "single_candidate_events": 24,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "normal_owncloud_file_download",
+          "event_count": 42,
+          "unique_candidate_flows": 406,
+          "flow_labels": {
+            "0": 357,
+            "None": 49
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 40,
+          "hosts": [
+            "ait:fox:cloud_share"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "reverse_shell_channel",
+          "event_count": 1,
+          "unique_candidate_flows": 2,
+          "flow_labels": {
+            "1": 1,
+            "None": 1
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            51898
+          ]
+        },
+        {
+          "kind": "webshell_command",
+          "event_count": 18,
+          "unique_candidate_flows": 21,
+          "flow_labels": {
+            "None": 6,
+            "1": 15
+          },
+          "single_candidate_events": 15,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        }
+      ],
+      "same_host_HTTPS_control_vs_normal": {
+        "attack_control_flows": 15,
+        "normal_flows": 73,
+        "attack_available_interval": [
+          1642509491.872619,
+          1642509565.060342
+        ],
+        "normal_before_first_control": 52,
+        "normal_during_control_interval": 0,
+        "normal_after_last_control": 21,
+        "normal_queries_with_prior_confirmed_controls": 21,
+        "prior_control_count_range_for_these_normals": [
+          15,
+          15
+        ],
+        "examples_with_prior_control": [
+          {
+            "flow_id": "ait:fox:intranet_server:CbuTMi1JXSi87GQK7f",
+            "label": 0,
+            "target_kind": "normal",
+            "available_at": 1642516960.334038,
+            "host": "ait:fox:intranet_server",
+            "peer": "10.35.32.164",
+            "resp_port": 443,
+            "prior_confirmed_controls": 15
+          },
+          {
+            "flow_id": "ait:fox:intranet_server:CCIACA3eR1BzBVVpy8",
+            "label": 0,
+            "target_kind": "normal",
+            "available_at": 1642530446.46835,
+            "host": "ait:fox:intranet_server",
+            "peer": "10.35.32.164",
+            "resp_port": 443,
+            "prior_confirmed_controls": 15
+          },
+          {
+            "flow_id": "ait:fox:intranet_server:CJsxa52jteOFZYeRf2",
+            "label": 0,
+            "target_kind": "normal",
+            "available_at": 1642530446.46835,
+            "host": "ait:fox:intranet_server",
+            "peer": "10.35.32.164",
+            "resp_port": 443,
+            "prior_confirmed_controls": 15
+          }
+        ],
+        "shared_export_time_pairs": [],
+        "control_peer_addresses": [
+          "172.17.130.196"
+        ],
+        "normal_peer_addresses": [
+          "10.35.32.164",
+          "10.35.33.144"
+        ]
+      },
+      "actor_vs_export_command_pair_order": {
+        "pairs": 153,
+        "counts": {
+          "all_candidates_preserve_actor_before": 153
+        },
+        "examples": {
+          "all_candidates_preserve_actor_before": {
+            "earlier_action": "ait:fox:wpdiscuz_complete_chain:webshell:779",
+            "later_action": "ait:fox:wpdiscuz_complete_chain:webshell:784",
+            "earlier_exports": [
+              1642509489.835907,
+              1642509490.148489
+            ],
+            "later_exports": [
+              1642509491.872619
+            ]
+          }
+        }
+      },
+      "normal_actor_consecutive_event_order": [
+        {
+          "kind": "normal_intranet_page_retrieval",
+          "actor_count": 2,
+          "consecutive_nonoverlapping_action_pairs": 56,
+          "counts": {
+            "all_candidates_preserve_actor_before": 56
+          },
+          "examples": {
+            "all_candidates_preserve_actor_before": {
+              "actor": "internal_employee_0",
+              "earlier_action": "ait:fox:normal:internal_employee_0:a770d656-bf76-4a01-a51b-8f3ab147d381",
+              "later_action": "ait:fox:normal:internal_employee_0:16f05213-dc5a-4f5a-b34f-661f48f12bd0",
+              "earlier_export_range": [
+                1642256756.612298,
+                1642256756.612298
+              ],
+              "later_export_range": [
+                1642268636.548505,
+                1642268636.548505
+              ],
+              "overlapping_candidate_flow_count": 0
+            }
+          }
+        },
+        {
+          "kind": "normal_owncloud_file_download",
+          "actor_count": 2,
+          "consecutive_nonoverlapping_action_pairs": 40,
+          "counts": {
+            "all_candidates_preserve_actor_before": 30,
+            "candidate_dependent_or_tied": 10
+          },
+          "examples": {
+            "all_candidates_preserve_actor_before": {
+              "actor": "internal_employee_0",
+              "earlier_action": "ait:fox:normal:internal_employee_0:b036a99a-9abf-457a-a0d1-d144ed65351d",
+              "later_action": "ait:fox:normal:internal_employee_0:bfb5a521-517d-4311-ac11-9cf0e2e91845",
+              "earlier_export_range": [
+                1642257440.041061,
+                1642257759.29737
+              ],
+              "later_export_range": [
+                1642258699.45878,
+                1642258868.29838
+              ],
+              "overlapping_candidate_flow_count": 0
+            },
+            "candidate_dependent_or_tied": {
+              "actor": "internal_employee_0",
+              "earlier_action": "ait:fox:normal:internal_employee_0:bfb5a521-517d-4311-ac11-9cf0e2e91845",
+              "later_action": "ait:fox:normal:internal_employee_0:db232798-6b39-42a9-b33a-d370981878f5",
+              "earlier_export_range": [
+                1642258699.45878,
+                1642258868.29838
+              ],
+              "later_export_range": [
+                1642258757.617388,
+                1642259066.37213
+              ],
+              "overlapping_candidate_flow_count": 6
+            }
+          }
+        }
+      ],
+      "attack_downloads": [
+        {
+          "event_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+          "actor_start": 1642509509.5459087,
+          "actor_end": 1642509542.0663235,
+          "candidates": [
+            {
+              "flow_id": "ait:fox:intranet_server:CyyYte1hKA3vEfNQt4",
+              "available_at": 1642509516.557283,
+              "label": null,
+              "resp_port": 443,
+              "peer": "140.82.121.3",
+              "previous_class": "confirmed_attack_chain_flow",
+              "prefix_count": 11488,
+              "prefix_categories": {
+                "confirmed_attack_chain_flow": 12,
+                "possible_attack_chain_candidate": 2,
+                "qualified_normal_flow": 52,
+                "possible_normal_business_candidate": 106,
+                "unknown_flow": 11316
+              },
+              "wget_predecessor_available": false
+            },
+            {
+              "flow_id": "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+              "available_at": 1642509547.051293,
+              "label": null,
+              "resp_port": 443,
+              "peer": "140.82.121.10",
+              "previous_class": "unknown_flow",
+              "prefix_count": 11494,
+              "prefix_categories": {
+                "confirmed_attack_chain_flow": 12,
+                "possible_attack_chain_candidate": 3,
+                "qualified_normal_flow": 52,
+                "possible_normal_business_candidate": 106,
+                "unknown_flow": 11321
+              },
+              "wget_predecessor_available": false
+            }
+          ]
+        },
+        {
+          "event_id": "ait:fox:wpdiscuz_complete_chain:download:password_list",
+          "actor_start": 1642509546.6098053,
+          "actor_end": 1642509549.3542569,
+          "candidates": [
+            {
+              "flow_id": "ait:fox:intranet_server:Cjaku94eD7bn5eoPj2",
+              "available_at": 1642509565.060342,
+              "label": 1,
+              "resp_port": 80,
+              "peer": "192.168.130.77",
+              "previous_class": "confirmed_attack_chain_flow",
+              "prefix_count": 11497,
+              "prefix_categories": {
+                "confirmed_attack_chain_flow": 14,
+                "possible_attack_chain_candidate": 4,
+                "qualified_normal_flow": 52,
+                "possible_normal_business_candidate": 106,
+                "unknown_flow": 11321
+              },
+              "wget_predecessor_available": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dataset_inputs": {
+    "background_by_host": {
+      "ait:santos:intranet_server": 6072,
+      "ait:santos:cloud_share": 16146,
+      "ait:fox:intranet_server": 13278,
+      "ait:fox:cloud_share": 32358
+    },
+    "clock": "available_at: fixed Zeek offline export network_time, not detector receipt",
+    "join": "context_inputs.measurement_flow_id == batch.rows.flow_id; role from frozen batch",
+    "same_time_rule": "all queries read strict prefix before the complete equal-time batch is inserted"
+  }
+}

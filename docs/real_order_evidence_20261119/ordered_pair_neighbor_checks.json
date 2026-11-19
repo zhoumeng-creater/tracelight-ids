@@ -1,0 +1,86 @@
+{
+  "scope": "algebra_and_synthetic_only; module reusable for real prefixes",
+  "real_model_calls": 0,
+  "full_state_and_all_readout_equivalence_max_absolute_error": 2.220446049250313e-16,
+  "equivalence_batches": 40,
+  "state_scalar_count": 169,
+  "r13_float32_payload_plus_float64_clock": 684,
+  "both_readout_dimensions": [
+    9,
+    9
+  ],
+  "query_compression_collision": {
+    "left_tokens": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "right_tokens": [
+      1,
+      0,
+      0,
+      2,
+      2,
+      1
+    ],
+    "g": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "left_A_upper": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "right_A_upper": [
+      0.0,
+      4.0,
+      0.0
+    ],
+    "same_all_candidate_inputs": true,
+    "candidate_readout": [
+      0.3333333333333333,
+      0.0,
+      -0.3333333333333333,
+      1.2992829841302609,
+      1.2992829841302609,
+      1.2992829841302609,
+      1.0986122886681098,
+      1.0986122886681098,
+      1.0986122886681098
+    ]
+  },
+  "normalization_order_example": {
+    "pair_first_direction": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pool_first_direction": [
+      -0.9801980198019802,
+      0.0,
+      0.0
+    ],
+    "pool_first_mass_matched_direction": [
+      -0.9801980198019802,
+      0.0,
+      0.0
+    ],
+    "supported_query_mass": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "shared_support": [
+      50.5,
+      0.0,
+      0.0
+    ],
+    "physical_sequence_claim": false
+  },
+  "not_a_detection_result": true
+}
