@@ -1,0 +1,645 @@
+{
+  "scope": [
+    "AIT santos intranet_server",
+    "AIT santos cloud_share",
+    "AIT fox intranet_server",
+    "AIT fox cloud_share",
+    "Unraveled 10.1.3.8 TCP"
+  ],
+  "read_reserved_C_or_meterpreter": false,
+  "read_payload_content": false,
+  "model_fit_or_scoring": false,
+  "additional_downloads": false,
+  "headers": 4961557,
+  "sources": [
+    {
+      "source_name": "ait_santos_intranet_server",
+      "role": "F_base",
+      "source_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642084650",
+      "source_bytes": 378520676,
+      "source_sha256": "e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4",
+      "source_sha256_authority": "拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\normalization\\normalization_receipt.json",
+      "source_size_rechecked": true,
+      "whole_source_sha256_recomputed_in_this_step": false,
+      "original_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642084650",
+      "original_sha256": "e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4",
+      "header_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_santos_intranet_server.jsonl.gz",
+      "header_sha256": "8ea405ef9f4e18982f68e5348a61d10a5b77c0a9df46a42b0e1bd38489128e8f",
+      "header_bytes": 20391863,
+      "connection_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_santos_intranet_server.connections.jsonl.gz",
+      "connection_file_sha256": "38dd743f3083cd5946d556ba641516d07c4a5fc68a676411a74ad5eec093fa1a",
+      "source_connections": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\connections.jsonl.gz",
+      "packet_membership_ledger": null,
+      "source_connection_count": 14538,
+      "mapped_connection_count": 5518,
+      "scope": "all IPv4 TCP records",
+      "counts": {
+        "pcap_snaplen": 262144,
+        "all_complete_records": 599875,
+        "adjacent_timestamp_reversals_all": 0,
+        "caplen_less_than_orig_len_all": 0,
+        "extracted_tcp_headers": 550828,
+        "tcp_declared_length_exceeds_capture": 42871,
+        "tcp_ip_total_gt_1500": 42861,
+        "tcp_ip_total_gt_9000": 5287,
+        "tcp_fragmented_first": 0,
+        "tcp_invalid_ipv4_checksum": 0,
+        "packets_without_connection_candidate": 0,
+        "packets_with_multiple_connection_candidates": 8,
+        "packets_with_observed_candidates": 549170,
+        "packets_with_observed_multiple_candidates": 0,
+        "packets_with_lifecycle_only_candidates": 1658,
+        "non_ipv4_records": 38535,
+        "non_tcp_ipv4_records": 10512
+      },
+      "seconds": 25.812,
+      "payload_content_read": false,
+      "training_or_scoring": false,
+      "association_check": {
+        "source": "ait_santos_intranet_server",
+        "lifecycle_only": {
+          "records": 1658,
+          "zero_declared_payload": 1658,
+          "positive_declared_payload": 0,
+          "ack_flag": 1066,
+          "fin_flag": 0,
+          "rst_flag": 592,
+          "syn_flag": 0,
+          "pure_ack_flags_zero_payload": 1066
+        },
+        "clock": {
+          "candidate_associations_after_export_any": 0,
+          "candidate_associations_after_export_over_10us": 0,
+          "candidate_associations_before_start_any": 0
+        },
+        "max_candidate_us_after_export": 0,
+        "max_candidate_us_after_observed_end": 16128311,
+        "mapped_flows": 5518,
+        "ambiguous_membership_flows": 13,
+        "packet_count_comparison": {
+          "mapped_flows_with_zeek_packet_counts": 5518,
+          "all_candidate_packet_counts_equal_zeek_both_directions": 5510,
+          "singleton_packet_counts_equal_zeek_both_directions": 5510,
+          "observed_interval_packet_counts_equal_zeek_both_directions": 4202,
+          "all_candidate_ip_byte_counts_equal_zeek_both_directions": 5510,
+          "zeek_packets_both_directions_sum": 550828,
+          "all_candidate_packets_both_directions_sum": 550836,
+          "singleton_packets_both_directions_sum": 550820,
+          "observed_interval_packets_both_directions_sum": 549170,
+          "packet_difference_has_ambiguous_membership": 8,
+          "packet_difference_all_candidate_ge_zeek_both_directions": 8
+        }
+      }
+    },
+    {
+      "source_name": "ait_santos_cloud_share",
+      "role": "F_base",
+      "source_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642084654",
+      "source_bytes": 856436887,
+      "source_sha256": "3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520",
+      "source_sha256_authority": "拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\normalization\\normalization_receipt.json",
+      "source_size_rechecked": true,
+      "whole_source_sha256_recomputed_in_this_step": false,
+      "original_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642084654",
+      "original_sha256": "3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520",
+      "header_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_santos_cloud_share.jsonl.gz",
+      "header_sha256": "bc24974877b7f1d7a714f0f1b41cb46297ea7d3445cf10076738f7f3e049a3cc",
+      "header_bytes": 38349871,
+      "connection_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_santos_cloud_share.connections.jsonl.gz",
+      "connection_file_sha256": "6a8fa0c4bdc443badba1fd9407f4412355869397181e6d504dae87b7d63b555e",
+      "source_connections": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\connections.jsonl.gz",
+      "packet_membership_ledger": null,
+      "source_connection_count": 17562,
+      "mapped_connection_count": 15725,
+      "scope": "all IPv4 TCP records",
+      "counts": {
+        "pcap_snaplen": 262144,
+        "all_complete_records": 1066804,
+        "adjacent_timestamp_reversals_all": 0,
+        "caplen_less_than_orig_len_all": 0,
+        "non_ipv4_records": 59276,
+        "extracted_tcp_headers": 1006750,
+        "tcp_declared_length_exceeds_capture": 22522,
+        "tcp_ip_total_gt_1500": 22515,
+        "tcp_ip_total_gt_9000": 39,
+        "tcp_fragmented_first": 0,
+        "tcp_invalid_ipv4_checksum": 0,
+        "packets_without_connection_candidate": 0,
+        "packets_with_multiple_connection_candidates": 68,
+        "packets_with_observed_candidates": 996744,
+        "packets_with_observed_multiple_candidates": 0,
+        "packets_with_lifecycle_only_candidates": 10006,
+        "non_tcp_ipv4_records": 778
+      },
+      "seconds": 52.89,
+      "payload_content_read": false,
+      "training_or_scoring": false,
+      "association_check": {
+        "source": "ait_santos_cloud_share",
+        "lifecycle_only": {
+          "records": 10006,
+          "zero_declared_payload": 10006,
+          "positive_declared_payload": 0,
+          "ack_flag": 5145,
+          "fin_flag": 0,
+          "rst_flag": 4861,
+          "syn_flag": 0,
+          "pure_ack_flags_zero_payload": 5145
+        },
+        "clock": {
+          "candidate_associations_after_export_any": 0,
+          "candidate_associations_after_export_over_10us": 0,
+          "candidate_associations_before_start_any": 0
+        },
+        "max_candidate_us_after_export": 0,
+        "max_candidate_us_after_observed_end": 506207799,
+        "mapped_flows": 15725,
+        "ambiguous_membership_flows": 132,
+        "packet_count_comparison": {
+          "mapped_flows_with_zeek_packet_counts": 15725,
+          "all_candidate_packet_counts_equal_zeek_both_directions": 15657,
+          "singleton_packet_counts_equal_zeek_both_directions": 15657,
+          "observed_interval_packet_counts_equal_zeek_both_directions": 5759,
+          "all_candidate_ip_byte_counts_equal_zeek_both_directions": 15657,
+          "zeek_packets_both_directions_sum": 1006750,
+          "all_candidate_packets_both_directions_sum": 1006818,
+          "singleton_packets_both_directions_sum": 1006682,
+          "observed_interval_packets_both_directions_sum": 996744,
+          "packet_difference_has_ambiguous_membership": 68,
+          "packet_difference_all_candidate_ge_zeek_both_directions": 68
+        }
+      }
+    },
+    {
+      "source_name": "ait_fox_intranet_server",
+      "role": "V",
+      "source_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642159255",
+      "source_bytes": 830715983,
+      "source_sha256": "9d24476c1a97c89995198d61bf4c720382bab0be3ea97e207041e25276c6d5a1",
+      "source_sha256_authority": "拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\normalization\\normalization_receipt.json",
+      "source_size_rechecked": true,
+      "whole_source_sha256_recomputed_in_this_step": false,
+      "original_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642159255",
+      "original_sha256": "9d24476c1a97c89995198d61bf4c720382bab0be3ea97e207041e25276c6d5a1",
+      "header_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_fox_intranet_server.jsonl.gz",
+      "header_sha256": "f9574aaf21757803b9cc7400751a99f0067326a175a099081182cae9ce1de6df",
+      "header_bytes": 65529200,
+      "connection_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_fox_intranet_server.connections.jsonl.gz",
+      "connection_file_sha256": "83491cbb77adfe4d64c18e57ba8ecda33f2d6c18074365eccf350caf523438d7",
+      "source_connections": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\connections.jsonl.gz",
+      "packet_membership_ledger": null,
+      "source_connection_count": 21514,
+      "mapped_connection_count": 12468,
+      "scope": "all IPv4 TCP records",
+      "counts": {
+        "pcap_snaplen": 262144,
+        "all_complete_records": 1716027,
+        "adjacent_timestamp_reversals_all": 0,
+        "caplen_less_than_orig_len_all": 0,
+        "extracted_tcp_headers": 1633622,
+        "tcp_declared_length_exceeds_capture": 56545,
+        "tcp_ip_total_gt_1500": 56529,
+        "tcp_ip_total_gt_9000": 6877,
+        "tcp_fragmented_first": 0,
+        "tcp_invalid_ipv4_checksum": 0,
+        "packets_without_connection_candidate": 0,
+        "packets_with_multiple_connection_candidates": 1,
+        "packets_with_observed_candidates": 1631382,
+        "packets_with_observed_multiple_candidates": 0,
+        "packets_with_lifecycle_only_candidates": 2240,
+        "non_ipv4_records": 70067,
+        "non_tcp_ipv4_records": 12338
+      },
+      "seconds": 74.782,
+      "payload_content_read": false,
+      "training_or_scoring": false,
+      "association_check": {
+        "source": "ait_fox_intranet_server",
+        "lifecycle_only": {
+          "records": 2240,
+          "zero_declared_payload": 2239,
+          "positive_declared_payload": 1,
+          "ack_flag": 1495,
+          "fin_flag": 1,
+          "rst_flag": 745,
+          "syn_flag": 0,
+          "pure_ack_flags_zero_payload": 1494
+        },
+        "clock": {
+          "candidate_associations_after_export_any": 0,
+          "candidate_associations_after_export_over_10us": 0,
+          "candidate_associations_before_start_any": 0
+        },
+        "max_candidate_us_after_export": 0,
+        "max_candidate_us_after_observed_end": 8192012,
+        "mapped_flows": 12468,
+        "ambiguous_membership_flows": 2,
+        "packet_count_comparison": {
+          "mapped_flows_with_zeek_packet_counts": 12468,
+          "all_candidate_packet_counts_equal_zeek_both_directions": 12467,
+          "singleton_packet_counts_equal_zeek_both_directions": 12467,
+          "observed_interval_packet_counts_equal_zeek_both_directions": 10722,
+          "all_candidate_ip_byte_counts_equal_zeek_both_directions": 12467,
+          "zeek_packets_both_directions_sum": 1633622,
+          "all_candidate_packets_both_directions_sum": 1633623,
+          "singleton_packets_both_directions_sum": 1633621,
+          "observed_interval_packets_both_directions_sum": 1631382,
+          "packet_difference_has_ambiguous_membership": 1,
+          "packet_difference_all_candidate_ge_zeek_both_directions": 1
+        }
+      }
+    },
+    {
+      "source_name": "ait_fox_cloud_share",
+      "role": "V",
+      "source_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642159278",
+      "source_bytes": 934571191,
+      "source_sha256": "2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af",
+      "source_sha256_authority": "拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\normalization\\normalization_receipt.json",
+      "source_size_rechecked": true,
+      "whole_source_sha256_recomputed_in_this_step": false,
+      "original_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642159278",
+      "original_sha256": "2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af",
+      "header_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_fox_cloud_share.jsonl.gz",
+      "header_sha256": "d1d4cad74b028bbc3863a967e97518f4aa9a23599f3874e8692ad5fafba405e3",
+      "header_bytes": 48032954,
+      "connection_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\ait_fox_cloud_share.connections.jsonl.gz",
+      "connection_file_sha256": "6a3f666fb22636d01bcd54c2ee410007e164db5dcd3221b26c47b24c6de1c1b1",
+      "source_connections": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\connections.jsonl.gz",
+      "packet_membership_ledger": null,
+      "source_connection_count": 33973,
+      "mapped_connection_count": 31683,
+      "scope": "all IPv4 TCP records",
+      "counts": {
+        "pcap_snaplen": 262144,
+        "all_complete_records": 1356225,
+        "adjacent_timestamp_reversals_all": 0,
+        "caplen_less_than_orig_len_all": 0,
+        "extracted_tcp_headers": 1241603,
+        "tcp_declared_length_exceeds_capture": 34560,
+        "tcp_ip_total_gt_1500": 34547,
+        "tcp_ip_total_gt_9000": 28,
+        "tcp_fragmented_first": 0,
+        "tcp_invalid_ipv4_checksum": 0,
+        "packets_without_connection_candidate": 0,
+        "packets_with_multiple_connection_candidates": 55,
+        "packets_with_observed_candidates": 1215759,
+        "packets_with_observed_multiple_candidates": 0,
+        "packets_with_lifecycle_only_candidates": 25844,
+        "non_ipv4_records": 113361,
+        "non_tcp_ipv4_records": 1261
+      },
+      "seconds": 64.906,
+      "payload_content_read": false,
+      "training_or_scoring": false,
+      "association_check": {
+        "source": "ait_fox_cloud_share",
+        "lifecycle_only": {
+          "records": 25844,
+          "zero_declared_payload": 25844,
+          "positive_declared_payload": 0,
+          "ack_flag": 17589,
+          "fin_flag": 5,
+          "rst_flag": 8255,
+          "syn_flag": 0,
+          "pure_ack_flags_zero_payload": 17584
+        },
+        "clock": {
+          "candidate_associations_after_export_any": 0,
+          "candidate_associations_after_export_over_10us": 0,
+          "candidate_associations_before_start_any": 0
+        },
+        "max_candidate_us_after_export": 0,
+        "max_candidate_us_after_observed_end": 504239799,
+        "mapped_flows": 31683,
+        "ambiguous_membership_flows": 107,
+        "packet_count_comparison": {
+          "mapped_flows_with_zeek_packet_counts": 31683,
+          "all_candidate_packet_counts_equal_zeek_both_directions": 31628,
+          "singleton_packet_counts_equal_zeek_both_directions": 31628,
+          "observed_interval_packet_counts_equal_zeek_both_directions": 6013,
+          "all_candidate_ip_byte_counts_equal_zeek_both_directions": 31628,
+          "zeek_packets_both_directions_sum": 1241603,
+          "all_candidate_packets_both_directions_sum": 1241658,
+          "singleton_packets_both_directions_sum": 1241548,
+          "observed_interval_packets_both_directions_sum": 1215759,
+          "packet_difference_has_ambiguous_membership": 55,
+          "packet_difference_all_candidate_ge_zeek_both_directions": 55
+        }
+      }
+    },
+    {
+      "source_name": "unraveled_target",
+      "role": "opened_source_development",
+      "source_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\full_capture\\net1013x.complete_records.pcap",
+      "source_bytes": 3518820278,
+      "source_sha256": "2111f2b2ef43d6364d90731c4f55fc5c25cf899e994f3d3aefe9eadf39851ec3",
+      "source_sha256_authority": "覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\extraction_receipt.json",
+      "source_size_rechecked": true,
+      "whole_source_sha256_recomputed_in_this_step": false,
+      "original_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\source\\unraveled\\full_capture\\net1013x.pcap",
+      "original_sha256": "6da54d26f3396e78c067ce8c66dfee5ba47c48c331394d0f3e2f782cd2a15813",
+      "header_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\unraveled_target.jsonl.gz",
+      "header_sha256": "3c028dee82f5d13899fd1739080895828693ce4dd16b616f536da04efc8ddc77",
+      "header_bytes": 21885098,
+      "connection_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\headers\\unraveled_target.connections.jsonl.gz",
+      "connection_file_sha256": "aba81a8c62764e9d9679941277797ba7021a03ccf481a773b6faab4a71a83a26",
+      "source_connections": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\base_connections.jsonl.gz",
+      "packet_membership_ledger": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\覆盖与历史依据落实_20261119\\attack_coverage\\full_capture\\packet_membership.jsonl.gz",
+      "source_connection_count": 47032,
+      "mapped_connection_count": 7291,
+      "scope": "all IPv4 TCP records involving 10.1.3.8",
+      "counts": {
+        "pcap_snaplen": 65535,
+        "all_complete_records": 2592965,
+        "adjacent_timestamp_reversals_all": 1467,
+        "caplen_less_than_orig_len_all": 0,
+        "tcp_outside_declared_host": 1626236,
+        "extracted_tcp_headers": 528754,
+        "tcp_declared_length_exceeds_capture": 0,
+        "tcp_ip_total_gt_1500": 75146,
+        "tcp_ip_total_gt_9000": 24248,
+        "tcp_fragmented_first": 0,
+        "tcp_invalid_ipv4_checksum": 0,
+        "packets_without_connection_candidate": 0,
+        "packets_with_multiple_connection_candidates": 52,
+        "packets_with_observed_candidates": 519858,
+        "packets_with_observed_multiple_candidates": 0,
+        "packets_with_lifecycle_only_candidates": 8896,
+        "non_ipv4_records": 24849,
+        "non_tcp_ipv4_records": 413126
+      },
+      "seconds": 56.281,
+      "payload_content_read": false,
+      "training_or_scoring": false,
+      "association_check": {
+        "source": "unraveled_target",
+        "lifecycle_only": {
+          "records": 8896,
+          "zero_declared_payload": 8890,
+          "positive_declared_payload": 6,
+          "ack_flag": 6172,
+          "fin_flag": 8,
+          "rst_flag": 2724,
+          "syn_flag": 0,
+          "pure_ack_flags_zero_payload": 6162
+        },
+        "clock": {
+          "candidate_associations_after_export_any": 0,
+          "candidate_associations_after_export_over_10us": 0,
+          "candidate_associations_before_start_any": 0
+        },
+        "max_candidate_us_after_export": 0,
+        "max_candidate_us_after_observed_end": 300002080,
+        "mapped_flows": 7291,
+        "ambiguous_membership_flows": 66,
+        "packet_count_comparison": {
+          "mapped_flows_with_zeek_packet_counts": 7291,
+          "all_candidate_packet_counts_equal_zeek_both_directions": 7239,
+          "singleton_packet_counts_equal_zeek_both_directions": 7239,
+          "observed_interval_packet_counts_equal_zeek_both_directions": 1014,
+          "all_candidate_ip_byte_counts_equal_zeek_both_directions": 7239,
+          "zeek_packets_both_directions_sum": 528754,
+          "all_candidate_packets_both_directions_sum": 528806,
+          "singleton_packets_both_directions_sum": 528702,
+          "observed_interval_packets_both_directions_sum": 519858,
+          "packet_difference_has_ambiguous_membership": 52,
+          "packet_difference_all_candidate_ge_zeek_both_directions": 52
+        }
+      }
+    }
+  ],
+  "comparability": {
+    "santos": {
+      "attack_control_flows": 30,
+      "normal_flows": 125,
+      "normal_before_first_control": 107,
+      "normal_during_control_interval": 0,
+      "normal_after_last_control": 18,
+      "control_peer_addresses": [
+        "172.21.128.119"
+      ],
+      "normal_peer_addresses": [
+        "192.168.104.198",
+        "192.168.104.81"
+      ],
+      "business_events": [
+        {
+          "kind": "attack_download",
+          "event_count": 2,
+          "unique_candidate_flows": 3,
+          "flow_labels": {
+            "None": 2,
+            "1": 1
+          },
+          "single_candidate_events": 1,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            80,
+            443
+          ]
+        },
+        {
+          "kind": "normal_intranet_page_retrieval",
+          "event_count": 53,
+          "unique_candidate_flows": 137,
+          "flow_labels": {
+            "0": 125,
+            "None": 12
+          },
+          "single_candidate_events": 35,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "normal_owncloud_file_download",
+          "event_count": 44,
+          "unique_candidate_flows": 375,
+          "flow_labels": {
+            "0": 314,
+            "None": 61
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 52,
+          "hosts": [
+            "ait:santos:cloud_share"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "reverse_shell_channel",
+          "event_count": 1,
+          "unique_candidate_flows": 2,
+          "flow_labels": {
+            "1": 1,
+            "None": 1
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            16486
+          ]
+        },
+        {
+          "kind": "webshell_command",
+          "event_count": 33,
+          "unique_candidate_flows": 45,
+          "flow_labels": {
+            "None": 15,
+            "1": 30
+          },
+          "single_candidate_events": 30,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:santos:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        }
+      ]
+    },
+    "fox": {
+      "attack_control_flows": 15,
+      "normal_flows": 73,
+      "normal_before_first_control": 52,
+      "normal_during_control_interval": 0,
+      "normal_after_last_control": 21,
+      "control_peer_addresses": [
+        "172.17.130.196"
+      ],
+      "normal_peer_addresses": [
+        "10.35.32.164",
+        "10.35.33.144"
+      ],
+      "business_events": [
+        {
+          "kind": "attack_download",
+          "event_count": 2,
+          "unique_candidate_flows": 3,
+          "flow_labels": {
+            "1": 1,
+            "None": 2
+          },
+          "single_candidate_events": 1,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            80,
+            443
+          ]
+        },
+        {
+          "kind": "normal_intranet_page_retrieval",
+          "event_count": 58,
+          "unique_candidate_flows": 228,
+          "flow_labels": {
+            "None": 155,
+            "0": 73
+          },
+          "single_candidate_events": 24,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "normal_owncloud_file_download",
+          "event_count": 42,
+          "unique_candidate_flows": 406,
+          "flow_labels": {
+            "0": 357,
+            "None": 49
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 40,
+          "hosts": [
+            "ait:fox:cloud_share"
+          ],
+          "resp_ports": [
+            443
+          ]
+        },
+        {
+          "kind": "reverse_shell_channel",
+          "event_count": 1,
+          "unique_candidate_flows": 2,
+          "flow_labels": {
+            "1": 1,
+            "None": 1
+          },
+          "single_candidate_events": 0,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            51898
+          ]
+        },
+        {
+          "kind": "webshell_command",
+          "event_count": 18,
+          "unique_candidate_flows": 21,
+          "flow_labels": {
+            "None": 6,
+            "1": 15
+          },
+          "single_candidate_events": 15,
+          "possible_parent_flows_linked_to_multiple_actions": 0,
+          "hosts": [
+            "ait:fox:intranet_server"
+          ],
+          "resp_ports": [
+            443
+          ]
+        }
+      ]
+    },
+    "unraveled": {
+      "host": "10.1.3.8",
+      "normal_tcp443": 5081,
+      "c2_tcp443": 473,
+      "normal_tcp443_during_c2_export_span": 769,
+      "c2_export_span": [
+        1624318642.541058,
+        1624346942.143561
+      ],
+      "c2_peer_addresses": [
+        "10.8.10.84"
+      ],
+      "shared_normal_c2_peers": [],
+      "partial_capture_c2": 1,
+      "independent_campaigns": 1
+    }
+  },
+  "association_details": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\连接内部交互研究_20261119\\source_association_check.json",
+  "scripts": [
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\packet-interaction-20261119\\scripts\\packet_evidence\\extract_headers.py",
+      "sha256": "8a0eb802edf473aa7247ca211baddfc891dfd5eb563e4a31bd34af85332b2c14"
+    },
+    {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\packet-interaction-20261119\\scripts\\packet_evidence\\source_association_check.py",
+      "sha256": "93bd481ed38ad85e8ae1618cef0342207d9015195751169ccc790d05e2929a02"
+    }
+  ]
+}

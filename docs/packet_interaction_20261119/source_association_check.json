@@ -1,0 +1,4603 @@
+[
+  {
+    "source": "ait_fox_cloud_share",
+    "lifecycle_only": {
+      "records": 25844,
+      "zero_declared_payload": 25844,
+      "positive_declared_payload": 0,
+      "ack_flag": 17589,
+      "fin_flag": 5,
+      "rst_flag": 8255,
+      "syn_flag": 0,
+      "pure_ack_flags_zero_payload": 17584
+    },
+    "clock": {
+      "candidate_associations_after_export_any": 0,
+      "candidate_associations_after_export_over_10us": 0,
+      "candidate_associations_before_start_any": 0
+    },
+    "max_candidate_us_after_export": 0,
+    "max_candidate_us_after_observed_end": 504239799,
+    "mapped_flows": 31683,
+    "ambiguous_membership_flows": 107,
+    "packet_count_comparison": {
+      "mapped_flows_with_zeek_packet_counts": 31683,
+      "all_candidate_packet_counts_equal_zeek_both_directions": 31628,
+      "singleton_packet_counts_equal_zeek_both_directions": 31628,
+      "observed_interval_packet_counts_equal_zeek_both_directions": 6013,
+      "all_candidate_ip_byte_counts_equal_zeek_both_directions": 31628,
+      "zeek_packets_both_directions_sum": 1241603,
+      "all_candidate_packets_both_directions_sum": 1241658,
+      "singleton_packets_both_directions_sum": 1241548,
+      "observed_interval_packets_both_directions_sum": 1215759,
+      "packet_difference_has_ambiguous_membership": 55,
+      "packet_difference_all_candidate_ge_zeek_both_directions": 55
+    },
+    "all_candidate_packet_count_differences": [
+      {
+        "connection_index": 46,
+        "flow_id": "ait:fox:cloud_share:CQe37I1Pv3BxZaOwCk",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:f1ace7d557ae2e2e4ffefda1ad9e5116ff1d2a79b9efabb826a7ba7c6def5c22",
+        "all_candidate": [
+          339,
+          749
+        ],
+        "singleton": [
+          338,
+          749
+        ],
+        "observed": [
+          338,
+          749
+        ],
+        "zeek": [
+          338,
+          749
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 344,
+        "flow_id": "ait:fox:cloud_share:ChQFevSh7J7cY3b8h",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:ac0c8510e0a78e4071a92d48f959db8bc7e42bdcaa76facb03b217bec024cf0d",
+        "all_candidate": [
+          14,
+          13
+        ],
+        "singleton": [
+          13,
+          13
+        ],
+        "observed": [
+          13,
+          13
+        ],
+        "zeek": [
+          13,
+          13
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 1105,
+        "flow_id": "ait:fox:cloud_share:CB4sMi4NBMfhxaZhad",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:12935636e304745e43faab16ced25a92affdd63399a90a0e8514c70007b1ea7d",
+        "all_candidate": [
+          14,
+          12
+        ],
+        "singleton": [
+          13,
+          12
+        ],
+        "observed": [
+          13,
+          12
+        ],
+        "zeek": [
+          13,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 1156,
+        "flow_id": "ait:fox:cloud_share:C8rCTc3f3hOasmKGQb",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:c80d7035cf45791d0cb29c8a8445190050227e795351db65393c1519945552c7",
+        "all_candidate": [
+          155,
+          260
+        ],
+        "singleton": [
+          154,
+          260
+        ],
+        "observed": [
+          154,
+          260
+        ],
+        "zeek": [
+          154,
+          260
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 1165,
+        "flow_id": "ait:fox:cloud_share:CN5RLaUrSIpqajkQg",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:8fd46c0baa86538114feda34bea88da3c03d115814b72eb81ca7ffd7439ce6e0",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 1560,
+        "flow_id": "ait:fox:cloud_share:CGGUSw2BOJvwqMeaWh",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:0bd1d58b9e8526075f0d2191529164c4ba7d5bac85beea49013db49fbb35bc1a",
+        "all_candidate": [
+          17,
+          17
+        ],
+        "singleton": [
+          16,
+          17
+        ],
+        "observed": [
+          16,
+          17
+        ],
+        "zeek": [
+          16,
+          17
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 1593,
+        "flow_id": "ait:fox:cloud_share:CpprKQ3fAWTtD1N5C4",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:d3b66e2fbd08821c96b36db2c39550b18c72e1ac4fd12c5086a45c5f290c28ec",
+        "all_candidate": [
+          22,
+          41
+        ],
+        "singleton": [
+          21,
+          41
+        ],
+        "observed": [
+          21,
+          41
+        ],
+        "zeek": [
+          21,
+          41
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 2481,
+        "flow_id": "ait:fox:cloud_share:CfmUQb0snE0KAQJh9",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:c30fd7c24196ea664b754c078ab4f1d82b13d57609b03e4e9e5d8b33ae8f5b19",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3823,
+        "flow_id": "ait:fox:cloud_share:CYLWnw3MLIyGyTy9te",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:8ba910e165672291f678553547aaefdfcd5e3e9504408ab44701c7eafe2d0fbb",
+        "all_candidate": [
+          97,
+          153
+        ],
+        "singleton": [
+          96,
+          153
+        ],
+        "observed": [
+          96,
+          153
+        ],
+        "zeek": [
+          96,
+          153
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3848,
+        "flow_id": "ait:fox:cloud_share:C2mpn81uw48ejSooF9",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:f217d0c6a49b95eba0431108921fd5b3decb023b7524296607378ad0007ce806",
+        "all_candidate": [
+          55,
+          66
+        ],
+        "singleton": [
+          54,
+          66
+        ],
+        "observed": [
+          54,
+          66
+        ],
+        "zeek": [
+          54,
+          66
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3902,
+        "flow_id": "ait:fox:cloud_share:CAdNKF38Y7ukiA7Kbg",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:6d2498be04d0366d943e5dcebc341c6d76f9f4a6f0d094a2f771d3657e685989",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3906,
+        "flow_id": "ait:fox:cloud_share:COjYfm18nxwrVzJMlf",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:f0a6c422752eaa0d8b4ca85e5a2b233c1a8a1bfdab3814b29a2f66372e7865f7",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3920,
+        "flow_id": "ait:fox:cloud_share:C3F3Nt2KYk6K5QoNff",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:5bb0e0f75a9f5d7248b032f16aba72b003109a228cceb8255f54c8b6b9162a42",
+        "all_candidate": [
+          13,
+          11
+        ],
+        "singleton": [
+          12,
+          11
+        ],
+        "observed": [
+          12,
+          11
+        ],
+        "zeek": [
+          12,
+          11
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 4078,
+        "flow_id": "ait:fox:cloud_share:CNNxij1WlMudWqyUOe",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:5b7093176ca36de3392b1019957bf22176329236d7d58505ba3bcc2629c75ad6",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 5287,
+        "flow_id": "ait:fox:cloud_share:C6164032HZYnjWQMZg",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:6ac36d8261760c92799802e527e336f33305b2f1fa51bfba7cc9d1dbc924d7bb",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 5659,
+        "flow_id": "ait:fox:cloud_share:CfPXMt2ypahGdb18a4",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:497f4f1e78e7bb91793a07df65d7182374b11d9a8e790cc3f9fa63beb1c606a4",
+        "all_candidate": [
+          118,
+          156
+        ],
+        "singleton": [
+          117,
+          156
+        ],
+        "observed": [
+          117,
+          156
+        ],
+        "zeek": [
+          117,
+          156
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 5914,
+        "flow_id": "ait:fox:cloud_share:CqPJdT1l9vrCB3H9nj",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:91aa35e4ed121dd9d0bd0dfed2fd3895950bf106935840e605dc2d7154c722a0",
+        "all_candidate": [
+          4,
+          0
+        ],
+        "singleton": [
+          3,
+          0
+        ],
+        "observed": [
+          3,
+          0
+        ],
+        "zeek": [
+          3,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 5915,
+        "flow_id": "ait:fox:cloud_share:CV7PxrGMLHMcTWqJ4",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:5646f10df556ad7dd81575413244edad9aa601e8c897c7dd6d3d2c9880a4c3ba",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 6560,
+        "flow_id": "ait:fox:cloud_share:CWG8Kn1wjKhp08aQLe",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:cb17125440d2e13739fd86ed731b4f3b98594945092bc666f3304382744f1515",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 7565,
+        "flow_id": "ait:fox:cloud_share:CQehlA1XcNdTFue9jh",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:2fb1d800c547bcbc36f11d7b6f64bfd4047614ada1d63be69affebadc6b525f3",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 7585,
+        "flow_id": "ait:fox:cloud_share:CFzCws2nQinbOhT3e8",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:07d4b939807c639b541ccfefce8a872c237de9ffbdd49554ec900235a741bfc3",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 7839,
+        "flow_id": "ait:fox:cloud_share:CswNxLyIhIfasmxBb",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:9164d81cb73e62a7f8b47bbcc641f3668c2aeda1623f46ec677c45cddaf3557a",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 8417,
+        "flow_id": "ait:fox:cloud_share:CTwudq44GGbBHQ6FBl",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:771e862293adb1a107aad6dd43f841c9dbc1fffc286a043683e66abb1ddc63b6",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9994,
+        "flow_id": "ait:fox:cloud_share:CO939O1LdA49wDyYWh",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:249d537705fb85165db5e5e2d0f94392625c4600aad21a2c664d75380005daf9",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 11700,
+        "flow_id": "ait:fox:cloud_share:Cq8LNBv605gweLwK6",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:09cb0bfb9aac3bbe62a13562c1ac2d20fac5771f651ed1fb8b298b5155a93409",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 13240,
+        "flow_id": "ait:fox:cloud_share:Ca8iXGDDCvXmnyx28",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:89b7fba1b0171004f96bb8598ba800ce4c9b81fb10ed0610e8f119218650bba0",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 14128,
+        "flow_id": "ait:fox:cloud_share:CuQj161P7Hc4IbsaF3",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:09873b9808d7f20f809037672d5388a853dd8f5ed8e2457185bd0734a752c0bf",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 14798,
+        "flow_id": "ait:fox:cloud_share:CwWXdA4cBPgRyxEYoh",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:8dda7d55eaab722bb19840ad7f04136819032a700387af47567d39463bebf1a4",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 14873,
+        "flow_id": "ait:fox:cloud_share:CeAfEE2V4tqMaKDzh2",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:87f4afda4d534ae093a26c90a118dac7d09b0175541b62497602a6761942af1d",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16293,
+        "flow_id": "ait:fox:cloud_share:CQqpLmVad6RBC1Ux2",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:790c012e6736442921c59b80e0e33dd23e10e34c7f3c28bc97dbce79f251ff58",
+        "all_candidate": [
+          61,
+          59
+        ],
+        "singleton": [
+          60,
+          59
+        ],
+        "observed": [
+          60,
+          59
+        ],
+        "zeek": [
+          60,
+          59
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16411,
+        "flow_id": "ait:fox:cloud_share:CisCSWeEU1NTdnw51",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:3a335beec59aa02d217657e019070745d35611b60e3fd9d0b1f45fc293c720cc",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16447,
+        "flow_id": "ait:fox:cloud_share:CMV3f93sRl9CL3rK03",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:f0085d9ce279367e0dbfbd2baaaeb05446c4afffefcfd9980ffa6e9dc5bd4fe3",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 16453,
+        "flow_id": "ait:fox:cloud_share:CQx19F1dz3ccAoPRdi",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:58dc53f1da185085115d6191ca6e7be5b4d45f2aa9835a7800196152420eab5a",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 17296,
+        "flow_id": "ait:fox:cloud_share:C4x4Pf4KkTSON8J5qg",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:af1108eec9c983d31e54426f50fa50c321f1b3c0b9366c93eecc9c5a93f41e01",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 18616,
+        "flow_id": "ait:fox:cloud_share:CXPACm3zwXpMKyvFLg",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:19ea17a1476233304238331572f61e9eca3d9fd919852cf8552545c9d980d72b",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 18986,
+        "flow_id": "ait:fox:cloud_share:C12dKH3LYe35AywsI8",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:4c1e82753880732b332f29f50780c48be9e51a3ec73e56131109f3e850768e3a",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 19187,
+        "flow_id": "ait:fox:cloud_share:CqiXSb1SXUrfdCct1k",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:eeb2cf3b81b81241893e1ed37c7ac70445413ff81134b2cbc321a1031446d1de",
+        "all_candidate": [
+          13,
+          12
+        ],
+        "singleton": [
+          12,
+          12
+        ],
+        "observed": [
+          12,
+          12
+        ],
+        "zeek": [
+          12,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 19341,
+        "flow_id": "ait:fox:cloud_share:CCQsXd4VaHjzv5Cad9",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:63108e866c5d7d74492c5058127899a9fc3d2d543229d43cd7b4dead55923c13",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 19371,
+        "flow_id": "ait:fox:cloud_share:CQXd0633hF946CWgRf",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:dce9ee32d86a9b101896f5f208e8805992ef7986ed8fc8ccda35f38b2324e7d0",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 20685,
+        "flow_id": "ait:fox:cloud_share:Cujpw90YzhtnTbBp",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:fe2c5654e3a550fb2b6eb64e6eea7c729033e507fa3e81bdaf607185c332fe47",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 26639,
+        "flow_id": "ait:fox:cloud_share:CIQ7GG3qaUlan6WFsi",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:f29f0aab4ed077ed7727fe7c78aa6deb90b8115cd631e7c31d2a32866709fd43",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 26956,
+        "flow_id": "ait:fox:cloud_share:CnBrg91l67Tga5O411",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:6dd970bf79d79d3d1ee3652f222c70738efe8af9dd9d52675976b209c4526360",
+        "all_candidate": [
+          4,
+          0
+        ],
+        "singleton": [
+          3,
+          0
+        ],
+        "observed": [
+          3,
+          0
+        ],
+        "zeek": [
+          3,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 26957,
+        "flow_id": "ait:fox:cloud_share:CMGizX1Ur6mEswl2N",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:c043ed11c4b7c31660e2aa994f429fb60488f43e912b6f72ec04ae200b7c7182",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 27822,
+        "flow_id": "ait:fox:cloud_share:CFYacj3M530ILxtcbb",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:10dcd42e2b24bd254b1101fed972a05812ae9572d743b62a974128b5b5093dff",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 27835,
+        "flow_id": "ait:fox:cloud_share:CDzcgw8OnTYvxaCge",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:391af6b52c6defe213e604ad6fe075d391bf4795e32415afcdbf49f4d4b45454",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 28653,
+        "flow_id": "ait:fox:cloud_share:CFJO1p2lXDNGQmcVJ1",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:6cc6b9c2feb7572a0dea7a915a001ce2a348183c9ba819c8b8a98cf8d9bada27",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 28707,
+        "flow_id": "ait:fox:cloud_share:CnnAV6reZrB3TvAub",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:3bbc6d27325b3cc57b5ccbe72cdc611fd063a7b5f5e10a4cc8e3e3d4ec163910",
+        "all_candidate": [
+          15,
+          13
+        ],
+        "singleton": [
+          14,
+          13
+        ],
+        "observed": [
+          14,
+          13
+        ],
+        "zeek": [
+          14,
+          13
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 29449,
+        "flow_id": "ait:fox:cloud_share:CTV4C23G42fksUuNTg",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:f9ea4e496c213e85156f8fc597375335300fd5ae805c3262d87026c813138eb5",
+        "all_candidate": [
+          4,
+          0
+        ],
+        "singleton": [
+          3,
+          0
+        ],
+        "observed": [
+          3,
+          0
+        ],
+        "zeek": [
+          3,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 29451,
+        "flow_id": "ait:fox:cloud_share:CaqpiU2vTAzl5cyrd",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:893f68b70d0a3ea5aeb74a70ecb0d0448f685fbadca7606d4508517d3ffb716d",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 30032,
+        "flow_id": "ait:fox:cloud_share:CtpXtV0PRlQ5PcS7d",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:72f13432bc62b09e9650a1a5db541b4e19d5527e5f73e323d27c3bd8a800471f",
+        "all_candidate": [
+          14,
+          12
+        ],
+        "singleton": [
+          13,
+          12
+        ],
+        "observed": [
+          13,
+          12
+        ],
+        "zeek": [
+          13,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 30169,
+        "flow_id": "ait:fox:cloud_share:C3deEf356nBaKtgd56",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:db72a34c7288b2710528f3f94e4d617344001cee22e375dc8775ff83cfe2baa4",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 30566,
+        "flow_id": "ait:fox:cloud_share:CgzxiT3NR8XSa31Eid",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:4661b2bdc4acb5d162190986008b7b54ad28616b11f9324819cae1796ae0ac84",
+        "all_candidate": [
+          61,
+          99
+        ],
+        "singleton": [
+          60,
+          99
+        ],
+        "observed": [
+          60,
+          99
+        ],
+        "zeek": [
+          60,
+          99
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 30702,
+        "flow_id": "ait:fox:cloud_share:CeHGSoL9VBzyIC1O",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:3cc6246fc9781a1df264152d35a45520d8ba8196a80fd1eedfc0967563fd0466",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 32115,
+        "flow_id": "ait:fox:cloud_share:C5AlBn4wWSDHczWbai",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:126132e18573ecf0c77bbbd0e64925199336619a0f5e346b3c30191df3330ea7",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 32302,
+        "flow_id": "ait:fox:cloud_share:CPXvuw3hr3rrmKViW",
+        "stable_flow_id": "ait:fox:cloud_share:2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af:flowkey:bb5de7742e563d6f78ff076ebf68ffacbe42570daf1407cbc6a2cc0f2f8682eb",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      }
+    ]
+  },
+  {
+    "source": "ait_fox_intranet_server",
+    "lifecycle_only": {
+      "records": 2240,
+      "zero_declared_payload": 2239,
+      "positive_declared_payload": 1,
+      "ack_flag": 1495,
+      "fin_flag": 1,
+      "rst_flag": 745,
+      "syn_flag": 0,
+      "pure_ack_flags_zero_payload": 1494
+    },
+    "clock": {
+      "candidate_associations_after_export_any": 0,
+      "candidate_associations_after_export_over_10us": 0,
+      "candidate_associations_before_start_any": 0
+    },
+    "max_candidate_us_after_export": 0,
+    "max_candidate_us_after_observed_end": 8192012,
+    "mapped_flows": 12468,
+    "ambiguous_membership_flows": 2,
+    "packet_count_comparison": {
+      "mapped_flows_with_zeek_packet_counts": 12468,
+      "all_candidate_packet_counts_equal_zeek_both_directions": 12467,
+      "singleton_packet_counts_equal_zeek_both_directions": 12467,
+      "observed_interval_packet_counts_equal_zeek_both_directions": 10722,
+      "all_candidate_ip_byte_counts_equal_zeek_both_directions": 12467,
+      "zeek_packets_both_directions_sum": 1633622,
+      "all_candidate_packets_both_directions_sum": 1633623,
+      "singleton_packets_both_directions_sum": 1633621,
+      "observed_interval_packets_both_directions_sum": 1631382,
+      "packet_difference_has_ambiguous_membership": 1,
+      "packet_difference_all_candidate_ge_zeek_both_directions": 1
+    },
+    "all_candidate_packet_count_differences": [
+      {
+        "connection_index": 2387,
+        "flow_id": "ait:fox:intranet_server:C7P6ua3n1PnbFfXFTd",
+        "stable_flow_id": "ait:fox:intranet_server:9d24476c1a97c89995198d61bf4c720382bab0be3ea97e207041e25276c6d5a1:flowkey:ad5fc1e8528ead419b700f45ba77926e4cdcee70c1dfbcc53d8501282fe3eb29",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      }
+    ]
+  },
+  {
+    "source": "ait_santos_cloud_share",
+    "lifecycle_only": {
+      "records": 10006,
+      "zero_declared_payload": 10006,
+      "positive_declared_payload": 0,
+      "ack_flag": 5145,
+      "fin_flag": 0,
+      "rst_flag": 4861,
+      "syn_flag": 0,
+      "pure_ack_flags_zero_payload": 5145
+    },
+    "clock": {
+      "candidate_associations_after_export_any": 0,
+      "candidate_associations_after_export_over_10us": 0,
+      "candidate_associations_before_start_any": 0
+    },
+    "max_candidate_us_after_export": 0,
+    "max_candidate_us_after_observed_end": 506207799,
+    "mapped_flows": 15725,
+    "ambiguous_membership_flows": 132,
+    "packet_count_comparison": {
+      "mapped_flows_with_zeek_packet_counts": 15725,
+      "all_candidate_packet_counts_equal_zeek_both_directions": 15657,
+      "singleton_packet_counts_equal_zeek_both_directions": 15657,
+      "observed_interval_packet_counts_equal_zeek_both_directions": 5759,
+      "all_candidate_ip_byte_counts_equal_zeek_both_directions": 15657,
+      "zeek_packets_both_directions_sum": 1006750,
+      "all_candidate_packets_both_directions_sum": 1006818,
+      "singleton_packets_both_directions_sum": 1006682,
+      "observed_interval_packets_both_directions_sum": 996744,
+      "packet_difference_has_ambiguous_membership": 68,
+      "packet_difference_all_candidate_ge_zeek_both_directions": 68
+    },
+    "all_candidate_packet_count_differences": [
+      {
+        "connection_index": 27,
+        "flow_id": "ait:santos:cloud_share:CxmqDB2ralKRdWKx82",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:a0907a60828fffc730139ea559e00efb8554657d4278c6aad9e4bd35e47665cf",
+        "all_candidate": [
+          34,
+          37
+        ],
+        "singleton": [
+          33,
+          37
+        ],
+        "observed": [
+          33,
+          37
+        ],
+        "zeek": [
+          33,
+          37
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 69,
+        "flow_id": "ait:santos:cloud_share:CFVhBZ1xN0VtgGa0y9",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:fed878777b781e369106c72c070f7bd9325fcddb5ad3a1e33a5aaaf63dc0b05d",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 91,
+        "flow_id": "ait:santos:cloud_share:ClKiHR1KZW0nUFCIKe",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:39ca480a2d97b312fd452f86c376ee8158248898ee65f54f963a353cf78493e9",
+        "all_candidate": [
+          25,
+          30
+        ],
+        "singleton": [
+          24,
+          30
+        ],
+        "observed": [
+          24,
+          30
+        ],
+        "zeek": [
+          24,
+          30
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 672,
+        "flow_id": "ait:santos:cloud_share:Cu8Hpk1dOemNuotYrc",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:7416bb5f79a7d1ea78dcaf6dee7303c96b0f29df61499c4ff13c813d08b65270",
+        "all_candidate": [
+          69,
+          123
+        ],
+        "singleton": [
+          68,
+          123
+        ],
+        "observed": [
+          68,
+          123
+        ],
+        "zeek": [
+          68,
+          123
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 676,
+        "flow_id": "ait:santos:cloud_share:C1Deql34EOL2Cmash2",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:a7a7dbc9f6c1885c69acd7f738ea0f14ae32fb74af22bd76443e5d7760fbb380",
+        "all_candidate": [
+          12,
+          14
+        ],
+        "singleton": [
+          11,
+          14
+        ],
+        "observed": [
+          11,
+          14
+        ],
+        "zeek": [
+          11,
+          14
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 698,
+        "flow_id": "ait:santos:cloud_share:CkjuKg3KlcOJrJ99Gk",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:f7035f751b86967f21e42743126f7d0dc47cfbc189839e3bb4b983ded3dc5d56",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 724,
+        "flow_id": "ait:santos:cloud_share:CB6L612J5elUw51fPh",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:18b4efeb75c8ce40fb98360b947ae3f5cb86d3ad26980ab7ba4315d89102c4e6",
+        "all_candidate": [
+          19,
+          22
+        ],
+        "singleton": [
+          18,
+          22
+        ],
+        "observed": [
+          18,
+          22
+        ],
+        "zeek": [
+          18,
+          22
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 871,
+        "flow_id": "ait:santos:cloud_share:CZQynIVNcN6gOuXCi",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:e1ba8b95167301b20540b08a3df21d4756c96e11910e7a7508df5267ab6e6e11",
+        "all_candidate": [
+          16,
+          14
+        ],
+        "singleton": [
+          15,
+          14
+        ],
+        "observed": [
+          15,
+          14
+        ],
+        "zeek": [
+          15,
+          14
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 1243,
+        "flow_id": "ait:santos:cloud_share:CdRyg61zx4GUvPz2U8",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:9a815880e4723e770fe68a7f27e656b7722975f7215e289ac11977d0031a20b0",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 1244,
+        "flow_id": "ait:santos:cloud_share:ClfO5J33jCzNoS0Sw2",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:54708f4a7f4dd903bf6dac74696fe1d4ff1c64244571b29af822dc1fa75c8a9f",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 1320,
+        "flow_id": "ait:santos:cloud_share:CQPrRJ1mCXewjuYnM5",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:e49dd5a40edaebef4b9ef4eb2819d063f06b853d7fb323fe35d985c191014498",
+        "all_candidate": [
+          68,
+          123
+        ],
+        "singleton": [
+          67,
+          123
+        ],
+        "observed": [
+          67,
+          123
+        ],
+        "zeek": [
+          67,
+          123
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 2760,
+        "flow_id": "ait:santos:cloud_share:CADn6J1nllZvDp7ntj",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:9cfe7a37e4f1982a7a0ae1d814b0d899f267d4000495cfc1e30917fdb5efb4c4",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 2795,
+        "flow_id": "ait:santos:cloud_share:C8s1OM37FQbHMVfAg",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:15083985805b4f2f45e1eaae52fa7af3314a6e6111eb7863b91ecf15fd25e666",
+        "all_candidate": [
+          14,
+          15
+        ],
+        "singleton": [
+          13,
+          15
+        ],
+        "observed": [
+          13,
+          15
+        ],
+        "zeek": [
+          13,
+          15
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3227,
+        "flow_id": "ait:santos:cloud_share:CYGizA1vCmjZYxZiD8",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:52582732839a51308d43d2d0c861f56ca0a88f17503edcc868d095e96ca1a082",
+        "all_candidate": [
+          13,
+          22
+        ],
+        "singleton": [
+          12,
+          22
+        ],
+        "observed": [
+          12,
+          22
+        ],
+        "zeek": [
+          12,
+          22
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3242,
+        "flow_id": "ait:santos:cloud_share:Cy5GP01r7MUXzc3nRk",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:4fb5595ac47e1875d5d4bcf1338d38c101dd12792059452a9774873715488dd1",
+        "all_candidate": [
+          11,
+          9
+        ],
+        "singleton": [
+          10,
+          9
+        ],
+        "observed": [
+          10,
+          9
+        ],
+        "zeek": [
+          10,
+          9
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3321,
+        "flow_id": "ait:santos:cloud_share:CgReC9EBYp0W10vFh",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:bcdf3abd5af1a56b7da27f95e9536840c9c37ebe571f6ed7144e117410357292",
+        "all_candidate": [
+          12,
+          9
+        ],
+        "singleton": [
+          11,
+          9
+        ],
+        "observed": [
+          11,
+          9
+        ],
+        "zeek": [
+          11,
+          9
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3322,
+        "flow_id": "ait:santos:cloud_share:CLgwgh16GWqAAEbH2i",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:68cfb85e40e87ea075c920a5be11c154ea93122d1b7b6ec300d80c1890746405",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 3618,
+        "flow_id": "ait:santos:cloud_share:CtJJKp14Gs888pliW7",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:f252aa4cd393833a2967c3654347769726c329f32fe5b0070aa87c19fbbecc22",
+        "all_candidate": [
+          25,
+          32
+        ],
+        "singleton": [
+          24,
+          32
+        ],
+        "observed": [
+          24,
+          32
+        ],
+        "zeek": [
+          24,
+          32
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 5100,
+        "flow_id": "ait:santos:cloud_share:CgCkZd1HhDOHlrycE9",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:30314761d965c02da129fe14ea9c891ad8700df17989f846d934ed071c377c61",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 5101,
+        "flow_id": "ait:santos:cloud_share:Cp0JkT1H8OiofaPhXc",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:6d0250dae83a29a26d365cc94be7b01c23d001935a1a5dfc3addaa296a3bfb27",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 5105,
+        "flow_id": "ait:santos:cloud_share:CkmKhz4B6qvvFcTGN6",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:a9d4c2959727fb905103f674170df7eb932b558582f51b5e51c398b36bc8b126",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 5106,
+        "flow_id": "ait:santos:cloud_share:CJPrxw1o9KEDr2I859",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:2d9b4d0b3bb80d291bd7cd05fa6617c5765e86cf2f35443de1226fdeb2409c0a",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 5467,
+        "flow_id": "ait:santos:cloud_share:Cv9Xwn4yf2BA8vUZye",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:f2d3bb1d81efe41246070f099800c8271e69a678ac6c27d914656c7a9365e654",
+        "all_candidate": [
+          117,
+          259
+        ],
+        "singleton": [
+          116,
+          259
+        ],
+        "observed": [
+          116,
+          259
+        ],
+        "zeek": [
+          116,
+          259
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 5508,
+        "flow_id": "ait:santos:cloud_share:CZ6gil3h1Zx4Om5Ys1",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:116913c71f437845ebea6195c6dc5b150196bc061755246524ce2bb4e01894cc",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 5649,
+        "flow_id": "ait:santos:cloud_share:Cczg7j2wkcdhHhcp1f",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:978fcdd7dee2f8d55ed505bd86032897d7a51b38fd0beca25850b3506af89797",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 6476,
+        "flow_id": "ait:santos:cloud_share:CnDdtH1TNu0xBwByhh",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:f98976a21f3687a483ce3ff5b0932637b765304df9cd50e136e7ca7fad3c78db",
+        "all_candidate": [
+          14,
+          12
+        ],
+        "singleton": [
+          13,
+          12
+        ],
+        "observed": [
+          13,
+          12
+        ],
+        "zeek": [
+          13,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 6750,
+        "flow_id": "ait:santos:cloud_share:C6F9Pg3H6yp8vO4l4f",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:5010436e96c8412c8c453c15c068c095dde95231444ee0fd3c838042cc6818f4",
+        "all_candidate": [
+          20,
+          20
+        ],
+        "singleton": [
+          19,
+          20
+        ],
+        "observed": [
+          19,
+          20
+        ],
+        "zeek": [
+          19,
+          20
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 6866,
+        "flow_id": "ait:santos:cloud_share:CHiMV52FVM43LZWTk7",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:b9f466b5f827347fe1a0500ce09d183d36b4525ba13b65efaef26943087c498c",
+        "all_candidate": [
+          13,
+          10
+        ],
+        "singleton": [
+          12,
+          10
+        ],
+        "observed": [
+          12,
+          10
+        ],
+        "zeek": [
+          12,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 7430,
+        "flow_id": "ait:santos:cloud_share:C2juer3koWbNDehnDl",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:f7a1afe46d1b738d5920802b1bd272249d9962f8de9ae2e087abc29d17971203",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 7448,
+        "flow_id": "ait:santos:cloud_share:CIGIwu6j2U10NJBt",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:ddfcd1e84ab5d3b9ca8ad9eda19e86cf9f1bef81cd712c1077c3b0bf559d6937",
+        "all_candidate": [
+          23,
+          25
+        ],
+        "singleton": [
+          22,
+          25
+        ],
+        "observed": [
+          22,
+          25
+        ],
+        "zeek": [
+          22,
+          25
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 8412,
+        "flow_id": "ait:santos:cloud_share:C1KFOC4nIin7Z8XfYb",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:2ed0f0ac9c9b7db988ee4f25e33886f5ff177b356c51ee2b3b7a9fbd4c4d017e",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 8495,
+        "flow_id": "ait:santos:cloud_share:CYiRAq1fCjYHE8lIy1",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:ea9ea31759b0f112da9269d2d187736fb04257b125f27a5916bc68a3f0aa4caf",
+        "all_candidate": [
+          93,
+          130
+        ],
+        "singleton": [
+          92,
+          130
+        ],
+        "observed": [
+          92,
+          130
+        ],
+        "zeek": [
+          92,
+          130
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 8532,
+        "flow_id": "ait:santos:cloud_share:CIiAWV3ZmUXjUZ09o5",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:c34f768b536f4a1e6a3cbe470df439318e4acc5a0ddc3946143a74e685545337",
+        "all_candidate": [
+          11,
+          12
+        ],
+        "singleton": [
+          10,
+          12
+        ],
+        "observed": [
+          10,
+          12
+        ],
+        "zeek": [
+          10,
+          12
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 8641,
+        "flow_id": "ait:santos:cloud_share:C4Frcl3hVWSu3D5cSk",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:1e1480eedd6aea67f0c98f41eb1c2b7c617323f67b14130e713e8964d4466293",
+        "all_candidate": [
+          16,
+          15
+        ],
+        "singleton": [
+          15,
+          15
+        ],
+        "observed": [
+          15,
+          15
+        ],
+        "zeek": [
+          15,
+          15
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 8973,
+        "flow_id": "ait:santos:cloud_share:CecKlJ2aDT5YLYeuU2",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:bc7d17a2d508a235c832023afc241e5bcc8858f787eaf09058516523330c774e",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 8976,
+        "flow_id": "ait:santos:cloud_share:CZ5GzY3C6uILuYNNjb",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:9001c5a76cc2f2d4661d42426446df14f81c15d5fad000cb9acc20a960640cba",
+        "all_candidate": [
+          4,
+          0
+        ],
+        "singleton": [
+          3,
+          0
+        ],
+        "observed": [
+          3,
+          0
+        ],
+        "zeek": [
+          3,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 8977,
+        "flow_id": "ait:santos:cloud_share:C2YqT13Rb5jakUj1Ai",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:c516142f514fa6e8e77c999ba7673b9e3b5ec0871fc92f4b74d7aedb31dcf4e3",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 9077,
+        "flow_id": "ait:santos:cloud_share:CViRKh34rF7H2y4K11",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:fd5b026938f0e5e85e950750ef9ff643386c85c138784a1fb5154c548feae245",
+        "all_candidate": [
+          15,
+          17
+        ],
+        "singleton": [
+          14,
+          17
+        ],
+        "observed": [
+          14,
+          17
+        ],
+        "zeek": [
+          14,
+          17
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9125,
+        "flow_id": "ait:santos:cloud_share:CjIHzr1Wlh0tmsFB3",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:e27bd5b40efd4d6ae059735413eb22ab6b66d3eb76dcb3d3f64339688af9e31e",
+        "all_candidate": [
+          10,
+          10
+        ],
+        "singleton": [
+          9,
+          10
+        ],
+        "observed": [
+          9,
+          10
+        ],
+        "zeek": [
+          9,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9229,
+        "flow_id": "ait:santos:cloud_share:CB70PUp1lhqIq88k7",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:b780db8eca702f868ef03bd9eb5773c8f019d1e1173c4b604fb61673a13a9d15",
+        "all_candidate": [
+          104,
+          214
+        ],
+        "singleton": [
+          103,
+          214
+        ],
+        "observed": [
+          103,
+          214
+        ],
+        "zeek": [
+          103,
+          214
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9299,
+        "flow_id": "ait:santos:cloud_share:CT5yMaURV0ArGA7fk",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:06eb2ddfbd3048f42d08da64e329803fd64b9aafba0954a53ce90f83cef5f8ff",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9451,
+        "flow_id": "ait:santos:cloud_share:C0ySNj3Oq247XkUsU3",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:2a7c1d9cf82bc36dcf7a9847042020dfa29aabd0884ccd2e70b628079697392c",
+        "all_candidate": [
+          53,
+          61
+        ],
+        "singleton": [
+          52,
+          61
+        ],
+        "observed": [
+          52,
+          61
+        ],
+        "zeek": [
+          52,
+          61
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9540,
+        "flow_id": "ait:santos:cloud_share:C8YGPW1LMxEYZOTMtk",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:096c7b2859d8981b983e18a15c113e3be380cd52b4d71ac2c991515e1dc6e3cb",
+        "all_candidate": [
+          13,
+          16
+        ],
+        "singleton": [
+          12,
+          16
+        ],
+        "observed": [
+          12,
+          16
+        ],
+        "zeek": [
+          12,
+          16
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9564,
+        "flow_id": "ait:santos:cloud_share:CDFWUK2T9lDPFQSc3a",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:2839f06bc5f5b1664f75367954f340b352951836f4f6e2b8c9f015c90199d54c",
+        "all_candidate": [
+          54,
+          104
+        ],
+        "singleton": [
+          53,
+          104
+        ],
+        "observed": [
+          53,
+          104
+        ],
+        "zeek": [
+          53,
+          104
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 9615,
+        "flow_id": "ait:santos:cloud_share:CAdfwb2PtrMClHYT52",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:a4e593bbed2eddeaaa06f5a07e432bfda0bfe379267e94af4087134416bbaca4",
+        "all_candidate": [
+          24,
+          25
+        ],
+        "singleton": [
+          23,
+          25
+        ],
+        "observed": [
+          23,
+          25
+        ],
+        "zeek": [
+          23,
+          25
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 10052,
+        "flow_id": "ait:santos:cloud_share:CTWXCw3eaqf4MKTF4b",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:9271ae32c492ee7477a9ed74dd35db70b403f555395b418bedab403b29051332",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 10412,
+        "flow_id": "ait:santos:cloud_share:CPZG1e3EEQKmqyXrLb",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:cf545df2cde2d9151f718f5bf83415e542be0423a0f1efdc9bd567ece188959c",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 11416,
+        "flow_id": "ait:santos:cloud_share:C9OoQP3ZLTJjaGKT5f",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:78ea7f82ab271e0ef41c5c2077437dacf4c0d3358a9d5733810a9421952f6592",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 11453,
+        "flow_id": "ait:santos:cloud_share:CbntGk4FQQ69uvjMbe",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:3f22807c3d3ef3f97a3f830d5241a0f8982967ce295ef28d25b11ccec4ce2470",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 11484,
+        "flow_id": "ait:santos:cloud_share:Cjx4Xi14JnhTHF9Fl",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:61066775ea9db5191f720a863f134422c10afc65d283191680d1b1a6af9e45a4",
+        "all_candidate": [
+          58,
+          92
+        ],
+        "singleton": [
+          57,
+          92
+        ],
+        "observed": [
+          57,
+          92
+        ],
+        "zeek": [
+          57,
+          92
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 11616,
+        "flow_id": "ait:santos:cloud_share:Cqny7HrnkGnzuo8l3",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:85fc63dec798e5e845e1da9a70b5b0e8f8962e0ea018fe76a409ebe12a1d4b0f",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 12305,
+        "flow_id": "ait:santos:cloud_share:CS18kE4KkxMkH9ISr3",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:5313bf617bed4aaaf5f9325e6ac0fd9ada6a24fa0340829ce6f35be03ca090d1",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 12337,
+        "flow_id": "ait:santos:cloud_share:Cp0qcm3gXgbBWFF1bf",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:4a209b12f1abf91f0ad024b923e6b2165a36620ccf0a54c9632d9814cc9b8b9a",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 12774,
+        "flow_id": "ait:santos:cloud_share:COsdB14P2bIpPXL6Ii",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:c2bbdc02e8df5da499c84b5683eba924d02619f27e2bf14042ec29a232ed5d95",
+        "all_candidate": [
+          11,
+          14
+        ],
+        "singleton": [
+          10,
+          14
+        ],
+        "observed": [
+          10,
+          14
+        ],
+        "zeek": [
+          10,
+          14
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 13364,
+        "flow_id": "ait:santos:cloud_share:CW4YvQ1CIZ2IRdlAs",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:46da2806b335e3fdadd45a5b38c8ec739fb79296698367eaa1f95d71233b45b9",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 13505,
+        "flow_id": "ait:santos:cloud_share:CiBjqqVzfSbRWIFIf",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:e263d0b67647375426a3abe019a48e54f05b242d4880f48392d1e10e23bc0cc7",
+        "all_candidate": [
+          13,
+          17
+        ],
+        "singleton": [
+          12,
+          17
+        ],
+        "observed": [
+          12,
+          17
+        ],
+        "zeek": [
+          12,
+          17
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 13586,
+        "flow_id": "ait:santos:cloud_share:CxkxoB1oLH3PHA2aKd",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:46b833e19aecebd82121cfd4d9230e4c61084d9a5f7c74f90e6eebd59adc467f",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 15182,
+        "flow_id": "ait:santos:cloud_share:CHdLas4V5dPf6e5ETf",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:09e5b6aa33fe8ebda36c19cc13ec72734a271e728664c1bfa0df05d98132893e",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 15296,
+        "flow_id": "ait:santos:cloud_share:CNApoT2rjWmM2gLn19",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:45ed3eeabf8fe00c512c4639b280b0cd3822350b910191acc5a54e26835d046e",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 15627,
+        "flow_id": "ait:santos:cloud_share:CDcDJy4JCLHLoz2v1g",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:cc1e78112ad5a0d7075e7cd1b69e92dd85775d8ad9a6dc69271cf4ba6310953c",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 15731,
+        "flow_id": "ait:santos:cloud_share:CCbSVy2vTEO8e7HZqd",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:a6116170c5b724846d72ef3dd8022ee9ac355fea6b725777694d352135f607bf",
+        "all_candidate": [
+          14,
+          20
+        ],
+        "singleton": [
+          13,
+          20
+        ],
+        "observed": [
+          13,
+          20
+        ],
+        "zeek": [
+          13,
+          20
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 15776,
+        "flow_id": "ait:santos:cloud_share:CG17Co2AfB5tfTeZ18",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:0358c1ac61b26e7aad9d2194006a99c8caa168cb32db278d19957af6d050bbfb",
+        "all_candidate": [
+          15,
+          19
+        ],
+        "singleton": [
+          14,
+          19
+        ],
+        "observed": [
+          14,
+          19
+        ],
+        "zeek": [
+          14,
+          19
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16063,
+        "flow_id": "ait:santos:cloud_share:Ci6lzAKfSgZAFGX5e",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:74fa504652cb0f55f0c0aa9a4d10325a5bfef9d829733b870f7bb1e455a7c178",
+        "all_candidate": [
+          81,
+          106
+        ],
+        "singleton": [
+          80,
+          106
+        ],
+        "observed": [
+          80,
+          106
+        ],
+        "zeek": [
+          80,
+          106
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16214,
+        "flow_id": "ait:santos:cloud_share:CF9W0f26DpRnv18S33",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:40d8c4735f099122339cfc7f02a26a7f282dda8516d08c5db806eb5fc8562e9b",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16232,
+        "flow_id": "ait:santos:cloud_share:CPOOJ63IrT3jAKsOGl",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:8f9f371c97b8a75be33c82e9c2d9de342044ec957bf83c9e4c84ed2d808d72dd",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16254,
+        "flow_id": "ait:santos:cloud_share:CVcZVF33TdLcLwmfWb",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:4508be69eab7127353f67e2e36607a92475897908990375354c977a5335d4358",
+        "all_candidate": [
+          17,
+          15
+        ],
+        "singleton": [
+          16,
+          15
+        ],
+        "observed": [
+          16,
+          15
+        ],
+        "zeek": [
+          16,
+          15
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16497,
+        "flow_id": "ait:santos:cloud_share:CGjurI1Fdfinvu3Bng",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:2dad404355224d7743c6fa4f2d55a2c416ce29242bceb0af7ee0f1f6a6093aea",
+        "all_candidate": [
+          12,
+          10
+        ],
+        "singleton": [
+          11,
+          10
+        ],
+        "observed": [
+          11,
+          10
+        ],
+        "zeek": [
+          11,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      },
+      {
+        "connection_index": 16571,
+        "flow_id": "ait:santos:cloud_share:CwjU1duKKjqoGHnNi",
+        "stable_flow_id": "ait:santos:cloud_share:3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520:flowkey:43296fb0833f73fe7c38efeb33a3e660ebd9bbaec5a2acebc00618b9da49308c",
+        "all_candidate": [
+          24,
+          26
+        ],
+        "singleton": [
+          23,
+          26
+        ],
+        "observed": [
+          23,
+          26
+        ],
+        "zeek": [
+          23,
+          26
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S3"
+      }
+    ]
+  },
+  {
+    "source": "ait_santos_intranet_server",
+    "lifecycle_only": {
+      "records": 1658,
+      "zero_declared_payload": 1658,
+      "positive_declared_payload": 0,
+      "ack_flag": 1066,
+      "fin_flag": 0,
+      "rst_flag": 592,
+      "syn_flag": 0,
+      "pure_ack_flags_zero_payload": 1066
+    },
+    "clock": {
+      "candidate_associations_after_export_any": 0,
+      "candidate_associations_after_export_over_10us": 0,
+      "candidate_associations_before_start_any": 0
+    },
+    "max_candidate_us_after_export": 0,
+    "max_candidate_us_after_observed_end": 16128311,
+    "mapped_flows": 5518,
+    "ambiguous_membership_flows": 13,
+    "packet_count_comparison": {
+      "mapped_flows_with_zeek_packet_counts": 5518,
+      "all_candidate_packet_counts_equal_zeek_both_directions": 5510,
+      "singleton_packet_counts_equal_zeek_both_directions": 5510,
+      "observed_interval_packet_counts_equal_zeek_both_directions": 4202,
+      "all_candidate_ip_byte_counts_equal_zeek_both_directions": 5510,
+      "zeek_packets_both_directions_sum": 550828,
+      "all_candidate_packets_both_directions_sum": 550836,
+      "singleton_packets_both_directions_sum": 550820,
+      "observed_interval_packets_both_directions_sum": 549170,
+      "packet_difference_has_ambiguous_membership": 8,
+      "packet_difference_all_candidate_ge_zeek_both_directions": 8
+    },
+    "all_candidate_packet_count_differences": [
+      {
+        "connection_index": 6999,
+        "flow_id": "ait:santos:intranet_server:CoYSrv4faKJP1Yx9Bg",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:3f5b3f1d5f0b14dbb494bdf56a7d974888676ffcdbf70e294f120d8004297794",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 7005,
+        "flow_id": "ait:santos:intranet_server:C3EZfv1zjfLwDo4VIi",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:ffe6500fb26518a5dee971ad7a051ffb8abf3604058e223fcf42f1ca15d8a0ee",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 7006,
+        "flow_id": "ait:santos:intranet_server:CIO6853E2k1TAkw184",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:dff56c432e2d1c766911e25427a32ebe461bd0a54e704999c94c70224443a0de",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 7817,
+        "flow_id": "ait:santos:intranet_server:CI2hIZ3pFZzLjuEqrf",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:ad5ca9bf07aaeca0bb1b2be0f3afb3c29396cb78290e4ffd2d236b20bac10849",
+        "all_candidate": [
+          4,
+          0
+        ],
+        "singleton": [
+          3,
+          0
+        ],
+        "observed": [
+          3,
+          0
+        ],
+        "zeek": [
+          3,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 11594,
+        "flow_id": "ait:santos:intranet_server:C67iFY2od3S4P7Wxo2",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:df0f81ce82cf8e788667990cbc60c3d89454f502ad0d203b0645ab5115f4e7da",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          1,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 11600,
+        "flow_id": "ait:santos:intranet_server:CIqwVpovl7pM0wLo9",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:8c2b2a97c48192d7835553ee250634f32171c3318d2e226bb1fff2699d777fb0",
+        "all_candidate": [
+          4,
+          0
+        ],
+        "singleton": [
+          3,
+          0
+        ],
+        "observed": [
+          3,
+          0
+        ],
+        "zeek": [
+          3,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 11602,
+        "flow_id": "ait:santos:intranet_server:CsF7Oq2NsEz3gt1TZ2",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:e0c970b3eb31b6a933edc2143108821c4bff6978a70fae044b255c6ac7540d66",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 11603,
+        "flow_id": "ait:santos:intranet_server:Cj6s5M38YJ5K3Iexq6",
+        "stable_flow_id": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4:flowkey:ed7a27ae43ad26e7bc653a1ff1071d98b649940e89b4a45e0de098371ffaf320",
+        "all_candidate": [
+          2,
+          0
+        ],
+        "singleton": [
+          0,
+          0
+        ],
+        "observed": [
+          1,
+          0
+        ],
+        "zeek": [
+          1,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      }
+    ]
+  },
+  {
+    "source": "unraveled_target",
+    "lifecycle_only": {
+      "records": 8896,
+      "zero_declared_payload": 8890,
+      "positive_declared_payload": 6,
+      "ack_flag": 6172,
+      "fin_flag": 8,
+      "rst_flag": 2724,
+      "syn_flag": 0,
+      "pure_ack_flags_zero_payload": 6162
+    },
+    "clock": {
+      "candidate_associations_after_export_any": 0,
+      "candidate_associations_after_export_over_10us": 0,
+      "candidate_associations_before_start_any": 0
+    },
+    "max_candidate_us_after_export": 0,
+    "max_candidate_us_after_observed_end": 300002080,
+    "mapped_flows": 7291,
+    "ambiguous_membership_flows": 66,
+    "packet_count_comparison": {
+      "mapped_flows_with_zeek_packet_counts": 7291,
+      "all_candidate_packet_counts_equal_zeek_both_directions": 7239,
+      "singleton_packet_counts_equal_zeek_both_directions": 7239,
+      "observed_interval_packet_counts_equal_zeek_both_directions": 1014,
+      "all_candidate_ip_byte_counts_equal_zeek_both_directions": 7239,
+      "zeek_packets_both_directions_sum": 528754,
+      "all_candidate_packets_both_directions_sum": 528806,
+      "singleton_packets_both_directions_sum": 528702,
+      "observed_interval_packets_both_directions_sum": 519858,
+      "packet_difference_has_ambiguous_membership": 52,
+      "packet_difference_all_candidate_ge_zeek_both_directions": 52
+    },
+    "all_candidate_packet_count_differences": [
+      {
+        "connection_index": 6109,
+        "flow_id": "unraveled:20210621:net1013x:90b72895d7a81df36cd9b0b4f38a3807",
+        "stable_flow_id": "unraveled:20210621:net1013x:90b72895d7a81df36cd9b0b4f38a3807",
+        "all_candidate": [
+          14,
+          11
+        ],
+        "singleton": [
+          14,
+          10
+        ],
+        "observed": [
+          14,
+          10
+        ],
+        "zeek": [
+          14,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 6342,
+        "flow_id": "unraveled:20210621:net1013x:85b066f3150ce9bc3c5a64134429efa3",
+        "stable_flow_id": "unraveled:20210621:net1013x:85b066f3150ce9bc3c5a64134429efa3",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 6586,
+        "flow_id": "unraveled:20210621:net1013x:54ed55ef8589a01cb018d9e8b07d7111",
+        "stable_flow_id": "unraveled:20210621:net1013x:54ed55ef8589a01cb018d9e8b07d7111",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 7099,
+        "flow_id": "unraveled:20210621:net1013x:af228f42cc1f9efb9ce91e2f7913d94f",
+        "stable_flow_id": "unraveled:20210621:net1013x:af228f42cc1f9efb9ce91e2f7913d94f",
+        "all_candidate": [
+          5,
+          9
+        ],
+        "singleton": [
+          5,
+          7
+        ],
+        "observed": [
+          5,
+          8
+        ],
+        "zeek": [
+          5,
+          8
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 7378,
+        "flow_id": "unraveled:20210621:net1013x:6667c6ee8bb5a1a021df92543a7daa8e",
+        "stable_flow_id": "unraveled:20210621:net1013x:6667c6ee8bb5a1a021df92543a7daa8e",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 7731,
+        "flow_id": "unraveled:20210621:net1013x:4ced4897a35cf0b053f3c194e6bb5364",
+        "stable_flow_id": "unraveled:20210621:net1013x:4ced4897a35cf0b053f3c194e6bb5364",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 12271,
+        "flow_id": "unraveled:20210621:net1013x:7afe08a6cb4e6ef150979cba629961bf",
+        "stable_flow_id": "unraveled:20210621:net1013x:7afe08a6cb4e6ef150979cba629961bf",
+        "all_candidate": [
+          14,
+          11
+        ],
+        "singleton": [
+          14,
+          10
+        ],
+        "observed": [
+          14,
+          10
+        ],
+        "zeek": [
+          14,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 12405,
+        "flow_id": "unraveled:20210621:net1013x:8d1c687076fa9e1032a7c8ff40c7e5b6",
+        "stable_flow_id": "unraveled:20210621:net1013x:8d1c687076fa9e1032a7c8ff40c7e5b6",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 12695,
+        "flow_id": "unraveled:20210621:net1013x:c5713da08566a0254d60753133e8179b",
+        "stable_flow_id": "unraveled:20210621:net1013x:c5713da08566a0254d60753133e8179b",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 13734,
+        "flow_id": "unraveled:20210621:net1013x:955550f56cf37a197efd155426c81f07",
+        "stable_flow_id": "unraveled:20210621:net1013x:955550f56cf37a197efd155426c81f07",
+        "all_candidate": [
+          7,
+          9
+        ],
+        "singleton": [
+          7,
+          7
+        ],
+        "observed": [
+          7,
+          8
+        ],
+        "zeek": [
+          7,
+          8
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 13914,
+        "flow_id": "unraveled:20210621:net1013x:599f4046ce1d4daac78b224f5c7cfcad",
+        "stable_flow_id": "unraveled:20210621:net1013x:599f4046ce1d4daac78b224f5c7cfcad",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 14133,
+        "flow_id": "unraveled:20210621:net1013x:a27172a4dc492af83befdf4d80e89899",
+        "stable_flow_id": "unraveled:20210621:net1013x:a27172a4dc492af83befdf4d80e89899",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 14431,
+        "flow_id": "unraveled:20210621:net1013x:55f774a69ae8b6a2ae75ed0880056820",
+        "stable_flow_id": "unraveled:20210621:net1013x:55f774a69ae8b6a2ae75ed0880056820",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 18379,
+        "flow_id": "unraveled:20210621:net1013x:5223ba1c29b691c3351624f21c618124",
+        "stable_flow_id": "unraveled:20210621:net1013x:5223ba1c29b691c3351624f21c618124",
+        "all_candidate": [
+          14,
+          11
+        ],
+        "singleton": [
+          14,
+          10
+        ],
+        "observed": [
+          14,
+          10
+        ],
+        "zeek": [
+          14,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 19271,
+        "flow_id": "unraveled:20210621:net1013x:9806ec10c8dc1b9b9a2ea4eb5da19da3",
+        "stable_flow_id": "unraveled:20210621:net1013x:9806ec10c8dc1b9b9a2ea4eb5da19da3",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 19699,
+        "flow_id": "unraveled:20210621:net1013x:77e20ea32a871cbffe0ddf66cd451886",
+        "stable_flow_id": "unraveled:20210621:net1013x:77e20ea32a871cbffe0ddf66cd451886",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 22543,
+        "flow_id": "unraveled:20210621:net1013x:a2c8235a4a087f781ad961b676962700",
+        "stable_flow_id": "unraveled:20210621:net1013x:a2c8235a4a087f781ad961b676962700",
+        "all_candidate": [
+          13,
+          11
+        ],
+        "singleton": [
+          13,
+          10
+        ],
+        "observed": [
+          13,
+          10
+        ],
+        "zeek": [
+          13,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 22757,
+        "flow_id": "unraveled:20210621:net1013x:27edc244694cc1fd9bc91cd7a9bd4841",
+        "stable_flow_id": "unraveled:20210621:net1013x:27edc244694cc1fd9bc91cd7a9bd4841",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 23000,
+        "flow_id": "unraveled:20210621:net1013x:d85b3137ccd018649f396c7e4b8c120b",
+        "stable_flow_id": "unraveled:20210621:net1013x:d85b3137ccd018649f396c7e4b8c120b",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 24238,
+        "flow_id": "unraveled:20210621:net1013x:d2d9baf5966f299408df50cab63e96e6",
+        "stable_flow_id": "unraveled:20210621:net1013x:d2d9baf5966f299408df50cab63e96e6",
+        "all_candidate": [
+          5,
+          9
+        ],
+        "singleton": [
+          5,
+          7
+        ],
+        "observed": [
+          5,
+          8
+        ],
+        "zeek": [
+          5,
+          8
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 24552,
+        "flow_id": "unraveled:20210621:net1013x:311f98fe9844ff7c8d4b50ad248f71fb",
+        "stable_flow_id": "unraveled:20210621:net1013x:311f98fe9844ff7c8d4b50ad248f71fb",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 25363,
+        "flow_id": "unraveled:20210621:net1013x:b0829fb9ea8eaa206d724275f7e59a3d",
+        "stable_flow_id": "unraveled:20210621:net1013x:b0829fb9ea8eaa206d724275f7e59a3d",
+        "all_candidate": [
+          14,
+          11
+        ],
+        "singleton": [
+          14,
+          10
+        ],
+        "observed": [
+          14,
+          10
+        ],
+        "zeek": [
+          14,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 25671,
+        "flow_id": "unraveled:20210621:net1013x:66f0535e5f56739297e1d9158e77c837",
+        "stable_flow_id": "unraveled:20210621:net1013x:66f0535e5f56739297e1d9158e77c837",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 25926,
+        "flow_id": "unraveled:20210621:net1013x:1320ec4db3b94f15102398e1c37372d3",
+        "stable_flow_id": "unraveled:20210621:net1013x:1320ec4db3b94f15102398e1c37372d3",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 25999,
+        "flow_id": "unraveled:20210621:net1013x:3d37751d9f12413487ac1b2f5800c473",
+        "stable_flow_id": "unraveled:20210621:net1013x:3d37751d9f12413487ac1b2f5800c473",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 27816,
+        "flow_id": "unraveled:20210621:net1013x:3ca2b863da5ecfab4c16888c45d2d7fc",
+        "stable_flow_id": "unraveled:20210621:net1013x:3ca2b863da5ecfab4c16888c45d2d7fc",
+        "all_candidate": [
+          11,
+          8
+        ],
+        "singleton": [
+          11,
+          7
+        ],
+        "observed": [
+          11,
+          7
+        ],
+        "zeek": [
+          11,
+          7
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 29345,
+        "flow_id": "unraveled:20210621:net1013x:5adb381a3ed248843d857e217e6b49f8",
+        "stable_flow_id": "unraveled:20210621:net1013x:5adb381a3ed248843d857e217e6b49f8",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          2
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 29630,
+        "flow_id": "unraveled:20210621:net1013x:d44170a82b9b741cbbfa3c1ab5b6a397",
+        "stable_flow_id": "unraveled:20210621:net1013x:d44170a82b9b741cbbfa3c1ab5b6a397",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 30720,
+        "flow_id": "unraveled:20210621:net1013x:8842749a430cbf48bb1c9f4e263e0114",
+        "stable_flow_id": "unraveled:20210621:net1013x:8842749a430cbf48bb1c9f4e263e0114",
+        "all_candidate": [
+          7,
+          9
+        ],
+        "singleton": [
+          7,
+          7
+        ],
+        "observed": [
+          7,
+          8
+        ],
+        "zeek": [
+          7,
+          8
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 31023,
+        "flow_id": "unraveled:20210621:net1013x:0b2cd7b13a5702a3eb22ddd2c1f79dec",
+        "stable_flow_id": "unraveled:20210621:net1013x:0b2cd7b13a5702a3eb22ddd2c1f79dec",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 31619,
+        "flow_id": "unraveled:20210621:net1013x:32ff576246dec90abc5a6ac91cd50634",
+        "stable_flow_id": "unraveled:20210621:net1013x:32ff576246dec90abc5a6ac91cd50634",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 35447,
+        "flow_id": "unraveled:20210621:net1013x:3dd0446d5ae220081461c5926bf50c8b",
+        "stable_flow_id": "unraveled:20210621:net1013x:3dd0446d5ae220081461c5926bf50c8b",
+        "all_candidate": [
+          14,
+          11
+        ],
+        "singleton": [
+          14,
+          10
+        ],
+        "observed": [
+          14,
+          10
+        ],
+        "zeek": [
+          14,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 35581,
+        "flow_id": "unraveled:20210621:net1013x:f34f7b7eae34c88c822c13f03ff27709",
+        "stable_flow_id": "unraveled:20210621:net1013x:f34f7b7eae34c88c822c13f03ff27709",
+        "all_candidate": [
+          7,
+          0
+        ],
+        "singleton": [
+          6,
+          0
+        ],
+        "observed": [
+          6,
+          0
+        ],
+        "zeek": [
+          6,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 35687,
+        "flow_id": "unraveled:20210621:net1013x:f9aa1982e199c6288579babce47e458e",
+        "stable_flow_id": "unraveled:20210621:net1013x:f9aa1982e199c6288579babce47e458e",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 35800,
+        "flow_id": "unraveled:20210621:net1013x:f045a069eb73ad7b00300fabc8f67a19",
+        "stable_flow_id": "unraveled:20210621:net1013x:f045a069eb73ad7b00300fabc8f67a19",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 35972,
+        "flow_id": "unraveled:20210621:net1013x:b9680571291cba6399be668f20afe823",
+        "stable_flow_id": "unraveled:20210621:net1013x:b9680571291cba6399be668f20afe823",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 38933,
+        "flow_id": "unraveled:20210621:net1013x:45030fdad0c6bd4ef7e9dbd2291649d8",
+        "stable_flow_id": "unraveled:20210621:net1013x:45030fdad0c6bd4ef7e9dbd2291649d8",
+        "all_candidate": [
+          13,
+          11
+        ],
+        "singleton": [
+          13,
+          10
+        ],
+        "observed": [
+          13,
+          10
+        ],
+        "zeek": [
+          13,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 40575,
+        "flow_id": "unraveled:20210621:net1013x:c4e9d6a1e4f761507c52dd8ea611f5e7",
+        "stable_flow_id": "unraveled:20210621:net1013x:c4e9d6a1e4f761507c52dd8ea611f5e7",
+        "all_candidate": [
+          7,
+          0
+        ],
+        "singleton": [
+          6,
+          0
+        ],
+        "observed": [
+          6,
+          0
+        ],
+        "zeek": [
+          6,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 41373,
+        "flow_id": "unraveled:20210621:net1013x:c04c386235bda3da29dac6a4f4188164",
+        "stable_flow_id": "unraveled:20210621:net1013x:c04c386235bda3da29dac6a4f4188164",
+        "all_candidate": [
+          13,
+          11
+        ],
+        "singleton": [
+          13,
+          10
+        ],
+        "observed": [
+          13,
+          10
+        ],
+        "zeek": [
+          13,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 41438,
+        "flow_id": "unraveled:20210621:net1013x:058a5b06ce3c0eaa9e8dc7ad0d575a8b",
+        "stable_flow_id": "unraveled:20210621:net1013x:058a5b06ce3c0eaa9e8dc7ad0d575a8b",
+        "all_candidate": [
+          9,
+          0
+        ],
+        "singleton": [
+          8,
+          0
+        ],
+        "observed": [
+          8,
+          0
+        ],
+        "zeek": [
+          8,
+          0
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S0"
+      },
+      {
+        "connection_index": 41533,
+        "flow_id": "unraveled:20210621:net1013x:c77b7765672fa282c23c2959baf494b7",
+        "stable_flow_id": "unraveled:20210621:net1013x:c77b7765672fa282c23c2959baf494b7",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 41710,
+        "flow_id": "unraveled:20210621:net1013x:6e5f7c33d4e8c522eaa66e7065c0cfa7",
+        "stable_flow_id": "unraveled:20210621:net1013x:6e5f7c33d4e8c522eaa66e7065c0cfa7",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 41862,
+        "flow_id": "unraveled:20210621:net1013x:999de474309e1d1588528a0425249db6",
+        "stable_flow_id": "unraveled:20210621:net1013x:999de474309e1d1588528a0425249db6",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 42052,
+        "flow_id": "unraveled:20210621:net1013x:d4374025dda6987bea82cf9254c96dbf",
+        "stable_flow_id": "unraveled:20210621:net1013x:d4374025dda6987bea82cf9254c96dbf",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 42174,
+        "flow_id": "unraveled:20210621:net1013x:4b7d6fb2262a7204d6417fec5d637ecd",
+        "stable_flow_id": "unraveled:20210621:net1013x:4b7d6fb2262a7204d6417fec5d637ecd",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 44856,
+        "flow_id": "unraveled:20210621:net1013x:5599389400d731819a3749c7976f3f0e",
+        "stable_flow_id": "unraveled:20210621:net1013x:5599389400d731819a3749c7976f3f0e",
+        "all_candidate": [
+          13,
+          11
+        ],
+        "singleton": [
+          13,
+          10
+        ],
+        "observed": [
+          13,
+          10
+        ],
+        "zeek": [
+          13,
+          10
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "S1"
+      },
+      {
+        "connection_index": 44882,
+        "flow_id": "unraveled:20210621:net1013x:ffebefa6523cb2846e9e39ded3a87aa6",
+        "stable_flow_id": "unraveled:20210621:net1013x:ffebefa6523cb2846e9e39ded3a87aa6",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 45042,
+        "flow_id": "unraveled:20210621:net1013x:d0902f2ffdf72b67c0cf0f9fe70bfce3",
+        "stable_flow_id": "unraveled:20210621:net1013x:d0902f2ffdf72b67c0cf0f9fe70bfce3",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 45733,
+        "flow_id": "unraveled:20210621:net1013x:1898e8d6486da288a8e41bef5da393fb",
+        "stable_flow_id": "unraveled:20210621:net1013x:1898e8d6486da288a8e41bef5da393fb",
+        "all_candidate": [
+          7,
+          9
+        ],
+        "singleton": [
+          7,
+          7
+        ],
+        "observed": [
+          7,
+          8
+        ],
+        "zeek": [
+          7,
+          8
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 45836,
+        "flow_id": "unraveled:20210621:net1013x:f64e12da81948c9b1a610b39322718f2",
+        "stable_flow_id": "unraveled:20210621:net1013x:f64e12da81948c9b1a610b39322718f2",
+        "all_candidate": [
+          2,
+          3
+        ],
+        "singleton": [
+          2,
+          1
+        ],
+        "observed": [
+          2,
+          2
+        ],
+        "zeek": [
+          2,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 45895,
+        "flow_id": "unraveled:20210621:net1013x:6f6ccca2f279c5860fc208c307a56d0c",
+        "stable_flow_id": "unraveled:20210621:net1013x:6f6ccca2f279c5860fc208c307a56d0c",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      },
+      {
+        "connection_index": 45962,
+        "flow_id": "unraveled:20210621:net1013x:6c4d767481544c2f6e2a71c1cd5da33a",
+        "stable_flow_id": "unraveled:20210621:net1013x:6c4d767481544c2f6e2a71c1cd5da33a",
+        "all_candidate": [
+          1,
+          3
+        ],
+        "singleton": [
+          1,
+          1
+        ],
+        "observed": [
+          1,
+          2
+        ],
+        "zeek": [
+          1,
+          2
+        ],
+        "ambiguous_membership": true,
+        "missed_bytes": 0,
+        "conn_state": "OTH"
+      }
+    ]
+  }
+]

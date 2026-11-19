@@ -1,0 +1,106 @@
+{
+  "connection_count": 8514,
+  "unique_associated_packet_count": 865241,
+  "https_control_count": 518,
+  "data_ack_map_reconstructed_by_bursts": 481,
+  "real_input_transformation_checks": 26,
+  "finite_set_union_checks": 600,
+  "python_compilation": "passed",
+  "model_calls": 0,
+  "new_training_batches": 0,
+  "unchanged_frozen_artifacts": {
+    "docs/coverage_basis_20261119/batch/registration.json": "1d8b0e1cdf08abb94f883520f2b91f6398465882ee7c0d7c15b663ccd1c0a72f",
+    "docs/coverage_basis_20261119/batch/rows.jsonl.gz": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c",
+    "docs/COVERAGE_BATCH_LAB_20261119.md": "a53c5a21f6a2ea97db43ffe0a1bdbbac6de099011e011c324ba86a4b4fb8b7af"
+  },
+  "artifacts": {
+    "docs/packet_interaction_20261119/.gitattributes": {
+      "bytes": 36,
+      "sha256": "ec2ed5f643c328d87bb0412e636426aa4eaaf4e7100a83ad1394f14abe3193d2"
+    },
+    "docs/packet_interaction_20261119/connection_geometry.jsonl.gz": {
+      "bytes": 1568144,
+      "sha256": "7c4058d28b879ba05b2e45892d405474232acb8982e7f92a14aa1ae2d18ef050"
+    },
+    "docs/packet_interaction_20261119/design_alternatives.md": {
+      "bytes": 13608,
+      "sha256": "8e7d0d65d5aebd9621f4e8b2280e667c5d3fde5c635ba57be1726eb05837aaa2"
+    },
+    "docs/packet_interaction_20261119/index.md": {
+      "bytes": 9869,
+      "sha256": "6ccb325cdaff9016ce964a218ada760df1284fdcbef1d80cd3bdf9312cba9790"
+    },
+    "docs/packet_interaction_20261119/mechanism_neighbors.md": {
+      "bytes": 18002,
+      "sha256": "a10e4862bdef06522bf1444fc3e3c9f91c1884927b86bba7500ae15611841647"
+    },
+    "docs/packet_interaction_20261119/packet_evidence.pdf": {
+      "bytes": 33817,
+      "sha256": "1078e2404a0970bed836711a3ff772696a7120ff157eda6de98efb3c4c19204a"
+    },
+    "docs/packet_interaction_20261119/packet_evidence.png": {
+      "bytes": 166959,
+      "sha256": "464bbbb0475646dca18dee0a8a3400a26508f9785e3a5323644b82101e5ce9b4"
+    },
+    "docs/packet_interaction_20261119/packet_sources.json": {
+      "bytes": 28660,
+      "sha256": "b4765f93c38b70634e38e36ae72386b9e09e1f8a5b031169728f347fdeea2ada"
+    },
+    "docs/packet_interaction_20261119/packet_sources.md": {
+      "bytes": 7219,
+      "sha256": "e28950ec926b23c9e85cd29c58094066d6f3aea23173631d06d6f211689a1847"
+    },
+    "docs/packet_interaction_20261119/protocol.md": {
+      "bytes": 2795,
+      "sha256": "60df36fe65ef8da54acab988dc0bb3af0318635adc7e6bde21dae361298215a8"
+    },
+    "docs/packet_interaction_20261119/real_input_invariant_checks.json": {
+      "bytes": 5726,
+      "sha256": "42f86b708c35853318dc5317c1f5908f695bff5fb4688179953c2d756cc535c0"
+    },
+    "docs/packet_interaction_20261119/relation_evidence.json": {
+      "bytes": 445025,
+      "sha256": "cfd6069c9845a6f7ea9cfe2bb6ec1acd755e55d70fa1a183a55783f753850620"
+    },
+    "docs/packet_interaction_20261119/source_association_check.json": {
+      "bytes": 119864,
+      "sha256": "a672db16c7f05aaa91612fe31c4f2f40360152820be069cb0e3857bc42a26f29"
+    },
+    "docs/packet_interaction_20261119/summary.json": {
+      "bytes": 1076171,
+      "sha256": "14257530ee8a61be8610bd5b10e8485467c1658a62b516a67eef148be5776dc8"
+    },
+    "scripts/packet_evidence/analyze_packets.py": {
+      "bytes": 8205,
+      "sha256": "03f658a7f847f255d4584b68bb38b4a6fb849a93220c15eb29ff5a5d3981572d"
+    },
+    "scripts/packet_evidence/byte_geometry.py": {
+      "bytes": 6983,
+      "sha256": "5a0c886860f6ab99a5f8fc12770ee1b741d3b326009e381cbd904baefe696e50"
+    },
+    "scripts/packet_evidence/check_geometry.py": {
+      "bytes": 1401,
+      "sha256": "9523f8251631cff3e7426feaf87617c64a1ade5846fc395cf398980af789befd"
+    },
+    "scripts/packet_evidence/extract_headers.py": {
+      "bytes": 14863,
+      "sha256": "8a0eb802edf473aa7247ca211baddfc891dfd5eb563e4a31bd34af85332b2c14"
+    },
+    "scripts/packet_evidence/plot_evidence.py": {
+      "bytes": 3754,
+      "sha256": "e1945dfafac9194316c30f0bad88cabb6d01ca9e91ab879e26a619050c7fb271"
+    },
+    "scripts/packet_evidence/relation_evidence.py": {
+      "bytes": 4996,
+      "sha256": "1d60e25eec4412cddbf36c65cddc4c9a67e1558369aa1948f50692237163ec32"
+    },
+    "scripts/packet_evidence/source_association_check.py": {
+      "bytes": 5831,
+      "sha256": "93bd481ed38ad85e8ae1618cef0342207d9015195751169ccc790d05e2929a02"
+    },
+    "scripts/packet_evidence/.gitattributes": {
+      "bytes": 17,
+      "sha256": "86013e6b9434810158ab594bbfd2d77f64b030a5eac5f27fc17afd2f474d561e"
+    }
+  }
+}

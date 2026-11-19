@@ -1,0 +1,184 @@
+[
+  {
+    "flow_id": "ait:fox:cloud_share:CyUrbMOHUoaOyKvBh",
+    "source": "ait_fox_cloud_share",
+    "packets": 4986,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:cloud_share:C0LRPs1BxbWsim55h3",
+    "source": "ait_fox_cloud_share",
+    "packets": 24,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:cloud_share:CPviQk1AaiK1nX1Phb",
+    "source": "ait_fox_cloud_share",
+    "packets": 5467,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:cloud_share:C1e6na3bo3SDpblxZ4",
+    "source": "ait_fox_cloud_share",
+    "packets": 22,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:intranet_server:C0B4oyrNss6kKpxi",
+    "source": "ait_fox_intranet_server",
+    "packets": 391,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:intranet_server:C2ttvXD90cZMNDlz",
+    "source": "ait_fox_intranet_server",
+    "packets": 585,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:intranet_server:CybYLE3LiIkxazUQLh",
+    "source": "ait_fox_intranet_server",
+    "packets": 641,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:intranet_server:COqx2c3viED3yTs56g",
+    "source": "ait_fox_intranet_server",
+    "packets": 27134,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:intranet_server:Cjaku94eD7bn5eoPj2",
+    "source": "ait_fox_intranet_server",
+    "packets": 15962,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:fox:intranet_server:C0Awx32YFHCGcTtUbb",
+    "source": "ait_fox_intranet_server",
+    "packets": 22,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:cloud_share:CQ790wXBGtHz99jsg",
+    "source": "ait_santos_cloud_share",
+    "packets": 5189,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:cloud_share:CFkbaF4fhALPkN7wu4",
+    "source": "ait_santos_cloud_share",
+    "packets": 5036,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:cloud_share:C0BOJj2u6f5R0ykJUd",
+    "source": "ait_santos_cloud_share",
+    "packets": 23,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:cloud_share:C122IK2iGBmeVzq0D7",
+    "source": "ait_santos_cloud_share",
+    "packets": 22,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:intranet_server:C1b4fbJs0oheujHYc",
+    "source": "ait_santos_intranet_server",
+    "packets": 16,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:intranet_server:C4uTbilkCIMa71AJb",
+    "source": "ait_santos_intranet_server",
+    "packets": 589,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:intranet_server:Cizxi54gjtO22AZoBe",
+    "source": "ait_santos_intranet_server",
+    "packets": 699,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:intranet_server:C31x88Ktas8beE4u7",
+    "source": "ait_santos_intranet_server",
+    "packets": 23098,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:intranet_server:CCXIoY2v3POzsti4f",
+    "source": "ait_santos_intranet_server",
+    "packets": 11997,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "ait:santos:intranet_server:CeUMZtjWyXVlwOVF7",
+    "source": "ait_santos_intranet_server",
+    "packets": 396,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "unraveled:20210621:net1013x:329ff5e1c101563e0b91b3f3eedc6b45",
+    "source": "unraveled_target",
+    "packets": 7912,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "unraveled:20210621:net1013x:0003c41636abd15007829573f8167f6a",
+    "source": "unraveled_target",
+    "packets": 71,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "unraveled:20210621:net1013x:00d691929caf2ee40c7440c88c4a6754",
+    "source": "unraveled_target",
+    "packets": 10,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "unraveled:20210621:net1013x:f102b9c435a9ebbcd9b0d5d907d7e6e8",
+    "source": "unraveled_target",
+    "packets": 3102,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "unraveled:20210621:net1013x:958b8157aaf5c1da1e4767aaa2856d1f",
+    "source": "unraveled_target",
+    "packets": 46,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  },
+  {
+    "flow_id": "unraveled:20210621:net1013x:006c4ae534533c9e1767885a98b0007b",
+    "source": "unraveled_target",
+    "packets": 31,
+    "identical_ack_refinement_preserves": true,
+    "duplicate_replay_preserves": true
+  }
+]
