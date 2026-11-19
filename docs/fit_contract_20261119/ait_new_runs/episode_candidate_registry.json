@@ -1,0 +1,2547 @@
+{
+  "selection_not_based_on_model_scores": true,
+  "allocation_suggestion": "santos whole attack chain F candidate -> fox whole attack chain V candidate; both subject to network admission",
+  "roles_not_finalized_here": true,
+  "episodes": [
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:779",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:04.700875+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:784",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:06.516883+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:789",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:08.030380+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:794",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:09.831015+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:799",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:11.867280+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:804",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:13.991809+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:809",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:16.251066+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:814",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:17.789815+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:819",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:19.355345+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:824",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:21.456871+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:829",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:23.858303+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:834",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:25.280838+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:839",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:27.801696+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:849",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:38:29.546371+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:854",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:39:03.238261+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:859",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:39:06.611481+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:864",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T12:39:11.004391+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:webshell:875",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-18T13:13:52.719343+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:download:wphashcrack",
+      "kind": "attack_download",
+      "start_utc": "2022-01-18T12:38:29.545909+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:download:password_list",
+      "kind": "attack_download",
+      "start_utc": "2022-01-18T12:39:06.609805+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": "ait:fox:wpdiscuz_complete_chain",
+      "episode_id": "ait:fox:wpdiscuz_complete_chain:reverse_shell",
+      "kind": "reverse_shell_channel",
+      "start_utc": "2022-01-18T13:14:19.012746+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:a770d656-bf76-4a01-a51b-8f3ab147d381",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T14:25:44.841089+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:b036a99a-9abf-457a-a0d1-d144ed65351d",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T14:37:15.236407+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:bfb5a521-517d-4311-ac11-9cf0e2e91845",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T14:58:14.685485+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:db232798-6b39-42a9-b33a-d370981878f5",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T14:59:12.184218+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:f8b69a0d-6e72-455f-a5b4-beb5a98065de",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T14:59:40.594963+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:16f05213-dc5a-4f5a-b34f-661f48f12bd0",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T17:43:32.991113+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:bd1fa87d-e480-4c6e-9cdf-cac50b233cea",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T17:50:49.248342+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:0fa38f22-476d-4f51-968c-8c426b027f23",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T18:00:55.083321+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:b7dea6bd-4e11-4163-a173-ef869072b894",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T18:13:27.308550+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:56653088-831c-42a1-9911-0fee48e662d8",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T18:22:04.752038+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:ff6ee00d-e443-4a34-9874-7defabf7dbdb",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T18:28:41.924515+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:e296566c-685a-4f28-a751-05f6b04d73ac",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T07:33:31.814550+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:9a236359-0839-433a-a007-bcfc33a5b9be",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T07:42:53.418722+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:4497b880-f9e2-4da3-a784-6fb25712b661",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T08:14:03.581771+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:239b8045-083c-4d9d-9a57-f857f9af7b74",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T12:48:52.415170+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:437a5c54-9010-4ab4-8f7c-fda4150f0d38",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:02:43.779363+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:dd418165-8f61-411b-9bd2-2a71cc99624d",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:08:50.644536+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:74372be7-45a0-4719-b020-2b6597a5a2d2",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T13:23:45.513001+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:049ee1e9-2be6-4e76-b90d-2b83bb95b66a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T14:06:35.357514+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:9ebd74a1-e314-4451-9144-810e66e8717b",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T15:02:10.610319+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:d4920ce9-43a2-4f4a-a6b1-f89823f596ca",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T15:07:56.567241+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:f10d4767-3579-417e-9a1e-7aeb5bba2988",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T08:21:33.676485+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:0d8e9cda-a0d4-4887-b160-35871c4a98b7",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T08:36:16.262217+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:fd4e23d2-7152-4b94-904b-25937ad84147",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T09:49:32.845710+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:5688f11b-e044-4a6c-ad5f-eb669efb5569",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T10:17:30.611257+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:67fe92a9-2576-432c-b488-311cc4fdba7d",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T10:25:52.054579+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:e7db0b2c-d5ab-4d33-9a21-3ab45774ee61",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T11:26:10.594285+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:5b7b3ba2-792a-4029-a59f-71e54887c42a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T11:36:00.297096+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:f0f7de7a-1d84-495d-95ca-de91d323e807",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T11:43:54.887233+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:43bd0fe5-7bb9-471a-be71-e0998fc20db8",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T12:22:18.171212+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:8a9a0f9a-a522-478c-aacb-c98526145dc8",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T12:59:40.210491+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:b25da077-7fa2-4f5d-9da9-541494e14a74",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T13:18:30.865566+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:ee7737c0-cd03-4c4f-bf00-21f574b5b399",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T13:37:18.923969+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:e490d03f-6d6f-436e-bca2-de47225a1fcb",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T17:25:11.634674+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:e2064807-a8dc-4e1c-a280-fc2bb9e0b3f9",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T17:25:49.216359+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:9e2a64fe-ed29-4a13-b1b2-6fe84ccd6e8e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T17:35:03.978834+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:66a80cf3-0c62-42e9-bbd1-a39e0d8380c3",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T18:05:30.376984+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:71c052fa-c69f-413f-93ce-962cd409f67b",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T18:38:54.988185+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:6ee99610-0580-43fc-9ca4-fe42311b2fab",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T18:48:19.482575+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:252f6f6a-4327-4211-8c34-0ae376232b01",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T10:13:37.821551+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:f50067e3-e8f3-42d3-95c3-6fb8fbafaf01",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T10:21:35.790468+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:1dd7452c-501d-49a1-84c1-937a9894b22a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T10:34:11.215603+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:7a89c2cb-7a1a-4756-b1b9-8b7511ecb60b",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T14:42:19.125332+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:030919f6-047e-4d51-9619-4a04c01fa03c",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T18:27:14.214918+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:b653e760-9378-4ff4-970a-cdb7f97efd29",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T18:35:28.631424+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:b58cf4f9-bf79-4234-b84f-50f9d3abb288",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T18:44:53.394819+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:473c753c-51bf-4dfa-a024-1f791353087f",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T18:52:17.286318+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:db1fa3cf-782b-41cc-9151-81130892ab7e",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T11:50:20.977853+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:b50772cf-381f-4d54-8e06-b9276c0effe5",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T16:37:38.192586+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:cba3160d-feae-468a-accc-64ee7c7c2964",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T16:40:06.208563+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:ab661245-e38d-42c5-8e8d-fcad82582e6d",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T16:42:20.224425+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:85b544bc-149e-48ee-9a4c-8f5c24b6d938",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T16:55:57.424584+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_0:de0aa770-7820-4eb5-9d27-7686ea96513e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T17:12:11.026995+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:9d453a92-ab78-44f4-a4b6-7a104168702e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T07:49:23.321575+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:0622f139-1192-45c8-97bc-7f9cf9487740",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T07:49:59.438265+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:1c643f96-7a3e-432d-82f4-93d92e8ce94a",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T07:51:09.378428+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:936ed0ea-f4c8-4180-93c4-a030ecb577f5",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T08:01:17.699116+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:60cd1660-1615-411a-a684-90577e580e93",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T09:46:05.429756+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:1277aaff-59f0-45d8-9f13-1592a5eeef67",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T10:19:47.238037+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:caa52fb0-1ccd-41a5-99df-7ab0af31a04b",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T11:01:03.351563+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:2dadfeee-d62e-4403-aaf9-6c745ca7dfd8",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T11:14:22.818270+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:bbfc2d31-70ba-4c40-8d52-6b4c0faf3768",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T11:43:45.977782+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:c6b1b706-953d-4992-a51a-377e2fca2bae",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T19:09:19.682723+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:0cb33b98-9ed1-479a-bba5-0b3323a8d5b6",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T11:48:39.015319+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:de0da74f-be9e-4cd6-8e39-41ce59d31ddd",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:48:56.226316+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:4f940169-123b-4089-8566-78cdee1daee4",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:49:59.366261+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:112cdb09-0bd9-472f-96a4-ac2809c7a7f2",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:50:34.662524+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:add52923-badd-41a5-bd63-bbfa2b5cfbd3",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:51:12.618322+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:8867287d-2907-49af-9b7f-40977898a7d0",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:51:51.686994+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:0c2b7a44-aef5-4b46-92c9-8aa883342f61",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T15:45:38.258974+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:14120911-03c8-4601-ae8c-84dbd0404749",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T15:51:10.854487+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:d633a736-f365-43ca-9313-d55e625073c6",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T16:46:17.662938+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:0232ecee-fd6f-4ab4-b7e1-9ca2665f14f0",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T16:51:50.290282+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:ee42cde1-9d76-4d57-aa45-9e46d97a68fc",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T06:50:10.613296+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:41316986-d771-4c8b-b24a-be9224257629",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T06:57:18.404674+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:c816887d-280a-4bcc-951b-5bd8c94c9093",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T08:56:00.412703+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:308281aa-cf0c-4079-a40b-d174f95f4048",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T11:54:33.028303+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:4225a07b-c839-43e6-b53d-4ad6bde6aac9",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T16:45:19.881535+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:1afa9e8d-f0c1-4fbc-8443-a699a729b76b",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T16:59:05.244289+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:e709089e-692e-47d4-80bb-fba65fe8778b",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T11:44:33.257621+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:3f94394e-7e67-4200-a46f-9daf11c00a4a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T11:51:24.580643+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:0f6c5510-6c30-4580-9533-c94b214db931",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T12:56:56.620912+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:e54033dc-66fb-4bd5-b9b7-b1357fa88287",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T14:11:36.180463+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:f90aa8a6-8268-41c6-a00c-d5076f785b23",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T14:41:11.570282+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:8f6e7a83-42e3-418c-8d41-0852b9ed181f",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T14:42:33.999771+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:88b460a2-60be-4c70-ad5b-97f742ba06f5",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T14:58:57.146672+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:7842a050-42d8-4b84-8088-87a2bf2f308e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T15:10:42.310202+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:954e69d3-3bc6-45ae-9378-74f1a985549f",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T15:45:42.765030+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:d277e68c-30f1-4f30-9714-07dfe83e3fd3",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T15:55:12.102514+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:75933fa6-dd10-4523-b60e-2e488c38b0b2",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-18T15:58:43.132094+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:ad544cf4-2b4c-4ff3-a809-75a0065c9697",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-18T16:20:00.883553+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:d13bd68a-c78b-459b-b32d-81cf9f382a70",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T10:10:22.209797+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:f2d7f39c-b1ef-440e-8676-4ea10b9ec9ea",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T10:16:18.216956+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:42f19fea-5b76-445a-87c6-ab0ff968bd52",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T10:28:03.899196+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:35e8e201-6b64-458f-8cef-f3ab1fd40f38",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T10:38:32.716253+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:09e96592-0bf5-4f7b-97b5-89dbbf2190f4",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T13:33:07.304251+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:207c2505-e897-4a34-94a9-b0bc4248cd1c",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T13:57:08.343807+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:a50b8508-0128-4893-a4e0-107b391a3bae",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T14:06:18.303087+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:69215fa2-8171-4f3f-8cf1-d9f2478716dc",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-19T14:15:09.890951+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "fox",
+      "chain_id": null,
+      "episode_id": "ait:fox:normal:internal_employee_1:25d1b5d9-8c3e-4299-97c7-a7070d5982c4",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-19T20:43:45.595351+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\fox_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:231",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:00.335015+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:236",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:03.505071+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:241",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:07.250675+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:246",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:11.347859+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:251",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:14.746600+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:256",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:16.507547+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:261",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:19.160369+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:266",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:21.140892+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:271",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:22.841420+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:276",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:26.208453+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:281",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:28.964707+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:286",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:31.348675+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:291",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:35.239541+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:296",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:37.536623+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:301",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:39.857337+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:306",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:41.654974+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:311",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:43.552339+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:316",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:45.248149+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:321",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:48.832204+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:326",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:51.190648+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:331",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:54.733961+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:336",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:57.425693+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:341",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:23:59.247422+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:346",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:01.058799+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:351",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:04.144998+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:356",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:07.405001+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:361",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:11.058174+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:366",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:14.061260+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:376",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:16.203269+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:381",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:35.562096+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:386",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:39.172561+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:391",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:24:45.300549+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:webshell:402",
+      "kind": "webshell_command",
+      "start_utc": "2022-01-17T11:57:37.933125+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:download:wphashcrack",
+      "kind": "attack_download",
+      "start_utc": "2022-01-17T11:24:16.202739+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:download:password_list",
+      "kind": "attack_download",
+      "start_utc": "2022-01-17T11:24:39.171834+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": "ait:santos:wpdiscuz_complete_chain",
+      "episode_id": "ait:santos:wpdiscuz_complete_chain:reverse_shell",
+      "kind": "reverse_shell_channel",
+      "start_utc": "2022-01-17T11:58:04.208604+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:c8d25367-31d1-4fe2-81e2-e0201fa0ef42",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T09:40:12.606169+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:d6e22e06-f5db-4315-91b6-0f4517c488fe",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T12:08:12.465018+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:dd7746c1-16ed-4c92-bd21-a27ab31258bf",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T13:20:00.644448+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:927e44c6-5501-42bf-9725-6f88af0f4d6d",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T13:20:57.295557+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:8d76da92-3f3e-4023-8e1f-4270f6b920c2",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T13:43:43.302990+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:21cc8c1f-c06a-4629-95d6-458186590afe",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T13:48:11.534582+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:f338330b-0916-482d-ae22-1d3507109d55",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T13:57:06.222226+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:a2af2f92-d73b-4965-8540-0e840535c311",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T14:06:15.542952+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:e77a5f67-89c0-4524-a7cb-92edbe20ae7f",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T14:14:31.304944+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:69518ed6-5a66-4d74-b97d-33d14ffaa21a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T14:26:42.150180+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:9272fb12-9b94-4299-86e5-325a3b49d3f5",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T08:00:10.231658+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:31ce49d2-b331-44ac-b545-0cf1f409aaad",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T08:11:01.718693+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:65352531-d683-4b10-b72c-4c4359757c46",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T09:22:13.250996+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:70c09db1-87ed-487e-90b6-8d238406175d",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T09:33:32.457657+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:c2be1507-e83c-46d9-a2b3-0f049eeb55bd",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T09:44:06.984423+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:bb1448a9-4312-4a5f-86db-c8bf394a3846",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T11:12:55.144475+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:acc0acad-548f-4432-a1ae-5a4d53731b3a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T12:04:30.917922+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:a99a683d-e5b3-4a99-87a2-6cbfa33c1a4a",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T13:44:50.704587+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:3a72d113-27f5-40ae-8874-525c27e3402e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T13:46:33.199058+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:e9e0ac1b-4fa5-45a6-894d-142f658de2bf",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T06:27:11.365690+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:d32b6d97-87cb-4a7e-9c34-12f6896d7fa8",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T06:40:13.067163+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:27a26c2b-5174-4b36-9163-33a028637e44",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T08:57:41.587244+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:b540c056-99d9-4fb0-bd7f-4b8ab8588d4d",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T09:04:07.696105+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:accbc4c6-304c-4682-8b64-a3ba1a35fcc1",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T09:15:23.618909+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:2f33c4ca-9919-48e9-8b9a-1e6734a15991",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T14:14:33.033079+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:613c3de8-f279-49cf-b46b-f82530f722b6",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T14:40:54.697132+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:7784c961-2505-4d1f-8ab0-b4c9448782b5",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T15:17:55.385732+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:3908f081-a4ef-4bf8-9118-46c044956d27",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T17:07:51.483117+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:58b02562-b393-42ac-9e41-a69e97d88842",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T07:39:28.900300+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:21be5507-a6d1-4f9e-b1f2-d88e4314c349",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T07:40:13.533550+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:5bc28feb-6a84-4629-b57e-0822f49d5415",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T09:56:26.540215+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:cb7cbfd4-53fb-405f-953a-f40090a63880",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T09:57:05.348161+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:754a2868-fa55-4802-afeb-742f861d1b69",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T09:58:09.279269+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:29122aef-65c6-4834-bf67-16ccfc7b153e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T10:00:03.388030+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:7bd9e329-4ad1-4ac1-90e0-00ff82083515",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T10:15:52.250414+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:2dc1b8d0-666d-4abb-bde8-b6625d1a55b1",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T10:17:06.325290+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:d373d9f5-19a6-4051-a99b-7a4b5fc8f487",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T10:17:35.638899+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:43f5d937-f8ed-434f-a1ae-39134b356d42",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T10:24:37.470745+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:266fccac-6950-4baf-b67f-f4bec1d7a162",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T10:25:19.668036+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:99788f0e-628f-4779-87e1-a68b1d661965",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T12:07:33.941343+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:1e1f2cde-aec9-4042-a6bc-609074769fe4",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T12:22:18.008892+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:9905cab9-1820-4c41-84b9-76ea5f5aadc9",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T15:15:34.816461+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_0:c46a8fa0-968e-46fe-88ec-db7c97f78bf2",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T15:23:42.960374+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:89258053-5997-4061-bb0c-82adc0fa5b44",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T10:23:56.275343+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:7c1872f1-0670-4507-a6c8-f98641cad962",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-14T15:41:24.227848+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:bfceb332-eb91-4901-a36a-005b13aa3630",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T16:49:30.844236+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:76a7dd1e-9fb3-4d58-b20c-2d8dfe7afcae",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T16:51:21.608396+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:3d2811d6-9e44-4e5b-ac9b-78e210e48ebc",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T17:05:25.103050+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:b5226549-3485-41a3-b003-926de7266b83",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T17:06:14.696903+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:e6d81c1f-aaaf-46a1-9959-6d4a0d75a9b3",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T17:07:09.951457+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:63ab788d-f7ee-433b-a19a-a65b4a6feee3",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T17:08:02.645307+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:789e5e65-7fc7-4a9e-a2a2-94be7809c47e",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T18:13:29.426090+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:9d9ba087-e143-4c52-8a9b-d5ea57e6cddb",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-14T19:35:41.132505+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:6f5162ec-8372-4bed-89eb-bd71aba828e6",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T10:42:56.573715+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:e3867314-bf7c-4baa-8537-1c1e8c4e4dda",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T10:58:30.414931+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:ddc07100-a084-46aa-8961-c458c946bbb2",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T11:03:29.524811+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:1cd0aca0-0881-4ea7-b038-00757808ccb9",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T12:47:51.436471+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:59e441c8-7b9b-4a89-8327-928c554a6cd2",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T12:57:01.970917+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:29206c66-97b0-4f2f-920f-3f72dfb7d121",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T13:47:15.082440+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:9c3838c4-2acc-4b19-99ff-44188dcaacad",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T16:18:00.085759+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:eefd5886-c59f-491e-9017-4e5067e144b9",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-15T16:24:15.057729+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:36063c4a-4329-4516-bf37-ec9177df649d",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T18:08:25.707219+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:d3b8b4b7-e5f2-4278-bcd7-1c143f7c9046",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-15T18:28:20.361512+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:b6b28688-ff44-4268-aac3-2542bee09845",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T08:44:04.110875+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:719832a6-d31d-4d67-ac89-2c7bd1f95e27",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T11:47:10.203757+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:985691a3-7ba2-4ad7-8a85-2567f0e941dd",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T12:51:29.823000+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:9e284cbe-2b50-4cfe-b344-80e34202fd05",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:38:56.401158+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:3e0fa102-21b4-4249-8e14-948754fedc24",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T13:43:48.131587+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:3d50c486-1642-4aca-a74e-6d677283ce2b",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T14:04:42.332305+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:692a2055-124c-4da3-8638-9b0a01b9119f",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T14:05:23.890885+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:7949eaf6-7eb1-4187-95e6-0712614c19e2",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T16:22:53.118174+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:cb8b73f4-59b7-4c1f-987e-bcf3fe2b426c",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T16:27:14.720213+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:59e011a8-e1c1-43f7-9f40-bb8ee494d92c",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T17:22:15.564041+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:44ee3fe1-ec2d-4aaa-9380-be6cfe3a9d0b",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T17:26:12.977642+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:fa2f5c0d-0d93-4159-b7c5-ac4de05fd74c",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T18:29:55.886038+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:4cc402e7-2c0d-4c19-88d8-ec7ee8708957",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T18:38:14.706592+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:48dd13ba-454f-45e0-8e25-fd4e9d72ac30",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T19:14:41.200954+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:7cd8f12b-7a39-409b-b6eb-587b9f692120",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T19:26:48.392961+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:034e1729-7379-4e0c-ade8-da946c91e8a8",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T20:21:48.195543+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:319c8d50-44b8-4004-9efd-e1004d8958d9",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-16T21:33:06.670925+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:12fb8829-f426-4041-8688-d7fd0aa2e113",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-16T22:15:36.881190+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:3e787430-8c23-4f8c-b585-81cf75e63849",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T09:51:32.644464+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:a019e422-a050-4211-bb09-5857805683a1",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T10:43:31.083877+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:a35cf62e-14ea-4bba-a379-d2ed94ae74c9",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T13:06:20.671375+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:93a44aec-4200-49ed-8459-8d514c5de0ed",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T13:09:21.323805+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:6f779747-867c-41d7-87e0-19ac3c75486a",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T17:23:07.958813+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:c90262d4-37dc-4be3-9a63-3151adfbd4e6",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T18:01:20.874026+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:a04f74e3-269a-47a8-9499-9c5d462138ae",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T18:10:03.375805+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:fbc9e785-5c57-4ba9-9951-b167b720bc87",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T19:49:46.734916+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:2a8c77ae-0a4f-419e-868d-43928c5e4c23",
+      "kind": "normal_intranet_page_retrieval",
+      "start_utc": "2022-01-17T19:54:54.501185+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:38d8e2f9-d449-4d7a-adf7-55beada654cd",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T20:09:58.662428+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:19b726d3-1f89-439e-bebe-312f27f41949",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T20:17:40.051320+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:d7478b86-cdd9-473f-977a-513e5be4d5de",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T20:52:54.978270+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:240e9e5e-f345-4192-9def-7af442cfc236",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T21:01:15.882076+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:18ec9719-4be8-4aff-b5a9-fd2134d44554",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T21:01:50.747275+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:0744b168-b080-4ad7-b0dd-a203ede0b0a4",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T21:02:37.685607+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    },
+    {
+      "run": "santos",
+      "chain_id": null,
+      "episode_id": "ait:santos:normal:internal_employee_1:a3f9d639-692c-4655-9a98-71f89677bd90",
+      "kind": "normal_owncloud_file_download",
+      "start_utc": "2022-01-17T21:11:52.657315+00:00",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\santos_action_candidates.json",
+      "network_admission": "see_actual_network_mapping",
+      "network_mapping_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl"
+    }
+  ]
+}

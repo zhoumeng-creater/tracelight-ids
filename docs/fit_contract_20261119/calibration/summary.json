@@ -1,0 +1,33 @@
+{
+  "schema": "ait-normal-calibration-candidates-v1",
+  "score_calls": 0,
+  "training_calls": 0,
+  "base_packet_candidates": 38,
+  "qualified_physical_connections": 25,
+  "qualified_model_rows": 25,
+  "rejection_reason_counts": {
+    "backend_transaction_has_unqualified_actor_explanation": 13,
+    "whole_envelope_contains_other_or_VPN_proxy_actor_candidates": 13
+  },
+  "group": "ait:russellmitchell:complete_run",
+  "proposed_role": "normal_calibration_C",
+  "cohort": "previously proven normal download request-bearing records with all full-envelope service-request candidates qualified",
+  "not_whole_network_normal_population": true,
+  "unique_physical_IDs": true,
+  "high_probability_one_percent_guarantee_claimed": false,
+  "known_benign_actors": {
+    "10.143.2.25": "internal_employee_2",
+    "10.143.3.65": "internal_employee_3"
+  },
+  "inputs_sha256": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\assemble_ait_normal_manifest.py": "ede7c2d6c12314b7756a02c6c79050744b1fcdf23713cba88d59232ebb454085",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.1": "b87709fc6b7385ae12324688892f5a7ded0f9967951e4297862c9b8b0d008294",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.1": "dd84f0feb1700360023d7d821aa5b2dd2602b0890f18b536ea80f9e3a414b134",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\webserver\\logs\\apache2\\cloud.smith.russellmitchell.com-access.log.4": "34fa3568b528da7b8387c48b3fcfadddb38b2c1b6ea2505e18a6b9f92208fef9",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立来源与算法主线_20261118\\ait_small_sources\\gather\\cloud_share\\logs\\apache2\\other_vhosts_access.log.4": "0c140f45b8367d20f876ed853252fa41e8908f8c8505b7339c1b2ee5e8d9b987",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\checksum_semantics.json": "62154996b205bee25700949179fdd5955ce8d12a388d6908290f390f8725a0dc",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\normal_event_connections.json": "8c7e25653a99ea5521967a6ea159ef87d8f55054aec7a31a4319f597e77db6ef",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\referenced_connections.jsonl": "2e60e95ad6351b48a172a0f99c34fdb206c3da9d8cd890ed03b91565ec483c26"
+  },
+  "script_sha256": "8d04b552da54bc39202345309b87f4a1f9bcb43b00bc7d18d4bb255acac0108a"
+}

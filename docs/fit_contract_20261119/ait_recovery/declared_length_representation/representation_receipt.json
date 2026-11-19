@@ -1,0 +1,773 @@
+{
+  "intranet": {
+    "source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait_attack\\source\\log.pcap.1642684613",
+    "source_sha256": "12c798074e27969ea40719700ecc8cb07ecda76e4f0751d746e02e2398067790",
+    "derived": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\declared_length_representation\\intranet-declared-length.pcap",
+    "derived_sha256": "96f342e34f387b521999c70572915f97918b1fc7b2f95b87bb8836bafa2e808c",
+    "full_capture_context_retained": true,
+    "derived_is_original_noop": false,
+    "all_records": 688941,
+    "changed_records": 28115,
+    "unchanged_timestamps_caplen_frame_bytes_sha256": "7ef44405f1d040eaed00a1b6da13deec3c8de64f8a649f3473217a7624d99dd3",
+    "change_journal": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\declared_length_representation\\intranet-record-changes.jsonl.gz",
+    "change_journal_sha256": "01485408759c66a1ff4405418810283cf18e643b6086a63e8ef4b98e6c1ddfed",
+    "counts": {
+      "3545": {
+        "origin": {
+          "packets": 167,
+          "declared_ip_bytes": 9538
+        },
+        "responder": {
+          "packets": 426,
+          "declared_ip_bytes": 528937
+        }
+      },
+      "3546": {
+        "origin": {
+          "packets": 148,
+          "declared_ip_bytes": 8550
+        },
+        "responder": {
+          "packets": 435,
+          "declared_ip_bytes": 529422
+        }
+      },
+      "3547": {
+        "origin": {
+          "packets": 138,
+          "declared_ip_bytes": 8044
+        },
+        "responder": {
+          "packets": 432,
+          "declared_ip_bytes": 529851
+        }
+      },
+      "3548": {
+        "origin": {
+          "packets": 129,
+          "declared_ip_bytes": 7558
+        },
+        "responder": {
+          "packets": 438,
+          "declared_ip_bytes": 529613
+        }
+      },
+      "3549": {
+        "origin": {
+          "packets": 153,
+          "declared_ip_bytes": 8822
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 530104
+        }
+      },
+      "3550": {
+        "origin": {
+          "packets": 114,
+          "declared_ip_bytes": 6782
+        },
+        "responder": {
+          "packets": 422,
+          "declared_ip_bytes": 528877
+        }
+      },
+      "3551": {
+        "origin": {
+          "packets": 141,
+          "declared_ip_bytes": 8174
+        },
+        "responder": {
+          "packets": 435,
+          "declared_ip_bytes": 529463
+        }
+      },
+      "3552": {
+        "origin": {
+          "packets": 117,
+          "declared_ip_bytes": 6934
+        },
+        "responder": {
+          "packets": 424,
+          "declared_ip_bytes": 529188
+        }
+      },
+      "3553": {
+        "origin": {
+          "packets": 155,
+          "declared_ip_bytes": 8926
+        },
+        "responder": {
+          "packets": 431,
+          "declared_ip_bytes": 529744
+        }
+      },
+      "3554": {
+        "origin": {
+          "packets": 138,
+          "declared_ip_bytes": 8018
+        },
+        "responder": {
+          "packets": 432,
+          "declared_ip_bytes": 529307
+        }
+      },
+      "3555": {
+        "origin": {
+          "packets": 167,
+          "declared_ip_bytes": 9554
+        },
+        "responder": {
+          "packets": 432,
+          "declared_ip_bytes": 529994
+        }
+      },
+      "3556": {
+        "origin": {
+          "packets": 151,
+          "declared_ip_bytes": 8712
+        },
+        "responder": {
+          "packets": 413,
+          "declared_ip_bytes": 528650
+        }
+      },
+      "3557": {
+        "origin": {
+          "packets": 165,
+          "declared_ip_bytes": 9442
+        },
+        "responder": {
+          "packets": 436,
+          "declared_ip_bytes": 529636
+        }
+      },
+      "3558": {
+        "origin": {
+          "packets": 159,
+          "declared_ip_bytes": 9116
+        },
+        "responder": {
+          "packets": 421,
+          "declared_ip_bytes": 529849
+        }
+      },
+      "3559": {
+        "origin": {
+          "packets": 187,
+          "declared_ip_bytes": 10596
+        },
+        "responder": {
+          "packets": 487,
+          "declared_ip_bytes": 595414
+        }
+      },
+      "3560": {
+        "origin": {
+          "packets": 154,
+          "declared_ip_bytes": 8856
+        },
+        "responder": {
+          "packets": 423,
+          "declared_ip_bytes": 528809
+        }
+      },
+      "3561": {
+        "origin": {
+          "packets": 130,
+          "declared_ip_bytes": 7626
+        },
+        "responder": {
+          "packets": 437,
+          "declared_ip_bytes": 529669
+        }
+      },
+      "3562": {
+        "origin": {
+          "packets": 136,
+          "declared_ip_bytes": 7932
+        },
+        "responder": {
+          "packets": 430,
+          "declared_ip_bytes": 530486
+        }
+      },
+      "3563": {
+        "origin": {
+          "packets": 130,
+          "declared_ip_bytes": 7606
+        },
+        "responder": {
+          "packets": 429,
+          "declared_ip_bytes": 529081
+        }
+      },
+      "3564": {
+        "origin": {
+          "packets": 155,
+          "declared_ip_bytes": 8988
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 531575
+        }
+      },
+      "3565": {
+        "origin": {
+          "packets": 121,
+          "declared_ip_bytes": 7142
+        },
+        "responder": {
+          "packets": 431,
+          "declared_ip_bytes": 530922
+        }
+      },
+      "3566": {
+        "origin": {
+          "packets": 131,
+          "declared_ip_bytes": 7682
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 530497
+        }
+      },
+      "3567": {
+        "origin": {
+          "packets": 160,
+          "declared_ip_bytes": 9182
+        },
+        "responder": {
+          "packets": 434,
+          "declared_ip_bytes": 529470
+        }
+      },
+      "3568": {
+        "origin": {
+          "packets": 122,
+          "declared_ip_bytes": 7210
+        },
+        "responder": {
+          "packets": 422,
+          "declared_ip_bytes": 529927
+        }
+      },
+      "3569": {
+        "origin": {
+          "packets": 154,
+          "declared_ip_bytes": 8980
+        },
+        "responder": {
+          "packets": 439,
+          "declared_ip_bytes": 530546
+        }
+      },
+      "3570": {
+        "origin": {
+          "packets": 165,
+          "declared_ip_bytes": 9442
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 530012
+        }
+      },
+      "3571": {
+        "origin": {
+          "packets": 162,
+          "declared_ip_bytes": 9278
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 529374
+        }
+      },
+      "3572": {
+        "origin": {
+          "packets": 162,
+          "declared_ip_bytes": 9280
+        },
+        "responder": {
+          "packets": 426,
+          "declared_ip_bytes": 529545
+        }
+      },
+      "3573": {
+        "origin": {
+          "packets": 168,
+          "declared_ip_bytes": 9686
+        },
+        "responder": {
+          "packets": 425,
+          "declared_ip_bytes": 528873
+        }
+      },
+      "3574": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 1242
+        },
+        "responder": {
+          "packets": 9,
+          "declared_ip_bytes": 5785,
+          "orig_len_changes": 1
+        }
+      },
+      "3575": {
+        "origin": {
+          "packets": 6872,
+          "declared_ip_bytes": 380100
+        },
+        "responder": {
+          "packets": 17814,
+          "declared_ip_bytes": 56564066,
+          "orig_len_changes": 15935
+        }
+      },
+      "3576": {
+        "origin": {
+          "packets": 188,
+          "declared_ip_bytes": 10650
+        },
+        "responder": {
+          "packets": 421,
+          "declared_ip_bytes": 529536
+        }
+      },
+      "3577": {
+        "origin": {
+          "packets": 155,
+          "declared_ip_bytes": 8962
+        },
+        "responder": {
+          "packets": 415,
+          "declared_ip_bytes": 528353
+        }
+      },
+      "3578": {
+        "origin": {
+          "packets": 8320,
+          "declared_ip_bytes": 432813
+        },
+        "responder": {
+          "packets": 12529,
+          "declared_ip_bytes": 140574009,
+          "orig_len_changes": 12179
+        }
+      },
+      "3579": {
+        "origin": {
+          "packets": 134,
+          "declared_ip_bytes": 7990
+        },
+        "responder": {
+          "packets": 427,
+          "declared_ip_bytes": 529138
+        }
+      }
+    },
+    "only_orig_len_changed_verified": true
+  },
+  "cloud": {
+    "source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647",
+    "source_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+    "derived": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647",
+    "derived_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+    "full_capture_context_retained": true,
+    "derived_is_original_noop": true,
+    "all_records": 959549,
+    "changed_records": 0,
+    "unchanged_timestamps_caplen_frame_bytes_sha256": "d5f11d7f316de787d2f3b2845349e3b24917ac51792018f7555251330e11389c",
+    "change_journal": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\declared_length_representation\\cloud-record-changes.jsonl.gz",
+    "change_journal_sha256": "2bd3ffe38b7a7cee279608ca9fa1a24ae26f8baca012127b44f8a0b19567158b",
+    "counts": {
+      "1783": {
+        "origin": {
+          "packets": 109,
+          "declared_ip_bytes": 8817
+        },
+        "responder": {
+          "packets": 405,
+          "declared_ip_bytes": 568428
+        }
+      },
+      "1873": {
+        "origin": {
+          "packets": 341,
+          "declared_ip_bytes": 19172
+        },
+        "responder": {
+          "packets": 4397,
+          "declared_ip_bytes": 6359868
+        }
+      },
+      "2163": {
+        "origin": {
+          "packets": 57,
+          "declared_ip_bytes": 4595
+        },
+        "responder": {
+          "packets": 190,
+          "declared_ip_bytes": 258289
+        }
+      },
+      "3827": {
+        "origin": {
+          "packets": 52,
+          "declared_ip_bytes": 5371
+        },
+        "responder": {
+          "packets": 191,
+          "declared_ip_bytes": 260260
+        }
+      },
+      "3832": {
+        "origin": {
+          "packets": 70,
+          "declared_ip_bytes": 5277
+        },
+        "responder": {
+          "packets": 401,
+          "declared_ip_bytes": 565286
+        }
+      },
+      "3843": {
+        "origin": {
+          "packets": 24,
+          "declared_ip_bytes": 3971
+        },
+        "responder": {
+          "packets": 41,
+          "declared_ip_bytes": 45165
+        }
+      },
+      "3889": {
+        "origin": {
+          "packets": 19,
+          "declared_ip_bytes": 2632
+        },
+        "responder": {
+          "packets": 38,
+          "declared_ip_bytes": 43090
+        }
+      },
+      "4469": {
+        "origin": {
+          "packets": 13,
+          "declared_ip_bytes": 3300
+        },
+        "responder": {
+          "packets": 12,
+          "declared_ip_bytes": 5887
+        }
+      },
+      "4470": {
+        "origin": {
+          "packets": 98,
+          "declared_ip_bytes": 7729
+        },
+        "responder": {
+          "packets": 402,
+          "declared_ip_bytes": 566368
+        }
+      },
+      "4628": {
+        "origin": {
+          "packets": 113,
+          "declared_ip_bytes": 8106
+        },
+        "responder": {
+          "packets": 400,
+          "declared_ip_bytes": 566583
+        }
+      },
+      "4629": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 2024
+        },
+        "responder": {
+          "packets": 11,
+          "declared_ip_bytes": 4630
+        }
+      },
+      "4630": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 2026
+        },
+        "responder": {
+          "packets": 11,
+          "declared_ip_bytes": 4462
+        }
+      },
+      "4638": {
+        "origin": {
+          "packets": 50,
+          "declared_ip_bytes": 4028
+        },
+        "responder": {
+          "packets": 186,
+          "declared_ip_bytes": 258081
+        }
+      },
+      "4780": {
+        "origin": {
+          "packets": 51,
+          "declared_ip_bytes": 4091
+        },
+        "responder": {
+          "packets": 189,
+          "declared_ip_bytes": 258236
+        }
+      },
+      "4784": {
+        "origin": {
+          "packets": 78,
+          "declared_ip_bytes": 5502
+        },
+        "responder": {
+          "packets": 401,
+          "declared_ip_bytes": 565274
+        }
+      },
+      "17101": {
+        "origin": {
+          "packets": 360,
+          "declared_ip_bytes": 24455
+        },
+        "responder": {
+          "packets": 4416,
+          "declared_ip_bytes": 6366028
+        }
+      },
+      "17178": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 2024
+        },
+        "responder": {
+          "packets": 11,
+          "declared_ip_bytes": 4642
+        }
+      },
+      "17179": {
+        "origin": {
+          "packets": 1401,
+          "declared_ip_bytes": 75101
+        },
+        "responder": {
+          "packets": 5579,
+          "declared_ip_bytes": 7950953
+        }
+      },
+      "17180": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 2026
+        },
+        "responder": {
+          "packets": 11,
+          "declared_ip_bytes": 4474
+        }
+      },
+      "17195": {
+        "origin": {
+          "packets": 375,
+          "declared_ip_bytes": 20942
+        },
+        "responder": {
+          "packets": 4397,
+          "declared_ip_bytes": 6359880
+        }
+      },
+      "17197": {
+        "origin": {
+          "packets": 287,
+          "declared_ip_bytes": 16366
+        },
+        "responder": {
+          "packets": 4398,
+          "declared_ip_bytes": 6359932
+        }
+      },
+      "17200": {
+        "origin": {
+          "packets": 269,
+          "declared_ip_bytes": 16337
+        },
+        "responder": {
+          "packets": 4398,
+          "declared_ip_bytes": 6361839
+        }
+      },
+      "17357": {
+        "origin": {
+          "packets": 75,
+          "declared_ip_bytes": 6241
+        },
+        "responder": {
+          "packets": 401,
+          "declared_ip_bytes": 567193
+        }
+      },
+      "17471": {
+        "origin": {
+          "packets": 337,
+          "declared_ip_bytes": 21371
+        },
+        "responder": {
+          "packets": 4398,
+          "declared_ip_bytes": 6362650
+        }
+      },
+      "17473": {
+        "origin": {
+          "packets": 120,
+          "declared_ip_bytes": 7881
+        },
+        "responder": {
+          "packets": 751,
+          "declared_ip_bytes": 1064540
+        }
+      },
+      "17486": {
+        "origin": {
+          "packets": 299,
+          "declared_ip_bytes": 17180
+        },
+        "responder": {
+          "packets": 4398,
+          "declared_ip_bytes": 6359919
+        }
+      },
+      "17507": {
+        "origin": {
+          "packets": 121,
+          "declared_ip_bytes": 8969
+        },
+        "responder": {
+          "packets": 747,
+          "declared_ip_bytes": 1066251
+        }
+      },
+      "17542": {
+        "origin": {
+          "packets": 14,
+          "declared_ip_bytes": 2383
+        },
+        "responder": {
+          "packets": 19,
+          "declared_ip_bytes": 13885
+        }
+      },
+      "17551": {
+        "origin": {
+          "packets": 46,
+          "declared_ip_bytes": 5060
+        },
+        "responder": {
+          "packets": 191,
+          "declared_ip_bytes": 260261
+        }
+      },
+      "17557": {
+        "origin": {
+          "packets": 13,
+          "declared_ip_bytes": 2319
+        },
+        "responder": {
+          "packets": 17,
+          "declared_ip_bytes": 13781
+        }
+      },
+      "17559": {
+        "origin": {
+          "packets": 303,
+          "declared_ip_bytes": 17389
+        },
+        "responder": {
+          "packets": 4398,
+          "declared_ip_bytes": 6359920
+        }
+      },
+      "17643": {
+        "origin": {
+          "packets": 604,
+          "declared_ip_bytes": 33634
+        },
+        "responder": {
+          "packets": 4397,
+          "declared_ip_bytes": 6361229
+        }
+      },
+      "17644": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 2024
+        },
+        "responder": {
+          "packets": 11,
+          "declared_ip_bytes": 4630
+        }
+      },
+      "17645": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 2026
+        },
+        "responder": {
+          "packets": 11,
+          "declared_ip_bytes": 4462
+        }
+      },
+      "17648": {
+        "origin": {
+          "packets": 414,
+          "declared_ip_bytes": 24001
+        },
+        "responder": {
+          "packets": 4397,
+          "declared_ip_bytes": 6360680
+        }
+      },
+      "17775": {
+        "origin": {
+          "packets": 13,
+          "declared_ip_bytes": 2294
+        },
+        "responder": {
+          "packets": 15,
+          "declared_ip_bytes": 8696
+        }
+      },
+      "17881": {
+        "origin": {
+          "packets": 310,
+          "declared_ip_bytes": 17561
+        },
+        "responder": {
+          "packets": 4398,
+          "declared_ip_bytes": 6359931
+        }
+      },
+      "18345": {
+        "origin": {
+          "packets": 93,
+          "declared_ip_bytes": 7081
+        },
+        "responder": {
+          "packets": 123,
+          "declared_ip_bytes": 160609
+        }
+      }
+    },
+    "only_orig_len_changed_verified": true
+  },
+  "rule": "For scoped IPv4/TCP records with complete valid IPv4 and TCP headers and sequence/ACK-supported declared length, orig_len=max(orig_len,L2_offset+IPv4_total_length). Leave caplen, all frame bytes and timestamps unchanged. This represents a partially captured declared IP datagram, not an observed physical Ethernet wire frame length.",
+  "scope": "Fixed 3 download, 32 control and 38 cloud packet candidates; source labels never consulted by the byte transformation.",
+  "source_pcap_sha256_before": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait_attack\\source\\log.pcap.1642684613": "12c798074e27969ea40719700ecc8cb07ecda76e4f0751d746e02e2398067790",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac"
+  }
+}

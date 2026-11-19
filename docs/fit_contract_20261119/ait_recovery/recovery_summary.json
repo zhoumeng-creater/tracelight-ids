@@ -1,0 +1,20 @@
+{
+  "status": "partial_or_blocked",
+  "targets": 3,
+  "nat_candidates": 3,
+  "complete_transport_candidates": 0,
+  "model_row_capture_ready": 0,
+  "original_records_still_blocked": [
+    3574,
+    3575,
+    3578
+  ],
+  "candidate_ids": [
+    "3574:3596",
+    "3575:3597",
+    "3578:3598"
+  ],
+  "source_sha256": "ac24fa275bab9fc462e634ca3fac076602ecf128b5f4724510152104b71888ad",
+  "output_sha256": "3ecb92cb624c4267805fcf38af63e7387aabf117557c5527a2b991231cec8955",
+  "model_calls": 0
+}

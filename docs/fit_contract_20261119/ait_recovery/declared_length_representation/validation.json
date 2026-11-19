@@ -1,0 +1,4437 @@
+{
+  "status": "header_feature_representation_validation_only",
+  "training_admission": false,
+  "model_calls": 0,
+  "packet_payload_recovery": false,
+  "representation_receipt": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\declared_length_representation\\representation_receipt.json",
+  "zeek_version": "8.0.11",
+  "zeek_mode": "ignore_checksums",
+  "new_zeek_export_count": 1,
+  "export_receipt": {
+    "status": "complete",
+    "mode": "ignore_checksums",
+    "version": "8.0.11",
+    "runtime_kind": "wsl",
+    "pcap_sha256": "96f342e34f387b521999c70572915f97918b1fc7b2f95b87bb8836bafa2e808c",
+    "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+    "wall_seconds": 12.986218000063673,
+    "logs": {
+      "conn": {
+        "exists": true,
+        "rows": 11000,
+        "sha256": "ca425079914493007bd0d6f949dba08d3a2e8db1b0e8eaf8affe128c8f82ecfb"
+      },
+      "http": {
+        "exists": true,
+        "rows": 1154,
+        "sha256": "9da47305ec7451e44abd710c4f26b2d78da4a51143c40766e57616d2e47f0547"
+      },
+      "ssl": {
+        "exists": true,
+        "rows": 1380,
+        "sha256": "d657a44e03f1f93045fe8b50e47f6528e638da23179542ff5c7940599f5334e3"
+      },
+      "dns": {
+        "exists": true,
+        "rows": 6780,
+        "sha256": "9cdc0f279eaca32aef65c166d52d44539895eea865f458a850d1f6b2572c9b67"
+      },
+      "files": {
+        "exists": true,
+        "rows": 1036,
+        "sha256": "fb773bf21cce5a3daa27c4c8049d9c780eaa8133d3f0e1f052a6070eb419454e"
+      },
+      "weird": {
+        "exists": true,
+        "rows": 85,
+        "sha256": "d0092966aad59d335bd8cf91b51ed604b05f2deaaece636ab3c5c4c7c31e6364"
+      }
+    },
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu",
+      "--exec",
+      "sh",
+      "-c",
+      "cd \"$1\" && shift && exec env \"$@\"",
+      "ait-zeek",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_recovery/declared_length_representation/zeek-ignore_checksums",
+      "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+      "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+      "LC_ALL=C",
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "zeek-resource.txt",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+      "-C",
+      "-r",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_recovery/declared_length_representation/intranet-declared-length.pcap",
+      "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/scripts/ait_contract/export.zeek"
+    ],
+    "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+    "checksum_policy": "explicitly ignore with -C",
+    "model_forward_calls": 0,
+    "gpu_jobs": 0,
+    "process_resources": {
+      "measured": true,
+      "source": "/usr/bin/time -v for this Zeek process",
+      "user_cpu_seconds": 3.54,
+      "system_cpu_seconds": 2.86,
+      "max_rss_kib": 125320,
+      "exit_status": 0
+    }
+  },
+  "intranet": [
+    {
+      "packet_candidate_id": 3545,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Cv4RGK14lrEJIH35eb",
+          "ip_protocol": "6",
+          "orig_port": "36242",
+          "resp_port": "443",
+          "duration_seconds": "0.1602489948272705",
+          "orig_pkts": "167",
+          "resp_pkts": "426",
+          "orig_ip_bytes": "9538",
+          "resp_ip_bytes": "528937",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996703.354771",
+          "zeek_reported_end": "1642996703.51502",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996708.534943",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CvsORl3WqKSwi7smTb",
+          "ip_protocol": 6,
+          "orig_port": 36242,
+          "resp_port": 443,
+          "duration_seconds": 0.1602489948272705,
+          "orig_pkts": 167,
+          "resp_pkts": 426,
+          "orig_ip_bytes": 9538,
+          "resp_ip_bytes": 528937,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996703.354771,
+          "zeek_reported_end": 1642996703.51502,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996708.534943,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 167,
+          "declared_ip_bytes": 9538
+        },
+        "responder": {
+          "packets": 426,
+          "declared_ip_bytes": 528937
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 167,
+          "ip_bytes": 9538
+        },
+        "responder": {
+          "pkts": 426,
+          "ip_bytes": 528937
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3546,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C97EgN1UsJ66nrR51l",
+          "ip_protocol": "6",
+          "orig_port": "36244",
+          "resp_port": "443",
+          "duration_seconds": "0.09428000450134277",
+          "orig_pkts": "148",
+          "resp_pkts": "435",
+          "orig_ip_bytes": "8550",
+          "resp_ip_bytes": "529422",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996705.11635",
+          "zeek_reported_end": "1642996705.21063",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996710.300799",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CCitI53p2muWrMr0V4",
+          "ip_protocol": 6,
+          "orig_port": 36244,
+          "resp_port": 443,
+          "duration_seconds": 0.09428000450134277,
+          "orig_pkts": 148,
+          "resp_pkts": 435,
+          "orig_ip_bytes": 8550,
+          "resp_ip_bytes": 529422,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996705.11635,
+          "zeek_reported_end": 1642996705.21063,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996710.300799,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 148,
+          "declared_ip_bytes": 8550
+        },
+        "responder": {
+          "packets": 435,
+          "declared_ip_bytes": 529422
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 148,
+          "ip_bytes": 8550
+        },
+        "responder": {
+          "pkts": 435,
+          "ip_bytes": 529422
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3547,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C2vbJSWJNOWPyan5j",
+          "ip_protocol": "6",
+          "orig_port": "36246",
+          "resp_port": "443",
+          "duration_seconds": "0.09024620056152344",
+          "orig_pkts": "138",
+          "resp_pkts": "432",
+          "orig_ip_bytes": "8044",
+          "resp_ip_bytes": "529851",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996707.048627",
+          "zeek_reported_end": "1642996707.138873",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996713.835466",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CWVApD59PaROIv8kk",
+          "ip_protocol": 6,
+          "orig_port": 36246,
+          "resp_port": 443,
+          "duration_seconds": 0.09024620056152344,
+          "orig_pkts": 138,
+          "resp_pkts": 432,
+          "orig_ip_bytes": 8044,
+          "resp_ip_bytes": 529851,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996707.048627,
+          "zeek_reported_end": 1642996707.138873,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996713.835466,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 138,
+          "declared_ip_bytes": 8044
+        },
+        "responder": {
+          "packets": 432,
+          "declared_ip_bytes": 529851
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 138,
+          "ip_bytes": 8044
+        },
+        "responder": {
+          "pkts": 432,
+          "ip_bytes": 529851
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3548,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CdYqpHuBn6rtncG4d",
+          "ip_protocol": "6",
+          "orig_port": "36248",
+          "resp_port": "443",
+          "duration_seconds": "0.10401296615600586",
+          "orig_pkts": "129",
+          "resp_pkts": "438",
+          "orig_ip_bytes": "7558",
+          "resp_ip_bytes": "529613",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996708.534943",
+          "zeek_reported_end": "1642996708.638956",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996713.835466",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CedXW34HH1UBbTY5A9",
+          "ip_protocol": 6,
+          "orig_port": 36248,
+          "resp_port": 443,
+          "duration_seconds": 0.10401296615600586,
+          "orig_pkts": 129,
+          "resp_pkts": 438,
+          "orig_ip_bytes": 7558,
+          "resp_ip_bytes": 529613,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996708.534943,
+          "zeek_reported_end": 1642996708.638956,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996713.835466,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 129,
+          "declared_ip_bytes": 7558
+        },
+        "responder": {
+          "packets": 438,
+          "declared_ip_bytes": 529613
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 129,
+          "ip_bytes": 7558
+        },
+        "responder": {
+          "pkts": 438,
+          "ip_bytes": 529613
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3549,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CXZMX5kUrSDWqSt3f",
+          "ip_protocol": "6",
+          "orig_port": "36250",
+          "resp_port": "443",
+          "duration_seconds": "0.10020709037780762",
+          "orig_pkts": "153",
+          "resp_pkts": "433",
+          "orig_ip_bytes": "8822",
+          "resp_ip_bytes": "530104",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996710.300799",
+          "zeek_reported_end": "1642996710.401006",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996716.390023",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "C38iCf1ImmgSaZmtX7",
+          "ip_protocol": 6,
+          "orig_port": 36250,
+          "resp_port": 443,
+          "duration_seconds": 0.10020709037780762,
+          "orig_pkts": 153,
+          "resp_pkts": 433,
+          "orig_ip_bytes": 8822,
+          "resp_ip_bytes": 530104,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996710.300799,
+          "zeek_reported_end": 1642996710.401006,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996716.390023,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 153,
+          "declared_ip_bytes": 8822
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 530104
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 153,
+          "ip_bytes": 8822
+        },
+        "responder": {
+          "pkts": 433,
+          "ip_bytes": 530104
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3550,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C5sUr13mHnSkBY28zd",
+          "ip_protocol": "6",
+          "orig_port": "36252",
+          "resp_port": "443",
+          "duration_seconds": "0.09957218170166016",
+          "orig_pkts": "114",
+          "resp_pkts": "422",
+          "orig_ip_bytes": "6782",
+          "resp_ip_bytes": "528877",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996713.835466",
+          "zeek_reported_end": "1642996713.935038",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996719.253638",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CRKHS41xFWx7J68EM8",
+          "ip_protocol": 6,
+          "orig_port": 36252,
+          "resp_port": 443,
+          "duration_seconds": 0.09957218170166016,
+          "orig_pkts": 114,
+          "resp_pkts": 422,
+          "orig_ip_bytes": 6782,
+          "resp_ip_bytes": 528877,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996713.835466,
+          "zeek_reported_end": 1642996713.935038,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996719.253638,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 114,
+          "declared_ip_bytes": 6782
+        },
+        "responder": {
+          "packets": 422,
+          "declared_ip_bytes": 528877
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 114,
+          "ip_bytes": 6782
+        },
+        "responder": {
+          "pkts": 422,
+          "ip_bytes": 528877
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3551,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CZpjxbubLHTVAlo68",
+          "ip_protocol": "6",
+          "orig_port": "36254",
+          "resp_port": "443",
+          "duration_seconds": "0.14884591102600098",
+          "orig_pkts": "141",
+          "resp_pkts": "435",
+          "orig_ip_bytes": "8174",
+          "resp_ip_bytes": "529463",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996716.390023",
+          "zeek_reported_end": "1642996716.538869",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996722.205926",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CMH6xI2qW4Lrv5H4gi",
+          "ip_protocol": 6,
+          "orig_port": 36254,
+          "resp_port": 443,
+          "duration_seconds": 0.14884591102600098,
+          "orig_pkts": 141,
+          "resp_pkts": 435,
+          "orig_ip_bytes": 8174,
+          "resp_ip_bytes": 529463,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996716.390023,
+          "zeek_reported_end": 1642996716.538869,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996722.205926,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 141,
+          "declared_ip_bytes": 8174
+        },
+        "responder": {
+          "packets": 435,
+          "declared_ip_bytes": 529463
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 141,
+          "ip_bytes": 8174
+        },
+        "responder": {
+          "pkts": 435,
+          "ip_bytes": 529463
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3552,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C2KKy73xoVADyaegg8",
+          "ip_protocol": "6",
+          "orig_port": "36256",
+          "resp_port": "443",
+          "duration_seconds": "0.09955191612243652",
+          "orig_pkts": "117",
+          "resp_pkts": "424",
+          "orig_ip_bytes": "6934",
+          "resp_ip_bytes": "529188",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996719.253638",
+          "zeek_reported_end": "1642996719.35319",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996724.637186",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "C8x6zvfCxyVoZfAA4",
+          "ip_protocol": 6,
+          "orig_port": 36256,
+          "resp_port": 443,
+          "duration_seconds": 0.09955191612243652,
+          "orig_pkts": 117,
+          "resp_pkts": 424,
+          "orig_ip_bytes": 6934,
+          "resp_ip_bytes": 529188,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996719.253638,
+          "zeek_reported_end": 1642996719.35319,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996724.637186,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 117,
+          "declared_ip_bytes": 6934
+        },
+        "responder": {
+          "packets": 424,
+          "declared_ip_bytes": 529188
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 117,
+          "ip_bytes": 6934
+        },
+        "responder": {
+          "pkts": 424,
+          "ip_bytes": 529188
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3553,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CIlMbV2bCunkULu4ee",
+          "ip_protocol": "6",
+          "orig_port": "36258",
+          "resp_port": "443",
+          "duration_seconds": "0.12268209457397461",
+          "orig_pkts": "155",
+          "resp_pkts": "431",
+          "orig_ip_bytes": "8926",
+          "resp_ip_bytes": "529744",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996720.950846",
+          "zeek_reported_end": "1642996721.073528",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996728.266315",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CDxT7xWxYBWlJcoDi",
+          "ip_protocol": 6,
+          "orig_port": 36258,
+          "resp_port": 443,
+          "duration_seconds": 0.12268209457397461,
+          "orig_pkts": 155,
+          "resp_pkts": 431,
+          "orig_ip_bytes": 8926,
+          "resp_ip_bytes": 529744,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996720.950846,
+          "zeek_reported_end": 1642996721.073528,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996728.266315,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 155,
+          "declared_ip_bytes": 8926
+        },
+        "responder": {
+          "packets": 431,
+          "declared_ip_bytes": 529744
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 155,
+          "ip_bytes": 8926
+        },
+        "responder": {
+          "pkts": 431,
+          "ip_bytes": 529744
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3554,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C0ITBS1F8ZI05edG0j",
+          "ip_protocol": "6",
+          "orig_port": "36260",
+          "resp_port": "443",
+          "duration_seconds": "0.10101604461669922",
+          "orig_pkts": "138",
+          "resp_pkts": "432",
+          "orig_ip_bytes": "8018",
+          "resp_ip_bytes": "529307",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996722.205926",
+          "zeek_reported_end": "1642996722.306942",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996728.266315",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "Cbeo6E2MOGyV4BWAq8",
+          "ip_protocol": 6,
+          "orig_port": 36260,
+          "resp_port": 443,
+          "duration_seconds": 0.10101604461669922,
+          "orig_pkts": 138,
+          "resp_pkts": 432,
+          "orig_ip_bytes": 8018,
+          "resp_ip_bytes": 529307,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996722.205926,
+          "zeek_reported_end": 1642996722.306942,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996728.266315,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 138,
+          "declared_ip_bytes": 8018
+        },
+        "responder": {
+          "packets": 432,
+          "declared_ip_bytes": 529307
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 138,
+          "ip_bytes": 8018
+        },
+        "responder": {
+          "pkts": 432,
+          "ip_bytes": 529307
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3555,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CDDKrH3FsN2dtcUAIk",
+          "ip_protocol": "6",
+          "orig_port": "36262",
+          "resp_port": "443",
+          "duration_seconds": "0.09668302536010742",
+          "orig_pkts": "167",
+          "resp_pkts": "432",
+          "orig_ip_bytes": "9554",
+          "resp_ip_bytes": "529994",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996723.409613",
+          "zeek_reported_end": "1642996723.506296",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996729.569021",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CyguvT2Hl7V1MuNXN3",
+          "ip_protocol": 6,
+          "orig_port": 36262,
+          "resp_port": 443,
+          "duration_seconds": 0.09668302536010742,
+          "orig_pkts": 167,
+          "resp_pkts": 432,
+          "orig_ip_bytes": 9554,
+          "resp_ip_bytes": 529994,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996723.409613,
+          "zeek_reported_end": 1642996723.506296,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996729.569021,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 167,
+          "declared_ip_bytes": 9554
+        },
+        "responder": {
+          "packets": 432,
+          "declared_ip_bytes": 529994
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 167,
+          "ip_bytes": 9554
+        },
+        "responder": {
+          "pkts": 432,
+          "ip_bytes": 529994
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3556,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Cm3wxt4FaTVIZhZ70c",
+          "ip_protocol": "6",
+          "orig_port": "36264",
+          "resp_port": "443",
+          "duration_seconds": "0.10059285163879395",
+          "orig_pkts": "151",
+          "resp_pkts": "413",
+          "orig_ip_bytes": "8712",
+          "resp_ip_bytes": "528650",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996724.637186",
+          "zeek_reported_end": "1642996724.737779",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996731.591041",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CX9rKR3wHxvWEELHu5",
+          "ip_protocol": 6,
+          "orig_port": 36264,
+          "resp_port": 443,
+          "duration_seconds": 0.10059285163879395,
+          "orig_pkts": 151,
+          "resp_pkts": 413,
+          "orig_ip_bytes": 8712,
+          "resp_ip_bytes": 528650,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996724.637186,
+          "zeek_reported_end": 1642996724.737779,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996731.591041,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 151,
+          "declared_ip_bytes": 8712
+        },
+        "responder": {
+          "packets": 413,
+          "declared_ip_bytes": 528650
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 151,
+          "ip_bytes": 8712
+        },
+        "responder": {
+          "pkts": 413,
+          "ip_bytes": 528650
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3557,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CxPk7y3chui3n4rd08",
+          "ip_protocol": "6",
+          "orig_port": "36266",
+          "resp_port": "443",
+          "duration_seconds": "0.1286931037902832",
+          "orig_pkts": "165",
+          "resp_pkts": "436",
+          "orig_ip_bytes": "9442",
+          "resp_ip_bytes": "529636",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996728.266315",
+          "zeek_reported_end": "1642996728.395008",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996734.226286",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CHs5Ec4IvoLrzu4QDc",
+          "ip_protocol": 6,
+          "orig_port": 36266,
+          "resp_port": 443,
+          "duration_seconds": 0.1286931037902832,
+          "orig_pkts": 165,
+          "resp_pkts": 436,
+          "orig_ip_bytes": 9442,
+          "resp_ip_bytes": 529636,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996728.266315,
+          "zeek_reported_end": 1642996728.395008,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996734.226286,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 165,
+          "declared_ip_bytes": 9442
+        },
+        "responder": {
+          "packets": 436,
+          "declared_ip_bytes": 529636
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 165,
+          "ip_bytes": 9442
+        },
+        "responder": {
+          "pkts": 436,
+          "ip_bytes": 529636
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3558,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CS9EAy33vsaGcLA9Ej",
+          "ip_protocol": "6",
+          "orig_port": "36268",
+          "resp_port": "443",
+          "duration_seconds": "0.11467194557189941",
+          "orig_pkts": "159",
+          "resp_pkts": "421",
+          "orig_ip_bytes": "9116",
+          "resp_ip_bytes": "529849",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996729.569021",
+          "zeek_reported_end": "1642996729.683693",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996735.470754",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CvAL0522CCC5SaPj0j",
+          "ip_protocol": 6,
+          "orig_port": 36268,
+          "resp_port": 443,
+          "duration_seconds": 0.11467194557189941,
+          "orig_pkts": 159,
+          "resp_pkts": 421,
+          "orig_ip_bytes": 9116,
+          "resp_ip_bytes": 529849,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996729.569021,
+          "zeek_reported_end": 1642996729.683693,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996735.470754,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 159,
+          "declared_ip_bytes": 9116
+        },
+        "responder": {
+          "packets": 421,
+          "declared_ip_bytes": 529849
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 159,
+          "ip_bytes": 9116
+        },
+        "responder": {
+          "pkts": 421,
+          "ip_bytes": 529849
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3559,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CnnzCSf41L3tpdgWj",
+          "ip_protocol": "6",
+          "orig_port": "36270",
+          "resp_port": "443",
+          "duration_seconds": "0.3104438781738281",
+          "orig_pkts": "187",
+          "resp_pkts": "487",
+          "orig_ip_bytes": "10596",
+          "resp_ip_bytes": "595414",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996731.591041",
+          "zeek_reported_end": "1642996731.901485",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996737.647995",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CnpI9g6Hu8j90ZOXc",
+          "ip_protocol": 6,
+          "orig_port": 36270,
+          "resp_port": 443,
+          "duration_seconds": 0.3104438781738281,
+          "orig_pkts": 187,
+          "resp_pkts": 487,
+          "orig_ip_bytes": 10596,
+          "resp_ip_bytes": 595414,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996731.591041,
+          "zeek_reported_end": 1642996731.901485,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996737.647995,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 187,
+          "declared_ip_bytes": 10596
+        },
+        "responder": {
+          "packets": 487,
+          "declared_ip_bytes": 595414
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 187,
+          "ip_bytes": 10596
+        },
+        "responder": {
+          "pkts": 487,
+          "ip_bytes": 595414
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3560,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Cq9UOGT09bUtWZvkg",
+          "ip_protocol": "6",
+          "orig_port": "36272",
+          "resp_port": "443",
+          "duration_seconds": "0.0965721607208252",
+          "orig_pkts": "154",
+          "resp_pkts": "423",
+          "orig_ip_bytes": "8856",
+          "resp_ip_bytes": "528809",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996734.226286",
+          "zeek_reported_end": "1642996734.322858",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996740.798496",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CJwIT13NG1XIP07Mw7",
+          "ip_protocol": 6,
+          "orig_port": 36272,
+          "resp_port": 443,
+          "duration_seconds": 0.0965721607208252,
+          "orig_pkts": 154,
+          "resp_pkts": 423,
+          "orig_ip_bytes": 8856,
+          "resp_ip_bytes": 528809,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996734.226286,
+          "zeek_reported_end": 1642996734.322858,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996740.798496,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 154,
+          "declared_ip_bytes": 8856
+        },
+        "responder": {
+          "packets": 423,
+          "declared_ip_bytes": 528809
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 154,
+          "ip_bytes": 8856
+        },
+        "responder": {
+          "pkts": 423,
+          "ip_bytes": 528809
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3561,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CaFElN1i4j3u7FDaqi",
+          "ip_protocol": "6",
+          "orig_port": "36274",
+          "resp_port": "443",
+          "duration_seconds": "0.08733415603637695",
+          "orig_pkts": "130",
+          "resp_pkts": "437",
+          "orig_ip_bytes": "7626",
+          "resp_ip_bytes": "529669",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996735.470754",
+          "zeek_reported_end": "1642996735.558088",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996740.798496",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CM11D9yiPkHr3KaD7",
+          "ip_protocol": 6,
+          "orig_port": 36274,
+          "resp_port": 443,
+          "duration_seconds": 0.08733415603637695,
+          "orig_pkts": 130,
+          "resp_pkts": 437,
+          "orig_ip_bytes": 7626,
+          "resp_ip_bytes": 529669,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996735.470754,
+          "zeek_reported_end": 1642996735.558088,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996740.798496,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 130,
+          "declared_ip_bytes": 7626
+        },
+        "responder": {
+          "packets": 437,
+          "declared_ip_bytes": 529669
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 130,
+          "ip_bytes": 7626
+        },
+        "responder": {
+          "pkts": 437,
+          "ip_bytes": 529669
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3562,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C9UqH44YbEI1tTlx2h",
+          "ip_protocol": "6",
+          "orig_port": "36276",
+          "resp_port": "443",
+          "duration_seconds": "0.09070396423339844",
+          "orig_pkts": "136",
+          "resp_pkts": "430",
+          "orig_ip_bytes": "7932",
+          "resp_ip_bytes": "530486",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996737.647995",
+          "zeek_reported_end": "1642996737.738699",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996743.748535",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CQgxvx4vrBAiPKHec6",
+          "ip_protocol": 6,
+          "orig_port": 36276,
+          "resp_port": 443,
+          "duration_seconds": 0.09070396423339844,
+          "orig_pkts": 136,
+          "resp_pkts": 430,
+          "orig_ip_bytes": 7932,
+          "resp_ip_bytes": 530486,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996737.647995,
+          "zeek_reported_end": 1642996737.738699,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996743.748535,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 136,
+          "declared_ip_bytes": 7932
+        },
+        "responder": {
+          "packets": 430,
+          "declared_ip_bytes": 530486
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 136,
+          "ip_bytes": 7932
+        },
+        "responder": {
+          "pkts": 430,
+          "ip_bytes": 530486
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3563,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Cg7Rq6hdtkodHq2x5",
+          "ip_protocol": "6",
+          "orig_port": "36278",
+          "resp_port": "443",
+          "duration_seconds": "0.12048101425170898",
+          "orig_pkts": "130",
+          "resp_pkts": "429",
+          "orig_ip_bytes": "7606",
+          "resp_ip_bytes": "529081",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996740.798496",
+          "zeek_reported_end": "1642996740.918977",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996745.93489",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CRMZSQ3MeWUP6RxW24",
+          "ip_protocol": 6,
+          "orig_port": 36278,
+          "resp_port": 443,
+          "duration_seconds": 0.12048101425170898,
+          "orig_pkts": 130,
+          "resp_pkts": 429,
+          "orig_ip_bytes": 7606,
+          "resp_ip_bytes": 529081,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996740.798496,
+          "zeek_reported_end": 1642996740.918977,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996745.93489,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 130,
+          "declared_ip_bytes": 7606
+        },
+        "responder": {
+          "packets": 429,
+          "declared_ip_bytes": 529081
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 130,
+          "ip_bytes": 7606
+        },
+        "responder": {
+          "pkts": 429,
+          "ip_bytes": 529081
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3564,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Cl5JuGXlB9Qgrc8v4",
+          "ip_protocol": "6",
+          "orig_port": "36280",
+          "resp_port": "443",
+          "duration_seconds": "0.09134483337402344",
+          "orig_pkts": "155",
+          "resp_pkts": "433",
+          "orig_ip_bytes": "8988",
+          "resp_ip_bytes": "531575",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996742.28939",
+          "zeek_reported_end": "1642996742.380735",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996748.417252",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CSS4z04xEXgL68AMF8",
+          "ip_protocol": 6,
+          "orig_port": 36280,
+          "resp_port": 443,
+          "duration_seconds": 0.09134483337402344,
+          "orig_pkts": 155,
+          "resp_pkts": 433,
+          "orig_ip_bytes": 8988,
+          "resp_ip_bytes": 531575,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996742.28939,
+          "zeek_reported_end": 1642996742.380735,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996748.417252,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 155,
+          "declared_ip_bytes": 8988
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 531575
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 155,
+          "ip_bytes": 8988
+        },
+        "responder": {
+          "pkts": 433,
+          "ip_bytes": 531575
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3565,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C7ROHh3M8RpTufnVAk",
+          "ip_protocol": "6",
+          "orig_port": "36282",
+          "resp_port": "443",
+          "duration_seconds": "0.1463761329650879",
+          "orig_pkts": "121",
+          "resp_pkts": "431",
+          "orig_ip_bytes": "7142",
+          "resp_ip_bytes": "530922",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996743.748535",
+          "zeek_reported_end": "1642996743.894911",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996749.516943",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CyFe9y3b4ozSOBcX4i",
+          "ip_protocol": 6,
+          "orig_port": 36282,
+          "resp_port": 443,
+          "duration_seconds": 0.1463761329650879,
+          "orig_pkts": 121,
+          "resp_pkts": 431,
+          "orig_ip_bytes": 7142,
+          "resp_ip_bytes": 530922,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996743.748535,
+          "zeek_reported_end": 1642996743.894911,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996749.516943,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 121,
+          "declared_ip_bytes": 7142
+        },
+        "responder": {
+          "packets": 431,
+          "declared_ip_bytes": 530922
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 121,
+          "ip_bytes": 7142
+        },
+        "responder": {
+          "pkts": 431,
+          "ip_bytes": 530922
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3566,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CAwycrYollEdoBwal",
+          "ip_protocol": "6",
+          "orig_port": "36284",
+          "resp_port": "443",
+          "duration_seconds": "0.09375405311584473",
+          "orig_pkts": "131",
+          "resp_pkts": "433",
+          "orig_ip_bytes": "7682",
+          "resp_ip_bytes": "530497",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996745.93489",
+          "zeek_reported_end": "1642996746.028644",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996751.181036",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CLg3xu4KejmDJhtBbh",
+          "ip_protocol": 6,
+          "orig_port": 36284,
+          "resp_port": 443,
+          "duration_seconds": 0.09375405311584473,
+          "orig_pkts": 131,
+          "resp_pkts": 433,
+          "orig_ip_bytes": 7682,
+          "resp_ip_bytes": 530497,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996745.93489,
+          "zeek_reported_end": 1642996746.028644,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996751.181036,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 131,
+          "declared_ip_bytes": 7682
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 530497
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 131,
+          "ip_bytes": 7682
+        },
+        "responder": {
+          "pkts": 433,
+          "ip_bytes": 530497
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3567,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CAmSve3KVERG9nwuFg",
+          "ip_protocol": "6",
+          "orig_port": "36286",
+          "resp_port": "443",
+          "duration_seconds": "0.23496007919311523",
+          "orig_pkts": "160",
+          "resp_pkts": "434",
+          "orig_ip_bytes": "9182",
+          "resp_ip_bytes": "529470",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996749.516943",
+          "zeek_reported_end": "1642996749.751903",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996756.929111",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "Cv1DRl6j7Qw4GKeOe",
+          "ip_protocol": 6,
+          "orig_port": 36286,
+          "resp_port": 443,
+          "duration_seconds": 0.23496007919311523,
+          "orig_pkts": 160,
+          "resp_pkts": 434,
+          "orig_ip_bytes": 9182,
+          "resp_ip_bytes": 529470,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996749.516943,
+          "zeek_reported_end": 1642996749.751903,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996756.929111,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 160,
+          "declared_ip_bytes": 9182
+        },
+        "responder": {
+          "packets": 434,
+          "declared_ip_bytes": 529470
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 160,
+          "ip_bytes": 9182
+        },
+        "responder": {
+          "pkts": 434,
+          "ip_bytes": 529470
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3568,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "ClqNtLbwlI2CxLeT1",
+          "ip_protocol": "6",
+          "orig_port": "36288",
+          "resp_port": "443",
+          "duration_seconds": "0.10149788856506348",
+          "orig_pkts": "122",
+          "resp_pkts": "422",
+          "orig_ip_bytes": "7210",
+          "resp_ip_bytes": "529927",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996752.985409",
+          "zeek_reported_end": "1642996753.086907",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996758.316037",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CG3acfbZXwMtb5C61",
+          "ip_protocol": 6,
+          "orig_port": 36288,
+          "resp_port": 443,
+          "duration_seconds": 0.10149788856506348,
+          "orig_pkts": 122,
+          "resp_pkts": 422,
+          "orig_ip_bytes": 7210,
+          "resp_ip_bytes": 529927,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996752.985409,
+          "zeek_reported_end": 1642996753.086907,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996758.316037,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 122,
+          "declared_ip_bytes": 7210
+        },
+        "responder": {
+          "packets": 422,
+          "declared_ip_bytes": 529927
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 122,
+          "ip_bytes": 7210
+        },
+        "responder": {
+          "pkts": 422,
+          "ip_bytes": 529927
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3569,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "C95Okf4vHe2ONYUG0b",
+          "ip_protocol": "6",
+          "orig_port": "36290",
+          "resp_port": "443",
+          "duration_seconds": "0.2784888744354248",
+          "orig_pkts": "154",
+          "resp_pkts": "439",
+          "orig_ip_bytes": "8980",
+          "resp_ip_bytes": "530546",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996754.214338",
+          "zeek_reported_end": "1642996754.492827",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996759.796521",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "ClvJEg2yFByp1Zxcxh",
+          "ip_protocol": 6,
+          "orig_port": 36290,
+          "resp_port": 443,
+          "duration_seconds": 0.2784888744354248,
+          "orig_pkts": 154,
+          "resp_pkts": 439,
+          "orig_ip_bytes": 8980,
+          "resp_ip_bytes": 530546,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996754.214338,
+          "zeek_reported_end": 1642996754.492827,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996759.796521,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 154,
+          "declared_ip_bytes": 8980
+        },
+        "responder": {
+          "packets": 439,
+          "declared_ip_bytes": 530546
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 154,
+          "ip_bytes": 8980
+        },
+        "responder": {
+          "pkts": 439,
+          "ip_bytes": 530546
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3570,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Chrfww3N9n0mTrh65",
+          "ip_protocol": "6",
+          "orig_port": "36292",
+          "resp_port": "443",
+          "duration_seconds": "0.09780192375183105",
+          "orig_pkts": "165",
+          "resp_pkts": "433",
+          "orig_ip_bytes": "9442",
+          "resp_ip_bytes": "530012",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996756.929111",
+          "zeek_reported_end": "1642996757.026913",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996762.187487",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CT9NT03q7uPaL19W14",
+          "ip_protocol": 6,
+          "orig_port": 36292,
+          "resp_port": 443,
+          "duration_seconds": 0.09780192375183105,
+          "orig_pkts": 165,
+          "resp_pkts": 433,
+          "orig_ip_bytes": 9442,
+          "resp_ip_bytes": 530012,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996756.929111,
+          "zeek_reported_end": 1642996757.026913,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996762.187487,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 165,
+          "declared_ip_bytes": 9442
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 530012
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 165,
+          "ip_bytes": 9442
+        },
+        "responder": {
+          "pkts": 433,
+          "ip_bytes": 530012
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3571,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CT3iID10xLtx1tEBNk",
+          "ip_protocol": "6",
+          "orig_port": "36294",
+          "resp_port": "443",
+          "duration_seconds": "0.12589597702026367",
+          "orig_pkts": "162",
+          "resp_pkts": "433",
+          "orig_ip_bytes": "9278",
+          "resp_ip_bytes": "529374",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996758.316037",
+          "zeek_reported_end": "1642996758.441933",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996763.521261",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CTu26q5oweIj1ClRg",
+          "ip_protocol": 6,
+          "orig_port": 36294,
+          "resp_port": 443,
+          "duration_seconds": 0.12589597702026367,
+          "orig_pkts": 162,
+          "resp_pkts": 433,
+          "orig_ip_bytes": 9278,
+          "resp_ip_bytes": 529374,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996758.316037,
+          "zeek_reported_end": 1642996758.441933,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996763.521261,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 162,
+          "declared_ip_bytes": 9278
+        },
+        "responder": {
+          "packets": 433,
+          "declared_ip_bytes": 529374
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 162,
+          "ip_bytes": 9278
+        },
+        "responder": {
+          "pkts": 433,
+          "ip_bytes": 529374
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3572,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CuJ6nH3jvlJIf6ig46",
+          "ip_protocol": "6",
+          "orig_port": "36296",
+          "resp_port": "443",
+          "duration_seconds": "0.09096908569335938",
+          "orig_pkts": "162",
+          "resp_pkts": "426",
+          "orig_ip_bytes": "9280",
+          "resp_ip_bytes": "529545",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996759.796521",
+          "zeek_reported_end": "1642996759.88749",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996764.887829",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "Ci3PaA2V3uelgR9jx1",
+          "ip_protocol": 6,
+          "orig_port": 36296,
+          "resp_port": 443,
+          "duration_seconds": 0.09096908569335938,
+          "orig_pkts": 162,
+          "resp_pkts": 426,
+          "orig_ip_bytes": 9280,
+          "resp_ip_bytes": 529545,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996759.796521,
+          "zeek_reported_end": 1642996759.88749,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996764.887829,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 162,
+          "declared_ip_bytes": 9280
+        },
+        "responder": {
+          "packets": 426,
+          "declared_ip_bytes": 529545
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 162,
+          "ip_bytes": 9280
+        },
+        "responder": {
+          "pkts": 426,
+          "ip_bytes": 529545
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3573,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CkH8oX3GbmooL5iAm1",
+          "ip_protocol": "6",
+          "orig_port": "36298",
+          "resp_port": "443",
+          "duration_seconds": "17.366766214370728",
+          "orig_pkts": "168",
+          "resp_pkts": "425",
+          "orig_ip_bytes": "9686",
+          "resp_ip_bytes": "528873",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996762.187487",
+          "zeek_reported_end": "1642996779.554253",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996784.554467",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CpHgH63DpOpe6dyNa4",
+          "ip_protocol": 6,
+          "orig_port": 36298,
+          "resp_port": 443,
+          "duration_seconds": 17.366766214370728,
+          "orig_pkts": 168,
+          "resp_pkts": 425,
+          "orig_ip_bytes": 9686,
+          "resp_ip_bytes": 528873,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996762.187487,
+          "zeek_reported_end": 1642996779.554253,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996784.554467,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 168,
+          "declared_ip_bytes": 9686
+        },
+        "responder": {
+          "packets": 425,
+          "declared_ip_bytes": 528873
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 168,
+          "ip_bytes": 9686
+        },
+        "responder": {
+          "pkts": 425,
+          "ip_bytes": 528873
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3574,
+      "role": "download",
+      "old_connections": [
+        {
+          "uid": "Cro1eQdE27uq5BUA4",
+          "ip_protocol": "6",
+          "orig_port": "45736",
+          "resp_port": "443",
+          "duration_seconds": "1.5610861778259277",
+          "orig_pkts": "12",
+          "resp_pkts": "8",
+          "orig_ip_bytes": "1242",
+          "resp_ip_bytes": "3024",
+          "source": "10.143.2.4",
+          "destination": "140.82.121.3",
+          "native_protocol": "tcp",
+          "connection_start": "1642996762.360931",
+          "zeek_reported_end": "1642996763.922017",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADgdaFf",
+          "missed_bytes": "2709",
+          "replay_export_time": "1642996768.924655",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "Cs31Gh2KYvC9U5mX99",
+          "ip_protocol": 6,
+          "orig_port": 45736,
+          "resp_port": 443,
+          "duration_seconds": 1.5610861778259277,
+          "orig_pkts": 12,
+          "resp_pkts": 9,
+          "orig_ip_bytes": 1242,
+          "resp_ip_bytes": 5785,
+          "source": "10.143.2.4",
+          "destination": "140.82.121.3",
+          "native_protocol": "tcp",
+          "connection_start": 1642996762.360931,
+          "zeek_reported_end": 1642996763.922017,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADdgaFf",
+          "missed_bytes": 2709,
+          "replay_export_time": 1642996768.924655,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": false,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 1242
+        },
+        "responder": {
+          "packets": 9,
+          "declared_ip_bytes": 5785,
+          "orig_len_changes": 1
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 12,
+          "ip_bytes": 1242
+        },
+        "responder": {
+          "pkts": 9,
+          "ip_bytes": 5785
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3575,
+      "role": "download",
+      "old_connections": [
+        {
+          "uid": "C9jIOB3sbceXfz7MUd",
+          "ip_protocol": "6",
+          "orig_port": "42126",
+          "resp_port": "443",
+          "duration_seconds": "16.899959087371826",
+          "orig_pkts": "6872",
+          "resp_pkts": "1879",
+          "orig_ip_bytes": "380100",
+          "resp_ip_bytes": "2712024",
+          "source": "10.143.2.4",
+          "destination": "140.82.121.9",
+          "native_protocol": "tcp",
+          "connection_start": "1642996762.658037",
+          "zeek_reported_end": "1642996779.557996",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADgdagtgtgtFf",
+          "missed_bytes": "53023422",
+          "replay_export_time": "1642996784.558038",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CdC1MC28W0pw1pxTX",
+          "ip_protocol": 6,
+          "orig_port": 42126,
+          "resp_port": 443,
+          "duration_seconds": 16.899959087371826,
+          "orig_pkts": 6872,
+          "resp_pkts": 17814,
+          "orig_ip_bytes": 380100,
+          "resp_ip_bytes": 56564066,
+          "source": "10.143.2.4",
+          "destination": "140.82.121.9",
+          "native_protocol": "tcp",
+          "connection_start": 1642996762.658037,
+          "zeek_reported_end": 1642996779.557996,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADdgagttgtgFf",
+          "missed_bytes": 53023422,
+          "replay_export_time": 1642996784.558038,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": false,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 6872,
+          "declared_ip_bytes": 380100
+        },
+        "responder": {
+          "packets": 17814,
+          "declared_ip_bytes": 56564066,
+          "orig_len_changes": 15935
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 6872,
+          "ip_bytes": 380100
+        },
+        "responder": {
+          "pkts": 17814,
+          "ip_bytes": 56564066
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3576,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "Cd9GIb2trgPuYoaunj",
+          "ip_protocol": "6",
+          "orig_port": "36300",
+          "resp_port": "443",
+          "duration_seconds": "0.9245939254760742",
+          "orig_pkts": "188",
+          "resp_pkts": "421",
+          "orig_ip_bytes": "10650",
+          "resp_ip_bytes": "529536",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996780.756858",
+          "zeek_reported_end": "1642996781.681452",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996788.586562",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CfnEgHScHPsuDh60b",
+          "ip_protocol": 6,
+          "orig_port": 36300,
+          "resp_port": 443,
+          "duration_seconds": 0.9245939254760742,
+          "orig_pkts": 188,
+          "resp_pkts": 421,
+          "orig_ip_bytes": 10650,
+          "resp_ip_bytes": 529536,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996780.756858,
+          "zeek_reported_end": 1642996781.681452,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996788.586562,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 188,
+          "declared_ip_bytes": 10650
+        },
+        "responder": {
+          "packets": 421,
+          "declared_ip_bytes": 529536
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 188,
+          "ip_bytes": 10650
+        },
+        "responder": {
+          "pkts": 421,
+          "ip_bytes": 529536
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3577,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CIhmou94kAPtMsDCe",
+          "ip_protocol": "6",
+          "orig_port": "36302",
+          "resp_port": "443",
+          "duration_seconds": "2.6395509243011475",
+          "orig_pkts": "155",
+          "resp_pkts": "415",
+          "orig_ip_bytes": "8962",
+          "resp_ip_bytes": "528353",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996783.564502",
+          "zeek_reported_end": "1642996786.204053",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642996793.473245",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "Cdm6MP130S8amXtlQj",
+          "ip_protocol": 6,
+          "orig_port": 36302,
+          "resp_port": 443,
+          "duration_seconds": 2.6395509243011475,
+          "orig_pkts": 155,
+          "resp_pkts": 415,
+          "orig_ip_bytes": 8962,
+          "resp_ip_bytes": 528353,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996783.564502,
+          "zeek_reported_end": 1642996786.204053,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "SF",
+          "history": "ShADadFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642996793.473245,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 155,
+          "declared_ip_bytes": 8962
+        },
+        "responder": {
+          "packets": 415,
+          "declared_ip_bytes": 528353
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 155,
+          "ip_bytes": 8962
+        },
+        "responder": {
+          "pkts": 415,
+          "ip_bytes": 528353
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3578,
+      "role": "download",
+      "old_connections": [
+        {
+          "uid": "CcdNJr1dGfckguVKFf",
+          "ip_protocol": "6",
+          "orig_port": "60448",
+          "resp_port": "80",
+          "duration_seconds": "2.544288158416748",
+          "orig_pkts": "8320",
+          "resp_pkts": "350",
+          "orig_ip_bytes": "432813",
+          "resp_ip_bytes": "367374",
+          "source": "10.143.2.4",
+          "destination": "192.168.230.122",
+          "native_protocol": "tcp",
+          "connection_start": "1642996783.647682",
+          "zeek_reported_end": "1642996786.19197",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "http",
+          "conn_state": "SF",
+          "history": "ShADagdgWgWgWFf",
+          "missed_bytes": "139572637",
+          "replay_export_time": "1642996793.473245",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CychMz4xMmkV5ML9Ck",
+          "ip_protocol": 6,
+          "orig_port": 60448,
+          "resp_port": 80,
+          "duration_seconds": 2.544288158416748,
+          "orig_pkts": 8320,
+          "resp_pkts": 12529,
+          "orig_ip_bytes": 432813,
+          "resp_ip_bytes": 140574009,
+          "source": "10.143.2.4",
+          "destination": "192.168.230.122",
+          "native_protocol": "tcp",
+          "connection_start": 1642996783.647682,
+          "zeek_reported_end": 1642996786.19197,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "http",
+          "conn_state": "SF",
+          "history": "ShADadggWgWgtWFf",
+          "missed_bytes": 139572637,
+          "replay_export_time": 1642996793.473245,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": false,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 8320,
+          "declared_ip_bytes": 432813
+        },
+        "responder": {
+          "packets": 12529,
+          "declared_ip_bytes": 140574009,
+          "orig_len_changes": 12179
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 8320,
+          "ip_bytes": 432813
+        },
+        "responder": {
+          "pkts": 12529,
+          "ip_bytes": 140574009
+        }
+      }
+    },
+    {
+      "packet_candidate_id": 3579,
+      "role": "control",
+      "old_connections": [
+        {
+          "uid": "CAStlb43FxC934MIZb",
+          "ip_protocol": "6",
+          "orig_port": "36304",
+          "resp_port": "443",
+          "duration_seconds": "0.08239316940307617",
+          "orig_pkts": "116",
+          "resp_pkts": "394",
+          "orig_ip_bytes": "7078",
+          "resp_ip_bytes": "489435",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642996788.586562",
+          "zeek_reported_end": "1642996788.668955",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "ssl",
+          "conn_state": "S1",
+          "history": "ShADad",
+          "missed_bytes": "0",
+          "replay_export_time": "1642997093.299591",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        },
+        {
+          "uid": "Cx8B0f2CIu1QdU8bw6",
+          "ip_protocol": "6",
+          "orig_port": "36304",
+          "resp_port": "443",
+          "duration_seconds": "0.020249128341674805",
+          "orig_pkts": "18",
+          "resp_pkts": "33",
+          "orig_ip_bytes": "912",
+          "resp_ip_bytes": "39703",
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": "1642999017.853711",
+          "zeek_reported_end": "1642999017.87396",
+          "interval_relation": "inside",
+          "duration_missing": "False",
+          "service": "",
+          "conn_state": "SF",
+          "history": "^dAFfR",
+          "missed_bytes": "0",
+          "replay_export_time": "1642999028.295512",
+          "after_input_eof": "False",
+          "during_shutdown": "False",
+          "detector_received_time": "",
+          "feedback_available_time": "",
+          "label": "unknown",
+          "export_before_zeek_reported_end": "False"
+        }
+      ],
+      "derived_connections": [
+        {
+          "uid": "CXsCxI1zeeFoYpzdv4",
+          "ip_protocol": 6,
+          "orig_port": 36304,
+          "resp_port": 443,
+          "duration_seconds": 0.08239316940307617,
+          "orig_pkts": 116,
+          "resp_pkts": 394,
+          "orig_ip_bytes": 7078,
+          "resp_ip_bytes": 489435,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642996788.586562,
+          "zeek_reported_end": 1642996788.668955,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": "ssl",
+          "conn_state": "S1",
+          "history": "ShADad",
+          "missed_bytes": 0,
+          "replay_export_time": 1642997093.299591,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        },
+        {
+          "uid": "CwUx1N1bSpdzGmLhGh",
+          "ip_protocol": 6,
+          "orig_port": 36304,
+          "resp_port": 443,
+          "duration_seconds": 0.020249128341674805,
+          "orig_pkts": 18,
+          "resp_pkts": 33,
+          "orig_ip_bytes": 912,
+          "resp_ip_bytes": 39703,
+          "source": "172.19.131.174",
+          "destination": "10.143.2.4",
+          "native_protocol": "tcp",
+          "connection_start": 1642999017.853711,
+          "zeek_reported_end": 1642999017.87396,
+          "interval_relation": "inside",
+          "duration_missing": false,
+          "service": null,
+          "conn_state": "SF",
+          "history": "^dAFfR",
+          "missed_bytes": 0,
+          "replay_export_time": 1642999028.295512,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "detector_received_time": null,
+          "feedback_available_time": null,
+          "label": "unknown",
+          "export_before_zeek_reported_end": false
+        }
+      ],
+      "raw8_multiset_identical": true,
+      "endpoint_start_duration_identical": true,
+      "declared_packet_and_ip_byte_totals_all_counted": true,
+      "expected_packet_counts_and_declared_bytes": {
+        "origin": {
+          "packets": 134,
+          "declared_ip_bytes": 7990
+        },
+        "responder": {
+          "packets": 427,
+          "declared_ip_bytes": 529138
+        }
+      },
+      "zeek_totals": {
+        "origin": {
+          "pkts": 134,
+          "ip_bytes": 7990
+        },
+        "responder": {
+          "pkts": 427,
+          "ip_bytes": 529138
+        }
+      }
+    }
+  ],
+  "cloud": [
+    {
+      "packet_candidate_id": 1783,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:COMlCq1pHtAYpWg2q5",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 42808,
+            "resp_port": 443,
+            "duration_seconds": 50.26818799972534,
+            "orig_pkts": 109,
+            "resp_pkts": 405,
+            "orig_ip_bytes": 8817,
+            "resp_ip_bytes": 568428
+          },
+          "connection_start": 1642746801.738531,
+          "zeek_reported_end": 1642746852.006719,
+          "replay_export_time": 1642746857.106051,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            1783
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 1873,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CLkA3W2pp2LKierkHa",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 43348,
+            "resp_port": 443,
+            "duration_seconds": 275.57289600372314,
+            "orig_pkts": 341,
+            "resp_pkts": 4397,
+            "orig_ip_bytes": 19172,
+            "resp_ip_bytes": 6359868
+          },
+          "connection_start": 1642750178.689304,
+          "zeek_reported_end": 1642750454.2622,
+          "replay_export_time": 1642750459.321095,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            1873
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 2163,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CMTLNZYlYtNDxnu04",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 44898,
+            "resp_port": 443,
+            "duration_seconds": 5.08832311630249,
+            "orig_pkts": 56,
+            "resp_pkts": 189,
+            "orig_ip_bytes": 4543,
+            "resp_ip_bytes": 258249
+          },
+          "connection_start": 1642761715.269996,
+          "zeek_reported_end": 1642761720.358319,
+          "replay_export_time": 1642762023.803323,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            2163
+          ]
+        },
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CTnHDrogpYHiSTn6i",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 44898,
+            "resp_port": 443,
+            "duration_seconds": 4.220008850097656e-05,
+            "orig_pkts": 1,
+            "resp_pkts": 1,
+            "orig_ip_bytes": 52,
+            "resp_ip_bytes": 40
+          },
+          "connection_start": 1642762023.803552,
+          "zeek_reported_end": 1642762023.803594,
+          "replay_export_time": 1642762028.880403,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            2163
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 3827,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C9Rzyu3frkDgFuyHM9",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 51424,
+            "resp_port": 443,
+            "duration_seconds": 79.97520709037781,
+            "orig_pkts": 52,
+            "resp_pkts": 191,
+            "orig_ip_bytes": 5371,
+            "resp_ip_bytes": 260260
+          },
+          "connection_start": 1642786580.034663,
+          "zeek_reported_end": 1642786660.00987,
+          "replay_export_time": 1642786665.098407,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            3827
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 3832,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CwMM0SHht0TMR8spd",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 51434,
+            "resp_port": 443,
+            "duration_seconds": 65.71518588066101,
+            "orig_pkts": 70,
+            "resp_pkts": 401,
+            "orig_ip_bytes": 5277,
+            "resp_ip_bytes": 565286
+          },
+          "connection_start": 1642786626.453619,
+          "zeek_reported_end": 1642786692.168805,
+          "replay_export_time": 1642786697.191181,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            3832
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 3843,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C9n6Ms31i773uUsmD5",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 51456,
+            "resp_port": 443,
+            "duration_seconds": 91.29950594902039,
+            "orig_pkts": 24,
+            "resp_pkts": 41,
+            "orig_ip_bytes": 3971,
+            "resp_ip_bytes": 45165
+          },
+          "connection_start": 1642786698.741808,
+          "zeek_reported_end": 1642786790.041314,
+          "replay_export_time": 1642786795.083136,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            3843
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 3889,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CPhAKr2I4940NaoILi",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 51534,
+            "resp_port": 443,
+            "duration_seconds": 130.8431911468506,
+            "orig_pkts": 19,
+            "resp_pkts": 38,
+            "orig_ip_bytes": 2632,
+            "resp_ip_bytes": 43090
+          },
+          "connection_start": 1642787169.203682,
+          "zeek_reported_end": 1642787300.046873,
+          "replay_export_time": 1642787305.100333,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            3889
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4469,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CA1kV54qk7r4OkmnG1",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 53556,
+            "resp_port": 443,
+            "duration_seconds": 66.02482509613037,
+            "orig_pkts": 13,
+            "resp_pkts": 12,
+            "orig_ip_bytes": 3300,
+            "resp_ip_bytes": 5887
+          },
+          "connection_start": 1642796244.264081,
+          "zeek_reported_end": 1642796310.288906,
+          "replay_export_time": 1642796315.297807,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4469
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4470,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CCcFQt3usSsOY3yFRl",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 53558,
+            "resp_port": 443,
+            "duration_seconds": 66.0066499710083,
+            "orig_pkts": 98,
+            "resp_pkts": 402,
+            "orig_ip_bytes": 7729,
+            "resp_ip_bytes": 566368
+          },
+          "connection_start": 1642796244.28193,
+          "zeek_reported_end": 1642796310.28858,
+          "replay_export_time": 1642796315.297807,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4470
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4628,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CDColZ1ugog8np9iEa",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 53946,
+            "resp_port": 443,
+            "duration_seconds": 102.44681096076965,
+            "orig_pkts": 113,
+            "resp_pkts": 400,
+            "orig_ip_bytes": 8106,
+            "resp_ip_bytes": 566583
+          },
+          "connection_start": 1642798386.6641,
+          "zeek_reported_end": 1642798489.110911,
+          "replay_export_time": 1642798494.158003,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4628
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4629,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CXStOw09727IVOmq7",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 53948,
+            "resp_port": 443,
+            "duration_seconds": 98.03398299217224,
+            "orig_pkts": 12,
+            "resp_pkts": 11,
+            "orig_ip_bytes": 2024,
+            "resp_ip_bytes": 4630
+          },
+          "connection_start": 1642798386.666597,
+          "zeek_reported_end": 1642798484.70058,
+          "replay_export_time": 1642798489.754495,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4629
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4630,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:COa1SC2TT4QvQ69Lng",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 53950,
+            "resp_port": 443,
+            "duration_seconds": 72.4358959197998,
+            "orig_pkts": 12,
+            "resp_pkts": 11,
+            "orig_ip_bytes": 2026,
+            "resp_ip_bytes": 4462
+          },
+          "connection_start": 1642798386.677431,
+          "zeek_reported_end": 1642798459.113327,
+          "replay_export_time": 1642798464.175435,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4630
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4638,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CZeLOapqT6p9iCNLb",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 53962,
+            "resp_port": 443,
+            "duration_seconds": 128.84197402000427,
+            "orig_pkts": 50,
+            "resp_pkts": 186,
+            "orig_ip_bytes": 4028,
+            "resp_ip_bytes": 258081
+          },
+          "connection_start": 1642798445.866147,
+          "zeek_reported_end": 1642798574.708121,
+          "replay_export_time": 1642798579.769535,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4638
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4780,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C0QtgV3AoPS9LlpCd4",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 54202,
+            "resp_port": 443,
+            "duration_seconds": 117.70880889892578,
+            "orig_pkts": 51,
+            "resp_pkts": 189,
+            "orig_ip_bytes": 4091,
+            "resp_ip_bytes": 258236
+          },
+          "connection_start": 1642800081.402405,
+          "zeek_reported_end": 1642800199.111214,
+          "replay_export_time": 1642800204.186831,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4780
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 4784,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CiLZVF4MXns74Wefw5",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 54210,
+            "resp_port": 443,
+            "duration_seconds": 86.59052205085754,
+            "orig_pkts": 78,
+            "resp_pkts": 401,
+            "orig_ip_bytes": 5502,
+            "resp_ip_bytes": 565274
+          },
+          "connection_start": 1642800137.339799,
+          "zeek_reported_end": 1642800223.930321,
+          "replay_export_time": 1642800229.048097,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            4784
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17101,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CXulLE1XunxRyM3ZR5",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58380,
+            "resp_port": 443,
+            "duration_seconds": 93.61733889579773,
+            "orig_pkts": 360,
+            "resp_pkts": 4416,
+            "orig_ip_bytes": 24455,
+            "resp_ip_bytes": 6366028
+          },
+          "connection_start": 1643016205.66737,
+          "zeek_reported_end": 1643016299.284709,
+          "replay_export_time": 1643016305.579088,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17101
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17178,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C6eWE843aaKFv0gixk",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58624,
+            "resp_port": 443,
+            "duration_seconds": 35.746246099472046,
+            "orig_pkts": 12,
+            "resp_pkts": 11,
+            "orig_ip_bytes": 2024,
+            "resp_ip_bytes": 4642
+          },
+          "connection_start": 1643017478.143632,
+          "zeek_reported_end": 1643017513.889878,
+          "replay_export_time": 1643017518.908315,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17178
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17179,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CRpGQs1qQ6W7xmpBVk",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58626,
+            "resp_port": 443,
+            "duration_seconds": 35.76758813858032,
+            "orig_pkts": 1401,
+            "resp_pkts": 5579,
+            "orig_ip_bytes": 75101,
+            "resp_ip_bytes": 7950953
+          },
+          "connection_start": 1643017478.143992,
+          "zeek_reported_end": 1643017513.91158,
+          "replay_export_time": 1643017518.921819,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17179
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17180,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CznZop1OhCMwoRnRUj",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58628,
+            "resp_port": 443,
+            "duration_seconds": 35.704588890075684,
+            "orig_pkts": 12,
+            "resp_pkts": 11,
+            "orig_ip_bytes": 2026,
+            "resp_ip_bytes": 4474
+          },
+          "connection_start": 1643017478.152383,
+          "zeek_reported_end": 1643017513.856972,
+          "replay_export_time": 1643017518.908315,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17180
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17195,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:Cb3J9s2TC79tozVlEg",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58676,
+            "resp_port": 443,
+            "duration_seconds": 47.420170068740845,
+            "orig_pkts": 375,
+            "resp_pkts": 4397,
+            "orig_ip_bytes": 20942,
+            "resp_ip_bytes": 6359880
+          },
+          "connection_start": 1643017594.310551,
+          "zeek_reported_end": 1643017641.730721,
+          "replay_export_time": 1643017647.90223,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17195
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17197,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:Cmj88a46BOMbeKDyx5",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58682,
+            "resp_port": 443,
+            "duration_seconds": 65.6465528011322,
+            "orig_pkts": 287,
+            "resp_pkts": 4398,
+            "orig_ip_bytes": 16366,
+            "resp_ip_bytes": 6359932
+          },
+          "connection_start": 1643017632.745242,
+          "zeek_reported_end": 1643017698.391795,
+          "replay_export_time": 1643017707.905071,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17197
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17200,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C91W91Bn9fk0iPj6a",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 58726,
+            "resp_port": 443,
+            "duration_seconds": 34.491607904434204,
+            "orig_pkts": 269,
+            "resp_pkts": 4398,
+            "orig_ip_bytes": 16337,
+            "resp_ip_bytes": 6361839
+          },
+          "connection_start": 1643017698.392138,
+          "zeek_reported_end": 1643017732.883746,
+          "replay_export_time": 1643017737.93511,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17200
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17357,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CFh6pG32MM3f0xhs9g",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 60770,
+            "resp_port": 443,
+            "duration_seconds": 41.995144844055176,
+            "orig_pkts": 75,
+            "resp_pkts": 401,
+            "orig_ip_bytes": 6241,
+            "resp_ip_bytes": 567193
+          },
+          "connection_start": 1643025001.212609,
+          "zeek_reported_end": 1643025043.207754,
+          "replay_export_time": 1643025048.314802,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17357
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17471,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CZvLonvapa2IXpBE1",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33200,
+            "resp_port": 443,
+            "duration_seconds": 64.84994983673096,
+            "orig_pkts": 337,
+            "resp_pkts": 4398,
+            "orig_ip_bytes": 21371,
+            "resp_ip_bytes": 6362650
+          },
+          "connection_start": 1643028505.730781,
+          "zeek_reported_end": 1643028570.580731,
+          "replay_export_time": 1643028575.638825,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17471
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17473,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CHduJZ1bjj1oGZu8F8",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33220,
+            "resp_port": 443,
+            "duration_seconds": 138.43126893043518,
+            "orig_pkts": 120,
+            "resp_pkts": 751,
+            "orig_ip_bytes": 7881,
+            "resp_ip_bytes": 1064540
+          },
+          "connection_start": 1643028552.154652,
+          "zeek_reported_end": 1643028690.585921,
+          "replay_export_time": 1643028695.647755,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17473
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17486,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CJIRXC1QyousASHEHi",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33284,
+            "resp_port": 443,
+            "duration_seconds": 5.185886859893799,
+            "orig_pkts": 298,
+            "resp_pkts": 4397,
+            "orig_ip_bytes": 17128,
+            "resp_ip_bytes": 6359879
+          },
+          "connection_start": 1643028917.612224,
+          "zeek_reported_end": 1643028922.798111,
+          "replay_export_time": 1643029228.886266,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17486
+          ]
+        },
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C3v8ue37ydUZ4YoBJj",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33284,
+            "resp_port": 443,
+            "duration_seconds": 4.1961669921875e-05,
+            "orig_pkts": 1,
+            "resp_pkts": 1,
+            "orig_ip_bytes": 52,
+            "resp_ip_bytes": 40
+          },
+          "connection_start": 1643029440.58089,
+          "zeek_reported_end": 1643029440.580932,
+          "replay_export_time": 1643029445.726003,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17486
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17507,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:Ct0fkPA3wJkwp6WEb",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33368,
+            "resp_port": 443,
+            "duration_seconds": 8.269974946975708,
+            "orig_pkts": 120,
+            "resp_pkts": 746,
+            "orig_ip_bytes": 8917,
+            "resp_ip_bytes": 1066211
+          },
+          "connection_start": 1643029290.591895,
+          "zeek_reported_end": 1643029298.86187,
+          "replay_export_time": 1643029620.591431,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17507
+          ]
+        },
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CliF9e3d0VbX0zPsQj",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33368,
+            "resp_port": 443,
+            "duration_seconds": 9.059906005859375e-06,
+            "orig_pkts": 1,
+            "resp_pkts": 1,
+            "orig_ip_bytes": 52,
+            "resp_ip_bytes": 40
+          },
+          "connection_start": 1643029779.5727,
+          "zeek_reported_end": 1643029779.572709,
+          "replay_export_time": 1643029784.736573,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17507
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17542,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CQOtHs3mbWuPnHtRXj",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33528,
+            "resp_port": 443,
+            "duration_seconds": 35.10474181175232,
+            "orig_pkts": 14,
+            "resp_pkts": 19,
+            "orig_ip_bytes": 2383,
+            "resp_ip_bytes": 13885
+          },
+          "connection_start": 1643029973.627437,
+          "zeek_reported_end": 1643030008.732179,
+          "replay_export_time": 1643030013.754688,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17542
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17551,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CUFiicC54vlaUaVRk",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33564,
+            "resp_port": 443,
+            "duration_seconds": 179.99337792396545,
+            "orig_pkts": 46,
+            "resp_pkts": 191,
+            "orig_ip_bytes": 5060,
+            "resp_ip_bytes": 260261
+          },
+          "connection_start": 1643030100.594815,
+          "zeek_reported_end": 1643030280.588193,
+          "replay_export_time": 1643030285.65055,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17551
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17557,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:Cm5kDo4v8HXomzh2Il",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33570,
+            "resp_port": 443,
+            "duration_seconds": 243.59645891189575,
+            "orig_pkts": 13,
+            "resp_pkts": 17,
+            "orig_ip_bytes": 2319,
+            "resp_ip_bytes": 13781
+          },
+          "connection_start": 1643030136.843522,
+          "zeek_reported_end": 1643030380.439981,
+          "replay_export_time": 1643030392.676034,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17557
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17559,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CdzPak1Q7U4RjqffEl",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33574,
+            "resp_port": 443,
+            "duration_seconds": 197.22481513023376,
+            "orig_pkts": 303,
+            "resp_pkts": 4398,
+            "orig_ip_bytes": 17389,
+            "resp_ip_bytes": 6359920
+          },
+          "connection_start": 1643030173.365938,
+          "zeek_reported_end": 1643030370.590753,
+          "replay_export_time": 1643030375.648996,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17559
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17643,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CtpFMd3ygsu1vCQFCe",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33868,
+            "resp_port": 443,
+            "duration_seconds": 129.48091006278992,
+            "orig_pkts": 604,
+            "resp_pkts": 4397,
+            "orig_ip_bytes": 33634,
+            "resp_ip_bytes": 6361229
+          },
+          "connection_start": 1643032079.36439,
+          "zeek_reported_end": 1643032208.8453,
+          "replay_export_time": 1643032213.90357,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17643
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17644,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CIIkdU1gJKGOaNBXT2",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33870,
+            "resp_port": 443,
+            "duration_seconds": 5.074414014816284,
+            "orig_pkts": 11,
+            "resp_pkts": 10,
+            "orig_ip_bytes": 1972,
+            "resp_ip_bytes": 4590
+          },
+          "connection_start": 1643032079.369128,
+          "zeek_reported_end": 1643032084.443542,
+          "replay_export_time": 1643032388.84555,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17644
+          ]
+        },
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CaP8jbRU9Ngu3J4Wk",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33870,
+            "resp_port": 443,
+            "duration_seconds": 0.0003819465637207031,
+            "orig_pkts": 1,
+            "resp_pkts": 1,
+            "orig_ip_bytes": 52,
+            "resp_ip_bytes": 40
+          },
+          "connection_start": 1643032508.852297,
+          "zeek_reported_end": 1643032508.852679,
+          "replay_export_time": 1643032513.917857,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17644
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17645,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CDyf5d1RGNoQvAIELe",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33872,
+            "resp_port": 443,
+            "duration_seconds": 189.47674798965454,
+            "orig_pkts": 12,
+            "resp_pkts": 11,
+            "orig_ip_bytes": 2026,
+            "resp_ip_bytes": 4462
+          },
+          "connection_start": 1643032079.375693,
+          "zeek_reported_end": 1643032268.852441,
+          "replay_export_time": 1643032273.902323,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17645
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17648,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CJcQlm47RK5ESKU1G",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 33878,
+            "resp_port": 443,
+            "duration_seconds": 32.853068828582764,
+            "orig_pkts": 414,
+            "resp_pkts": 4397,
+            "orig_ip_bytes": 24001,
+            "resp_ip_bytes": 6360680
+          },
+          "connection_start": 1643032132.547357,
+          "zeek_reported_end": 1643032165.400426,
+          "replay_export_time": 1643032170.880364,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17648
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17775,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:Cf2vmQ2RpSapJlemB6",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 35624,
+            "resp_port": 443,
+            "duration_seconds": 48.8476140499115,
+            "orig_pkts": 13,
+            "resp_pkts": 15,
+            "orig_ip_bytes": 2294,
+            "resp_ip_bytes": 8696
+          },
+          "connection_start": 1643037225.762218,
+          "zeek_reported_end": 1643037274.609832,
+          "replay_export_time": 1643037279.650199,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17775
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 17881,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:CWFsJ63TSyJz4gFQM",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 36234,
+            "resp_port": 443,
+            "duration_seconds": 141.18696999549866,
+            "orig_pkts": 310,
+            "resp_pkts": 4398,
+            "orig_ip_bytes": 17561,
+            "resp_ip_bytes": 6359931
+          },
+          "connection_start": 1643038699.65469,
+          "zeek_reported_end": 1643038840.84166,
+          "replay_export_time": 1643038869.886613,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            17881
+          ]
+        }
+      ]
+    },
+    {
+      "packet_candidate_id": 18345,
+      "byte_identical_input": true,
+      "raw8_multiset_identical": true,
+      "connections": [
+        {
+          "flow_id": "ait-cloud:ignore_checksums:C33xTE2SiecYYF6Pi",
+          "raw8": {
+            "ip_protocol": 6,
+            "orig_port": 39042,
+            "resp_port": 443,
+            "duration_seconds": 203.009859085083,
+            "orig_pkts": 93,
+            "resp_pkts": 123,
+            "orig_ip_bytes": 7081,
+            "resp_ip_bytes": 160609
+          },
+          "connection_start": 1643058387.732008,
+          "zeek_reported_end": 1643058590.741867,
+          "replay_export_time": 1643058595.820844,
+          "after_input_eof": false,
+          "during_shutdown": false,
+          "raw_packet_candidate_ids": [
+            18345
+          ]
+        }
+      ]
+    }
+  ],
+  "all_originals_unchanged": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait_attack\\source\\log.pcap.1642684613": true,
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647": true
+  },
+  "summary": {
+    "changed_download_records": 28115,
+    "download_candidates": 3,
+    "downloads_all_header_statistics_counted": 3,
+    "downloads_endpoint_start_duration_unchanged": 3,
+    "control_packet_candidates": 32,
+    "control_raw8_unchanged": 32,
+    "control_zeek_records": 33,
+    "cloud_packet_candidates": 38,
+    "cloud_raw8_unchanged": 38,
+    "cloud_zeek_records": 42
+  },
+  "interpretation": "Packet counts are capture records and IP byte totals are IPv4-declared datagram bytes. Offload aggregation means these are not established physical wire packet/byte counts. Missing payload remains missing. Labels, grouping, and admission need a common input contract decision.",
+  "official_sources": [
+    "https://raw.githubusercontent.com/zeek/zeek/v8.0.11/src/packet_analysis/protocol/ip/IP.cc",
+    "https://raw.githubusercontent.com/zeek/zeek/v8.0.11/src/packet_analysis/protocol/tcp/TCP.cc",
+    "https://www.stratosphereips.org/blog/2015/7/17/new-dataset-ctu-13-extended-now-includes-pcap-files-of-normal-traffic"
+  ],
+  "script_sha256": "dd27488c0f45ff4a06cb14a5b8ca94777cbeab1aa12894ecc6842433fa5a90ad"
+}

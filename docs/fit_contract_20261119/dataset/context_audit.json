@@ -1,0 +1,50 @@
+{
+  "schema": "prefix-context-v1",
+  "time_mode": "available_at",
+  "model_calls": 0,
+  "unavailable_policy": "error",
+  "raw8_fields": [
+    "ip_protocol",
+    "orig_port",
+    "resp_port",
+    "duration_seconds",
+    "orig_pkts",
+    "resp_pkts",
+    "orig_ip_bytes",
+    "resp_ip_bytes"
+  ],
+  "clock_semantics": "Caller-supplied available_at; its receipt/export/replay provenance must be retained upstream.",
+  "actual_online_availability_claimed": false,
+  "audit": {
+    "input_observations": 88484,
+    "output_observations": 88484,
+    "unique_physical_flows": 88484,
+    "host_views": 88484,
+    "output_unique_physical_flows": 88484,
+    "input_group_counts": {
+      "ait:fox:cloud_share:complete_capture": 32358,
+      "ait:fox:intranet_server:complete_capture": 13278,
+      "ait:russellmitchell:cloud_share:complete_capture": 20630,
+      "ait:santos:cloud_share:complete_capture": 16146,
+      "ait:santos:intranet_server:complete_capture": 6072
+    },
+    "blocked_observations": 0,
+    "unavailable_observation_count": 0,
+    "blocked_groups": [],
+    "unavailable_observations": [],
+    "all_supplied_rows_accounted_for": true,
+    "history_updates": 88484,
+    "group_counts": {
+      "ait:fox:cloud_share:complete_capture": 32358,
+      "ait:fox:intranet_server:complete_capture": 13278,
+      "ait:russellmitchell:cloud_share:complete_capture": 20630,
+      "ait:santos:cloud_share:complete_capture": 16146,
+      "ait:santos:intranet_server:complete_capture": 6072
+    },
+    "max_hosts_in_one_group": 1,
+    "label_filter_applied": false,
+    "strictly_past_history": true,
+    "group_membership_completeness": "Every supplied row processed or explicitly whole-group blocked; verify supplied groups against the extraction manifest.",
+    "memory_scope": "Constant context state per host; batch sorting and returned rows require O(N) memory."
+  }
+}

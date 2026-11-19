@@ -1,0 +1,34 @@
+{
+  "contract": "declared-ip-truncation-v1",
+  "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642084654",
+  "source_sha256": "3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520",
+  "source_bytes": 856436887,
+  "derived_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\normalization\\declared-ip.pcap",
+  "derived_path_sha256": "43b4c8fd5245ed11371774f69686f675c9d37e71d03a5d3b8b9d09044cfe1e90",
+  "change_journal": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\normalization\\record_changes.jsonl.gz",
+  "change_journal_sha256": "8e5de4a9bdf359d0e89bbf5ce65177aa197c1c388174c21b01712c9a0d428ef7",
+  "truncation_journal": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\normalization\\capture_truncation_records.jsonl.gz",
+  "truncation_journal_sha256": "8e5de4a9bdf359d0e89bbf5ce65177aa197c1c388174c21b01712c9a0d428ef7",
+  "counts": {
+    "all_records": 1066804,
+    "status:not_ipv4": 59276,
+    "original_caplen_less_than_orig_len": 0,
+    "status:eligible_complete_headers": 1007528,
+    "orig_len_changed_records": 22522,
+    "ipv4_records_with_missing_captured_bytes": 22522,
+    "ipv4_declared_missing_bytes_sum_not_unique_stream": 29296084,
+    "truncated_records_not_eligible_for_normalization": 0
+  },
+  "changes_by_ip_protocol": {
+    "6": 22522
+  },
+  "source_unchanged": true,
+  "only_record_orig_len_changed": true,
+  "timestamps_caplen_and_frame_bytes_sha256": "61b2596595c729261393b3e4ef513dbbabbc45b19c9529ee98df1153c62dcee8",
+  "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+  "label_inputs_used": false,
+  "packet_filters_used": false,
+  "payload_reconstructed": false,
+  "length_semantics": "IPv4-declared datagram bytes and capture records; not independently observed physical wire bytes/packets.",
+  "unsupported_or_invalid_headers": "Preserve original record unchanged and report reason; no zero-fill or inferred missing transport header."
+}

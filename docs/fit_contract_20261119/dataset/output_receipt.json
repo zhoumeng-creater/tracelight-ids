@@ -1,0 +1,66 @@
+{
+  "context_audit.json": {
+    "sha256": "828079e2db3a1aa468a980790ea95bab5c8ffc9c5423ade8995d3c59d313690c",
+    "bytes": 1871
+  },
+  "context_inputs.jsonl.gz": {
+    "sha256": "2b0fdbf4d519527fd998bd4c5778c2cfe330c88aa41d75a894b23179b7c74961",
+    "bytes": 8647129
+  },
+  "context_rows.jsonl.gz": {
+    "sha256": "0401ddfca59899fa00e40d7c904d03d5335b9ca5c458375173c307a2efcda2f7",
+    "bytes": 17975535
+  },
+  "event_flow_links.jsonl.gz": {
+    "sha256": "ce7a413596aab8554ada47c11973e7da89fc23f415529f3cd78239c691f2d57e",
+    "bytes": 868964
+  },
+  "event_metadata.jsonl.gz": {
+    "sha256": "699066c447d8609e1df56ed9e079f15181547929d8c470da575c3f2a14e1dfb2",
+    "bytes": 887669
+  },
+  "events.jsonl.gz": {
+    "sha256": "0c4be3a33aa1cd73b3ae55dfa7cbaa1f1c9196e982c3ea7108cf51116644ea7e",
+    "bytes": 2759800
+  },
+  "excluded_host_views.json": {
+    "sha256": "6f2e92133e01ccaaaa8e8592cd225e2c46effba7482439c6f41c0562e2a2afb3",
+    "bytes": 2882223
+  },
+  "inference_rows.jsonl.gz": {
+    "sha256": "069ca092a0d3a9d52962316b89c68ac581061403332f1e69a88907c808b604d4",
+    "bytes": 9706354
+  },
+  "measurement_aliases.jsonl.gz": {
+    "sha256": "8c6f567c4226bdaedb0ed7e116a2a641dda39c6a51f968181477dde8c9f884f2",
+    "bytes": 2345
+  },
+  "model_rows.jsonl.gz": {
+    "sha256": "124ce59b761430429d9146bcf504e2689a14c1dfef4384010c0bb40e1a6cdb98",
+    "bytes": 219317
+  },
+  "normal_units.jsonl.gz": {
+    "sha256": "1b26716abc512c4e65f7372d6bf5d2f9984ee5f9c8faabc1bc1657bfeb783bf9",
+    "bytes": 589666
+  },
+  "observations.jsonl.gz": {
+    "sha256": "c44708081a72b2486d18b57731d08c3082523edaef00c93ca034c5d15da24f8b",
+    "bytes": 23596156
+  },
+  "quality_by_class.json": {
+    "sha256": "49be8cc03e25730b617041da6410dd17eac402a7cc92ba21e607c770daaa751c",
+    "bytes": 3507
+  },
+  "source_receipt.json": {
+    "sha256": "180f9833e188dfef2137d06711edeb234bd68ceab6dc7e3fd4a5d8053935047e",
+    "bytes": 6854
+  },
+  "split_assignments.jsonl.gz": {
+    "sha256": "9ce07d8b36615df8a39ea2f5fd87b39ea5ecb82ad577f697c955be99641ff3c0",
+    "bytes": 7641829
+  },
+  "summary.json": {
+    "sha256": "926d79ff3c1ce08a0546479d2e964598e3f7ce25877faf8a60acc04a1dde5330",
+    "bytes": 2570
+  }
+}

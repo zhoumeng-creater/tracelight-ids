@@ -1,0 +1,38 @@
+{
+  "contract": "declared-ip-truncation-v1",
+  "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\normalizer_selfcheck\\synthetic.pcap",
+  "source_sha256": "75e833838ff7227bc6ff1adffc67b779a451f1089f7d18034a738142ef2f72f2",
+  "source_bytes": 518,
+  "derived_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\normalizer_selfcheck\\normalization\\declared-ip.pcap",
+  "derived_path_sha256": "5ec2452d54fccf54c03b52ed3435abf472585295d18d849542b64f7f82850d44",
+  "change_journal": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\normalizer_selfcheck\\normalization\\record_changes.jsonl.gz",
+  "change_journal_sha256": "ac362e332de5ef4784cc8ed0fe5fc74d594a25002a72ab5d737c7f6eae759cb5",
+  "truncation_journal": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\normalizer_selfcheck\\normalization\\capture_truncation_records.jsonl.gz",
+  "truncation_journal_sha256": "0a8ffbd09f242cff67311853f54b776e0e746eb96564d019e58a4669d192aad3",
+  "counts": {
+    "all_records": 7,
+    "status:eligible_complete_headers": 4,
+    "original_caplen_less_than_orig_len": 0,
+    "orig_len_changed_records": 3,
+    "ipv4_records_with_missing_captured_bytes": 6,
+    "ipv4_declared_missing_bytes_sum_not_unique_stream": 576,
+    "status:invalid_ipv4_header_checksum": 1,
+    "truncated_records_not_eligible_for_normalization": 3,
+    "status:invalid_or_incomplete_tcp_header_length": 1,
+    "status:fragmented_ipv4_unchanged": 1
+  },
+  "changes_by_ip_protocol": {
+    "6": 1,
+    "17": 1,
+    "1": 1
+  },
+  "source_unchanged": true,
+  "only_record_orig_len_changed": true,
+  "timestamps_caplen_and_frame_bytes_sha256": "347251f796d8e77da5a617e8526177ef31247f572ff0c92a33d25033cb3bbce9",
+  "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+  "label_inputs_used": false,
+  "packet_filters_used": false,
+  "payload_reconstructed": false,
+  "length_semantics": "IPv4-declared datagram bytes and capture records; not independently observed physical wire bytes/packets.",
+  "unsupported_or_invalid_headers": "Preserve original record unchanged and report reason; no zero-fill or inferred missing transport header."
+}

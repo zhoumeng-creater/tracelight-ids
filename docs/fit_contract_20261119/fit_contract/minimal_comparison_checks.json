@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-19T01:44:46.941117+00:00",
+  "scope": "synthetic unit tests and static checks only; no real project table passed to estimator",
+  "tests": {
+    "command": "python -m unittest discover -s scripts/fit_contract -p test_minimal_comparison.py -v",
+    "exit_code": 0,
+    "passed": 7,
+    "latest_run_synthetic_fit_calls": 2,
+    "real_data_fit_calls": 0,
+    "real_data_score_calls": 0
+  },
+  "ruff": {
+    "command": "python -m ruff check scripts/fit_contract/run_minimal_comparison.py scripts/fit_contract/test_minimal_comparison.py",
+    "exit_code": 0
+  },
+  "sklearn_version": "1.5.1",
+  "numpy_version": "1.26.4",
+  "files": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\fit-contract-20261119\\scripts\\fit_contract\\run_minimal_comparison.py": "376ce96e72f730a456ec9b7414be93e8f04c02e6966cdea312b1a76d4ca88874",
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\fit-contract-20261119\\scripts\\fit_contract\\test_minimal_comparison.py": "4b070958f59ef797dc7b7abcc36dd359dabbcd4ab8ffe1f0249da39c58fcf111"
+  },
+  "warning": "joblib could not query Windows physical-core count and fell back to logical count; explicit threadpool limit=1 used in synthetic fit test; tests passed"
+}

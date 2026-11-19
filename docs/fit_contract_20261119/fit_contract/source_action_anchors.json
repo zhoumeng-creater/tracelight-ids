@@ -1,0 +1,88 @@
+{
+  "schema": "fit-source-anchors-v1",
+  "generated_at": "2026-11-19T01:09:00.007713+00:00",
+  "model_calls": 0,
+  "interpretation": "Actor receipts establish action evidence, not completed network-label admission. Response counts are not independent flows or universally successful commands.",
+  "runs": {
+    "santos": {
+      "proposed_attack_group_id": "ait:santos:wpdiscuz_complete_chain",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\attacker_0\\logs\\ait.aecid.attacker.wpdiscuz\\sm.log",
+      "sha256": "f9f8167eccd270fd2a09315ab03ed39973ee84e6421c8082b9c1df7f7f730678",
+      "run_uuids": [
+        "937543ed-ac32-40ba-a7ef-e1cc71f77c78"
+      ],
+      "response_count": 33,
+      "exact_receipts": [
+        {
+          "anchor_id": "ait:santos:actor-sm-line:378",
+          "source_line": 378,
+          "message": "Downloaded WPHashCrack",
+          "timestamp_utc": "2022-01-17T11:24:32.629198+00:00",
+          "transition_id": "5fb075f2-48e8-4bd5-b399-fcbbe37f013e",
+          "run_uuid": "937543ed-ac32-40ba-a7ef-e1cc71f77c78"
+        },
+        {
+          "anchor_id": "ait:santos:actor-sm-line:388",
+          "source_line": 388,
+          "message": "Downloaded password list",
+          "timestamp_utc": "2022-01-17T11:24:41.309395+00:00",
+          "transition_id": "5fb075f2-48e8-4bd5-b399-fcbbe37f013e",
+          "run_uuid": "937543ed-ac32-40ba-a7ef-e1cc71f77c78"
+        },
+        {
+          "anchor_id": "ait:santos:actor-sm-line:409",
+          "source_line": 409,
+          "message": "Reverse shell connected",
+          "timestamp_utc": "2022-01-17T11:58:04.208604+00:00",
+          "transition_id": "0d826d8e-eaaf-44d2-b7c9-97038d9f048b",
+          "run_uuid": "937543ed-ac32-40ba-a7ef-e1cc71f77c78"
+        }
+      ],
+      "dataset_metadata": {
+        "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\dataset.yaml",
+        "text": "name: processed_santos_scenario\nstart: '2022-01-14T00:00:00'\nend: '2022-01-18T00:00:00'\n"
+      },
+      "network_admission_status": "pending_mapping_and_capture_qualification"
+    },
+    "fox": {
+      "proposed_attack_group_id": "ait:fox:wpdiscuz_complete_chain",
+      "source_file": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\attacker_0\\logs\\ait.aecid.attacker.wpdiscuz\\sm.log",
+      "sha256": "dae3bc642d2d05b5b1e33929e04d43d9edb162c131c9e5955318df4922215220",
+      "run_uuids": [
+        "5e4485fc-fcd1-4271-a70c-2d69f15d42e2"
+      ],
+      "response_count": 18,
+      "exact_receipts": [
+        {
+          "anchor_id": "ait:fox:actor-sm-line:851",
+          "source_line": 851,
+          "message": "Downloaded WPHashCrack",
+          "timestamp_utc": "2022-01-18T12:39:02.066324+00:00",
+          "transition_id": "e3946195-44bc-45c1-bf20-7a4349cdff82",
+          "run_uuid": "5e4485fc-fcd1-4271-a70c-2d69f15d42e2"
+        },
+        {
+          "anchor_id": "ait:fox:actor-sm-line:861",
+          "source_line": 861,
+          "message": "Downloaded password list",
+          "timestamp_utc": "2022-01-18T12:39:09.354257+00:00",
+          "transition_id": "e3946195-44bc-45c1-bf20-7a4349cdff82",
+          "run_uuid": "5e4485fc-fcd1-4271-a70c-2d69f15d42e2"
+        },
+        {
+          "anchor_id": "ait:fox:actor-sm-line:882",
+          "source_line": 882,
+          "message": "Reverse shell connected",
+          "timestamp_utc": "2022-01-18T13:14:19.012746+00:00",
+          "transition_id": "6ecdb35d-1e8f-429e-85ed-2c48e319eb25",
+          "run_uuid": "5e4485fc-fcd1-4271-a70c-2d69f15d42e2"
+        }
+      ],
+      "dataset_metadata": {
+        "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\dataset.yaml",
+        "text": "name: processed_fox_scenario\nstart: '2022-01-15T00:00:00'\nend: '2022-01-20T00:00:00'\n"
+      },
+      "network_admission_status": "pending_mapping_and_capture_qualification"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "source_record": "https://zenodo.org/records/19483937",
+  "member_index": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\独立事件与风险迁移_20261115\\候选元数据\\russellmitchell.zip.members.json",
+  "member_index_sha256": "32be05cd60ccf51b66f12d33bf130bcac5644a3e7ba23d6c7692d6cf0dd6b0e1",
+  "pcap_members": [
+    {
+      "path": "gather/inet-firewall/logs/suricata/log.pcap.1642684610",
+      "bytes": 1036594242,
+      "compressed": 947816126,
+      "CRC": 774196346,
+      "offset": 89587951
+    },
+    {
+      "path": "gather/inet-firewall/logs/suricata/log.pcap.1642957916",
+      "bytes": 789200482,
+      "compressed": 694128142,
+      "CRC": 2278223961,
+      "offset": 1037404189
+    },
+    {
+      "path": "gather/inet-firewall/logs/suricata/log.pcap.1642771729",
+      "bytes": 1033959495,
+      "compressed": 935707107,
+      "CRC": 2683988600,
+      "offset": 1731532443
+    },
+    {
+      "path": "gather/webserver/logs/suricata/log.pcap.1643023053",
+      "bytes": 188613595,
+      "compressed": 168108641,
+      "CRC": 1502792115,
+      "offset": 2705239899
+    },
+    {
+      "path": "gather/webserver/logs/suricata/log.pcap.1642684648",
+      "bytes": 1032053160,
+      "compressed": 894754262,
+      "CRC": 8349121,
+      "offset": 2885626389
+    },
+    {
+      "path": "gather/mail/logs/suricata/log.pcap.1642684586",
+      "bytes": 280654024,
+      "compressed": 211887161,
+      "CRC": 2128724730,
+      "offset": 3792871699
+    },
+    {
+      "path": "gather/attacker_0/logs/dnsteal/traffic.pcap",
+      "bytes": 442066091,
+      "compressed": 285204632,
+      "CRC": 3344152519,
+      "offset": 4011078519
+    },
+    {
+      "path": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/traffic.pcap",
+      "bytes": 324142517,
+      "compressed": 188454585,
+      "CRC": 382812597,
+      "offset": 4302105668
+    },
+    {
+      "path": "gather/internal_share/logs/suricata/log.pcap.1642684613",
+      "bytes": 262791706,
+      "compressed": 218180002,
+      "CRC": 886142939,
+      "offset": 4690036935
+    },
+    {
+      "path": "gather/vpn/logs/suricata/log.pcap.1642684648",
+      "bytes": 1033920708,
+      "compressed": 942225156,
+      "CRC": 4247687244,
+      "offset": 4948090348
+    },
+    {
+      "path": "gather/vpn/logs/suricata/log.pcap.1642964618",
+      "bytes": 435024588,
+      "compressed": 367450182,
+      "CRC": 3833093642,
+      "offset": 5890315606
+    },
+    {
+      "path": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+      "bytes": 525862169,
+      "compressed": 464709023,
+      "CRC": 3074706299,
+      "offset": 6345484912
+    },
+    {
+      "path": "gather/intranet_server/logs/suricata/log.pcap.1642684613",
+      "bytes": 343232723,
+      "compressed": 291883232,
+      "CRC": 55161529,
+      "offset": 6820279205
+    }
+  ],
+  "selected_member": {
+    "path": "gather/inet-firewall/logs/suricata/log.pcap.1642957916",
+    "bytes": 789200482,
+    "compressed": 694128142,
+    "CRC": 2278223961,
+    "offset": 1037404189
+  },
+  "selection_basis": [
+    "Intranet gateway 10.143.0.1 equals firewall ens7.",
+    "Firewall ens3 192.168.230.4 is the Suricata interface; official Shorewall MASQUERADE sends 10.143.0.0/17 out ens3.",
+    "The three fixed download connections at 1642996762.36-1642996786.20 occur after latest firewall rotation start 1642957916.",
+    "NAT association must be established by sequence numbers, packet content and time, with all candidate matches retained."
+  ],
+  "target_packet_ids": [
+    3574,
+    3575,
+    3578
+  ],
+  "helper_sha256": "750eb765a21e6aa42da6b068d41f1acdb2153b2e269f6b7afaf951321316028e",
+  "model_calls": 0,
+  "packet_modifications": 0
+}

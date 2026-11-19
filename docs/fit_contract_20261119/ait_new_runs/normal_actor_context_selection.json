@@ -1,0 +1,346 @@
+{
+  "target_events_unchanged": 254,
+  "members": [
+    {
+      "run": "santos",
+      "path": "gather/ext_user_3/logs/sm.log",
+      "bytes": 2305720,
+      "compressed": 197721,
+      "CRC": 2568566770,
+      "offset": 97596656,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_7/logs/sm.log",
+      "bytes": 3704177,
+      "compressed": 331778,
+      "CRC": 3150310274,
+      "offset": 123987905,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 3631025,
+      "compressed": 314528,
+      "CRC": 1483930307,
+      "offset": 130811248,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/ext_user_0/logs/sm.log",
+      "bytes": 1753846,
+      "compressed": 147379,
+      "CRC": 3803040231,
+      "offset": 251302017,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_3/logs/sm.log",
+      "bytes": 3699151,
+      "compressed": 332930,
+      "CRC": 3192082372,
+      "offset": 295219306,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/ext_user_5/logs/sm.log",
+      "bytes": 1761433,
+      "compressed": 147834,
+      "CRC": 3594843420,
+      "offset": 301548549,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/remote_employee_2/logs/sm.log",
+      "bytes": 4878505,
+      "compressed": 421738,
+      "CRC": 4236755927,
+      "offset": 302616013,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_8/logs/sm.log",
+      "bytes": 2588001,
+      "compressed": 225750,
+      "CRC": 3120943317,
+      "offset": 317771993,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/remote_employee_1/logs/sm.log",
+      "bytes": 3433928,
+      "compressed": 320068,
+      "CRC": 3333980418,
+      "offset": 318110600,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 2347435,
+      "compressed": 199273,
+      "CRC": 1392418772,
+      "offset": 429230283,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/ext_user_1/logs/sm.log",
+      "bytes": 2511952,
+      "compressed": 209955,
+      "CRC": 3034473724,
+      "offset": 468918103,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/remote_employee_0/logs/sm.log",
+      "bytes": 392221,
+      "compressed": 28577,
+      "CRC": 2496804638,
+      "offset": 469235691,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_2/logs/sm.log",
+      "bytes": 400605,
+      "compressed": 36363,
+      "CRC": 3190235797,
+      "offset": 469369127,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/ext_user_2/logs/sm.log",
+      "bytes": 2175208,
+      "compressed": 179699,
+      "CRC": 1756023375,
+      "offset": 469500677,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_6/logs/sm.log",
+      "bytes": 2971396,
+      "compressed": 275329,
+      "CRC": 1020335460,
+      "offset": 469778696,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_4/logs/sm.log",
+      "bytes": 4903034,
+      "compressed": 440980,
+      "CRC": 703631024,
+      "offset": 564347164,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/ext_user_4/logs/sm.log",
+      "bytes": 1920326,
+      "compressed": 164000,
+      "CRC": 3174524235,
+      "offset": 571896491,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_5/logs/sm.log",
+      "bytes": 4163567,
+      "compressed": 384057,
+      "CRC": 3086492684,
+      "offset": 572158940,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_3/logs/sm.log",
+      "bytes": 3299065,
+      "compressed": 277775,
+      "CRC": 2101232664,
+      "offset": 101463064,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 2945430,
+      "compressed": 243421,
+      "CRC": 1456807426,
+      "offset": 127430087,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_0/logs/sm.log",
+      "bytes": 2717178,
+      "compressed": 235128,
+      "CRC": 3575260964,
+      "offset": 211429680,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_3/logs/sm.log",
+      "bytes": 463830,
+      "compressed": 36078,
+      "CRC": 2682366533,
+      "offset": 272692556,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_5/logs/sm.log",
+      "bytes": 2058319,
+      "compressed": 171065,
+      "CRC": 3185210128,
+      "offset": 272823527,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/remote_employee_2/logs/sm.log",
+      "bytes": 1099058,
+      "compressed": 78542,
+      "CRC": 714306207,
+      "offset": 273100923,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_6/logs/sm.log",
+      "bytes": 2062150,
+      "compressed": 172324,
+      "CRC": 2197542589,
+      "offset": 273274378,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/remote_employee_3/logs/sm.log",
+      "bytes": 4354211,
+      "compressed": 381687,
+      "CRC": 2386146999,
+      "offset": 288714255,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/remote_employee_1/logs/sm.log",
+      "bytes": 5100527,
+      "compressed": 408062,
+      "CRC": 4176357881,
+      "offset": 302745466,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 3957306,
+      "compressed": 345875,
+      "CRC": 3968383837,
+      "offset": 442572932,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_1/logs/sm.log",
+      "bytes": 3132232,
+      "compressed": 269665,
+      "CRC": 1924163495,
+      "offset": 494781926,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/remote_employee_0/logs/sm.log",
+      "bytes": 5524256,
+      "compressed": 496384,
+      "CRC": 4268366796,
+      "offset": 496058247,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_2/logs/sm.log",
+      "bytes": 4115129,
+      "compressed": 366170,
+      "CRC": 3600690034,
+      "offset": 514227370,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_2/logs/sm.log",
+      "bytes": 2463758,
+      "compressed": 210419,
+      "CRC": 1277841225,
+      "offset": 534289610,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_4/logs/sm.log",
+      "bytes": 5779052,
+      "compressed": 509801,
+      "CRC": 388525316,
+      "offset": 670935495,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/ext_user_4/logs/sm.log",
+      "bytes": 1663999,
+      "compressed": 141020,
+      "CRC": 280920077,
+      "offset": 683232892,
+      "method": 8,
+      "flags": 0
+    }
+  ],
+  "compressed_bytes": 8701375
+}

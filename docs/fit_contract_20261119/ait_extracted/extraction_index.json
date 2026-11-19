@@ -1,0 +1,262 @@
+{
+  "contract": "declared-ip-truncation-v1",
+  "created_utc": "2026-11-19T01:44:13.151691+00:00",
+  "scope": "Five full captures; every Zeek conn.log row retained. No labels assigned, model scoring or training.",
+  "normalization_application": "Intrinsic IPv4 and complete transport-header checks; full-capture normalization does not require per-flow external seq/ACK verification.",
+  "measurement": "Capture record counts and IP-declared datagram bytes. Captured payload unchanged; no payload recovery.",
+  "zeek_version": "8.0.11",
+  "zeek_mode": "ignore_checksums",
+  "captures": [
+    {
+      "scenario": "russellmitchell",
+      "capture_host": "cloud_share",
+      "receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\russellmitchell\\cloud_share\\extraction_receipt.json",
+      "receipt_sha256": "f1929eb2aab888a5d0567d9359d7433ddef561cae0bcd6e0e28da279320a0871",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\cloud-share-log.pcap.1642684647",
+      "source_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+      "declared_capture_sha256": "6e3c73cdba87ea03bd14aa13f1fd84b5e45a375086223cf5f6d8e3e8aebbe3b7",
+      "connections_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\russellmitchell\\cloud_share\\connections.jsonl.gz",
+      "connections_sha256": "987ef6b983b2a4922546c87464ec4d2d811ad352d14de9a62c26b45236f0f8ad",
+      "extractor_sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+      "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+      "runtime_receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\runtime-receipt.json",
+      "runtime_receipt_sha256": "72fa57f776cb93308f0af77b15d386f6fe5343e7d7307d87cfc87ec125484e72",
+      "summary": {
+        "connections": 21925,
+        "protocols": {
+          "tcp": 19905,
+          "icmp": 1389,
+          "udp": 631
+        },
+        "rows_with_missing_raw8": 1660,
+        "rows_with_capture_truncation_candidates": 217,
+        "nonunique_flow_keys": 0,
+        "packet_provenance_association": {
+          "truncated_capture_records": 27914,
+          "unassigned_truncated_records": 0,
+          "uniquely_assigned_truncated_records": 27914,
+          "multiply_assigned_truncated_records": 0
+        },
+        "normalization_counts": {
+          "all_records": 959549,
+          "status:eligible_complete_headers": 736797,
+          "original_caplen_less_than_orig_len": 0,
+          "status:not_ipv4": 222752,
+          "orig_len_changed_records": 27914,
+          "ipv4_records_with_missing_captured_bytes": 27914,
+          "ipv4_declared_missing_bytes_sum_not_unique_stream": 39014062,
+          "truncated_records_not_eligible_for_normalization": 0
+        },
+        "model_calls": 0,
+        "labels_assigned": 0,
+        "new_zeek_exports": 1,
+        "reused_exact_full_capture_export": false,
+        "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+      }
+    },
+    {
+      "scenario": "santos",
+      "capture_host": "intranet_server",
+      "receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\extraction_receipt.json",
+      "receipt_sha256": "56718b23feeca1ebd00e3a8749ef08069a0a60381f72b00f22eacff809647441",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642084650",
+      "source_sha256": "e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4",
+      "declared_capture_sha256": "504cb326b1e59a8d64d64a54e06085c124d27cecd977bad58c2b1abf00b2db91",
+      "connections_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\connections.jsonl.gz",
+      "connections_sha256": "900190e5ad682f4fcbdb49ea64a0aa4367786043132d778efd3103f6893b8e55",
+      "extractor_sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+      "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+      "runtime_receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\runtime-receipt.json",
+      "runtime_receipt_sha256": "72fa57f776cb93308f0af77b15d386f6fe5343e7d7307d87cfc87ec125484e72",
+      "summary": {
+        "connections": 14538,
+        "protocols": {
+          "tcp": 5518,
+          "udp": 5774,
+          "icmp": 3202,
+          "unknown_transport": 44
+        },
+        "rows_with_missing_raw8": 6951,
+        "rows_with_capture_truncation_candidates": 185,
+        "nonunique_flow_keys": 0,
+        "packet_provenance_association": {
+          "truncated_capture_records": 42871,
+          "unassigned_truncated_records": 0,
+          "uniquely_assigned_truncated_records": 42871,
+          "multiply_assigned_truncated_records": 0
+        },
+        "normalization_counts": {
+          "all_records": 599875,
+          "status:eligible_complete_headers": 561242,
+          "original_caplen_less_than_orig_len": 0,
+          "status:not_ipv4": 38535,
+          "orig_len_changed_records": 42871,
+          "ipv4_records_with_missing_captured_bytes": 42871,
+          "ipv4_declared_missing_bytes_sum_not_unique_stream": 197230817,
+          "status:unsupported_ipv4_transport": 98,
+          "truncated_records_not_eligible_for_normalization": 0
+        },
+        "model_calls": 0,
+        "labels_assigned": 0,
+        "new_zeek_exports": 1,
+        "reused_exact_full_capture_export": false,
+        "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+      }
+    },
+    {
+      "scenario": "santos",
+      "capture_host": "cloud_share",
+      "receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\extraction_receipt.json",
+      "receipt_sha256": "65f8eb07742e3f1456b8a8b4ac2aa72234c9372e93e9797dd8108dad2b11771f",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642084654",
+      "source_sha256": "3097445bd2dd912433a83b991694a74f8753281fd88fbf5cfe59319dfbb26520",
+      "declared_capture_sha256": "43b4c8fd5245ed11371774f69686f675c9d37e71d03a5d3b8b9d09044cfe1e90",
+      "connections_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\connections.jsonl.gz",
+      "connections_sha256": "e5f7c00f45315d91209dd063ff5470b5c773f56865c62cba2d5887caf2ec5ec4",
+      "extractor_sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+      "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+      "runtime_receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\runtime-receipt.json",
+      "runtime_receipt_sha256": "72fa57f776cb93308f0af77b15d386f6fe5343e7d7307d87cfc87ec125484e72",
+      "summary": {
+        "connections": 17562,
+        "protocols": {
+          "icmp": 1434,
+          "tcp": 15725,
+          "udp": 403
+        },
+        "rows_with_missing_raw8": 1867,
+        "rows_with_capture_truncation_candidates": 132,
+        "nonunique_flow_keys": 0,
+        "packet_provenance_association": {
+          "truncated_capture_records": 22522,
+          "unassigned_truncated_records": 0,
+          "uniquely_assigned_truncated_records": 22522,
+          "multiply_assigned_truncated_records": 0
+        },
+        "normalization_counts": {
+          "all_records": 1066804,
+          "status:not_ipv4": 59276,
+          "original_caplen_less_than_orig_len": 0,
+          "status:eligible_complete_headers": 1007528,
+          "orig_len_changed_records": 22522,
+          "ipv4_records_with_missing_captured_bytes": 22522,
+          "ipv4_declared_missing_bytes_sum_not_unique_stream": 29296084,
+          "truncated_records_not_eligible_for_normalization": 0
+        },
+        "model_calls": 0,
+        "labels_assigned": 0,
+        "new_zeek_exports": 1,
+        "reused_exact_full_capture_export": false,
+        "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+      }
+    },
+    {
+      "scenario": "fox",
+      "capture_host": "intranet_server",
+      "receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\extraction_receipt.json",
+      "receipt_sha256": "03e251afae3efaef96426a64551264b4ca8eeeb18281144b2ffb5d79a70531e9",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642159255",
+      "source_sha256": "9d24476c1a97c89995198d61bf4c720382bab0be3ea97e207041e25276c6d5a1",
+      "declared_capture_sha256": "af0d151f25e658075f3a1859ec5b913b0be5710ca9130aa5893ea0a7a31d47e8",
+      "connections_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\connections.jsonl.gz",
+      "connections_sha256": "cff69678e38f99542ad01de3a9192ec3848796405733affa776da02a690e1a89",
+      "extractor_sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+      "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+      "runtime_receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\vendored_runtime_receipt.json",
+      "runtime_receipt_sha256": "936d814607803d8a98e78175daa565568019e105987580db886e3257bc3f3eb4",
+      "summary": {
+        "connections": 21514,
+        "protocols": {
+          "tcp": 12468,
+          "udp": 6217,
+          "icmp": 2791,
+          "unknown_transport": 38
+        },
+        "rows_with_missing_raw8": 6371,
+        "rows_with_capture_truncation_candidates": 254,
+        "nonunique_flow_keys": 0,
+        "packet_provenance_association": {
+          "truncated_capture_records": 56545,
+          "unassigned_truncated_records": 0,
+          "uniquely_assigned_truncated_records": 56545,
+          "multiply_assigned_truncated_records": 0
+        },
+        "normalization_counts": {
+          "all_records": 1716027,
+          "status:eligible_complete_headers": 1645889,
+          "original_caplen_less_than_orig_len": 0,
+          "status:not_ipv4": 70067,
+          "orig_len_changed_records": 56545,
+          "ipv4_records_with_missing_captured_bytes": 56545,
+          "ipv4_declared_missing_bytes_sum_not_unique_stream": 201228566,
+          "status:unsupported_ipv4_transport": 71,
+          "truncated_records_not_eligible_for_normalization": 0
+        },
+        "model_calls": 0,
+        "labels_assigned": 0,
+        "new_zeek_exports": 1,
+        "reused_exact_full_capture_export": false,
+        "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+      }
+    },
+    {
+      "scenario": "fox",
+      "capture_host": "cloud_share",
+      "receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\extraction_receipt.json",
+      "receipt_sha256": "66dadf0cd98600dcde3bde57f569263d2ee983b9240363e239445336c14d88dc",
+      "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\cloud_share\\logs\\suricata\\log.pcap.1642159278",
+      "source_sha256": "2ca5e9d9c8bce5afdcb49e8deb90ee6294043a17cb3c9b119dfc69664a4a00af",
+      "declared_capture_sha256": "0324e30b1061dbebedefd5bfb805c6490bf5b1ae3f83652edf4565310f3e9789",
+      "connections_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\connections.jsonl.gz",
+      "connections_sha256": "6f11bcc295f139e8a49cdf869e3277162bbc74076c3a4c98447e2f61ef446e4a",
+      "extractor_sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+      "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+      "runtime_receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\vendored_runtime_receipt.json",
+      "runtime_receipt_sha256": "936d814607803d8a98e78175daa565568019e105987580db886e3257bc3f3eb4",
+      "summary": {
+        "connections": 33973,
+        "protocols": {
+          "tcp": 31683,
+          "icmp": 1681,
+          "udp": 609
+        },
+        "rows_with_missing_raw8": 1979,
+        "rows_with_capture_truncation_candidates": 249,
+        "nonunique_flow_keys": 0,
+        "packet_provenance_association": {
+          "truncated_capture_records": 34560,
+          "unassigned_truncated_records": 0,
+          "uniquely_assigned_truncated_records": 34560,
+          "multiply_assigned_truncated_records": 0
+        },
+        "normalization_counts": {
+          "all_records": 1356225,
+          "status:eligible_complete_headers": 1242864,
+          "original_caplen_less_than_orig_len": 0,
+          "status:not_ipv4": 113361,
+          "orig_len_changed_records": 34560,
+          "ipv4_records_with_missing_captured_bytes": 34560,
+          "ipv4_declared_missing_bytes_sum_not_unique_stream": 42185457,
+          "truncated_records_not_eligible_for_normalization": 0
+        },
+        "model_calls": 0,
+        "labels_assigned": 0,
+        "new_zeek_exports": 1,
+        "reused_exact_full_capture_export": false,
+        "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+      }
+    }
+  ],
+  "totals": {
+    "captures": 5,
+    "connections": 109512,
+    "capture_records": 5698480,
+    "orig_len_changed_records": 184412,
+    "raw8_missing_rows": 18828,
+    "truncated_records_unassigned": 0,
+    "truncated_records_multiply_assigned": 0,
+    "nonunique_flow_keys": 0,
+    "model_calls": 0,
+    "labels_assigned": 0
+  }
+}

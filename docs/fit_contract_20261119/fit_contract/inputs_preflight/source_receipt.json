@@ -1,0 +1,21 @@
+{
+  "inputs": {
+    "model_rows": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\model_rows.jsonl.gz",
+      "sha256": "124ce59b761430429d9146bcf504e2689a14c1dfef4384010c0bb40e1a6cdb98"
+    },
+    "inference_rows": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\inference_rows.jsonl.gz",
+      "sha256": "069ca092a0d3a9d52962316b89c68ac581061403332f1e69a88907c808b604d4"
+    },
+    "events": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\event_metadata.jsonl.gz",
+      "sha256": "699066c447d8609e1df56ed9e079f15181547929d8c470da575c3f2a14e1dfb2"
+    },
+    "normal_units": {
+      "path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\dataset\\normal_units.jsonl.gz",
+      "sha256": "1b26716abc512c4e65f7372d6bf5d2f9984ee5f9c8faabc1bc1657bfeb783bf9"
+    }
+  },
+  "script_sha256": "376ce96e72f730a456ec9b7414be93e8f04c02e6966cdea312b1a76d4ca88874"
+}

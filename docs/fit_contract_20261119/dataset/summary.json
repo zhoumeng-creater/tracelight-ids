@@ -1,0 +1,92 @@
+{
+  "schema": "fit-dataset-v1",
+  "model_calls": 0,
+  "training_calls": 0,
+  "role_class_counts": [
+    {
+      "role": "C",
+      "label": 0,
+      "rows": 25
+    },
+    {
+      "role": "F",
+      "label": 0,
+      "rows": 439
+    },
+    {
+      "role": "F",
+      "label": 1,
+      "rows": 32
+    },
+    {
+      "role": "V",
+      "label": 0,
+      "rows": 430
+    },
+    {
+      "role": "V",
+      "label": 1,
+      "rows": 17
+    }
+  ],
+  "new_events": 254,
+  "new_observations": 109512,
+  "unified_events": 46968,
+  "unified_observations": 151690,
+  "unified_links": 48061,
+  "captures": [
+    {
+      "run": "santos",
+      "capture_host": "intranet_server",
+      "all_capture_records": 14538,
+      "host_view_records": 6072,
+      "nonlocal_records_without_host_view": 8466
+    },
+    {
+      "run": "santos",
+      "capture_host": "cloud_share",
+      "all_capture_records": 17562,
+      "nonlocal_records_without_host_view": 1416,
+      "host_view_records": 16146
+    },
+    {
+      "run": "fox",
+      "capture_host": "intranet_server",
+      "all_capture_records": 21514,
+      "host_view_records": 13278,
+      "nonlocal_records_without_host_view": 8236
+    },
+    {
+      "run": "fox",
+      "capture_host": "cloud_share",
+      "all_capture_records": 33973,
+      "host_view_records": 32358,
+      "nonlocal_records_without_host_view": 1615
+    },
+    {
+      "run": "russellmitchell",
+      "capture_host": "cloud_share",
+      "all_capture_records": 21925,
+      "host_view_records": 20630,
+      "nonlocal_records_without_host_view": 1295
+    }
+  ],
+  "complete_background_host_views": 88484,
+  "context_build_wall_seconds": 3.749474599957466,
+  "context_cost_scope": "one offline build including sorting; not an online latency benchmark",
+  "supervised_rows": 943,
+  "C_unique_whole_flows": 25,
+  "old_table_preserved_at_frozen_v1_path": true,
+  "F_V_C_stable_identity_overlap": 0,
+  "old_AIT_measurements_excluded_from_current_table": true,
+  "inference_rows": 43420,
+  "event_evaluation_rows": 46935,
+  "normal_evaluation_units": 31,
+  "AIT_clock": "offline Zeek replay export network_time",
+  "actual_online_availability_claimed": false,
+  "OpTC_clock": "existing explicit offline completed-flow replay; not silently substituted",
+  "held_out_sources_opened_for_this_assembly": [],
+  "C_population_one_percent_guarantee_claimed": false,
+  "historical_external_development_directory": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\unified",
+  "C_empirical_one_percent_integer_budget": 0
+}

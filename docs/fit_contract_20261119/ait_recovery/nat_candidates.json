@@ -1,0 +1,151 @@
+{
+  "pcap_sha256": "ac24fa275bab9fc462e634ca3fac076602ecf128b5f4724510152104b71888ad",
+  "total_firewall_connections": 9280,
+  "pcap_counts": {
+    "all_pcap_packets": 1631754,
+    "captured_shorter_than_wire_packets": 0,
+    "linktype_1": 1631754,
+    "in_interval_packets": 1631754,
+    "captured_ipv4_shorter_than_wire": 202975,
+    "parsed_ipv4_tcp_packets": 706012,
+    "non_tcp_ipv4_protocol_17": 881946,
+    "non_ip": 42231,
+    "ipv6": 975,
+    "non_tcp_ipv4_protocol_1": 569,
+    "non_tcp_ipv4_protocol_2": 21,
+    "first_pcap_packet_epoch": 1642957916.053478,
+    "last_pcap_packet_epoch": 1643093820.1755
+  },
+  "selection": "Exact fixed remote IP/port and client initial TCP sequence; translated source address independently established by capture/SNAT configuration. No candidate selection by flow size.",
+  "targets": [
+    {
+      "old_packet_id": 3574,
+      "old_tuple": {
+        "connection_id": "3574",
+        "protocol": "tcp",
+        "first": "1642996762.360931",
+        "last": "1642996763.922037",
+        "syn_seen": "True",
+        "syn_sequence": "3979808816",
+        "direction_basis": "initial_syn",
+        "origin_packets": "12",
+        "responder_packets": "9",
+        "origin_captured_tcp_payload_bytes": "610",
+        "responder_captured_tcp_payload_bytes": "4020",
+        "fin_packets": "2",
+        "rst_packets": "0",
+        "origin_ip": "10.143.2.4",
+        "origin_port": "45736",
+        "responder_ip": "140.82.121.3",
+        "responder_port": "443"
+      },
+      "firewall_candidates": [
+        {
+          "connection_id": 3596,
+          "protocol": "tcp",
+          "first": 1642996762.361751,
+          "last": 1642996763.922744,
+          "syn_seen": true,
+          "syn_sequence": 3979808816,
+          "direction_basis": "initial_syn",
+          "origin_packets": 12,
+          "responder_packets": 9,
+          "origin_captured_tcp_payload_bytes": 610,
+          "responder_captured_tcp_payload_bytes": 4020,
+          "fin_packets": 2,
+          "rst_packets": 0,
+          "origin_ip": "192.168.230.4",
+          "origin_port": 45736,
+          "responder_ip": "140.82.121.3",
+          "responder_port": 443
+        }
+      ]
+    },
+    {
+      "old_packet_id": 3575,
+      "old_tuple": {
+        "connection_id": "3575",
+        "protocol": "tcp",
+        "first": "1642996762.658037",
+        "last": "1642996779.558006",
+        "syn_seen": "True",
+        "syn_sequence": "2247553783",
+        "direction_basis": "initial_syn",
+        "origin_packets": "6872",
+        "responder_packets": "17814",
+        "origin_captured_tcp_payload_bytes": "596",
+        "responder_captured_tcp_payload_bytes": "25242008",
+        "fin_packets": "2",
+        "rst_packets": "0",
+        "origin_ip": "10.143.2.4",
+        "origin_port": "42126",
+        "responder_ip": "140.82.121.9",
+        "responder_port": "443"
+      },
+      "firewall_candidates": [
+        {
+          "connection_id": 3597,
+          "protocol": "tcp",
+          "first": 1642996762.658826,
+          "last": 1642996779.558694,
+          "syn_seen": true,
+          "syn_sequence": 2247553783,
+          "direction_basis": "initial_syn",
+          "origin_packets": 6872,
+          "responder_packets": 17814,
+          "origin_captured_tcp_payload_bytes": 596,
+          "responder_captured_tcp_payload_bytes": 25242008,
+          "fin_packets": 2,
+          "rst_packets": 0,
+          "origin_ip": "192.168.230.4",
+          "origin_port": 42126,
+          "responder_ip": "140.82.121.9",
+          "responder_port": 443
+        }
+      ]
+    },
+    {
+      "old_packet_id": 3578,
+      "old_tuple": {
+        "connection_id": "3578",
+        "protocol": "tcp",
+        "first": "1642996783.647682",
+        "last": "1642996786.191984",
+        "syn_seen": "True",
+        "syn_sequence": "2153185780",
+        "direction_basis": "initial_syn",
+        "origin_packets": "8320",
+        "responder_packets": "12529",
+        "origin_captured_tcp_payload_bytes": "153",
+        "responder_captured_tcp_payload_bytes": "17643346",
+        "fin_packets": "2",
+        "rst_packets": "0",
+        "origin_ip": "10.143.2.4",
+        "origin_port": "60448",
+        "responder_ip": "192.168.230.122",
+        "responder_port": "80"
+      },
+      "firewall_candidates": [
+        {
+          "connection_id": 3598,
+          "protocol": "tcp",
+          "first": 1642996783.648448,
+          "last": 1642996786.192705,
+          "syn_seen": true,
+          "syn_sequence": 2153185780,
+          "direction_basis": "initial_syn",
+          "origin_packets": 8320,
+          "responder_packets": 12529,
+          "origin_captured_tcp_payload_bytes": 153,
+          "responder_captured_tcp_payload_bytes": 17643346,
+          "fin_packets": 2,
+          "rst_packets": 0,
+          "origin_ip": "192.168.230.4",
+          "origin_port": 60448,
+          "responder_ip": "192.168.230.122",
+          "responder_port": 80
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1633 @@
+{
+  "schema": "calibration-members-v1",
+  "source": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json",
+  "source_sha256": "d5ed3868727c38af83578fb32d03f6495535caac86bba0488091969f28b13a25",
+  "rows": [
+    {
+      "packet_connection_id": 1783,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:COMlCq1pHtAYpWg2q5"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.4:213"
+      ],
+      "complete_TCP_start": 1642746801.738531,
+      "complete_TCP_end": 1642746852.006736,
+      "complete_log_rotation": "4",
+      "proxy_request_count": 15,
+      "backend_request_count": 15,
+      "possible_actor_counts": {
+        "10.143.3.65": 15
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:COMlCq1pHtAYpWg2q5",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "COMlCq1pHtAYpWg2q5",
+        "ip_protocol": 6,
+        "orig_port": 42808,
+        "resp_port": 443,
+        "duration_seconds": 50.26818799972534,
+        "orig_pkts": 109,
+        "resp_pkts": 405,
+        "orig_ip_bytes": 8817,
+        "resp_ip_bytes": 568428,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1642746801.738531,
+        "zeek_reported_end": 1642746852.006719,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1642746857.106051,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          1783
+        ],
+        "ssl": [
+          {
+            "ts": 1642746801.739978,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 1873,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CLkA3W2pp2LKierkHa"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.4:499"
+      ],
+      "complete_TCP_start": 1642750178.689304,
+      "complete_TCP_end": 1642750454.262579,
+      "complete_log_rotation": "4",
+      "proxy_request_count": 11,
+      "backend_request_count": 11,
+      "possible_actor_counts": {
+        "10.143.3.65": 11
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CLkA3W2pp2LKierkHa",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CLkA3W2pp2LKierkHa",
+        "ip_protocol": 6,
+        "orig_port": 43348,
+        "resp_port": 443,
+        "duration_seconds": 275.57289600372314,
+        "orig_pkts": 341,
+        "resp_pkts": 4397,
+        "orig_ip_bytes": 19172,
+        "resp_ip_bytes": 6359868,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1642750178.689304,
+        "zeek_reported_end": 1642750454.2622,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1642750459.321095,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          1873
+        ],
+        "ssl": [
+          {
+            "ts": 1642750178.690613,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 2163,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CMTLNZYlYtNDxnu04"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.4:1349"
+      ],
+      "complete_TCP_start": 1642761715.269996,
+      "complete_TCP_end": 1642762023.803594,
+      "complete_log_rotation": "4",
+      "proxy_request_count": 13,
+      "backend_request_count": 13,
+      "possible_actor_counts": {
+        "10.143.2.25": 13
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CMTLNZYlYtNDxnu04",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CMTLNZYlYtNDxnu04",
+        "ip_protocol": 6,
+        "orig_port": 44898,
+        "resp_port": 443,
+        "duration_seconds": 5.08832311630249,
+        "orig_pkts": 56,
+        "resp_pkts": 189,
+        "orig_ip_bytes": 4543,
+        "resp_ip_bytes": 258249,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1642761715.269996,
+        "zeek_reported_end": 1642761720.358319,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "S3",
+        "history": "ShADadf",
+        "missed_bytes": 0,
+        "replay_export_time": 1642762023.803323,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          2163
+        ],
+        "ssl": [
+          {
+            "ts": 1642761715.271477,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17101,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CXulLE1XunxRyM3ZR5"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:673"
+      ],
+      "complete_TCP_start": 1643016205.66737,
+      "complete_TCP_end": 1643016299.2851,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 13,
+      "backend_request_count": 13,
+      "possible_actor_counts": {
+        "10.143.2.25": 13
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CXulLE1XunxRyM3ZR5",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CXulLE1XunxRyM3ZR5",
+        "ip_protocol": 6,
+        "orig_port": 58380,
+        "resp_port": 443,
+        "duration_seconds": 93.61733889579773,
+        "orig_pkts": 360,
+        "resp_pkts": 4416,
+        "orig_ip_bytes": 24455,
+        "resp_ip_bytes": 6366028,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643016205.66737,
+        "zeek_reported_end": 1643016299.284709,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643016305.579088,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17101
+        ],
+        "ssl": [
+          {
+            "ts": 1643016205.668851,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17178,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:C6eWE843aaKFv0gixk"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1057"
+      ],
+      "complete_TCP_start": 1643017478.143632,
+      "complete_TCP_end": 1643017513.889891,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 9,
+      "backend_request_count": 9,
+      "possible_actor_counts": {
+        "10.143.3.65": 9
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:C6eWE843aaKFv0gixk",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "C6eWE843aaKFv0gixk",
+        "ip_protocol": 6,
+        "orig_port": 58624,
+        "resp_port": 443,
+        "duration_seconds": 35.746246099472046,
+        "orig_pkts": 12,
+        "resp_pkts": 11,
+        "orig_ip_bytes": 2024,
+        "resp_ip_bytes": 4642,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643017478.143632,
+        "zeek_reported_end": 1643017513.889878,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643017518.908315,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17178
+        ],
+        "ssl": [
+          {
+            "ts": 1643017478.144988,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17179,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CRpGQs1qQ6W7xmpBVk"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1057"
+      ],
+      "complete_TCP_start": 1643017478.143992,
+      "complete_TCP_end": 1643017513.911596,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 9,
+      "backend_request_count": 9,
+      "possible_actor_counts": {
+        "10.143.3.65": 9
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CRpGQs1qQ6W7xmpBVk",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CRpGQs1qQ6W7xmpBVk",
+        "ip_protocol": 6,
+        "orig_port": 58626,
+        "resp_port": 443,
+        "duration_seconds": 35.76758813858032,
+        "orig_pkts": 1401,
+        "resp_pkts": 5579,
+        "orig_ip_bytes": 75101,
+        "resp_ip_bytes": 7950953,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643017478.143992,
+        "zeek_reported_end": 1643017513.91158,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643017518.921819,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17179
+        ],
+        "ssl": [
+          {
+            "ts": 1643017478.145138,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17180,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CznZop1OhCMwoRnRUj"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1057"
+      ],
+      "complete_TCP_start": 1643017478.152383,
+      "complete_TCP_end": 1643017513.856988,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 9,
+      "backend_request_count": 9,
+      "possible_actor_counts": {
+        "10.143.3.65": 9
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CznZop1OhCMwoRnRUj",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CznZop1OhCMwoRnRUj",
+        "ip_protocol": 6,
+        "orig_port": 58628,
+        "resp_port": 443,
+        "duration_seconds": 35.704588890075684,
+        "orig_pkts": 12,
+        "resp_pkts": 11,
+        "orig_ip_bytes": 2026,
+        "resp_ip_bytes": 4474,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643017478.152383,
+        "zeek_reported_end": 1643017513.856972,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643017518.908315,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17180
+        ],
+        "ssl": [
+          {
+            "ts": 1643017478.153144,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17195,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:Cb3J9s2TC79tozVlEg"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1068"
+      ],
+      "complete_TCP_start": 1643017594.310551,
+      "complete_TCP_end": 1643017641.730721,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 4,
+      "backend_request_count": 4,
+      "possible_actor_counts": {
+        "10.143.3.65": 4
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:Cb3J9s2TC79tozVlEg",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "Cb3J9s2TC79tozVlEg",
+        "ip_protocol": 6,
+        "orig_port": 58676,
+        "resp_port": 443,
+        "duration_seconds": 47.420170068740845,
+        "orig_pkts": 375,
+        "resp_pkts": 4397,
+        "orig_ip_bytes": 20942,
+        "resp_ip_bytes": 6359880,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643017594.310551,
+        "zeek_reported_end": 1643017641.730721,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "RSTO",
+        "history": "ShADadfR",
+        "missed_bytes": 0,
+        "replay_export_time": 1643017647.90223,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17195
+        ],
+        "ssl": [
+          {
+            "ts": 1643017594.311562,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17197,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:Cmj88a46BOMbeKDyx5"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1070"
+      ],
+      "complete_TCP_start": 1643017632.745242,
+      "complete_TCP_end": 1643017698.392108,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 5,
+      "backend_request_count": 5,
+      "possible_actor_counts": {
+        "10.143.3.65": 5
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:Cmj88a46BOMbeKDyx5",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "Cmj88a46BOMbeKDyx5",
+        "ip_protocol": 6,
+        "orig_port": 58682,
+        "resp_port": 443,
+        "duration_seconds": 65.6465528011322,
+        "orig_pkts": 287,
+        "resp_pkts": 4398,
+        "orig_ip_bytes": 16366,
+        "resp_ip_bytes": 6359932,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643017632.745242,
+        "zeek_reported_end": 1643017698.391795,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643017707.905071,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17197
+        ],
+        "ssl": [
+          {
+            "ts": 1643017632.746504,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17200,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:C91W91Bn9fk0iPj6a"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1074"
+      ],
+      "complete_TCP_start": 1643017698.392138,
+      "complete_TCP_end": 1643017732.88386,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 3,
+      "backend_request_count": 3,
+      "possible_actor_counts": {
+        "10.143.3.65": 3
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:C91W91Bn9fk0iPj6a",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "C91W91Bn9fk0iPj6a",
+        "ip_protocol": 6,
+        "orig_port": 58726,
+        "resp_port": 443,
+        "duration_seconds": 34.491607904434204,
+        "orig_pkts": 269,
+        "resp_pkts": 4398,
+        "orig_ip_bytes": 16337,
+        "resp_ip_bytes": 6361839,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643017698.392138,
+        "zeek_reported_end": 1643017732.883746,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643017737.93511,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17200
+        ],
+        "ssl": [
+          {
+            "ts": 1643017698.393134,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17357,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CFh6pG32MM3f0xhs9g"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:1663"
+      ],
+      "complete_TCP_start": 1643025001.212609,
+      "complete_TCP_end": 1643025043.20777,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 9,
+      "backend_request_count": 9,
+      "possible_actor_counts": {
+        "10.143.3.65": 9
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CFh6pG32MM3f0xhs9g",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CFh6pG32MM3f0xhs9g",
+        "ip_protocol": 6,
+        "orig_port": 60770,
+        "resp_port": 443,
+        "duration_seconds": 41.995144844055176,
+        "orig_pkts": 75,
+        "resp_pkts": 401,
+        "orig_ip_bytes": 6241,
+        "resp_ip_bytes": 567193,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643025001.212609,
+        "zeek_reported_end": 1643025043.207754,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643025048.314802,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17357
+        ],
+        "ssl": [
+          {
+            "ts": 1643025001.214063,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17471,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CZvLonvapa2IXpBE1"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2152"
+      ],
+      "complete_TCP_start": 1643028505.730781,
+      "complete_TCP_end": 1643028570.581097,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 6,
+      "backend_request_count": 6,
+      "possible_actor_counts": {
+        "10.143.2.25": 6
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CZvLonvapa2IXpBE1",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CZvLonvapa2IXpBE1",
+        "ip_protocol": 6,
+        "orig_port": 33200,
+        "resp_port": 443,
+        "duration_seconds": 64.84994983673096,
+        "orig_pkts": 337,
+        "resp_pkts": 4398,
+        "orig_ip_bytes": 21371,
+        "resp_ip_bytes": 6362650,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643028505.730781,
+        "zeek_reported_end": 1643028570.580731,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643028575.638825,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17471
+        ],
+        "ssl": [
+          {
+            "ts": 1643028505.732177,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17473,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CHduJZ1bjj1oGZu8F8"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2154"
+      ],
+      "complete_TCP_start": 1643028552.154652,
+      "complete_TCP_end": 1643028690.585972,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 7,
+      "backend_request_count": 7,
+      "possible_actor_counts": {
+        "10.143.2.25": 7
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CHduJZ1bjj1oGZu8F8",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CHduJZ1bjj1oGZu8F8",
+        "ip_protocol": 6,
+        "orig_port": 33220,
+        "resp_port": 443,
+        "duration_seconds": 138.43126893043518,
+        "orig_pkts": 120,
+        "resp_pkts": 751,
+        "orig_ip_bytes": 7881,
+        "resp_ip_bytes": 1064540,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643028552.154652,
+        "zeek_reported_end": 1643028690.585921,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643028695.647755,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17473
+        ],
+        "ssl": [
+          {
+            "ts": 1643028552.155504,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17486,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CJIRXC1QyousASHEHi"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2168"
+      ],
+      "complete_TCP_start": 1643028917.612224,
+      "complete_TCP_end": 1643029440.580932,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 34,
+      "backend_request_count": 34,
+      "possible_actor_counts": {
+        "10.143.2.25": 34
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CJIRXC1QyousASHEHi",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CJIRXC1QyousASHEHi",
+        "ip_protocol": 6,
+        "orig_port": 33284,
+        "resp_port": 443,
+        "duration_seconds": 5.185886859893799,
+        "orig_pkts": 298,
+        "resp_pkts": 4397,
+        "orig_ip_bytes": 17128,
+        "resp_ip_bytes": 6359879,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643028917.612224,
+        "zeek_reported_end": 1643028922.798111,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "S3",
+        "history": "ShADadf",
+        "missed_bytes": 0,
+        "replay_export_time": 1643029228.886266,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17486
+        ],
+        "ssl": [
+          {
+            "ts": 1643028917.61347,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17542,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CQOtHs3mbWuPnHtRXj"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2313"
+      ],
+      "complete_TCP_start": 1643029973.627437,
+      "complete_TCP_end": 1643030008.732198,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 9,
+      "backend_request_count": 9,
+      "possible_actor_counts": {
+        "10.143.2.25": 9
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CQOtHs3mbWuPnHtRXj",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CQOtHs3mbWuPnHtRXj",
+        "ip_protocol": 6,
+        "orig_port": 33528,
+        "resp_port": 443,
+        "duration_seconds": 35.10474181175232,
+        "orig_pkts": 14,
+        "resp_pkts": 19,
+        "orig_ip_bytes": 2383,
+        "resp_ip_bytes": 13885,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643029973.627437,
+        "zeek_reported_end": 1643030008.732179,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643030013.754688,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17542
+        ],
+        "ssl": [
+          {
+            "ts": 1643029973.628262,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17551,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CUFiicC54vlaUaVRk"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2327"
+      ],
+      "complete_TCP_start": 1643030100.594815,
+      "complete_TCP_end": 1643030280.588752,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 11,
+      "backend_request_count": 11,
+      "possible_actor_counts": {
+        "10.143.2.25": 11
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CUFiicC54vlaUaVRk",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CUFiicC54vlaUaVRk",
+        "ip_protocol": 6,
+        "orig_port": 33564,
+        "resp_port": 443,
+        "duration_seconds": 179.99337792396545,
+        "orig_pkts": 46,
+        "resp_pkts": 191,
+        "orig_ip_bytes": 5060,
+        "resp_ip_bytes": 260261,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643030100.594815,
+        "zeek_reported_end": 1643030280.588193,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643030285.65055,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17551
+        ],
+        "ssl": [
+          {
+            "ts": 1643030100.596166,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17557,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:Cm5kDo4v8HXomzh2Il"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2329"
+      ],
+      "complete_TCP_start": 1643030136.843522,
+      "complete_TCP_end": 1643030380.439981,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 11,
+      "backend_request_count": 11,
+      "possible_actor_counts": {
+        "10.143.2.25": 11
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:Cm5kDo4v8HXomzh2Il",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "Cm5kDo4v8HXomzh2Il",
+        "ip_protocol": 6,
+        "orig_port": 33570,
+        "resp_port": 443,
+        "duration_seconds": 243.59645891189575,
+        "orig_pkts": 13,
+        "resp_pkts": 17,
+        "orig_ip_bytes": 2319,
+        "resp_ip_bytes": 13781,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643030136.843522,
+        "zeek_reported_end": 1643030380.439981,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "RSTO",
+        "history": "ShADadfR",
+        "missed_bytes": 0,
+        "replay_export_time": 1643030392.676034,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17557
+        ],
+        "ssl": [
+          {
+            "ts": 1643030136.844612,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17559,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CdzPak1Q7U4RjqffEl"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2331"
+      ],
+      "complete_TCP_start": 1643030173.365938,
+      "complete_TCP_end": 1643030370.590793,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 9,
+      "backend_request_count": 9,
+      "possible_actor_counts": {
+        "10.143.2.25": 9
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CdzPak1Q7U4RjqffEl",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CdzPak1Q7U4RjqffEl",
+        "ip_protocol": 6,
+        "orig_port": 33574,
+        "resp_port": 443,
+        "duration_seconds": 197.22481513023376,
+        "orig_pkts": 303,
+        "resp_pkts": 4398,
+        "orig_ip_bytes": 17389,
+        "resp_ip_bytes": 6359920,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643030173.365938,
+        "zeek_reported_end": 1643030370.590753,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643030375.648996,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17559
+        ],
+        "ssl": [
+          {
+            "ts": 1643030173.366894,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17643,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CtpFMd3ygsu1vCQFCe"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2782"
+      ],
+      "complete_TCP_start": 1643032079.36439,
+      "complete_TCP_end": 1643032208.845632,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 27,
+      "backend_request_count": 27,
+      "possible_actor_counts": {
+        "10.143.3.65": 27
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CtpFMd3ygsu1vCQFCe",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CtpFMd3ygsu1vCQFCe",
+        "ip_protocol": 6,
+        "orig_port": 33868,
+        "resp_port": 443,
+        "duration_seconds": 129.48091006278992,
+        "orig_pkts": 604,
+        "resp_pkts": 4397,
+        "orig_ip_bytes": 33634,
+        "resp_ip_bytes": 6361229,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643032079.36439,
+        "zeek_reported_end": 1643032208.8453,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643032213.90357,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17643
+        ],
+        "ssl": [
+          {
+            "ts": 1643032079.365544,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17644,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CIIkdU1gJKGOaNBXT2"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2782"
+      ],
+      "complete_TCP_start": 1643032079.369128,
+      "complete_TCP_end": 1643032508.852679,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 39,
+      "backend_request_count": 39,
+      "possible_actor_counts": {
+        "10.143.3.65": 39
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CIIkdU1gJKGOaNBXT2",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CIIkdU1gJKGOaNBXT2",
+        "ip_protocol": 6,
+        "orig_port": 33870,
+        "resp_port": 443,
+        "duration_seconds": 5.074414014816284,
+        "orig_pkts": 11,
+        "resp_pkts": 10,
+        "orig_ip_bytes": 1972,
+        "resp_ip_bytes": 4590,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643032079.369128,
+        "zeek_reported_end": 1643032084.443542,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "S3",
+        "history": "ShADadf",
+        "missed_bytes": 0,
+        "replay_export_time": 1643032388.84555,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17644
+        ],
+        "ssl": [
+          {
+            "ts": 1643032079.371518,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17645,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CDyf5d1RGNoQvAIELe"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2782"
+      ],
+      "complete_TCP_start": 1643032079.375693,
+      "complete_TCP_end": 1643032268.852469,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 30,
+      "backend_request_count": 30,
+      "possible_actor_counts": {
+        "10.143.3.65": 30
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CDyf5d1RGNoQvAIELe",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CDyf5d1RGNoQvAIELe",
+        "ip_protocol": 6,
+        "orig_port": 33872,
+        "resp_port": 443,
+        "duration_seconds": 189.47674798965454,
+        "orig_pkts": 12,
+        "resp_pkts": 11,
+        "orig_ip_bytes": 2026,
+        "resp_ip_bytes": 4462,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643032079.375693,
+        "zeek_reported_end": 1643032268.852441,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643032273.902323,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17645
+        ],
+        "ssl": [
+          {
+            "ts": 1643032079.376534,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17648,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CJcQlm47RK5ESKU1G"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:2786"
+      ],
+      "complete_TCP_start": 1643032132.547357,
+      "complete_TCP_end": 1643032165.40051,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 19,
+      "backend_request_count": 19,
+      "possible_actor_counts": {
+        "10.143.3.65": 19
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CJcQlm47RK5ESKU1G",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CJcQlm47RK5ESKU1G",
+        "ip_protocol": 6,
+        "orig_port": 33878,
+        "resp_port": 443,
+        "duration_seconds": 32.853068828582764,
+        "orig_pkts": 414,
+        "resp_pkts": 4397,
+        "orig_ip_bytes": 24001,
+        "resp_ip_bytes": 6360680,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643032132.547357,
+        "zeek_reported_end": 1643032165.400426,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643032170.880364,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17648
+        ],
+        "ssl": [
+          {
+            "ts": 1643032132.548122,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17775,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:Cf2vmQ2RpSapJlemB6"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:3117"
+      ],
+      "complete_TCP_start": 1643037225.762218,
+      "complete_TCP_end": 1643037274.609862,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 86,
+      "backend_request_count": 85,
+      "possible_actor_counts": {
+        "10.143.2.25": 3,
+        "10.143.3.65": 83
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:Cf2vmQ2RpSapJlemB6",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "Cf2vmQ2RpSapJlemB6",
+        "ip_protocol": 6,
+        "orig_port": 35624,
+        "resp_port": 443,
+        "duration_seconds": 48.8476140499115,
+        "orig_pkts": 13,
+        "resp_pkts": 15,
+        "orig_ip_bytes": 2294,
+        "resp_ip_bytes": 8696,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643037225.762218,
+        "zeek_reported_end": 1643037274.609832,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfF",
+        "missed_bytes": 0,
+        "replay_export_time": 1643037279.650199,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17775
+        ],
+        "ssl": [
+          {
+            "ts": 1643037225.763058,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 17881,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:CWFsJ63TSyJz4gFQM"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:3430"
+      ],
+      "complete_TCP_start": 1643038699.65469,
+      "complete_TCP_end": 1643038840.84166,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 7,
+      "backend_request_count": 7,
+      "possible_actor_counts": {
+        "10.143.3.65": 7
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:CWFsJ63TSyJz4gFQM",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "CWFsJ63TSyJz4gFQM",
+        "ip_protocol": 6,
+        "orig_port": 36234,
+        "resp_port": 443,
+        "duration_seconds": 141.18696999549866,
+        "orig_pkts": 310,
+        "resp_pkts": 4398,
+        "orig_ip_bytes": 17561,
+        "resp_ip_bytes": 6359931,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643038699.65469,
+        "zeek_reported_end": 1643038840.84166,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "RSTO",
+        "history": "ShADadfR",
+        "missed_bytes": 0,
+        "replay_export_time": 1643038869.886613,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          17881
+        ],
+        "ssl": [
+          {
+            "ts": 1643038699.65553,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    },
+    {
+      "packet_connection_id": 18345,
+      "flow_ids": [
+        "ait-cloud:ignore_checksums:C33xTE2SiecYYF6Pi"
+      ],
+      "event_ids": [
+        "russellmitchell:other_vhosts_access.log.1:5469"
+      ],
+      "complete_TCP_start": 1643058387.732008,
+      "complete_TCP_end": 1643058590.741924,
+      "complete_log_rotation": "1",
+      "proxy_request_count": 19,
+      "backend_request_count": 19,
+      "possible_actor_counts": {
+        "10.143.3.65": 19
+      },
+      "evidence_grade": "B_actor_service_complete_TCP_envelope_all_request_candidates_normal",
+      "model_flow": {
+        "flow_id": "ait-cloud:ignore_checksums:C33xTE2SiecYYF6Pi",
+        "capture_member": "gather/cloud_share/logs/suricata/log.pcap.1642684647",
+        "capture_sha256": "e7039504139d6cadab64ad5c1772233a04705c06757fde3251c11beefb491bac",
+        "variant": "ignore_checksums",
+        "uid": "C33xTE2SiecYYF6Pi",
+        "ip_protocol": 6,
+        "orig_port": 39042,
+        "resp_port": 443,
+        "duration_seconds": 203.009859085083,
+        "orig_pkts": 93,
+        "resp_pkts": 123,
+        "orig_ip_bytes": 7081,
+        "resp_ip_bytes": 160609,
+        "source": "172.19.130.68",
+        "destination": "172.19.130.106",
+        "native_protocol": "tcp",
+        "connection_start": 1643058387.732008,
+        "zeek_reported_end": 1643058590.741867,
+        "interval_relation": "inside",
+        "duration_missing": false,
+        "service": "ssl",
+        "conn_state": "SF",
+        "history": "ShADadfFr",
+        "missed_bytes": 0,
+        "replay_export_time": 1643058595.820844,
+        "after_input_eof": false,
+        "during_shutdown": false,
+        "detector_received_time": null,
+        "feedback_available_time": null,
+        "label": "unknown",
+        "export_before_zeek_reported_end": false,
+        "raw_packet_candidate_ids": [
+          18345
+        ],
+        "ssl": [
+          {
+            "ts": 1643058387.735314,
+            "server_name": "cloud.dmz.smith.russellmitchell.com",
+            "version": "TLSv13",
+            "cipher": "TLS_AES_256_GCM_SHA384",
+            "established": true,
+            "resumed": false
+          }
+        ],
+        "http": []
+      }
+    }
+  ]
+}

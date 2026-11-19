@@ -1,0 +1,10 @@
+{
+  "original_runtime_receipt": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\runtime-receipt.json",
+  "original_runtime_receipt_sha256": "72fa57f776cb93308f0af77b15d386f6fe5343e7d7307d87cfc87ec125484e72",
+  "redirected_runtime_receipt": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\vendored_runtime_receipt.json",
+  "redirected_runtime_receipt_sha256": "936d814607803d8a98e78175daa565568019e105987580db886e3257bc3f3eb4",
+  "only_changed_field": "export_script",
+  "export_script_bytes_identical": true,
+  "pinned_binary_unchanged": true,
+  "vendor_source_receipt": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\代码\\tracelight-ids\\.worktrees\\fit-contract-20261119\\scripts\\fit_contract\\vendor_ait\\source_receipt.json"
+}

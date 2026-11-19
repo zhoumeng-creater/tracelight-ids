@@ -1,0 +1,38 @@
+{
+  "run": "santos",
+  "events": 133,
+  "event_status": {
+    "multiple_candidates": 67,
+    "unique_candidate": 66
+  },
+  "links": 632,
+  "candidate_connections": 562,
+  "connection_labels": {
+    "None": 91,
+    "1": 32,
+    "0": 439
+  },
+  "positive_connections_by_event_kind": {
+    "webshell_command": 30,
+    "attack_download": 1,
+    "reverse_shell_channel": 1
+  },
+  "full_background_upstream": {
+    "intranet_server": {
+      "normalized_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\connections.jsonl.gz",
+      "full_capture_connections": 14538,
+      "involving_declared_host": 6072,
+      "not_involving_declared_host": 8466
+    },
+    "cloud_share": {
+      "normalized_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\connections.jsonl.gz",
+      "full_capture_connections": 17562,
+      "involving_declared_host": 16146,
+      "not_involving_declared_host": 1416
+    }
+  },
+  "events_complete_for_fixed_source_set": true,
+  "connections_scope": "All event-candidate connections, including label-null. Merge into upstream full background by flow_id; other background remains label-null.",
+  "normal_qualification_scope": "B-grade conditional normal: whole connection potential service requests, official default-normal rule, named normal action anchor. Shared-proxy transaction attribution is not unique. Excludes mixed/positive-linked/unfinished/out-of-simulation and None/negative raw8.",
+  "no_training_or_scoring": true
+}

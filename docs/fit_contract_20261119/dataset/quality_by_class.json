@@ -1,0 +1,170 @@
+[
+  {
+    "run": "fox",
+    "capture_host": "cloud_share",
+    "role": "V",
+    "label": 0,
+    "truncated_record_candidate_present": false,
+    "rows": 355
+  },
+  {
+    "run": "fox",
+    "capture_host": "cloud_share",
+    "role": "V",
+    "label": 0,
+    "truncated_record_candidate_present": true,
+    "rows": 2
+  },
+  {
+    "run": "fox",
+    "capture_host": "cloud_share",
+    "role": "V",
+    "label": null,
+    "truncated_record_candidate_present": false,
+    "rows": 33369
+  },
+  {
+    "run": "fox",
+    "capture_host": "cloud_share",
+    "role": "V",
+    "label": null,
+    "truncated_record_candidate_present": true,
+    "rows": 247
+  },
+  {
+    "run": "fox",
+    "capture_host": "intranet_server",
+    "role": "V",
+    "label": 0,
+    "truncated_record_candidate_present": false,
+    "rows": 73
+  },
+  {
+    "run": "fox",
+    "capture_host": "intranet_server",
+    "role": "V",
+    "label": 1,
+    "truncated_record_candidate_present": false,
+    "rows": 16
+  },
+  {
+    "run": "fox",
+    "capture_host": "intranet_server",
+    "role": "V",
+    "label": 1,
+    "truncated_record_candidate_present": true,
+    "rows": 1
+  },
+  {
+    "run": "fox",
+    "capture_host": "intranet_server",
+    "role": "V",
+    "label": null,
+    "truncated_record_candidate_present": false,
+    "rows": 21171
+  },
+  {
+    "run": "fox",
+    "capture_host": "intranet_server",
+    "role": "V",
+    "label": null,
+    "truncated_record_candidate_present": true,
+    "rows": 253
+  },
+  {
+    "run": "russellmitchell",
+    "capture_host": "cloud_share",
+    "role": "C",
+    "label": 0,
+    "truncated_record_candidate_present": false,
+    "rows": 25
+  },
+  {
+    "run": "russellmitchell",
+    "capture_host": "cloud_share",
+    "role": "C_background",
+    "label": null,
+    "truncated_record_candidate_present": false,
+    "rows": 21683
+  },
+  {
+    "run": "russellmitchell",
+    "capture_host": "cloud_share",
+    "role": "C_background",
+    "label": null,
+    "truncated_record_candidate_present": true,
+    "rows": 217
+  },
+  {
+    "run": "santos",
+    "capture_host": "cloud_share",
+    "role": "F",
+    "label": 0,
+    "truncated_record_candidate_present": false,
+    "rows": 313
+  },
+  {
+    "run": "santos",
+    "capture_host": "cloud_share",
+    "role": "F",
+    "label": 0,
+    "truncated_record_candidate_present": true,
+    "rows": 1
+  },
+  {
+    "run": "santos",
+    "capture_host": "cloud_share",
+    "role": "F",
+    "label": null,
+    "truncated_record_candidate_present": false,
+    "rows": 17117
+  },
+  {
+    "run": "santos",
+    "capture_host": "cloud_share",
+    "role": "F",
+    "label": null,
+    "truncated_record_candidate_present": true,
+    "rows": 131
+  },
+  {
+    "run": "santos",
+    "capture_host": "intranet_server",
+    "role": "F",
+    "label": 0,
+    "truncated_record_candidate_present": false,
+    "rows": 125
+  },
+  {
+    "run": "santos",
+    "capture_host": "intranet_server",
+    "role": "F",
+    "label": 1,
+    "truncated_record_candidate_present": false,
+    "rows": 31
+  },
+  {
+    "run": "santos",
+    "capture_host": "intranet_server",
+    "role": "F",
+    "label": 1,
+    "truncated_record_candidate_present": true,
+    "rows": 1
+  },
+  {
+    "run": "santos",
+    "capture_host": "intranet_server",
+    "role": "F",
+    "label": null,
+    "truncated_record_candidate_present": false,
+    "rows": 14197
+  },
+  {
+    "run": "santos",
+    "capture_host": "intranet_server",
+    "role": "F",
+    "label": null,
+    "truncated_record_candidate_present": true,
+    "rows": 184
+  }
+]

@@ -1,0 +1,3373 @@
+{
+  "summary": [
+    {
+      "run": "santos",
+      "expected_actor_logs": 18,
+      "missing_actor_logs": 0,
+      "rows_read": 121937,
+      "download_actions_in_all_logs": 93,
+      "fixed_cloud_events": 44
+    },
+    {
+      "run": "fox",
+      "expected_actor_logs": 16,
+      "missing_actor_logs": 0,
+      "rows_read": 124774,
+      "download_actions_in_all_logs": 215,
+      "fixed_cloud_events": 42
+    }
+  ],
+  "fixed_target_event_count": 254,
+  "source_receipts": [
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_3/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\ext_user_3\\logs\\sm.log",
+      "data_offset": 97596743,
+      "path": "gather/ext_user_3/logs/sm.log",
+      "bytes": 2305720,
+      "compressed": 197721,
+      "CRC": 2568566770,
+      "offset": 97596656,
+      "method": 8,
+      "flags": 0,
+      "sha256": "11e7020e3fb1c993096300b537700257ff32d0614c467b35c5c22ea11f676717"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_7/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_7\\logs\\sm.log",
+      "data_offset": 123988001,
+      "path": "gather/internal_employee_7/logs/sm.log",
+      "bytes": 3704177,
+      "compressed": 331778,
+      "CRC": 3150310274,
+      "offset": 123987905,
+      "method": 8,
+      "flags": 0,
+      "sha256": "65f7381ee0747f7f706e09ac83d61ced8c599f8dbcb611e33c055c8fdd45bd89"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_1/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_1\\logs\\sm.log",
+      "data_offset": 130811344,
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 3631025,
+      "compressed": 314528,
+      "CRC": 1483930307,
+      "offset": 130811248,
+      "method": 8,
+      "flags": 0,
+      "sha256": "9fca849d95734ace448c91c8f7a9f3a5fd280fb699ab7c953bc69d25dad7bcf4"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_0/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\ext_user_0\\logs\\sm.log",
+      "data_offset": 251302104,
+      "path": "gather/ext_user_0/logs/sm.log",
+      "bytes": 1753846,
+      "compressed": 147379,
+      "CRC": 3803040231,
+      "offset": 251302017,
+      "method": 8,
+      "flags": 0,
+      "sha256": "1c260b34c19febf41dad34c6471ce46ba7c3dd95742dc423fdd3ea9454686d0f"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_3/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_3\\logs\\sm.log",
+      "data_offset": 295219402,
+      "path": "gather/internal_employee_3/logs/sm.log",
+      "bytes": 3699151,
+      "compressed": 332930,
+      "CRC": 3192082372,
+      "offset": 295219306,
+      "method": 8,
+      "flags": 0,
+      "sha256": "2aceb8104343b353b696fa972f6c5d01c011336f7c1350620c8e8634cd5db0cb"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_5/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\ext_user_5\\logs\\sm.log",
+      "data_offset": 301548636,
+      "path": "gather/ext_user_5/logs/sm.log",
+      "bytes": 1761433,
+      "compressed": 147834,
+      "CRC": 3594843420,
+      "offset": 301548549,
+      "method": 8,
+      "flags": 0,
+      "sha256": "b1da9cd77b75739d13b4d26295a834a7c41c67e47ac76ff020521c8e8ca0197e"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_2/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\remote_employee_2\\logs\\sm.log",
+      "data_offset": 302616107,
+      "path": "gather/remote_employee_2/logs/sm.log",
+      "bytes": 4878505,
+      "compressed": 421738,
+      "CRC": 4236755927,
+      "offset": 302616013,
+      "method": 8,
+      "flags": 0,
+      "sha256": "04f5c4aed81f0cd2dd02cf0e8fd7bfdfad0174b95718e7fbdeaba6bf8625b0b9"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_8/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_8\\logs\\sm.log",
+      "data_offset": 317772089,
+      "path": "gather/internal_employee_8/logs/sm.log",
+      "bytes": 2588001,
+      "compressed": 225750,
+      "CRC": 3120943317,
+      "offset": 317771993,
+      "method": 8,
+      "flags": 0,
+      "sha256": "dcacdd8cf05e77ee7548dc0a3ec120a9aa29b036cb064195a1df26fbc4ad7e0e"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_1/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\remote_employee_1\\logs\\sm.log",
+      "data_offset": 318110694,
+      "path": "gather/remote_employee_1/logs/sm.log",
+      "bytes": 3433928,
+      "compressed": 320068,
+      "CRC": 3333980418,
+      "offset": 318110600,
+      "method": 8,
+      "flags": 0,
+      "sha256": "3639005445d438fb5b052a3922634520613b335b1a041acb667a8eefb6fadd63"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_0/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_0\\logs\\sm.log",
+      "data_offset": 429230379,
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 2347435,
+      "compressed": 199273,
+      "CRC": 1392418772,
+      "offset": 429230283,
+      "method": 8,
+      "flags": 0,
+      "sha256": "bbe93281baa6599be8f00387bcdd30a09a9e79a7b430471f2fb7e908f1b9c000"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_1/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\ext_user_1\\logs\\sm.log",
+      "data_offset": 468918190,
+      "path": "gather/ext_user_1/logs/sm.log",
+      "bytes": 2511952,
+      "compressed": 209955,
+      "CRC": 3034473724,
+      "offset": 468918103,
+      "method": 8,
+      "flags": 0,
+      "sha256": "cd38a8ac7e418a510df7bc10c14ffe7bdfe00a390c92099ed7fa175cd8b18838"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_0/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\remote_employee_0\\logs\\sm.log",
+      "data_offset": 469235785,
+      "path": "gather/remote_employee_0/logs/sm.log",
+      "bytes": 392221,
+      "compressed": 28577,
+      "CRC": 2496804638,
+      "offset": 469235691,
+      "method": 8,
+      "flags": 0,
+      "sha256": "c9d7f3a45b6a8b563eb60f01002f67df794a8440023ebd35c1e98135e69f15be"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_2/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_2\\logs\\sm.log",
+      "data_offset": 469369223,
+      "path": "gather/internal_employee_2/logs/sm.log",
+      "bytes": 400605,
+      "compressed": 36363,
+      "CRC": 3190235797,
+      "offset": 469369127,
+      "method": 8,
+      "flags": 0,
+      "sha256": "354e3f59cbd5e518f6ba638a1872e38fbdd585c4bd61eb04532934208483d87a"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_2/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\ext_user_2\\logs\\sm.log",
+      "data_offset": 469500764,
+      "path": "gather/ext_user_2/logs/sm.log",
+      "bytes": 2175208,
+      "compressed": 179699,
+      "CRC": 1756023375,
+      "offset": 469500677,
+      "method": 8,
+      "flags": 0,
+      "sha256": "286d1ef72d20a906a914cce5f0c21d2279c0017465a45f4b2cd30c4645efe385"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_6/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_6\\logs\\sm.log",
+      "data_offset": 469778792,
+      "path": "gather/internal_employee_6/logs/sm.log",
+      "bytes": 2971396,
+      "compressed": 275329,
+      "CRC": 1020335460,
+      "offset": 469778696,
+      "method": 8,
+      "flags": 0,
+      "sha256": "a4f2f80c4426612df6250f1d22aebc49de639e83d5a91d061d2ad347f3392d03"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_4/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_4\\logs\\sm.log",
+      "data_offset": 564347260,
+      "path": "gather/internal_employee_4/logs/sm.log",
+      "bytes": 4903034,
+      "compressed": 440980,
+      "CRC": 703631024,
+      "offset": 564347164,
+      "method": 8,
+      "flags": 0,
+      "sha256": "cd09cf865c5960b03b05134bb18ce76ed3bd7cf0283cd8bbdaa4f8c3519ec9a7"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_4/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\ext_user_4\\logs\\sm.log",
+      "data_offset": 571896578,
+      "path": "gather/ext_user_4/logs/sm.log",
+      "bytes": 1920326,
+      "compressed": 164000,
+      "CRC": 3174524235,
+      "offset": 571896491,
+      "method": 8,
+      "flags": 0,
+      "sha256": "c9339fad7a21d65e58a1caa774b4a59c545caaa3acdc9cbe3a3ed60e15451ff4"
+    },
+    {
+      "archive": "santos_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_5/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\internal_employee_5\\logs\\sm.log",
+      "data_offset": 572159036,
+      "path": "gather/internal_employee_5/logs/sm.log",
+      "bytes": 4163567,
+      "compressed": 384057,
+      "CRC": 3086492684,
+      "offset": 572158940,
+      "method": 8,
+      "flags": 0,
+      "sha256": "e9b28a3ee1ea11ca224a39bc445d3040a1b3cc216ee14422093310f725f10f69"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_3/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_3\\logs\\sm.log",
+      "data_offset": 101463151,
+      "path": "gather/ext_user_3/logs/sm.log",
+      "bytes": 3299065,
+      "compressed": 277775,
+      "CRC": 2101232664,
+      "offset": 101463064,
+      "method": 8,
+      "flags": 0,
+      "sha256": "dc5a2a382d863e91e8737cf6455be478398c9248b459150fa554fb2ad17f1759"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_1/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\internal_employee_1\\logs\\sm.log",
+      "data_offset": 127430183,
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 2945430,
+      "compressed": 243421,
+      "CRC": 1456807426,
+      "offset": 127430087,
+      "method": 8,
+      "flags": 0,
+      "sha256": "8655e7af49819dbd5b5665b0b4a03fce7b70eb1f8458edadf50dd7571e8a4cc9"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_0/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_0\\logs\\sm.log",
+      "data_offset": 211429767,
+      "path": "gather/ext_user_0/logs/sm.log",
+      "bytes": 2717178,
+      "compressed": 235128,
+      "CRC": 3575260964,
+      "offset": 211429680,
+      "method": 8,
+      "flags": 0,
+      "sha256": "20277853e1470910a8d5708e7311b119b58cb6cd091eb0ddbe6588559e8f179f"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_3/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\internal_employee_3\\logs\\sm.log",
+      "data_offset": 272692652,
+      "path": "gather/internal_employee_3/logs/sm.log",
+      "bytes": 463830,
+      "compressed": 36078,
+      "CRC": 2682366533,
+      "offset": 272692556,
+      "method": 8,
+      "flags": 0,
+      "sha256": "06e32fab4cf7da56976ed707c0f32c94544541ea4c3416b3366074ad24d7074b"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_5/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_5\\logs\\sm.log",
+      "data_offset": 272823614,
+      "path": "gather/ext_user_5/logs/sm.log",
+      "bytes": 2058319,
+      "compressed": 171065,
+      "CRC": 3185210128,
+      "offset": 272823527,
+      "method": 8,
+      "flags": 0,
+      "sha256": "cf46adbcda9cf912dfe4357a5bc6e20ca032d045b606dc61df64134e8cbb4bb2"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_2/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\remote_employee_2\\logs\\sm.log",
+      "data_offset": 273101017,
+      "path": "gather/remote_employee_2/logs/sm.log",
+      "bytes": 1099058,
+      "compressed": 78542,
+      "CRC": 714306207,
+      "offset": 273100923,
+      "method": 8,
+      "flags": 0,
+      "sha256": "1580b74ca767b080b424bf23b256e646e6ab6fd0128cbbb26cba5b2edfcb37a1"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_6/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_6\\logs\\sm.log",
+      "data_offset": 273274465,
+      "path": "gather/ext_user_6/logs/sm.log",
+      "bytes": 2062150,
+      "compressed": 172324,
+      "CRC": 2197542589,
+      "offset": 273274378,
+      "method": 8,
+      "flags": 0,
+      "sha256": "a4814566bcd0aa41181fd22c70227784c9e7165917f2188b4800dcff7a50cf4f"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_3/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\remote_employee_3\\logs\\sm.log",
+      "data_offset": 288714349,
+      "path": "gather/remote_employee_3/logs/sm.log",
+      "bytes": 4354211,
+      "compressed": 381687,
+      "CRC": 2386146999,
+      "offset": 288714255,
+      "method": 8,
+      "flags": 0,
+      "sha256": "7a4cdce1d8965349bc670f28a87ed2e76b479aa5b6e02cee86d6f7562f94db42"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_1/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\remote_employee_1\\logs\\sm.log",
+      "data_offset": 302745560,
+      "path": "gather/remote_employee_1/logs/sm.log",
+      "bytes": 5100527,
+      "compressed": 408062,
+      "CRC": 4176357881,
+      "offset": 302745466,
+      "method": 8,
+      "flags": 0,
+      "sha256": "072070c422ef2c53dd033370dbca4589f66687919cc7a0de6be53c959689c34e"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_0/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\internal_employee_0\\logs\\sm.log",
+      "data_offset": 442573028,
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 3957306,
+      "compressed": 345875,
+      "CRC": 3968383837,
+      "offset": 442572932,
+      "method": 8,
+      "flags": 0,
+      "sha256": "685e9130c237c6b31b76da512e63458e5e94722a07900dd3ac88be865e3559da"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_1/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_1\\logs\\sm.log",
+      "data_offset": 494782013,
+      "path": "gather/ext_user_1/logs/sm.log",
+      "bytes": 3132232,
+      "compressed": 269665,
+      "CRC": 1924163495,
+      "offset": 494781926,
+      "method": 8,
+      "flags": 0,
+      "sha256": "03377822a1fbbd13b28ba60c5eda6e9d6ddfa7ff6370300ea5cf47c20c6e9199"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/remote_employee_0/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\remote_employee_0\\logs\\sm.log",
+      "data_offset": 496058341,
+      "path": "gather/remote_employee_0/logs/sm.log",
+      "bytes": 5524256,
+      "compressed": 496384,
+      "CRC": 4268366796,
+      "offset": 496058247,
+      "method": 8,
+      "flags": 0,
+      "sha256": "2df9e43d5b182e4ee6a0cebf42277ebce9c7c0a70c93013148294abe48138576"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_2/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\internal_employee_2\\logs\\sm.log",
+      "data_offset": 514227466,
+      "path": "gather/internal_employee_2/logs/sm.log",
+      "bytes": 4115129,
+      "compressed": 366170,
+      "CRC": 3600690034,
+      "offset": 514227370,
+      "method": 8,
+      "flags": 0,
+      "sha256": "0aa9265359d50935fef79ab0452ca534f1921f60632c588b19934e8b06ee6920"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_2/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_2\\logs\\sm.log",
+      "data_offset": 534289697,
+      "path": "gather/ext_user_2/logs/sm.log",
+      "bytes": 2463758,
+      "compressed": 210419,
+      "CRC": 1277841225,
+      "offset": 534289610,
+      "method": 8,
+      "flags": 0,
+      "sha256": "d6ad7906181fc029f3c3a4ae88bd78e112927ca346b83e0a357c23055ab6424f"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/internal_employee_4/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\internal_employee_4\\logs\\sm.log",
+      "data_offset": 670935591,
+      "path": "gather/internal_employee_4/logs/sm.log",
+      "bytes": 5779052,
+      "compressed": 509801,
+      "CRC": 388525316,
+      "offset": 670935495,
+      "method": 8,
+      "flags": 0,
+      "sha256": "e5df616ac96f76247b6633571db4ed7d962973642033a21a476b90895d795b12"
+    },
+    {
+      "archive": "fox_no-pcaps.zip",
+      "record": "https://zenodo.org/api/records/19483937",
+      "member": "gather/ext_user_4/logs/sm.log",
+      "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\ext_user_4\\logs\\sm.log",
+      "data_offset": 683232979,
+      "path": "gather/ext_user_4/logs/sm.log",
+      "bytes": 1663999,
+      "compressed": 141020,
+      "CRC": 280920077,
+      "offset": 683232892,
+      "method": 8,
+      "flags": 0,
+      "sha256": "81d8b1529f5bfa7f3b23710201ffc14ad5e7d82a2bc1d37af0121aa2fd56649c"
+    }
+  ],
+  "events": {
+    "ait:santos:normal:internal_employee_0:dd7746c1-16ed-4c92-bd21-a27ab31258bf": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 950,
+          "complete_line": 951,
+          "start": 1642166400.6444476,
+          "completion": 1642166420.0406237,
+          "transition_id": "dd7746c1-16ed-4c92-bd21-a27ab31258bf",
+          "file": {
+            "etag": "61e025d6b9ec5",
+            "fid": "14",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "mtime": 1642078175000,
+            "name": "NixonLtd.docx",
+            "path": "/Reports",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 24432
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:927e44c6-5501-42bf-9725-6f88af0f4d6d": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 957,
+          "complete_line": 958,
+          "start": 1642166457.2955568,
+          "completion": 1642166476.708963,
+          "transition_id": "927e44c6-5501-42bf-9725-6f88af0f4d6d",
+          "file": {
+            "etag": "61e025d6b312a",
+            "fid": "13",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "mtime": 1642078139000,
+            "name": "BellKingAndSmith.docx",
+            "path": "/Reports",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 24495
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:a99a683d-e5b3-4a99-87a2-6cbfa33c1a4a": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 2560,
+          "complete_line": 2561,
+          "start": 1642254290.7045875,
+          "completion": 1642254310.0860775,
+          "transition_id": "a99a683d-e5b3-4a99-87a2-6cbfa33c1a4a",
+          "file": {
+            "etag": "eced5d90ab21a77d582ad54e2d335af5",
+            "fid": "59",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642089713000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:3a72d113-27f5-40ae-8874-525c27e3402e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 2573,
+          "complete_line": 2574,
+          "start": 1642254393.1990578,
+          "completion": 1642254412.5494227,
+          "transition_id": "3a72d113-27f5-40ae-8874-525c27e3402e",
+          "file": {
+            "etag": "bf207f7759f36913a795c0123f8a2b0c",
+            "fid": "62",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642089713000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:2f33c4ca-9919-48e9-8b9a-1e6734a15991": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 4128,
+          "complete_line": 4129,
+          "start": 1642342473.0330787,
+          "completion": 1642342492.364999,
+          "transition_id": "2f33c4ca-9919-48e9-8b9a-1e6734a15991",
+          "file": {
+            "etag": "b137f43850b0f502783d097adf8bea98",
+            "fid": "65",
+            "file_type": "file",
+            "mime": "application/vnd.oasis.opendocument.text",
+            "mtime": 1642089713000,
+            "name": "Example.odt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 36227
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:613c3de8-f279-49cf-b46b-f82530f722b6": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 4218,
+          "complete_line": 4219,
+          "start": 1642344054.6971316,
+          "completion": 1642344074.0759332,
+          "transition_id": "613c3de8-f279-49cf-b46b-f82530f722b6",
+          "file": {
+            "etag": "eced5d90ab21a77d582ad54e2d335af5",
+            "fid": "59",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642089713000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:7784c961-2505-4d1f-8ab0-b4c9448782b5": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 4262,
+          "complete_line": 4263,
+          "start": 1642346275.3857324,
+          "completion": 1642346294.7059677,
+          "transition_id": "7784c961-2505-4d1f-8ab0-b4c9448782b5",
+          "file": {
+            "etag": "b137f43850b0f502783d097adf8bea98",
+            "fid": "65",
+            "file_type": "file",
+            "mime": "application/vnd.oasis.opendocument.text",
+            "mtime": 1642089713000,
+            "name": "Example.odt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 36227
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:58b02562-b393-42ac-9e41-a69e97d88842": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 4768,
+          "complete_line": 4769,
+          "start": 1642405168.9003,
+          "completion": 1642405188.209123,
+          "transition_id": "58b02562-b393-42ac-9e41-a69e97d88842",
+          "file": {
+            "etag": "eced5d90ab21a77d582ad54e2d335af5",
+            "fid": "59",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642089713000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:21be5507-a6d1-4f9e-b1f2-d88e4314c349": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 4787,
+          "complete_line": 4788,
+          "start": 1642405213.53355,
+          "completion": 1642405232.8594506,
+          "transition_id": "21be5507-a6d1-4f9e-b1f2-d88e4314c349",
+          "file": {
+            "etag": "eced5d90ab21a77d582ad54e2d335af5",
+            "fid": "59",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642089713000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:5bc28feb-6a84-4629-b57e-0822f49d5415": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5180,
+          "complete_line": 5181,
+          "start": 1642413386.5402148,
+          "completion": 1642413405.8685293,
+          "transition_id": "5bc28feb-6a84-4629-b57e-0822f49d5415",
+          "file": {
+            "etag": "61e04cf1bfbdb",
+            "fid": "60",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642089713000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:cb7cbfd4-53fb-405f-953a-f40090a63880": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5187,
+          "complete_line": 5188,
+          "start": 1642413425.3481607,
+          "completion": 1642413444.6694825,
+          "transition_id": "cb7cbfd4-53fb-405f-953a-f40090a63880",
+          "file": {
+            "etag": "61e04cf1bfbdb",
+            "fid": "60",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642089713000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:754a2868-fa55-4802-afeb-742f861d1b69": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5194,
+          "complete_line": 5195,
+          "start": 1642413489.2792692,
+          "completion": 1642413508.6085792,
+          "transition_id": "754a2868-fa55-4802-afeb-742f861d1b69",
+          "file": {
+            "etag": "eced5d90ab21a77d582ad54e2d335af5",
+            "fid": "59",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642089713000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:29122aef-65c6-4834-bf67-16ccfc7b153e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5207,
+          "complete_line": 5208,
+          "start": 1642413603.3880298,
+          "completion": 1642413622.7222772,
+          "transition_id": "29122aef-65c6-4834-bf67-16ccfc7b153e",
+          "file": {
+            "etag": "61e025d76d433",
+            "fid": "34",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642078127000,
+            "name": "payroll_2013.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 98688
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:7bd9e329-4ad1-4ac1-90e0-00ff82083515": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5258,
+          "complete_line": 5259,
+          "start": 1642414552.2504141,
+          "completion": 1642414571.5922704,
+          "transition_id": "7bd9e329-4ad1-4ac1-90e0-00ff82083515",
+          "file": {
+            "etag": "61e04cf1bfbdb",
+            "fid": "60",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642089713000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:2dc1b8d0-666d-4abb-bde8-b6625d1a55b1": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5265,
+          "complete_line": 5266,
+          "start": 1642414626.32529,
+          "completion": 1642414645.6821282,
+          "transition_id": "2dc1b8d0-666d-4abb-bde8-b6625d1a55b1",
+          "file": {
+            "etag": "61e025d76fab4",
+            "fid": "25",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642079703000,
+            "name": "Management",
+            "path": "/",
+            "permissions": 15,
+            "share_permissions": 15,
+            "size": 887101
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:d373d9f5-19a6-4051-a99b-7a4b5fc8f487": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5272,
+          "complete_line": 5273,
+          "start": 1642414655.6388986,
+          "completion": 1642414674.9742064,
+          "transition_id": "d373d9f5-19a6-4051-a99b-7a4b5fc8f487",
+          "file": {
+            "etag": "61e52221b8c85",
+            "fid": "64",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642406339000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 61807
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:43f5d937-f8ed-434f-a1ae-39134b356d42": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5307,
+          "complete_line": 5308,
+          "start": 1642415077.4707448,
+          "completion": 1642415096.7779162,
+          "transition_id": "43f5d937-f8ed-434f-a1ae-39134b356d42",
+          "file": {
+            "etag": "61e52221b8c85",
+            "fid": "64",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642406339000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 61807
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_0:266fccac-6950-4baf-b67f-f4bec1d7a162": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5314,
+          "complete_line": 5315,
+          "start": 1642415119.668036,
+          "completion": 1642415139.0453582,
+          "transition_id": "266fccac-6950-4baf-b67f-f4bec1d7a162",
+          "file": {
+            "etag": "61e04cf1bfbdb",
+            "fid": "60",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642089713000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:bfceb332-eb91-4901-a36a-005b13aa3630": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2326,
+          "complete_line": 2327,
+          "start": 1642178970.8442361,
+          "completion": 1642178990.2415261,
+          "transition_id": "bfceb332-eb91-4901-a36a-005b13aa3630",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:76a7dd1e-9fb3-4d58-b20c-2d8dfe7afcae": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2351,
+          "complete_line": 2352,
+          "start": 1642179081.6083956,
+          "completion": 1642179100.9705274,
+          "transition_id": "76a7dd1e-9fb3-4d58-b20c-2d8dfe7afcae",
+          "file": {
+            "etag": "2901d1a451412fdfc74a831d6d5751b3",
+            "fid": "45",
+            "file_type": "file",
+            "mime": "application/vnd.oasis.opendocument.text",
+            "mtime": 1642085157000,
+            "name": "Example.odt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 36227
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:3d2811d6-9e44-4e5b-ac9b-78e210e48ebc": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2370,
+          "complete_line": 2371,
+          "start": 1642179925.1030505,
+          "completion": 1642179944.530879,
+          "transition_id": "3d2811d6-9e44-4e5b-ac9b-78e210e48ebc",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:b5226549-3485-41a3-b003-926de7266b83": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2377,
+          "complete_line": 2378,
+          "start": 1642179974.696903,
+          "completion": 1642179994.0496376,
+          "transition_id": "b5226549-3485-41a3-b003-926de7266b83",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:e6d81c1f-aaaf-46a1-9959-6d4a0d75a9b3": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2384,
+          "complete_line": 2385,
+          "start": 1642180029.951457,
+          "completion": 1642180049.2961638,
+          "transition_id": "e6d81c1f-aaaf-46a1-9959-6d4a0d75a9b3",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:63ab788d-f7ee-433b-a19a-a65b4a6feee3": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2391,
+          "complete_line": 2392,
+          "start": 1642180082.6453066,
+          "completion": 1642180102.132421,
+          "transition_id": "63ab788d-f7ee-433b-a19a-a65b4a6feee3",
+          "file": {
+            "etag": "61e03b254efd9",
+            "fid": "40",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642085157000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:789e5e65-7fc7-4a9e-a2a2-94be7809c47e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2503,
+          "complete_line": 2504,
+          "start": 1642184009.4260895,
+          "completion": 1642184028.8112237,
+          "transition_id": "789e5e65-7fc7-4a9e-a2a2-94be7809c47e",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:9d9ba087-e143-4c52-8a9b-d5ea57e6cddb": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2616,
+          "complete_line": 2617,
+          "start": 1642188941.132505,
+          "completion": 1642188960.4638681,
+          "transition_id": "9d9ba087-e143-4c52-8a9b-d5ea57e6cddb",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:36063c4a-4329-4516-bf37-ec9177df649d": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 4482,
+          "complete_line": 4483,
+          "start": 1642270105.7072186,
+          "completion": 1642270125.0649004,
+          "transition_id": "36063c4a-4329-4516-bf37-ec9177df649d",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:d3b8b4b7-e5f2-4278-bcd7-1c143f7c9046": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 4536,
+          "complete_line": 4537,
+          "start": 1642271300.3615124,
+          "completion": 1642271319.8002036,
+          "transition_id": "d3b8b4b7-e5f2-4278-bcd7-1c143f7c9046",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:9e284cbe-2b50-4cfe-b344-80e34202fd05": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6144,
+          "complete_line": 6145,
+          "start": 1642340336.4011576,
+          "completion": 1642340355.7936625,
+          "transition_id": "9e284cbe-2b50-4cfe-b344-80e34202fd05",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:3e0fa102-21b4-4249-8e14-948754fedc24": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6168,
+          "complete_line": 6169,
+          "start": 1642340628.131587,
+          "completion": 1642340647.4702735,
+          "transition_id": "3e0fa102-21b4-4249-8e14-948754fedc24",
+          "file": {
+            "etag": "61e3367fa6938",
+            "fid": "144",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642280575000,
+            "name": "occur",
+            "path": "/Documents (2)",
+            "permissions": 15,
+            "share_permissions": 15,
+            "size": 0
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:3d50c486-1642-4aca-a74e-6d677283ce2b": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6240,
+          "complete_line": 6241,
+          "start": 1642341882.3323054,
+          "completion": 1642341901.7042208,
+          "transition_id": "3d50c486-1642-4aca-a74e-6d677283ce2b",
+          "file": {
+            "etag": "61e03b254efd9",
+            "fid": "40",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642085157000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:692a2055-124c-4da3-8638-9b0a01b9119f": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6247,
+          "complete_line": 6248,
+          "start": 1642341923.8908849,
+          "completion": 1642341943.2332733,
+          "transition_id": "692a2055-124c-4da3-8638-9b0a01b9119f",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:fa2f5c0d-0d93-4159-b7c5-ac4de05fd74c": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6585,
+          "complete_line": 6586,
+          "start": 1642357795.8860376,
+          "completion": 1642357815.4557123,
+          "transition_id": "fa2f5c0d-0d93-4159-b7c5-ac4de05fd74c",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:7cd8f12b-7a39-409b-b6eb-587b9f692120": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6700,
+          "complete_line": 6701,
+          "start": 1642361208.3929605,
+          "completion": 1642361227.727876,
+          "transition_id": "7cd8f12b-7a39-409b-b6eb-587b9f692120",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:12fb8829-f426-4041-8688-d7fd0aa2e113": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6971,
+          "complete_line": 6972,
+          "start": 1642371336.8811896,
+          "completion": 1642371356.3792834,
+          "transition_id": "12fb8829-f426-4041-8688-d7fd0aa2e113",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:a35cf62e-14ea-4bba-a379-d2ed94ae74c9": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 7804,
+          "complete_line": 7805,
+          "start": 1642424780.6713746,
+          "completion": 1642424800.014363,
+          "transition_id": "a35cf62e-14ea-4bba-a379-d2ed94ae74c9",
+          "file": {
+            "etag": "61e03b257e151",
+            "fid": "44",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642085157000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 36227
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:93a44aec-4200-49ed-8459-8d514c5de0ed": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 7839,
+          "complete_line": 7840,
+          "start": 1642424961.3238053,
+          "completion": 1642424980.673631,
+          "transition_id": "93a44aec-4200-49ed-8459-8d514c5de0ed",
+          "file": {
+            "etag": "61e46cfb01f3c",
+            "fid": "84",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642360058000,
+            "name": "Documents (2)",
+            "path": "/",
+            "permissions": 15,
+            "share_permissions": 15,
+            "size": 13792
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:38d8e2f9-d449-4d7a-adf7-55beada654cd": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 8860,
+          "complete_line": 8861,
+          "start": 1642450198.6624281,
+          "completion": 1642450218.0175967,
+          "transition_id": "38d8e2f9-d449-4d7a-adf7-55beada654cd",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:19b726d3-1f89-439e-bebe-312f27f41949": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 8872,
+          "complete_line": 8873,
+          "start": 1642450660.0513196,
+          "completion": 1642450679.3898559,
+          "transition_id": "19b726d3-1f89-439e-bebe-312f27f41949",
+          "file": {
+            "etag": "61e5ba7d8957e",
+            "fid": "84",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642445437000,
+            "name": "Documents (2)",
+            "path": "/",
+            "permissions": 15,
+            "share_permissions": 15,
+            "size": 0
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:d7478b86-cdd9-473f-977a-513e5be4d5de": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 8989,
+          "complete_line": 8990,
+          "start": 1642452774.97827,
+          "completion": 1642452794.3130789,
+          "transition_id": "d7478b86-cdd9-473f-977a-513e5be4d5de",
+          "file": {
+            "etag": "e2441996a10acb2a07c0d9b89cdd9b08",
+            "fid": "42",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642085157000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:240e9e5e-f345-4192-9def-7af442cfc236": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 9014,
+          "complete_line": 9015,
+          "start": 1642453275.8820763,
+          "completion": 1642453295.335139,
+          "transition_id": "240e9e5e-f345-4192-9def-7af442cfc236",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:18ec9719-4be8-4aff-b5a9-fd2134d44554": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 9021,
+          "complete_line": 9022,
+          "start": 1642453310.7472746,
+          "completion": 1642453330.0901914,
+          "transition_id": "18ec9719-4be8-4aff-b5a9-fd2134d44554",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:0744b168-b080-4ad7-b0dd-a203ede0b0a4": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 9028,
+          "complete_line": 9029,
+          "start": 1642453357.6856067,
+          "completion": 1642453377.0376444,
+          "transition_id": "0744b168-b080-4ad7-b0dd-a203ede0b0a4",
+          "file": {
+            "etag": "671c5cfd70c976c2dffbbd0d0cc2d963",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642085156000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:santos:normal:internal_employee_1:a3f9d639-692c-4655-9a98-71f89677bd90": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 18,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 9041,
+          "complete_line": 9042,
+          "start": 1642453912.6573145,
+          "completion": 1642453931.9776962,
+          "transition_id": "a3f9d639-692c-4655-9a98-71f89677bd90",
+          "file": {
+            "etag": "61e5ba7d8957e",
+            "fid": "84",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642445437000,
+            "name": "Documents (2)",
+            "path": "/",
+            "permissions": 15,
+            "share_permissions": 15,
+            "size": 0
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:b036a99a-9abf-457a-a0d1-d144ed65351d": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 2594,
+          "complete_line": 2595,
+          "start": 1642257435.2364066,
+          "completion": 1642257454.556127,
+          "transition_id": "b036a99a-9abf-457a-a0d1-d144ed65351d",
+          "file": {
+            "etag": "4ff6cd80fe6d217a7e681cf6d7179a6d",
+            "fid": "61",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642160507000,
+            "name": "Teotihuacan.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 228789
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:bfb5a521-517d-4311-ac11-9cf0e2e91845": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 2652,
+          "complete_line": 2653,
+          "start": 1642258694.6854851,
+          "completion": 1642258714.0308602,
+          "transition_id": "bfb5a521-517d-4311-ac11-9cf0e2e91845",
+          "file": {
+            "etag": "2a988b0d92f89dbd0929d6f04bb89d0c",
+            "fid": "62",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642160507000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:db232798-6b39-42a9-b33a-d370981878f5": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 2659,
+          "complete_line": 2660,
+          "start": 1642258752.1842184,
+          "completion": 1642258771.5456789,
+          "transition_id": "db232798-6b39-42a9-b33a-d370981878f5",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:f8b69a0d-6e72-455f-a5b4-beb5a98065de": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 2666,
+          "complete_line": 2667,
+          "start": 1642258780.5949633,
+          "completion": 1642258799.8938303,
+          "transition_id": "f8b69a0d-6e72-455f-a5b4-beb5a98065de",
+          "file": {
+            "etag": "61e18aecde345",
+            "fid": "57",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642171116000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 0
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:239b8045-083c-4d9d-9a57-f857f9af7b74": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 3908,
+          "complete_line": 3909,
+          "start": 1642337332.4151697,
+          "completion": 1642337351.8413954,
+          "transition_id": "239b8045-083c-4d9d-9a57-f857f9af7b74",
+          "file": {
+            "etag": null,
+            "fid": "60",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642169794000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 31,
+            "share_permissions": 19,
+            "size": null
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:437a5c54-9010-4ab4-8f7c-fda4150f0d38": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 3927,
+          "complete_line": 3928,
+          "start": 1642338163.779363,
+          "completion": 1642338183.0933058,
+          "transition_id": "437a5c54-9010-4ab4-8f7c-fda4150f0d38",
+          "file": {
+            "etag": null,
+            "fid": "60",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642169794000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 31,
+            "share_permissions": 19,
+            "size": null
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:dd418165-8f61-411b-9bd2-2a71cc99624d": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 3940,
+          "complete_line": 3941,
+          "start": 1642338530.6445365,
+          "completion": 1642338549.9482021,
+          "transition_id": "dd418165-8f61-411b-9bd2-2a71cc99624d",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:8a9a0f9a-a522-478c-aacb-c98526145dc8": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5562,
+          "complete_line": 5563,
+          "start": 1642424380.210491,
+          "completion": 1642424399.6419451,
+          "transition_id": "8a9a0f9a-a522-478c-aacb-c98526145dc8",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:b25da077-7fa2-4f5d-9da9-541494e14a74": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5637,
+          "complete_line": 5638,
+          "start": 1642425510.8655665,
+          "completion": 1642425530.183239,
+          "transition_id": "b25da077-7fa2-4f5d-9da9-541494e14a74",
+          "file": {
+            "etag": "61e324a848879",
+            "fid": "57",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642276008000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 7917
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:ee7737c0-cd03-4c4f-bf00-21f574b5b399": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 5695,
+          "complete_line": 5696,
+          "start": 1642426638.923969,
+          "completion": 1642426658.3032117,
+          "transition_id": "ee7737c0-cd03-4c4f-bf00-21f574b5b399",
+          "file": {
+            "etag": null,
+            "fid": "60",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642169794000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 31,
+            "share_permissions": 19,
+            "size": null
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:e490d03f-6d6f-436e-bca2-de47225a1fcb": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 6129,
+          "complete_line": 6130,
+          "start": 1642440311.634674,
+          "completion": 1642440330.9687595,
+          "transition_id": "e490d03f-6d6f-436e-bca2-de47225a1fcb",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:e2064807-a8dc-4e1c-a280-fc2bb9e0b3f9": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 6136,
+          "complete_line": 6137,
+          "start": 1642440349.2163594,
+          "completion": 1642440368.534298,
+          "transition_id": "e2064807-a8dc-4e1c-a280-fc2bb9e0b3f9",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:9e2a64fe-ed29-4a13-b1b2-6fe84ccd6e8e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 6159,
+          "complete_line": 6160,
+          "start": 1642440903.9788337,
+          "completion": 1642440923.339582,
+          "transition_id": "9e2a64fe-ed29-4a13-b1b2-6fe84ccd6e8e",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:66a80cf3-0c62-42e9-bbd1-a39e0d8380c3": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 6285,
+          "complete_line": 6286,
+          "start": 1642442730.3769841,
+          "completion": 1642442749.740708,
+          "transition_id": "66a80cf3-0c62-42e9-bbd1-a39e0d8380c3",
+          "file": {
+            "etag": "0c1211d98032aac3e95dc4613dac4788",
+            "fid": "56",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642160507000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:71c052fa-c69f-413f-93ce-962cd409f67b": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 6345,
+          "complete_line": 6346,
+          "start": 1642444734.988185,
+          "completion": 1642444754.3099046,
+          "transition_id": "71c052fa-c69f-413f-93ce-962cd409f67b",
+          "file": {
+            "etag": "61e324a848879",
+            "fid": "57",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642276008000,
+            "name": "Documents",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 7917
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:6ee99610-0580-43fc-9ca4-fe42311b2fab": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 6374,
+          "complete_line": 6375,
+          "start": 1642445299.4825752,
+          "completion": 1642445318.8775933,
+          "transition_id": "6ee99610-0580-43fc-9ca4-fe42311b2fab",
+          "file": {
+            "etag": "07467d6bcb255dd1c6e2cd92c6dbaae1",
+            "fid": "220",
+            "file_type": "file",
+            "mime": "text/plain",
+            "mtime": 1642157762000,
+            "name": "world.txt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 7917
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:b50772cf-381f-4d54-8e06-b9276c0effe5": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 9032,
+          "complete_line": 9033,
+          "start": 1642610258.1925857,
+          "completion": 1642610277.511037,
+          "transition_id": "b50772cf-381f-4d54-8e06-b9276c0effe5",
+          "file": {
+            "etag": "61e1617be85f0",
+            "fid": "59",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642160507000,
+            "name": "Photos",
+            "path": "/",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 1011464
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:cba3160d-feae-468a-accc-64ee7c7c2964": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 9060,
+          "complete_line": 9061,
+          "start": 1642610406.208563,
+          "completion": 1642610425.5692556,
+          "transition_id": "cba3160d-feae-468a-accc-64ee7c7c2964",
+          "file": {
+            "etag": "2a988b0d92f89dbd0929d6f04bb89d0c",
+            "fid": "62",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642160507000,
+            "name": "Portugal.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 243733
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:ab661245-e38d-42c5-8e8d-fcad82582e6d": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 9079,
+          "complete_line": 9080,
+          "start": 1642610540.224425,
+          "completion": 1642610559.5419776,
+          "transition_id": "ab661245-e38d-42c5-8e8d-fcad82582e6d",
+          "file": {
+            "etag": "4c3c1ddfa2a3641e6f000ce32767ce2f",
+            "fid": "60",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642160507000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:85b544bc-149e-48ee-9a4c-8f5c24b6d938": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 9147,
+          "complete_line": 9148,
+          "start": 1642611357.4245842,
+          "completion": 1642611376.7370114,
+          "transition_id": "85b544bc-149e-48ee-9a4c-8f5c24b6d938",
+          "file": {
+            "etag": "61e6d5218d682",
+            "fid": "311",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642517793000,
+            "name": "hold",
+            "path": "/Documents",
+            "permissions": 31,
+            "share_permissions": 31,
+            "size": 0
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_0:de0aa770-7820-4eb5-9d27-7686ea96513e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_0",
+          "member": "gather/internal_employee_0/logs/sm.log",
+          "start_line": 9186,
+          "complete_line": 9187,
+          "start": 1642612331.0269952,
+          "completion": 1642612350.3513117,
+          "transition_id": "de0aa770-7820-4eb5-9d27-7686ea96513e",
+          "file": {
+            "etag": "4ff6cd80fe6d217a7e681cf6d7179a6d",
+            "fid": "61",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642160507000,
+            "name": "Teotihuacan.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 228789
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:9d453a92-ab78-44f4-a4b6-7a104168702e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 1841,
+          "complete_line": 1842,
+          "start": 1642232963.321575,
+          "completion": 1642232978.0116377,
+          "transition_id": "9d453a92-ab78-44f4-a4b6-7a104168702e",
+          "file": {
+            "etag": "d4718fe7d7e2c0472713c8d37d30842b",
+            "fid": "167",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642190356000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:0622f139-1192-45c8-97bc-7f9cf9487740": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 1848,
+          "complete_line": 1849,
+          "start": 1642232999.4382648,
+          "completion": 1642233013.9256296,
+          "transition_id": "0622f139-1192-45c8-97bc-7f9cf9487740",
+          "file": {
+            "etag": "d4718fe7d7e2c0472713c8d37d30842b",
+            "fid": "167",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642190356000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:1c643f96-7a3e-432d-82f4-93d92e8ce94a": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 1867,
+          "complete_line": 1868,
+          "start": 1642233069.3784277,
+          "completion": 1642233084.5091813,
+          "transition_id": "1c643f96-7a3e-432d-82f4-93d92e8ce94a",
+          "file": {
+            "etag": "61e1542f139a4",
+            "fid": "43",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154019000,
+            "name": "payroll_2016.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 98705
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:936ed0ea-f4c8-4180-93c4-a030ecb577f5": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 1884,
+          "complete_line": 1885,
+          "start": 1642233677.6991162,
+          "completion": 1642233692.5631058,
+          "transition_id": "936ed0ea-f4c8-4180-93c4-a030ecb577f5",
+          "file": {
+            "etag": "61e1542f2a322",
+            "fid": "48",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154016000,
+            "name": "payroll_2017.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 98605
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:1277aaff-59f0-45d8-9f13-1592a5eeef67": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2134,
+          "complete_line": 2135,
+          "start": 1642241987.2380373,
+          "completion": 1642242002.26061,
+          "transition_id": "1277aaff-59f0-45d8-9f13-1592a5eeef67",
+          "file": {
+            "etag": "61e1542eaddca",
+            "fid": "30",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "mtime": 1642154026000,
+            "name": "BellKingAndSmith.docx",
+            "path": "/Reports",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 24495
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:0cb33b98-9ed1-479a-bba5-0b3323a8d5b6": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 2982,
+          "complete_line": 2983,
+          "start": 1642333719.0153186,
+          "completion": 1642333733.5536296,
+          "transition_id": "0cb33b98-9ed1-479a-bba5-0b3323a8d5b6",
+          "file": {
+            "etag": "b408c4456b88cec3a8eb7fdd4c634be6",
+            "fid": "169",
+            "file_type": "file",
+            "mime": "application/vnd.oasis.opendocument.text",
+            "mtime": 1642190356000,
+            "name": "Example.odt",
+            "path": "/Documents",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 36227
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:de0da74f-be9e-4cd6-8e39-41ce59d31ddd": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 3466,
+          "complete_line": 3467,
+          "start": 1642340936.226316,
+          "completion": 1642340950.7587652,
+          "transition_id": "de0da74f-be9e-4cd6-8e39-41ce59d31ddd",
+          "file": {
+            "etag": "ca13c2ceed7da826038403987efde944",
+            "fid": "171",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642190356000,
+            "name": "Lake-Constance.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 538942
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:4f940169-123b-4089-8566-78cdee1daee4": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 3479,
+          "complete_line": 3480,
+          "start": 1642340999.3662605,
+          "completion": 1642341014.255415,
+          "transition_id": "4f940169-123b-4089-8566-78cdee1daee4",
+          "file": {
+            "etag": "61e1542f20fdc",
+            "fid": "46",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154008000,
+            "name": "payroll_2018.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 96621
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:112cdb09-0bd9-472f-96a4-ac2809c7a7f2": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 3486,
+          "complete_line": 3487,
+          "start": 1642341034.662524,
+          "completion": 1642341049.588265,
+          "transition_id": "112cdb09-0bd9-472f-96a4-ac2809c7a7f2",
+          "file": {
+            "etag": "61e1542f185f8",
+            "fid": "44",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154021000,
+            "name": "payroll_2021.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 99946
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:add52923-badd-41a5-bd63-bbfa2b5cfbd3": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 3493,
+          "complete_line": 3494,
+          "start": 1642341072.618322,
+          "completion": 1642341087.7659104,
+          "transition_id": "add52923-badd-41a5-bd63-bbfa2b5cfbd3",
+          "file": {
+            "etag": "61e1542f1caed",
+            "fid": "45",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154006000,
+            "name": "payroll_2014.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 97805
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:8867287d-2907-49af-9b7f-40977898a7d0": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 3500,
+          "complete_line": 3501,
+          "start": 1642341111.686994,
+          "completion": 1642341126.5761254,
+          "transition_id": "8867287d-2907-49af-9b7f-40977898a7d0",
+          "file": {
+            "etag": "61e1542f25aa1",
+            "fid": "47",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154017000,
+            "name": "payroll_2015.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 99166
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:e54033dc-66fb-4bd5-b9b7-b1357fa88287": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5489,
+          "complete_line": 5490,
+          "start": 1642515096.1804628,
+          "completion": 1642515111.0506268,
+          "transition_id": "e54033dc-66fb-4bd5-b9b7-b1357fa88287",
+          "file": {
+            "etag": "61e1542eddf2c",
+            "fid": "40",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "mtime": 1642154032000,
+            "name": "Mendez-harrington.docx",
+            "path": "/Reports",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 24429
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:f90aa8a6-8268-41c6-a00c-d5076f785b23": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5594,
+          "complete_line": 5595,
+          "start": 1642516871.5702822,
+          "completion": 1642516886.1531844,
+          "transition_id": "f90aa8a6-8268-41c6-a00c-d5076f785b23",
+          "file": {
+            "etag": "3c328a7abd88087ff674066e3b56e94d",
+            "fid": "172",
+            "file_type": "file",
+            "mime": "image/jpeg",
+            "mtime": 1642190356000,
+            "name": "Teotihuacan.jpg",
+            "path": "/Photos",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 228789
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:8f6e7a83-42e3-418c-8d41-0852b9ed181f": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5611,
+          "complete_line": 5612,
+          "start": 1642516953.9997714,
+          "completion": 1642516968.9543746,
+          "transition_id": "8f6e7a83-42e3-418c-8d41-0852b9ed181f",
+          "file": {
+            "etag": "61e1542f139a4",
+            "fid": "43",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154019000,
+            "name": "payroll_2016.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 98705
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:88b460a2-60be-4c70-ad5b-97f742ba06f5": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5656,
+          "complete_line": 5657,
+          "start": 1642517937.1466718,
+          "completion": 1642517952.3535,
+          "transition_id": "88b460a2-60be-4c70-ad5b-97f742ba06f5",
+          "file": {
+            "etag": "61e1542f39016",
+            "fid": "42",
+            "file_type": "dir",
+            "mime": "httpd/unix-directory",
+            "mtime": 1642157103000,
+            "name": "Management",
+            "path": "/",
+            "permissions": 7,
+            "share_permissions": 15,
+            "size": 887101
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:7842a050-42d8-4b84-8088-87a2bf2f308e": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5740,
+          "complete_line": 5741,
+          "start": 1642518642.3102021,
+          "completion": 1642518657.300272,
+          "transition_id": "7842a050-42d8-4b84-8088-87a2bf2f308e",
+          "file": {
+            "etag": "61e1542ed8f96",
+            "fid": "39",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "mtime": 1642154042000,
+            "name": "Schultz-bowman.docx",
+            "path": "/Reports",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 24400
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:954e69d3-3bc6-45ae-9378-74f1a985549f": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5825,
+          "complete_line": 5826,
+          "start": 1642520742.7650297,
+          "completion": 1642520757.3448293,
+          "transition_id": "954e69d3-3bc6-45ae-9378-74f1a985549f",
+          "file": {
+            "etag": "d4718fe7d7e2c0472713c8d37d30842b",
+            "fid": "167",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642190356000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:d277e68c-30f1-4f30-9714-07dfe83e3fd3": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5904,
+          "complete_line": 5905,
+          "start": 1642521312.1025136,
+          "completion": 1642521326.928165,
+          "transition_id": "d277e68c-30f1-4f30-9714-07dfe83e3fd3",
+          "file": {
+            "etag": "61e1542f185f8",
+            "fid": "44",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154021000,
+            "name": "payroll_2021.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 99946
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:75933fa6-dd10-4523-b60e-2e488c38b0b2": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 5954,
+          "complete_line": 5955,
+          "start": 1642521523.1320937,
+          "completion": 1642521538.1088936,
+          "transition_id": "75933fa6-dd10-4523-b60e-2e488c38b0b2",
+          "file": {
+            "etag": "61e1542f32c98",
+            "fid": "50",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154010000,
+            "name": "payroll_2019.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 97978
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:09e96592-0bf5-4f7b-97b5-89dbbf2190f4": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 6299,
+          "complete_line": 6300,
+          "start": 1642599187.3042512,
+          "completion": 1642599202.2873113,
+          "transition_id": "09e96592-0bf5-4f7b-97b5-89dbbf2190f4",
+          "file": {
+            "etag": "61e1542f32c98",
+            "fid": "50",
+            "file_type": "file",
+            "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "mtime": 1642154010000,
+            "name": "payroll_2019.xlsx",
+            "path": "/Management",
+            "permissions": 11,
+            "share_permissions": 3,
+            "size": 97978
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    },
+    "ait:fox:normal:internal_employee_1:25d1b5d9-8c3e-4299-97c7-a7070d5982c4": {
+      "all_normal_actor_logs_read": true,
+      "expected_members": 16,
+      "missing_members": [],
+      "actor_candidates": [
+        {
+          "actor_role": "internal_employee_1",
+          "member": "gather/internal_employee_1/logs/sm.log",
+          "start_line": 7011,
+          "complete_line": 7012,
+          "start": 1642625025.595351,
+          "completion": 1642625040.1688142,
+          "transition_id": "25d1b5d9-8c3e-4299-97c7-a7070d5982c4",
+          "file": {
+            "etag": "d4718fe7d7e2c0472713c8d37d30842b",
+            "fid": "167",
+            "file_type": "file",
+            "mime": "application/pdf",
+            "mtime": 1642190356000,
+            "name": "ownCloud Manual.pdf",
+            "path": "/",
+            "permissions": 27,
+            "share_permissions": 19,
+            "size": 6110772
+          },
+          "actor_category": "author_normal_actor"
+        }
+      ],
+      "actor_attribution_cardinality": "unique_among_all_normal_actors",
+      "all_candidates_author_normal": true,
+      "known_named_actor_retained": true,
+      "scope": "All author normal-actor logs and exact object/time candidates; proxy endpoint itself does not identify actor. Does not add target events or independently identify a TCP transaction."
+    }
+  }
+}

@@ -1,0 +1,231 @@
+[
+  {
+    "run": "fox",
+    "host": "intranet_server",
+    "archive": "fox.zip",
+    "member": "gather/intranet_server/logs/suricata/log.pcap.1642159255",
+    "member_compressed_bytes": 723177064,
+    "probe_compressed_bytes": 1048576,
+    "decoded_prefix_bytes": 1164753,
+    "probe_sha256": "1d009b4314107c200672a49151e17d19a5bec1c8e2c19d9833b01784edbd4b5f",
+    "whole_member_crc_verified": false,
+    "decoder_end_of_member": false,
+    "pcap_snaplen": 262144,
+    "pcap_linktype": 1,
+    "counts": {
+      "complete_pcap_records": 1855,
+      "ipv4_records": 1812,
+      "ipv4_declared_exceeds_stored": 6
+    },
+    "examples": [
+      {
+        "packet_index": 934,
+        "timestamp": 1642160496.183169,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2848,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 1493,
+        "timestamp": 1642160497.109422,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2848,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 1617,
+        "timestamp": 1642160498.872905,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 4148,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 1645,
+        "timestamp": 1642160500.074216,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2848,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 1722,
+        "timestamp": 1642160501.468134,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2848,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      }
+    ],
+    "first_record_time": "2022-01-14T11:20:55.339064+00:00",
+    "last_complete_record_time": "2022-01-14T11:41:42.518196+00:00",
+    "scope": "First compressed MiB only; last incomplete record excluded. Does not establish attack-window completeness or actual packet loss cause."
+  },
+  {
+    "run": "fox",
+    "host": "inet-firewall",
+    "archive": "fox.zip",
+    "member": "gather/inet-firewall/logs/suricata/log.pcap.1642508536",
+    "member_compressed_bytes": 942610412,
+    "probe_compressed_bytes": 1048576,
+    "decoded_prefix_bytes": 1162703,
+    "probe_sha256": "e3f2c226dd2368d61e6baf64a6e295960581b5eb41b6fc995c463c0bf502f691",
+    "whole_member_crc_verified": false,
+    "decoder_end_of_member": false,
+    "pcap_snaplen": 262144,
+    "pcap_linktype": 1,
+    "counts": {
+      "complete_pcap_records": 2714,
+      "ipv4_records": 2714
+    },
+    "examples": [],
+    "first_record_time": "2022-01-18T12:22:16.227066+00:00",
+    "last_complete_record_time": "2022-01-18T12:22:19.645693+00:00",
+    "scope": "First compressed MiB only; last incomplete record excluded. Does not establish attack-window completeness or actual packet loss cause."
+  },
+  {
+    "run": "santos",
+    "host": "intranet_server",
+    "archive": "santos.zip",
+    "member": "gather/intranet_server/logs/suricata/log.pcap.1642084650",
+    "member_compressed_bytes": 336104873,
+    "probe_compressed_bytes": 1048576,
+    "decoded_prefix_bytes": 1215641,
+    "probe_sha256": "564e9683fc9198f49d9f4195bb93151a3a3390ba2d20e282902d3c3c887367d3",
+    "whole_member_crc_verified": false,
+    "decoder_end_of_member": false,
+    "pcap_snaplen": 262144,
+    "pcap_linktype": 1,
+    "counts": {
+      "complete_pcap_records": 2082,
+      "ipv4_records": 1959,
+      "ipv4_declared_exceeds_stored": 10
+    },
+    "examples": [
+      {
+        "packet_index": 285,
+        "timestamp": 1642085083.05021,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 1564,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 288,
+        "timestamp": 1642085083.064115,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 1564,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 316,
+        "timestamp": 1642085087.084429,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 1564,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 321,
+        "timestamp": 1642085087.120763,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 1564,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 341,
+        "timestamp": 1642085098.578963,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 1564,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      }
+    ],
+    "first_record_time": "2022-01-13T14:37:30.718889+00:00",
+    "last_complete_record_time": "2022-01-13T14:57:25.222866+00:00",
+    "scope": "First compressed MiB only; last incomplete record excluded. Does not establish attack-window completeness or actual packet loss cause."
+  },
+  {
+    "run": "santos",
+    "host": "inet-firewall",
+    "archive": "santos.zip",
+    "member": "gather/inet-firewall/logs/suricata/log.pcap.1642339189",
+    "member_compressed_bytes": 860320831,
+    "probe_compressed_bytes": 1048576,
+    "decoded_prefix_bytes": 1137628,
+    "probe_sha256": "9a753729e14e54ffd4e7e0fc8f07efc2042fb45921aa91d77e9cd4aae8ade2d4",
+    "whole_member_crc_verified": false,
+    "decoder_end_of_member": false,
+    "pcap_snaplen": 262144,
+    "pcap_linktype": 1,
+    "counts": {
+      "complete_pcap_records": 1618,
+      "ipv4_records": 1618,
+      "ipv4_declared_exceeds_stored": 361
+    },
+    "examples": [
+      {
+        "packet_index": 1,
+        "timestamp": 1642339189.607013,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2848,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 2,
+        "timestamp": 1642339189.607026,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2832,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 3,
+        "timestamp": 1642339189.607167,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2840,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 4,
+        "timestamp": 1642339189.607243,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2848,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      },
+      {
+        "packet_index": 5,
+        "timestamp": 1642339189.607259,
+        "caplen": 1486,
+        "origlen": 1486,
+        "ipv4_declared": 2832,
+        "ipv4_stored": 1472,
+        "protocol": 6
+      }
+    ],
+    "first_record_time": "2022-01-16T13:19:49.607013+00:00",
+    "last_complete_record_time": "2022-01-16T13:19:52.686486+00:00",
+    "scope": "First compressed MiB only; last incomplete record excluded. Does not establish attack-window completeness or actual packet loss cause."
+  }
+]

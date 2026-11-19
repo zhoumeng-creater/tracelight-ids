@@ -1,0 +1,62 @@
+Source: E:\OneDrive - Coventry University\中传\毕业论文\选题\SpecialProject.pdf
+SHA256: f5008e2ae46e82e7d4507455a93f734b00d6271c7e9ee59a908f5570642b2954
+PDF page: 1
+
+1
+Project
+ID
+Supervisors
+Project Title
+Relevant Literature
+Methodology
+Requirements (skills)
+63
+Hainan
+supervisor:
+Zhiguo
+Hong
+Coventry
+supervisor:
+to be
+assigned
+following
+the project
+selection
+process
+Research and
+Implementation of
+Lightweight Machine
+Learning Methods
+for Network
+Intrusion Detection
+García, J., et al. (2024). Empirical Evaluation of
+Feature Selection Methods for Machine Learning
+Based Intrusion Detection in IoT Scenarios.
+https://zaguan.unizar.es/record/145168
+Chen, W., et al. (2024). Large-scale IoT attack
+detection scheme based on LightGBM and feature
+selection using an improved salp swarm algorithm.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11333491/
+Iliyasu, A. S., et al. (2025). PNet-IDS: A Lightweight
+and Generalizable Convolutional Neural Network for
+Intrusion Detection in Internet of Things.
+https://doi.org/10.1109/ACCESS.2025.3575705
+Use a public dataset
+to compare Random
+Forest and small
+Neural Networks.
+Perform feature
+selection/filtering.
+Evaluate attack recall
+rate, normal traffic
+false positive rate,
+and inference time.
+Develop a demo
+program that detects
+attacks by importing
+traffic files.
+Machine Learning,
+Lightweight Model,
+Feature Selection,
+Python, Network
+Traffic Analysis.

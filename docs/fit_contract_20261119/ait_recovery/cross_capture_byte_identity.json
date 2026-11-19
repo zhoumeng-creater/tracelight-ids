@@ -1,0 +1,71 @@
+{
+  "candidates": [
+    {
+      "old_packet_id": 3574,
+      "candidate_id": "3574:3596",
+      "directions": {
+        "origin": {
+          "same_interval_boundaries_and_all_payload_sha256": true,
+          "old_unique_captured_payload_bytes": 610,
+          "old_missing_bytes_to_fin": 0,
+          "old_gap_count": 0,
+          "old_overlap_conflicts": 0
+        },
+        "responder": {
+          "same_interval_boundaries_and_all_payload_sha256": true,
+          "old_unique_captured_payload_bytes": 4020,
+          "old_missing_bytes_to_fin": 1289,
+          "old_gap_count": 1,
+          "old_overlap_conflicts": 0
+        }
+      },
+      "two_capture_union_adds_no_payload_bytes": true
+    },
+    {
+      "old_packet_id": 3575,
+      "candidate_id": "3575:3597",
+      "directions": {
+        "origin": {
+          "same_interval_boundaries_and_all_payload_sha256": true,
+          "old_unique_captured_payload_bytes": 596,
+          "old_missing_bytes_to_fin": 0,
+          "old_gap_count": 0,
+          "old_overlap_conflicts": 0
+        },
+        "responder": {
+          "same_interval_boundaries_and_all_payload_sha256": true,
+          "old_unique_captured_payload_bytes": 25242008,
+          "old_missing_bytes_to_fin": 30395722,
+          "old_gap_count": 15935,
+          "old_overlap_conflicts": 0
+        }
+      },
+      "two_capture_union_adds_no_payload_bytes": true
+    },
+    {
+      "old_packet_id": 3578,
+      "candidate_id": "3578:3598",
+      "directions": {
+        "origin": {
+          "same_interval_boundaries_and_all_payload_sha256": true,
+          "old_unique_captured_payload_bytes": 153,
+          "old_missing_bytes_to_fin": 0,
+          "old_gap_count": 0,
+          "old_overlap_conflicts": 0
+        },
+        "responder": {
+          "same_interval_boundaries_and_all_payload_sha256": true,
+          "old_unique_captured_payload_bytes": 17643346,
+          "old_missing_bytes_to_fin": 122278457,
+          "old_gap_count": 12179,
+          "old_overlap_conflicts": 0
+        }
+      },
+      "two_capture_union_adds_no_payload_bytes": true
+    }
+  ],
+  "old_pcap_sha256": "12c798074e27969ea40719700ecc8cb07ecda76e4f0751d746e02e2398067790",
+  "firewall_actual_byte_evidence_sha256": "2c38f25ee7f47c4ccfa0855bf2db34624f3b0d76a5f30fd9a8913fdcbb2875e9",
+  "method": "Merge every physically captured payload byte by TCP sequence separately in each capture, then compare all contiguous interval boundaries and SHA256. Equal inventories prove that combining these two captures adds no observed payload bytes.",
+  "script_sha256": "4c958fba48c629c593160cedc5b9e8cea40f2e3060a4e06573afcafdd159f7f9"
+}

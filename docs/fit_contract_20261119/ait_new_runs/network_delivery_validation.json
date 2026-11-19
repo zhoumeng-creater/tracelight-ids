@@ -1,0 +1,94 @@
+{
+  "events": 254,
+  "all_target_events_have_network_candidates": true,
+  "attack_download_events_with_candidates": 4,
+  "whole_pcaps_crc_sha_verified": 4,
+  "candidate_connections": 1222,
+  "connection_labels": {
+    "None": 304,
+    "1": 49,
+    "0": 869
+  },
+  "all_actor_cloud_events": 86,
+  "raw8_missing_or_negative_never_labelled": true,
+  "all_original_candidates_preserved": true,
+  "evaluation_exclusions_retained_with_reasons": true,
+  "summary_by_run": [
+    {
+      "run": "santos",
+      "events": 133,
+      "event_status": {
+        "multiple_candidates": 67,
+        "unique_candidate": 66
+      },
+      "links": 632,
+      "candidate_connections": 562,
+      "connection_labels": {
+        "None": 91,
+        "1": 32,
+        "0": 439
+      },
+      "positive_connections_by_event_kind": {
+        "webshell_command": 30,
+        "attack_download": 1,
+        "reverse_shell_channel": 1
+      },
+      "full_background_upstream": {
+        "intranet_server": {
+          "normalized_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\connections.jsonl.gz",
+          "full_capture_connections": 14538,
+          "involving_declared_host": 6072,
+          "not_involving_declared_host": 8466
+        },
+        "cloud_share": {
+          "normalized_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\connections.jsonl.gz",
+          "full_capture_connections": 17562,
+          "involving_declared_host": 16146,
+          "not_involving_declared_host": 1416
+        }
+      },
+      "events_complete_for_fixed_source_set": true,
+      "connections_scope": "All event-candidate connections, including label-null. Merge into upstream full background by flow_id; other background remains label-null.",
+      "normal_qualification_scope": "B-grade conditional normal: whole connection potential service requests, official default-normal rule, named normal action anchor. Shared-proxy transaction attribution is not unique. Excludes mixed/positive-linked/unfinished/out-of-simulation and None/negative raw8.",
+      "no_training_or_scoring": true
+    },
+    {
+      "run": "fox",
+      "events": 121,
+      "event_status": {
+        "multiple_candidates": 81,
+        "unique_candidate": 40
+      },
+      "links": 717,
+      "candidate_connections": 660,
+      "connection_labels": {
+        "None": 213,
+        "1": 17,
+        "0": 430
+      },
+      "positive_connections_by_event_kind": {
+        "webshell_command": 15,
+        "attack_download": 1,
+        "reverse_shell_channel": 1
+      },
+      "full_background_upstream": {
+        "intranet_server": {
+          "normalized_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\connections.jsonl.gz",
+          "full_capture_connections": 21514,
+          "involving_declared_host": 13278,
+          "not_involving_declared_host": 8236
+        },
+        "cloud_share": {
+          "normalized_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\connections.jsonl.gz",
+          "full_capture_connections": 33973,
+          "involving_declared_host": 32358,
+          "not_involving_declared_host": 1615
+        }
+      },
+      "events_complete_for_fixed_source_set": true,
+      "connections_scope": "All event-candidate connections, including label-null. Merge into upstream full background by flow_id; other background remains label-null.",
+      "normal_qualification_scope": "B-grade conditional normal: whole connection potential service requests, official default-normal rule, named normal action anchor. Shared-proxy transaction attribution is not unique. Excludes mixed/positive-linked/unfinished/out-of-simulation and None/negative raw8.",
+      "no_training_or_scoring": true
+    }
+  ]
+}

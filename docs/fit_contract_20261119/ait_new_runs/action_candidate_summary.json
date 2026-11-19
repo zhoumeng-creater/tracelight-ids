@@ -1,0 +1,78 @@
+[
+  {
+    "run": "fox",
+    "chain_id": "ait:fox:wpdiscuz_complete_chain",
+    "simulation_start": "2022-01-15T00:00:00+00:00",
+    "simulation_end_exclusive": "2022-01-20T00:00:00+00:00",
+    "timezone_basis": "servers.yaml timezone UTC; actor epoch timestamps; Apache explicit +0000",
+    "webshell_actions": 18,
+    "webshell_with_service_match": 18,
+    "download_completion_actions": 2,
+    "reverse_shell_connections": 1,
+    "normal_counts": {
+      "normal_intranet_page_retrieval": 58,
+      "normal_owncloud_file_download": 42
+    },
+    "normal_service_matched": {
+      "normal_intranet_page_retrieval": 58,
+      "normal_owncloud_file_download": 42
+    },
+    "intranet_apache": {
+      "in_interval": 423006
+    },
+    "cloud_apache": {
+      "in_interval": 40594
+    },
+    "intranet_pcap_candidate": {
+      "path": "gather/intranet_server/logs/suricata/log.pcap.1642159255",
+      "bytes": 830715983,
+      "compressed": 723177064,
+      "CRC": 3973766223,
+      "offset": 15093989503,
+      "method": 8,
+      "flags": 0
+    },
+    "pcap_selection_status": "not_downloaded; capture-integrity issue under bounded source review",
+    "candidate_reason": "Only intranet member in full archive; victim control and outbound download plus normal HTTPS page retrieval. ownCloud business-file actions require cloud PCAP and are not inferred to occur in intranet capture.",
+    "fit_role": "candidate_unassigned",
+    "independence": "whole run/attack chain; same AIT attack implementation; actions are not independent attack chains"
+  },
+  {
+    "run": "santos",
+    "chain_id": "ait:santos:wpdiscuz_complete_chain",
+    "simulation_start": "2022-01-14T00:00:00+00:00",
+    "simulation_end_exclusive": "2022-01-18T00:00:00+00:00",
+    "timezone_basis": "servers.yaml timezone UTC; actor epoch timestamps; Apache explicit +0000",
+    "webshell_actions": 33,
+    "webshell_with_service_match": 33,
+    "download_completion_actions": 2,
+    "reverse_shell_connections": 1,
+    "normal_counts": {
+      "normal_intranet_page_retrieval": 53,
+      "normal_owncloud_file_download": 44
+    },
+    "normal_service_matched": {
+      "normal_intranet_page_retrieval": 53,
+      "normal_owncloud_file_download": 44
+    },
+    "intranet_apache": {
+      "in_interval": 15784
+    },
+    "cloud_apache": {
+      "in_interval": 44244
+    },
+    "intranet_pcap_candidate": {
+      "path": "gather/intranet_server/logs/suricata/log.pcap.1642084650",
+      "bytes": 378520676,
+      "compressed": 336104873,
+      "CRC": 1832737870,
+      "offset": 9655942712,
+      "method": 8,
+      "flags": 0
+    },
+    "pcap_selection_status": "not_downloaded; capture-integrity issue under bounded source review",
+    "candidate_reason": "Only intranet member in full archive; victim control and outbound download plus normal HTTPS page retrieval. ownCloud business-file actions require cloud PCAP and are not inferred to occur in intranet capture.",
+    "fit_role": "candidate_unassigned",
+    "independence": "whole run/attack chain; same AIT attack implementation; actions are not independent attack chains"
+  }
+]

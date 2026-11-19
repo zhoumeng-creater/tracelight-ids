@@ -1,0 +1,10 @@
+{
+  "inputs_audit.json": {
+    "sha256": "729be01f7e27c060641c5ab3c6bc4508dd5bc15aa241227c0624c398770c96f2",
+    "bytes": 11112912
+  },
+  "source_receipt.json": {
+    "sha256": "9dd4dd9681de06dab32ec50884b7a2613af98e3520c77fc6c67bf65c76704f57",
+    "bytes": 1181
+  }
+}

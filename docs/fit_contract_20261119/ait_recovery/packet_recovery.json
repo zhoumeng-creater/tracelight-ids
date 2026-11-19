@@ -1,0 +1,627 @@
+{
+  "source_pcap": {
+    "member": "gather/inet-firewall/logs/suricata/log.pcap.1642957916",
+    "archive_url": "https://zenodo.org/api/records/19483937/files/russellmitchell.zip/content",
+    "archive_bytes": 7132670599,
+    "header_offset": 1037404189,
+    "data_offset": 1037404301,
+    "compressed_bytes": 694128142,
+    "pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\firewall-log.pcap.1642957916",
+    "sha256": "ac24fa275bab9fc462e634ca3fac076602ecf128b5f4724510152104b71888ad",
+    "crc32": 2278223961,
+    "bytes": 789200482,
+    "range_workers": 4,
+    "chunk_bytes": 16777216,
+    "elapsed_seconds": 410.62584360013716
+  },
+  "original_pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait_attack\\source\\log.pcap.1642684613",
+  "original_pcap_sha256": "12c798074e27969ea40719700ecc8cb07ecda76e4f0751d746e02e2398067790",
+  "original_checksum_semantics_sha256": "9ca20aae730ae126f3b32054b3d7fdab52e3de336de0628985700a2c6cc140c5",
+  "candidates": [
+    {
+      "candidate_id": "3574:3596",
+      "old_packet_id": 3574,
+      "envelope": {
+        "connection_id": 3596,
+        "protocol": "tcp",
+        "first": 1642996762.361751,
+        "last": 1642996763.922744,
+        "syn_seen": true,
+        "syn_sequence": 3979808816,
+        "direction_basis": "initial_syn",
+        "origin_packets": 12,
+        "responder_packets": 9,
+        "origin_captured_tcp_payload_bytes": 610,
+        "responder_captured_tcp_payload_bytes": 4020,
+        "fin_packets": 2,
+        "rst_packets": 0,
+        "origin_ip": "192.168.230.4",
+        "origin_port": 45736,
+        "responder_ip": "140.82.121.3",
+        "responder_port": 443
+      },
+      "directions": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 1242,
+          "tcp_incorrect": 12,
+          "ip_correct": 12,
+          "tcp_verifiable": 12,
+          "invalid_length": 0,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 12,
+          "payload_fingerprint_matches": 3,
+          "max_abs_payload_timestamp_delta": 0.0008089542388916016,
+          "tcp_correct": 0,
+          "tcp_unverifiable": 0,
+          "ip_incorrect": 0,
+          "checksum_correct_ip_bytes": 0
+        },
+        "responder": {
+          "packets": 9,
+          "declared_ip_bytes": 5785,
+          "tcp_correct": 8,
+          "ip_correct": 9,
+          "tcp_verifiable": 8,
+          "invalid_length": 1,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 0,
+          "checksum_correct_ip_bytes": 3024,
+          "tcp_unverifiable": 1,
+          "payload_fingerprint_matches": 4,
+          "max_abs_payload_timestamp_delta": 0.00045299530029296875,
+          "tcp_incorrect": 0,
+          "ip_incorrect": 0
+        }
+      },
+      "matching_initial_sequence_numbers_both_directions": true,
+      "first_handshake_packets": {
+        "origin": {
+          "sequence": 3979808816,
+          "acknowledgment": 0,
+          "flags": 2,
+          "timestamp": 1642996762.361751
+        },
+        "responder": {
+          "sequence": 2351840599,
+          "acknowledgment": 3979808817,
+          "flags": 18,
+          "timestamp": 1642996762.376326
+        }
+      },
+      "sequence_coverage": {
+        "origin": {
+          "unique_payload_bytes": 610,
+          "payload_extent": 610,
+          "fin_payload_end": 610,
+          "gap_count": 0,
+          "first_gaps": [],
+          "complete_to_fin": true,
+          "merged_interval_count": 1
+        },
+        "responder": {
+          "unique_payload_bytes": 2600,
+          "payload_extent": 5309,
+          "fin_payload_end": 5309,
+          "gap_count": 1,
+          "first_gaps": [
+            [
+              0,
+              2709
+            ]
+          ],
+          "complete_to_fin": false,
+          "merged_interval_count": 1
+        }
+      },
+      "matching_payload_fingerprints": 7,
+      "checksum_samples": [
+        {
+          "packet_number": 809471,
+          "timestamp": 1642996762.361751,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.3",
+          "source_port": 45736,
+          "destination_port": 443,
+          "sequence": 3979808816,
+          "acknowledgment": 0,
+          "flags": 2,
+          "ip_header_bytes": 20,
+          "ip_total_length": 60,
+          "captured_ip_bytes": 60,
+          "tcp_header_bytes": 40,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44081,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44081,
+          "recomputed_tcp_checksum": 50188
+        },
+        {
+          "packet_number": 809473,
+          "timestamp": 1642996762.376607,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.3",
+          "source_port": 45736,
+          "destination_port": 443,
+          "sequence": 3979808817,
+          "acknowledgment": 2351840600,
+          "flags": 16,
+          "ip_header_bytes": 20,
+          "ip_total_length": 52,
+          "captured_ip_bytes": 52,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44073,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44073,
+          "recomputed_tcp_checksum": 42979
+        },
+        {
+          "packet_number": 809474,
+          "timestamp": 1642996762.377871,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.3",
+          "source_port": 45736,
+          "destination_port": 443,
+          "sequence": 3979808817,
+          "acknowledgment": 2351840600,
+          "flags": 24,
+          "ip_header_bytes": 20,
+          "ip_total_length": 364,
+          "captured_ip_bytes": 364,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44385,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44385,
+          "recomputed_tcp_checksum": 58251
+        }
+      ],
+      "transport_recovery_complete": false,
+      "checksum_semantics_supported": true
+    },
+    {
+      "candidate_id": "3575:3597",
+      "old_packet_id": 3575,
+      "envelope": {
+        "connection_id": 3597,
+        "protocol": "tcp",
+        "first": 1642996762.658826,
+        "last": 1642996779.558694,
+        "syn_seen": true,
+        "syn_sequence": 2247553783,
+        "direction_basis": "initial_syn",
+        "origin_packets": 6872,
+        "responder_packets": 17814,
+        "origin_captured_tcp_payload_bytes": 596,
+        "responder_captured_tcp_payload_bytes": 25242008,
+        "fin_packets": 2,
+        "rst_packets": 0,
+        "origin_ip": "192.168.230.4",
+        "origin_port": 42126,
+        "responder_ip": "140.82.121.9",
+        "responder_port": 443
+      },
+      "directions": {
+        "origin": {
+          "packets": 6872,
+          "declared_ip_bytes": 380100,
+          "tcp_incorrect": 6872,
+          "ip_correct": 6872,
+          "tcp_verifiable": 6872,
+          "invalid_length": 0,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 6872,
+          "payload_fingerprint_matches": 3,
+          "max_abs_payload_timestamp_delta": 0.0008809566497802734,
+          "tcp_correct": 0,
+          "tcp_unverifiable": 0,
+          "ip_incorrect": 0,
+          "checksum_correct_ip_bytes": 0
+        },
+        "responder": {
+          "packets": 17814,
+          "declared_ip_bytes": 56564066,
+          "tcp_correct": 1877,
+          "ip_correct": 17814,
+          "tcp_verifiable": 1879,
+          "invalid_length": 15935,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 2,
+          "checksum_correct_ip_bytes": 2709106,
+          "tcp_unverifiable": 15935,
+          "payload_fingerprint_matches": 1873,
+          "max_abs_payload_timestamp_delta": 0.0032639503479003906,
+          "tcp_incorrect": 2,
+          "ip_incorrect": 0
+        }
+      },
+      "matching_initial_sequence_numbers_both_directions": true,
+      "first_handshake_packets": {
+        "origin": {
+          "sequence": 2247553783,
+          "acknowledgment": 0,
+          "flags": 2,
+          "timestamp": 1642996762.658826
+        },
+        "responder": {
+          "sequence": 406084683,
+          "acknowledgment": 2247553784,
+          "flags": 18,
+          "timestamp": 1642996762.672686
+        }
+      },
+      "sequence_coverage": {
+        "origin": {
+          "unique_payload_bytes": 596,
+          "payload_extent": 596,
+          "fin_payload_end": 596,
+          "gap_count": 0,
+          "first_gaps": [],
+          "complete_to_fin": true,
+          "merged_interval_count": 1
+        },
+        "responder": {
+          "unique_payload_bytes": 2614308,
+          "payload_extent": 55603375,
+          "fin_payload_end": 55637730,
+          "gap_count": 1607,
+          "first_gaps": [
+            [
+              0,
+              2707
+            ],
+            [
+              5649,
+              127227
+            ],
+            [
+              128201,
+              145401
+            ],
+            [
+              146799,
+              205515
+            ],
+            [
+              207807,
+              341121
+            ],
+            [
+              343917,
+              578781
+            ],
+            [
+              580179,
+              588567
+            ],
+            [
+              591363,
+              596955
+            ],
+            [
+              601149,
+              620676
+            ],
+            [
+              626244,
+              629028
+            ]
+          ],
+          "complete_to_fin": false,
+          "merged_interval_count": 1606
+        }
+      },
+      "matching_payload_fingerprints": 1876,
+      "checksum_samples": [
+        {
+          "packet_number": 809493,
+          "timestamp": 1642996762.658826,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.9",
+          "source_port": 42126,
+          "destination_port": 443,
+          "sequence": 2247553783,
+          "acknowledgment": 0,
+          "flags": 2,
+          "ip_header_bytes": 20,
+          "ip_total_length": 60,
+          "captured_ip_bytes": 60,
+          "tcp_header_bytes": 40,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44087,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44087,
+          "recomputed_tcp_checksum": 28483
+        },
+        {
+          "packet_number": 809495,
+          "timestamp": 1642996762.673027,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.9",
+          "source_port": 42126,
+          "destination_port": 443,
+          "sequence": 2247553784,
+          "acknowledgment": 406084684,
+          "flags": 16,
+          "ip_header_bytes": 20,
+          "ip_total_length": 52,
+          "captured_ip_bytes": 52,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44079,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44079,
+          "recomputed_tcp_checksum": 32565
+        },
+        {
+          "packet_number": 809496,
+          "timestamp": 1642996762.673612,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.9",
+          "source_port": 42126,
+          "destination_port": 443,
+          "sequence": 2247553784,
+          "acknowledgment": 406084684,
+          "flags": 24,
+          "ip_header_bytes": 20,
+          "ip_total_length": 373,
+          "captured_ip_bytes": 373,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44400,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44400,
+          "recomputed_tcp_checksum": 240
+        }
+      ],
+      "transport_recovery_complete": false,
+      "checksum_semantics_supported": false
+    },
+    {
+      "candidate_id": "3578:3598",
+      "old_packet_id": 3578,
+      "envelope": {
+        "connection_id": 3598,
+        "protocol": "tcp",
+        "first": 1642996783.648448,
+        "last": 1642996786.192705,
+        "syn_seen": true,
+        "syn_sequence": 2153185780,
+        "direction_basis": "initial_syn",
+        "origin_packets": 8320,
+        "responder_packets": 12529,
+        "origin_captured_tcp_payload_bytes": 153,
+        "responder_captured_tcp_payload_bytes": 17643346,
+        "fin_packets": 2,
+        "rst_packets": 0,
+        "origin_ip": "192.168.230.4",
+        "origin_port": 60448,
+        "responder_ip": "192.168.230.122",
+        "responder_port": 80
+      },
+      "directions": {
+        "origin": {
+          "packets": 8320,
+          "declared_ip_bytes": 432813,
+          "tcp_incorrect": 8320,
+          "ip_correct": 8320,
+          "tcp_verifiable": 8320,
+          "invalid_length": 0,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 8320,
+          "payload_fingerprint_matches": 1,
+          "max_abs_payload_timestamp_delta": 0.0006880760192871094,
+          "tcp_correct": 0,
+          "tcp_unverifiable": 0,
+          "ip_incorrect": 0,
+          "checksum_correct_ip_bytes": 0
+        },
+        "responder": {
+          "packets": 12529,
+          "declared_ip_bytes": 140574009,
+          "tcp_correct": 328,
+          "ip_correct": 12529,
+          "tcp_verifiable": 350,
+          "invalid_length": 12179,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 22,
+          "checksum_correct_ip_bytes": 335222,
+          "tcp_unverifiable": 12179,
+          "payload_fingerprint_matches": 347,
+          "max_abs_payload_timestamp_delta": 0.012830018997192383,
+          "tcp_incorrect": 22,
+          "ip_incorrect": 0
+        }
+      },
+      "matching_initial_sequence_numbers_both_directions": true,
+      "first_handshake_packets": {
+        "origin": {
+          "sequence": 2153185780,
+          "acknowledgment": 0,
+          "flags": 2,
+          "timestamp": 1642996783.648448
+        },
+        "responder": {
+          "sequence": 797427011,
+          "acknowledgment": 2153185781,
+          "flags": 18,
+          "timestamp": 1642996783.648933
+        }
+      },
+      "sequence_coverage": {
+        "origin": {
+          "unique_payload_bytes": 153,
+          "payload_extent": 153,
+          "fin_payload_end": 153,
+          "gap_count": 0,
+          "first_gaps": [],
+          "complete_to_fin": true,
+          "merged_interval_count": 1
+        },
+        "responder": {
+          "unique_payload_bytes": 349166,
+          "payload_extent": 138858540,
+          "fin_payload_end": 139921803,
+          "gap_count": 341,
+          "first_gaps": [
+            [
+              0,
+              22368
+            ],
+            [
+              23766,
+              369864
+            ],
+            [
+              371262,
+              435570
+            ],
+            [
+              436968,
+              1495356
+            ],
+            [
+              1496652,
+              1591832
+            ],
+            [
+              1593230,
+              1907664
+            ],
+            [
+              1909044,
+              1946036
+            ],
+            [
+              1946808,
+              2152314
+            ],
+            [
+              2153652,
+              3691512
+            ],
+            [
+              3692384,
+              4640142
+            ]
+          ],
+          "complete_to_fin": false,
+          "merged_interval_count": 340
+        }
+      },
+      "matching_payload_fingerprints": 348,
+      "checksum_samples": [
+        {
+          "packet_number": 835400,
+          "timestamp": 1642996783.648448,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "192.168.230.122",
+          "source_port": 60448,
+          "destination_port": 80,
+          "sequence": 2153185780,
+          "acknowledgment": 0,
+          "flags": 2,
+          "ip_header_bytes": 20,
+          "ip_total_length": 60,
+          "captured_ip_bytes": 60,
+          "tcp_header_bytes": 40,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 19967,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 19967,
+          "recomputed_tcp_checksum": 34807
+        },
+        {
+          "packet_number": 835402,
+          "timestamp": 1642996783.649198,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "192.168.230.122",
+          "source_port": 60448,
+          "destination_port": 80,
+          "sequence": 2153185781,
+          "acknowledgment": 797427012,
+          "flags": 16,
+          "ip_header_bytes": 20,
+          "ip_total_length": 52,
+          "captured_ip_bytes": 52,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 19959,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 19959,
+          "recomputed_tcp_checksum": 59763
+        },
+        {
+          "packet_number": 835403,
+          "timestamp": 1642996783.649382,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "192.168.230.122",
+          "source_port": 60448,
+          "destination_port": 80,
+          "sequence": 2153185781,
+          "acknowledgment": 797427012,
+          "flags": 24,
+          "ip_header_bytes": 20,
+          "ip_total_length": 205,
+          "captured_ip_bytes": 205,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 20112,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 20112,
+          "recomputed_tcp_checksum": 58998
+        }
+      ],
+      "transport_recovery_complete": false,
+      "checksum_semantics_supported": false
+    }
+  ],
+  "packet_repair": false,
+  "model_calls": 0
+}

@@ -1,0 +1,76 @@
+{
+  "status": "complete",
+  "mode": "ignore_checksums",
+  "version": "8.0.11",
+  "runtime_kind": "wsl",
+  "pcap_sha256": "504cb326b1e59a8d64d64a54e06085c124d27cecd977bad58c2b1abf00b2db91",
+  "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+  "wall_seconds": 14.923300200141966,
+  "logs": {
+    "conn": {
+      "exists": true,
+      "rows": 14538,
+      "sha256": "24d90a45a662395f8dee740a2731c0121041a82636398de99ce463f0c0e8b46f"
+    },
+    "http": {
+      "exists": true,
+      "rows": 1945,
+      "sha256": "eda5ab805eb3e3574d2d072058303bfbec2291e96487e138f65f290279c8b031"
+    },
+    "ssl": {
+      "exists": true,
+      "rows": 3092,
+      "sha256": "b583195832dbda784137dc224cbafde78d3bb8bbf7b90bc80c6f8dc59eb22bb1"
+    },
+    "dns": {
+      "exists": true,
+      "rows": 7814,
+      "sha256": "19a797df74a6a28501e2b6889e4f26f968e135ccb6e375b4749d3ec107a1150a"
+    },
+    "files": {
+      "exists": true,
+      "rows": 1843,
+      "sha256": "e503ca293e9bd1024326def2b39a7d2b34ede2cc16f8e350e0d7d4050d505628"
+    },
+    "weird": {
+      "exists": true,
+      "rows": 205,
+      "sha256": "5c5dcef34c7f298737d685abb2edc4fad4b30280d5a9a56ecd30e472e9be3bc6"
+    }
+  },
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--exec",
+    "sh",
+    "-c",
+    "cd \"$1\" && shift && exec env \"$@\"",
+    "ait-zeek",
+    "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_extracted/santos/intranet_server/zeek",
+    "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+    "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+    "LC_ALL=C",
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "zeek-resource.txt",
+    "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+    "-C",
+    "-r",
+    "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_extracted/santos/intranet_server/normalization/declared-ip.pcap",
+    "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/scripts/ait_contract/export.zeek"
+  ],
+  "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+  "checksum_policy": "explicitly ignore with -C",
+  "model_forward_calls": 0,
+  "gpu_jobs": 0,
+  "process_resources": {
+    "measured": true,
+    "source": "/usr/bin/time -v for this Zeek process",
+    "user_cpu_seconds": 5.19,
+    "system_cpu_seconds": 3.03,
+    "max_rss_kib": 117012,
+    "exit_status": 0
+  }
+}

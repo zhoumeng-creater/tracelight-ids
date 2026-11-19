@@ -1,0 +1,102 @@
+{
+  "inputs": {
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\capture_host_inventory.json": {
+      "sha256": "171b93090622971ac427faf842b5e39f3f39acea75935b327da0cb8514ae4fec",
+      "bytes": 12343
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\source\\capture_config\\gather\\cloud_share\\facts.json": {
+      "sha256": "48ec85facf56fe029a7f68c8901415a0e42011a6dd77d7249a8786827ad6adeb",
+      "bytes": 1012336
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\calibration\\candidate_connections.json": {
+      "sha256": "d5ed3868727c38af83578fb32d03f6495535caac86bba0488091969f28b13a25",
+      "bytes": 364939
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\connections.jsonl.gz": {
+      "sha256": "538660d2ebddf4a9dd4125810312ae5a9d3e992f094551b5701027a5874fb09b",
+      "bytes": 428489
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\events.jsonl": {
+      "sha256": "46e6f56cf6d4f0b8aebfbab64cebd48f6a356b76e3704adc7f9d9181eb70406f",
+      "bytes": 729990
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\santos\\links.jsonl": {
+      "sha256": "7e241b7d718727be59bec1fb69145a23436bb43bf2cfbff15e89b3ca9382f29d",
+      "bytes": 312234
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\connections.jsonl.gz": {
+      "sha256": "7f1330a2f3238317678dee5f75a0e216d32e472146f1b53f478d3d48601ca5d7",
+      "bytes": 265627
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\events.jsonl": {
+      "sha256": "32e75f8ec00a4c3356e19ba3a4aded4f7377fcbb7f5f4df767c763977b09c6b7",
+      "bytes": 671394
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\network_mapping\\fox\\links.jsonl": {
+      "sha256": "f2405e0f2409c2af996b5ef9f555315e3d8080536b4d7f35f5acc1ce011321f5",
+      "bytes": 348748
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\extraction_receipt.json": {
+      "sha256": "56718b23feeca1ebd00e3a8749ef08069a0a60381f72b00f22eacff809647441",
+      "bytes": 3678
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\connections.jsonl.gz": {
+      "sha256": "900190e5ad682f4fcbdb49ea64a0aa4367786043132d778efd3103f6893b8e55",
+      "bytes": 2575495
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\extraction_receipt.json": {
+      "sha256": "65f8eb07742e3f1456b8a8b4ac2aa72234c9372e93e9797dd8108dad2b11771f",
+      "bytes": 3583
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\cloud_share\\connections.jsonl.gz": {
+      "sha256": "e5f7c00f45315d91209dd063ff5470b5c773f56865c62cba2d5887caf2ec5ec4",
+      "bytes": 3273148
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\extraction_receipt.json": {
+      "sha256": "03e251afae3efaef96426a64551264b4ca8eeeb18281144b2ffb5d79a70531e9",
+      "bytes": 3688
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\intranet_server\\connections.jsonl.gz": {
+      "sha256": "cff69678e38f99542ad01de3a9192ec3848796405733affa776da02a690e1a89",
+      "bytes": 3879511
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\extraction_receipt.json": {
+      "sha256": "66dadf0cd98600dcde3bde57f569263d2ee983b9240363e239445336c14d88dc",
+      "bytes": 3591
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\fox\\cloud_share\\connections.jsonl.gz": {
+      "sha256": "6f11bcc295f139e8a49cdf869e3277162bbc74076c3a4c98447e2f61ef446e4a",
+      "bytes": 6095391
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\russellmitchell\\cloud_share\\extraction_receipt.json": {
+      "sha256": "f1929eb2aab888a5d0567d9359d7433ddef561cae0bcd6e0e28da279320a0871",
+      "bytes": 3567
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\russellmitchell\\cloud_share\\connections.jsonl.gz": {
+      "sha256": "987ef6b983b2a4922546c87464ec4d2d811ad352d14de9a62c26b45236f0f8ad",
+      "bytes": 3976334
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\unified\\events.jsonl.gz": {
+      "sha256": "7cf70a589ef0de5f2e99fa8847224960becc07c97ea15185328fa90164660295",
+      "bytes": 2673717
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\unified\\observations.jsonl.gz": {
+      "sha256": "bc94f984ab3b1c3b5af4c3d5c44debfe5c7eb8d09d0f52b01a58b6ba76f36358",
+      "bytes": 2797283
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\unified\\event_flow_links.jsonl.gz": {
+      "sha256": "d9d8679c433b96a84e62ff32821d87717da31efd18043784adbffd76096d5bdc",
+      "bytes": 1025182
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\split_method\\context_rows.jsonl.gz": {
+      "sha256": "d960ab466d6cb33b3898327a0849448bc70984c91552ed3b43434e658990dd84",
+      "bytes": 9175536
+    },
+    "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\unified\\evaluation_units.jsonl.gz": {
+      "sha256": "9b3c8fcf6511d706851a32f241dfd44b9fd4dd0fa5f2474968085cf9976d1883",
+      "bytes": 576116
+    }
+  },
+  "script_sha256": "10c3d15e93ea7a5e892e0515cd8f794f8f8b61c506f0fc0f9a410257c4f70436",
+  "prefix_module_sha256": "e4745e1a5549396c5264284961cdcc759630d0f321a70a5d2355bf4aa2a738f1"
+}

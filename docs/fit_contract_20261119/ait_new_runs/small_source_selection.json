@@ -1,0 +1,465 @@
+{
+  "compressed_bytes": 9558987,
+  "members": [
+    {
+      "run": "fox",
+      "path": "dataset.yaml",
+      "bytes": 85,
+      "compressed": 65,
+      "CRC": 181544816,
+      "offset": 0,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/attacker_0/configs/config.yml",
+      "bytes": 826,
+      "compressed": 417,
+      "CRC": 728862758,
+      "offset": 670842490,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+      "bytes": 128050695,
+      "compressed": 3192997,
+      "CRC": 3717174889,
+      "offset": 536916014,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/attacker_0/logs/attacks.log",
+      "bytes": 1906,
+      "compressed": 647,
+      "CRC": 2000141724,
+      "offset": 535485375,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/configs/suricata/suricata.yaml",
+      "bytes": 64891,
+      "compressed": 20262,
+      "CRC": 3528683240,
+      "offset": 270709552,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/facts.json",
+      "bytes": 1040052,
+      "compressed": 106090,
+      "CRC": 4247309709,
+      "offset": 255023033,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+      "bytes": 2622653,
+      "compressed": 125493,
+      "CRC": 3134232697,
+      "offset": 257769747,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+      "bytes": 1529214,
+      "compressed": 75002,
+      "CRC": 230925615,
+      "offset": 257694630,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+      "bytes": 2132442,
+      "compressed": 98853,
+      "CRC": 1859008944,
+      "offset": 257997049,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.4",
+      "bytes": 2631509,
+      "compressed": 118393,
+      "CRC": 1815469096,
+      "offset": 257576122,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.5",
+      "bytes": 2166902,
+      "compressed": 98500,
+      "CRC": 1188406193,
+      "offset": 257895565,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_0/configs/config.yml",
+      "bytes": 812,
+      "compressed": 407,
+      "CRC": 226206715,
+      "offset": 494697846,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 3957306,
+      "compressed": 345875,
+      "CRC": 3968383837,
+      "offset": 442572932,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_1/configs/config.yml",
+      "bytes": 812,
+      "compressed": 406,
+      "CRC": 3217127866,
+      "offset": 173708879,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 2945430,
+      "compressed": 243421,
+      "CRC": 1456807426,
+      "offset": 127430087,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/configs/suricata/suricata.yaml",
+      "bytes": 64891,
+      "compressed": 20262,
+      "CRC": 3528683240,
+      "offset": 228501232,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/facts.json",
+      "bytes": 983777,
+      "compressed": 102290,
+      "CRC": 3360482521,
+      "offset": 211669964,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/logs/apache2/intranet.price.fox.org-access.log.1",
+      "bytes": 522074,
+      "compressed": 27132,
+      "CRC": 2882907784,
+      "offset": 215381701,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/logs/apache2/intranet.price.fox.org-access.log.2",
+      "bytes": 67238407,
+      "compressed": 2030741,
+      "CRC": 2468513311,
+      "offset": 213251434,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/logs/apache2/intranet.price.fox.org-access.log.3",
+      "bytes": 924311,
+      "compressed": 44634,
+      "CRC": 3574836137,
+      "offset": 215336602,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/logs/apache2/intranet.price.fox.org-access.log.4",
+      "bytes": 546544,
+      "compressed": 29306,
+      "CRC": 3906553574,
+      "offset": 215282517,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "gather/intranet_server/logs/apache2/intranet.price.fox.org-access.log.5",
+      "bytes": 725675,
+      "compressed": 35360,
+      "CRC": 2095206620,
+      "offset": 213194414,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "labels/intranet_server/logs/apache2/intranet.price.fox.org-access.log.2",
+      "bytes": 87127789,
+      "compressed": 1280795,
+      "CRC": 2763566464,
+      "offset": 683532071,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "fox",
+      "path": "processing/config/servers.yaml",
+      "bytes": 19237,
+      "compressed": 2047,
+      "CRC": 3017918298,
+      "offset": 686190509,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "dataset.yaml",
+      "bytes": 88,
+      "compressed": 67,
+      "CRC": 1916294589,
+      "offset": 0,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/attacker_0/configs/config.yml",
+      "bytes": 826,
+      "compressed": 417,
+      "CRC": 2945652749,
+      "offset": 563067123,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/attacker_0/logs/ait.aecid.attacker.wpdiscuz/sm.log",
+      "bytes": 1869620,
+      "compressed": 114144,
+      "CRC": 915164854,
+      "offset": 474925492,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/attacker_0/logs/attacks.log",
+      "bytes": 2751,
+      "compressed": 879,
+      "CRC": 3748759192,
+      "offset": 474876274,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/cloud_share/configs/suricata/suricata.yaml",
+      "bytes": 64897,
+      "compressed": 20257,
+      "CRC": 3581673692,
+      "offset": 293234981,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/cloud_share/facts.json",
+      "bytes": 1050463,
+      "compressed": 107012,
+      "CRC": 3317729813,
+      "offset": 281265882,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log",
+      "bytes": 2673030,
+      "compressed": 113548,
+      "CRC": 1227993506,
+      "offset": 283769044,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.1",
+      "bytes": 3287678,
+      "compressed": 138534,
+      "CRC": 1257699790,
+      "offset": 283484027,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.2",
+      "bytes": 2954984,
+      "compressed": 126334,
+      "CRC": 3252160445,
+      "offset": 283357578,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/cloud_share/logs/apache2/other_vhosts_access.log.3",
+      "bytes": 3305425,
+      "compressed": 144634,
+      "CRC": 286943210,
+      "offset": 283624295,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_0/configs/config.yml",
+      "bytes": 812,
+      "compressed": 406,
+      "CRC": 2509068621,
+      "offset": 468833654,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_0/logs/sm.log",
+      "bytes": 2347435,
+      "compressed": 199273,
+      "CRC": 1392418772,
+      "offset": 429230283,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_1/configs/config.yml",
+      "bytes": 812,
+      "compressed": 407,
+      "CRC": 3250841365,
+      "offset": 215766080,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/internal_employee_1/logs/sm.log",
+      "bytes": 3631025,
+      "compressed": 314528,
+      "CRC": 1483930307,
+      "offset": 130811248,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/intranet_server/configs/suricata/suricata.yaml",
+      "bytes": 64897,
+      "compressed": 20257,
+      "CRC": 3581673692,
+      "offset": 263131721,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/intranet_server/facts.json",
+      "bytes": 1001265,
+      "compressed": 104016,
+      "CRC": 2851377512,
+      "offset": 251454521,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.santos.com-access.log",
+      "bytes": 1772221,
+      "compressed": 59230,
+      "CRC": 2153782171,
+      "offset": 252729937,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.santos.com-access.log.1",
+      "bytes": 575973,
+      "compressed": 25577,
+      "CRC": 2456345598,
+      "offset": 252813365,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.santos.com-access.log.2",
+      "bytes": 433706,
+      "compressed": 16889,
+      "CRC": 1155219279,
+      "offset": 252867829,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "gather/intranet_server/logs/apache2/intranet.smith.santos.com-access.log.3",
+      "bytes": 633129,
+      "compressed": 26284,
+      "CRC": 3832394058,
+      "offset": 252841413,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "labels/intranet_server/logs/apache2/intranet.smith.santos.com-access.log",
+      "bytes": 1659031,
+      "compressed": 24870,
+      "CRC": 4112544775,
+      "offset": 573090915,
+      "method": 8,
+      "flags": 0
+    },
+    {
+      "run": "santos",
+      "path": "processing/config/servers.yaml",
+      "bytes": 19255,
+      "compressed": 2029,
+      "CRC": 3207298626,
+      "offset": 574489765,
+      "method": 8,
+      "flags": 0
+    }
+  ]
+}

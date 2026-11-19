@@ -1,0 +1,122 @@
+{
+  "schema": "fit-contract-registration-v1",
+  "data_materialized": true,
+  "comparison_ready_on_laboratory_workstation": true,
+  "real_training_launched": false,
+  "runner_inputs": [
+    {
+      "name": "model_rows.jsonl.gz",
+      "sha256": "124ce59b761430429d9146bcf504e2689a14c1dfef4384010c0bb40e1a6cdb98",
+      "bytes": 219317
+    },
+    {
+      "name": "inference_rows.jsonl.gz",
+      "sha256": "069ca092a0d3a9d52962316b89c68ac581061403332f1e69a88907c808b604d4",
+      "bytes": 9706354
+    },
+    {
+      "name": "event_metadata.jsonl.gz",
+      "sha256": "699066c447d8609e1df56ed9e079f15181547929d8c470da575c3f2a14e1dfb2",
+      "bytes": 887669
+    },
+    {
+      "name": "normal_units.jsonl.gz",
+      "sha256": "1b26716abc512c4e65f7372d6bf5d2f9984ee5f9c8faabc1bc1657bfeb783bf9",
+      "bytes": 589666
+    }
+  ],
+  "fit_contract_sha256": "610ea7a8ee755fc2ebf43eb00952a5ce604f0ef85ebcdf98b2faf59a2b8cb7f9",
+  "preflight_sha256": "729be01f7e27c060641c5ab3c6bc4508dd5bc15aa241227c0624c398770c96f2",
+  "preflight_summary": {
+    "mode": "inputs_only",
+    "model_constructions": 0,
+    "fit_calls": 0,
+    "score_calls": 0,
+    "threshold_calculations": 0,
+    "F_rows": 471,
+    "C_rows": 25,
+    "model_rows": 943,
+    "inference_rows": 43420,
+    "unique_merged_flow_ids": 43420,
+    "role_label_counts": [
+      {
+        "role": "C",
+        "label": 0,
+        "rows": 25
+      },
+      {
+        "role": "F",
+        "label": 0,
+        "rows": 439
+      },
+      {
+        "role": "F",
+        "label": 1,
+        "rows": 32
+      },
+      {
+        "role": "F",
+        "label": null,
+        "rows": 91
+      },
+      {
+        "role": "V",
+        "label": 0,
+        "rows": 430
+      },
+      {
+        "role": "V",
+        "label": 1,
+        "rows": 17
+      },
+      {
+        "role": "V",
+        "label": null,
+        "rows": 213
+      },
+      {
+        "role": "external_development",
+        "label": 0,
+        "rows": 41630
+      },
+      {
+        "role": "external_development",
+        "label": 1,
+        "rows": 25
+      },
+      {
+        "role": "external_development",
+        "label": null,
+        "rows": 518
+      }
+    ],
+    "feature_widths": {
+      "features8": 8,
+      "features27": 27
+    },
+    "missing_feature_values": {
+      "features8": 0,
+      "features27": 5
+    },
+    "arm_prefixes_equal": true,
+    "reserved_rows_scored": 0
+  },
+  "parameters": {
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "learning_rate": 0.1,
+    "early_stopping": false,
+    "random_state": 20261111
+  },
+  "fit_calls": 2,
+  "fit_role": "F",
+  "refits": 0,
+  "method_arms": [
+    "raw8_log1p",
+    "raw8_log1p_plus_fixed_19_history"
+  ],
+  "threshold_rule": "max of 25 C normal scores per frozen model; strictly greater than alerts",
+  "selection": "none; report both arms; no seed, capacity, window, or threshold search",
+  "scope": "limited source-separated development comparison, not a new algorithm or blind deployment claim",
+  "reserved_sources_scored": []
+}

@@ -1,0 +1,23 @@
+{
+  "run": "fox",
+  "host": "intranet_server",
+  "archive": "fox.zip",
+  "path": "gather/intranet_server/logs/suricata/log.pcap.1642159255",
+  "bytes": 830715983,
+  "compressed": 723177064,
+  "CRC": 3973766223,
+  "offset": 15093989503,
+  "method": 8,
+  "flags": 0,
+  "crc32": 3973766223,
+  "sha256": "9d24476c1a97c89995198d61bf4c720382bab0be3ea97e207041e25276c6d5a1",
+  "source_record": "https://zenodo.org/records/19483937",
+  "source_url": "https://zenodo.org/api/records/19483937/files/fox.zip/content",
+  "data_offset": 15093989617,
+  "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\fox\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642159255",
+  "packet_bytes_unchanged": true,
+  "pcap_record_fields_unchanged": true,
+  "elapsed_seconds": 422.0467099000234,
+  "chunk_bytes": 8388608,
+  "workers": 4
+}

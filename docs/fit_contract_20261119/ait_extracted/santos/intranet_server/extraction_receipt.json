@@ -1,0 +1,80 @@
+{
+  "contract": "declared-ip-truncation-v1",
+  "source_scope": "ait:santos:intranet_server:e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4",
+  "source_sha256": "e1b6600eab0775c1a4f7a2657d24475b54bb2a293f3edab10155445afb5dc1f4",
+  "declared_capture_sha256": "504cb326b1e59a8d64d64a54e06085c124d27cecd977bad58c2b1abf00b2db91",
+  "source_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_new_runs\\source\\santos\\gather\\intranet_server\\logs\\suricata\\log.pcap.1642084650",
+  "scenario": "santos",
+  "capture_host": "intranet_server",
+  "runtime_receipt_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\统一事件与方法落实_20261119\\ait\\runtime-receipt.json",
+  "runtime_receipt_sha256": "72fa57f776cb93308f0af77b15d386f6fe5343e7d7307d87cfc87ec125484e72",
+  "zeek_version": "8.0.11",
+  "zeek_mode": "ignore_checksums",
+  "zeek_log_directory": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_extracted\\santos\\intranet_server\\zeek",
+  "reused_export_source": null,
+  "normalizer_sha256": "860b30188746f0e2b3c30c653651bb17553e495c96632c23350ad455af4ca743",
+  "extractor_sha256": "0d0ad976b295309a5a6d04e23e13eb96d4cb0ec1d3a312b375881cffd9228ef3",
+  "author_analyzer_sha256": "564df5a3e581013876327c511dcbce8e0406c8df5ace18281403fe927a46c6a0",
+  "summary": {
+    "connections": 14538,
+    "protocols": {
+      "tcp": 5518,
+      "udp": 5774,
+      "icmp": 3202,
+      "unknown_transport": 44
+    },
+    "rows_with_missing_raw8": 6951,
+    "rows_with_capture_truncation_candidates": 185,
+    "nonunique_flow_keys": 0,
+    "packet_provenance_association": {
+      "truncated_capture_records": 42871,
+      "unassigned_truncated_records": 0,
+      "uniquely_assigned_truncated_records": 42871,
+      "multiply_assigned_truncated_records": 0
+    },
+    "normalization_counts": {
+      "all_records": 599875,
+      "status:eligible_complete_headers": 561242,
+      "original_caplen_less_than_orig_len": 0,
+      "status:not_ipv4": 38535,
+      "orig_len_changed_records": 42871,
+      "ipv4_records_with_missing_captured_bytes": 42871,
+      "ipv4_declared_missing_bytes_sum_not_unique_stream": 197230817,
+      "status:unsupported_ipv4_transport": 98,
+      "truncated_records_not_eligible_for_normalization": 0
+    },
+    "model_calls": 0,
+    "labels_assigned": 0,
+    "new_zeek_exports": 1,
+    "reused_exact_full_capture_export": false,
+    "scope": "All conn.log records from the full capture, with no label/action/endpoint/time filtering."
+  },
+  "outputs": {
+    "connections.jsonl.gz": {
+      "bytes": 2575495,
+      "sha256": "900190e5ad682f4fcbdb49ea64a0aa4367786043132d778efd3103f6893b8e55"
+    },
+    "uid_flowkeys.jsonl.gz": {
+      "bytes": 1194367,
+      "sha256": "3a40f8abf9b5b6da229ac116adda85b8a665abf2f27566e78556422eafd80c8f"
+    },
+    "schema_example.json": {
+      "bytes": 3859,
+      "sha256": "ca4221fcbfda75b811fd1ee471148134b6880856021c45f9eb24a5292f3aa717"
+    },
+    "summary.json": {
+      "bytes": 1157,
+      "sha256": "8dd7780b8025c5daa8fe2901099dcaa264f5fbf8357afaa71d4298a8557e7b24"
+    },
+    "normalization/normalization_receipt.json": {
+      "bytes": 2452,
+      "sha256": "777e008ab000a5ea89dc77587d7afb692e649778a089c216ef07e8ef46907580"
+    },
+    "zeek/export-receipt.json": {
+      "bytes": 3715,
+      "sha256": "cf546bb6a2ba9797187a75e0a7130a9954a0a145ff241e0104a783b70cb5c61d"
+    }
+  },
+  "training_admission_decided_here": false,
+  "missing_payload_reconstructed": false
+}

@@ -1,0 +1,1296 @@
+{
+  "source_pcap": {
+    "member": "gather/inet-firewall/logs/suricata/log.pcap.1642957916",
+    "archive_url": "https://zenodo.org/api/records/19483937/files/russellmitchell.zip/content",
+    "archive_bytes": 7132670599,
+    "header_offset": 1037404189,
+    "data_offset": 1037404301,
+    "compressed_bytes": 694128142,
+    "pcap": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\firewall-log.pcap.1642957916",
+    "sha256": "ac24fa275bab9fc462e634ca3fac076602ecf128b5f4724510152104b71888ad",
+    "crc32": 2278223961,
+    "bytes": 789200482,
+    "range_workers": 4,
+    "chunk_bytes": 16777216,
+    "elapsed_seconds": 410.62584360013716
+  },
+  "original_records_remain_blocked": [
+    3574,
+    3575,
+    3578
+  ],
+  "model_calls": 0,
+  "packet_modifications": 0,
+  "all_candidates_retained": true,
+  "candidates": [
+    {
+      "candidate_id": "3574:3596",
+      "old_packet_id": 3574,
+      "envelope": {
+        "connection_id": 3596,
+        "protocol": "tcp",
+        "first": 1642996762.361751,
+        "last": 1642996763.922744,
+        "syn_seen": true,
+        "syn_sequence": 3979808816,
+        "direction_basis": "initial_syn",
+        "origin_packets": 12,
+        "responder_packets": 9,
+        "origin_captured_tcp_payload_bytes": 610,
+        "responder_captured_tcp_payload_bytes": 4020,
+        "fin_packets": 2,
+        "rst_packets": 0,
+        "origin_ip": "192.168.230.4",
+        "origin_port": 45736,
+        "responder_ip": "140.82.121.3",
+        "responder_port": 443
+      },
+      "directions": {
+        "origin": {
+          "packets": 12,
+          "declared_ip_bytes": 1242,
+          "tcp_incorrect": 12,
+          "ip_correct": 12,
+          "tcp_verifiable": 12,
+          "invalid_length": 0,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 12,
+          "payload_fingerprint_matches": 3,
+          "max_abs_payload_timestamp_delta": 0.0008089542388916016,
+          "tcp_correct": 0,
+          "tcp_unverifiable": 0,
+          "ip_incorrect": 0,
+          "checksum_correct_ip_bytes": 0
+        },
+        "responder": {
+          "packets": 9,
+          "declared_ip_bytes": 5785,
+          "tcp_correct": 8,
+          "ip_correct": 9,
+          "tcp_verifiable": 8,
+          "invalid_length": 1,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 0,
+          "checksum_correct_ip_bytes": 3024,
+          "tcp_unverifiable": 1,
+          "payload_fingerprint_matches": 4,
+          "max_abs_payload_timestamp_delta": 0.00045299530029296875,
+          "tcp_incorrect": 0,
+          "ip_incorrect": 0
+        }
+      },
+      "matching_initial_sequence_numbers_both_directions": true,
+      "first_handshake_packets": {
+        "origin": {
+          "sequence": 3979808816,
+          "acknowledgment": 0,
+          "flags": 2,
+          "timestamp": 1642996762.361751
+        },
+        "responder": {
+          "sequence": 2351840599,
+          "acknowledgment": 3979808817,
+          "flags": 18,
+          "timestamp": 1642996762.376326
+        }
+      },
+      "sequence_coverage": {
+        "origin": {
+          "unique_payload_bytes": 610,
+          "payload_extent": 610,
+          "fin_payload_end": 610,
+          "gap_count": 0,
+          "first_gaps": [],
+          "complete_to_fin": true,
+          "merged_interval_count": 1
+        },
+        "responder": {
+          "unique_payload_bytes": 2600,
+          "payload_extent": 5309,
+          "fin_payload_end": 5309,
+          "gap_count": 1,
+          "first_gaps": [
+            [
+              0,
+              2709
+            ]
+          ],
+          "complete_to_fin": false,
+          "merged_interval_count": 1
+        }
+      },
+      "matching_payload_fingerprints": 7,
+      "checksum_samples": [
+        {
+          "packet_number": 809471,
+          "timestamp": 1642996762.361751,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.3",
+          "source_port": 45736,
+          "destination_port": 443,
+          "sequence": 3979808816,
+          "acknowledgment": 0,
+          "flags": 2,
+          "ip_header_bytes": 20,
+          "ip_total_length": 60,
+          "captured_ip_bytes": 60,
+          "tcp_header_bytes": 40,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44081,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44081,
+          "recomputed_tcp_checksum": 50188
+        },
+        {
+          "packet_number": 809473,
+          "timestamp": 1642996762.376607,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.3",
+          "source_port": 45736,
+          "destination_port": 443,
+          "sequence": 3979808817,
+          "acknowledgment": 2351840600,
+          "flags": 16,
+          "ip_header_bytes": 20,
+          "ip_total_length": 52,
+          "captured_ip_bytes": 52,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44073,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44073,
+          "recomputed_tcp_checksum": 42979
+        },
+        {
+          "packet_number": 809474,
+          "timestamp": 1642996762.377871,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.3",
+          "source_port": 45736,
+          "destination_port": 443,
+          "sequence": 3979808817,
+          "acknowledgment": 2351840600,
+          "flags": 24,
+          "ip_header_bytes": 20,
+          "ip_total_length": 364,
+          "captured_ip_bytes": 364,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44385,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44385,
+          "recomputed_tcp_checksum": 58251
+        }
+      ],
+      "transport_recovery_complete": false,
+      "checksum_semantics_supported": true,
+      "zeek": {
+        "strict": {
+          "connections": [
+            {
+              "uid": "CAg4NG2x480SMVGUj7",
+              "ip_protocol": 6,
+              "orig_port": 45736,
+              "resp_port": 443,
+              "duration_seconds": -1,
+              "orig_pkts": 0,
+              "resp_pkts": 0,
+              "orig_ip_bytes": 0,
+              "resp_ip_bytes": 0,
+              "source": "192.168.230.4",
+              "destination": "140.82.121.3",
+              "native_protocol": "tcp",
+              "connection_start": 1642996762.361751,
+              "zeek_reported_end": null,
+              "interval_relation": "unknown_end",
+              "duration_missing": true,
+              "service": null,
+              "conn_state": "OTH",
+              "history": "C",
+              "missed_bytes": 0,
+              "replay_export_time": 1642996762.376326,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            },
+            {
+              "uid": "CoqrZ43i7FYl4Owp04",
+              "ip_protocol": 6,
+              "orig_port": 45736,
+              "resp_port": 443,
+              "duration_seconds": 1.5461997985839844,
+              "orig_pkts": 0,
+              "resp_pkts": 8,
+              "orig_ip_bytes": 0,
+              "resp_ip_bytes": 3024,
+              "source": "192.168.230.4",
+              "destination": "140.82.121.3",
+              "native_protocol": "tcp",
+              "connection_start": 1642996762.376326,
+              "zeek_reported_end": 1642996763.922526,
+              "interval_relation": "inside",
+              "duration_missing": false,
+              "service": null,
+              "conn_state": "SHR",
+              "history": "^hCdaCf",
+              "missed_bytes": 0,
+              "replay_export_time": 1642997064.975399,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            }
+          ],
+          "protocol_evidence": {
+            "http": [],
+            "ssl": [],
+            "files": []
+          },
+          "totals": {
+            "origin": {
+              "pkts": 0,
+              "ip_bytes": 0
+            },
+            "responder": {
+              "pkts": 8,
+              "ip_bytes": 3024
+            }
+          }
+        },
+        "ignore_checksums": {
+          "connections": [
+            {
+              "uid": "CDrqG2izbVGQmX9zi",
+              "ip_protocol": 6,
+              "orig_port": 45736,
+              "resp_port": 443,
+              "duration_seconds": 1.560774803161621,
+              "orig_pkts": 12,
+              "resp_pkts": 8,
+              "orig_ip_bytes": 1242,
+              "resp_ip_bytes": 3024,
+              "source": "192.168.230.4",
+              "destination": "140.82.121.3",
+              "native_protocol": "tcp",
+              "connection_start": 1642996762.361751,
+              "zeek_reported_end": 1642996763.922526,
+              "interval_relation": "inside",
+              "duration_missing": false,
+              "service": "ssl",
+              "conn_state": "SF",
+              "history": "ShADgdaFf",
+              "missed_bytes": 2709,
+              "replay_export_time": 1642996768.925131,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            }
+          ],
+          "protocol_evidence": {
+            "http": [],
+            "ssl": [
+              {
+                "ts": 1642996762.377871,
+                "uid": "CDrqG2izbVGQmX9zi",
+                "id.orig_h": "192.168.230.4",
+                "id.orig_p": 45736,
+                "id.resp_h": "140.82.121.3",
+                "id.resp_p": 443,
+                "server_name": "github.com",
+                "resumed": false,
+                "established": false,
+                "ssl_history": "C"
+              }
+            ],
+            "files": []
+          },
+          "totals": {
+            "origin": {
+              "pkts": 12,
+              "ip_bytes": 1242
+            },
+            "responder": {
+              "pkts": 8,
+              "ip_bytes": 3024
+            }
+          }
+        }
+      },
+      "canonical_variant": null,
+      "canonical_reason": "Incomplete transport or unsupported checksum evidence; no canonical row admitted.",
+      "zeek_ignore_counts_match_packets": false,
+      "zeek_strict_counts_match_checksum_correct_subset": true,
+      "model_row_ready_from_capture": false
+    },
+    {
+      "candidate_id": "3575:3597",
+      "old_packet_id": 3575,
+      "envelope": {
+        "connection_id": 3597,
+        "protocol": "tcp",
+        "first": 1642996762.658826,
+        "last": 1642996779.558694,
+        "syn_seen": true,
+        "syn_sequence": 2247553783,
+        "direction_basis": "initial_syn",
+        "origin_packets": 6872,
+        "responder_packets": 17814,
+        "origin_captured_tcp_payload_bytes": 596,
+        "responder_captured_tcp_payload_bytes": 25242008,
+        "fin_packets": 2,
+        "rst_packets": 0,
+        "origin_ip": "192.168.230.4",
+        "origin_port": 42126,
+        "responder_ip": "140.82.121.9",
+        "responder_port": 443
+      },
+      "directions": {
+        "origin": {
+          "packets": 6872,
+          "declared_ip_bytes": 380100,
+          "tcp_incorrect": 6872,
+          "ip_correct": 6872,
+          "tcp_verifiable": 6872,
+          "invalid_length": 0,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 6872,
+          "payload_fingerprint_matches": 3,
+          "max_abs_payload_timestamp_delta": 0.0008809566497802734,
+          "tcp_correct": 0,
+          "tcp_unverifiable": 0,
+          "ip_incorrect": 0,
+          "checksum_correct_ip_bytes": 0
+        },
+        "responder": {
+          "packets": 17814,
+          "declared_ip_bytes": 56564066,
+          "tcp_correct": 1877,
+          "ip_correct": 17814,
+          "tcp_verifiable": 1879,
+          "invalid_length": 15935,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 2,
+          "checksum_correct_ip_bytes": 2709106,
+          "tcp_unverifiable": 15935,
+          "payload_fingerprint_matches": 1873,
+          "max_abs_payload_timestamp_delta": 0.0032639503479003906,
+          "tcp_incorrect": 2,
+          "ip_incorrect": 0
+        }
+      },
+      "matching_initial_sequence_numbers_both_directions": true,
+      "first_handshake_packets": {
+        "origin": {
+          "sequence": 2247553783,
+          "acknowledgment": 0,
+          "flags": 2,
+          "timestamp": 1642996762.658826
+        },
+        "responder": {
+          "sequence": 406084683,
+          "acknowledgment": 2247553784,
+          "flags": 18,
+          "timestamp": 1642996762.672686
+        }
+      },
+      "sequence_coverage": {
+        "origin": {
+          "unique_payload_bytes": 596,
+          "payload_extent": 596,
+          "fin_payload_end": 596,
+          "gap_count": 0,
+          "first_gaps": [],
+          "complete_to_fin": true,
+          "merged_interval_count": 1
+        },
+        "responder": {
+          "unique_payload_bytes": 2614308,
+          "payload_extent": 55603375,
+          "fin_payload_end": 55637730,
+          "gap_count": 1607,
+          "first_gaps": [
+            [
+              0,
+              2707
+            ],
+            [
+              5649,
+              127227
+            ],
+            [
+              128201,
+              145401
+            ],
+            [
+              146799,
+              205515
+            ],
+            [
+              207807,
+              341121
+            ],
+            [
+              343917,
+              578781
+            ],
+            [
+              580179,
+              588567
+            ],
+            [
+              591363,
+              596955
+            ],
+            [
+              601149,
+              620676
+            ],
+            [
+              626244,
+              629028
+            ]
+          ],
+          "complete_to_fin": false,
+          "merged_interval_count": 1606
+        }
+      },
+      "matching_payload_fingerprints": 1876,
+      "checksum_samples": [
+        {
+          "packet_number": 809493,
+          "timestamp": 1642996762.658826,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.9",
+          "source_port": 42126,
+          "destination_port": 443,
+          "sequence": 2247553783,
+          "acknowledgment": 0,
+          "flags": 2,
+          "ip_header_bytes": 20,
+          "ip_total_length": 60,
+          "captured_ip_bytes": 60,
+          "tcp_header_bytes": 40,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44087,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44087,
+          "recomputed_tcp_checksum": 28483
+        },
+        {
+          "packet_number": 809495,
+          "timestamp": 1642996762.673027,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.9",
+          "source_port": 42126,
+          "destination_port": 443,
+          "sequence": 2247553784,
+          "acknowledgment": 406084684,
+          "flags": 16,
+          "ip_header_bytes": 20,
+          "ip_total_length": 52,
+          "captured_ip_bytes": 52,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44079,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44079,
+          "recomputed_tcp_checksum": 32565
+        },
+        {
+          "packet_number": 809496,
+          "timestamp": 1642996762.673612,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "140.82.121.9",
+          "source_port": 42126,
+          "destination_port": 443,
+          "sequence": 2247553784,
+          "acknowledgment": 406084684,
+          "flags": 24,
+          "ip_header_bytes": 20,
+          "ip_total_length": 373,
+          "captured_ip_bytes": 373,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 44400,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 44400,
+          "recomputed_tcp_checksum": 240
+        }
+      ],
+      "transport_recovery_complete": false,
+      "checksum_semantics_supported": false,
+      "zeek": {
+        "strict": {
+          "connections": [
+            {
+              "uid": "CpeX4j4RtLhax0YT43",
+              "ip_protocol": 6,
+              "orig_port": 42126,
+              "resp_port": 443,
+              "duration_seconds": -1,
+              "orig_pkts": 0,
+              "resp_pkts": 0,
+              "orig_ip_bytes": 0,
+              "resp_ip_bytes": 0,
+              "source": "192.168.230.4",
+              "destination": "140.82.121.9",
+              "native_protocol": "tcp",
+              "connection_start": 1642996762.658826,
+              "zeek_reported_end": null,
+              "interval_relation": "unknown_end",
+              "duration_missing": true,
+              "service": null,
+              "conn_state": "OTH",
+              "history": "C",
+              "missed_bytes": 0,
+              "replay_export_time": 1642996762.672686,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            },
+            {
+              "uid": "COadYs3uB2MoFJhLE3",
+              "ip_protocol": 6,
+              "orig_port": 42126,
+              "resp_port": 443,
+              "duration_seconds": 16.885783910751343,
+              "orig_pkts": 0,
+              "resp_pkts": 1877,
+              "orig_ip_bytes": 0,
+              "resp_ip_bytes": 2709106,
+              "source": "192.168.230.4",
+              "destination": "140.82.121.9",
+              "native_protocol": "tcp",
+              "connection_start": 1642996762.672686,
+              "zeek_reported_end": 1642996779.55847,
+              "interval_relation": "inside",
+              "duration_missing": false,
+              "service": null,
+              "conn_state": "SHR",
+              "history": "^hCdaCXcCttCtf",
+              "missed_bytes": 0,
+              "replay_export_time": 1642996784.5585,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            }
+          ],
+          "protocol_evidence": {
+            "http": [],
+            "ssl": [],
+            "files": []
+          },
+          "totals": {
+            "origin": {
+              "pkts": 0,
+              "ip_bytes": 0
+            },
+            "responder": {
+              "pkts": 1877,
+              "ip_bytes": 2709106
+            }
+          }
+        },
+        "ignore_checksums": {
+          "connections": [
+            {
+              "uid": "CwFfI14ci8YPSlKNR",
+              "ip_protocol": 6,
+              "orig_port": 42126,
+              "resp_port": 443,
+              "duration_seconds": 16.899643898010254,
+              "orig_pkts": 6872,
+              "resp_pkts": 1879,
+              "orig_ip_bytes": 380100,
+              "resp_ip_bytes": 2712024,
+              "source": "192.168.230.4",
+              "destination": "140.82.121.9",
+              "native_protocol": "tcp",
+              "connection_start": 1642996762.658826,
+              "zeek_reported_end": 1642996779.55847,
+              "interval_relation": "inside",
+              "duration_missing": false,
+              "service": "ssl",
+              "conn_state": "SF",
+              "history": "ShADgdagtgtgtFf",
+              "missed_bytes": 53023422,
+              "replay_export_time": 1642996784.5585,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            }
+          ],
+          "protocol_evidence": {
+            "http": [],
+            "ssl": [
+              {
+                "ts": 1642996762.673612,
+                "uid": "CwFfI14ci8YPSlKNR",
+                "id.orig_h": "192.168.230.4",
+                "id.orig_p": 42126,
+                "id.resp_h": "140.82.121.9",
+                "id.resp_p": 443,
+                "server_name": "codeload.github.com",
+                "resumed": false,
+                "established": false,
+                "ssl_history": "C"
+              }
+            ],
+            "files": []
+          },
+          "totals": {
+            "origin": {
+              "pkts": 6872,
+              "ip_bytes": 380100
+            },
+            "responder": {
+              "pkts": 1879,
+              "ip_bytes": 2712024
+            }
+          }
+        }
+      },
+      "canonical_variant": null,
+      "canonical_reason": "Incomplete transport or unsupported checksum evidence; no canonical row admitted.",
+      "zeek_ignore_counts_match_packets": false,
+      "zeek_strict_counts_match_checksum_correct_subset": true,
+      "model_row_ready_from_capture": false
+    },
+    {
+      "candidate_id": "3578:3598",
+      "old_packet_id": 3578,
+      "envelope": {
+        "connection_id": 3598,
+        "protocol": "tcp",
+        "first": 1642996783.648448,
+        "last": 1642996786.192705,
+        "syn_seen": true,
+        "syn_sequence": 2153185780,
+        "direction_basis": "initial_syn",
+        "origin_packets": 8320,
+        "responder_packets": 12529,
+        "origin_captured_tcp_payload_bytes": 153,
+        "responder_captured_tcp_payload_bytes": 17643346,
+        "fin_packets": 2,
+        "rst_packets": 0,
+        "origin_ip": "192.168.230.4",
+        "origin_port": 60448,
+        "responder_ip": "192.168.230.122",
+        "responder_port": 80
+      },
+      "directions": {
+        "origin": {
+          "packets": 8320,
+          "declared_ip_bytes": 432813,
+          "tcp_incorrect": 8320,
+          "ip_correct": 8320,
+          "tcp_verifiable": 8320,
+          "invalid_length": 0,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 8320,
+          "payload_fingerprint_matches": 1,
+          "max_abs_payload_timestamp_delta": 0.0006880760192871094,
+          "tcp_correct": 0,
+          "tcp_unverifiable": 0,
+          "ip_incorrect": 0,
+          "checksum_correct_ip_bytes": 0
+        },
+        "responder": {
+          "packets": 12529,
+          "declared_ip_bytes": 140574009,
+          "tcp_correct": 328,
+          "ip_correct": 12529,
+          "tcp_verifiable": 350,
+          "invalid_length": 12179,
+          "pcap_captured_less_than_original": 0,
+          "bad_checksum_equals_partial_seed": 22,
+          "checksum_correct_ip_bytes": 335222,
+          "tcp_unverifiable": 12179,
+          "payload_fingerprint_matches": 347,
+          "max_abs_payload_timestamp_delta": 0.012830018997192383,
+          "tcp_incorrect": 22,
+          "ip_incorrect": 0
+        }
+      },
+      "matching_initial_sequence_numbers_both_directions": true,
+      "first_handshake_packets": {
+        "origin": {
+          "sequence": 2153185780,
+          "acknowledgment": 0,
+          "flags": 2,
+          "timestamp": 1642996783.648448
+        },
+        "responder": {
+          "sequence": 797427011,
+          "acknowledgment": 2153185781,
+          "flags": 18,
+          "timestamp": 1642996783.648933
+        }
+      },
+      "sequence_coverage": {
+        "origin": {
+          "unique_payload_bytes": 153,
+          "payload_extent": 153,
+          "fin_payload_end": 153,
+          "gap_count": 0,
+          "first_gaps": [],
+          "complete_to_fin": true,
+          "merged_interval_count": 1
+        },
+        "responder": {
+          "unique_payload_bytes": 349166,
+          "payload_extent": 138858540,
+          "fin_payload_end": 139921803,
+          "gap_count": 341,
+          "first_gaps": [
+            [
+              0,
+              22368
+            ],
+            [
+              23766,
+              369864
+            ],
+            [
+              371262,
+              435570
+            ],
+            [
+              436968,
+              1495356
+            ],
+            [
+              1496652,
+              1591832
+            ],
+            [
+              1593230,
+              1907664
+            ],
+            [
+              1909044,
+              1946036
+            ],
+            [
+              1946808,
+              2152314
+            ],
+            [
+              2153652,
+              3691512
+            ],
+            [
+              3692384,
+              4640142
+            ]
+          ],
+          "complete_to_fin": false,
+          "merged_interval_count": 340
+        }
+      },
+      "matching_payload_fingerprints": 348,
+      "checksum_samples": [
+        {
+          "packet_number": 835400,
+          "timestamp": 1642996783.648448,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "192.168.230.122",
+          "source_port": 60448,
+          "destination_port": 80,
+          "sequence": 2153185780,
+          "acknowledgment": 0,
+          "flags": 2,
+          "ip_header_bytes": 20,
+          "ip_total_length": 60,
+          "captured_ip_bytes": 60,
+          "tcp_header_bytes": 40,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 19967,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 19967,
+          "recomputed_tcp_checksum": 34807
+        },
+        {
+          "packet_number": 835402,
+          "timestamp": 1642996783.649198,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "192.168.230.122",
+          "source_port": 60448,
+          "destination_port": 80,
+          "sequence": 2153185781,
+          "acknowledgment": 797427012,
+          "flags": 16,
+          "ip_header_bytes": 20,
+          "ip_total_length": 52,
+          "captured_ip_bytes": 52,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 19959,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 19959,
+          "recomputed_tcp_checksum": 59763
+        },
+        {
+          "packet_number": 835403,
+          "timestamp": 1642996783.649382,
+          "source_ip": "192.168.230.4",
+          "destination_ip": "192.168.230.122",
+          "source_port": 60448,
+          "destination_port": 80,
+          "sequence": 2153185781,
+          "acknowledgment": 797427012,
+          "flags": 24,
+          "ip_header_bytes": 20,
+          "ip_total_length": 205,
+          "captured_ip_bytes": 205,
+          "tcp_header_bytes": 32,
+          "fragment_bits": 0,
+          "ipv4_checksum": "correct",
+          "tcp_checksum": "incorrect",
+          "tcp_unverifiable_reason": null,
+          "stored_tcp_checksum": 20112,
+          "tcp_checksum_matches_pseudoheader_seed": true,
+          "ipv4_total_exceeds_captured": false,
+          "ipv4_total_zero": false,
+          "pseudoheader_folded_sum": 20112,
+          "recomputed_tcp_checksum": 58998
+        }
+      ],
+      "transport_recovery_complete": false,
+      "checksum_semantics_supported": false,
+      "zeek": {
+        "strict": {
+          "connections": [
+            {
+              "uid": "CVbx2EtXcznvxPgL4",
+              "ip_protocol": 6,
+              "orig_port": 60448,
+              "resp_port": 80,
+              "duration_seconds": -1,
+              "orig_pkts": 0,
+              "resp_pkts": 0,
+              "orig_ip_bytes": 0,
+              "resp_ip_bytes": 0,
+              "source": "192.168.230.4",
+              "destination": "192.168.230.122",
+              "native_protocol": "tcp",
+              "connection_start": 1642996783.648448,
+              "zeek_reported_end": null,
+              "interval_relation": "unknown_end",
+              "duration_missing": true,
+              "service": null,
+              "conn_state": "OTH",
+              "history": "C",
+              "missed_bytes": 0,
+              "replay_export_time": 1642996783.648933,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            },
+            {
+              "uid": "Cu3QPF1ZfqfldlKcB7",
+              "ip_protocol": 6,
+              "orig_port": 60448,
+              "resp_port": 80,
+              "duration_seconds": 2.543529987335205,
+              "orig_pkts": 0,
+              "resp_pkts": 328,
+              "orig_ip_bytes": 0,
+              "resp_ip_bytes": 335222,
+              "source": "192.168.230.4",
+              "destination": "192.168.230.122",
+              "native_protocol": "tcp",
+              "connection_start": 1642996783.648933,
+              "zeek_reported_end": 1642996786.192463,
+              "interval_relation": "inside",
+              "duration_missing": false,
+              "service": null,
+              "conn_state": "SHR",
+              "history": "^hCadXCCcCcf",
+              "missed_bytes": 0,
+              "replay_export_time": 1642996791.538911,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            }
+          ],
+          "protocol_evidence": {
+            "http": [],
+            "ssl": [],
+            "files": []
+          },
+          "totals": {
+            "origin": {
+              "pkts": 0,
+              "ip_bytes": 0
+            },
+            "responder": {
+              "pkts": 328,
+              "ip_bytes": 335222
+            }
+          }
+        },
+        "ignore_checksums": {
+          "connections": [
+            {
+              "uid": "CwOKpu3bMYXFtzXLu4",
+              "ip_protocol": 6,
+              "orig_port": 60448,
+              "resp_port": 80,
+              "duration_seconds": 2.5440149307250977,
+              "orig_pkts": 8320,
+              "resp_pkts": 350,
+              "orig_ip_bytes": 432813,
+              "resp_ip_bytes": 367374,
+              "source": "192.168.230.4",
+              "destination": "192.168.230.122",
+              "native_protocol": "tcp",
+              "connection_start": 1642996783.648448,
+              "zeek_reported_end": 1642996786.192463,
+              "interval_relation": "inside",
+              "duration_missing": false,
+              "service": "http",
+              "conn_state": "SF",
+              "history": "ShADagdgWgWgWFf",
+              "missed_bytes": 139572637,
+              "replay_export_time": 1642996791.538911,
+              "after_input_eof": false,
+              "during_shutdown": false,
+              "detector_received_time": null,
+              "feedback_available_time": null,
+              "label": "unknown",
+              "export_before_zeek_reported_end": false
+            }
+          ],
+          "protocol_evidence": {
+            "http": [
+              {
+                "ts": 1642996783.649382,
+                "uid": "CwOKpu3bMYXFtzXLu4",
+                "id.orig_h": "192.168.230.4",
+                "id.orig_p": 60448,
+                "id.resp_h": "192.168.230.122",
+                "id.resp_p": 80,
+                "trans_depth": 1,
+                "method": "GET",
+                "host": "192.168.230.122",
+                "uri": "/rockyou.txt",
+                "user_agent": "Wget/1.19.4 (linux-gnu)",
+                "request_body_len": 0,
+                "response_body_len": 0,
+                "tags": []
+              }
+            ],
+            "ssl": [],
+            "files": []
+          },
+          "totals": {
+            "origin": {
+              "pkts": 8320,
+              "ip_bytes": 432813
+            },
+            "responder": {
+              "pkts": 350,
+              "ip_bytes": 367374
+            }
+          }
+        }
+      },
+      "canonical_variant": null,
+      "canonical_reason": "Incomplete transport or unsupported checksum evidence; no canonical row admitted.",
+      "zeek_ignore_counts_match_packets": false,
+      "zeek_strict_counts_match_checksum_correct_subset": true,
+      "model_row_ready_from_capture": false
+    }
+  ],
+  "export_receipts": {
+    "strict": {
+      "status": "complete",
+      "mode": "strict",
+      "version": "8.0.11",
+      "runtime_kind": "wsl",
+      "pcap_sha256": "ac24fa275bab9fc462e634ca3fac076602ecf128b5f4724510152104b71888ad",
+      "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+      "wall_seconds": 23.093109299894422,
+      "logs": {
+        "conn": {
+          "exists": true,
+          "rows": 26895,
+          "sha256": "caa1dc1a3a5e5ec428006367f3cc3624e69935a33e2411f0526cf32addf9eb79"
+        },
+        "http": {
+          "exists": true,
+          "rows": 537,
+          "sha256": "b2ea52f27912a2c32c8571c289df55b6bc6e1bdbfdf2acc3c499ee955d63eb9f"
+        },
+        "ssl": {
+          "exists": true,
+          "rows": 5895,
+          "sha256": "ac9e0141a74375f6b61e0f03266b59a11ebf2a35602d2d7af5376254e8e56be9"
+        },
+        "dns": {
+          "exists": true,
+          "rows": 4972,
+          "sha256": "d90431074a446aa5cee0bff8ac851d5d3d5d4fdaa9bcf19a38d09f1b35f20f84"
+        },
+        "files": {
+          "exists": true,
+          "rows": 630,
+          "sha256": "f2990f7becf5cd1d9b2541087f7bf44321b7532722f5401eecfb37c48d4dbf95"
+        },
+        "weird": {
+          "exists": true,
+          "rows": 1815,
+          "sha256": "a18121b65ef3ad8b874fd5c42a9c9b4842feb39fe2f634a91317f6ff243f0ede"
+        }
+      },
+      "command": [
+        "wsl",
+        "-d",
+        "Ubuntu",
+        "--exec",
+        "sh",
+        "-c",
+        "cd \"$1\" && shift && exec env \"$@\"",
+        "ait-zeek",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_recovery/zeek/strict",
+        "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+        "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+        "LC_ALL=C",
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "zeek-resource.txt",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+        "-r",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_recovery/source/firewall-log.pcap.1642957916",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/scripts/ait_contract/export.zeek"
+      ],
+      "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+      "checksum_policy": "validate",
+      "model_forward_calls": 0,
+      "gpu_jobs": 0,
+      "process_resources": {
+        "measured": true,
+        "source": "/usr/bin/time -v for this Zeek process",
+        "user_cpu_seconds": 8.36,
+        "system_cpu_seconds": 4.43,
+        "max_rss_kib": 124060,
+        "exit_status": 0
+      }
+    },
+    "ignore_checksums": {
+      "status": "complete",
+      "mode": "ignore_checksums",
+      "version": "8.0.11",
+      "runtime_kind": "wsl",
+      "pcap_sha256": "ac24fa275bab9fc462e634ca3fac076602ecf128b5f4724510152104b71888ad",
+      "export_script_sha256": "2e567fb4091803efb2d8ede58493610bc7da0da5775abbadb6e1f731a911edbc",
+      "wall_seconds": 23.127164999954402,
+      "logs": {
+        "conn": {
+          "exists": true,
+          "rows": 25732,
+          "sha256": "905b83755b3b8ec7e2335a107ea45f282af3d0ab5a92ee306d208926ae5038e9"
+        },
+        "http": {
+          "exists": true,
+          "rows": 556,
+          "sha256": "dec08931bfb87cfeb606d11196a4aa1afa1e6b4c7e118f5d0ebb263b46ea9f74"
+        },
+        "ssl": {
+          "exists": true,
+          "rows": 6874,
+          "sha256": "4a60e3e9b719a7ff0f133b8b6c11ac75caba59e9740ee766730eb000e403c699"
+        },
+        "dns": {
+          "exists": true,
+          "rows": 13838,
+          "sha256": "208e27a783c907b8dfa06b811997051366f121dc19b8a80b32ba14be253568cc"
+        },
+        "files": {
+          "exists": true,
+          "rows": 807,
+          "sha256": "577c9b786203538b55707ed7f68aee02acc950bd81b900855feb435c43dbd3f7"
+        },
+        "weird": {
+          "exists": true,
+          "rows": 214,
+          "sha256": "38b20557fe68ae0c166d36b75d531db7ca227c3fdfc4c7d62d8234080f4232cd"
+        }
+      },
+      "command": [
+        "wsl",
+        "-d",
+        "Ubuntu",
+        "--exec",
+        "sh",
+        "-c",
+        "cd \"$1\" && shift && exec env \"$@\"",
+        "ait-zeek",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_recovery/zeek/ignore_checksums",
+        "LD_LIBRARY_PATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/usr/lib/x86_64-linux-gnu:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/lib",
+        "ZEEKPATH=/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/policy:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/site:/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/share/zeek/builtin-plugins",
+        "LC_ALL=C",
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "zeek-resource.txt",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/local/ait-zeek-runtime/rootfs/opt/zeek/bin/zeek",
+        "-C",
+        "-r",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/工作/拟合来源与划分落实_20261119/ait_recovery/source/firewall-log.pcap.1642957916",
+        "/mnt/e/OneDrive - Coventry University/中传/毕业论文/代码/tracelight-ids/.worktrees/ait-flow-contract-20261118/scripts/ait_contract/export.zeek"
+      ],
+      "clock_contract": "Offline network_time at connection log generation; not detector ingestion. EOF/shutdown rows are marked.",
+      "checksum_policy": "explicitly ignore with -C",
+      "model_forward_calls": 0,
+      "gpu_jobs": 0,
+      "process_resources": {
+        "measured": true,
+        "source": "/usr/bin/time -v for this Zeek process",
+        "user_cpu_seconds": 8.48,
+        "system_cpu_seconds": 4.57,
+        "max_rss_kib": 124652,
+        "exit_status": 0
+      }
+    }
+  },
+  "capture_config_receipt": {
+    "index_sha256": "93a2dc34a9d7fd372878a73309ebed1afdc23727ad4a3da2b2d7e891b16d5137",
+    "members": [
+      {
+        "path": "gather/inet-firewall/facts.json",
+        "bytes": 969527,
+        "compressed": 95042,
+        "CRC": 2458557092,
+        "offset": 119651449,
+        "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&ait_recovery_config_offset=119651449",
+        "content_range": "bytes 119651449-119747002/522084364",
+        "sha256": "b285426d08ae325f4694b355b12183e5cc8535f7049d508c67d9d7d28cc28e11",
+        "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\capture_config\\gather\\inet-firewall\\facts.json"
+      },
+      {
+        "path": "gather/inet-firewall/configs/shorewall/interfaces",
+        "bytes": 556,
+        "compressed": 278,
+        "CRC": 1100679596,
+        "offset": 151941513,
+        "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&ait_recovery_config_offset=151941513",
+        "content_range": "bytes 151941513-151942302/522084364",
+        "sha256": "bdd19f4400a18309c9f62ceef3f58b054d64695ac9147054a36a3e6f0146ff45",
+        "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\capture_config\\gather\\inet-firewall\\configs\\shorewall\\interfaces"
+      },
+      {
+        "path": "gather/inet-firewall/configs/shorewall/snat",
+        "bytes": 527,
+        "compressed": 249,
+        "CRC": 4018773760,
+        "offset": 151942784,
+        "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&ait_recovery_config_offset=151942784",
+        "content_range": "bytes 151942784-151943544/522084364",
+        "sha256": "8d26e5dc898a783763f2abcce7df2a1239a65954f19d276c9b8f9a4170497abb",
+        "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\capture_config\\gather\\inet-firewall\\configs\\shorewall\\snat"
+      },
+      {
+        "path": "gather/inet-firewall/configs/shorewall/params",
+        "bytes": 899,
+        "compressed": 480,
+        "CRC": 3475369985,
+        "offset": 151943134,
+        "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&ait_recovery_config_offset=151943134",
+        "content_range": "bytes 151943134-151944125/522084364",
+        "sha256": "df2944b8f07640d20b4d01b9e6225255d5993750cecd5e16372797bb76dc6c20",
+        "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\capture_config\\gather\\inet-firewall\\configs\\shorewall\\params"
+      },
+      {
+        "path": "gather/inet-firewall/configs/shorewall/rules",
+        "bytes": 1487,
+        "compressed": 543,
+        "CRC": 566036970,
+        "offset": 151943717,
+        "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&ait_recovery_config_offset=151943717",
+        "content_range": "bytes 151943717-151944771/522084364",
+        "sha256": "a8af2e97313323003c8d2aacdb008009390dcbeb8314f27dbe091edf5c0855bb",
+        "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\capture_config\\gather\\inet-firewall\\configs\\shorewall\\rules"
+      },
+      {
+        "path": "gather/inet-firewall/configs/suricata/suricata.yaml",
+        "bytes": 64887,
+        "compressed": 20252,
+        "CRC": 1583483211,
+        "offset": 151946656,
+        "url": "https://zenodo.org/records/19483937/files/russellmitchell_no-pcaps.zip?download=1&ait_recovery_config_offset=151946656",
+        "content_range": "bytes 151946656-151967419/522084364",
+        "sha256": "44e2d4378e6020c3397cbb7d0a811c71d7717e24b6da0613063a313aeeeb9d53",
+        "local_path": "E:\\OneDrive - Coventry University\\中传\\毕业论文\\工作\\拟合来源与划分落实_20261119\\ait_recovery\\source\\capture_config\\gather\\inet-firewall\\configs\\suricata\\suricata.yaml"
+      }
+    ]
+  },
+  "availability_rule": "Use whole-rotation replay export and preserve EOF/shutdown flags; neither flow end nor replay export is actual detector receipt or action-label availability.",
+  "event_label_rule": "This recovers alternative observations of existing two actions; it creates no new independent events, no automatic pure-flow label, and no blind split.",
+  "script_sha256": "6f7907c1814ef23103d6b9a7a67f7a6b4b1636aa1b3ca8f2b693726d000e689c"
+}
