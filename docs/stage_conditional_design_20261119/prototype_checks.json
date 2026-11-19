@@ -1,0 +1,45 @@
+{
+  "input_kind": "synthetic_only",
+  "real_model_calls": 0,
+  "optimizer_steps": 0,
+  "exact_normal_anchor": 0.0,
+  "nonnegative_local_costs": true,
+  "diagonal_chimera_counterexample": {
+    "whole_reference": 4.0,
+    "independent_stages": 0.0
+  },
+  "signed_anchor_false_positive_counterexample": {
+    "self_score": -1.0,
+    "calibration_threshold": -2.0
+  },
+  "small_edit_dp_bruteforce_cases": 9,
+  "one_match_does_not_prevent_gap_shortcut": {
+    "score": 0.01,
+    "path": [
+      {
+        "operation": "match",
+        "query_index": 0,
+        "reference_index": 0,
+        "cost": 0.0
+      },
+      {
+        "operation": "reference_gap",
+        "query_index": null,
+        "reference_index": 1,
+        "cost": 0.01
+      },
+      {
+        "operation": "query_gap",
+        "query_index": 1,
+        "reference_index": null,
+        "cost": 0.01
+      }
+    ]
+  },
+  "autograd_finite_difference": {
+    "analytic": -0.15980599137079043,
+    "numerical": -0.15980599132880968
+  },
+  "prototype_parameters": 85,
+  "architecture_status": "synthetic prototype dimensions, not a registered experiment configuration"
+}

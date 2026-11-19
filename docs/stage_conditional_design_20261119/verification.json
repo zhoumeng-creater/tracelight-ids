@@ -1,0 +1,62 @@
+{
+  "status": "design_and_synthetic_prototype_complete; no real-model validation",
+  "real_model_calls": 0,
+  "optimizer_steps": 0,
+  "new_experiment_registrations": 0,
+  "frozen_four_arm_artifacts_unchanged": true,
+  "python_compilation": "passed",
+  "artifacts": {
+    "docs/stage_conditional_design_20261119/.gitattributes": {
+      "bytes": 36,
+      "sha256": "ec2ed5f643c328d87bb0412e636426aa4eaaf4e7100a83ad1394f14abe3193d2"
+    },
+    "docs/stage_conditional_design_20261119/failure_basis.md": {
+      "bytes": 9337,
+      "sha256": "75521756232d774d4c8d95ec999d59676e5c9de492290fc121f086b702c30144"
+    },
+    "docs/stage_conditional_design_20261119/index.md": {
+      "bytes": 12048,
+      "sha256": "5dbc4b8f27ffb41edd1d64cbea61b2da1b63f550618b8f213da01d4f3bb855ec"
+    },
+    "docs/stage_conditional_design_20261119/learning_mechanism.md": {
+      "bytes": 18820,
+      "sha256": "6a4d517d5a25f5484bb1860efabfa8e4ad22798e0f05afa2f6963ad045a8fff8"
+    },
+    "docs/stage_conditional_design_20261119/prototype_checks.json": {
+      "bytes": 1132,
+      "sha256": "85fc95c0c20e4bec31b9a5781863c6fc1d90e4aedfd30a2c05482c77808c2af4"
+    },
+    "docs/stage_conditional_design_20261119/shared_stage_evidence.json": {
+      "bytes": 348707,
+      "sha256": "8b05a66972c145f04853ac69dad8de63aed216bfc85fb4a236385049b95467ac"
+    },
+    "docs/stage_conditional_design_20261119/stage_neighbors.md": {
+      "bytes": 10122,
+      "sha256": "c20f81fbadba28d6ddbba95401e4f6eaa761cb2fb67b670db3e2b24edeb7d92c"
+    },
+    "docs/stage_conditional_design_20261119/sources/learning_sources.json": {
+      "bytes": 695,
+      "sha256": "4a81cce2a882a294f6e38531c444aa2e22f16f4f6d05e412fa61b1ea65fc5ce3"
+    },
+    "docs/stage_conditional_design_20261119/sources/stage_code_receipt.json": {
+      "bytes": 1496,
+      "sha256": "5872165fecdb1a35655b4316475c86dd0db5985976f86a758d2d3c263adcb31f"
+    },
+    "scripts/stage_design/check_prototype.py": {
+      "bytes": 4717,
+      "sha256": "f44a2dd9c0890a0d3478e851328d6ade37990569288c32a19bddf9a7ad6fc934"
+    },
+    "scripts/stage_design/reference_model.py": {
+      "bytes": 6295,
+      "sha256": "19efe0e18f6ffb3bdae6d8a6ad3fd1339a238de0d79bc82539781502014fe23e"
+    },
+    "scripts/stage_design/shared_stage_evidence.py": {
+      "bytes": 4670,
+      "sha256": "46c0e48ab326d8f27b21f95310af6e859f1e41887455fb606f50179b0d8a1be3"
+    },
+    "scripts/stage_design/.gitattributes": {
+      "bytes": 17,
+      "sha256": "86013e6b9434810158ab594bbfd2d77f64b030a5eac5f27fc17afd2f474d561e"
+    }
+  }
+}

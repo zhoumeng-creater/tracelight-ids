@@ -1,0 +1,23 @@
+{
+  "CLAD": {
+    "commit": "79da4d1f2a6f4e5ecf92c4588195aaf163df40f8",
+    "paper": "https://arxiv.org/html/2601.09902v1",
+    "read_code": [
+      "losses/clad_loss.py"
+    ],
+    "code_read_via": "web raw frozen blob"
+  },
+  "CEDAR": {
+    "commit": "c79332f7309c17e89609473523ce3f54aaa8de3c",
+    "paper": "https://www.comm.utoronto.ca/~liang/publications/MobiHoc26_CEDAR.pdf",
+    "read_code": [
+      "cedar/training.py",
+      "cedar/scoring.py"
+    ],
+    "code_read_via": "web raw frozen blob",
+    "paper_bytes": 1435307,
+    "paper_sha256": "71ae9f6da372e674ca31a026e3b17bb853023f417d95630584e7777f9c82c2fe"
+  },
+  "real_model_calls": 0,
+  "source_data_read_by_this_subtask": false
+}
