@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-20",
+  "status": "engineering_and_F_inputs_verified_no_real_data_model_execution",
+  "synthetic_tests": {
+    "unique_passed": 52,
+    "data": 4,
+    "objective": 7,
+    "evaluation": 14,
+    "phase_order": 16,
+    "training_and_scoring_arithmetic": 6,
+    "official_TabM_CPU_CUDA": 5,
+    "official_tests_skipped": 0
+  },
+  "verification_sequence": [
+    "Full available suite:50 passed in5.58s",
+    "Two additional Predictor.score arithmetic restoration cases added; training suite6 passed in3.53s"
+  ],
+  "checks": [
+    "exact deployed-score gradient vs direct autograd on CPU and CUDA",
+    "BCE and transfer gradients accumulate at unchanged parameters",
+    "both boundary derivatives and ties",
+    "score contraction without FP improvement",
+    "dropout RNG and paired BCE sampler",
+    "official state and PLE bins serialization",
+    "short synthetic checkpoint rejected by production loader",
+    "all nine fits before C; all nine thresholds before development",
+    "bad score shape or nonfinite scores blocked before calibration persistence",
+    "registered F-only InputsOnly through PowerShell launcher",
+    "Ruff and git diff whitespace check",
+    "old frozen HGB batch and design artifacts unchanged"
+  ],
+  "inputs_only": {
+    "parsed_roles": [
+      "F_base",
+      "F_expansion"
+    ],
+    "F_rows": 13252,
+    "normal": 12747,
+    "control": 504,
+    "download": 1,
+    "model_constructions": 0,
+    "fit_calls": 0,
+    "score_calls": 0,
+    "threshold_calculations": 0
+  },
+  "real_data_execution": {
+    "model_constructions": 0,
+    "model_forwards": 0,
+    "fit_calls": 0,
+    "threshold_calculations": 0,
+    "reserved_source_reads": 0
+  },
+  "official_synthetic_environment": {
+    "torch": "2.6.0+cu126",
+    "tabm": "0.0.3",
+    "rtdl_num_embeddings": "0.0.12",
+    "device_scope": "local CPU and CUDA; generated48-row arrays only; not laboratory resource measurement"
+  },
+  "logs": {
+    "synthetic_checks_final.txt": "9dc40ae63f08938d49f40f116e9a74ed7a6a4c8b39c2ec772f3bcac916237fa3",
+    "scoring_arithmetic_checks.txt": "fd58f3f83710678b5a396476084f47d0fe6363cfb565ff203baacf48c5e50a4a"
+  },
+  "final_inputs_source_receipt_sha256": "c3c6922bfba0cad1a176262a90980e281226288c7a3eaf1c0d7f6d37d1403ba1",
+  "readiness": "Fixed laboratory implementation released; detection utility and innovation remain to be measured by the registered comparison."
+}

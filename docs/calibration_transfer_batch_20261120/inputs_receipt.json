@@ -1,0 +1,69 @@
+{
+  "format": "calibration-transfer-input-receipt-v1",
+  "manifest_path": "episodes.json.gz",
+  "manifest_file_sha256": "72ace4f0b4fa85ad11907aeca346074d494bb5ddd9669d99958d9802373242dc",
+  "manifest_canonical_sha256": "12f6bd851d6a5d31a4ef709ed585ea82c9b47d50635096ad993ff8c123349798",
+  "manifest_bytes": 563016,
+  "fit_flow_ids_sha256": "c372e7709e9a1b413246450da8e55bde18f36a9979cb76b9385cf6294aa5d3b6",
+  "fit_rows": 13252,
+  "target_counts": {
+    "normal": 12747,
+    "control": 504,
+    "download": 1
+  },
+  "excluded_F_rows": {
+    "unknown": 123,
+    "other_attack": 11
+  },
+  "parsed_data_roles": [
+    "F_base",
+    "F_expansion"
+  ],
+  "numeric_shape": [
+    13252,
+    5
+  ],
+  "categorical_shape": [
+    13252,
+    8
+  ],
+  "actual_episodes": [
+    {
+      "source": "ait:santos:complete_run",
+      "E_day": "2022-01-15",
+      "Q_n": 119,
+      "E_n": 64,
+      "E_budget": 0
+    },
+    {
+      "source": "ait:santos:complete_run",
+      "E_day": "2022-01-16",
+      "Q_n": 183,
+      "E_n": 113,
+      "E_budget": 1
+    },
+    {
+      "source": "ait:santos:complete_run",
+      "E_day": "2022-01-17",
+      "Q_n": 296,
+      "E_n": 143,
+      "E_budget": 1
+    },
+    {
+      "source": "unraveled:apt_2021_single_campaign",
+      "E_day": "2021-06-22",
+      "Q_n": 10110,
+      "E_n": 2198,
+      "E_budget": 21
+    }
+  ],
+  "B_known_action_components_split_by_seed": {
+    "17": 46,
+    "29": 46,
+    "43": 46
+  },
+  "model_constructions": 0,
+  "fit_calls": 0,
+  "score_calls": 0,
+  "threshold_calculations": 0
+}

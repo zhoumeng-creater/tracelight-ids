@@ -1,0 +1,18 @@
+{
+  "docs/calibration_transfer_batch_20261120/episodes.json.gz": {
+    "sha256": "72ace4f0b4fa85ad11907aeca346074d494bb5ddd9669d99958d9802373242dc",
+    "bytes": 563016
+  },
+  "docs/calibration_transfer_batch_20261120/inputs_receipt.json": {
+    "sha256": "f3c4a6479e7fd58b89ee4ce2853cb192c3fe0469d43599cbda468b31f1562517",
+    "bytes": 1533
+  },
+  "docs/calibration_transfer_batch_20261120/registration.json": {
+    "sha256": "859e8d9a70ff97a6b59082a6645da4ae6d744c27bd68d5b6d33b35fdc55c6647",
+    "bytes": 26632
+  },
+  "docs/calibration_transfer_batch_20261120/verification.json": {
+    "sha256": "f3ee97e9a2f51447d5cc947f3ad251eb6a8b40ba0569f4d779dfcf126893b8fc",
+    "bytes": 2407
+  }
+}
