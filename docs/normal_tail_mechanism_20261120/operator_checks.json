@@ -1,0 +1,40 @@
+{
+  "input": "synthetic_only",
+  "real_model_calls": 0,
+  "optimizer_steps": 0,
+  "integer_count_equivalence_checks": 7623,
+  "n50_integer_boundary_vs_interpolation": [
+    49.0,
+    48.51
+  ],
+  "normal_component_gradient": {
+    "autograd": 1.0,
+    "finite_difference": 0.9999999999732445
+  },
+  "common_translation_gradient": 0.0,
+  "detached_threshold_wrong_translation_gradient": 1.0,
+  "raising_threshold_attack_tradeoff_checked": true,
+  "constant_collapse_attack_penalty": 1.0,
+  "scale_contraction_not_count_improvement": [
+    {
+      "scale": 1.0,
+      "gap": 1.0,
+      "fp": 1,
+      "attack_penalty": 0.0
+    },
+    {
+      "scale": 0.1,
+      "gap": 0.1,
+      "fp": 1,
+      "attack_penalty": 0.6
+    },
+    {
+      "scale": 0.01,
+      "gap": 0.01,
+      "fp": 1,
+      "attack_penalty": 0.96
+    }
+  ],
+  "current_range_normalization_rejected_zero_gradient": true,
+  "empirical_identity_not_population_guarantee": true
+}

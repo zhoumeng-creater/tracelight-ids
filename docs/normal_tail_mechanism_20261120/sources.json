@@ -1,0 +1,40 @@
+{
+  "checked_on": "2026-11-20",
+  "author_implementations_executed": false,
+  "main_neighbor": {
+    "name": "Conformal Risk Training",
+    "venue": "NeurIPS 2025 main conference",
+    "paper": "https://proceedings.neurips.cc/paper_files/paper/2025/file/6559542f75b4452ebaaf82094c7defb7-Paper-Conference.pdf",
+    "repo": "https://github.com/chrisyeh96/conformal-risk-training",
+    "commit": "b9b2276e3e1ccf26ab74f2c750e51e091aa409bd",
+    "read_code": [
+      "run_polyp.py:342-368",
+      "run_storage.py:457-489",
+      "storage/data.py:70-98,122-128"
+    ],
+    "code_observations": [
+      "pseudo calibration/prediction split with differentiable risk control",
+      "polyp boundary averages about .5 percent nearby positive pixels",
+      "storage can use chronological final test; training/calibration is permuted; ordinary minibatch loader shuffles"
+    ],
+    "project_difference": "observed within-F temporal/business transition plus exact future-unit integer-boundary relation; no imported population guarantee"
+  },
+  "other_code_checks": [
+    {
+      "name": "ProDisc-VAD",
+      "year": 2025,
+      "commit": "cd885300d7ec02773f2d686ecdb34f97354a3f14",
+      "url": "https://github.com/modadundun/ProDisc-VAD",
+      "status": "paper and author code statically read; implementation differences recorded"
+    },
+    {
+      "name": "LogMILP",
+      "year": 2026,
+      "commit": "ddaeec0f5643830e88531a70a6fb61804e86480f",
+      "url": "https://github.com/YUK1207/LogMILP",
+      "status": "paper read; repository README/LICENSE only"
+    }
+  ],
+  "inherited_primary_review": "docs/r31_design_review_20261117/author_methods.md",
+  "research_result": "concrete mechanism and comparisons, not a novelty certificate or author reproduction"
+}

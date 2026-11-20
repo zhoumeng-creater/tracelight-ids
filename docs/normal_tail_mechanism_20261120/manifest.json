@@ -1,0 +1,57 @@
+{
+  "base_commit": "b801702bf7cb23a7eb5dd138150e98ae10c46fc8",
+  "files": {
+    "AGENTS.md": {
+      "sha256": "e3587aedc5badfe9012748fd0776d98d3d4eca17a42f9248914ae5d05ebaf1a7",
+      "bytes": 6538
+    },
+    "docs/CURRENT_RESEARCH.md": {
+      "sha256": "c8b698a45cd3e8a773a36b27ac1dbbb20969cf5a569ef556d0caed79b334741f",
+      "bytes": 9879
+    },
+    "docs/normal_tail_mechanism_20261120/comparison_contract.json": {
+      "sha256": "859cbadd444fa1b385ca903fbc466df465bccadb1f937489ddfa47e159995e8a",
+      "bytes": 3316
+    },
+    "docs/normal_tail_mechanism_20261120/episodes_evidence.json": {
+      "sha256": "ac7526adb5515703e9b9f86ce4c0bc7f35d18b21b89f318c51aa445fd22c318c",
+      "bytes": 658123
+    },
+    "docs/normal_tail_mechanism_20261120/episodes_evidence.md": {
+      "sha256": "3ad6b3d788660e0bc0a674a6c85c714ae13717f08f821a7a601a7e3819c8bd06",
+      "bytes": 6738
+    },
+    "docs/normal_tail_mechanism_20261120/index.md": {
+      "sha256": "c817ff2fdf1d22ee6dc6a78733b13347b2328d4520c4a38cdf98330f961badc5",
+      "bytes": 14452
+    },
+    "docs/normal_tail_mechanism_20261120/operator_checks.json": {
+      "sha256": "d7117ae6022cb2e865427c31fd18180c884f881083bdbbc957a6324c352e63df",
+      "bytes": 941
+    },
+    "docs/normal_tail_mechanism_20261120/recent_methods.md": {
+      "sha256": "aaec2d5b509877654a319022050151a106d31289273971233fd74bd03b604f7e",
+      "bytes": 4942
+    },
+    "docs/normal_tail_mechanism_20261120/sources.json": {
+      "sha256": "3c86c2f53a87d0def4466114c15e513146608e409157b880a806b2eac7c96e72",
+      "bytes": 1755
+    },
+    "docs/normal_tail_mechanism_20261120/verification.json": {
+      "sha256": "f5374ed55fd165f47a7c5e1d0ec371c70627863c3810f07352cb413f57c0d469",
+      "bytes": 677
+    },
+    "scripts/check_normal_tail_mechanism.py": {
+      "sha256": "5c1d72e4cea0af2b907de342e39e8134572971b86bb87814088252c3427f4532",
+      "bytes": 4428
+    },
+    "scripts/inspect_training_episodes.py": {
+      "sha256": "62ba76aeebd4fad3303a0c1fa59db6cdefe119a438e8b7d2029019be1713fd79",
+      "bytes": 15049
+    },
+    "scripts/normal_tail_mechanism.py": {
+      "sha256": "e966310be532a3d5eb44e3238e51856cd6aab7f3c07c588b4ece358bef111e5f",
+      "bytes": 2704
+    }
+  }
+}

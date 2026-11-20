@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-20",
+  "status": "mechanism_and_comparison_design_with_operator_prototype",
+  "executable_training_registration": false,
+  "problem": "Supported normal components remain in the alert tail; observed normal composition changes amplify empirical false positives.",
+  "prediction_information": "same ports-zero raw8 and missingness, complete-flow export time; no source/date/history/reference at inference",
+  "backbone": "TabM+PLE; same encoder and deployed stable log-odds of mean member probabilities in all arms",
+  "reference_architecture": {
+    "n_blocks": 2,
+    "d_block": 512,
+    "k": 32,
+    "dropout": 0.1,
+    "activation": "ReLU",
+    "d_out": 1
+  },
+  "fit_data": "coverage-baseline-batch-v1 F_expanded:13252;12747 normal,504 control,1 download",
+  "internal_episode_unit": "same-source UTC calendar day; Q all strictly earlier F normal; E current-day F normal; all remain F",
+  "episodes": [
+    {
+      "source": "santos",
+      "E_day": "2022-01-15",
+      "Q_n": 119,
+      "E_n": 64,
+      "E_budget": 0
+    },
+    {
+      "source": "santos",
+      "E_day": "2022-01-16",
+      "Q_n": 183,
+      "E_n": 113,
+      "E_budget": 1
+    },
+    {
+      "source": "santos",
+      "E_day": "2022-01-17",
+      "Q_n": 296,
+      "E_n": 143,
+      "E_budget": 1
+    },
+    {
+      "source": "unraveled",
+      "E_day": "2021-06-22",
+      "Q_n": 10110,
+      "E_n": 2198,
+      "E_budget": 21
+    }
+  ],
+  "normal_boundary": "1-based sorted score[n-floor(.01*n)], strict > alerts",
+  "positive_margin": 1.0,
+  "transfer_weight": 1.0,
+  "objective": "BCE + max_e relu(t(E)-t(Q)) + max_e relu(t(Q)+1-min_A_F score(A_F))",
+  "arms": [
+    "A_BCE",
+    "B_same_objective_sourcewise_identity_permuted_episodes",
+    "C_same_objective_real_chronological_episodes"
+  ],
+  "permutation": "one bijection per source and seed applied consistently to complete Q/E incidence; keeps exact episode cardinalities, total participation and the reuse-count multiset; individual identities change reuse positions; intentionally destroys temporal/business association, not an IID claim",
+  "paired_seeds": [
+    17,
+    29,
+    43
+  ],
+  "logical_fits": 9,
+  "existing_HGB_four_arm_repeated": false,
+  "scientific_comparison": "C vs B tests observed temporal/business association beyond calibration-aware training; B is task adaptation, not author CRT reproduction",
+  "validation": "report all seeds; integer normal-unit excess, controls/download and events separately; do not optimize V/C or reserved data",
+  "surrogate_not_adoption": "lower gaps without exact FP/attack improvement is failure, uniform contraction and threshold raising recorded",
+  "implementation_remaining": [
+    "common new-F preprocessing and sampler adaptation, without importing old A/B units",
+    "freeze matched optimizer update counts and deterministic deployed-score gradient evaluation across Q/E/A",
+    "checkpoint rule without V/C optimization, fixed before any real score",
+    "bind completed runner, input manifests and full cost accounting before laboratory release"
+  ],
+  "evidence_scope": "development mechanism study; finite-episode count equivalence is not independent forward or population-risk certification",
+  "performed": {
+    "real_model_forwards": 0,
+    "fit_calls": 0,
+    "threshold_searches": 0
+  }
+}

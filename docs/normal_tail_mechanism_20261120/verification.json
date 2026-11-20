@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-20",
+  "real_data_roles": [
+    "F_base",
+    "F_expansion"
+  ],
+  "fit_rows": 13252,
+  "real_day_transition_episodes": 4,
+  "next_normal_rows": 2518,
+  "episode_integer_budgets": [
+    0,
+    1,
+    1,
+    21
+  ],
+  "operator_checks": "operator_checks.json",
+  "python_syntax_passed": true,
+  "relative_document_links_passed": true,
+  "frozen_four_arm_unchanged_files": [
+    "docs/coverage_basis_20261119/batch/registration.json",
+    "docs/coverage_basis_20261119/batch/rows.jsonl.gz",
+    "docs/COVERAGE_BATCH_LAB_20261119.md"
+  ],
+  "real_model_forwards": 0,
+  "optimizer_updates": 0,
+  "new_threshold_searches": 0,
+  "training_runner_ready": false
+}
