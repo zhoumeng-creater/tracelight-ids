@@ -1,0 +1,12 @@
+{
+  "checks": "Exact coverage cross-checked from independent profile counts; V exact absence; all saved real witnesses verified; cardinalities and role restrictions checked.",
+  "model_calls": 0,
+  "thresholds_selected": 0,
+  "outputs": {
+    "coverage.json": "891b3b98fa03e737841a4a319dc9ea2f1cbee8242e691eb4cf68721c8c1213a6",
+    "coverage_records.jsonl.gz": "2f9976dac949ef88cdde273c227a0d4e01beef374ca560762672c47bf50a4974",
+    "coverage_real_normal_counterexamples.json": "0fcb7ea4c8a18c200c98858b3eeaf3afa72115bc57b1bb556aa8f322655ddfd5",
+    "coverage.md": "7ac86b3268459223701bce637fd75592222c3ce4d03357776122f8b37c683617"
+  },
+  "report_edit_note": "Coverage narrative clarified for the old positive-gap model versus the new paired DTW; data artifacts unchanged."
+}

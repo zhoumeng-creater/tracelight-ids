@@ -1,0 +1,32 @@
+{
+  "input_sha256": "7c4058d28b879ba05b2e45892d405474232acb8982e7f92a14aa1ae2d18ef050",
+  "record_count": 8514,
+  "eligible_count": 8109,
+  "normal_reference_count": 6840,
+  "cross_artifact_checks": {
+    "per_flow_exact_and_independent_relations_match": 8109,
+    "per_flow_structural_domain_matches": 8109,
+    "full_geometry_not_less_than_independent": true,
+    "normal_same_position_without_full_profile": 410,
+    "control_download_without_any_position_full_coverage": 522
+  },
+  "gap_checks": {
+    "real_roundtrip": 8235,
+    "real_repetition_equivalence_groups": 31,
+    "synthetic_tensor_operator_matrices": 682,
+    "synthetic_autograd_and_finite_difference_passed": true
+  },
+  "old_candidate_unchanged": "scripts/stage_design/reference_model.py",
+  "frozen_batch_files_byte_identical_to_e7c149e": {
+    "docs/coverage_basis_20261119/batch/registration.json": "1d8b0e1cdf08abb94f883520f2b91f6398465882ee7c0d7c15b663ccd1c0a72f",
+    "docs/coverage_basis_20261119/batch/rows.jsonl.gz": "8822c9ff41b5172d4024a15c84a0d96ebfa9d61fe6dbb3845b1888851ee6561c",
+    "docs/COVERAGE_BATCH_LAB_20261119.md": "a53c5a21f6a2ea97db43ffe0a1bdbbac6de099011e011c324ba86a4b4fb8b7af"
+  },
+  "python_sources_parse": true,
+  "authored_relative_links_resolve": true,
+  "real_model_forwards": 0,
+  "optimizer_updates": 0,
+  "thresholds_selected": 0,
+  "new_experiment_registrations": 0,
+  "documented_cli_imports_and_help_passed": 5
+}

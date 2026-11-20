@@ -1,0 +1,72 @@
+{
+  "input_kind": "synthetic_only",
+  "real_model_calls": 0,
+  "optimizer_steps": 0,
+  "ordinary_control_not_new_candidate": true,
+  "same_RelativeCost_alpha_beta_state_names_and_parameter_count": true,
+  "parameters_in_this_synthetic_configuration": 39,
+  "pair_rule_roundtrip_and_self_zero_cases": 14,
+  "tiny_binary_matrices_equal_scalar_operator_and_full_coverage": 682,
+  "later_pair_cannot_be_skipped": {
+    "score": 6.238324625039508,
+    "expected": 6.238324625039508,
+    "path": [
+      {
+        "operation": "pair_match",
+        "query_stage_indices": [
+          0,
+          1
+        ],
+        "reference_stage_indices": [
+          0,
+          1
+        ]
+      },
+      {
+        "operation": "pair_match",
+        "query_stage_indices": [
+          2,
+          3
+        ],
+        "reference_stage_indices": [
+          0,
+          1
+        ]
+      }
+    ],
+    "autograd_finite_difference": {
+      "analytic": -0.04077559821087162,
+      "numerical": -0.04077559820955118
+    }
+  },
+  "observed_tail": {
+    "score": 0.06141814367937641,
+    "path": [
+      {
+        "operation": "pair_match",
+        "query_stage_indices": [
+          0,
+          1
+        ],
+        "reference_stage_indices": [
+          0,
+          1
+        ]
+      },
+      {
+        "operation": "tail_match",
+        "query_stage_indices": [
+          2
+        ],
+        "reference_stage_indices": [
+          2
+        ]
+      }
+    ],
+    "autograd_finite_difference": {
+      "analytic": -0.017300461280256658,
+      "numerical": -0.017300461285785218
+    },
+    "missing_reference_tail_rejected": true
+  }
+}

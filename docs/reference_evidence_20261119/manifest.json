@@ -1,0 +1,115 @@
+{
+  "base_commit": "bd416b5c657f07ae0ca4f3cc749741ac1caffc81",
+  "input_geometry_sha256": "7c4058d28b879ba05b2e45892d405474232acb8982e7f92a14aa1ae2d18ef050",
+  "frozen_batch_unchanged": true,
+  "files": {
+    "AGENTS.md": {
+      "sha256": "48e0cbd1d8148537174bfcb92250c740d7fa9681ff6e6f8225729ad405a71261",
+      "bytes": 5808
+    },
+    "docs/CURRENT_RESEARCH.md": {
+      "sha256": "aa75ecc3972461cc96eb6669e31889216db0400d7d22205805a2352625bfa127",
+      "bytes": 9113
+    },
+    "docs/reference_evidence_20261119/coverage.json": {
+      "sha256": "891b3b98fa03e737841a4a319dc9ea2f1cbee8242e691eb4cf68721c8c1213a6",
+      "bytes": 295033
+    },
+    "docs/reference_evidence_20261119/coverage.md": {
+      "sha256": "7ac86b3268459223701bce637fd75592222c3ce4d03357776122f8b37c683617",
+      "bytes": 7463
+    },
+    "docs/reference_evidence_20261119/coverage_real_normal_counterexamples.json": {
+      "sha256": "0fcb7ea4c8a18c200c98858b3eeaf3afa72115bc57b1bb556aa8f322655ddfd5",
+      "bytes": 38883
+    },
+    "docs/reference_evidence_20261119/coverage_records.jsonl.gz": {
+      "sha256": "2f9976dac949ef88cdde273c227a0d4e01beef374ca560762672c47bf50a4974",
+      "bytes": 1238086
+    },
+    "docs/reference_evidence_20261119/coverage_verification.json": {
+      "sha256": "3f3ba87e1a8e09a4bb6e4787dafd77c768ee4129588d9f7b6eb915dd81536dec",
+      "bytes": 776
+    },
+    "docs/reference_evidence_20261119/gap_resolution.md": {
+      "sha256": "1830d25e674eeb887dfc490a441937cb8428ff121c37b1115922d8929a9d308a",
+      "bytes": 12075
+    },
+    "docs/reference_evidence_20261119/gap_structure_evidence.json": {
+      "sha256": "af82325a7f7a01ccd957c945616f0e9e6770d9b9d621b9e9d0333265eed293be",
+      "bytes": 311122
+    },
+    "docs/reference_evidence_20261119/geometry_rows.jsonl.gz": {
+      "sha256": "5883d6ce056c78e405c14cfb53a2bdf4ccc446bef9de07fe991f8f60830ad5a0",
+      "bytes": 1161306
+    },
+    "docs/reference_evidence_20261119/geometry_summary.json": {
+      "sha256": "8849cdfd2e61cd160e5a3f833fbcb3b82104e73cb6e59896c7a31c903a46c815",
+      "bytes": 29634
+    },
+    "docs/reference_evidence_20261119/index.md": {
+      "sha256": "1782fa24b9e2529e1ee1e2149c84ac25e966f6163b11040779feb100245df486",
+      "bytes": 13052
+    },
+    "docs/reference_evidence_20261119/necessity.json": {
+      "sha256": "a9a8a559a6c23a1eaa54592cdb73c8257eb128ec70f96c3bae9f215e89f7b088",
+      "bytes": 413146
+    },
+    "docs/reference_evidence_20261119/necessity.md": {
+      "sha256": "be745719c2bc13c27d1c4a96dd05ccbc9b76e0769db19a300a56ceaaf883ba37",
+      "bytes": 11639
+    },
+    "docs/reference_evidence_20261119/necessity_queries.jsonl.gz": {
+      "sha256": "90df0e451395473b7a6aaa30083bcc96d7e3ba88ba931208e3d59ef579604419",
+      "bytes": 200200
+    },
+    "docs/reference_evidence_20261119/paired_reference_control_checks.json": {
+      "sha256": "9c391414a64f832e9db987fc1cded4249c33e44d0a63d6992b322884024608cb",
+      "bytes": 1621
+    },
+    "docs/reference_evidence_20261119/protocol.md": {
+      "sha256": "e549ce8ba28affd48e3352990c5d83f09ae2e20f0fcebd14d1f85aa70879080b",
+      "bytes": 1699
+    },
+    "docs/reference_evidence_20261119/reproduce.md": {
+      "sha256": "07dc9a57da6df36ac94e6c1c4c3281b37de4c5f1e46aa8b86e82b9afe9de131c",
+      "bytes": 1882
+    },
+    "docs/reference_evidence_20261119/verification.json": {
+      "sha256": "bde51dfbaac3fd4b03638b82bd1eb620736c487ff5c5ce375b0871f9de9020b3",
+      "bytes": 1421
+    },
+    "docs/stage_conditional_design_20261119/index.md": {
+      "sha256": "1c65dd2263c0dfb4af1438aa9b5c73073eff7de4f425da6ecd8b91d6f76b24c2",
+      "bytes": 12345
+    },
+    "scripts/reference_evidence/check_paired_reference_control.py": {
+      "sha256": "02c8fcfb1d55acaa60530e0518c8fc9875de5f87d97f842fa83de11b5c0d019a",
+      "bytes": 7032
+    },
+    "scripts/reference_evidence/coverage.py": {
+      "sha256": "8345d1b607f84b3fe625712f317bb86f1b12da0d9b3b874e2c0e4552a7af1d61",
+      "bytes": 13719
+    },
+    "scripts/reference_evidence/gap_structure.py": {
+      "sha256": "949e05e51af2457aab635c89e5e6909ba76c9eb49812c16c786f93fe2efdafac",
+      "bytes": 7897
+    },
+    "scripts/reference_evidence/geometry_distance.py": {
+      "sha256": "2304836144f974d9fcaff7397528125c8c53214f8e2e79db39eb12aa7383da67",
+      "bytes": 4965
+    },
+    "scripts/reference_evidence/necessity.py": {
+      "sha256": "3a57eefeab3b079087acedd074cfbf005892fa79d8d2ae9275f5b9d48623d9d1",
+      "bytes": 10190
+    },
+    "scripts/reference_evidence/paired_no_gap.py": {
+      "sha256": "74d7d24a959f0bc774aa73e03c5a39485df552a5b4aceb62dc9c5a90c4e0df37",
+      "bytes": 4070
+    },
+    "scripts/reference_evidence/paired_reference_control.py": {
+      "sha256": "72ee4c83493187533d194a2b676b672c96e24401bb2f1d6852f576ea07bf586f",
+      "bytes": 5593
+    }
+  }
+}
