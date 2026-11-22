@@ -23,7 +23,9 @@ from scripts.calibration_repair.training import (
     ClassSampler, FIXED_MODEL, Predictor, scoring_arithmetic, state_digest,
     _derived_seed, _seed, _rng_digest,
 )
-from scripts.comprehensive_batch.objective import ARMS, backward_objective, score_full, score_gradient
+from scripts.comprehensive_batch.objective import (
+    ARMS, backward_objective, resident_inputs, score_full, score_gradient,
+)
 
 FORMAT = "comprehensive-fixed-snapshot-v1"
 RECOVERY_FORMAT = "comprehensive-exact-recovery-v1"
@@ -105,7 +107,7 @@ def _cosine(left, right):
 
 
 def gradient_probe(network, numeric, categorical, labels, groups, job, *, device,
-                   batch_size, score_pass):
+                   batch_size, score_pass, resident=None):
     """Full-F balanced member BCE and auxiliary gradients, eval/dropout off.
 
     This deterministic diagnostic is not the stochastic minibatch training loss.
@@ -120,8 +122,10 @@ def gradient_probe(network, numeric, categorical, labels, groups, job, *, device
     try:
         network.zero_grad(set_to_none=True)
         for start, stop in score_pass.blocks:
-            x = torch.from_numpy(numeric[start:stop]).to(device)
-            cat = torch.from_numpy(categorical[start:stop]).to(device)
+            x = (torch.from_numpy(numeric[start:stop]).to(device) if resident is None
+                 else resident.numeric_tensor[start:stop])
+            cat = (torch.from_numpy(categorical[start:stop]).to(device) if resident is None
+                   else resident.categorical_tensor[start:stop])
             y = torch.from_numpy(labels[start:stop]).to(device)
             logits = network(x, cat).squeeze(-1)
             per_row = F.binary_cross_entropy_with_logits(
@@ -134,14 +138,15 @@ def gradient_probe(network, numeric, categorical, labels, groups, job, *, device
         network.zero_grad(set_to_none=True)
         aux = backward_objective(network, numeric, categorical, groups, arm=job["arm"],
                                  device=device, batch_size=batch_size, score_pass=score_pass,
-                                 weight=job["auxiliary_weight"])
+                                 weight=job["auxiliary_weight"], resident=resident)
         auxiliary = _vector(network)
         components, vectors = {}, {}
         for name, arm in (("D", "D_reference_alignment"), ("H", "H_reference_attack"),
                           ("G", "G_group_tail")):
             network.zero_grad(set_to_none=True)
             term = backward_objective(network, numeric, categorical, groups, arm=arm,
-                                      device=device, batch_size=batch_size, score_pass=score_pass, weight=1.)
+                                      device=device, batch_size=batch_size, score_pass=score_pass, weight=1.,
+                                      resident=resident)
             vector = _vector(network)
             vectors[name] = vector
             components[name] = {"unweighted_penalty": term["penalty"],
@@ -207,7 +212,7 @@ def _fingerprint(numeric, categorical, labels, groups, job, spec, metadata):
 
 def train_loop(network, numeric, categorical, labels, groups, *, job, device,
                output_dir, training_spec=None, rows=None, artifact_metadata=None,
-               resume=False, interrupt_after_step=None):
+               resume=False, interrupt_after_step=None, use_resident=True, stop_path=None):
     """Synthetic-testable core; production fit alone enforces the frozen matrix."""
     spec = dict(FIXED_TRAINING if training_spec is None else training_spec)
     if job["arm"] not in ARMS or not 0 < job["learning_rate"] or not 0 < job["auxiliary_weight"]:
@@ -269,6 +274,8 @@ def train_loop(network, numeric, categorical, labels, groups, *, job, device,
             if file_digest(root / item["path"]) != item["sha256"]:
                 raise ValueError("Completed budget snapshot changed before recovery")
     x, cats, target = (torch.from_numpy(value).to(device) for value in (numeric, categorical, labels))
+    resident = (resident_inputs(numeric, categorical, device=device, numeric_tensor=x, categorical_tensor=cats)
+                if use_resident else None)
 
     def checkpoint():
         state = {k: v.detach().cpu().clone() for k, v in network.state_dict().items()}
@@ -288,10 +295,11 @@ def train_loop(network, numeric, categorical, labels, groups, *, job, device,
     def record_snapshot(step):
         _sync(device)
         begun = time.perf_counter()
-        score_pass = score_full(network, numeric, categorical, device=device, batch_size=spec["score_batch_size"])
+        score_pass = score_full(network, numeric, categorical, device=device, batch_size=spec["score_batch_size"],
+                                resident=resident)
         diagnostics = _score_diagnostics(score_pass.scores.numpy(), labels, rows, groups)
         probe = gradient_probe(network, numeric, categorical, labels, groups, job, device=device,
-                               batch_size=spec["score_batch_size"], score_pass=score_pass)
+                               batch_size=spec["score_batch_size"], score_pass=score_pass, resident=resident)
         diagnostics.update(step=step, gradient_probe=probe, sampling=sampler.audit(),
                            exposure=_exposure_report(exposure, rows, labels))
         directory = root / "snapshots" / f"step{step:06d}"
@@ -348,6 +356,8 @@ def train_loop(network, numeric, categorical, labels, groups, *, job, device,
         # Commit step zero before the expensive diagnostic so an interrupted
         # initial probe can resume without restarting an optimizer trajectory.
         checkpoint()
+    if stop_path is not None and Path(stop_path).exists():
+        raise InterruptedError("Execution stop requested; optimizer checkpoint saved before further updates")
     if completed == 0 and 0 not in diagnostic_points:
         record_snapshot(0)
         checkpoint()
@@ -376,7 +386,7 @@ def train_loop(network, numeric, categorical, labels, groups, *, job, device,
             segment = time.perf_counter()
             auxiliary = backward_objective(network, numeric, categorical, groups, arm=job["arm"],
                                            device=device, batch_size=spec["score_batch_size"],
-                                           weight=job["auxiliary_weight"])
+                                           weight=job["auxiliary_weight"], resident=resident)
             _sync(device)
             costs["transfer_seconds"] += time.perf_counter() - segment
             extra = auxiliary["cost"]
@@ -422,6 +432,8 @@ def train_loop(network, numeric, categorical, labels, groups, *, job, device,
             _write(root / "history.json", history)
         if step % spec["recovery_every"] == 0 or step in checkpoints:
             checkpoint()
+            if stop_path is not None and Path(stop_path).exists():
+                raise InterruptedError("Execution stop requested; optimizer checkpoint saved")
         if report_due or time.perf_counter() - heartbeat >= 30. or step == 1:
             print(json.dumps({"job_id": job["job_id"], "step": step, "optimizer_steps": job["optimizer_steps"],
                               "active_optimizer_seconds": costs["active_optimizer_seconds"],
@@ -451,7 +463,7 @@ def _registered_job(job):
         raise ValueError("Production job differs from the registered comprehensive matrix")
 
 
-def fit(rows, preprocessor, output_dir, *, job, device="cuda:0", threads=4, resume=False):
+def fit(rows, preprocessor, output_dir, *, job, device="cuda:0", threads=4, resume=False, stop_path=None):
     _registered_job(job)
     if (len(rows) != 13252 or [r["flow_id"] for r in rows] != sorted(r["flow_id"] for r in rows)
             or any(r["dataset_role"] not in ("F_base", "F_expansion") for r in rows)):
@@ -498,7 +510,7 @@ def fit(rows, preprocessor, output_dir, *, job, device="cuda:0", threads=4, resu
         network = make_tabm_network(5, preprocessor.cat_cardinalities, parameters, numeric_bins=bins).to(actual)
         result = train_loop(network, numeric, categorical, labels, groups, job=job, device=actual,
                             output_dir=root, rows=rows, artifact_metadata=metadata,
-                            resume=bool(resume and not initialization_recovered))
+                            resume=bool(resume and not initialization_recovered), stop_path=stop_path)
         parameters_count = sum(p.numel() for p in network.parameters())
         result["cost"].update(cuda_peak_allocated_bytes=torch.cuda.max_memory_allocated(actual),
                                cuda_peak_reserved_bytes=torch.cuda.max_memory_reserved(actual))

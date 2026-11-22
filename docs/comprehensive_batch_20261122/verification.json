@@ -66,5 +66,7 @@
     "normal-reference-transfer-v2": "777271639e25f1d3940bd5fcf3b425130c7525e2"
   },
   "real_experiment_results_available": false,
-  "independent_confirmation_complete": false
+  "independent_confirmation_complete": false,
+  "execution_revision_verification": "resource_verification.json",
+  "historical_scope": "Original v1 verification; current execution revision has its own verification record"
 }

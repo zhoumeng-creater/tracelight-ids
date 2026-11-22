@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-22",
+  "release_tag": "comprehensive-calibration-v1.1",
+  "base_release": "comprehensive-calibration-v1",
+  "pytest": {
+    "passed": 226,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 103.11,
+    "files": [
+      "tests/test_comprehensive_matrix.py",
+      "tests/test_comprehensive_objective.py",
+      "tests/test_comprehensive_training.py",
+      "tests/test_comprehensive_official.py",
+      "tests/test_comprehensive_run.py",
+      "tests/test_comprehensive_evaluation.py",
+      "tests/test_comprehensive_resident.py",
+      "tests/test_comprehensive_resource_profile.py",
+      "tests/test_comprehensive_resources.py",
+      "tests/test_comprehensive_execution.py",
+      "tests/test_comprehensive_process_isolation.py",
+      "tests/test_calibration_repair_data.py",
+      "tests/test_calibration_repair_objective.py",
+      "tests/test_calibration_repair_training.py",
+      "tests/test_calibration_repair_official.py",
+      "tests/test_calibration_repair_run.py",
+      "tests/test_calibration_repair_evaluation.py"
+    ]
+  },
+  "scope": "Generated arrays, mocked scheduling/resources and F-only input reconstruction; no real-data model fit, score or hardware speed claim",
+  "resident_exactness": [
+    "CPU and CUDA official TabM+PLE scores and gradients for all six objectives",
+    "same canonical 1024-row blocks and tail block",
+    "AdamW model state, sampling and dropout RNG match legacy host-copy path",
+    "checkpoint stop/resume exactness"
+  ],
+  "process_exactness": {
+    "devices": [
+      "cpu",
+      "cuda:0"
+    ],
+    "generated_rows": 48,
+    "steps": 2,
+    "seeds": [
+      17,
+      29
+    ],
+    "sequential_vs_concurrent": [
+      "model state",
+      "full score vectors",
+      "sampler digests",
+      "initial/final RNG"
+    ],
+    "overlap_confirmed": true
+  },
+  "scheduler": [
+    "CPU/GPU queue concurrency bounded independently",
+    "all terminal models freeze before C",
+    "resource interruption requests checkpoint stops",
+    "existing models skip on resume",
+    "exclusive output ownership",
+    "explicit v1 adoption preserves provenance and scientific matrix"
+  ],
+  "profile": [
+    "generated data only",
+    "synchronized warmup and timed windows",
+    "aggregate throughput selection, not utilization",
+    "memory/CPU reserve",
+    "same-machine/source cache reuse",
+    "orphan profile workers exit when coordinator dies"
+  ],
+  "inputs_only": {
+    "status": "passed",
+    "F_rows": 13252,
+    "real_model_constructions": 0,
+    "real_fit_calls": 0,
+    "real_score_calls": 0,
+    "threshold_searches": 0,
+    "manifest_sha256": "5a31b8f395376785e775e8f90fdaea0fed3d3144e573f860877a23986cb30076"
+  },
+  "same_plan_bytes_as_v1": true,
+  "plan_sha256": "767d3fa56fad927b4fca42c403dea6e1e6d2b2390e823e136982e27510867762",
+  "bound_files": 235,
+  "old_release_tag_preserved": true,
+  "powershell_parser": "passed",
+  "relative_markdown_links": "passed",
+  "git_diff_check": "passed",
+  "laboratory_profile_executed_here": false,
+  "laboratory_speedup_measured": false,
+  "current_evaluation_and_report_execution": "serial after frozen model/threshold barriers",
+  "CPU_inference_benchmark": "isolated; monitoring stopped first"
+}

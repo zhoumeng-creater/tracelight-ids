@@ -4,6 +4,7 @@ param(
     [string]$Output = '',
     [switch]$Resume,
     [switch]$InputsOnly,
+    [switch]$AdoptV1Output,
     [string]$CoverageResults = ''
 )
 Set-StrictMode -Version Latest
@@ -11,11 +12,12 @@ $ErrorActionPreference = 'Stop'
 $repo = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
 if (-not $Output) {
     $suffix = if ($InputsOnly) { 'inputs' } else { 'results' }
-    $Output = Join-Path $repo "results/comprehensive-20261122-$suffix"
+    $Output = Join-Path $repo "results/comprehensive-v1.1-20261122-$suffix"
 }
 $runnerArgs = @('-X', 'utf8', '-u', (Join-Path $PSScriptRoot 'comprehensive_batch/run.py'), '--output', [IO.Path]::GetFullPath($Output))
 if ($Resume) { $runnerArgs += '--resume' }
 if ($InputsOnly) { $runnerArgs += '--inputs-only' }
+if ($AdoptV1Output) { $runnerArgs += '--adopt-v1-output' }
 if ($CoverageResults) { $runnerArgs += @('--coverage-results', [IO.Path]::GetFullPath($CoverageResults)) }
 & $Python @runnerArgs
 if ($LASTEXITCODE -ne 0) {

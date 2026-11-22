@@ -7,15 +7,106 @@ weight lambda multiplies the ENTIRE selected auxiliary objective.
 """
 from __future__ import annotations
 
+from dataclasses import dataclass
+
 import numpy as np
 import torch
 
+from ids.route_batch.tabm_training import stable_scores
 from scripts.calibration_repair.objective import objective_terms as _base_terms
 from scripts.calibration_transfer.objective import (
-    ScorePass, _arrays, _block, _versions, score_full,
+    ScorePass, _arrays, _block, _versions, score_full as _legacy_score_full,
 )
 from scripts.normal_tail_mechanism import budget
 from scripts.comprehensive_batch.matrix import ARMS
+
+
+@dataclass(frozen=True)
+class ResidentInputs:
+    """One immutable task input on its execution device; no activations cached."""
+
+    numeric: np.ndarray
+    categorical: np.ndarray | None
+    numeric_tensor: torch.Tensor
+    categorical_tensor: torch.Tensor | None
+    tensor_versions: tuple
+
+
+def resident_inputs(numeric, categorical, *, device, numeric_tensor=None, categorical_tensor=None):
+    """Upload once, or reuse already resident BCE inputs after one binding check.
+
+    The caller keeps both CPU arrays and device tensors fixed for the lifetime
+    of this object, exactly as required by the original discovery/replay path.
+    """
+    numeric, categorical = _arrays(numeric, categorical)
+    device = torch.device(device)
+    if device.type == "cuda" and device.index is None:
+        device = torch.device("cuda", torch.cuda.current_device())
+
+    def prepare(array, tensor):
+        if array is None:
+            if tensor is not None:
+                raise ValueError("Resident categories have no matching CPU input")
+            return None
+        source = torch.from_numpy(array)
+        if tensor is None:
+            return source.to(device)
+        if (tensor.device != device or tensor.dtype != source.dtype or tensor.shape != source.shape
+                or tensor.requires_grad or not tensor.is_contiguous()
+                or not torch.equal(tensor.detach().cpu(), source)):
+            raise ValueError("Resident tensor differs from the bound CPU input")
+        return tensor
+
+    x, cats = prepare(numeric, numeric_tensor), prepare(categorical, categorical_tensor)
+    return ResidentInputs(numeric, categorical, x, cats,
+                          (x._version, None if cats is None else cats._version))
+
+
+def _check_resident(resident, numeric, categorical, device):
+    device = torch.device(device)
+    if device.type == "cuda" and device.index is None:
+        device = torch.device("cuda", torch.cuda.current_device())
+    if (resident.numeric is not numeric or resident.categorical is not categorical
+            or resident.numeric_tensor.device != device
+            or resident.tensor_versions != (resident.numeric_tensor._version,
+                None if resident.categorical_tensor is None else resident.categorical_tensor._version)):
+        raise ValueError("Resident input binding or tensor version changed")
+
+
+def _resident_block(network, resident, start, stop, *, check_finite=True):
+    cats = None if resident.categorical_tensor is None else resident.categorical_tensor[start:stop]
+    scores = stable_scores(network(resident.numeric_tensor[start:stop], cats))
+    if check_finite and not bool(torch.isfinite(scores).all()):
+        raise FloatingPointError("Nonfinite deployed transfer score")
+    return scores
+
+
+def score_full(network, numeric, categorical, *, device, batch_size, resident=None):
+    """Same canonical forwards; resident discovery copies the score vector once."""
+    if resident is None:
+        return _legacy_score_full(network, numeric, categorical, device=device, batch_size=batch_size)
+    numeric, categorical = _arrays(numeric, categorical)
+    _check_resident(resident, numeric, categorical, device)
+    if isinstance(batch_size, bool) or not isinstance(batch_size, int) or batch_size < 1:
+        raise ValueError("batch_size must be a positive integer")
+    blocks = tuple((start, min(start + batch_size, len(numeric)))
+                   for start in range(0, len(numeric), batch_size))
+    versions = _versions(network)
+    training = network.training
+    network.eval()
+    try:
+        with torch.no_grad():
+            # Concatenation only copies values. Every network call retains the
+            # original block shape, FP32 logits and FP64 stable-score arithmetic.
+            scores = torch.cat([_resident_block(network, resident, start, stop, check_finite=False)
+                                for start, stop in blocks]).cpu()
+            if not bool(torch.isfinite(scores).all()):
+                raise FloatingPointError("Nonfinite deployed transfer score")
+    finally:
+        network.train(training)
+    if _versions(network) != versions:
+        raise RuntimeError("Model state changed during full-score discovery")
+    return ScorePass(scores, blocks, versions, batch_size, len(numeric))
 
 
 def objective_terms(scores, groups, arm, *, alpha=.01, margin=1.):
@@ -103,7 +194,7 @@ def score_gradient(scores, groups, arm, *, alpha=.01, margin=1.):
 
 def backward_objective(network, numeric, categorical, groups, *, arm, device,
                        batch_size, score_pass=None, alpha=.01, margin=1.,
-                       weight=1., backward=True):
+                       weight=1., backward=True, resident=None):
     """Add the selected auxiliary derivatives to existing BCE gradients using exact block replay.
 
     The caller keeps input arrays fixed throughout discovery and replay. A reused
@@ -111,11 +202,14 @@ def backward_objective(network, numeric, categorical, groups, *, arm, device,
     active block is recomputed with the original shape and must match bitwise.
     """
     numeric, categorical = _arrays(numeric, categorical)
+    if resident is not None:
+        _check_resident(resident, numeric, categorical, device)
     if not np.isfinite(weight) or weight < 0:
         raise ValueError("weight must be finite and nonnegative")
     discovered_here = score_pass is None
     if score_pass is None:
-        score_pass = score_full(network, numeric, categorical, device=device, batch_size=batch_size)
+        score_pass = score_full(network, numeric, categorical, device=device, batch_size=batch_size,
+                                resident=resident)
     if (score_pass.batch_size != batch_size or len(score_pass.scores) != len(numeric)
             or score_pass.state_versions != _versions(network)):
         raise RuntimeError("Stale or incompatible reference score pass")
@@ -129,7 +223,8 @@ def backward_objective(network, numeric, categorical, groups, *, arm, device,
             for start, stop in score_pass.blocks:
                 if not bool(active[start:stop].any()):
                     continue
-                scores = _block(network, numeric, categorical, start, stop, device)
+                scores = (_block(network, numeric, categorical, start, stop, device) if resident is None
+                          else _resident_block(network, resident, start, stop))
                 if not torch.equal(scores.detach().cpu(), score_pass.scores[start:stop]):
                     raise RuntimeError("Replay score differs from frozen discovery score")
                 (scores * derivative[start:stop].to(device) * weight).sum().backward()

@@ -23,7 +23,7 @@
 
 ## 当前完整比较
 
-当前入口为 [RUN_COMPREHENSIVE_BATCH.ps1](../scripts/RUN_COMPREHENSIVE_BATCH.ps1)，执行及续跑见[实验室说明](COMPREHENSIVE_BATCH_LAB_20261122.md)。它接替尚未运行的九次 v2。只回传本次 `-Output` 对应的 ZIP 和 `.zip.sha256.json`。
+当前入口为 [RUN_COMPREHENSIVE_BATCH.ps1](../scripts/RUN_COMPREHENSIVE_BATCH.ps1)，执行及续跑见[实验室说明](COMPREHENSIVE_BATCH_LAB_20261122.md)。当前执行版为 `comprehensive-calibration-v1.1`，接替尚未运行的九次 v2；接续旧 v1 时保留原输出目录名。只回传本次 `-Output` 对应的 ZIP 和 `.zip.sha256.json`。
 
 包内保留本批全部推理检查点、分数、身份、训练诊断、失败证据和成本。`recovery.pt` 中的优化器、随机和采样器状态留在实验室原输出目录，用于精确续训；不作为分析回传中的重复载荷。初始诊断检查点另外保存，不计入 288 份评价快照。
 

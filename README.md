@@ -1,5 +1,7 @@
 # TraceLight IDS
 
+2026-11-22 资源执行修订已采用独立 CPU／GPU 任务队列和 GPU 输入驻留；启动时以生成数组的总吞吐选择并发，同机续跑复用选择。持续记录资源利用率，CPU 部署成本仍隔离测量。科学矩阵、batch、评分块、精度和预算不变。已启动 v1 的输出可按[接续说明](docs/COMPREHENSIVE_BATCH_LAB_20261122.md)显式接续，无需重训完成轨迹。详见[资源执行依据](docs/comprehensive_batch_20261122/resource_execution.md)。
+
 轻量化网络入侵检测研究与实现：在明确的正常误报预算下，比较检测能力、允许输入和实际部署成本，并追溯到原始流量与实验版本。
 
 **现行研究入口： [研究状态与推进决定](docs/CURRENT_RESEARCH.md)。** 历轮方案与处置已整理为[研究历程与设计重建](docs/research_history_20261119/index.md)。旧实验仍保留原判定；新算法贡献尚未建立，工程准备不代替方法证据。
@@ -8,7 +10,7 @@
 
 - [交互研究历程](docs/flow_replay/history.html)：查看各阶段目的、成功、失败与现行处置。
 - [真实判决回放](docs/flow_replay/index.html)：查看已完成实验的误报、攻击得失与来源。
-- [当前实验室入口](docs/COMPREHENSIVE_BATCH_LAB_20261122.md)：`comprehensive-calibration-v1`，一次覆盖六种目标、训练预算和主要敏感性；72 条轨迹保留 288 个 TabM 检查点，加四个可复用 HGB。接替尚未运行的九次 v2。
+- [当前实验室入口](docs/COMPREHENSIVE_BATCH_LAB_20261122.md)：`comprehensive-calibration-v1.1`，一次覆盖六种目标、训练预算和主要敏感性；72 条轨迹保留 288 个 TabM 检查点，加四个可复用 HGB。接替尚未运行的九次 v2。
 - [完整设计与结果出口](docs/comprehensive_batch_20261122/index.md)：机制消融、对照理由、计算量、诊断、成本及不同结果的处置。
 - [原四臂说明](docs/COVERAGE_BATCH_LAB_20261119.md)：`coverage-baseline-batch-v1` 保留原合同；其模型纳入当前统一批次，不另行先跑旧入口。
 - [四臂回传结果汇总](docs/research_history_20261119/outcome_policy.md)：只读原结果，无需重训、重评分或改阈值。

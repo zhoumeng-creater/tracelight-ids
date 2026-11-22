@@ -157,78 +157,100 @@ def _collect(directory, job, family, snapshots, job_status, output):
     return result
 
 
-def train_phase(output, rows, processor, plan, *, resume=False, fit_fn=None,
-                hgb_fn=None, coverage_results=None):
+def execute_job(output, rows, processor, job, family, *, resume=False, fit_fn=None,
+                hgb_fn=None, coverage_results=None, stop_path=None, execution_context=None):
+    """One independent process owns one job directory and its recovery state."""
     if (output / "calibration_started.json").exists():
         raise RuntimeError("Calibration has started: training can never resume in this batch")
     if fit_fn is None:
         from scripts.comprehensive_batch.training import fit
         fit_fn = fit
     hgb_fn = hgb_fn or fit_hgb
+    identity = job["job_id"]
+    directory = output / "fits" / identity
+    status_path = output / "job_statuses" / f"{identity}.json"
+    cached = read(status_path) if status_path.exists() else None
+    if cached and not resume:
+        raise FileExistsError("Use --resume for the same registered batch")
+    if cached and cached["status"] in {"complete", "failed_numerical", "failed_job"}:
+        return cached
+    write(status_path, {"status": "running", "job": job})
+    started = time.perf_counter()
+    attempt_status = "interrupted"
+    try:
+        if family == "hgb":
+            summary = hgb_fn(rows, directory, job=job, reuse=coverage_results)
+        else:
+            extra = {} if stop_path is None else {"stop_path": stop_path}
+            summary = fit_fn(rows, processor, directory, job=job, device="cuda:0", threads=4,
+                             resume=bool(resume and directory.exists()), **extra)
+        summary = {**summary, "status": "complete", "job": job}
+        attempt_status = "complete"
+    except KeyboardInterrupt:
+        write(status_path, {"status": "interrupted", "job": job})
+        raise
+    except Exception as error:
+        if _resource_error(error):
+            attempt_status = "interrupted_resource"
+            write(status_path, {**_error(error, "interrupted_resource"), "job": job})
+            raise
+        status = "failed_numerical" if isinstance(error, FloatingPointError) else "failed_job"
+        attempt_status = status
+        snapshots = read(directory / "snapshots.json") if (directory / "snapshots.json").exists() else []
+        summary = {**_error(error, status), "job": job, "snapshots": snapshots}
+        if (directory / "cost.json").exists():
+            summary["last_persisted_cost"] = read(directory / "cost.json")
+        print(json.dumps({"job": identity, "status": status, "error": str(error)}), flush=True)
+    finally:
+        elapsed = time.perf_counter() - started
+        attempts_path = output / "job_invocations" / f"{identity}.json"
+        attempts = read(attempts_path) if attempts_path.exists() else []
+        attempts.append({"attempt": len(attempts) + 1, "status": attempt_status,
+                         "wall_seconds": elapsed, "resume_requested": resume,
+                         "execution": execution_context or {"mode": "serial", "threads": 4},
+                         "includes_initialization_diagnostics_and_io": True})
+        write(attempts_path, attempts)
+    write(status_path, summary)
+    return summary
+
+
+def finalize_training(output, plan):
+    if (output / "calibration_started.json").exists():
+        raise RuntimeError("Calibration has started: training can never resume in this batch")
     statuses, models, pairing = {}, {}, {}
     jobs = [(job, "hgb") for job in plan["hgb_jobs"]] + [(job, "tabm") for job in plan["tabm_jobs"]]
-    for position, (job, family) in enumerate(jobs, 1):
+    for job, family in jobs:
         identity = job["job_id"]
-        directory = output / "fits" / identity
-        status_path = output / "job_statuses" / f"{identity}.json"
-        print(json.dumps({"phase": "fit", "job": identity, "position": position,
-                          "total_jobs": len(jobs)}, ensure_ascii=False), flush=True)
-        cached = read(status_path) if status_path.exists() else None
-        if cached and not resume:
-            raise FileExistsError("Use --resume for the same registered batch")
-        if cached and cached["status"] in {"complete", "failed_numerical", "failed_job"}:
-            summary = cached
-        else:
-            write(status_path, {"status": "running", "job": job})
-            started = time.perf_counter()
-            attempt_status = "interrupted"
-            try:
-                if family == "hgb":
-                    summary = hgb_fn(rows, directory, job=job, reuse=coverage_results)
-                else:
-                    summary = fit_fn(rows, processor, directory, job=job,
-                                     device="cuda:0", threads=4, resume=bool(resume and directory.exists()))
-                summary = {**summary, "status": "complete", "job": job}
-                attempt_status = "complete"
-            except KeyboardInterrupt:
-                write(status_path, {"status": "interrupted", "job": job})
-                raise
-            except Exception as error:
-                if _resource_error(error):
-                    attempt_status = "interrupted_resource"
-                    write(status_path, {**_error(error, "interrupted_resource"), "job": job})
-                    raise
-                status = "failed_numerical" if isinstance(error, FloatingPointError) else "failed_job"
-                attempt_status = status
-                snapshots = read(directory / "snapshots.json") if (directory / "snapshots.json").exists() else []
-                summary = {**_error(error, status), "job": job, "snapshots": snapshots}
-                if (directory / "cost.json").exists():
-                    summary["last_persisted_cost"] = read(directory / "cost.json")
-                print(json.dumps({"job": identity, "status": status, "error": str(error)}), flush=True)
-            finally:
-                elapsed = time.perf_counter() - started
-                attempts_path = output / "job_invocations" / f"{identity}.json"
-                attempts = read(attempts_path) if attempts_path.exists() else []
-                attempts.append({"attempt": len(attempts) + 1, "status": attempt_status,
-                                 "wall_seconds": elapsed, "resume_requested": resume,
-                                 "includes_initialization_diagnostics_and_io": True})
-                write(attempts_path, attempts)
-            write(status_path, summary)
+        summary = read(output / "job_statuses" / f"{identity}.json")
+        if summary["status"] not in {"complete", "failed_numerical", "failed_job"}:
+            raise RuntimeError(f"Job is not terminal: {identity}")
         if summary["status"] == "complete" and family == "tabm":
-            # All configurations share their seed's initialization and BCE draws.
             signature = (summary["initial_state_sha256"], summary["sampler_draw_sha256"])
             if job["seed"] in pairing and pairing[job["seed"]] != signature:
                 raise ValueError("Paired initialization or sampling changed across configurations")
             pairing[job["seed"]] = signature
-        models.update(_collect(directory, job, family, summary.get("snapshots", []), summary["status"], output))
+        models.update(_collect(output / "fits" / identity, job, family,
+                               summary.get("snapshots", []), summary["status"], output))
         statuses[identity] = summary
-        write(output / "job_statuses.json", statuses)
     if not models:
         raise RuntimeError("No registered model snapshot completed; evaluation is unavailable")
+    write(output / "job_statuses.json", statuses)
     write(output / "models_frozen.json", {"models": models, "jobs": statuses,
                                           "all_registered_jobs_terminal": True,
                                           "no_training_after_this_barrier": True})
     return models
+
+
+def train_phase(output, rows, processor, plan, *, resume=False, fit_fn=None,
+                hgb_fn=None, coverage_results=None):
+    """Serial injection interface retained for contract tests and reference behavior."""
+    jobs = [(job, "hgb") for job in plan["hgb_jobs"]] + [(job, "tabm") for job in plan["tabm_jobs"]]
+    for position, (job, family) in enumerate(jobs, 1):
+        print(json.dumps({"phase": "fit", "job": job["job_id"], "position": position,
+                          "total_jobs": len(jobs)}, ensure_ascii=False), flush=True)
+        execute_job(output, rows, processor, job, family, resume=resume, fit_fn=fit_fn,
+                    hgb_fn=hgb_fn, coverage_results=coverage_results)
+    return finalize_training(output, plan)
 
 
 def evaluate_phase(output, plan, models, *, calibration_loader=None, evaluation_loader=None,
@@ -340,7 +362,7 @@ def benchmark_phase(output, rows, models):
 def package(output):
     # Resumption states stay in the laboratory; inference snapshots are all returned.
     files = [path for path in sorted(output.rglob("*")) if path.is_file()
-             and path.name not in {"recovery.pt", "recovery_previous.pt", "output_receipt.json"}
+             and path.name not in {"recovery.pt", "recovery_previous.pt", "output_receipt.json", ".execution.lock"}
              and not path.name.endswith((".tmp", ".part"))]
     write(output / "output_receipt.json", {path.relative_to(output).as_posix(): {
         "sha256": data.file_digest(path), "bytes": path.stat().st_size} for path in files})
@@ -363,44 +385,68 @@ def main():
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--inputs-only", action="store_true")
     parser.add_argument("--coverage-results", type=Path)
+    parser.add_argument("--adopt-v1-output", action="store_true",
+                        help="Adopt a stopped, verified v1 output without retraining completed models")
     args = parser.parse_args()
     registration, plan, rows, processor = prepare()
     output = args.output.resolve()
     source = {"registration_sha256_lf": text_digest(REPO / DIRECTORY / "registration.json"),
               "registration": registration, "plan_sha256": data.json_digest(plan),
               "coverage_results": str(args.coverage_results.resolve()) if args.coverage_results else None}
-    if output.exists() and any(output.iterdir()):
-        if not args.resume or read(output / "source_receipt.json") != source:
-            raise ValueError("Use an empty output, or --resume with the identical registered batch")
-    output.mkdir(parents=True, exist_ok=True)
-    write(output / "source_receipt.json", source)
-    write(output / "plan.json", plan)
-    if args.inputs_only:
-        write(output / "inputs_check.json", {"F_rows": len(rows), "real_fits": 0, "real_scores": 0,
-                                             "planned_tabm_trajectories": len(plan["tabm_jobs"]),
-                                             "planned_HGB_jobs": len(plan["hgb_jobs"])})
-        print("F-only inputs and fixed matrix verified; no models constructed.", flush=True)
-        return
-    write(output / "environment.json", environment())
-    try:
-        if (output / "models_frozen.json").exists():
-            models = read(output / "models_frozen.json")["models"]
-        else:
-            models = train_phase(output, rows, processor, plan, resume=args.resume,
-                                 coverage_results=args.coverage_results)
-        result = evaluate_phase(output, plan, models)
-        benchmark_phase(output, rows, models)
-        jobs = read(output / "models_frozen.json")["jobs"]
-        failures = [identity for identity, value in jobs.items() if value["status"] != "complete"]
-        write(output / "summary.json", {"status": "complete" if not failures else "complete_with_failed_jobs",
-                                        "failed_jobs": failures, "completed_snapshots": len(models),
-                                        "automatic_model_selection": False, "threshold_searches": 0,
-                                        "historical_development_only": True, "evaluation": result})
-        archive = package(output)
-        print(f"Return only this batch archive and its SHA receipt: {archive}", flush=True)
-    except BaseException as error:
-        write(output / "interruption.json", _error(error, "interrupted"))
-        raise
+    from scripts.comprehensive_batch.execution import exclusive_output, adopt_v1, train_parallel
+    from scripts.comprehensive_batch.resources import ResourceMonitor
+    from scripts.comprehensive_batch.resource_profile import select_execution
+    with exclusive_output(output):
+        source_path = output / "source_receipt.json"
+        if source_path.exists():
+            existing = read(source_path)
+            if existing != source:
+                if not args.adopt_v1_output or not args.resume:
+                    raise ValueError("Use --resume for the same release; a stopped v1 output requires explicit --adopt-v1-output --resume")
+                adopt_v1(output, source, plan)
+            elif not args.resume:
+                raise ValueError("Use --resume for the same registered batch")
+        elif any(path.name != ".execution.lock" for path in output.iterdir()):
+            raise ValueError("Nonempty output lacks its source receipt")
+        elif args.adopt_v1_output:
+            raise ValueError("Adoption requires an existing stopped v1 output")
+        write(source_path, source)
+        write(output / "plan.json", plan)
+        if args.inputs_only:
+            write(output / "inputs_check.json", {"F_rows": len(rows), "real_fits": 0, "real_scores": 0,
+                                                 "planned_tabm_trajectories": len(plan["tabm_jobs"]),
+                                                 "planned_HGB_jobs": len(plan["hgb_jobs"])})
+            print("F-only inputs and fixed matrix verified; no models constructed.", flush=True)
+            return
+        write(output / "environment.json", environment())
+        try:
+            with ResourceMonitor(output, phase="profile") as monitor:
+                if (output / "models_frozen.json").exists():
+                    models = read(output / "models_frozen.json")["models"]
+                else:
+                    selection = select_execution(output,
+                        allow_started_without_profile=(output / "execution_adoption.json").exists())
+                    monitor.set_phase("training")
+                    models = train_parallel(output, plan, selection, resume=args.resume,
+                                            coverage_results=args.coverage_results)
+                monitor.set_phase("calibration_and_development")
+                result = evaluate_phase(output, plan, models)
+            # All workers and resource sampling stop before isolated CPU timing.
+            benchmark_phase(output, rows, models)
+            jobs = read(output / "models_frozen.json")["jobs"]
+            failures = [identity for identity, value in jobs.items() if value["status"] != "complete"]
+            write(output / "summary.json", {"status": "complete" if not failures else "complete_with_failed_jobs",
+                                            "failed_jobs": failures, "completed_snapshots": len(models),
+                                            "automatic_model_selection": False, "threshold_searches": 0,
+                                            "historical_development_only": True, "evaluation": result,
+                                            "execution_revision": registration["release_tag"],
+                                            "resource_profile": "execution_profile.json",
+                                            "training_timing_scope": "Per-job timings include resource contention; CPU inference benchmarks remain isolated."})
+            archive = package(output)
+            print(f"Return only this batch archive and its SHA receipt: {archive}", flush=True)
+        except BaseException as error:
+            write(output / "interruption.json", _error(error, "interrupted"))
+            raise
 
 
 if __name__ == "__main__":
