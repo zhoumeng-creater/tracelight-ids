@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-22",
+  "scope": "F-only input reconstruction and generated synthetic arrays; no real-data model scoring or fitting",
+  "pytest": {
+    "passed": 71,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 5.45,
+    "files": [
+      "tests/test_calibration_repair_data.py",
+      "tests/test_calibration_repair_objective.py",
+      "tests/test_calibration_repair_training.py",
+      "tests/test_calibration_repair_run.py",
+      "tests/test_calibration_repair_evaluation.py",
+      "tests/test_calibration_repair_official.py"
+    ],
+    "official_TabM_devices": [
+      "cpu",
+      "cuda:0"
+    ],
+    "official_inputs": "48 generated rows, production TabM/PLE architecture, two optimizer updates per synthetic trajectory; never treated as completed laboratory fit"
+  },
+  "inputs_only": {
+    "status": "passed",
+    "F_rows": 13252,
+    "parsed_roles": [
+      "F_base",
+      "F_expansion"
+    ],
+    "real_model_constructions": 0,
+    "real_fit_calls": 0,
+    "real_score_calls": 0,
+    "threshold_calculations": 0
+  },
+  "launcher_powershell_parse": "passed",
+  "registration_code_and_input_binding": "passed",
+  "real_experiment_results_available": false,
+  "independent_confirmation_complete": false,
+  "frozen_v1_preserved": true,
+  "frozen_coverage_batch_preserved": true
+}

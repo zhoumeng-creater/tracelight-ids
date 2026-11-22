@@ -1,0 +1,94 @@
+{
+  "format": "calibration-repair-F-input-receipt-v1",
+  "manifest_path": "inputs.json.gz",
+  "manifest_file_sha256": "c8ce0b5d65a977485be88496aa73cca815f289404275a95caf202490b48ec7a3",
+  "manifest_canonical_sha256": "5a31b8f395376785e775e8f90fdaea0fed3d3144e573f860877a23986cb30076",
+  "manifest_bytes": 357054,
+  "fit_flow_ids_sha256": "c372e7709e9a1b413246450da8e55bde18f36a9979cb76b9385cf6294aa5d3b6",
+  "fit_rows": 13252,
+  "target_counts": {
+    "normal": 12747,
+    "control": 504,
+    "download": 1
+  },
+  "references": 2,
+  "targets": 9,
+  "normal_partition": {
+    "normal_rows": 12747,
+    "target_memberships": 12747,
+    "uncovered_normal_rows": 0,
+    "overlapping_memberships": 0
+  },
+  "source_budget_arithmetic": [
+    {
+      "source": "ait:santos:complete_run",
+      "normal_count": 439,
+      "whole_source_integer_budget": 4,
+      "business_integer_budget_sum": 4,
+      "floor_gap": 0,
+      "minimum_boundary_tie_size_if_all_own_business_units_pass": 1,
+      "meaning": "At the whole-source boundary, business compliance permits at most the sum of business budgets above it. The pooled boundary rank then requires at least floor_gap+1 tied scores at that boundary; this is not evidence such scores were learned."
+    },
+    {
+      "source": "unraveled:apt_2021_single_campaign",
+      "normal_count": 12308,
+      "whole_source_integer_budget": 123,
+      "business_integer_budget_sum": 119,
+      "floor_gap": 4,
+      "minimum_boundary_tie_size_if_all_own_business_units_pass": 5,
+      "meaning": "At the whole-source boundary, business compliance permits at most the sum of business budgets above it. The pooled boundary rank then requires at least floor_gap+1 tied scores at that boundary; this is not evidence such scores were learned."
+    }
+  ],
+  "known_normal_action_components_preserved": 73,
+  "input_signature_audit": {
+    "raw_ports_zero": {
+      "unique_inputs": 13066,
+      "positive_negative_conflicting_inputs": 0,
+      "positive_negative_conflicting_rows": 0
+    },
+    "actual_FP32_numeric_and_categories": {
+      "unique_inputs": 13059,
+      "positive_negative_conflicting_inputs": 0,
+      "positive_negative_conflicting_rows": 0
+    },
+    "normal_encoded_signatures_shared_across_sources": 0,
+    "normal_rows_in_cross_source_signatures": 0,
+    "normal_multiplicity_by_source": {
+      "ait:santos:complete_run": {
+        "normal_rows": 439,
+        "unique_encoded_inputs": 439,
+        "multiplicity_histogram": {
+          "1": 439
+        },
+        "maximum_multiplicity": 1,
+        "encoded_input_sets_with_at_least_five_rows": 0,
+        "normal_rows_in_input_sets_with_at_least_five_rows": 0
+      },
+      "unraveled:apt_2021_single_campaign": {
+        "normal_rows": 12308,
+        "unique_encoded_inputs": 12120,
+        "multiplicity_histogram": {
+          "1": 11998,
+          "2": 113,
+          "3": 4,
+          "4": 2,
+          "9": 1,
+          "14": 1,
+          "41": 1
+        },
+        "maximum_multiplicity": 41,
+        "encoded_input_sets_with_at_least_five_rows": 3,
+        "normal_rows_in_input_sets_with_at_least_five_rows": 64
+      }
+    },
+    "scope": "F inputs only. No label collision removes one deterministic impossibility; it proves neither model optimization nor cross-source generalization. Input multiplicity does not establish learned scores or their boundary rank. Exact cross-source overlap zero is not a lack-of-support theorem."
+  },
+  "parsed_data_roles": [
+    "F_base",
+    "F_expansion"
+  ],
+  "model_constructions": 0,
+  "fit_calls": 0,
+  "score_calls": 0,
+  "threshold_calculations": 0
+}

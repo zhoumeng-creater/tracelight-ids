@@ -1,0 +1,79 @@
+{
+  "verified_date": "2026-11-22",
+  "activity": "Primary-source reading and saved R30 evidence only; no model loading, scoring, fitting, or new threshold selection.",
+  "candidate_arms": ["A_BCE", "G_group_tail", "R_reference_envelope"],
+  "papers": [
+    {
+      "name": "Conformal Risk Training: End-to-End Optimization of Conformal Risk Control",
+      "venue": "NeurIPS 2025 main conference",
+      "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/6559542f75b4452ebaaf82094c7defb7-Paper-Conference.pdf",
+      "html_url": "https://arxiv.org/html/2510.08748v1",
+      "paper_locations": ["Section 2 Assumption 1 exchangeability", "Section 4 Algorithm 2 pseudo-calibration/prediction split", "Equation 9 calibration gradient", "Section 4 fresh calibration after training"],
+      "repo": "https://github.com/chrisyeh96/conformal-risk-training",
+      "commit": "b9b2276e3e1ccf26ab74f2c750e51e091aa409bd",
+      "code_verified": [
+        {
+          "path": "run_polyp.py",
+          "blob_sha": "f583704e4cc411f2b71d33d822aead96ec7bc986",
+          "lines": [342, 368],
+          "finding": "Averages near-boundary positive pixels (approximately 0.5 percent), then computes prediction-half FPR surrogate; not exact single-order-statistic implementation."
+        },
+        {
+          "path": "run_storage.py",
+          "blob_sha": "b634cbceb03de4f575bb23d11dc35340f9c18793",
+          "lines": [457, 489],
+          "finding": "Calibrates lambda on initial batch portion, scales remaining decisions, then backpropagates."
+        }
+      ],
+      "implication": "Calibration differentiation is prior art; exchangeable population guarantees are not asserted for current cross-source IDS evaluation."
+    },
+    {
+      "name": "The Surprising Utility of Group Partitioning in Improving Conformal Prediction of Visual Classifiers under Distributional Shifts",
+      "venue": "CVPR Workshops 2025, UNCV",
+      "paper_url": "https://www.osti.gov/servlets/purl/2585175",
+      "cvf_url": "https://openaccess.thecvf.com/content/CVPR2025W/UNCV/papers/Thopalli_The_Surprising_Utility_of_Group_Partitioning_in_Improving_Conformal_Prediction_CVPRW_2025_paper.pdf",
+      "pdf_sha256": "f4e1671f5f48fc34b7639e74aa0bf53be9a3fe90f03d95fc1352347b98d52140",
+      "pdf_bytes": 556415,
+      "paper_locations": ["PDF page 2 Section 2: frozen classifier; exchangeable calibration/test drawn iid from same mixture", "PDF pages 3-4 Section 3.3: likelihood groups and group-specific thresholds", "PDF page 4 Section 3.3.3: rigorous guarantee characterization left for future work", "PDF page 5 Section 4.3.1: half validation and half target data enter calibration"],
+      "repo": "https://github.com/kowshikthopalli/Likelihood_Group_Conformal_Prediction",
+      "commit": "e4e1b8f02593db2b83e73388daa86a7291822561",
+      "tree_verified": [{"path": "README.md", "blob_sha": "15edbbcd38d8a291d821c3c56e72eca588f80765", "bytes": 171}],
+      "code_status": "The fixed tree has only README.md with Code coming soon; no executable author reproduction.",
+      "implication": "Grouping and group calibration are prior art. The paper does not establish calibration-to-test distribution-shift guarantees for this project."
+    },
+    {
+      "name": "Stochastic Primal-Dual Double Block-Coordinate for Two-way Partial AUC Maximization",
+      "method": "STACO",
+      "venue": "TMLR 2025",
+      "paper_url": "https://arxiv.org/html/2505.21944v2",
+      "paper_locations": ["Section 3 nested CVaR/min-max objectives and algorithms"],
+      "repo": "https://github.com/Optimization-AI/LibAUC",
+      "commit": "3c02aa9877e0091114a00f94a8c6367698eb5637",
+      "code_path": "libauc/losses/auc.py",
+      "code_anchor": 731,
+      "code_finding": "tpAUC_CVaR_loss uses a squared-hinge default with margin and per-positive auxiliary state.",
+      "snapshot_note": "Pinned source is a later code snapshot, not the September 2025 publication-day repository state.",
+      "implication": "Ranking and tail selection are prior art; G_group_tail is an explicit local simple control, not a STACO reproduction."
+    }
+  ],
+  "real_failure_witness": {
+    "source": "docs/r31_design_review_20261117/input_mechanism.md",
+    "supporting_summary": "docs/normal_tail_mechanism_20261120/index.md",
+    "seeds": [17, 29, 43],
+    "saved_F_min_positive_minus_max_normal_rounded": [2.5374, 3.5587, 8.9514],
+    "margin_used_in_current_design": 1.0,
+    "original_normal_units_passed_of_15": [8, 5, 4],
+    "original_attack_detection_each_seed": {"B": [72, 72], "D": [1964, 1964]},
+    "seed43_saved_group_witness": {
+      "tcp_count_signature": [11, 8, 1285, 4725],
+      "F_B_normal_support": 36,
+      "original_C_group_FP_and_total": [23, 23],
+      "original_D_group_FP_and_total": [84, 84],
+      "one_D_unit_group_FP": 14,
+      "one_D_unit_FP_budget": 8
+    },
+    "deduction": "On these saved R30 scores, every subset normal boundary is below maximum normal, so any margin-one group-tail separation term is zero despite original business-unit errors.",
+    "not_deduced": ["G trained from scratch on new F must fail", "R must succeed", "old evaluation-derived error groups may define new F training groups"]
+  },
+  "novelty_boundary": "The candidate contribution is an empirical training constraint addressing actual normal-reference threshold transfer to business units, evaluated against a transparent same-information group-tail control. It does not claim a new quantile, hinge, max operator, calibration-gradient principle, unique temporal-direction mechanism, or population risk theorem."
+}
