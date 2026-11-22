@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-22",
+  "scope": "Generated synthetic arrays and F-only reconstruction; no real-data model training, scoring or calibration",
+  "pytest": {
+    "passed": 157,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 31.36,
+    "files": [
+      "tests/test_comprehensive_matrix.py",
+      "tests/test_comprehensive_objective.py",
+      "tests/test_comprehensive_training.py",
+      "tests/test_comprehensive_official.py",
+      "tests/test_comprehensive_run.py",
+      "tests/test_comprehensive_evaluation.py",
+      "tests/test_calibration_repair_data.py",
+      "tests/test_calibration_repair_objective.py",
+      "tests/test_calibration_repair_training.py",
+      "tests/test_calibration_repair_official.py",
+      "tests/test_calibration_repair_run.py",
+      "tests/test_calibration_repair_evaluation.py"
+    ],
+    "official_TabM_devices": [
+      "cpu",
+      "cuda:0"
+    ],
+    "official_inputs": "Generated arrays only; interrupted R/S trajectories match continuous runs exactly"
+  },
+  "checked_contracts": [
+    "292 registered evaluation models and 784 expanded comparisons",
+    "objective values and gradients including D/H/G/R/S decomposition",
+    "exact optimizer/RNG/sampler recovery",
+    "initial recovery partial-write interruption",
+    "all models frozen before C and all thresholds frozen before development",
+    "real runner metadata to evaluation integration, including HGB step=None",
+    "device faults interrupt, numerical failures retained",
+    "budget and failure costs persist outside optimizer recovery",
+    "cached scores reused without repeat forward calls",
+    "this-batch package excludes optimizer recovery states but keeps inference and failure evidence"
+  ],
+  "inputs_only": {
+    "status": "passed",
+    "F_rows": 13252,
+    "parsed_roles": [
+      "F_base",
+      "F_expansion"
+    ],
+    "model_constructions": 0,
+    "real_fit_calls": 0,
+    "real_score_calls": 0,
+    "threshold_calculations": 0,
+    "manifest_canonical_sha256": "5a31b8f395376785e775e8f90fdaea0fed3d3144e573f860877a23986cb30076"
+  },
+  "code_bindings": {
+    "files": 230,
+    "policy": "sha256 of UTF-8 source bytes with CRLF normalized to LF",
+    "verified": true
+  },
+  "plan_sha256": "767d3fa56fad927b4fca42c403dea6e1e6d2b2390e823e136982e27510867762",
+  "launcher_powershell_parse": "passed",
+  "relative_document_links": "passed",
+  "git_diff_check": "passed",
+  "old_frozen_tags": {
+    "coverage-baseline-batch-v1": "e7c149e1ccba8d27271a5072fd6a05367e95553e",
+    "normal-tail-transfer-v1": "de426c0a470b451ed0520b66b6fa5ce51d426ac7",
+    "normal-reference-transfer-v2": "777271639e25f1d3940bd5fcf3b425130c7525e2"
+  },
+  "real_experiment_results_available": false,
+  "independent_confirmation_complete": false
+}

@@ -21,9 +21,19 @@
 
 若本次失败，只整理本次已经生成的输出、错误记录和工件，不夹带旧轮次，也不为生成一个“完成包”自动重训。
 
-## 当前九次固定比较
+## 当前完整比较
 
-当前入口为 [RUN_CALIBRATION_REFERENCE.ps1](../scripts/RUN_CALIBRATION_REFERENCE.ps1)，运行方法见[实验室说明](CALIBRATION_REFERENCE_LAB_20261122.md)。脚本只压缩 `-Output` 指定的本轮目录，完成后生成同名 ZIP。例如：
+当前入口为 [RUN_COMPREHENSIVE_BATCH.ps1](../scripts/RUN_COMPREHENSIVE_BATCH.ps1)，执行及续跑见[实验室说明](COMPREHENSIVE_BATCH_LAB_20261122.md)。它接替尚未运行的九次 v2。只回传本次 `-Output` 对应的 ZIP 和 `.zip.sha256.json`。
+
+包内保留本批全部推理检查点、分数、身份、训练诊断、失败证据和成本。`recovery.pt` 中的优化器、随机和采样器状态留在实验室原输出目录，用于精确续训；不作为分析回传中的重复载荷。初始诊断检查点另外保存，不计入 288 份评价快照。
+
+本批最多有 292 份评价模型，体积由这些本轮工件决定；不能承诺压缩包一定很小。需要去掉的是重复携带的历史结果，不能因本轮包较大而删除规定证据。
+
+## 旧九次批次的回传说明
+
+以下只解释保留的 v2 注册，不是当前待运行入口。
+
+原入口为 [RUN_CALIBRATION_REFERENCE.ps1](../scripts/RUN_CALIBRATION_REFERENCE.ps1)，运行方法见[实验室说明](CALIBRATION_REFERENCE_LAB_20261122.md)。脚本只压缩 `-Output` 指定的本轮目录，完成后生成同名 ZIP。例如：
 
 ```text
 本轮输出：D:\Research Work\results\normal-reference-transfer-v2\
@@ -32,7 +42,7 @@
 
 这个包须保留本轮九份模型及全部规定结果。发送它即可，不要再把它加入 `TraceLight-ALL-<日期>.zip` 后发送，也不要压缩上一级 `results`、`archives` 或整个 `Graduate` 目录。
 
-当前脚本会在本轮输出中生成 `output_receipt.json`；不要把它误认成独立的整包 SHA 文件。其他批次若生成了旁置 `.sha256` 或 `.sha256.json`，按其原协议随包发送。
+旧 v2 脚本会在本轮输出中生成 `output_receipt.json`；不要把它误认成独立的整包 SHA 文件。其他批次若生成了旁置 `.sha256` 或 `.sha256.json`，按其原协议随包发送。
 
 实验室导航 README 的旧“总包”条款应同步替换为：
 

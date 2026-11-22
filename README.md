@@ -8,7 +8,9 @@
 
 - [交互研究历程](docs/flow_replay/history.html)：查看各阶段目的、成功、失败与现行处置。
 - [真实判决回放](docs/flow_replay/index.html)：查看已完成实验的误报、攻击得失与来源。
-- [四臂实验室说明](docs/COVERAGE_BATCH_LAB_20261119.md)：已发布 `coverage-baseline-batch-v1`，尚无真实回传。只检验监督扩充与端口依赖。
+- [当前实验室入口](docs/COMPREHENSIVE_BATCH_LAB_20261122.md)：`comprehensive-calibration-v1`，一次覆盖六种目标、训练预算和主要敏感性；72 条轨迹保留 288 个 TabM 检查点，加四个可复用 HGB。接替尚未运行的九次 v2。
+- [完整设计与结果出口](docs/comprehensive_batch_20261122/index.md)：机制消融、对照理由、计算量、诊断、成本及不同结果的处置。
+- [原四臂说明](docs/COVERAGE_BATCH_LAB_20261119.md)：`coverage-baseline-batch-v1` 保留原合同；其模型纳入当前统一批次，不另行先跑旧入口。
 - [四臂回传结果汇总](docs/research_history_20261119/outcome_policy.md)：只读原结果，无需重训、重评分或改阈值。
 - [持续研究依据](docs/RESEARCH_GROUNDING.md)：方法差异、直接近邻、对照和退出依据。
 
