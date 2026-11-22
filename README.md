@@ -4,6 +4,8 @@
 
 **现行研究入口： [研究状态与推进决定](docs/CURRENT_RESEARCH.md)。** 历轮方案与处置已整理为[研究历程与设计重建](docs/research_history_20261119/index.md)。旧实验仍保留原判定；新算法贡献尚未建立，工程准备不代替方法证据。
 
+**实验室回传：只发送本轮生成的完整结果 ZIP、本次已生成的校验文件及本轮新增说明。不要每轮重打或发送包含全部历史的 `TraceLight-ALL-*.zip`。** 历史总包留作备份，具体范围见[实验结果回传规范](docs/EXPERIMENT_RETURN_POLICY.md)。
+
 - [交互研究历程](docs/flow_replay/history.html)：查看各阶段目的、成功、失败与现行处置。
 - [真实判决回放](docs/flow_replay/index.html)：查看已完成实验的误报、攻击得失与来源。
 - [四臂实验室说明](docs/COVERAGE_BATCH_LAB_20261119.md)：已发布 `coverage-baseline-batch-v1`，尚无真实回传。只检验监督扩充与端口依赖。

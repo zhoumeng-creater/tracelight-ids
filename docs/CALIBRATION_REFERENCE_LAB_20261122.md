@@ -17,7 +17,7 @@ Set-Location '..\tracelight-reference-v2'
 
 默认解释器为 `D:\zhoumeng\Graduate\venvs\tracelight-route-core\Scripts\python.exe`；位置不同时传 `-Python`。使用既有 RTX4090D、Python 3.11／3.12、PyTorch 2.6.0、TabM 0.0.3、rtdl_num_embeddings 0.0.12、NumPy 1.26.4、pandas 2.2.2、scikit-learn 1.5.1，入口不自动改环境。
 
-输出须为空目录。程序依次保存九份末轮模型、九个 C 阈值、完整开发评价，再生成 ZIP。回传完整 ZIP。发生异常会保留工件与错误记录，不自动重训。加 `-InputsOnly` 并使用另一空目录可只检查代码和 F 输入，不构建模型或评分。
+输出须为空目录。程序依次保存九份末轮模型、九个 C 阈值、完整开发评价，再生成本轮 ZIP。**只回传脚本生成的 `normal-reference-transfer-v2.zip`（使用自定义 `-Output` 时为该目录同名 ZIP），不要再将它与旧轮次合并为 `TraceLight-ALL-*.zip`。** “完整”指本轮九份工件和结果完整；历史累计包留作实验室备份。本次已生成的校验文件及本轮新增说明按[回传规范](EXPERIMENT_RETURN_POLICY.md)附上。发生异常会保留工件与错误记录，不自动重训。加 `-InputsOnly` 并使用另一空目录可只检查代码和 F 输入，不构建模型或评分。
 
 ## 固定训练与校准
 
