@@ -1,6 +1,6 @@
 # TraceLight 项目要求与当前入口
 
-2026-11-22 资源执行修订已采用独立 CPU／GPU 任务队列和 GPU 输入驻留；启动时以生成数组的总吞吐选择并发，同机续跑复用选择。持续记录资源利用率，CPU 部署成本仍隔离测量。科学矩阵、batch、评分块、精度和预算不变。已启动 v1 的输出可按[接续说明](docs/COMPREHENSIVE_BATCH_LAB_20261122.md)显式接续，无需重训完成轨迹。详见[资源执行依据](docs/comprehensive_batch_20261122/resource_execution.md)。
+2026-11-24 当前实现为 [AIT 前向校准比较](docs/AIT_FORWARD_CALIBRATION_LAB_20261124.md)。只使用冻结去端口 HGB 与两条 C 阈值。Fox 回归已完成，Harrison 尚未准入。下方 2026-11-22 综合 v1.1 等为已完成的历史安排。
 
 研究状态与后续安排只以 [CURRENT_RESEARCH.md](docs/CURRENT_RESEARCH.md) 为当前入口。2026-11-19 已整理[完整经历与设计重建](docs/research_history_20261119/index.md)。旧文稿中的“当前”“下一步”是历史时点，不自动授权恢复已关闭的实验。
 
