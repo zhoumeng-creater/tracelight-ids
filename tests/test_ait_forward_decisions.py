@@ -2,7 +2,7 @@ from copy import deepcopy
 
 import pytest
 
-from scripts.ait_forward.decisions import calibrate_rules, evaluate_comparison
+from scripts.ait_forward.decisions import calibrate_rules, evaluate_candidate, evaluate_comparison
 
 
 def _calibration():
@@ -87,6 +87,26 @@ def test_frozen_rules_report_changed_identities_events_and_ranking_ceiling():
         "max_TP": 1, "minimum_TP_attainable": False,
     }
     assert result["score_ranking_upper_bound"]["download"]["max_TP"] == 0
+    contrast = result["rule_contrast"]
+    assert contrast["status"] == "normal_fp_reduction_with_detection_loss"
+    assert contrast["normal_budget_repaired_units"] == ["business-1", "business-2"]
+    assert contrast["lost_attack_flow_counts"] == {"control": 2, "download": 1}
+    assert contrast["lost_positive_event_bound_ids"] == ["ambiguous-control", "confirmed-download"]
+
+    comparison = evaluate_candidate(
+        scores, normal_units=normal_units, attack_ids=attack_ids, events=events, rules=rules,
+        minimum_tp={"control": 1, "download": 1},
+        required_events=[
+            {"event_id": "ambiguous-control", "kind": "control"},
+            {"event_id": "confirmed-download", "kind": "download"},
+        ],
+    )
+    assert comparison["event_evaluation"]["pooled"]["status"] == "met"
+    business_events = comparison["event_evaluation"]["business_max"]
+    assert business_events["status"] == "missed"
+    assert business_events["required_events"][0]["reason"] == "possible_hit_only"
+    assert business_events["required_events"][0]["ordering_diagnosis"] == "rank_can_only_possibly_hit_event"
+    assert business_events["required_events"][1]["reason"] == "no_candidate_hit"
 
 
 def test_unavailable_target_and_normal_unit_do_not_report_success():
@@ -122,3 +142,39 @@ def test_evaluation_rejects_conflicting_labels_and_noninteger_floor():
             attack_ids={"control": ["control"], "download": None}, events=[],
             rules=rules, minimum_tp={"control": 1.0, "download": None},
         )
+
+
+@pytest.mark.parametrize(
+    ("required_score", "at_observed_feasible_rank", "diagnosis"),
+    [
+        (9.0, "missed", "rank_cannot_hit_event"),
+        (9.5, "met", "frozen_rule_lacks_guaranteed_hit_but_rank_has_room"),
+    ],
+)
+def test_event_ordering_distinguishes_rank_limit_from_frozen_rule(
+    required_score, at_observed_feasible_rank, diagnosis,
+):
+    comparison = evaluate_candidate(
+        {"n": 9.0, "c-required": required_score, "c-other": 11.0, "d": 12.0},
+        normal_units={"normal": ["n"]},
+        attack_ids={"control": ["c-required", "c-other"], "download": ["d"]},
+        events=[
+            {"event_id": "required-control", "kind": "control", "candidate_flow_ids": ["c-required"],
+             "association_mode": "all_confirmed", "candidate_set_complete": True},
+            {"event_id": "required-download", "kind": "download", "candidate_flow_ids": ["d"],
+             "association_mode": "all_confirmed", "candidate_set_complete": True},
+        ],
+        rules=calibrate_rules(*_calibration()),
+        minimum_tp={"control": 1, "download": 1},
+        required_events=[
+            {"event_id": "required-control", "kind": "control"},
+            {"event_id": "required-download", "kind": "download"},
+        ],
+    )
+    assert comparison["outcomes"]["business_max"] == "criteria_met"
+    assert comparison["event_evaluation"]["business_max"]["status"] == "missed"
+    assert comparison["confirmation_outcomes"]["business_max"] == "event_criteria_failed"
+    best = comparison["result"]["score_ranking_event_feasibility"]
+    assert best["status"] == at_observed_feasible_rank
+    assert "threshold" not in str(best)
+    assert comparison["event_evaluation"]["business_max"]["required_events"][0]["ordering_diagnosis"] == diagnosis

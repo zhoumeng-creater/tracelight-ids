@@ -102,6 +102,8 @@ def test_run_scores_once_and_keeps_all_rows(tmp_path, frozen_mock):
     assert frozen_mock == [["normal", "control", "download", "unknown"]]
     summary = read(output / "summary.json")
     assert summary["outcomes"] == {"pooled": "criteria_met", "business_max": "criteria_met"}
+    assert summary["confirmation_outcomes"] == dict.fromkeys(("pooled", "business_max"), "flow_only_criteria_met")
+    assert summary["event_evaluation"]["pooled"]["status"] == "not_registered"
     assert summary["unknown_labels"] == 1 and summary["score_passes"] == 1 and summary["fit_count"] == 0
     assert read(output / "decisions.json")[0]["alerts"] == {"pooled": False, "business_max": False}
     with ZipFile(first) as bundle:
@@ -162,3 +164,76 @@ def test_unqualified_target_reports_partial_scope_only(tmp_path, frozen_mock):
     assert summary["outcomes"]["business_max"] == "partial_scope_criteria_met"
     assert summary["result"]["rules"]["business_max"]["targets"]["download"]["TP"] is None
     assert len(frozen_mock) == 1
+
+
+def write_protocol(path, *entries):
+    write(path, {"schema": runner.EVENT_PROTOCOL_SCHEMA,
+                 "required_events": [{"event_id": identity, "kind": kind} for identity, kind in entries]})
+    return path
+
+
+def test_registered_event_requires_guaranteed_hit_even_when_floors_pass(tmp_path, frozen_mock):
+    root = tmp_path / "qualified"
+    spec, rows, units, events = make_input(root)
+    events[0]["candidate_set_complete"] = False
+    receipt = write_input(root, spec, rows, units, events)
+    protocol = write_protocol(
+        tmp_path / "protocol.json", ("event-control", "control"), ("event-download", "download"),
+    )
+    output = tmp_path / "output"
+    registration = runner.freeze("unused", receipt, output, 1, 1, event_protocol=protocol)
+    assert registration["event_protocol"] == read(protocol)
+    assert frozen_mock == []
+    runner.run("unused", receipt, output)
+
+    summary = read(output / "summary.json")
+    assert summary["outcomes"] == {"pooled": "criteria_met", "business_max": "criteria_met"}
+    assert summary["confirmation_outcomes"] == dict.fromkeys(
+        ("pooled", "business_max"), "event_criteria_indeterminate",
+    )
+    required = summary["event_evaluation"]["business_max"]["required_events"]
+    assert required[0]["status"] == "indeterminate" and required[0]["reason"] == "unresolved_candidates"
+    assert required[0]["ordering_diagnosis"] == "event_evidence_indeterminate"
+    assert summary["result"]["score_ranking_event_feasibility"]["status"] == "indeterminate"
+    assert required[1]["status"] == "met" and required[1]["reason"] == "guaranteed_hit"
+    assert summary["result"]["rule_contrast"]["status"] == "identical_alerts"
+
+    # Release uses the selection stored in the frozen record, not the mutable source file.
+    write_protocol(protocol, ("a-different-control", "control"), ("event-download", "download"))
+    runner.run("unused", receipt, output)
+    assert read(output / "summary.json") == summary
+    assert len(frozen_mock) == 1
+
+    registration["event_protocol"]["required_events"][0]["event_id"] = "a-different-control"
+    write(output / "registration.json", registration)
+    with pytest.raises(ValueError, match="Frozen registration"):
+        runner.run("unused", receipt, output)
+    assert len(frozen_mock) == 1
+
+
+def test_incomplete_availability_does_not_create_a_formal_event_pass(tmp_path, frozen_mock):
+    root = tmp_path / "qualified"
+    receipt = write_input(root, *make_input(root, include_download=False))
+    output = tmp_path / "output"
+    protocol = write_protocol(
+        tmp_path / "protocol.json", ("event-control", "control"), ("expected-download", "download"),
+    )
+    runner.freeze("unused", receipt, output, 1, event_protocol=protocol)
+    runner.run("unused", receipt, output)
+    summary = read(output / "summary.json")
+    assert summary["outcomes"]["business_max"] == "partial_scope_criteria_met"
+    assert summary["confirmation_outcomes"]["business_max"] == "event_criteria_indeterminate"
+    assert summary["event_evaluation"]["business_max"]["required_events"][1]["reason"] == "target_unavailable"
+
+
+def test_wrong_required_event_kind_stops_before_scoring(tmp_path, frozen_mock):
+    root = tmp_path / "qualified"
+    receipt = write_input(root, *make_input(root))
+    output = tmp_path / "output"
+    protocol = write_protocol(
+        tmp_path / "protocol.json", ("event-download", "control"), ("event-control", "download"),
+    )
+    runner.freeze("unused", receipt, output, 1, 1, event_protocol=protocol)
+    with pytest.raises(ValueError, match="different qualified target"):
+        runner.run("unused", receipt, output)
+    assert frozen_mock == []

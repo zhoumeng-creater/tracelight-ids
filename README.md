@@ -1,6 +1,6 @@
 # TraceLight IDS
 
-2026-11-24 实现 AIT 前向校准比较。原 2026-11-22 综合 v1.1 批次已完成，72 条轨迹与四个 HGB 作为已回传证据。
+2026-11-24 实现 AIT 前向综合确认。原综合 v1.1 的 72 条训练轨迹与四个 HGB 已回传，本次复用其中固定主配置。
 
 轻量化网络入侵检测研究与实现：在明确的正常误报预算下，比较检测能力、允许输入和实际部署成本，并追溯到原始流量与实验版本。
 
@@ -10,7 +10,7 @@
 
 - [交互研究历程](docs/flow_replay/history.html)：查看各阶段目的、成功、失败与现行处置。
 - [真实判决回放](docs/flow_replay/index.html)：查看已完成实验的误报、攻击得失与来源。
-- [当前实验室入口](docs/AIT_FORWARD_CALIBRATION_LAB_20261124.md)。冻结 HGB、两条 C 阈值规则、一次 CPU 确认评分。Harrison 仍待准入。
+- [当前实验室入口](docs/AIT_FORWARD_SUITE_LAB_20261124.md)。同一次运行比较 22 个冻结评分器与各自两条 C 阈值。正式评分使用已准入的 Harrison 收据与必检事件协议。
 - [历史综合批次设计与结果出口](docs/comprehensive_batch_20261122/index.md)：机制消融、对照理由、计算量、诊断、成本及不同结果的处置。
 - [原四臂说明](docs/COVERAGE_BATCH_LAB_20261119.md)：`coverage-baseline-batch-v1` 保留原合同；其模型已纳入 11 月 22 日综合比较。
 - [四臂回传结果汇总](docs/research_history_20261119/outcome_policy.md)：只读原结果，无需重训、重评分或改阈值。

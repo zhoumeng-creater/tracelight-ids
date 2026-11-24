@@ -1,6 +1,6 @@
 # TraceLight 项目要求与当前入口
 
-2026-11-24 当前实现为 [AIT 前向校准比较](docs/AIT_FORWARD_CALIBRATION_LAB_20261124.md)。只使用冻结去端口 HGB 与两条 C 阈值。Fox 回归已完成，Harrison 尚未准入。下方 2026-11-22 综合 v1.1 等为已完成的历史安排。
+2026-11-24 当前实现为 [AIT 前向综合确认](docs/AIT_FORWARD_SUITE_LAB_20261124.md)。主比较固定去端口 HGB 与两条 C 阈值，已有四个 HGB 和十八个 TabM 检查点一次完成配对，新增拟合为零。Harrison 依据逐目标资格收据与必检事件协议启动。下方综合 v1.1 为历史安排。
 
 研究状态与后续安排只以 [CURRENT_RESEARCH.md](docs/CURRENT_RESEARCH.md) 为当前入口。2026-11-19 已整理[完整经历与设计重建](docs/research_history_20261119/index.md)。旧文稿中的“当前”“下一步”是历史时点，不自动授权恢复已关闭的实验。
 

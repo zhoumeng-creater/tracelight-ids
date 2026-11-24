@@ -40,13 +40,15 @@ _MEMBERS = {
 }
 
 
-def _verified_members(archive):
+def _verified_members(archive, members=None):
+    if members is None:
+        members = _MEMBERS
     with ZipFile(archive) as bundle:
         counts = {}
         for name in bundle.namelist():
             counts[name] = counts.get(name, 0) + 1
         result = {}
-        for member, (size, digest) in _MEMBERS.items():
+        for member, (size, digest) in members.items():
             name = ARCHIVE_PREFIX + member
             if counts.get(name) != 1 or bundle.getinfo(name).file_size != size:
                 raise ValueError(f"Missing, ambiguous or incorrectly sized archive member: {member}")
@@ -104,6 +106,37 @@ def _counts(rows, alerts, units):
     }
 
 
+def score_hgb(model, rows, *, zero_ports, threads=4):
+    """Use the exact coverage-batch feature order and port policy."""
+    from scripts.coverage_batch.materialize import RAW8_FIELDS
+    from scripts.coverage_batch.run import features
+    from threadpoolctl import threadpool_limits
+
+    if not rows:
+        raise ValueError("Scoring requires at least one input row")
+    feature_rows = [
+        row if "features8" in row else {"features8": [row["raw8"][field] for field in RAW8_FIELDS]}
+        for row in rows
+    ]
+    with threadpool_limits(limits=threads):
+        scores = np.asarray(model.decision_function(features(feature_rows, zero_ports)), dtype=np.float64)
+    if scores.shape != (len(rows),) or not np.isfinite(scores).all():
+        raise ValueError("Frozen HGB did not produce one finite scalar score per row")
+    return scores
+
+
+def load_opened_fox_rows(baseline, repo=REPO):
+    by_id = {row["flow_id"]: row for row in _historical_fox(Path(repo) / ROWS_PATH)}
+    if set(by_id) != baseline.archived_fox_scores.keys() or len(by_id) != len(baseline.archived_fox_identities):
+        raise ValueError("Opened fox feature identities differ from the archive")
+    ordered = [by_id[row["flow_id"]] for row in baseline.archived_fox_identities]
+    identity_fields = ("stable_flow_id", "label", "target_kind", "replay_export_time")
+    if any(left[field] != right[field] for left, right in zip(ordered, baseline.archived_fox_identities)
+           for field in identity_fields):
+        raise ValueError("Opened fox feature labels, times or stable identities differ from the archive")
+    return ordered
+
+
 @dataclass(frozen=True)
 class FrozenBaseline:
     model: Any
@@ -128,36 +161,14 @@ class FrozenBaseline:
         return {name: digest for name, (_, digest) in _MEMBERS.items()}
 
     def score(self, rows):
-        """Use the exact coverage-batch feature order and finite-port masking."""
-        from scripts.coverage_batch.materialize import RAW8_FIELDS
-        from scripts.coverage_batch.run import features
-        from threadpoolctl import threadpool_limits
-
-        if not rows:
-            raise ValueError("Scoring requires at least one input row")
-        feature_rows = [
-            row if "features8" in row else {"features8": [row["raw8"][field] for field in RAW8_FIELDS]}
-            for row in rows
-        ]
-        with threadpool_limits(limits=4):
-            scores = np.asarray(self.model.decision_function(features(feature_rows, True)), dtype=np.float64)
-        if scores.shape != (len(rows),) or not np.isfinite(scores).all():
-            raise ValueError("Frozen HGB did not produce one finite scalar score per row")
-        return scores
+        return score_hgb(self.model, rows, zero_ports=True)
 
     def historical_fox_regression(self, rules, repo=REPO):
         """Validate exact CPU scoring and the old and new rules on opened fox."""
         thresholds = {name: float(rules[name]["threshold"]) for name in ("pooled", "business_max")}
         if thresholds["pooled"] != self.pooled_threshold or not np.isfinite(list(thresholds.values())).all():
             raise ValueError("Regression rules require the original pooled threshold and finite scores")
-        by_id = {row["flow_id"]: row for row in _historical_fox(Path(repo) / ROWS_PATH)}
-        if set(by_id) != self.archived_fox_scores.keys() or len(by_id) != len(self.archived_fox_identities):
-            raise ValueError("Opened fox feature identities differ from the archive")
-        ordered = [by_id[row["flow_id"]] for row in self.archived_fox_identities]
-        identity_fields = ("stable_flow_id", "label", "target_kind", "replay_export_time")
-        if any(left[field] != right[field] for left, right in zip(ordered, self.archived_fox_identities)
-               for field in identity_fields):
-            raise ValueError("Opened fox feature labels, times or stable identities differ from the archive")
+        ordered = load_opened_fox_rows(self, repo)
         saved = np.array(list(self.archived_fox_scores.values()), dtype=np.float64)
         actual = self.score(ordered)
         if not np.array_equal(actual, saved):

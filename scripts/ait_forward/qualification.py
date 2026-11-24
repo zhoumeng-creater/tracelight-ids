@@ -32,12 +32,13 @@ METADATA_PATHS = ("dataset.yaml", "processing/config/servers.yaml")
 class RangeReader(io.RawIOBase):
     """Adapt a pinned HTTP object to the standard library's seekable ZIP reader."""
 
-    def __init__(self, name: str, length: int):
+    def __init__(self, name: str, length: int, *, total_byte_limit=MAX_ARCHIVE_BYTES):
         self.name = name
         self.length = length
         self.position = 0
         self.receipts = []
         self.requested_bytes = 0
+        self.total_byte_limit = total_byte_limit
 
     def readable(self):
         return True
@@ -76,7 +77,7 @@ class RangeReader(io.RawIOBase):
             "User-Agent": USER_AGENT,
         })
         for attempt in range(2):
-            if self.requested_bytes + size > MAX_ARCHIVE_BYTES:
+            if self.requested_bytes + size > self.total_byte_limit:
                 raise ValueError("Requested ranges exceed the archive qualification limit")
             self.requested_bytes += size
             try:

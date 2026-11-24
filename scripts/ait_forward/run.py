@@ -16,13 +16,14 @@ import time
 import numpy as np
 
 from scripts.ait_forward.baseline import load_baseline
-from scripts.ait_forward.decisions import calibrate_rules, evaluate_comparison
+from scripts.ait_forward.decisions import calibrate_rules, evaluate_candidate, validate_required_event_kinds
 from scripts.comprehensive_batch.execution import exclusive_output
 from scripts.comprehensive_batch.run import package, read, write
 from scripts.coverage_batch.materialize import RAW8_FIELDS
 
 SCHEMA = "ait-forward-calibration-v1"
 CONFIRMATION_SCHEMA = "ait-harrison-qualification-v1"
+EVENT_PROTOCOL_SCHEMA = "ait-harrison-event-protocol-v1"
 GROUP = "ait:harrison:complete_run"
 CLOCK = "offline_Zeek_export_network_time_not_detector_receipt"
 TARGETS = ("control", "download")
@@ -87,7 +88,30 @@ def _minimums(qualification, control, download):
     return policy
 
 
-def _freeze_record(baseline, qualification, qualification_digest, minimum_tp):
+def _validate_event_protocol(protocol, qualification):
+    if protocol is None:
+        return None
+    if (not isinstance(protocol, dict) or set(protocol) != {"schema", "required_events"}
+            or protocol["schema"] != EVENT_PROTOCOL_SCHEMA):
+        raise ValueError("Provide the registered Harrison event-protocol schema")
+    required = protocol["required_events"]
+    if not isinstance(required, list) or not required:
+        raise ValueError("Event protocol requires a nonempty list of must-hit events")
+    identities, kinds = set(), set()
+    for item in required:
+        if (not isinstance(item, dict) or set(item) != {"event_id", "kind"}
+                or not _nonempty_string(item["event_id"]) or item["kind"] not in TARGETS
+                or item["event_id"] in identities):
+            raise ValueError("Required events must identify distinct event IDs and their target kinds")
+        identities.add(item["event_id"])
+        kinds.add(item["kind"])
+    qualified = {kind for kind in TARGETS if qualification["targets"][kind]["status"] == "qualified"}
+    if not qualified <= kinds:
+        raise ValueError("Register a must-hit event for each qualified target")
+    return protocol
+
+
+def _freeze_record(baseline, qualification, qualification_digest, minimum_tp, event_protocol=None):
     """Build the immutable rule and input binding without reading the holdout."""
     rules = calibrate_rules(baseline.calibration_scores, baseline.calibration_units)
     if rules["pooled"]["threshold"] != baseline.pooled_threshold:
@@ -101,6 +125,7 @@ def _freeze_record(baseline, qualification, qualification_digest, minimum_tp):
         "scoring_clock": CLOCK, "last_calibration_time": baseline.last_calibration_time,
         "qualification_sha256": qualification_digest,
         "qualification": qualification, "minimum_tp": minimum_tp, "rules": rules,
+        "event_protocol": _validate_event_protocol(event_protocol, qualification),
         "code_sha256": {
             name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
             for name in ("baseline.py", "decisions.py", "run.py")
@@ -111,11 +136,17 @@ def _freeze_record(baseline, qualification, qualification_digest, minimum_tp):
     return {**record, "registration_digest": hashlib.sha256(encoded).hexdigest()}
 
 
-def freeze(archive, qualification_path, output, control=None, download=None):
+def freeze(archive, qualification_path, output, control=None, download=None, *, event_protocol=None):
     qualification, digest = load_qualification(qualification_path)
     minimum_tp = _minimums(qualification, control, download)
+    protocol = None
+    if event_protocol is not None:
+        protocol = json.loads(Path(event_protocol).read_text(encoding="utf-8-sig"))
+        if protocol is None:
+            raise ValueError("An event-protocol file must identify the required events")
+        _validate_event_protocol(protocol, qualification)
     baseline = load_baseline(archive)
-    record = _freeze_record(baseline, qualification, digest, minimum_tp)
+    record = _freeze_record(baseline, qualification, digest, minimum_tp, protocol)
     output = Path(output)
     receipt = output / "registration.json"
     with exclusive_output(output):
@@ -137,11 +168,15 @@ def _verified_rows(directory, name, qualification):
         return [json.loads(line) for line in stream if line.strip()]
 
 
-def _confirmation_input(directory, qualification, baseline, minimum_tp):
+def validate_confirmation_rows(rows, units, events, qualification, *, previous_flow_ids=(),
+                               previous_stable_flow_ids=(), last_calibration_time=None, minimum_tp=None):
+    """Validate prepared observations before any detector is loaded or called."""
     start, limit = _confirmation_window(qualification)
-    rows = _verified_rows(directory, INPUTS[0], qualification)
-    units = _verified_rows(directory, INPUTS[1], qualification)
-    events = _verified_rows(directory, INPUTS[2], qualification)
+    if minimum_tp is None:
+        minimum_tp = {
+            kind: 1 if qualification["targets"][kind]["status"] == "qualified" else None
+            for kind in TARGETS
+        }
     if not rows or not units:
         raise ValueError("Confirmation requires observations and true normal business units")
     flows = set()
@@ -153,8 +188,8 @@ def _confirmation_input(directory, qualification, baseline, minimum_tp):
         if not _nonempty_string(flow) or not _nonempty_string(stable):
             raise ValueError("Each row needs flow_id and stable_flow_id")
         if (
-            flow in flows or stable in stable_flows or flow in baseline.known_flow_ids
-            or stable in baseline.known_stable_flow_ids
+            flow in flows or stable in stable_flows or flow in previous_flow_ids
+            or stable in previous_stable_flow_ids
         ):
             raise ValueError(f"Duplicated identity or previous-role overlap: {flow}")
         flows.add(flow)
@@ -167,7 +202,8 @@ def _confirmation_input(directory, qualification, baseline, minimum_tp):
         end, when = row.get("observed_end"), row.get("replay_export_time")
         if (
             type(end) not in (int, float) or type(when) not in (int, float)
-            or not start <= end <= when < limit or when <= baseline.last_calibration_time
+            or not start <= end <= when < limit
+            or (last_calibration_time is not None and when <= last_calibration_time)
         ):
             raise ValueError(f"Invalid complete-flow export time: {flow}")
         raw8 = row.get("raw8")
@@ -242,6 +278,15 @@ def _confirmation_input(directory, qualification, baseline, minimum_tp):
     return rows, normal_units, attack_ids, events
 
 
+def _confirmation_input(directory, qualification, baseline, minimum_tp):
+    rows, units, events = (_verified_rows(directory, name, qualification) for name in INPUTS)
+    return validate_confirmation_rows(
+        rows, units, events, qualification, previous_flow_ids=baseline.known_flow_ids,
+        previous_stable_flow_ids=baseline.known_stable_flow_ids,
+        last_calibration_time=baseline.last_calibration_time, minimum_tp=minimum_tp,
+    )
+
+
 def _score_pass(output, baseline, rows):
     path = output / "score_pass.json"
     binding = hashlib.sha256((output / "registration.json").read_bytes()).hexdigest()
@@ -273,25 +318,6 @@ def _score_pass(output, baseline, rows):
     return record, dict(zip(identities, scores.tolist(), strict=True))
 
 
-def _result_with_status(result, attack_ids):
-    """Report the evaluated scope; diagnostics never substitute an oracle cutoff."""
-    outcome = {}
-    for name, rule in result["rules"].items():
-        targets = rule["targets"]
-        floors_met = all(targets[kind]["minimum_TP_met"] for kind in TARGETS if attack_ids[kind] is not None)
-        ranking = result["score_ranking_upper_bound"]
-        if rule["all_normal_units_within_budget"] and floors_met:
-            status = "criteria_met" if all(attack_ids.values()) else "partial_scope_criteria_met"
-        elif ranking and all(
-            ranking[kind]["minimum_TP_attainable"] for kind in TARGETS if attack_ids[kind] is not None
-        ):
-            status = "fixed_rule_failed_score_ordering_has_room"
-        else:
-            status = "fixed_score_ordering_insufficient"
-        outcome[name] = status
-    return outcome
-
-
 def run(archive, qualification_path, output):
     output = Path(output)
     if not (output / "registration.json").is_file():
@@ -301,16 +327,19 @@ def run(archive, qualification_path, output):
     with exclusive_output(output):
         registration = read(output / "registration.json")
         minimum = _minimums(qualification, **registration["minimum_tp"])
-        if registration != _freeze_record(baseline, qualification, digest, minimum):
+        protocol = registration.get("event_protocol")
+        if registration != _freeze_record(baseline, qualification, digest, minimum, protocol):
             raise ValueError("Frozen registration no longer matches model, code, C rules or qualification")
+        required_events = None if protocol is None else protocol["required_events"]
         try:
             rows, units, attacks, events = _confirmation_input(
                 Path(qualification_path).parent, qualification, baseline, minimum
             )
+            validate_required_event_kinds(events, required_events)
             pass_record, scores = _score_pass(output, baseline, rows)
-            result = evaluate_comparison(
+            comparison = evaluate_candidate(
                 scores, normal_units=units, attack_ids=attacks, events=events,
-                rules=registration["rules"], minimum_tp=minimum,
+                rules=registration["rules"], minimum_tp=minimum, required_events=required_events,
             )
             model = output / "model.joblib"
             model_target = model.with_suffix(".tmp")
@@ -336,7 +365,7 @@ def run(archive, qualification_path, output):
                 "confirmation_scope": "later AIT run; shared attack implementation; offline export",
                 "rows": len(rows), "unknown_labels": sum(row["label"] is None for row in rows),
                 "qualification_targets": qualification["targets"],
-                "outcomes": _result_with_status(result, attacks), "result": result,
+                **comparison,
             })
         except (OSError, ValueError, RuntimeError, KeyError, TypeError, KeyboardInterrupt) as error:
             write(output / "interruption.json", {"type": type(error).__name__, "message": str(error)})
@@ -357,6 +386,7 @@ def main():
         if name == "freeze":
             stage.add_argument("--control", type=int, help="Frozen control TP floor; omit if unavailable")
             stage.add_argument("--download", type=int, help="Frozen download TP floor; omit if unavailable")
+            stage.add_argument("--event-protocol", type=Path, help="JSON of prespecified individually required events")
     args = parser.parse_args()
     if args.stage == "verify":
         baseline = load_baseline(args.archive)
@@ -364,7 +394,8 @@ def main():
         report = {"calibration": rules, "fox": baseline.historical_fox_regression(rules)}
         print(json.dumps(report, ensure_ascii=False, indent=2))
     elif args.stage == "freeze":
-        freeze(args.archive, args.qualification, args.output, args.control, args.download)
+        freeze(args.archive, args.qualification, args.output, args.control, args.download,
+               event_protocol=args.event_protocol)
         print(f"Frozen without opening confirmation rows: {args.output / 'registration.json'}")
     else:
         result = run(args.archive, args.qualification, args.output)
