@@ -122,11 +122,16 @@ class FrozenComparator:
         }
 
 
-def load_comparators(archive, baseline):
+def load_comparators(archive, baseline, *, model_ids=None):
     """Verify all model and evidence bytes before any comparator inference."""
     receipt_bytes = archive_baseline._verified_members(archive, {_RECEIPT: _RECEIPT_PIN})[_RECEIPT]
     receipt = json.loads(receipt_bytes)
     paths = _fixed_model_paths()
+    if model_ids is not None:
+        requested = tuple(model_ids)
+        if not requested or len(set(requested)) != len(requested) or set(requested) - paths.keys():
+            raise ValueError("Choose unique registered historical comparators")
+        paths = {model_id: paths[model_id] for model_id in requested}
     selected = {key: _selected_members(key, path) for key, path in paths.items()}
     names = {name for members in selected.values() for name in members} | {_IDENTITY_MEMBER}
     pins = {name: (receipt[name]["bytes"], receipt[name]["sha256"]) for name in names}
@@ -180,8 +185,11 @@ def load_comparators(archive, baseline):
             model_id, family, digest, members[model_path], members_sha, metadata, c, fox, pooled,
             summary, json.loads(members[benchmark_path]), training, diagnostic,
         )
-    original = comparators[archive_baseline.MODEL_ID]
-    if (original.model_sha256 != baseline.model_sha256 or original.calibration_scores != baseline.calibration_scores
-            or original.archived_fox_scores != baseline.archived_fox_scores):
+    original = comparators.get(archive_baseline.MODEL_ID)
+    if original is not None and (
+        original.model_sha256 != baseline.model_sha256
+        or original.calibration_scores != baseline.calibration_scores
+        or original.archived_fox_scores != baseline.archived_fox_scores
+    ):
         raise ValueError("Primary comparator differs from the original frozen HGB evidence")
     return comparators
